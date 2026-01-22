@@ -3,15 +3,15 @@
    ========================================================================== */
 
 :root {
-    --color-bg: #0d0d0d;
-    --color-bg-alt: #1a1a1a;
-    --color-text: #e8e8e8;
-    --color-text-muted: #999;
-    --color-accent: #ff6b35;
-    --color-accent-hover: #ff8555;
+    --color-bg: #fafafa;
+    --color-bg-alt: #ffffff;
+    --color-text: #1a1a1a;
+    --color-text-muted: #666;
+    --color-accent: #e85a2c;
+    --color-accent-hover: #d14820;
     --color-purple: #7c3aed;
-    --color-purple-light: #a78bfa;
-    --color-border: #333;
+    --color-purple-light: #6d28d9;
+    --color-border: #e5e5e5;
 
     --font-display: 'DM Serif Display', Georgia, serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -101,6 +101,7 @@ h4 { font-size: 1.125rem; }
 }
 .btn-outline:hover {
     border-color: var(--color-text);
+    background: var(--color-text);
     color: #fff;
 }
 
@@ -139,7 +140,7 @@ h4 { font-size: 1.125rem; }
     right: 0;
     z-index: 100;
     padding: 1rem 0;
-    background: rgba(13, 13, 13, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--color-border);
 }
@@ -201,8 +202,8 @@ h4 { font-size: 1.125rem; }
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse at 20% 50%, rgba(124, 58, 237, 0.15) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 80%, rgba(255, 107, 53, 0.1) 0%, transparent 40%);
+        radial-gradient(ellipse at 20% 50%, rgba(124, 58, 237, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(232, 90, 44, 0.06) 0%, transparent 40%);
     pointer-events: none;
 }
 
@@ -217,18 +218,15 @@ h4 { font-size: 1.125rem; }
     margin-bottom: 1.5rem;
     font-size: 0.875rem;
     font-weight: 500;
-    color: var(--color-purple-light);
-    background: rgba(124, 58, 237, 0.1);
-    border: 1px solid rgba(124, 58, 237, 0.3);
+    color: var(--color-purple);
+    background: rgba(124, 58, 237, 0.08);
+    border: 1px solid rgba(124, 58, 237, 0.2);
     border-radius: 100px;
 }
 
 .hero h1 {
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, var(--color-text) 0%, var(--color-text-muted) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--color-text);
 }
 
 .hero-location {
@@ -330,14 +328,14 @@ h4 { font-size: 1.125rem; }
 .consent-banner {
     margin-top: 2rem;
     padding: 1.5rem;
-    background: rgba(124, 58, 237, 0.1);
-    border: 1px solid rgba(124, 58, 237, 0.3);
+    background: rgba(124, 58, 237, 0.06);
+    border: 1px solid rgba(124, 58, 237, 0.15);
     border-radius: var(--radius);
     text-align: center;
     color: var(--color-text-muted);
 }
 .consent-banner strong {
-    color: var(--color-purple-light);
+    color: var(--color-purple);
 }
 
 /* Event */
@@ -648,7 +646,7 @@ h4 { font-size: 1.125rem; }
         right: 0;
         flex-direction: column;
         gap: 0;
-        background: var(--color-bg);
+        background: #fff;
         border-bottom: 1px solid var(--color-border);
         padding: 1rem;
         transform: translateY(-100%);
