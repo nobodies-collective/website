@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estatutos | Nobodies Collective Association</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .estatutos-page {
+            padding: 8rem 0 4rem;
+        }
+
+        .estatutos-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .estatutos-header h1 {
+            margin-bottom: 1rem;
+        }
+
+        .estatutos-intro {
+            color: var(--color-text-muted);
+            font-style: italic;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+        .back-link:hover { color: var(--color-accent); }
+        .back-link::before { content: '\2190'; }
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 2rem 0;
+        }
+
+        .lang-toggle button {
+            padding: 0.75rem 1.5rem;
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid var(--color-border);
+            background: var(--color-bg-alt);
+            color: var(--color-text-muted);
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active,
+        .lang-toggle button:hover {
+            background: var(--color-accent);
+            border-color: var(--color-accent);
+            color: #fff;
+        }
+
+        .estatutos-chapter {
+            margin-bottom: 3rem;
+        }
+
+        .estatutos-chapter h2 {
+            color: var(--color-accent);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--color-accent);
+        }
+
+        .estatutos-chapter h2 small {
+            display: block;
+            font-size: 1rem;
+            color: var(--color-text-muted);
+            margin-top: 0.25rem;
+        }
+
+        .estatutos-article {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: var(--color-bg-alt);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+        }
+
+        .estatutos-article h3 {
+            color: var(--color-text);
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .estatutos-article h4 {
+            color: var(--color-text-muted);
+            font-size: 1rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .estatutos-article p,
+        .estatutos-article li {
+            color: var(--color-text-muted);
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+        }
+
+        .estatutos-article ol,
+        .estatutos-article ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .estatutos-article li { margin-bottom: 0.5rem; }
+
+        .bilingual {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .bilingual .spanish,
+        .bilingual .english {
+            padding: 1rem;
+        }
+
+        .bilingual .english {
+            background: rgba(124, 58, 237, 0.05);
+            border-left: 2px solid var(--color-purple);
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+
+        .final-note {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: var(--color-bg-alt);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+        }
+
+        .final-note p { color: var(--color-text-muted); }
+        .final-note strong { color: var(--color-text); }
+
+        @media (max-width: 768px) {
+            .bilingual {
+                grid-template-columns: 1fr;
+            }
+            .bilingual .english {
+                border-left: none;
+                border-top: 2px solid var(--color-purple);
+                border-radius: 0 0 var(--radius) var(--radius);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="/" class="logo">Nobodies</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#principles">Principles</a></li>
+                <li><a href="/#event">Event</a></li>
+                <li><a href="/#join">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="estatutos-page">
+        <div class="container">
+            <a href="/" class="back-link">Back to Home</a>
+
+            <div class="estatutos-header">
+                <h1>Estatutos / Statutes</h1>
+                <p class="estatutos-intro">
+                    En caso de discrepancia entre la version en espanol y la version en ingles, primara la version espanola.<br>
+                    <em>In the event of any discrepancy between the Spanish version and the English version, the Spanish version shall prevail.</em>
+                </p>
+            </div>
+
+            <div class="lang-toggle">
+                <button class="active" data-lang="both">Both</button>
+                <button data-lang="es">Espanol</button>
+                <button data-lang="en">English</button>
+            </div>
+
+            <!-- Chapter I -->
+            <section class="estatutos-chapter">
+                <h2>Capitulo I. Denominacion, Fines y Domicilio<small>Chapter I. Name, Purposes and Registered Office</small></h2>
+
+                <article class="estatutos-article">
+                    <h3>Articulo 1. Denominacion, capacidad y duracion, domicilio y ambito territorial.</h3>
+                    <h4>Article 1. Name, Legal Capacity and Duration, Registered Office and Territorial Scope.</h4>
+
+                    <div class="bilingual">
+                        <div class="spanish">
+                            <ol>
+                                <li>Con la denominacion de "Asociacion Nobodies Collective" (en adelante "Nobodies", o "Asociacion") se constituye como una organizacion cultural, sin animo de lucro y regula sus actividades al amparo del articulo 22 de la Constitucion Espanola.</li>
+                                <li>La Asociacion tendra personalidad propia y distinta de la de sus miembros y asociados, asi como plena capacidad de obrar.</li>
+                                <li>La Asociacion podra colaborar o formar parte de otras asociaciones, organizaciones, organismos, instituciones publicas y privadas de ambito nacional e internacional.</li>
+                            </ol>
+                            <p>Esta asociacion se constituye por tiempo indefinido.</p>
+                            <p>Esta Asociacion establece su domicilio social en Glorieta de Bilbao 1, 3 Derecha, 28004, Madrid.</p>
+                            <p>Su ambito territorial de actuacion comprende todo el territorio espanol.</p>
+                        </div>
+                        <div class="english">
+                            <ol>
+                                <li>Under the name "Asociacion Nobodies Collective" (hereinafter "Nobodies" or the "Association"), it is constituted as a cultural, non-profit organization under Article 22 of the Spanish Constitution.</li>
+                                <li>The Association shall have its own legal personality, separate from that of its members, and full legal capacity to act.</li>
+                                <li>The Association may collaborate with or become part of other associations, organizations, bodies, public and private institutions at national and international level.</li>
+                            </ol>
+                            <p>This Association is established for an indefinite period of time.</p>
+                            <p>The Association establishes its registered office at Glorieta de Bilbao 1, 3 Derecha, 28004, Madrid.</p>
+                            <p>Its territorial scope covers the whole of Spanish territory.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="estatutos-article">
+                    <h3>Articulo 2. Fines de la Asociacion.</h3>
+                    <h4>Article 2. Purposes of the Association.</h4>
+
+                    <div class="bilingual">
+                        <div class="spanish">
+                            <p>La Asociacion tendra, entre otros, los siguientes fines:</p>
+                            <p><strong>a.</strong> Fomentar y respetar los diez principios fundamentales:</p>
+                            <ol>
+                                <li>Comunidad</li>
+                                <li>Cooperacion</li>
+                                <li>Regalos</li>
+                                <li>Inmediatez</li>
+                                <li>Inclusion</li>
+                                <li>No dejar rastro</li>
+                                <li>Sin comercio</li>
+                                <li>Participacion</li>
+                                <li>Autoexpresion</li>
+                                <li>Autosuficiencia</li>
+                            </ol>
+                            <p><strong>b.</strong> Asegurar el respeto al Consentimiento de cualquier persona participante.</p>
+                            <p><strong>c.</strong> Ser cauce de opinion y portavoz de todos sus asociados ante las Administraciones publicas.</p>
+                        </div>
+                        <div class="english">
+                            <p>The Association shall have, among others, the following purposes:</p>
+                            <p><strong>a.</strong> To foster and respect the ten fundamental principles:</p>
+                            <ol>
+                                <li>Community</li>
+                                <li>Cooperation</li>
+                                <li>Gifting</li>
+                                <li>Immediacy</li>
+                                <li>Inclusion</li>
+                                <li>Leave no trace</li>
+                                <li>No commerce</li>
+                                <li>Participation</li>
+                                <li>Self-expression</li>
+                                <li>Self-reliance</li>
+                            </ol>
+                            <p><strong>b.</strong> To ensure respect for Consent of any participant.</p>
+                            <p><strong>c.</strong> To act as a channel of opinion and spokesperson for all members before public administrations.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="estatutos-article">
+                    <h3>Articulo 3. Actividades de la Asociacion.</h3>
+                    <h4>Article 3. Activities of the Association.</h4>
+
+                    <div class="bilingual">
+                        <div class="spanish">
+                            <ol>
+                                <li>La organizacion de un evento cultural participativo con vocacion anual.</li>
+                                <li>La organizacion de eventos de naturaleza cultural, educativa, artistica, medioambiental o deportiva.</li>
+                                <li>La colaboracion con entidades de cualquier naturaleza.</li>
+                                <li>Adquisicion de la propiedad o disfrute de bienes inmuebles.</li>
+                                <li>Cualquier otra actuacion que conduzca al mejor logro de sus fines.</li>
+                            </ol>
+                        </div>
+                        <div class="english">
+                            <ol>
+                                <li>The organization of a cultural and participative event with an annual focus.</li>
+                                <li>The organization of events of a cultural, educational, artistic, environmental or sporting nature.</li>
+                                <li>Collaboration with entities of any nature.</li>
+                                <li>Acquisition of ownership or enjoyment of real estate.</li>
+                                <li>Any other action that leads to the better achievement of its purposes.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Chapter II -->
+            <section class="estatutos-chapter">
+                <h2>Capitulo II. Organos de Gobierno<small>Chapter II. Governing Bodies</small></h2>
+
+                <article class="estatutos-article">
+                    <h3>Articulo 4-5. Asamblea General y Junta Directiva.</h3>
+                    <h4>Article 4-5. General Assembly and Board of Trustees.</h4>
+
+                    <div class="bilingual">
+                        <div class="spanish">
+                            <p>Los organos de gobierno de la Asociacion son:</p>
+                            <ul>
+                                <li><strong>Asamblea General</strong> - El organo supremo de la Asociacion, compuesto por todos los miembros.</li>
+                                <li><strong>Junta Directiva</strong> - Compuesta por: presidente, vicepresidente, secretario, tesorero, y hasta nueve vocales.</li>
+                            </ul>
+                            <p>La Junta se elegira mediante elecciones cada dos anos. La Junta Directiva ejerce el cargo sin remuneracion alguna.</p>
+                        </div>
+                        <div class="english">
+                            <p>The governing bodies of the Association are:</p>
+                            <ul>
+                                <li><strong>General Assembly</strong> - The supreme body of the Association, made up of all members.</li>
+                                <li><strong>Board of Trustees</strong> - Composed of: president, vice president, secretary, treasurer, and up to nine non-executive members.</li>
+                            </ul>
+                            <p>The Board shall be elected through elections every two years. The Board serves without any remuneration.</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Chapter III - Members -->
+            <section class="estatutos-chapter">
+                <h2>Capitulo III. Miembros<small>Chapter III. Members</small></h2>
+
+                <article class="estatutos-article">
+                    <h3>Articulo 21-23. Admision, Derechos y Deberes.</h3>
+                    <h4>Article 21-23. Admission, Rights and Duties.</h4>
+
+                    <div class="bilingual">
+                        <div class="spanish">
+                            <p><strong>Admision:</strong> Pueden formar parte todas las personas mayores de edad con plena capacidad de obrar, cuya solicitud sea aprobada por la Junta Directiva en un plazo maximo de 30 dias.</p>
+                            <p><strong>Derechos:</strong></p>
+                            <ul>
+                                <li>Asistir con voz y voto a las reuniones de la Asamblea General</li>
+                                <li>Elegir o ser elegidos para la Junta Directiva</li>
+                                <li>Acceso completo a los informes de tesoreria</li>
+                                <li>Ser escuchados antes de medidas disciplinarias</li>
+                            </ul>
+                            <p><strong>Deberes:</strong></p>
+                            <ul>
+                                <li>Comprometerse con los objetivos de Nobodies</li>
+                                <li>Cumplir los estatutos y acuerdos</li>
+                                <li>Contribuir al sostenimiento de la Asociacion</li>
+                            </ul>
+                        </div>
+                        <div class="english">
+                            <p><strong>Admission:</strong> All persons of legal age with full legal capacity may become members, whose application is approved by the Board within a maximum of 30 days.</p>
+                            <p><strong>Rights:</strong></p>
+                            <ul>
+                                <li>Attend meetings of the General Assembly with the right to speak and vote</li>
+                                <li>Elect and be elected for positions on the Board</li>
+                                <li>Full access to treasury reports</li>
+                                <li>Be heard prior to disciplinary measures</li>
+                            </ul>
+                            <p><strong>Duties:</strong></p>
+                            <ul>
+                                <li>Commit to the objectives of Nobodies</li>
+                                <li>Comply with statutes and resolutions</li>
+                                <li>Contribute to the support of the Association</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Financial & Dissolution -->
+            <section class="estatutos-chapter">
+                <h2>Capitulos V-VIII. Finanzas, Disciplina, Disolucion, Datos<small>Chapters V-VIII. Finances, Discipline, Dissolution, Data Protection</small></h2>
+
+                <article class="estatutos-article">
+                    <h3>Resumen / Summary</h3>
+
+                    <div class="bilingual">
+                        <div class="spanish">
+                            <p><strong>Recursos economicos:</strong> Cuotas de miembros, subvenciones, donaciones, y otros ingresos de actividades.</p>
+                            <p><strong>Regimen disciplinario:</strong> La Junta puede sancionar infracciones, desde amonestacion hasta expulsion (ratificada por Asamblea).</p>
+                            <p><strong>Disolucion:</strong> Requiere mayoria de dos tercios en Asamblea General Extraordinaria. El patrimonio se destinara a una entidad sin animo de lucro.</p>
+                            <p><strong>Proteccion de datos:</strong> La Asociacion garantiza el cumplimiento del RGPD. Los miembros pueden ejercer sus derechos de acceso, rectificacion y supresion.</p>
+                        </div>
+                        <div class="english">
+                            <p><strong>Financial resources:</strong> Member fees, subsidies, donations, and other income from activities.</p>
+                            <p><strong>Disciplinary regime:</strong> The Board may sanction offences, from warning to expulsion (ratified by Assembly).</p>
+                            <p><strong>Dissolution:</strong> Requires two-thirds majority at Extraordinary General Assembly. Assets shall go to a non-profit entity.</p>
+                            <p><strong>Data protection:</strong> The Association guarantees GDPR compliance. Members may exercise their rights of access, rectification and erasure.</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <div class="final-note">
+                <p><strong>Disposicion Adicional / Additional Provision</strong></p>
+                <p>En todo cuanto no este previsto en los presentes Estatutos se aplicara la Ley Organica 1/2002, de 22 de marzo, reguladora del Derecho de Asociacion.</p>
+                <p><em>In all matters not provided for in these Statutes, Organic Law 1/2002 of 22 March, regulating the Right of Association, shall apply.</em></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="footer-logo">Nobodies Collective</span>
+                    <p>A Spanish non-profit cultural association</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigate</h4>
+                    <a href="/#about">About</a>
+                    <a href="/#principles">Principles</a>
+                    <a href="/#event">Event</a>
+                    <a href="/#join">Get Involved</a>
+                </div>
+                <div class="footer-connect">
+                    <h4>Connect</h4>
+                    <a href="https://discord.gg/ZAHacqDC" target="_blank">Discord</a>
+                    <a href="mailto:info@nobodies.es">info@nobodies.es</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Asociacion Nobodies Collective</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language toggle
+        document.querySelectorAll('.lang-toggle button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const lang = this.dataset.lang;
+                document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                document.querySelectorAll('.bilingual').forEach(el => {
+                    const spanish = el.querySelector('.spanish');
+                    const english = el.querySelector('.english');
+
+                    if (lang === 'es') {
+                        spanish.style.display = 'block';
+                        english.style.display = 'none';
+                        el.style.gridTemplateColumns = '1fr';
+                    } else if (lang === 'en') {
+                        spanish.style.display = 'none';
+                        english.style.display = 'block';
+                        el.style.gridTemplateColumns = '1fr';
+                    } else {
+                        spanish.style.display = 'block';
+                        english.style.display = 'block';
+                        el.style.gridTemplateColumns = window.innerWidth > 768 ? '1fr 1fr' : '1fr';
+                    }
+                });
+            });
+        });
+
+        // Mobile nav
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (navToggle && navLinks) {
+            navToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+        }
+    </script>
+</body>
+</html>
