@@ -15,7 +15,7 @@
     --color-pink: #ec4899;
     --color-border: #eee;
 
-    --font-display: 'DM Serif Display', Georgia, serif;
+    --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
     --container: 1100px;
@@ -62,14 +62,15 @@ a:hover { color: var(--color-accent-hover); }
 /* Typography */
 h1, h2, h3, h4 {
     font-family: var(--font-display);
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.1;
+    letter-spacing: -0.02em;
 }
 
-h1 { font-size: clamp(3.5rem, 12vw, 8rem); }
-h2 { font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 1.5rem; }
-h3 { font-size: 1.75rem; }
-h4 { font-size: 1.25rem; }
+h1 { font-size: clamp(3rem, 10vw, 6rem); font-weight: 800; }
+h2 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1.5rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.15rem; }
 
 /* Buttons */
 .btn {
