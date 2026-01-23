@@ -118,12 +118,12 @@ h4 { font-size: 1.15rem; }
     transform: translateY(-2px);
 }
 
-.btn-whatsapp {
-    background: #25D366;
+.btn-telegram {
+    background: #0088cc;
     color: #fff;
 }
-.btn-whatsapp:hover {
-    background: #1da851;
+.btn-telegram:hover {
+    background: #0077b5;
     color: #fff;
     transform: translateY(-2px);
 }
