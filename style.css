@@ -816,4 +816,32 @@ h4 { font-size: 1.15rem; }
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+
+    .newsletter {
+        padding: 3rem 0;
+    }
+}
+
+/* Newsletter Section */
+.newsletter {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--color-purple) 0%, var(--color-accent) 100%);
+    text-align: center;
+    color: white;
+}
+
+.newsletter h2 {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.newsletter p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.newsletter .ml-embedded {
+    max-width: 500px;
+    margin: 0 auto;
 }
