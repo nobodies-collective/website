@@ -237,35 +237,50 @@
             <div class="container">
                 <h2>Stay in the Loop</h2>
                 <p>Get updates on the event, ticket sales, and ways to participate.</p>
-                <form class="newsletter-form" id="newsletter-form">
-                    <div class="newsletter-input-group">
-                        <input type="email" id="newsletter-email" placeholder="Your email address" required>
-                        <button type="submit">Subscribe</button>
+
+                <div id="mlb2-36155024" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-36155024">
+                    <div class="ml-form-align-center">
+                        <div class="ml-form-embedWrapper embedForm">
+                            <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2058732/forms/177407017744336669/subscribe" data-code="" method="post" target="_blank">
+                                    <div class="ml-form-formContent">
+                                        <div class="ml-form-fieldRow ml-last-item">
+                                            <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                                                <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="ml-submit" value="1">
+                                    <div class="ml-form-embedSubmit">
+                                        <button type="submit" class="primary">Subscribe</button>
+                                        <button disabled="disabled" style="display: none;" type="button" class="loading">
+                                            <div class="ml-form-embedSubmitLoad"></div>
+                                            <span class="sr-only">Loading...</span>
+                                        </button>
+                                    </div>
+                                    <input type="hidden" name="anticsrf" value="true">
+                                </form>
+                            </div>
+                            <div class="ml-form-successBody row-success" style="display: none">
+                                <div class="ml-form-successContent">
+                                    <p>Thanks for subscribing!</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <p class="newsletter-message" id="newsletter-message"></p>
-                </form>
-                <script>
-                document.getElementById('newsletter-form').onsubmit = function(e) {
-                    e.preventDefault();
-                    var email = document.getElementById('newsletter-email').value;
-                    var msg = document.getElementById('newsletter-message');
-                    var btn = this.querySelector('button');
-                    btn.disabled = true;
-                    btn.textContent = 'Subscribing...';
-                    fetch('https://assets.mailerlite.com/jsonp/2058732/forms/177407017744336669/subscribe', {
-                        method: 'POST',
-                        body: JSON.stringify({fields: {email: email}})
-                    }).finally(function() {
-                        msg.textContent = 'Thanks for subscribing!';
-                        msg.style.color = '#b8ffa8';
-                        document.getElementById('newsletter-email').value = '';
-                        btn.disabled = false;
-                        btn.textContent = 'Subscribe';
-                    });
-                };
-                </script>
+                </div>
             </div>
         </section>
+
+        <script>
+            function ml_webform_success_36155024() {
+                var $ = ml_jQuery || jQuery;
+                $('.ml-subscribe-form-36155024 .row-success').show();
+                $('.ml-subscribe-form-36155024 .row-form').hide();
+            }
+        </script>
+        <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+        <script>fetch("https://assets.mailerlite.com/jsonp/2058732/forms/177407017744336669/takel")</script>
     </main>
 
     <footer class="footer">

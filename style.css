@@ -841,7 +841,154 @@ h4 { font-size: 1.15rem; }
     font-size: 1.1rem;
 }
 
-.newsletter .ml-embedded {
+.newsletter-form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.newsletter-input-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.newsletter-input-group input[type="email"] {
+    flex: 1;
+    padding: 1.5rem 2rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    font-family: inherit;
+    outline: none;
+    transition: box-shadow 0.2s ease;
+}
+
+.newsletter-input-group input[type="email"]:focus {
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.3);
+}
+
+.newsletter-input-group input[type="email"]::placeholder {
+    color: #999;
+}
+
+.newsletter-input-group button {
+    padding: 1.5rem 3rem;
+    background: var(--color-dark);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+    white-space: nowrap;
+}
+
+.newsletter-input-group button:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+.newsletter-input-group button:active {
+    transform: translateY(0);
+}
+
+.newsletter-message {
+    margin-top: 1rem;
+    font-size: 1rem;
+    min-height: 1.5em;
+}
+
+@media (max-width: 600px) {
+    .newsletter-input-group {
+        flex-direction: column;
+    }
+
+    .newsletter-input-group button {
+        width: 100%;
+    }
+}
+
+/* MailerLite Form Styles */
+.ml-form-embedContainer {
     max-width: 500px;
     margin: 0 auto;
+}
+
+.ml-form-embedWrapper {
+    background: transparent !important;
+    border: none !important;
+}
+
+.ml-form-embedBody {
+    padding: 0 !important;
+}
+
+.ml-block-form {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ml-form-formContent {
+    flex: 1;
+    min-width: 250px;
+    margin: 0 !important;
+}
+
+.ml-form-fieldRow {
+    margin: 0 !important;
+}
+
+.ml-form-embedContainer input[type="email"] {
+    padding: 1rem 1.5rem !important;
+    border: none !important;
+    border-radius: 12px !important;
+    font-size: 1.1rem !important;
+    background: white !important;
+    width: 100% !important;
+}
+
+.ml-form-embedContainer input[type="email"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.3);
+}
+
+.ml-form-embedSubmit {
+    margin: 0 !important;
+}
+
+.ml-form-embedContainer button.primary {
+    padding: 1rem 2rem !important;
+    background: var(--color-dark, #1a1a1a) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 12px !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.ml-form-embedContainer button.primary:hover {
+    background: #333 !important;
+    transform: translateY(-2px);
+}
+
+.ml-form-successContent p {
+    color: white !important;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+    .ml-block-form {
+        flex-direction: column;
+    }
+
+    .ml-form-formContent {
+        min-width: 100%;
+    }
 }
