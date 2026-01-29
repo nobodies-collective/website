@@ -8,15 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- MailerLite Universal -->
-    <script>
-        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-        ml('account', '2058732');
-    </script>
-    <!-- End MailerLite Universal -->
 </head>
 <body>
     <header class="header">
@@ -185,7 +176,7 @@
                     <div class="join-card join-card-active">
                         <h3>Apply as a Lead</h3>
                         <p>Help organize. Lead a working group or take on responsibility for making things happen.</p>
-                        <a href="mailto:board@nobodies.team?subject=Lead%20Application" class="btn btn-primary">Apply</a>
+                        <a href="https://form.typeform.com/to/kln1bD6U" class="btn btn-primary" target="_blank">Apply</a>
                     </div>
                 </div>
 
@@ -246,7 +237,33 @@
             <div class="container">
                 <h2>Stay in the Loop</h2>
                 <p>Get updates on the event, ticket sales, and ways to participate.</p>
-                <div class="ml-embedded" data-form="7Hk4Wg"></div>
+                <form class="newsletter-form" id="newsletter-form">
+                    <div class="newsletter-input-group">
+                        <input type="email" id="newsletter-email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </div>
+                    <p class="newsletter-message" id="newsletter-message"></p>
+                </form>
+                <script>
+                document.getElementById('newsletter-form').onsubmit = function(e) {
+                    e.preventDefault();
+                    var email = document.getElementById('newsletter-email').value;
+                    var msg = document.getElementById('newsletter-message');
+                    var btn = this.querySelector('button');
+                    btn.disabled = true;
+                    btn.textContent = 'Subscribing...';
+                    fetch('https://assets.mailerlite.com/jsonp/2058732/forms/177407017744336669/subscribe', {
+                        method: 'POST',
+                        body: JSON.stringify({fields: {email: email}})
+                    }).finally(function() {
+                        msg.textContent = 'Thanks for subscribing!';
+                        msg.style.color = '#b8ffa8';
+                        document.getElementById('newsletter-email').value = '';
+                        btn.disabled = false;
+                        btn.textContent = 'Subscribe';
+                    });
+                };
+                </script>
             </div>
         </section>
     </main>
