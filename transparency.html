@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparency | Nobodies Collective Association</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .transparency-page {
+            padding: 8rem 0 4rem;
+        }
+
+        .transparency-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .transparency-header h1 {
+            margin-bottom: 1rem;
+        }
+
+        .transparency-intro {
+            color: var(--color-text-muted);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+        .back-link:hover { color: var(--color-accent); }
+        .back-link::before { content: '\2190'; }
+
+        .meetings-list {
+            margin-top: 2rem;
+        }
+
+        .meeting-card {
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 1.5rem 2rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s;
+            display: block;
+            color: inherit;
+        }
+
+        .meeting-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            border-color: var(--color-accent);
+            color: inherit;
+        }
+
+        .meeting-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .meeting-date {
+            font-size: 0.85rem;
+            color: var(--color-accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .meeting-type {
+            font-size: 0.8rem;
+            padding: 0.25rem 0.75rem;
+            background: var(--color-bg-alt);
+            border-radius: 50px;
+            color: var(--color-text-muted);
+        }
+
+        .meeting-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: 0.5rem;
+        }
+
+        .meeting-summary {
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
+        }
+
+        .meeting-attendees {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+        }
+
+        .meeting-attendees strong {
+            color: var(--color-text);
+        }
+
+        .year-section {
+            margin-top: 3rem;
+        }
+
+        .year-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+        }
+
+        @media (max-width: 768px) {
+            .meeting-card {
+                padding: 1.25rem;
+            }
+
+            .meeting-card-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="/" class="logo">Nobodies</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#principles">Principles</a></li>
+                <li><a href="/#event">Event</a></li>
+                <li><a href="/#join">Join</a></li>
+                <li><a href="transparency.html">Transparency</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="transparency-page">
+        <div class="container">
+            <a href="/" class="back-link">Back to Home</a>
+
+            <div class="transparency-header">
+                <h1>Transparency</h1>
+                <p class="transparency-intro">
+                    As a democratic, member-governed organization, we believe in open communication.
+                    Here you'll find summaries of our board meetings and key decisions.
+                </p>
+            </div>
+
+            <section class="year-section">
+                <h2>January 2026</h2>
+
+                <div class="meetings-list">
+                    <a href="transparency/2026-01-26-board.html" class="meeting-card">
+                        <div class="meeting-card-header">
+                            <span class="meeting-date">January 26, 2026</span>
+                            <span class="meeting-type">Board Meeting</span>
+                        </div>
+                        <h3 class="meeting-title">Board Meeting</h3>
+                        <p class="meeting-summary">
+                            Discussed transition roadmap and trademark requirements. Established managed membership growth
+                            and identified Build & Strike and City Planning as critical early roles. Prepared for community call.
+                        </p>
+                        <p class="meeting-attendees"><strong>Present:</strong> Daniel, Ben, Chris, Pablo, Peter, Ward, Victor</p>
+                    </a>
+
+                    <a href="transparency/2026-01-22-board.html" class="meeting-card">
+                        <div class="meeting-card-header">
+                            <span class="meeting-date">January 22, 2026</span>
+                            <span class="meeting-type">Board Meeting</span>
+                        </div>
+                        <h3 class="meeting-title">Board Meeting</h3>
+                        <p class="meeting-summary">
+                            Decided to announce the association independently with self-reliance strategy.
+                            Registered nobodies.team domain and scheduled community meetings.
+                        </p>
+                        <p class="meeting-attendees"><strong>Present:</strong> Ben, Chris, Daniel, Pablo, Peter, Ward</p>
+                    </a>
+
+                    <a href="transparency/2026-01-19-board.html" class="meeting-card">
+                        <div class="meeting-card-header">
+                            <span class="meeting-date">January 19, 2026</span>
+                            <span class="meeting-type">Board Meeting</span>
+                        </div>
+                        <h3 class="meeting-title">Board Meeting</h3>
+                        <p class="meeting-summary">
+                            Established digital infrastructure (Google Workspace, Discord). Formed transition work group.
+                            Affirmed intent to make the 2026 event happen. Clarified land acquisition as separate from association.
+                        </p>
+                        <p class="meeting-attendees"><strong>Present:</strong> Daniel, Peter, Pablo, Ward, Victor, Chris, Ben</p>
+                    </a>
+
+                    <a href="transparency/2026-01-15-board.html" class="meeting-card">
+                        <div class="meeting-card-header">
+                            <span class="meeting-date">January 15, 2026</span>
+                            <span class="meeting-type">Board Meeting</span>
+                        </div>
+                        <h3 class="meeting-title">First Board Meeting</h3>
+                        <p class="meeting-summary">
+                            Inaugural meeting. Agreed on statutes amendments, General Assembly procedures,
+                            and unanimous support for pursuing the 2026 event. Set twice-weekly meeting cadence.
+                        </p>
+                        <p class="meeting-attendees"><strong>Present:</strong> Daniel, Chris, Pablo, Peter, Ben, Ward, Victor, Michelle</p>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="footer-logo">Nobodies Collective</span>
+                    <p>A Spanish non-profit cultural association</p>
+                    <p class="footer-address">Glorieta de Bilbao 1, 3 Derecha<br>28004 Madrid, Spain</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigate</h4>
+                    <a href="/#about">About</a>
+                    <a href="/#principles">Principles</a>
+                    <a href="/#event">Event</a>
+                    <a href="/#join">Get Involved</a>
+                    <a href="estatutos.html">Estatutos</a>
+                    <a href="transparency.html">Transparency</a>
+                </div>
+                <div class="footer-connect">
+                    <h4>Connect</h4>
+                    <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a>
+                    <a href="https://t.me/nobodiescollective" target="_blank">Telegram</a>
+                    <a href="mailto:hello@nobodies.team">hello@nobodies.team</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Asociacion Nobodies Collective</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (navToggle && navLinks) {
+            navToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+        }
+    </script>
+</body>
+</html>
