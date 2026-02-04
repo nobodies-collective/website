@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Signup | Nobodies Collective Association</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .newsletter-signup-page {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            background: url(./img/desert.jpg);
+            background-size: cover;
+        }
+
+        .newsletter-signup-container {
+            background-color: var(--color-bg);
+            color: var(--color-text-muted);
+            border-radius: 2px;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 4rem;
+        }
+
+        .newsletter-signup-container p, .newsletter-signup-container .ml-form-successContent p {
+            color: var(--color-text-muted) !important;  /* … you started it … */
+            font-size: 1.1rem !important;
+        }
+
+        .newsletter-signup-container .newsletter-signup-heading {
+            color: var(--color-text-muted);
+            margin-bottom: .5em;
+        }
+
+        .newsletter-signup-container form.ml-block-form {
+            background-color: rgba(155, 155, 145, 0.26) !important;
+            border-radius: 2px !important;
+        }
+
+        .newsletter-signup-container form.ml-block-form input[type="email"] {
+            border-radius: 2px !important;
+        }
+
+        .newsletter-signup-container .ml-form-embedContainer button.primary {
+            border-radius: 2px !important;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="newsletter-signup-page newsletter">
+        <div class="container">
+            <div class="newsletter-signup-container">
+                <h2 class="newsletter-signup-heading">Stay in the Loop</h2>
+                <p>Get updates on the event, ticket sales, and ways to participate.</p>
+                <div id="mlb2-36155024" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-36155024">
+                    <div class="ml-form-align-center">
+                        <div class="ml-form-embedWrapper embedForm">
+                            <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2058732/forms/177407017744336669/subscribe" data-code="" method="post" target="_blank">
+                                    <div class="ml-form-formContent">
+                                        <div class="ml-form-fieldRow ml-last-item">
+                                            <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                                                <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="ml-submit" value="1">
+                                    <div class="ml-form-embedSubmit">
+                                        <button type="submit" class="primary">Subscribe</button>
+                                        <button disabled="disabled" style="display: none;" type="button" class="loading">
+                                            <div class="ml-form-embedSubmitLoad"></div>
+                                            <span class="sr-only">Loading...</span>
+                                        </button>
+                                    </div>
+                                    <input type="hidden" name="anticsrf" value="true">
+                                </form>
+                            </div>
+                            <div class="ml-form-successBody row-success" style="display: none">
+                                <div class="ml-form-successContent">
+                                    <p>Thanks for subscribing! Hope to see you in the dust.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function ml_webform_success_36155024() {
+                var $ = ml_jQuery || jQuery;
+                $('.ml-subscribe-form-36155024 .row-success').show();
+                $('.ml-subscribe-form-36155024 .row-form').hide();
+            }
+        </script>
+        <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+        <script>fetch("https://assets.mailerlite.com/jsonp/2058732/forms/177407017744336669/takel")</script>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="footer-logo">Nobodies Collective</span>
+                    <p>A Spanish non-profit cultural association</p>
+                    <p class="footer-address">Glorieta de Bilbao 1, 3 Derecha<br>28004 Madrid, Spain</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigate</h4>
+                    <a href="/#about">About</a>
+                    <a href="/#principles">Principles</a>
+                    <a href="/#event">Event</a>
+                    <a href="/#join">Get Involved</a>
+                    <a href="estatutos.html">Estatutos</a>
+                    <a href="transparency.html">Transparency</a>
+                </div>
+                <div class="footer-connect">
+                    <h4>Connect</h4>
+                    <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a>
+                    <a href="https://t.me/nobodiescollective" target="_blank">Telegram</a>
+                    <a href="mailto:hello@nobodies.team">hello@nobodies.team</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Asociacion Nobodies Collective</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
