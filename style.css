@@ -3,17 +3,17 @@
    ========================================================================== */
 
 :root {
-    --color-bg: #fffbf7;
-    --color-bg-alt: #fff7f0;
-    --color-text: #1a1a1a;
-    --color-text-muted: #555;
-    --color-accent: #ff5722;
-    --color-accent-hover: #e64a19;
-    --color-purple: #8b5cf6;
-    --color-purple-dark: #7c3aed;
-    --color-yellow: #fbbf24;
-    --color-pink: #ec4899;
-    --color-border: #eee;
+    --color-bg: #faf5ee;
+    --color-bg-alt: #f2ebe0;
+    --color-text: #2c2418;
+    --color-text-muted: #6b5e50;
+    --color-accent: #c2703e;
+    --color-accent-hover: #a85d32;
+    --color-purple: #7a8b6a;
+    --color-purple-dark: #5f7050;
+    --color-yellow: #c9922a;
+    --color-pink: #b08968;
+    --color-border: #e4ddd4;
 
     --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -90,11 +90,11 @@ h4 { font-size: 1.15rem; }
 .btn-primary {
     background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-pink) 100%);
     color: #fff;
-    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3);
+    box-shadow: 0 4px 15px rgba(194, 112, 62, 0.3);
 }
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255, 87, 34, 0.4);
+    box-shadow: 0 8px 25px rgba(194, 112, 62, 0.4);
     color: #fff;
 }
 
@@ -161,7 +161,7 @@ h4 { font-size: 1.15rem; }
 }
 
 .header.scrolled {
-    background: rgba(255, 251, 247, 0.95);
+    background: rgba(250, 245, 238, 0.95);
 }
 
 .header:not(.scrolled) .logo {
@@ -277,9 +277,9 @@ h4 { font-size: 1.15rem; }
     z-index: 1;
     background: linear-gradient(
         to bottom,
-        rgba(26, 26, 26, 0.45) 0%,
-        rgba(26, 26, 26, 0.55) 50%,
-        rgba(26, 26, 26, 0.7) 100%
+        rgba(44, 36, 24, 0.4) 0%,
+        rgba(44, 36, 24, 0.5) 50%,
+        rgba(44, 36, 24, 0.65) 100%
     );
     pointer-events: none;
 }
@@ -372,7 +372,7 @@ h4 { font-size: 1.15rem; }
     height: 320px;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 20px 60px rgba(194, 112, 62, 0.25);
     animation: morph 8s ease-in-out infinite;
 }
 
@@ -426,7 +426,7 @@ h4 { font-size: 1.15rem; }
 .principle:hover {
     transform: translateX(8px);
     border-color: var(--color-accent);
-    box-shadow: 0 4px 20px rgba(255, 87, 34, 0.1);
+    box-shadow: 0 4px 20px rgba(194, 112, 62, 0.1);
 }
 
 .principle-name {
@@ -445,7 +445,7 @@ h4 { font-size: 1.15rem; }
 .consent-banner {
     margin-top: 2.5rem;
     padding: 2rem;
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(236, 72, 153, 0.05));
+    background: linear-gradient(135deg, rgba(122, 139, 106, 0.1), rgba(194, 112, 62, 0.06));
     border-radius: var(--radius);
     text-align: center;
     color: var(--color-text-muted);
@@ -626,7 +626,7 @@ h4 { font-size: 1.15rem; }
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--color-accent), var(--color-purple), var(--color-pink));
+    background: linear-gradient(90deg, var(--color-accent), var(--color-yellow), var(--color-pink));
 }
 
 .coming-soon h3 {
@@ -860,7 +860,7 @@ h4 { font-size: 1.15rem; }
 /* Newsletter Section */
 .newsletter {
     padding: 5rem 0;
-    background: linear-gradient(135deg, var(--color-purple) 0%, var(--color-accent) 100%);
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-yellow) 100%);
     text-align: center;
     color: white;
 }
