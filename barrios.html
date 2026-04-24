@@ -345,8 +345,21 @@
             return v === 'Yes' ? 0 : v === 'Maybe' ? 1 : 2;
         }
 
-        fetch('barrios-data.json')
-            .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+        var LIVE_URL = HUMANS_BASE + '/api/barrios/2026';
+
+        function loadBarrios() {
+            return fetch(LIVE_URL)
+                .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+                .catch(function(err) {
+                    console.warn('Live barrios fetch failed, falling back to snapshot:', err.message);
+                    return fetch('barrios-data.json').then(function(r) {
+                        if (!r.ok) throw new Error('Snapshot HTTP ' + r.status);
+                        return r.json();
+                    });
+                });
+        }
+
+        loadBarrios()
             .then(function(data) {
                 var barrios = data.filter(function(b) { return b.status === 'Active'; });
                 barrios.sort(function(a, b) {
