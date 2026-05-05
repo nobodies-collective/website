@@ -3668,3 +3668,101 @@ div.link-card:not(.link-card--disabled) {
         grid-template-columns: 1fr;
     }
 }
+
+/* ==========================================================================
+   Document pages — long-form content with single-column layout.
+   Used for legal pages (terms, privacy, refund policy) and practical-info
+   pages (bus-tickets, getting-there, etc.). Was previously inline-duplicated
+   under the misleading ".legal-*" naming on every page that used it.
+   ========================================================================== */
+
+.doc-page { padding: 8rem 0 4rem; }
+@media (max-width: 768px) { .doc-page { padding: 6rem 0 3rem; } }
+
+.doc-header { text-align: center; margin-bottom: 3rem; }
+.doc-header h1 { margin-bottom: 1rem; }
+.doc-intro {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-border);
+    line-height: 1.7;
+}
+
+.doc-content { max-width: 800px; margin: 0 auto; }
+
+.doc-section { margin-top: 3rem; }
+.doc-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-accent);
+}
+.doc-section h3 { font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+.doc-section p { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; }
+.doc-section ul { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; padding-left: 1.5rem; }
+.doc-section li { margin-bottom: 0.5rem; }
+/* Note: link color comes from the global `a {}` rule. We only add weight here.
+   Redeclaring color was the source of the .btn-primary specificity bug fixed
+   in PR #41. */
+.doc-section a { font-weight: 500; }
+
+.doc-contact {
+    margin-top: 3rem;
+    padding: 2rem 2.5rem;
+    background: var(--color-bg-alt);
+    border-radius: var(--radius);
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+.doc-contact a { font-weight: 500; }
+
+/* Back-link (used on doc pages and other secondary pages). Cross-cutting enough
+   to live in the global stylesheet. */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+.back-link:hover { color: var(--color-accent); }
+.back-link::before { content: '\2190'; }
+
+/* Language toggle (multi-language doc pages and a few others — faq, estatutos,
+   code-of-conduct, etc.). */
+.lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 2rem 0; flex-wrap: wrap; }
+.lang-toggle button {
+    padding: 0.75rem 1.5rem;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-alt);
+    color: var(--color-text-muted);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.lang-toggle button.active,
+.lang-toggle button:hover {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #fff;
+}
+.lang-content { display: none; }
+.lang-content.active { display: block; }
+.lang-note {
+    font-style: italic;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+    padding: 1rem 1.5rem;
+    background: var(--color-bg-alt);
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+}

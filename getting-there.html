@@ -10,29 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        .legal-page { padding: 8rem 0 4rem; }
-        .legal-header { text-align: center; margin-bottom: 3rem; }
-        .legal-header h1 { margin-bottom: 1rem; }
-        .legal-intro { color: var(--color-text-muted); font-size: 1.1rem; max-width: 700px; margin: 0 auto; padding-bottom: 2rem; border-bottom: 1px solid var(--color-border); line-height: 1.7; }
-        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; color: var(--color-text-muted); font-size: 0.9rem; }
-        .back-link:hover { color: var(--color-accent); }
-        .back-link::before { content: '\2190'; }
-        .legal-content { max-width: 800px; margin: 0 auto; }
-        .legal-section { margin-top: 3rem; }
-        .legal-section h2 { font-size: 1.5rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
-        .legal-section h3 { font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
-        .legal-section p { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; }
-        .legal-section ul { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; padding-left: 1.5rem; }
-        .legal-section li { margin-bottom: 0.5rem; }
-        .legal-section a { color: var(--color-accent); font-weight: 500; }
-        .legal-contact { margin-top: 3rem; padding: 2rem 2.5rem; background: var(--color-bg-alt); border-radius: var(--radius); text-align: center; color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.7; }
-        .legal-contact a { color: var(--color-accent); font-weight: 500; }
-        @media (max-width: 768px) { .legal-page { padding: 6rem 0 3rem; } }
-        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 2rem 0; flex-wrap: wrap; }
-        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
-        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
-        .lang-content { display: none; }
-        .lang-content.active { display: block; }
+        /* Page-specific: travel keyfacts, travel CTA button, embedded map.
+           Doc-page layout lives in style.css. */
         .travel-keyfacts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
         .travel-keyfact { padding: 1.25rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 3px solid var(--color-accent); }
         .travel-keyfact .label { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-muted); margin-bottom: 0.4rem; }
@@ -48,13 +27,13 @@
     <div id="shared-header"></div>
     <script src="header.js"></script>
 
-    <main class="legal-page">
+    <main class="doc-page">
         <div class="container">
             <a href="/" class="back-link">Back to Home</a>
 
-            <div class="legal-header">
+            <div class="doc-header">
                 <h1>Getting There</h1>
-                <p class="legal-intro">Elsewhere 2026 takes place in the Monegros desert, in the province of Huesca, Arag&oacute;n &mdash; northern Spain. This page is your overview of the ways to reach the site.</p>
+                <p class="doc-intro">Elsewhere 2026 takes place in the Monegros desert, in the province of Huesca, Arag&oacute;n &mdash; northern Spain. This page is your overview of the ways to reach the site.</p>
             </div>
 
             <div class="travel-map">
@@ -69,11 +48,11 @@
                 <button data-lang="de">Deutsch</button>
             </div>
 
-            <div class="legal-content">
+            <div class="doc-content">
 
                 <!-- ==================== ENGLISH ==================== -->
                 <div class="lang-content active" data-lang="en">
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Where is Elsewhere?</h2>
 
                         <div class="travel-keyfacts">
@@ -90,14 +69,14 @@
                         <p style="margin-top: 1.5rem;">The exact site address and map coordinates are shared with ticket holders closer to the event, through the announcement channels and the Survival Guide.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>By coach</h2>
                         <p>We organise coaches between Barcelona and the site for &euro;48 per seat, with pickups at <strong>Barcelona Sants</strong> and <strong>El Prat Airport</strong> and a stop in Sari&ntilde;ena.</p>
                         <p>Outbound buses run on Friday 3 July, Monday 6 July (two journeys) and Tuesday 7 July. Returns run on Sunday 12, Monday 13 and Tuesday 14 July.</p>
                         <p><a class="travel-cta" href="bus-tickets.html">See the full bus schedule and tickets</a></p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>By car</h2>
                         <p>Driving is the most flexible option, especially if you are bringing camp gear, art or shade structures. The site sits off a rural road in the Monegros &mdash; the last stretch is unpaved.</p>
                         <ul>
@@ -107,18 +86,18 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>By train and plane</h2>
                         <p>The closest international airport is <strong>Barcelona &mdash; El Prat (BCN)</strong>, which is also where the coach picks up. <strong>Zaragoza Airport (ZAZ)</strong> is closer to the site but with fewer flights.</p>
                         <p>By train, the most useful station is <strong>Barcelona Sants</strong>, where the coach also picks up. There are also regional connections to Zaragoza and Huesca; from there you would still need to organise a car or rideshare for the last leg.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Rideshare</h2>
                         <p>Many participants share cars. The best place to find or offer a ride is the <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a>, where there is a dedicated channel before the event.</p>
                     </section>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Questions about getting to Elsewhere? Email <a href="mailto:hello@nobodies.team">hello@nobodies.team</a> and we&rsquo;ll point you at the right human.</p>
                         <p>Travel safe. See you in the dust. &#x1F9E1;</p>
                     </div>
@@ -126,7 +105,7 @@
 
                 <!-- ==================== ESPAÑOL ==================== -->
                 <div class="lang-content" data-lang="es">
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>&iquest;D&oacute;nde est&aacute; Elsewhere?</h2>
 
                         <div class="travel-keyfacts">
@@ -143,14 +122,14 @@
                         <p style="margin-top: 1.5rem;">La direcci&oacute;n exacta y las coordenadas del emplazamiento se comparten con las personas con entrada m&aacute;s cerca del evento, a trav&eacute;s de los canales de anuncios y de la Survival Guide.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>En autocar</h2>
                         <p>Organizamos autocares entre Barcelona y el emplazamiento por 48&euro; por plaza, con recogidas en <strong>Barcelona Sants</strong> y <strong>Aeropuerto de El Prat</strong> y parada en Sari&ntilde;ena.</p>
                         <p>Las salidas son el viernes 3 de julio, el lunes 6 de julio (dos viajes) y el martes 7 de julio. Las vueltas son el domingo 12, lunes 13 y martes 14 de julio.</p>
                         <p><a class="travel-cta" href="bus-tickets.html">Ver horarios completos y comprar billetes</a></p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>En coche</h2>
                         <p>El coche es la opci&oacute;n m&aacute;s flexible, sobre todo si traes equipo de camping, arte o estructuras de sombra. El emplazamiento est&aacute; en un camino rural de los Monegros &mdash; el &uacute;ltimo tramo es de tierra.</p>
                         <ul>
@@ -160,18 +139,18 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>En tren y avi&oacute;n</h2>
                         <p>El aeropuerto internacional m&aacute;s cercano es <strong>Barcelona &mdash; El Prat (BCN)</strong>, donde tambi&eacute;n recoge el autocar. El <strong>Aeropuerto de Zaragoza (ZAZ)</strong> est&aacute; m&aacute;s cerca del emplazamiento pero con menos vuelos.</p>
                         <p>En tren, la estaci&oacute;n m&aacute;s &uacute;til es <strong>Barcelona Sants</strong>, donde tambi&eacute;n recoge el autocar. Tambi&eacute;n hay conexiones regionales a Zaragoza y Huesca; desde all&iacute; tendr&aacute;s que organizar coche o coche compartido para el &uacute;ltimo tramo.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Coche compartido</h2>
                         <p>Mucha gente comparte coche. El mejor sitio para buscar u ofrecer plaza es el <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a>, donde hay un canal dedicado antes del evento.</p>
                     </section>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>&iquest;Preguntas sobre c&oacute;mo llegar a Elsewhere? Escribe a <a href="mailto:hello@nobodies.team">hello@nobodies.team</a> y te pondremos en contacto con la persona adecuada.</p>
                         <p>Buen viaje. Nos vemos en el polvo. &#x1F9E1;</p>
                     </div>
@@ -179,7 +158,7 @@
 
                 <!-- ==================== FRANÇAIS ==================== -->
                 <div class="lang-content" data-lang="fr">
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>O&ugrave; se trouve Elsewhere ?</h2>
 
                         <div class="travel-keyfacts">
@@ -196,14 +175,14 @@
                         <p style="margin-top: 1.5rem;">L&rsquo;adresse exacte et les coordonn&eacute;es du site sont communiqu&eacute;es aux d&eacute;tenteurs de billets &agrave; l&rsquo;approche de l&rsquo;&eacute;v&eacute;nement, via les canaux d&rsquo;annonces et le Survival Guide.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>En autocar</h2>
                         <p>Nous organisons des cars entre Barcelone et le site pour 48&euro; par place, avec ramassage &agrave; <strong>Barcelone Sants</strong> et &agrave; l&rsquo;<strong>a&eacute;roport d&rsquo;El Prat</strong> et un arr&ecirc;t &agrave; Sari&ntilde;ena.</p>
                         <p>Les d&eacute;parts ont lieu le vendredi 3 juillet, le lundi 6 juillet (deux trajets) et le mardi 7 juillet. Les retours sont le dimanche 12, le lundi 13 et le mardi 14 juillet.</p>
                         <p><a class="travel-cta" href="bus-tickets.html">Voir les horaires complets et acheter</a></p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>En voiture</h2>
                         <p>La voiture est l&rsquo;option la plus flexible, surtout si vous apportez du mat&eacute;riel de camping, de l&rsquo;art ou des structures d&rsquo;ombre. Le site se trouve sur une route rurale des Monegros &mdash; la derni&egrave;re portion n&rsquo;est pas pav&eacute;e.</p>
                         <ul>
@@ -213,18 +192,18 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>En train et avion</h2>
                         <p>L&rsquo;a&eacute;roport international le plus proche est <strong>Barcelone &mdash; El Prat (BCN)</strong>, o&ugrave; le car passe &eacute;galement. L&rsquo;<strong>a&eacute;roport de Saragosse (ZAZ)</strong> est plus proche du site mais propose moins de vols.</p>
                         <p>En train, la gare la plus utile est <strong>Barcelone Sants</strong>, o&ugrave; le car passe aussi. Il existe aussi des liaisons r&eacute;gionales vers Saragosse et Huesca ; de l&agrave;, il faudra organiser une voiture ou un covoiturage pour la derni&egrave;re &eacute;tape.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Covoiturage</h2>
                         <p>Beaucoup de participants partagent leur voiture. Le meilleur endroit pour trouver ou proposer une place est le <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a>, o&ugrave; un canal d&eacute;di&eacute; existe avant l&rsquo;&eacute;v&eacute;nement.</p>
                     </section>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Des questions sur le trajet vers Elsewhere ? &Eacute;crivez &agrave; <a href="mailto:hello@nobodies.team">hello@nobodies.team</a> et nous vous orienterons vers la bonne personne.</p>
                         <p>Bon voyage. On se voit dans la poussi&egrave;re. &#x1F9E1;</p>
                     </div>
@@ -232,7 +211,7 @@
 
                 <!-- ==================== ITALIANO ==================== -->
                 <div class="lang-content" data-lang="it">
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Dov&rsquo;&egrave; Elsewhere?</h2>
 
                         <div class="travel-keyfacts">
@@ -249,14 +228,14 @@
                         <p style="margin-top: 1.5rem;">L&rsquo;indirizzo esatto e le coordinate del sito vengono condivisi con chi ha il biglietto pi&ugrave; vicino all&rsquo;evento, tramite i canali di annunci e la Survival Guide.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>In pullman</h2>
                         <p>Organizziamo pullman tra Barcellona e il sito a 48&euro; a posto, con fermate a <strong>Barcellona Sants</strong> e all&rsquo;<strong>Aeroporto di El Prat</strong> e una sosta a Sari&ntilde;ena.</p>
                         <p>Le partenze sono venerd&igrave; 3 luglio, luned&igrave; 6 luglio (due viaggi) e marted&igrave; 7 luglio. I ritorni sono domenica 12, luned&igrave; 13 e marted&igrave; 14 luglio.</p>
                         <p><a class="travel-cta" href="bus-tickets.html">Vedi orari completi e biglietti</a></p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>In auto</h2>
                         <p>L&rsquo;auto &egrave; l&rsquo;opzione pi&ugrave; flessibile, soprattutto se porti attrezzatura da campeggio, arte o strutture per l&rsquo;ombra. Il sito si trova su una strada rurale dei Monegros &mdash; l&rsquo;ultimo tratto non &egrave; asfaltato.</p>
                         <ul>
@@ -266,18 +245,18 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>In treno e aereo</h2>
                         <p>L&rsquo;aeroporto internazionale pi&ugrave; vicino &egrave; <strong>Barcellona &mdash; El Prat (BCN)</strong>, dove ferma anche il pullman. L&rsquo;<strong>Aeroporto di Saragozza (ZAZ)</strong> &egrave; pi&ugrave; vicino al sito ma con meno voli.</p>
                         <p>In treno, la stazione pi&ugrave; utile &egrave; <strong>Barcellona Sants</strong>, dove ferma anche il pullman. Ci sono anche collegamenti regionali per Saragozza e Huesca; da l&igrave; dovrai organizzare un&rsquo;auto o un passaggio per l&rsquo;ultimo tratto.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Passaggi in auto</h2>
                         <p>Molti partecipanti condividono l&rsquo;auto. Il posto migliore per trovare o offrire un passaggio &egrave; il <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a>, dove c&rsquo;&egrave; un canale dedicato prima dell&rsquo;evento.</p>
                     </section>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Domande su come arrivare a Elsewhere? Scrivi a <a href="mailto:hello@nobodies.team">hello@nobodies.team</a> e ti metteremo in contatto con la persona giusta.</p>
                         <p>Buon viaggio. Ci vediamo nella polvere. &#x1F9E1;</p>
                     </div>
@@ -285,7 +264,7 @@
 
                 <!-- ==================== DEUTSCH ==================== -->
                 <div class="lang-content" data-lang="de">
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Wo ist Elsewhere?</h2>
 
                         <div class="travel-keyfacts">
@@ -302,14 +281,14 @@
                         <p style="margin-top: 1.5rem;">Die genaue Adresse und die Koordinaten des Gel&auml;ndes werden Ticketinhabern n&auml;her am Event mitgeteilt, &uuml;ber die Ank&uuml;ndigungskan&auml;le und den Survival Guide.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Mit dem Bus</h2>
                         <p>Wir organisieren Busse zwischen Barcelona und dem Gel&auml;nde f&uuml;r 48&euro; pro Sitzplatz, mit Abfahrt am <strong>Bahnhof Barcelona Sants</strong> und am <strong>Flughafen El Prat</strong> und einem Halt in Sari&ntilde;ena.</p>
                         <p>Hinfahrten am Freitag, 3. Juli, Montag, 6. Juli (zwei Fahrten) und Dienstag, 7. Juli. R&uuml;ckfahrten am Sonntag, 12., Montag, 13. und Dienstag, 14. Juli.</p>
                         <p><a class="travel-cta" href="bus-tickets.html">Vollst&auml;ndigen Fahrplan ansehen und buchen</a></p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Mit dem Auto</h2>
                         <p>Das Auto ist die flexibelste Option, besonders wenn du Campingausr&uuml;stung, Kunst oder Schattenstrukturen mitbringst. Das Gel&auml;nde liegt an einer l&auml;ndlichen Stra&szlig;e in den Monegros &mdash; das letzte St&uuml;ck ist unbefestigt.</p>
                         <ul>
@@ -319,18 +298,18 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Mit Bahn und Flugzeug</h2>
                         <p>Der n&auml;chstgelegene internationale Flughafen ist <strong>Barcelona &mdash; El Prat (BCN)</strong>, wo auch der Bus h&auml;lt. Der <strong>Flughafen Zaragoza (ZAZ)</strong> liegt n&auml;her am Gel&auml;nde, hat aber weniger Verbindungen.</p>
                         <p>Mit der Bahn ist <strong>Barcelona Sants</strong> der wichtigste Bahnhof, an dem auch der Bus h&auml;lt. Es gibt auch Regionalverbindungen nach Zaragoza und Huesca; von dort musst du Auto oder Mitfahrgelegenheit f&uuml;r die letzte Etappe organisieren.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Mitfahrgelegenheit</h2>
                         <p>Viele Teilnehmende teilen sich Autos. Der beste Ort, um eine Mitfahrt zu finden oder anzubieten, ist der <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a>, wo es vor dem Event einen eigenen Kanal gibt.</p>
                     </section>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Fragen zur Anreise nach Elsewhere? Schreib an <a href="mailto:hello@nobodies.team">hello@nobodies.team</a> und wir leiten dich an die richtige Person weiter.</p>
                         <p>Gute Fahrt. Wir sehen uns im Staub. &#x1F9E1;</p>
                     </div>

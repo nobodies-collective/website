@@ -9,154 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .legal-page {
-            padding: 8rem 0 4rem;
-        }
-
-        .legal-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .legal-header h1 {
-            margin-bottom: 1rem;
-        }
-
-        .legal-intro {
-            color: var(--color-text-muted);
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--color-border);
-            line-height: 1.7;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-            color: var(--color-text-muted);
-            font-size: 0.9rem;
-        }
-        .back-link:hover { color: var(--color-accent); }
-        .back-link::before { content: '\2190'; }
-
-        .legal-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .legal-section {
-            margin-top: 3rem;
-        }
-
-        .legal-section h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--color-accent);
-        }
-
-        .legal-section p {
-            color: var(--color-text-muted);
-            line-height: 1.7;
-            margin-bottom: 0.75rem;
-        }
-
-        .legal-section ul {
-            color: var(--color-text-muted);
-            line-height: 1.7;
-            margin-bottom: 0.75rem;
-            padding-left: 1.5rem;
-        }
-
-        .legal-section li {
-            margin-bottom: 0.5rem;
-        }
-
-        .legal-section a {
-            color: var(--color-accent);
-            font-weight: 500;
-        }
-
-        .legal-contact {
-            margin-top: 3rem;
-            padding: 2rem 2.5rem;
-            background: var(--color-bg-alt);
-            border-radius: var(--radius);
-            text-align: center;
-            color: var(--color-text-muted);
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-
-        .legal-contact a {
-            color: var(--color-accent);
-            font-weight: 500;
-        }
-
-        @media (max-width: 768px) {
-            .legal-page {
-                padding: 6rem 0 3rem;
-            }
-        }
-
-        .lang-toggle {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-
-        .lang-toggle button {
-            padding: 0.75rem 1.5rem;
-            font-family: var(--font-body);
-            font-size: 0.875rem;
-            font-weight: 500;
-            border: 1px solid var(--color-border);
-            background: var(--color-bg-alt);
-            color: var(--color-text-muted);
-            border-radius: var(--radius);
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .lang-toggle button.active,
-        .lang-toggle button:hover {
-            background: var(--color-accent);
-            border-color: var(--color-accent);
-            color: #fff;
-        }
-
-        .lang-content { display: none; }
-        .lang-content.active { display: block; }
-
-        .lang-note {
-            font-style: italic;
-            color: var(--color-text-muted);
-            margin-bottom: 2rem;
-            padding: 1rem 1.5rem;
-            background: var(--color-bg-alt);
-            border-radius: var(--radius);
-            font-size: 0.9rem;
-        }
-    </style>
 </head>
 <body>
     <div id="shared-header"></div>
     <script src="header.js"></script>
 
-    <main class="legal-page">
+    <main class="doc-page">
         <div class="container">
             <a href="/" class="back-link">Back to Home</a>
 
-            <div class="legal-header">
+            <div class="doc-header">
                 <h1>Refund Policy</h1>
-                <p class="legal-intro">Elsewhere 2026</p>
+                <p class="doc-intro">Elsewhere 2026</p>
             </div>
 
             <div class="lang-toggle">
@@ -169,10 +33,10 @@
 
             <!-- ENGLISH -->
             <div class="lang-content active" data-lang="en">
-                <div class="legal-content">
+                <div class="doc-content">
                     <p class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</p>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Can I get a refund if I can&rsquo;t attend?</h2>
                         <p>In general, tickets for Elsewhere are not refundable.</p>
                         <p>Elsewhere is a community-run event organized by volunteers and supported by participant contributions. Once tickets are sold, the funds are used to prepare the event: securing the site, arranging infrastructure, and supporting the many elements that make the gathering possible.</p>
@@ -180,14 +44,14 @@
                         <p>You agree not to initiate a payment dispute or chargeback with your payment provider in violation of this Refund Policy. Initiating a chargeback without a valid legal basis may result in cancellation of the associated ticket and restriction from future participation in the Event.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>What should I do if I can&rsquo;t make it?</h2>
                         <p>If you can no longer attend, you can transfer your ticket to someone else.</p>
                         <p>Ticket transfers are allowed until the day before the event begins. Transfers are free, unless the ticketing platform charges a small processing fee.</p>
                         <p>This is usually the easiest solution and helps another participant join the event.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>What happens if the event cannot take place?</h2>
                         <p>Very rarely, circumstances outside the organizers&rsquo; control may prevent the event from happening. This could include things like extreme weather conditions, safety concerns, or government restrictions.</p>
                         <p>If Elsewhere cannot take place, ticket holders will be offered options such as:</p>
@@ -198,18 +62,18 @@
                         <p>If this situation arises, we will communicate the available options clearly through our official communication channels.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Why is the policy like this?</h2>
                         <p>Elsewhere is not a commercial festival. It is a temporary community created by participants and supported by the work of many volunteers.</p>
                         <p>The refund policy helps ensure that the event can be planned responsibly and that the shared effort of everyone involved can continue.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Questions?</h2>
                         <p>If you have any questions about this policy, please contact us.</p>
                     </section>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Questions about this policy? Contact <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </div>
                 </div>
@@ -217,8 +81,8 @@
 
             <!-- SPANISH -->
             <div class="lang-content" data-lang="es">
-                <div class="legal-content">
-                    <section class="legal-section">
+                <div class="doc-content">
+                    <section class="doc-section">
                         <h2>&iquest;Puedo obtener un reembolso si no puedo asistir?</h2>
                         <p>En general, las entradas para Elsewhere no son reembolsables.</p>
                         <p>Elsewhere es un evento comunitario organizado por voluntarios y financiado mediante las contribuciones de los participantes. Una vez vendidas las entradas, los fondos se destinan a la preparaci&oacute;n del evento: asegurar el emplazamiento, organizar la infraestructura y apoyar los numerosos elementos que hacen posible el encuentro.</p>
@@ -226,14 +90,14 @@
                         <p>Te comprometes a no iniciar una disputa de pago ni una devoluci&oacute;n de cargo con tu proveedor de pagos en violaci&oacute;n de esta Pol&iacute;tica de Reembolso. Iniciar una devoluci&oacute;n de cargo sin una base legal v&aacute;lida puede resultar en la cancelaci&oacute;n de la entrada asociada y la restricci&oacute;n de la participaci&oacute;n futura en el Evento.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>&iquest;Qu&eacute; debo hacer si no puedo asistir?</h2>
                         <p>Si ya no puedes asistir, puedes transferir tu entrada a otra persona.</p>
                         <p>Las transferencias de entradas est&aacute;n permitidas hasta el d&iacute;a anterior al inicio del evento. Las transferencias son gratuitas, a menos que la plataforma de venta de entradas cobre una peque&ntilde;a tarifa de procesamiento.</p>
                         <p>Esta suele ser la soluci&oacute;n m&aacute;s sencilla y permite que otro participante se una al evento.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>&iquest;Qu&eacute; sucede si el evento no puede llevarse a cabo?</h2>
                         <p>En muy raras ocasiones, circunstancias fuera del control de los organizadores pueden impedir la celebraci&oacute;n del evento. Esto podr&iacute;a incluir situaciones como condiciones meteorol&oacute;gicas extremas, problemas de seguridad o restricciones gubernamentales.</p>
                         <p>Si Elsewhere no puede llevarse a cabo, se ofrecer&aacute;n a los titulares de las entradas opciones como:</p>
@@ -244,18 +108,18 @@
                         <p>Si se produce esta situaci&oacute;n, comunicaremos las opciones disponibles de forma clara a trav&eacute;s de nuestros canales oficiales de comunicaci&oacute;n.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>&iquest;Por qu&eacute; esta pol&iacute;tica es as&iacute;?</h2>
                         <p>Elsewhere no es un festival comercial. Es una comunidad temporal creada por los participantes y sostenida por el trabajo de muchos voluntarios.</p>
                         <p>La pol&iacute;tica de reembolso ayuda a garantizar que el evento pueda planificarse de manera responsable y que el esfuerzo compartido de todos los involucrados pueda continuar.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>&iquest;Preguntas?</h2>
                         <p>Si tienes alguna pregunta sobre esta pol&iacute;tica, no dudes en contactarnos.</p>
                     </section>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>&iquest;Preguntas sobre esta pol&iacute;tica? Contacta con <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </div>
                 </div>
@@ -263,10 +127,10 @@
 
             <!-- FRENCH -->
             <div class="lang-content" data-lang="fr">
-                <div class="legal-content">
+                <div class="doc-content">
                     <p class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</p>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Puis-je obtenir un remboursement si je ne peux pas participer&nbsp;?</h2>
                         <p>En r&egrave;gle g&eacute;n&eacute;rale, les billets pour Elsewhere ne sont pas remboursables.</p>
                         <p>Elsewhere est un &eacute;v&eacute;nement communautaire organis&eacute; par des b&eacute;n&eacute;voles et financ&eacute; par les contributions des participants. Une fois les billets vendus, les fonds sont utilis&eacute;s pour pr&eacute;parer l&rsquo;&eacute;v&eacute;nement&nbsp;: s&eacute;curiser le site, mettre en place les infrastructures et soutenir les nombreux &eacute;l&eacute;ments qui rendent le rassemblement possible.</p>
@@ -274,14 +138,14 @@
                         <p>Vous vous engagez &agrave; ne pas initier de litige de paiement ni de r&eacute;trofacturation aupr&egrave;s de votre prestataire de paiement en violation de la pr&eacute;sente Politique de Remboursement. Initier une r&eacute;trofacturation sans base l&eacute;gale valide peut entra&icirc;ner l&rsquo;annulation du billet concern&eacute; et une restriction de participation aux futures &eacute;ditions de l&rsquo;&Eacute;v&eacute;nement.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Que dois-je faire si je ne peux pas venir&nbsp;?</h2>
                         <p>Si vous ne pouvez plus participer, vous pouvez transf&eacute;rer votre billet &agrave; une autre personne.</p>
                         <p>Les transferts de billets sont autoris&eacute;s jusqu&rsquo;au jour pr&eacute;c&eacute;dant le d&eacute;but de l&rsquo;&eacute;v&eacute;nement. Les transferts sont gratuits, sauf si la plateforme de billetterie facture de petits frais de traitement.</p>
                         <p>C&rsquo;est g&eacute;n&eacute;ralement la solution la plus simple et cela permet &agrave; un autre participant de rejoindre l&rsquo;&eacute;v&eacute;nement.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Que se passe-t-il si l&rsquo;&eacute;v&eacute;nement ne peut pas avoir lieu&nbsp;?</h2>
                         <p>Tr&egrave;s rarement, des circonstances ind&eacute;pendantes de la volont&eacute; des organisateurs peuvent emp&ecirc;cher la tenue de l&rsquo;&eacute;v&eacute;nement. Cela peut inclure des conditions m&eacute;t&eacute;orologiques extr&ecirc;mes, des probl&egrave;mes de s&eacute;curit&eacute; ou des restrictions gouvernementales.</p>
                         <p>Si Elsewhere ne peut pas avoir lieu, les d&eacute;tenteurs de billets se verront proposer des options telles que&nbsp;:</p>
@@ -292,18 +156,18 @@
                         <p>Si cette situation se pr&eacute;sente, nous communiquerons clairement les options disponibles par le biais de nos canaux de communication officiels.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Pourquoi cette politique est-elle ainsi&nbsp;?</h2>
                         <p>Elsewhere n&rsquo;est pas un festival commercial. C&rsquo;est une communaut&eacute; temporaire cr&eacute;&eacute;e par les participants et soutenue par le travail de nombreux b&eacute;n&eacute;voles.</p>
                         <p>La politique de remboursement contribue &agrave; garantir que l&rsquo;&eacute;v&eacute;nement puisse &ecirc;tre organis&eacute; de mani&egrave;re responsable et que l&rsquo;effort collectif de toutes les personnes impliqu&eacute;es puisse se poursuivre.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Des questions&nbsp;?</h2>
                         <p>Si vous avez des questions concernant cette politique, n&rsquo;h&eacute;sitez pas &agrave; nous contacter.</p>
                     </section>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Des questions sur cette politique&nbsp;? Contactez <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </div>
                 </div>
@@ -311,10 +175,10 @@
 
             <!-- ITALIAN -->
             <div class="lang-content" data-lang="it">
-                <div class="legal-content">
+                <div class="doc-content">
                     <p class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</p>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Posso ottenere un rimborso se non posso partecipare?</h2>
                         <p>In generale, i biglietti per Elsewhere non sono rimborsabili.</p>
                         <p>Elsewhere &egrave; un evento comunitario organizzato da volontari e sostenuto dai contributi dei partecipanti. Una volta venduti i biglietti, i fondi vengono utilizzati per preparare l&rsquo;evento: assicurare il sito, organizzare le infrastrutture e supportare i numerosi elementi che rendono possibile l&rsquo;incontro.</p>
@@ -322,14 +186,14 @@
                         <p>L&rsquo;utente si impegna a non avviare una contestazione del pagamento o uno storno con il proprio fornitore di servizi di pagamento in violazione della presente Politica di Rimborso. Avviare uno storno senza una base giuridica valida pu&ograve; comportare la cancellazione del biglietto associato e la restrizione dalla partecipazione futura all&rsquo;Evento.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Cosa devo fare se non posso partecipare?</h2>
                         <p>Se non puoi pi&ugrave; partecipare, puoi trasferire il tuo biglietto a un&rsquo;altra persona.</p>
                         <p>I trasferimenti dei biglietti sono consentiti fino al giorno precedente l&rsquo;inizio dell&rsquo;evento. I trasferimenti sono gratuiti, a meno che la piattaforma di biglietteria addebiti una piccola commissione di elaborazione.</p>
                         <p>Questa &egrave; di solito la soluzione pi&ugrave; semplice e consente a un altro partecipante di unirsi all&rsquo;evento.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Cosa succede se l&rsquo;evento non pu&ograve; aver luogo?</h2>
                         <p>Molto raramente, circostanze al di fuori del controllo degli organizzatori possono impedire lo svolgimento dell&rsquo;evento. Ci&ograve; potrebbe includere condizioni meteorologiche estreme, problemi di sicurezza o restrizioni governative.</p>
                         <p>Se Elsewhere non pu&ograve; aver luogo, ai titolari dei biglietti verranno offerte opzioni come:</p>
@@ -340,18 +204,18 @@
                         <p>Se si verifica questa situazione, comunicheremo chiaramente le opzioni disponibili attraverso i nostri canali di comunicazione ufficiali.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Perch&eacute; la politica &egrave; cos&igrave;?</h2>
                         <p>Elsewhere non &egrave; un festival commerciale. &Egrave; una comunit&agrave; temporanea creata dai partecipanti e sostenuta dal lavoro di molti volontari.</p>
                         <p>La politica di rimborso contribuisce a garantire che l&rsquo;evento possa essere pianificato in modo responsabile e che lo sforzo condiviso di tutti i coinvolti possa continuare.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Domande?</h2>
                         <p>Se hai domande su questa politica, non esitare a contattarci.</p>
                     </section>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Domande su questa politica? Contatta <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </div>
                 </div>
@@ -359,10 +223,10 @@
 
             <!-- GERMAN -->
             <div class="lang-content" data-lang="de">
-                <div class="legal-content">
+                <div class="doc-content">
                     <p class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</p>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Kann ich eine R&uuml;ckerstattung erhalten, wenn ich nicht teilnehmen kann?</h2>
                         <p>Grunds&auml;tzlich sind Tickets f&uuml;r Elsewhere nicht erstattungsf&auml;hig.</p>
                         <p>Elsewhere ist eine gemeinschaftlich organisierte Veranstaltung, die von Freiwilligen organisiert und durch die Beitr&auml;ge der Teilnehmer finanziert wird. Sobald Tickets verkauft sind, werden die Mittel f&uuml;r die Vorbereitung der Veranstaltung verwendet: Sicherung des Gel&auml;ndes, Aufbau der Infrastruktur und Unterst&uuml;tzung der vielen Elemente, die das Zusammenkommen erm&ouml;glichen.</p>
@@ -370,14 +234,14 @@
                         <p>Sie verpflichten sich, keine Zahlungsstreitigkeit oder R&uuml;ckbuchung bei Ihrem Zahlungsanbieter unter Versto&szlig; gegen diese R&uuml;ckerstattungsrichtlinie einzuleiten. Die Einleitung einer R&uuml;ckbuchung ohne g&uuml;ltige Rechtsgrundlage kann zur Stornierung des zugeh&ouml;rigen Tickets und zum Ausschluss von der zuk&uuml;nftigen Teilnahme an der Veranstaltung f&uuml;hren.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Was soll ich tun, wenn ich nicht kommen kann?</h2>
                         <p>Wenn Sie nicht mehr teilnehmen k&ouml;nnen, k&ouml;nnen Sie Ihr Ticket an eine andere Person &uuml;bertragen.</p>
                         <p>Ticket&uuml;bertragungen sind bis zum Tag vor Beginn der Veranstaltung m&ouml;glich. &Uuml;bertragungen sind kostenlos, es sei denn, die Ticketing-Plattform erhebt eine geringe Bearbeitungsgeb&uuml;hr.</p>
                         <p>Dies ist in der Regel die einfachste L&ouml;sung und erm&ouml;glicht es einem anderen Teilnehmer, an der Veranstaltung teilzunehmen.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Was passiert, wenn die Veranstaltung nicht stattfinden kann?</h2>
                         <p>In sehr seltenen F&auml;llen k&ouml;nnen Umst&auml;nde au&szlig;erhalb der Kontrolle der Organisatoren die Durchf&uuml;hrung der Veranstaltung verhindern. Dazu k&ouml;nnten extreme Wetterbedingungen, Sicherheitsbedenken oder beh&ouml;rdliche Einschr&auml;nkungen geh&ouml;ren.</p>
                         <p>Wenn Elsewhere nicht stattfinden kann, werden den Ticketinhabern Optionen wie die folgenden angeboten:</p>
@@ -388,18 +252,18 @@
                         <p>Sollte diese Situation eintreten, werden wir die verf&uuml;gbaren Optionen klar &uuml;ber unsere offiziellen Kommunikationskan&auml;le mitteilen.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Warum ist die Richtlinie so gestaltet?</h2>
                         <p>Elsewhere ist kein kommerzielles Festival. Es ist eine tempor&auml;re Gemeinschaft, die von den Teilnehmern geschaffen und durch die Arbeit vieler Freiwilliger getragen wird.</p>
                         <p>Die R&uuml;ckerstattungsrichtlinie tr&auml;gt dazu bei, dass die Veranstaltung verantwortungsvoll geplant werden kann und dass die gemeinsame Anstrengung aller Beteiligten fortgesetzt werden kann.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Fragen?</h2>
                         <p>Wenn Sie Fragen zu dieser Richtlinie haben, kontaktieren Sie uns bitte.</p>
                     </section>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Fragen zu dieser Richtlinie? Kontaktieren Sie <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </div>
                 </div>
