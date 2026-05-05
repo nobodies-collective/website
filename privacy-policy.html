@@ -10,133 +10,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        .legal-page {
-            padding: 8rem 0 4rem;
-        }
-
-        .legal-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .legal-header h1 {
-            margin-bottom: 1rem;
-        }
-
-        .legal-intro {
-            color: var(--color-text-muted);
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--color-border);
-            line-height: 1.7;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-            color: var(--color-text-muted);
-            font-size: 0.9rem;
-        }
-        .back-link:hover { color: var(--color-accent); }
-        .back-link::before { content: '\2190'; }
-
-        .legal-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .legal-section {
-            margin-top: 3rem;
-        }
-
-        .legal-section h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--color-accent);
-        }
-
-        .legal-section h3 {
+        /* Page-specific: legal-doc h3 (smaller + bolder + dark text), emphasised
+           li strong, table styling, address block. Doc-page layout lives in
+           style.css. */
+        .doc-section h3 {
             font-size: 1.1rem;
             font-weight: 600;
-            margin-bottom: 0.75rem;
             margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
             color: var(--color-text);
         }
+        .doc-section li strong { color: var(--color-text); }
 
-        .legal-section p {
-            color: var(--color-text-muted);
-            line-height: 1.7;
-            margin-bottom: 0.75rem;
-        }
-
-        .legal-section ul {
-            color: var(--color-text-muted);
-            line-height: 1.7;
-            margin-bottom: 0.75rem;
-            padding-left: 1.5rem;
-        }
-
-        .legal-section li {
-            margin-bottom: 0.5rem;
-        }
-
-        .legal-section li strong {
-            color: var(--color-text);
-        }
-
-        .legal-section a {
-            color: var(--color-accent);
-            font-weight: 500;
-        }
-
-        .legal-table {
+        .doc-table {
             width: 100%;
             border-collapse: collapse;
             margin: 1rem 0 1.5rem;
             font-size: 0.95rem;
         }
-
-        .legal-table th,
-        .legal-table td {
+        .doc-table th,
+        .doc-table td {
             padding: 0.75rem 1rem;
             text-align: left;
             border-bottom: 1px solid var(--color-border);
             color: var(--color-text-muted);
             line-height: 1.5;
         }
-
-        .legal-table th {
+        .doc-table th {
             color: var(--color-text);
             font-weight: 600;
             background: var(--color-bg-alt);
         }
+        .doc-table tr:last-child td { border-bottom: none; }
 
-        .legal-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .legal-contact {
-            margin-top: 3rem;
-            padding: 2rem 2.5rem;
-            background: var(--color-bg-alt);
-            border-radius: var(--radius);
-            text-align: center;
-            color: var(--color-text-muted);
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-
-        .legal-contact a {
-            color: var(--color-accent);
-            font-weight: 500;
-        }
-
-        .legal-address {
+        .doc-address {
             margin-top: 2rem;
             padding: 1.5rem 2rem;
             background: var(--color-bg-alt);
@@ -146,56 +53,10 @@
             line-height: 1.7;
         }
 
-        .lang-toggle {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-        .lang-toggle button {
-            padding: 0.75rem 1.5rem;
-            font-family: var(--font-body);
-            font-size: 0.875rem;
-            font-weight: 500;
-            border: 1px solid var(--color-border);
-            background: var(--color-bg-alt);
-            color: var(--color-text-muted);
-            border-radius: var(--radius);
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .lang-toggle button.active,
-        .lang-toggle button:hover {
-            background: var(--color-accent);
-            border-color: var(--color-accent);
-            color: #fff;
-        }
-        .lang-content { display: none; }
-        .lang-content.active { display: block; }
-        .lang-note {
-            font-style: italic;
-            color: var(--color-text-muted);
-            margin-bottom: 2rem;
-            padding: 1rem 1.5rem;
-            background: var(--color-bg-alt);
-            border-radius: var(--radius);
-            font-size: 0.9rem;
-        }
-
         @media (max-width: 768px) {
-            .legal-page {
-                padding: 6rem 0 3rem;
-            }
-
-            .legal-table {
-                font-size: 0.85rem;
-            }
-
-            .legal-table th,
-            .legal-table td {
-                padding: 0.5rem 0.6rem;
-            }
+            .doc-table { font-size: 0.85rem; }
+            .doc-table th,
+            .doc-table td { padding: 0.5rem 0.6rem; }
         }
     </style>
 </head>
@@ -203,13 +64,13 @@
     <div id="shared-header"></div>
     <script src="header.js"></script>
 
-    <main class="legal-page">
+    <main class="doc-page">
         <div class="container">
             <a href="/" class="back-link">Back to Home</a>
 
-            <div class="legal-header">
+            <div class="doc-header">
                 <h1>Privacy Policy</h1>
-                <p class="legal-intro">Asociaci&oacute;n Nobodies Collective &mdash; Last updated: 12 March 2026</p>
+                <p class="doc-intro">Asociaci&oacute;n Nobodies Collective &mdash; Last updated: 12 March 2026</p>
             </div>
 
             <div class="lang-toggle">
@@ -220,11 +81,11 @@
                 <button data-lang="de">Deutsch</button>
             </div>
 
-            <div class="legal-content">
+            <div class="doc-content">
                 <div class="lang-content active" data-lang="en">
                     <p class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</p>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>1. Data Controller</h2>
                     <p>Asociaci&oacute;n Nobodies Collective ("Nobodies," "the Association," "we," "us," or "our") is the data controller responsible for personal data collected through this ticket shop.</p>
                     <p><strong>Registered address:</strong> Glorieta de Bilbao 1, 1, Derecha, 28004 Madrid, Spain</p>
@@ -233,13 +94,13 @@
                     <p>If you have any questions about this privacy policy or wish to exercise your data protection rights, please contact us at the address above.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>2. Scope</h2>
                     <p>This policy applies to all websites and services operated by NCA, including nobodies.team, the Humans app (humans.nobodies.team), VIM (vim.nobodies.team), our ticket shop, and any other NCA-related websites or platforms. It explains how we collect, process, and store your personal data when you interact with us in connection with our events or association activities &mdash; including when you visit our websites, purchase tickets, register as a member or collaborator, participate in the event, submit a Code of Conduct report, or otherwise provide personal data to us.</p>
                     <p>Ticket purchases are processed through Ticket Tailor (Zimma Ltd, registered in England and Wales), which acts as a data processor on our behalf. Ticket Tailor's own privacy policy governs its processing of data in its capacity as a controller. This policy governs how we, as the event organiser and data controller, handle the personal data we collect across all of our activities.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>3. Personal Data We Collect</h2>
 
                     <h3>3.1 Data you provide directly</h3>
@@ -270,10 +131,10 @@
                     <p>Where a report is made anonymously, we will retain the details of the reported incident without identifying the reporter.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>4. Why We Process Your Data and Our Legal Basis</h2>
                     <p>Under the GDPR, we must have a lawful basis for each processing activity:</p>
-                    <table class="legal-table">
+                    <table class="doc-table">
                         <thead>
                             <tr>
                                 <th>Purpose</th>
@@ -317,19 +178,19 @@
                     </table>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>5. Special Category Data</h2>
                     <p>If you voluntarily provide health or dietary information (e.g., allergies, accessibility needs), this constitutes special category data under the GDPR. We process it solely for the purpose of ensuring your safety and inclusion at our events, based on your explicit consent (Art. 9(2)(a) GDPR).</p>
                     <p>You may withdraw consent at any time by contacting us. Withdrawal does not affect the lawfulness of processing carried out before withdrawal but may affect our ability to accommodate specific needs at events.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>6. Marketing Communications</h2>
                     <p>We will only send you marketing communications (newsletters, event announcements, surveys) with your prior consent.</p>
                     <p>You can withdraw consent and unsubscribe at any time by contacting us at <a href="mailto:privacy@nobodies.team">privacy@nobodies.team</a> or clicking the unsubscribe link in any marketing email. If you unsubscribe, it may take up to 5 business days for your new preferences to take effect.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>7. Who We Share Your Data With</h2>
                     <p>We do not sell your personal data. We share it only when necessary for the purposes described in this policy, with the following categories of recipients:</p>
 
@@ -354,7 +215,7 @@
                     <p>We may also share your personal data if the Association merges with or transfers its activities to another organisation, in accordance with its statutes and applicable law.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>8. International Data Transfers</h2>
                     <p>The Association is based in Spain. Some of our data processors are based outside the European Economic Area (EEA).</p>
                     <p>We ensure that any transfer of personal data outside the EEA is protected by appropriate safeguards, including:</p>
@@ -367,17 +228,17 @@
                     <p>You may request details of the specific safeguards applied to any particular transfer by contacting us.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>9. Cookies</h2>
                     <p>Our ticket shop uses cookies to recognise you when you return and personalise your settings. Cookies are small text files stored on your device by your browser.</p>
                     <p>Essential cookies are necessary for the ticket shop to function and do not require your consent. Non-essential cookies (including analytics cookies) will only be placed with your prior consent, in accordance with Article 22.2 of Spanish Law 34/2002 (LSSI) and the ePrivacy Directive.</p>
                     <p>We may use analytics services (such as Google Analytics) to monitor how the ticket shop is used. These services collect information anonymously and generate reports on visits, traffic sources, and browsing behaviour. You can manage your cookie preferences through your browser settings or through any cookie consent mechanism on our ticket shop.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>10. Data Retention</h2>
                     <p>We retain personal data only for as long as necessary for the purposes for which it was collected, or as required by law:</p>
-                    <table class="legal-table">
+                    <table class="doc-table">
                         <thead>
                             <tr>
                                 <th>Data Category</th>
@@ -414,7 +275,7 @@
                     <p>When retention periods expire, data is securely deleted or anonymised.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>11. Your Rights</h2>
                     <p>Under the GDPR and Spanish Organic Law 3/2018 (LOPDGDD), you have the following rights:</p>
                     <ul>
@@ -442,7 +303,7 @@
                     <p>We encourage you to contact us first so we can try to resolve your concern.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>12. Data Security</h2>
                     <p>We implement appropriate technical and organisational measures to protect your personal data, including:</p>
                     <ul>
@@ -454,23 +315,23 @@
                     <p>No system can be completely secure. While we take these steps to protect your data, we cannot guarantee absolute security.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>13. Third-Party Links</h2>
                     <p>Our ticket shop may contain links to other websites. Once you leave our ticket shop, we have no control over those sites and are not responsible for their privacy practices. Please review the privacy policy of any site you visit.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>14. Changes to This Policy</h2>
                     <p>We may update this privacy policy to reflect changes in our practices, legal requirements, or organisational structure. When we make material changes, the updated policy will be published on our ticket shop and the "Last updated" date will be revised.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>15. Governing Law and Jurisdiction</h2>
                     <p>This policy is governed by and construed in accordance with Spanish law. For any disputes arising from or relating to this policy, the courts of Madrid, Spain shall have jurisdiction.</p>
                     <p>This policy is drafted in accordance with Regulation (EU) 2016/679 (General Data Protection Regulation), Spanish Organic Law 3/2018 on Personal Data Protection and the Guarantee of Digital Rights (LOPDGDD), and Spanish Law 34/2002 on Information Society Services (LSSI).</p>
                 </section>
 
-                <div class="legal-address">
+                <div class="doc-address">
                     <p><strong>Asociaci&oacute;n Nobodies Collective</strong><br>
                     Glorieta de Bilbao 1, 1, Derecha, 28004 Madrid, Spain<br>
                     <a href="mailto:privacy@nobodies.team">privacy@nobodies.team</a></p>
@@ -479,7 +340,7 @@
 
                 <div class="lang-content" data-lang="es">
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>1. Responsable del tratamiento</h2>
                     <p>Asociaci&oacute;n Nobodies Collective ("Nobodies", "la Asociaci&oacute;n", "nosotros/as" o "nuestro/a") es el responsable del tratamiento de los datos personales recogidos a trav&eacute;s de esta tienda de entradas.</p>
                     <p><strong>Domicilio social:</strong> Glorieta de Bilbao 1, 1, Derecha, 28004 Madrid, Espa&ntilde;a</p>
@@ -488,13 +349,13 @@
                     <p>Si tiene alguna pregunta sobre esta pol&iacute;tica de privacidad o desea ejercer sus derechos de protecci&oacute;n de datos, por favor contacte con nosotros en la direcci&oacute;n indicada.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>2. &Aacute;mbito de aplicaci&oacute;n</h2>
                     <p>Esta pol&iacute;tica se aplica a todos los sitios web y servicios operados por NCA, incluyendo nobodies.team, la aplicaci&oacute;n Humans (humans.nobodies.team), VIM (vim.nobodies.team), nuestra tienda de entradas y cualquier otro sitio web o plataforma relacionados con NCA. Explica c&oacute;mo recogemos, tratamos y almacenamos sus datos personales cuando interact&uacute;a con nosotros en relaci&oacute;n con nuestros eventos o actividades de la asociaci&oacute;n, incluyendo cuando visita nuestros sitios web, compra entradas, se registra como miembro o colaborador, participa en el evento, presenta un informe del C&oacute;digo de Conducta o nos proporciona datos personales de cualquier otra forma.</p>
                     <p>Las compras de entradas se procesan a trav&eacute;s de Ticket Tailor (Zimma Ltd, registrada en Inglaterra y Gales), que act&uacute;a como encargado del tratamiento en nuestro nombre. La pol&iacute;tica de privacidad propia de Ticket Tailor rige su tratamiento de datos en su calidad de responsable. Esta pol&iacute;tica rige c&oacute;mo nosotros, como organizadores del evento y responsables del tratamiento, gestionamos los datos personales que recogemos en todas nuestras actividades.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>3. Datos personales que recogemos</h2>
 
                     <h3>3.1 Datos que usted proporciona directamente</h3>
@@ -525,10 +386,10 @@
                     <p>Cuando un informe se presente de forma an&oacute;nima, conservaremos los detalles del incidente denunciado sin identificar al denunciante.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>4. Por qu&eacute; tratamos sus datos y nuestra base jur&iacute;dica</h2>
                     <p>Conforme al GDPR, debemos tener una base jur&iacute;dica leg&iacute;tima para cada actividad de tratamiento:</p>
-                    <table class="legal-table">
+                    <table class="doc-table">
                         <thead>
                             <tr>
                                 <th>Finalidad</th>
@@ -572,19 +433,19 @@
                     </table>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>5. Datos de categor&iacute;a especial</h2>
                     <p>Si proporciona voluntariamente informaci&oacute;n sanitaria o diet&eacute;tica (p. ej., alergias, necesidades de accesibilidad), esta constituye datos de categor&iacute;a especial conforme al GDPR. Los tratamos exclusivamente con el fin de garantizar su seguridad e inclusi&oacute;n en nuestros eventos, sobre la base de su consentimiento expl&iacute;cito (Art. 9(2)(a) GDPR).</p>
                     <p>Puede retirar su consentimiento en cualquier momento poni&eacute;ndose en contacto con nosotros. La retirada no afecta a la licitud del tratamiento realizado antes de la retirada, pero puede afectar a nuestra capacidad para atender necesidades espec&iacute;ficas en los eventos.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>6. Comunicaciones comerciales</h2>
                     <p>Solo le enviaremos comunicaciones comerciales (boletines informativos, anuncios de eventos, encuestas) con su consentimiento previo.</p>
                     <p>Puede retirar su consentimiento y darse de baja en cualquier momento poni&eacute;ndose en contacto con nosotros en <a href="mailto:privacy@nobodies.team">privacy@nobodies.team</a> o haciendo clic en el enlace de cancelaci&oacute;n de suscripci&oacute;n en cualquier correo electr&oacute;nico comercial. Si se da de baja, sus nuevas preferencias pueden tardar hasta 5 d&iacute;as h&aacute;biles en hacerse efectivas.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>7. Con qui&eacute;n compartimos sus datos</h2>
                     <p>No vendemos sus datos personales. Solo los compartimos cuando es necesario para los fines descritos en esta pol&iacute;tica, con las siguientes categor&iacute;as de destinatarios:</p>
 
@@ -609,7 +470,7 @@
                     <p>Tambi&eacute;n podemos compartir sus datos personales si la Asociaci&oacute;n se fusiona con otra organizaci&oacute;n o le transfiere sus actividades, de conformidad con sus estatutos y la legislaci&oacute;n aplicable.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>8. Transferencias internacionales de datos</h2>
                     <p>La Asociaci&oacute;n tiene su sede en Espa&ntilde;a. Algunos de nuestros encargados del tratamiento est&aacute;n ubicados fuera del Espacio Econ&oacute;mico Europeo (EEE).</p>
                     <p>Nos aseguramos de que cualquier transferencia de datos personales fuera del EEE est&eacute; protegida por garant&iacute;as adecuadas, incluyendo:</p>
@@ -622,17 +483,17 @@
                     <p>Puede solicitar informaci&oacute;n detallada sobre las garant&iacute;as espec&iacute;ficas aplicadas a cualquier transferencia concreta poni&eacute;ndose en contacto con nosotros.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>9. Cookies</h2>
                     <p>Nuestra tienda de entradas utiliza cookies para reconocerle cuando regresa y personalizar su configuraci&oacute;n. Las cookies son peque&ntilde;os archivos de texto almacenados en su dispositivo por su navegador.</p>
                     <p>Las cookies esenciales son necesarias para el funcionamiento de la tienda de entradas y no requieren su consentimiento. Las cookies no esenciales (incluidas las cookies anal&iacute;ticas) solo se instalar&aacute;n con su consentimiento previo, de conformidad con el art&iacute;culo 22.2 de la Ley espa&ntilde;ola 34/2002 (LSSI) y la Directiva ePrivacy.</p>
                     <p>Podemos utilizar servicios de anal&iacute;tica (como Google Analytics) para supervisar el uso de la tienda de entradas. Estos servicios recogen informaci&oacute;n de forma an&oacute;nima y generan informes sobre visitas, fuentes de tr&aacute;fico y comportamiento de navegaci&oacute;n. Puede gestionar sus preferencias de cookies a trav&eacute;s de la configuraci&oacute;n de su navegador o mediante cualquier mecanismo de consentimiento de cookies en nuestra tienda de entradas.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>10. Conservaci&oacute;n de datos</h2>
                     <p>Conservamos los datos personales &uacute;nicamente durante el tiempo necesario para los fines para los que fueron recogidos, o seg&uacute;n lo exija la ley:</p>
-                    <table class="legal-table">
+                    <table class="doc-table">
                         <thead>
                             <tr>
                                 <th>Categor&iacute;a de datos</th>
@@ -669,7 +530,7 @@
                     <p>Cuando los per&iacute;odos de conservaci&oacute;n expiran, los datos se eliminan de forma segura o se anonimizan.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>11. Sus derechos</h2>
                     <p>Conforme al GDPR y a la Ley Org&aacute;nica espa&ntilde;ola 3/2018 (LOPDGDD), usted tiene los siguientes derechos:</p>
                     <ul>
@@ -697,7 +558,7 @@
                     <p>Le animamos a ponerse en contacto con nosotros primero para que podamos intentar resolver su consulta.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>12. Seguridad de los datos</h2>
                     <p>Aplicamos medidas t&eacute;cnicas y organizativas adecuadas para proteger sus datos personales, incluyendo:</p>
                     <ul>
@@ -709,23 +570,23 @@
                     <p>Ning&uacute;n sistema puede ser completamente seguro. Aunque tomamos estas medidas para proteger sus datos, no podemos garantizar una seguridad absoluta.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>13. Enlaces a terceros</h2>
                     <p>Nuestra tienda de entradas puede contener enlaces a otros sitios web. Una vez que abandone nuestra tienda de entradas, no tenemos control sobre dichos sitios y no somos responsables de sus pr&aacute;cticas de privacidad. Por favor, consulte la pol&iacute;tica de privacidad de cualquier sitio que visite.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>14. Cambios en esta pol&iacute;tica</h2>
                     <p>Podemos actualizar esta pol&iacute;tica de privacidad para reflejar cambios en nuestras pr&aacute;cticas, requisitos legales o estructura organizativa. Cuando realicemos cambios sustanciales, la pol&iacute;tica actualizada se publicar&aacute; en nuestra tienda de entradas y se revisar&aacute; la fecha de "&Uacute;ltima actualizaci&oacute;n".</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>15. Legislaci&oacute;n aplicable y jurisdicci&oacute;n</h2>
                     <p>Esta pol&iacute;tica se rige e interpreta de conformidad con la legislaci&oacute;n espa&ntilde;ola. Para cualquier controversia derivada de o relacionada con esta pol&iacute;tica, ser&aacute;n competentes los juzgados y tribunales de Madrid, Espa&ntilde;a.</p>
                     <p>Esta pol&iacute;tica se ha redactado de conformidad con el Reglamento (UE) 2016/679 (Reglamento General de Protecci&oacute;n de Datos), la Ley Org&aacute;nica espa&ntilde;ola 3/2018 de Protecci&oacute;n de Datos Personales y Garant&iacute;a de los Derechos Digitales (LOPDGDD) y la Ley espa&ntilde;ola 34/2002 de Servicios de la Sociedad de la Informaci&oacute;n (LSSI).</p>
                 </section>
 
-                <div class="legal-address">
+                <div class="doc-address">
                     <p><strong>Asociaci&oacute;n Nobodies Collective</strong><br>
                     Glorieta de Bilbao 1, 1, Derecha, 28004 Madrid, Espa&ntilde;a<br>
                     <a href="mailto:privacy@nobodies.team">privacy@nobodies.team</a></p>
@@ -735,7 +596,7 @@
                 <div class="lang-content" data-lang="fr">
                     <p class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</p>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>1. Responsable du traitement des donn&eacute;es</h2>
                     <p>Asociaci&oacute;n Nobodies Collective (&laquo; Nobodies &raquo;, &laquo; l'Association &raquo;, &laquo; nous &raquo;, &laquo; notre &raquo; ou &laquo; nos &raquo;) est le responsable du traitement des donn&eacute;es personnelles collect&eacute;es via cette billetterie.</p>
                     <p><strong>Adresse du si&egrave;ge :</strong> Glorieta de Bilbao 1, 1, Derecha, 28004 Madrid, Espagne</p>
@@ -744,13 +605,13 @@
                     <p>Si vous avez des questions concernant cette politique de confidentialit&eacute; ou si vous souhaitez exercer vos droits en mati&egrave;re de protection des donn&eacute;es, veuillez nous contacter &agrave; l'adresse ci-dessus.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>2. Champ d'application</h2>
                     <p>Cette politique s'applique &agrave; tous les sites web et services exploit&eacute;s par NCA, y compris nobodies.team, l'application Humans (humans.nobodies.team), VIM (vim.nobodies.team), notre billetterie, ainsi que tout autre site web ou plateforme li&eacute;(e) &agrave; NCA. Elle explique comment nous collectons, traitons et stockons vos donn&eacute;es personnelles lorsque vous interagissez avec nous dans le cadre de nos &eacute;v&eacute;nements ou des activit&eacute;s de l'association &mdash; notamment lorsque vous visitez nos sites web, achetez des billets, vous inscrivez en tant que membre ou collaborateur, participez &agrave; l'&eacute;v&eacute;nement, soumettez un signalement relatif au Code de conduite, ou nous fournissez de toute autre mani&egrave;re des donn&eacute;es personnelles.</p>
                     <p>Les achats de billets sont trait&eacute;s par Ticket Tailor (Zimma Ltd, enregistr&eacute;e en Angleterre et au Pays de Galles), qui agit en tant que sous-traitant des donn&eacute;es en notre nom. La propre politique de confidentialit&eacute; de Ticket Tailor r&eacute;git le traitement des donn&eacute;es en sa qualit&eacute; de responsable du traitement. La pr&eacute;sente politique r&eacute;git la mani&egrave;re dont nous, en tant qu'organisateur de l'&eacute;v&eacute;nement et responsable du traitement, traitons les donn&eacute;es personnelles que nous collectons dans le cadre de l'ensemble de nos activit&eacute;s.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>3. Donn&eacute;es personnelles que nous collectons</h2>
 
                     <h3>3.1 Donn&eacute;es que vous fournissez directement</h3>
@@ -781,10 +642,10 @@
                     <p>Lorsqu'un signalement est effectu&eacute; de mani&egrave;re anonyme, nous conserverons les d&eacute;tails de l'incident signal&eacute; sans identifier l'auteur du signalement.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>4. Pourquoi nous traitons vos donn&eacute;es et notre base juridique</h2>
                     <p>En vertu du GDPR, nous devons disposer d'une base juridique pour chaque activit&eacute; de traitement :</p>
-                    <table class="legal-table">
+                    <table class="doc-table">
                         <thead>
                             <tr>
                                 <th>Finalit&eacute;</th>
@@ -828,19 +689,19 @@
                     </table>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>5. Donn&eacute;es de cat&eacute;gorie sp&eacute;ciale</h2>
                     <p>Si vous fournissez volontairement des informations de sant&eacute; ou alimentaires (par ex. allergies, besoins d'accessibilit&eacute;), celles-ci constituent des donn&eacute;es de cat&eacute;gorie sp&eacute;ciale au sens du GDPR. Nous les traitons uniquement dans le but d'assurer votre s&eacute;curit&eacute; et votre inclusion lors de nos &eacute;v&eacute;nements, sur la base de votre consentement explicite (Art. 9(2)(a) GDPR).</p>
                     <p>Vous pouvez retirer votre consentement &agrave; tout moment en nous contactant. Le retrait n'affecte pas la lic&eacute;it&eacute; du traitement effectu&eacute; avant le retrait, mais peut affecter notre capacit&eacute; &agrave; r&eacute;pondre &agrave; des besoins sp&eacute;cifiques lors des &eacute;v&eacute;nements.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>6. Communications marketing</h2>
                     <p>Nous ne vous enverrons des communications marketing (newsletters, annonces d'&eacute;v&eacute;nements, enqu&ecirc;tes) qu'avec votre consentement pr&eacute;alable.</p>
                     <p>Vous pouvez retirer votre consentement et vous d&eacute;sabonner &agrave; tout moment en nous contactant &agrave; <a href="mailto:privacy@nobodies.team">privacy@nobodies.team</a> ou en cliquant sur le lien de d&eacute;sabonnement dans tout e-mail marketing. Si vous vous d&eacute;sabonnez, un d&eacute;lai pouvant aller jusqu'&agrave; 5 jours ouvrables peut &ecirc;tre n&eacute;cessaire pour que vos nouvelles pr&eacute;f&eacute;rences prennent effet.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>7. Avec qui nous partageons vos donn&eacute;es</h2>
                     <p>Nous ne vendons pas vos donn&eacute;es personnelles. Nous les partageons uniquement lorsque cela est n&eacute;cessaire aux fins d&eacute;crites dans la pr&eacute;sente politique, avec les cat&eacute;gories de destinataires suivantes :</p>
 
@@ -865,7 +726,7 @@
                     <p>Nous pouvons &eacute;galement partager vos donn&eacute;es personnelles si l'Association fusionne avec une autre organisation ou lui transf&egrave;re ses activit&eacute;s, conform&eacute;ment &agrave; ses statuts et &agrave; la loi applicable.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>8. Transferts internationaux de donn&eacute;es</h2>
                     <p>L'Association est bas&eacute;e en Espagne. Certains de nos sous-traitants de donn&eacute;es sont bas&eacute;s en dehors de l'Espace &eacute;conomique europ&eacute;en (EEE).</p>
                     <p>Nous veillons &agrave; ce que tout transfert de donn&eacute;es personnelles en dehors de l'EEE soit prot&eacute;g&eacute; par des garanties appropri&eacute;es, notamment :</p>
@@ -878,17 +739,17 @@
                     <p>Vous pouvez demander des d&eacute;tails sur les garanties sp&eacute;cifiques appliqu&eacute;es &agrave; tout transfert particulier en nous contactant.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>9. Cookies</h2>
                     <p>Notre billetterie utilise des cookies pour vous reconna&icirc;tre lors de vos visites ult&eacute;rieures et personnaliser vos param&egrave;tres. Les cookies sont de petits fichiers texte stock&eacute;s sur votre appareil par votre navigateur.</p>
                     <p>Les cookies essentiels sont n&eacute;cessaires au fonctionnement de la billetterie et ne requi&egrave;rent pas votre consentement. Les cookies non essentiels (y compris les cookies analytiques) ne seront plac&eacute;s qu'avec votre consentement pr&eacute;alable, conform&eacute;ment &agrave; l'article 22.2 de la Loi espagnole 34/2002 (LSSI) et &agrave; la directive ePrivacy.</p>
                     <p>Nous pouvons utiliser des services d'analyse (tels que Google Analytics) pour surveiller l'utilisation de la billetterie. Ces services collectent des informations de mani&egrave;re anonyme et g&eacute;n&egrave;rent des rapports sur les visites, les sources de trafic et le comportement de navigation. Vous pouvez g&eacute;rer vos pr&eacute;f&eacute;rences en mati&egrave;re de cookies via les param&egrave;tres de votre navigateur ou via tout m&eacute;canisme de consentement aux cookies sur notre billetterie.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>10. Conservation des donn&eacute;es</h2>
                     <p>Nous ne conservons les donn&eacute;es personnelles que le temps n&eacute;cessaire aux fins pour lesquelles elles ont &eacute;t&eacute; collect&eacute;es, ou conform&eacute;ment aux exigences l&eacute;gales :</p>
-                    <table class="legal-table">
+                    <table class="doc-table">
                         <thead>
                             <tr>
                                 <th>Cat&eacute;gorie de donn&eacute;es</th>
@@ -925,7 +786,7 @@
                     <p>Lorsque les dur&eacute;es de conservation expirent, les donn&eacute;es sont supprim&eacute;es de mani&egrave;re s&eacute;curis&eacute;e ou anonymis&eacute;es.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>11. Vos droits</h2>
                     <p>En vertu du GDPR et de la Loi organique espagnole 3/2018 (LOPDGDD), vous disposez des droits suivants :</p>
                     <ul>
@@ -953,7 +814,7 @@
                     <p>Nous vous encourageons &agrave; nous contacter en premier lieu afin que nous puissions tenter de r&eacute;soudre votre pr&eacute;occupation.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>12. S&eacute;curit&eacute; des donn&eacute;es</h2>
                     <p>Nous mettons en &oelig;uvre des mesures techniques et organisationnelles appropri&eacute;es pour prot&eacute;ger vos donn&eacute;es personnelles, notamment :</p>
                     <ul>
@@ -965,23 +826,23 @@
                     <p>Aucun syst&egrave;me ne peut &ecirc;tre totalement s&eacute;curis&eacute;. Bien que nous prenions ces mesures pour prot&eacute;ger vos donn&eacute;es, nous ne pouvons garantir une s&eacute;curit&eacute; absolue.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>13. Liens vers des tiers</h2>
                     <p>Notre billetterie peut contenir des liens vers d'autres sites web. Une fois que vous quittez notre billetterie, nous n'avons aucun contr&ocirc;le sur ces sites et ne sommes pas responsables de leurs pratiques en mati&egrave;re de confidentialit&eacute;. Veuillez consulter la politique de confidentialit&eacute; de tout site que vous visitez.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>14. Modifications de la pr&eacute;sente politique</h2>
                     <p>Nous pouvons mettre &agrave; jour la pr&eacute;sente politique de confidentialit&eacute; pour refl&eacute;ter des changements dans nos pratiques, les exigences l&eacute;gales ou notre structure organisationnelle. Lorsque nous apportons des modifications substantielles, la politique mise &agrave; jour sera publi&eacute;e sur notre billetterie et la date de &laquo; Derni&egrave;re mise &agrave; jour &raquo; sera r&eacute;vis&eacute;e.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>15. Droit applicable et juridiction comp&eacute;tente</h2>
                     <p>La pr&eacute;sente politique est r&eacute;gie et interpr&eacute;t&eacute;e conform&eacute;ment au droit espagnol. Pour tout litige d&eacute;coulant de ou li&eacute; &agrave; la pr&eacute;sente politique, les tribunaux de Madrid, Espagne, seront comp&eacute;tents.</p>
                     <p>La pr&eacute;sente politique est r&eacute;dig&eacute;e conform&eacute;ment au R&egrave;glement (UE) 2016/679 (R&egrave;glement g&eacute;n&eacute;ral sur la protection des donn&eacute;es), &agrave; la Loi organique espagnole 3/2018 sur la protection des donn&eacute;es personnelles et la garantie des droits num&eacute;riques (LOPDGDD), et &agrave; la Loi espagnole 34/2002 sur les services de la soci&eacute;t&eacute; de l'information (LSSI).</p>
                 </section>
 
-                <div class="legal-address">
+                <div class="doc-address">
                     <p><strong>Asociaci&oacute;n Nobodies Collective</strong><br>
                     Glorieta de Bilbao 1, 1, Derecha, 28004 Madrid, Espagne<br>
                     <a href="mailto:privacy@nobodies.team">privacy@nobodies.team</a></p>
@@ -991,7 +852,7 @@
                 <div class="lang-content" data-lang="it">
                     <p class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</p>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>1. Titolare del trattamento</h2>
                     <p>Asociaci&oacute;n Nobodies Collective ("Nobodies", "l'Associazione", "noi" o "nostro/a/i/e") &egrave; il titolare del trattamento responsabile dei dati personali raccolti tramite questo negozio di biglietti.</p>
                     <p><strong>Sede legale:</strong> Glorieta de Bilbao 1, 1, Derecha, 28004 Madrid, Spagna</p>
@@ -1000,13 +861,13 @@
                     <p>Per qualsiasi domanda relativa alla presente informativa sulla privacy o per esercitare i propri diritti in materia di protezione dei dati, si prega di contattarci all'indirizzo sopra indicato.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>2. Ambito di applicazione</h2>
                     <p>La presente informativa si applica a tutti i siti web e servizi gestiti da NCA, inclusi nobodies.team, l'app Humans (humans.nobodies.team), VIM (vim.nobodies.team), il nostro negozio di biglietti e qualsiasi altro sito web o piattaforma correlata a NCA. Essa spiega come raccogliamo, trattiamo e conserviamo i vostri dati personali quando interagite con noi in relazione ai nostri eventi o alle attivit&agrave; dell'associazione &mdash; incluso quando visitate i nostri siti web, acquistate biglietti, vi registrate come membri o collaboratori, partecipate all'evento, presentate una segnalazione relativa al Codice di Condotta, o ci fornite in altro modo dati personali.</p>
                     <p>Gli acquisti di biglietti sono elaborati tramite Ticket Tailor (Zimma Ltd, registrata in Inghilterra e Galles), che agisce come responsabile del trattamento per nostro conto. L'informativa sulla privacy di Ticket Tailor disciplina il trattamento dei dati nella sua qualit&agrave; di titolare del trattamento. La presente informativa disciplina il modo in cui noi, in qualit&agrave; di organizzatori dell'evento e titolari del trattamento, gestiamo i dati personali che raccogliamo nell'ambito di tutte le nostre attivit&agrave;.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>3. Dati personali che raccogliamo</h2>
 
                     <h3>3.1 Dati forniti direttamente dall'utente</h3>
@@ -1037,10 +898,10 @@
                     <p>Qualora una segnalazione venga effettuata in forma anonima, conserveremo i dettagli dell'incidente segnalato senza identificare il segnalante.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>4. Perch&eacute; trattiamo i vostri dati e la nostra base giuridica</h2>
                     <p>Ai sensi del GDPR, dobbiamo disporre di una base giuridica lecita per ogni attivit&agrave; di trattamento:</p>
-                    <table class="legal-table">
+                    <table class="doc-table">
                         <thead>
                             <tr>
                                 <th>Finalit&agrave;</th>
@@ -1084,19 +945,19 @@
                     </table>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>5. Categorie particolari di dati</h2>
                     <p>Se fornite volontariamente informazioni sanitarie o alimentari (ad es. allergie, esigenze di accessibilit&agrave;), queste costituiscono dati di categorie particolari ai sensi del GDPR. Li trattiamo esclusivamente allo scopo di garantire la vostra sicurezza e inclusione nei nostri eventi, sulla base del vostro consenso esplicito (Art. 9(2)(a) GDPR).</p>
                     <p>Potete revocare il consenso in qualsiasi momento contattandoci. La revoca non pregiudica la liceit&agrave; del trattamento effettuato prima della revoca, ma potrebbe influire sulla nostra capacit&agrave; di soddisfare esigenze specifiche durante gli eventi.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>6. Comunicazioni di marketing</h2>
                     <p>Vi invieremo comunicazioni di marketing (newsletter, annunci di eventi, sondaggi) solo con il vostro previo consenso.</p>
                     <p>Potete revocare il consenso e annullare l'iscrizione in qualsiasi momento contattandoci all'indirizzo <a href="mailto:privacy@nobodies.team">privacy@nobodies.team</a> o cliccando il link di cancellazione dell'iscrizione presente in qualsiasi email di marketing. Se annullate l'iscrizione, potrebbero essere necessari fino a 5 giorni lavorativi affinch&eacute; le nuove preferenze abbiano effetto.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>7. Con chi condividiamo i vostri dati</h2>
                     <p>Non vendiamo i vostri dati personali. Li condividiamo solo quando necessario per le finalit&agrave; descritte nella presente informativa, con le seguenti categorie di destinatari:</p>
 
@@ -1121,7 +982,7 @@
                     <p>Possiamo inoltre condividere i vostri dati personali qualora l'Associazione si fonda con un'altra organizzazione o trasferisca le proprie attivit&agrave; a un'altra organizzazione, in conformit&agrave; con il proprio statuto e la legge applicabile.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>8. Trasferimenti internazionali di dati</h2>
                     <p>L'Associazione ha sede in Spagna. Alcuni dei nostri responsabili del trattamento hanno sede al di fuori dello Spazio Economico Europeo (SEE).</p>
                     <p>Garantiamo che qualsiasi trasferimento di dati personali al di fuori del SEE sia protetto da garanzie adeguate, tra cui:</p>
@@ -1134,17 +995,17 @@
                     <p>Potete richiedere dettagli sulle garanzie specifiche applicate a un determinato trasferimento contattandoci.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>9. Cookie</h2>
                     <p>Il nostro negozio di biglietti utilizza cookie per riconoscervi quando tornate e personalizzare le vostre impostazioni. I cookie sono piccoli file di testo memorizzati sul vostro dispositivo dal vostro browser.</p>
                     <p>I cookie essenziali sono necessari per il funzionamento del negozio di biglietti e non richiedono il vostro consenso. I cookie non essenziali (inclusi i cookie analitici) saranno installati solo con il vostro previo consenso, in conformit&agrave; con l'Articolo 22.2 della Legge spagnola 34/2002 (LSSI) e la Direttiva ePrivacy.</p>
                     <p>Possiamo utilizzare servizi di analisi (come Google Analytics) per monitorare l'utilizzo del negozio di biglietti. Questi servizi raccolgono informazioni in forma anonima e generano rapporti su visite, fonti di traffico e comportamento di navigazione. Potete gestire le vostre preferenze sui cookie tramite le impostazioni del vostro browser o tramite qualsiasi meccanismo di consenso ai cookie presente nel nostro negozio di biglietti.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>10. Conservazione dei dati</h2>
                     <p>Conserviamo i dati personali solo per il tempo necessario alle finalit&agrave; per le quali sono stati raccolti, o come richiesto dalla legge:</p>
-                    <table class="legal-table">
+                    <table class="doc-table">
                         <thead>
                             <tr>
                                 <th>Categoria di dati</th>
@@ -1181,7 +1042,7 @@
                     <p>Alla scadenza dei periodi di conservazione, i dati vengono cancellati in modo sicuro o resi anonimi.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>11. I vostri diritti</h2>
                     <p>Ai sensi del GDPR e della Legge Organica spagnola 3/2018 (LOPDGDD), avete i seguenti diritti:</p>
                     <ul>
@@ -1209,7 +1070,7 @@
                     <p>Vi invitiamo a contattarci prima in modo che possiamo cercare di risolvere la vostra questione.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>12. Sicurezza dei dati</h2>
                     <p>Adottiamo misure tecniche e organizzative adeguate per proteggere i vostri dati personali, tra cui:</p>
                     <ul>
@@ -1221,23 +1082,23 @@
                     <p>Nessun sistema pu&ograve; essere completamente sicuro. Sebbene adottiamo queste misure per proteggere i vostri dati, non possiamo garantire una sicurezza assoluta.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>13. Link a siti di terze parti</h2>
                     <p>Il nostro negozio di biglietti pu&ograve; contenere link ad altri siti web. Una volta lasciato il nostro negozio di biglietti, non abbiamo alcun controllo su tali siti e non siamo responsabili delle loro pratiche in materia di privacy. Vi invitiamo a consultare l'informativa sulla privacy di qualsiasi sito visitiate.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>14. Modifiche alla presente informativa</h2>
                     <p>Possiamo aggiornare la presente informativa sulla privacy per riflettere cambiamenti nelle nostre pratiche, nei requisiti legali o nella struttura organizzativa. In caso di modifiche sostanziali, l'informativa aggiornata sar&agrave; pubblicata nel nostro negozio di biglietti e la data di "Ultimo aggiornamento" sar&agrave; rivista.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>15. Legge applicabile e giurisdizione</h2>
                     <p>La presente informativa &egrave; disciplinata e interpretata in conformit&agrave; con il diritto spagnolo. Per qualsiasi controversia derivante dalla presente informativa o ad essa relativa, saranno competenti i tribunali di Madrid, Spagna.</p>
                     <p>La presente informativa &egrave; redatta in conformit&agrave; con il Regolamento (UE) 2016/679 (Regolamento Generale sulla Protezione dei Dati), la Legge Organica spagnola 3/2018 sulla Protezione dei Dati Personali e la Garanzia dei Diritti Digitali (LOPDGDD) e la Legge spagnola 34/2002 sui Servizi della Societ&agrave; dell'Informazione (LSSI).</p>
                 </section>
 
-                <div class="legal-address">
+                <div class="doc-address">
                     <p><strong>Asociaci&oacute;n Nobodies Collective</strong><br>
                     Glorieta de Bilbao 1, 1, Derecha, 28004 Madrid, Spagna<br>
                     <a href="mailto:privacy@nobodies.team">privacy@nobodies.team</a></p>
@@ -1247,7 +1108,7 @@
                 <div class="lang-content" data-lang="de">
                     <p class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</p>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>1. Verantwortlicher</h2>
                     <p>Asociaci&oacute;n Nobodies Collective (&bdquo;Nobodies", &bdquo;der Verein", &bdquo;wir", &bdquo;uns" oder &bdquo;unser") ist der f&uuml;r die Verarbeitung personenbezogener Daten verantwortliche Verantwortliche, die &uuml;ber diesen Ticketshop erhoben werden.</p>
                     <p><strong>Eingetragene Adresse:</strong> Glorieta de Bilbao 1, 1, Derecha, 28004 Madrid, Spanien</p>
@@ -1256,13 +1117,13 @@
                     <p>Wenn Sie Fragen zu dieser Datenschutzerkl&auml;rung haben oder Ihre Datenschutzrechte aus&uuml;ben m&ouml;chten, kontaktieren Sie uns bitte unter der oben genannten Adresse.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>2. Geltungsbereich</h2>
                     <p>Diese Richtlinie gilt f&uuml;r alle Websites und Dienste, die von NCA betrieben werden, einschlie&szlig;lich nobodies.team, der Humans-App (humans.nobodies.team), VIM (vim.nobodies.team), unserem Ticketshop und allen anderen NCA-bezogenen Websites oder Plattformen. Sie erl&auml;utert, wie wir Ihre personenbezogenen Daten erheben, verarbeiten und speichern, wenn Sie im Zusammenhang mit unseren Veranstaltungen oder Vereinsaktivit&auml;ten mit uns interagieren &mdash; einschlie&szlig;lich wenn Sie unsere Websites besuchen, Tickets kaufen, sich als Mitglied oder Mitarbeiter registrieren, an der Veranstaltung teilnehmen, eine Meldung gem&auml;&szlig; dem Verhaltenskodex einreichen oder uns anderweitig personenbezogene Daten zur Verf&uuml;gung stellen.</p>
                     <p>Ticketk&auml;ufe werden &uuml;ber Ticket Tailor (Zimma Ltd, registriert in England und Wales) abgewickelt, das in unserem Auftrag als Auftragsverarbeiter t&auml;tig ist. Die eigene Datenschutzerkl&auml;rung von Ticket Tailor regelt die Verarbeitung von Daten in seiner Eigenschaft als Verantwortlicher. Diese Richtlinie regelt, wie wir als Veranstalter und Verantwortlicher die personenbezogenen Daten handhaben, die wir im Rahmen all unserer Aktivit&auml;ten erheben.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>3. Personenbezogene Daten, die wir erheben</h2>
 
                     <h3>3.1 Daten, die Sie direkt angeben</h3>
@@ -1293,10 +1154,10 @@
                     <p>Wird eine Meldung anonym eingereicht, bewahren wir die Einzelheiten des gemeldeten Vorfalls auf, ohne den Meldenden zu identifizieren.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>4. Warum wir Ihre Daten verarbeiten und unsere Rechtsgrundlage</h2>
                     <p>Nach der GDPR m&uuml;ssen wir f&uuml;r jede Verarbeitungst&auml;tigkeit eine Rechtsgrundlage haben:</p>
-                    <table class="legal-table">
+                    <table class="doc-table">
                         <thead>
                             <tr>
                                 <th>Zweck</th>
@@ -1340,19 +1201,19 @@
                     </table>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>5. Besondere Kategorien personenbezogener Daten</h2>
                     <p>Wenn Sie freiwillig Gesundheits- oder Ern&auml;hrungsinformationen angeben (z. B. Allergien, Barrierefreiheitsbed&uuml;rfnisse), handelt es sich um besondere Kategorien personenbezogener Daten im Sinne der GDPR. Wir verarbeiten diese ausschlie&szlig;lich zum Zweck der Gew&auml;hrleistung Ihrer Sicherheit und Inklusion bei unseren Veranstaltungen, auf Grundlage Ihrer ausdr&uuml;cklichen Einwilligung (Art. 9(2)(a) GDPR).</p>
                     <p>Sie k&ouml;nnen Ihre Einwilligung jederzeit widerrufen, indem Sie uns kontaktieren. Der Widerruf ber&uuml;hrt nicht die Rechtm&auml;&szlig;igkeit der vor dem Widerruf durchgef&uuml;hrten Verarbeitung, kann jedoch unsere F&auml;higkeit beeintr&auml;chtigen, bestimmte Bed&uuml;rfnisse bei Veranstaltungen zu ber&uuml;cksichtigen.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>6. Marketingmitteilungen</h2>
                     <p>Wir senden Ihnen Marketingmitteilungen (Newsletter, Veranstaltungsank&uuml;ndigungen, Umfragen) nur mit Ihrer vorherigen Einwilligung.</p>
                     <p>Sie k&ouml;nnen Ihre Einwilligung jederzeit widerrufen und sich abmelden, indem Sie uns unter <a href="mailto:privacy@nobodies.team">privacy@nobodies.team</a> kontaktieren oder den Abmeldelink in jeder Marketing-E-Mail anklicken. Wenn Sie sich abmelden, kann es bis zu 5 Werktage dauern, bis Ihre neuen Pr&auml;ferenzen wirksam werden.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>7. An wen wir Ihre Daten weitergeben</h2>
                     <p>Wir verkaufen Ihre personenbezogenen Daten nicht. Wir geben sie nur weiter, wenn dies f&uuml;r die in dieser Richtlinie beschriebenen Zwecke erforderlich ist, an die folgenden Empf&auml;ngerkategorien:</p>
 
@@ -1377,7 +1238,7 @@
                     <p>Wir k&ouml;nnen Ihre personenbezogenen Daten auch weitergeben, wenn der Verein mit einer anderen Organisation fusioniert oder seine Aktivit&auml;ten auf eine andere Organisation &uuml;bertr&auml;gt, in &Uuml;bereinstimmung mit seiner Satzung und dem geltenden Recht.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>8. Internationale Daten&uuml;bermittlungen</h2>
                     <p>Der Verein hat seinen Sitz in Spanien. Einige unserer Auftragsverarbeiter haben ihren Sitz au&szlig;erhalb des Europ&auml;ischen Wirtschaftsraums (EWR).</p>
                     <p>Wir stellen sicher, dass jede &Uuml;bermittlung personenbezogener Daten au&szlig;erhalb des EWR durch geeignete Garantien gesch&uuml;tzt ist, einschlie&szlig;lich:</p>
@@ -1390,17 +1251,17 @@
                     <p>Sie k&ouml;nnen Einzelheiten zu den spezifischen Garantien, die auf eine bestimmte &Uuml;bermittlung angewandt werden, anfordern, indem Sie uns kontaktieren.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>9. Cookies</h2>
                     <p>Unser Ticketshop verwendet Cookies, um Sie bei Ihrem erneuten Besuch wiederzuerkennen und Ihre Einstellungen zu personalisieren. Cookies sind kleine Textdateien, die von Ihrem Browser auf Ihrem Ger&auml;t gespeichert werden.</p>
                     <p>Wesentliche Cookies sind f&uuml;r das Funktionieren des Ticketshops erforderlich und bed&uuml;rfen keiner Einwilligung. Nicht wesentliche Cookies (einschlie&szlig;lich Analyse-Cookies) werden nur mit Ihrer vorherigen Einwilligung gesetzt, in &Uuml;bereinstimmung mit Artikel 22.2 des spanischen Gesetzes 34/2002 (LSSI) und der ePrivacy-Richtlinie.</p>
                     <p>Wir k&ouml;nnen Analysedienste (wie Google Analytics) verwenden, um die Nutzung des Ticketshops zu &uuml;berwachen. Diese Dienste erheben Informationen anonym und erstellen Berichte &uuml;ber Besuche, Verkehrsquellen und Browsing-Verhalten. Sie k&ouml;nnen Ihre Cookie-Einstellungen &uuml;ber Ihre Browsereinstellungen oder &uuml;ber einen etwaigen Cookie-Einwilligungsmechanismus in unserem Ticketshop verwalten.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>10. Datenspeicherung</h2>
                     <p>Wir bewahren personenbezogene Daten nur so lange auf, wie es f&uuml;r die Zwecke, f&uuml;r die sie erhoben wurden, erforderlich ist oder wie es gesetzlich vorgeschrieben ist:</p>
-                    <table class="legal-table">
+                    <table class="doc-table">
                         <thead>
                             <tr>
                                 <th>Datenkategorie</th>
@@ -1437,7 +1298,7 @@
                     <p>Nach Ablauf der Aufbewahrungsfristen werden die Daten sicher gel&ouml;scht oder anonymisiert.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>11. Ihre Rechte</h2>
                     <p>Nach der GDPR und dem spanischen Organgesetz 3/2018 (LOPDGDD) haben Sie folgende Rechte:</p>
                     <ul>
@@ -1465,7 +1326,7 @@
                     <p>Wir empfehlen Ihnen, sich zun&auml;chst an uns zu wenden, damit wir versuchen k&ouml;nnen, Ihr Anliegen zu kl&auml;ren.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>12. Datensicherheit</h2>
                     <p>Wir setzen angemessene technische und organisatorische Ma&szlig;nahmen zum Schutz Ihrer personenbezogenen Daten um, einschlie&szlig;lich:</p>
                     <ul>
@@ -1477,23 +1338,23 @@
                     <p>Kein System kann vollst&auml;ndig sicher sein. Obwohl wir diese Ma&szlig;nahmen zum Schutz Ihrer Daten ergreifen, k&ouml;nnen wir keine absolute Sicherheit garantieren.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>13. Links zu Drittanbietern</h2>
                     <p>Unser Ticketshop kann Links zu anderen Websites enthalten. Sobald Sie unseren Ticketshop verlassen, haben wir keine Kontrolle &uuml;ber diese Websites und sind nicht f&uuml;r deren Datenschutzpraktiken verantwortlich. Bitte lesen Sie die Datenschutzerkl&auml;rung jeder Website, die Sie besuchen.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>14. &Auml;nderungen dieser Richtlinie</h2>
                     <p>Wir k&ouml;nnen diese Datenschutzerkl&auml;rung aktualisieren, um &Auml;nderungen unserer Praktiken, rechtlichen Anforderungen oder Organisationsstruktur widerzuspiegeln. Bei wesentlichen &Auml;nderungen wird die aktualisierte Richtlinie in unserem Ticketshop ver&ouml;ffentlicht und das Datum &bdquo;Zuletzt aktualisiert" wird angepasst.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>15. Anwendbares Recht und Gerichtsstand</h2>
                     <p>Diese Richtlinie unterliegt spanischem Recht und wird in &Uuml;bereinstimmung damit ausgelegt. F&uuml;r alle Streitigkeiten, die sich aus oder im Zusammenhang mit dieser Richtlinie ergeben, sind die Gerichte von Madrid, Spanien zust&auml;ndig.</p>
                     <p>Diese Richtlinie wurde in &Uuml;bereinstimmung mit der Verordnung (EU) 2016/679 (Datenschutz-Grundverordnung), dem spanischen Organgesetz 3/2018 zum Schutz personenbezogener Daten und zur Gew&auml;hrleistung digitaler Rechte (LOPDGDD) sowie dem spanischen Gesetz 34/2002 &uuml;ber Dienste der Informationsgesellschaft (LSSI) erstellt.</p>
                 </section>
 
-                <div class="legal-address">
+                <div class="doc-address">
                     <p><strong>Asociaci&oacute;n Nobodies Collective</strong><br>
                     Glorieta de Bilbao 1, 1, Derecha, 28004 Madrid, Spanien<br>
                     <a href="mailto:privacy@nobodies.team">privacy@nobodies.team</a></p>

@@ -9,154 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .legal-page {
-            padding: 8rem 0 4rem;
-        }
-
-        .legal-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .legal-header h1 {
-            margin-bottom: 1rem;
-        }
-
-        .legal-intro {
-            color: var(--color-text-muted);
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--color-border);
-            line-height: 1.7;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-            color: var(--color-text-muted);
-            font-size: 0.9rem;
-        }
-        .back-link:hover { color: var(--color-accent); }
-        .back-link::before { content: '\2190'; }
-
-        .legal-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .legal-section {
-            margin-top: 3rem;
-        }
-
-        .legal-section h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--color-accent);
-        }
-
-        .legal-section p {
-            color: var(--color-text-muted);
-            line-height: 1.7;
-            margin-bottom: 0.75rem;
-        }
-
-        .legal-section ul {
-            color: var(--color-text-muted);
-            line-height: 1.7;
-            margin-bottom: 0.75rem;
-            padding-left: 1.5rem;
-        }
-
-        .legal-section li {
-            margin-bottom: 0.5rem;
-        }
-
-        .legal-section a {
-            color: var(--color-accent);
-            font-weight: 500;
-        }
-
-        .legal-contact {
-            margin-top: 3rem;
-            padding: 2rem 2.5rem;
-            background: var(--color-bg-alt);
-            border-radius: var(--radius);
-            text-align: center;
-            color: var(--color-text-muted);
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-
-        .legal-contact a {
-            color: var(--color-accent);
-            font-weight: 500;
-        }
-
-        @media (max-width: 768px) {
-            .legal-page {
-                padding: 6rem 0 3rem;
-            }
-        }
-
-        .lang-toggle {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-
-        .lang-toggle button {
-            padding: 0.75rem 1.5rem;
-            font-family: var(--font-body);
-            font-size: 0.875rem;
-            font-weight: 500;
-            border: 1px solid var(--color-border);
-            background: var(--color-bg-alt);
-            color: var(--color-text-muted);
-            border-radius: var(--radius);
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .lang-toggle button.active,
-        .lang-toggle button:hover {
-            background: var(--color-accent);
-            border-color: var(--color-accent);
-            color: #fff;
-        }
-
-        .lang-content { display: none; }
-        .lang-content.active { display: block; }
-
-        .lang-note {
-            font-style: italic;
-            color: var(--color-text-muted);
-            margin-bottom: 2rem;
-            padding: 1rem 1.5rem;
-            background: var(--color-bg-alt);
-            border-radius: var(--radius);
-            font-size: 0.9rem;
-        }
-    </style>
 </head>
 <body>
     <div id="shared-header"></div>
     <script src="header.js"></script>
 
-    <main class="legal-page">
+    <main class="doc-page">
         <div class="container">
             <a href="/" class="back-link">Back to Home</a>
 
-            <div class="legal-header">
+            <div class="doc-header">
                 <h1>Public Health &amp; Safety Policy</h1>
-                <p class="legal-intro">Elsewhere 2026</p>
+                <p class="doc-intro">Elsewhere 2026</p>
             </div>
 
             <div class="lang-toggle">
@@ -168,17 +32,17 @@
             </div>
 
             <div class="lang-content active" data-lang="en">
-                <div class="legal-content">
+                <div class="doc-content">
                     <p class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</p>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>1. Why does this policy exist?</h2>
                         <p>Elsewhere is a temporary community that thousands of people come together to create. Like any community, its wellbeing depends on the care people show for one another.</p>
                         <p>Most of the time, staying healthy at the event simply means bringing what you need, looking after yourself, and respecting the people around you. Occasionally, however, circumstances may require additional health or safety measures to protect you and the wider community.</p>
                         <p>This policy explains how those situations are handled.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>2. When might health or safety measures be introduced?</h2>
                         <p>From time to time, situations may arise that require additional health or safety measures.</p>
                         <p>These situations could include things like:</p>
@@ -191,7 +55,7 @@
                         <p>If something like this happens, the organizers may introduce reasonable measures designed to protect you and the community.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>3. What kinds of measures might be required?</h2>
                         <p>Depending on the situation, measures could include things such as:</p>
                         <ul>
@@ -205,32 +69,32 @@
                         <p>Not all of these measures will necessarily apply. What is required will depend on the circumstances at the time.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>4. What does this mean for me?</h2>
                         <p>If health or safety measures become necessary, you may be asked to follow them as a condition of attending the event.</p>
                         <p>When possible, these measures will be communicated in advance through the event website or other official communication channels. In some cases, additional measures may also be introduced during the event if circumstances change.</p>
                         <p>By attending Elsewhere, you agree to follow reasonable health and safety measures implemented by the organizers.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>5. What happens if I don&rsquo;t follow these measures?</h2>
                         <p>If you choose not to comply with health or safety requirements that are in place for the event, you may be denied entry or asked to leave the event site.</p>
                         <p>These decisions may be necessary to protect you and the broader community.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>6. Does this affect refunds?</h2>
                         <p>Health or safety measures introduced under this policy do not create a right to a refund.</p>
                         <p>If you are unable or unwilling to comply with required measures, you may transfer your ticket according to the event&rsquo;s <a href="refund-policy.html">Refund Policy</a> and <a href="terms.html">Terms &amp; Conditions</a>.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>7. A shared responsibility</h2>
                         <p>Elsewhere exists because people come together to create something meaningful for a short time. Protecting that community requires cooperation, care, and respect for the people around you.</p>
                         <p>By participating in the event, you acknowledge that health and safety are a shared responsibility.</p>
                     </section>
 
-                    <div class="legal-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
+                    <div class="doc-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
                         <h2 style="border-bottom: none; padding-bottom: 0; font-size: 1.2rem;">Important Note</h2>
                         <p>This document is one part of Elsewhere&rsquo;s participation framework. It works together with the other policies that govern participation in the event.</p>
                         <p>You should read it together with the rest of the framework, which includes:</p>
@@ -246,7 +110,7 @@
                         <p>Together, these documents explain how the event works, what you can expect from the organizers, and what is expected from you as a participant. By purchasing a ticket or attending Elsewhere, you agree to this framework.</p>
                     </div>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Questions about this policy? Contact <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </div>
 
@@ -255,15 +119,15 @@
             </div>
 
             <div class="lang-content" data-lang="es">
-                <div class="legal-content">
-                    <section class="legal-section">
+                <div class="doc-content">
+                    <section class="doc-section">
                         <h2>1. &iquest;Por qu&eacute; existe esta pol&iacute;tica?</h2>
                         <p>Elsewhere es una comunidad temporal que miles de personas crean juntas. Como cualquier comunidad, su bienestar depende del cuidado que las personas muestran unas hacia otras.</p>
                         <p>La mayor parte del tiempo, mantenerse sano en el evento simplemente significa llevar lo que necesitas, cuidarte y respetar a quienes te rodean. En ocasiones, sin embargo, las circunstancias pueden requerir medidas adicionales de salud o seguridad para protegerte a ti y a la comunidad en general.</p>
                         <p>Esta pol&iacute;tica explica c&oacute;mo se gestionan esas situaciones.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>2. &iquest;Cu&aacute;ndo podr&iacute;an introducirse medidas de salud o seguridad?</h2>
                         <p>De vez en cuando pueden surgir situaciones que requieran medidas adicionales de salud o seguridad.</p>
                         <p>Estas situaciones podr&iacute;an incluir cosas como:</p>
@@ -276,7 +140,7 @@
                         <p>Si ocurre algo as&iacute;, los organizadores pueden introducir medidas razonables dise&ntilde;adas para protegerte a ti y a la comunidad.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>3. &iquest;Qu&eacute; tipos de medidas podr&iacute;an requerirse?</h2>
                         <p>Seg&uacute;n la situaci&oacute;n, las medidas pueden incluir cosas como:</p>
                         <ul>
@@ -290,32 +154,32 @@
                         <p>No todas estas medidas se aplicar&aacute;n necesariamente. Lo que se requiera depender&aacute; de las circunstancias en ese momento.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>4. &iquest;Qu&eacute; significa esto para m&iacute;?</h2>
                         <p>Si las medidas de salud o seguridad llegan a ser necesarias, es posible que se te pida cumplirlas como condici&oacute;n para asistir al evento.</p>
                         <p>Cuando sea posible, estas medidas se comunicar&aacute;n con antelaci&oacute;n a trav&eacute;s del sitio web del evento o de otros canales oficiales de comunicaci&oacute;n. En algunos casos, tambi&eacute;n pueden introducirse medidas adicionales durante el evento si las circunstancias cambian.</p>
                         <p>Al asistir a Elsewhere, aceptas seguir las medidas razonables de salud y seguridad implementadas por los organizadores.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>5. &iquest;Qu&eacute; ocurre si no sigo estas medidas?</h2>
                         <p>Si decides no cumplir con los requisitos de salud o seguridad vigentes para el evento, se te podr&aacute; denegar la entrada o pedir que abandones el recinto del evento.</p>
                         <p>Estas decisiones pueden ser necesarias para protegerte a ti y a la comunidad en general.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>6. &iquest;Afecta esto a los reembolsos?</h2>
                         <p>Las medidas de salud o seguridad introducidas bajo esta pol&iacute;tica no crean un derecho a reembolso.</p>
                         <p>Si no puedes o no quieres cumplir con las medidas requeridas, puedes transferir tu entrada de acuerdo con la <a href="refund-policy.html">Pol&iacute;tica de Reembolso</a> y los <a href="terms.html">T&eacute;rminos y Condiciones</a> del evento.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>7. Una responsabilidad compartida</h2>
                         <p>Elsewhere existe porque las personas se re&uacute;nen para crear algo significativo durante un tiempo limitado. Proteger esa comunidad requiere cooperaci&oacute;n, cuidado y respeto por las personas que te rodean.</p>
                         <p>Al participar en el evento, reconoces que la salud y la seguridad son una responsabilidad compartida.</p>
                     </section>
 
-                    <div class="legal-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
+                    <div class="doc-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
                         <h2 style="border-bottom: none; padding-bottom: 0; font-size: 1.2rem;">Nota Importante</h2>
                         <p>Este documento forma parte del marco de participaci&oacute;n de Elsewhere. Funciona conjuntamente con las otras pol&iacute;ticas que rigen la participaci&oacute;n en el evento.</p>
                         <p>Debes leerlo junto con el resto del marco, que incluye:</p>
@@ -331,7 +195,7 @@
                         <p>En conjunto, estos documentos explican c&oacute;mo funciona el evento, qu&eacute; puedes esperar de los organizadores y qu&eacute; se espera de ti como participante. Al comprar una entrada o asistir a Elsewhere, aceptas este marco.</p>
                     </div>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>&iquest;Preguntas sobre esta pol&iacute;tica? Contacta con <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </div>
 
@@ -340,17 +204,17 @@
             </div>
 
             <div class="lang-content" data-lang="fr">
-                <div class="legal-content">
+                <div class="doc-content">
                     <p class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</p>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>1. Pourquoi cette politique existe-t-elle&nbsp;?</h2>
                         <p>Elsewhere est une communaut&eacute; temporaire cr&eacute;&eacute;e collectivement par des milliers de personnes. Comme toute communaut&eacute;, son bien-&ecirc;tre d&eacute;pend de l&rsquo;attention que chacun porte aux autres.</p>
                         <p>La plupart du temps, rester en bonne sant&eacute; pendant l&rsquo;&eacute;v&eacute;nement signifie simplement apporter ce dont vous avez besoin, prendre soin de vous et respecter les personnes qui vous entourent. Toutefois, il peut arriver que les circonstances exigent des mesures sanitaires ou de s&eacute;curit&eacute; suppl&eacute;mentaires pour vous prot&eacute;ger ainsi que la communaut&eacute; au sens large.</p>
                         <p>Cette politique explique comment ces situations sont trait&eacute;es.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>2. Quand des mesures sanitaires ou de s&eacute;curit&eacute; peuvent-elles &ecirc;tre introduites&nbsp;?</h2>
                         <p>De temps &agrave; autre, des situations peuvent survenir et n&eacute;cessiter des mesures sanitaires ou de s&eacute;curit&eacute; suppl&eacute;mentaires.</p>
                         <p>Ces situations peuvent inclure par exemple&nbsp;:</p>
@@ -363,7 +227,7 @@
                         <p>Si cela se produit, les organisateurs peuvent mettre en place des mesures raisonnables con&ccedil;ues pour vous prot&eacute;ger ainsi que la communaut&eacute;.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>3. Quels types de mesures peuvent &ecirc;tre exig&eacute;s&nbsp;?</h2>
                         <p>Selon la situation, les mesures peuvent inclure par exemple&nbsp;:</p>
                         <ul>
@@ -377,32 +241,32 @@
                         <p>Toutes ces mesures ne s&rsquo;appliqueront pas forc&eacute;ment. Ce qui sera requis d&eacute;pendra des circonstances du moment.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>4. Qu&rsquo;est-ce que cela signifie pour moi&nbsp;?</h2>
                         <p>Si des mesures sanitaires ou de s&eacute;curit&eacute; deviennent n&eacute;cessaires, il pourra vous &ecirc;tre demand&eacute; de les respecter comme condition de participation &agrave; l&rsquo;&eacute;v&eacute;nement.</p>
                         <p>Lorsque cela est possible, ces mesures seront communiqu&eacute;es &agrave; l&rsquo;avance via le site web de l&rsquo;&eacute;v&eacute;nement ou d&rsquo;autres canaux officiels de communication. Dans certains cas, des mesures suppl&eacute;mentaires peuvent &eacute;galement &ecirc;tre introduites pendant l&rsquo;&eacute;v&eacute;nement si les circonstances &eacute;voluent.</p>
                         <p>En participant &agrave; Elsewhere, vous acceptez de respecter les mesures raisonnables de sant&eacute; et de s&eacute;curit&eacute; mises en place par les organisateurs.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>5. Que se passe-t-il si je ne respecte pas ces mesures&nbsp;?</h2>
                         <p>Si vous choisissez de ne pas respecter les exigences sanitaires ou de s&eacute;curit&eacute; en vigueur pour l&rsquo;&eacute;v&eacute;nement, l&rsquo;entr&eacute;e pourra vous &ecirc;tre refus&eacute;e ou il pourra vous &ecirc;tre demand&eacute; de quitter le site.</p>
                         <p>Ces d&eacute;cisions peuvent &ecirc;tre n&eacute;cessaires pour vous prot&eacute;ger ainsi que la communaut&eacute; au sens large.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>6. Cela affecte-t-il les remboursements&nbsp;?</h2>
                         <p>Les mesures sanitaires ou de s&eacute;curit&eacute; introduites au titre de cette politique n&rsquo;ouvrent pas droit &agrave; un remboursement.</p>
                         <p>Si vous ne pouvez ou ne voulez pas respecter les mesures requises, vous pouvez transf&eacute;rer votre billet conform&eacute;ment &agrave; la <a href="refund-policy.html">Politique de Remboursement</a> et aux <a href="terms.html">Termes et Conditions</a> de l&rsquo;&eacute;v&eacute;nement.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>7. Une responsabilit&eacute; partag&eacute;e</h2>
                         <p>Elsewhere existe parce que des personnes se r&eacute;unissent pour cr&eacute;er quelque chose de significatif pendant un court moment. Prot&eacute;ger cette communaut&eacute; exige de la coop&eacute;ration, de l&rsquo;attention et du respect envers les personnes qui vous entourent.</p>
                         <p>En participant &agrave; l&rsquo;&eacute;v&eacute;nement, vous reconnaissez que la sant&eacute; et la s&eacute;curit&eacute; sont une responsabilit&eacute; partag&eacute;e.</p>
                     </section>
 
-                    <div class="legal-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
+                    <div class="doc-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
                         <h2 style="border-bottom: none; padding-bottom: 0; font-size: 1.2rem;">Note importante</h2>
                         <p>Ce document constitue une partie du cadre de participation d&rsquo;Elsewhere. Il fonctionne avec les autres politiques qui r&eacute;gissent la participation &agrave; l&rsquo;&eacute;v&eacute;nement.</p>
                         <p>Vous devez le lire avec le reste du cadre, qui comprend&nbsp;:</p>
@@ -418,7 +282,7 @@
                         <p>Ensemble, ces documents expliquent le fonctionnement de l&rsquo;&eacute;v&eacute;nement, ce que vous pouvez attendre des organisateurs et ce qui est attendu de vous en tant que participant. En achetant un billet ou en participant &agrave; Elsewhere, vous acceptez ce cadre.</p>
                     </div>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Des questions sur cette politique&nbsp;? Contactez <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </div>
 
@@ -427,17 +291,17 @@
             </div>
 
             <div class="lang-content" data-lang="it">
-                <div class="legal-content">
+                <div class="doc-content">
                     <p class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</p>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>1. Perch&eacute; esiste questa politica?</h2>
                         <p>Elsewhere &egrave; una comunit&agrave; temporanea creata insieme da migliaia di persone. Come ogni comunit&agrave;, il suo benessere dipende dalla cura che le persone mostrano le une verso le altre.</p>
                         <p>Per la maggior parte del tempo, restare in salute durante l&rsquo;evento significa semplicemente portare ci&ograve; di cui hai bisogno, prenderti cura di te stesso e rispettare le persone che ti circondano. A volte, tuttavia, le circostanze possono richiedere misure aggiuntive di salute o sicurezza per proteggere te e la comunit&agrave; nel suo insieme.</p>
                         <p>Questa politica spiega come vengono gestite tali situazioni.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>2. Quando potrebbero essere introdotte misure di salute o sicurezza?</h2>
                         <p>Di tanto in tanto possono sorgere situazioni che richiedono misure aggiuntive di salute o sicurezza.</p>
                         <p>Queste situazioni potrebbero includere cose come:</p>
@@ -450,7 +314,7 @@
                         <p>Se accade qualcosa del genere, gli organizzatori possono introdurre misure ragionevoli concepite per proteggere te e la comunit&agrave;.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>3. Quali tipi di misure potrebbero essere richiesti?</h2>
                         <p>A seconda della situazione, le misure potrebbero includere cose come:</p>
                         <ul>
@@ -464,32 +328,32 @@
                         <p>Non tutte queste misure si applicheranno necessariamente. Ci&ograve; che sar&agrave; richiesto dipender&agrave; dalle circostanze del momento.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>4. Cosa significa questo per me?</h2>
                         <p>Se misure di salute o sicurezza diventano necessarie, potrebbe esserti richiesto di rispettarle come condizione per partecipare all&rsquo;evento.</p>
                         <p>Quando possibile, queste misure saranno comunicate in anticipo tramite il sito web dell&rsquo;evento o altri canali ufficiali di comunicazione. In alcuni casi, misure aggiuntive possono anche essere introdotte durante l&rsquo;evento se le circostanze cambiano.</p>
                         <p>Partecipando a Elsewhere, accetti di seguire le ragionevoli misure di salute e sicurezza attuate dagli organizzatori.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>5. Cosa succede se non seguo queste misure?</h2>
                         <p>Se scegli di non rispettare i requisiti di salute o sicurezza in vigore per l&rsquo;evento, potresti vederti negato l&rsquo;ingresso o potresti essere invitato a lasciare il sito dell&rsquo;evento.</p>
                         <p>Queste decisioni possono essere necessarie per proteggere te e la comunit&agrave; pi&ugrave; ampia.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>6. Questo incide sui rimborsi?</h2>
                         <p>Le misure di salute o sicurezza introdotte ai sensi di questa politica non creano un diritto al rimborso.</p>
                         <p>Se non sei in grado o non vuoi rispettare le misure richieste, puoi trasferire il tuo biglietto secondo la <a href="refund-policy.html">Politica di Rimborso</a> e i <a href="terms.html">Termini e Condizioni</a> dell&rsquo;evento.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>7. Una responsabilit&agrave; condivisa</h2>
                         <p>Elsewhere esiste perch&eacute; le persone si riuniscono per creare qualcosa di significativo per un breve periodo. Proteggere quella comunit&agrave; richiede cooperazione, cura e rispetto per le persone intorno a te.</p>
                         <p>Partecipando all&rsquo;evento, riconosci che salute e sicurezza sono una responsabilit&agrave; condivisa.</p>
                     </section>
 
-                    <div class="legal-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
+                    <div class="doc-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
                         <h2 style="border-bottom: none; padding-bottom: 0; font-size: 1.2rem;">Nota importante</h2>
                         <p>Questo documento &egrave; una parte del quadro di partecipazione di Elsewhere. Funziona insieme alle altre politiche che disciplinano la partecipazione all&rsquo;evento.</p>
                         <p>Dovresti leggerlo insieme al resto del quadro, che include:</p>
@@ -505,7 +369,7 @@
                         <p>Insieme, questi documenti spiegano come funziona l&rsquo;evento, cosa puoi aspettarti dagli organizzatori e cosa ci si aspetta da te come partecipante. Acquistando un biglietto o partecipando a Elsewhere, accetti questo quadro.</p>
                     </div>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Domande su questa politica? Contatta <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </div>
 
@@ -514,17 +378,17 @@
             </div>
 
             <div class="lang-content" data-lang="de">
-                <div class="legal-content">
+                <div class="doc-content">
                     <p class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</p>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>1. Warum gibt es diese Richtlinie?</h2>
                         <p>Elsewhere ist eine tempor&auml;re Gemeinschaft, die von Tausenden von Menschen gemeinsam geschaffen wird. Wie bei jeder Gemeinschaft h&auml;ngt ihr Wohlergehen von der Sorgfalt ab, die Menschen einander entgegenbringen.</p>
                         <p>Meistens bedeutet es f&uuml;r die Gesundheit auf der Veranstaltung einfach, das N&ouml;tige mitzubringen, auf sich selbst zu achten und die Menschen um Sie herum zu respektieren. Gelegentlich k&ouml;nnen die Umst&auml;nde jedoch zus&auml;tzliche Gesundheits- oder Sicherheitsma&szlig;nahmen erfordern, um Sie und die Gemeinschaft insgesamt zu sch&uuml;tzen.</p>
                         <p>Diese Richtlinie erkl&auml;rt, wie mit solchen Situationen umgegangen wird.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>2. Wann k&ouml;nnten Gesundheits- oder Sicherheitsma&szlig;nahmen eingef&uuml;hrt werden?</h2>
                         <p>Von Zeit zu Zeit k&ouml;nnen Situationen entstehen, die zus&auml;tzliche Gesundheits- oder Sicherheitsma&szlig;nahmen erforderlich machen.</p>
                         <p>Solche Situationen k&ouml;nnten beispielsweise Folgendes umfassen:</p>
@@ -537,7 +401,7 @@
                         <p>Wenn etwas davon eintritt, k&ouml;nnen die Organisatoren angemessene Ma&szlig;nahmen einf&uuml;hren, die Sie und die Gemeinschaft sch&uuml;tzen sollen.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>3. Welche Arten von Ma&szlig;nahmen k&ouml;nnten verlangt werden?</h2>
                         <p>Je nach Situation k&ouml;nnten Ma&szlig;nahmen unter anderem Folgendes umfassen:</p>
                         <ul>
@@ -551,32 +415,32 @@
                         <p>Nicht alle dieser Ma&szlig;nahmen werden zwangsl&auml;ufig angewendet. Was erforderlich ist, h&auml;ngt von den jeweiligen Umst&auml;nden ab.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>4. Was bedeutet das f&uuml;r mich?</h2>
                         <p>Wenn Gesundheits- oder Sicherheitsma&szlig;nahmen notwendig werden, kann von Ihnen verlangt werden, diese als Voraussetzung f&uuml;r die Teilnahme an der Veranstaltung einzuhalten.</p>
                         <p>Wenn m&ouml;glich, werden diese Ma&szlig;nahmen im Voraus &uuml;ber die Veranstaltungswebsite oder andere offizielle Kommunikationskan&auml;le bekannt gegeben. In manchen F&auml;llen k&ouml;nnen auch w&auml;hrend der Veranstaltung zus&auml;tzliche Ma&szlig;nahmen eingef&uuml;hrt werden, wenn sich die Umst&auml;nde &auml;ndern.</p>
                         <p>Mit der Teilnahme an Elsewhere stimmen Sie zu, angemessene Gesundheits- und Sicherheitsma&szlig;nahmen der Organisatoren einzuhalten.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>5. Was passiert, wenn ich diese Ma&szlig;nahmen nicht befolge?</h2>
                         <p>Wenn Sie sich entscheiden, die f&uuml;r die Veranstaltung geltenden Gesundheits- oder Sicherheitsanforderungen nicht einzuhalten, kann Ihnen der Zutritt verweigert oder Sie k&ouml;nnen aufgefordert werden, das Veranstaltungsgel&auml;nde zu verlassen.</p>
                         <p>Diese Entscheidungen k&ouml;nnen notwendig sein, um Sie und die breitere Gemeinschaft zu sch&uuml;tzen.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>6. Hat das Auswirkungen auf R&uuml;ckerstattungen?</h2>
                         <p>Gesundheits- oder Sicherheitsma&szlig;nahmen, die im Rahmen dieser Richtlinie eingef&uuml;hrt werden, begr&uuml;nden keinen Anspruch auf R&uuml;ckerstattung.</p>
                         <p>Wenn Sie erforderliche Ma&szlig;nahmen nicht einhalten k&ouml;nnen oder wollen, k&ouml;nnen Sie Ihr Ticket gem&auml;&szlig; der <a href="refund-policy.html">R&uuml;ckerstattungsrichtlinie</a> und den <a href="terms.html">Bedingungen</a> der Veranstaltung &uuml;bertragen.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>7. Eine gemeinsame Verantwortung</h2>
                         <p>Elsewhere existiert, weil Menschen zusammenkommen, um f&uuml;r kurze Zeit etwas Bedeutsames zu schaffen. Diese Gemeinschaft zu sch&uuml;tzen erfordert Kooperation, F&uuml;rsorge und Respekt gegen&uuml;ber den Menschen um Sie herum.</p>
                         <p>Mit der Teilnahme an der Veranstaltung erkennen Sie an, dass Gesundheit und Sicherheit eine gemeinsame Verantwortung sind.</p>
                     </section>
 
-                    <div class="legal-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
+                    <div class="doc-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
                         <h2 style="border-bottom: none; padding-bottom: 0; font-size: 1.2rem;">Wichtiger Hinweis</h2>
                         <p>Dieses Dokument ist ein Teil des Teilnahme-Rahmens von Elsewhere. Es wirkt zusammen mit den anderen Richtlinien, die die Teilnahme an der Veranstaltung regeln.</p>
                         <p>Sie sollten es zusammen mit dem restlichen Rahmen lesen, der Folgendes umfasst:</p>
@@ -592,7 +456,7 @@
                         <p>Zusammen erkl&auml;ren diese Dokumente, wie die Veranstaltung funktioniert, was Sie von den Organisatoren erwarten k&ouml;nnen und was von Ihnen als Teilnehmer erwartet wird. Durch den Kauf eines Tickets oder die Teilnahme an Elsewhere stimmen Sie diesem Rahmen zu.</p>
                     </div>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Fragen zu dieser Richtlinie? Kontaktieren Sie <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </div>
 

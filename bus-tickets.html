@@ -10,30 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        .legal-page { padding: 8rem 0 4rem; }
-        .legal-header { text-align: center; margin-bottom: 3rem; }
-        .legal-header h1 { margin-bottom: 1rem; }
-        .legal-intro { color: var(--color-text-muted); font-size: 1.1rem; max-width: 700px; margin: 0 auto; padding-bottom: 2rem; border-bottom: 1px solid var(--color-border); line-height: 1.7; }
-        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; color: var(--color-text-muted); font-size: 0.9rem; }
-        .back-link:hover { color: var(--color-accent); }
-        .back-link::before { content: '\2190'; }
-        .legal-content { max-width: 800px; margin: 0 auto; }
-        .legal-section { margin-top: 3rem; }
-        .legal-section h2 { font-size: 1.5rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
-        .legal-section h3 { font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
-        .legal-section p { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; }
-        .legal-section ul { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; padding-left: 1.5rem; }
-        .legal-section li { margin-bottom: 0.5rem; }
-        .legal-section a { color: var(--color-accent); font-weight: 500; }
-        .legal-section a.btn-primary, .legal-section a.btn-primary:hover { color: #fff; }
-        .legal-contact { margin-top: 3rem; padding: 2rem 2.5rem; background: var(--color-bg-alt); border-radius: var(--radius); text-align: center; color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.7; }
-        .legal-contact a { color: var(--color-accent); font-weight: 500; }
-        @media (max-width: 768px) { .legal-page { padding: 6rem 0 3rem; } }
-        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 2rem 0; flex-wrap: wrap; }
-        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
-        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
-        .lang-content { display: none; }
-        .lang-content.active { display: block; }
+        /* Page-specific: bus key-facts and schedule list. Doc-page layout
+           (formerly .legal-*) lives in style.css. */
         .bus-keyfacts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
         .bus-keyfact { padding: 1.25rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 3px solid var(--color-accent); }
         .bus-keyfact .label { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-muted); margin-bottom: 0.4rem; }
@@ -49,13 +27,13 @@
     <div id="shared-header"></div>
     <script src="header.js"></script>
 
-    <main class="legal-page">
+    <main class="doc-page">
         <div class="container">
             <a href="/" class="back-link">Back to Home</a>
 
-            <div class="legal-header">
+            <div class="doc-header">
                 <h1>Bus Tickets</h1>
-                <p class="legal-intro">Elsewhere 2026 &mdash; coaches between Barcelona and the site.</p>
+                <p class="doc-intro">Elsewhere 2026 &mdash; coaches between Barcelona and the site.</p>
             </div>
 
             <div class="lang-toggle">
@@ -66,11 +44,11 @@
                 <button data-lang="de">Deutsch</button>
             </div>
 
-            <div class="legal-content">
+            <div class="doc-content">
 
                 <!-- ==================== ENGLISH ==================== -->
                 <div class="lang-content active" data-lang="en">
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>The essentials</h2>
 
                         <div class="bus-keyfacts">
@@ -89,7 +67,7 @@
                         <p style="margin-top: 1.5rem;"><a href="https://book.tixak.com/events/elsewherebus" target="_blank" rel="noopener" class="btn btn-primary">Book here</a></p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Outbound &mdash; to Elsewhere</h2>
                         <p class="bus-route">Barcelona Sants &rarr; El Prat Airport &rarr; Sari&ntilde;ena (1 hour break) &rarr; Elsewhere</p>
                         <ul class="bus-schedule-list">
@@ -100,7 +78,7 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Return &mdash; from Elsewhere</h2>
                         <p class="bus-route">Elsewhere &rarr; El Prat Airport &rarr; Barcelona Sants</p>
                         <ul class="bus-schedule-list">
@@ -110,7 +88,7 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Good to know</h2>
                         <ul>
                             <li>All times are local (CEST).</li>
@@ -121,12 +99,12 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Not taking the bus?</h2>
                         <p>See <a href="getting-there.html">Getting There</a> for driving, train, plane and rideshare options.</p>
                     </section>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Questions about the bus? Email <a href="mailto:hello@nobodies.team">hello@nobodies.team</a> and we&rsquo;ll point you at the right human.</p>
                         <p>Love, dust, and desert wheels. &#x1F9E1;</p>
                     </div>
@@ -134,7 +112,7 @@
 
                 <!-- ==================== ESPAÑOL ==================== -->
                 <div class="lang-content" data-lang="es">
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Lo esencial</h2>
 
                         <div class="bus-keyfacts">
@@ -153,7 +131,7 @@
                         <p style="margin-top: 1.5rem;"><a href="https://book.tixak.com/events/elsewherebus" target="_blank" rel="noopener" class="btn btn-primary">Reserva aqu&iacute;</a></p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Ida &mdash; hacia Elsewhere</h2>
                         <p class="bus-route">Barcelona Sants &rarr; Aeropuerto de El Prat &rarr; Sari&ntilde;ena (parada de 1 hora) &rarr; Elsewhere</p>
                         <ul class="bus-schedule-list">
@@ -164,7 +142,7 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Vuelta &mdash; desde Elsewhere</h2>
                         <p class="bus-route">Elsewhere &rarr; Aeropuerto de El Prat &rarr; Barcelona Sants</p>
                         <ul class="bus-schedule-list">
@@ -174,7 +152,7 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Bueno saber</h2>
                         <ul>
                             <li>Todas las horas son locales (CEST).</li>
@@ -185,12 +163,12 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>&iquest;No vas en autob&uacute;s?</h2>
                         <p>Consulta <a href="getting-there.html">C&oacute;mo llegar</a> para opciones en coche, tren, avi&oacute;n o coche compartido.</p>
                     </section>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>&iquest;Tienes preguntas sobre el autob&uacute;s? Escribe a <a href="mailto:hello@nobodies.team">hello@nobodies.team</a> y te pondremos en contacto con la persona adecuada.</p>
                         <p>Cari&ntilde;o, polvo y ruedas del desierto. &#x1F9E1;</p>
                     </div>
@@ -198,7 +176,7 @@
 
                 <!-- ==================== FRANÇAIS ==================== -->
                 <div class="lang-content" data-lang="fr">
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>L&rsquo;essentiel</h2>
 
                         <div class="bus-keyfacts">
@@ -217,7 +195,7 @@
                         <p style="margin-top: 1.5rem;"><a href="https://book.tixak.com/events/elsewherebus" target="_blank" rel="noopener" class="btn btn-primary">R&eacute;server ici</a></p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Aller &mdash; vers Elsewhere</h2>
                         <p class="bus-route">Barcelone Sants &rarr; A&eacute;roport d&rsquo;El Prat &rarr; Sari&ntilde;ena (pause d&rsquo;1 heure) &rarr; Elsewhere</p>
                         <ul class="bus-schedule-list">
@@ -228,7 +206,7 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Retour &mdash; depuis Elsewhere</h2>
                         <p class="bus-route">Elsewhere &rarr; A&eacute;roport d&rsquo;El Prat &rarr; Barcelone Sants</p>
                         <ul class="bus-schedule-list">
@@ -238,7 +216,7 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Bon &agrave; savoir</h2>
                         <ul>
                             <li>Tous les horaires sont locaux (CEST).</li>
@@ -249,12 +227,12 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Vous ne prenez pas le bus ?</h2>
                         <p>Voir <a href="getting-there.html">Comment venir</a> pour les options voiture, train, avion et covoiturage.</p>
                     </section>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Des questions sur le bus ? &Eacute;crivez &agrave; <a href="mailto:hello@nobodies.team">hello@nobodies.team</a> et nous vous orienterons vers la bonne personne.</p>
                         <p>De l&rsquo;amour, de la poussi&egrave;re et des roues du d&eacute;sert. &#x1F9E1;</p>
                     </div>
@@ -262,7 +240,7 @@
 
                 <!-- ==================== ITALIANO ==================== -->
                 <div class="lang-content" data-lang="it">
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>L&rsquo;essenziale</h2>
 
                         <div class="bus-keyfacts">
@@ -281,7 +259,7 @@
                         <p style="margin-top: 1.5rem;"><a href="https://book.tixak.com/events/elsewherebus" target="_blank" rel="noopener" class="btn btn-primary">Prenota qui</a></p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Andata &mdash; verso Elsewhere</h2>
                         <p class="bus-route">Barcellona Sants &rarr; Aeroporto El Prat &rarr; Sari&ntilde;ena (pausa di 1 ora) &rarr; Elsewhere</p>
                         <ul class="bus-schedule-list">
@@ -292,7 +270,7 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Ritorno &mdash; da Elsewhere</h2>
                         <p class="bus-route">Elsewhere &rarr; Aeroporto El Prat &rarr; Barcellona Sants</p>
                         <ul class="bus-schedule-list">
@@ -302,7 +280,7 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Da sapere</h2>
                         <ul>
                             <li>Tutti gli orari sono locali (CEST).</li>
@@ -313,12 +291,12 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Non prendi il bus?</h2>
                         <p>Vedi <a href="getting-there.html">Come arrivare</a> per le opzioni in auto, treno, aereo e passaggi.</p>
                     </section>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Domande sul bus? Scrivi a <a href="mailto:hello@nobodies.team">hello@nobodies.team</a> e ti indirizzeremo alla persona giusta.</p>
                         <p>Amore, polvere e ruote del deserto. &#x1F9E1;</p>
                     </div>
@@ -326,7 +304,7 @@
 
                 <!-- ==================== DEUTSCH ==================== -->
                 <div class="lang-content" data-lang="de">
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Das Wichtigste</h2>
 
                         <div class="bus-keyfacts">
@@ -345,7 +323,7 @@
                         <p style="margin-top: 1.5rem;"><a href="https://book.tixak.com/events/elsewherebus" target="_blank" rel="noopener" class="btn btn-primary">Hier buchen</a></p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Hinfahrt &mdash; nach Elsewhere</h2>
                         <p class="bus-route">Barcelona Sants &rarr; Flughafen El Prat &rarr; Sari&ntilde;ena (1 Stunde Pause) &rarr; Elsewhere</p>
                         <ul class="bus-schedule-list">
@@ -356,7 +334,7 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>R&uuml;ckfahrt &mdash; von Elsewhere</h2>
                         <p class="bus-route">Elsewhere &rarr; Flughafen El Prat &rarr; Barcelona Sants</p>
                         <ul class="bus-schedule-list">
@@ -366,7 +344,7 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Gut zu wissen</h2>
                         <ul>
                             <li>Alle Zeiten sind Ortszeit (CEST).</li>
@@ -377,12 +355,12 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Du nimmst nicht den Bus?</h2>
                         <p>Siehe <a href="getting-there.html">Anreise</a> f&uuml;r Auto, Bahn, Flugzeug und Mitfahrgelegenheiten.</p>
                     </section>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Fragen zum Bus? Schreib an <a href="mailto:hello@nobodies.team">hello@nobodies.team</a> und wir leiten dich an die richtige Person weiter.</p>
                         <p>Liebe, Staub und W&uuml;stenr&auml;der. &#x1F9E1;</p>
                     </div>

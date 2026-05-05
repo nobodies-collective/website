@@ -10,165 +10,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        .legal-page {
-            padding: 8rem 0 4rem;
-        }
-
-        .legal-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .legal-header h1 {
-            margin-bottom: 1rem;
-        }
-
-        .legal-intro {
-            color: var(--color-text-muted);
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--color-border);
-            line-height: 1.7;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-            color: var(--color-text-muted);
-            font-size: 0.9rem;
-        }
-        .back-link:hover { color: var(--color-accent); }
-        .back-link::before { content: '\2190'; }
-
-        .legal-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .legal-section {
-            margin-top: 3rem;
-        }
-
-        .legal-section h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--color-accent);
-        }
-
-        .legal-section h3 {
+        /* Page-specific overrides: legal-doc h3 (smaller + bolder + dark text)
+           and emphasised li strong. Doc-page layout lives in style.css. */
+        .doc-section h3 {
             font-size: 1.1rem;
             font-weight: 600;
-            margin-bottom: 0.75rem;
             margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
             color: var(--color-text);
         }
-
-        .legal-section p {
-            color: var(--color-text-muted);
-            line-height: 1.7;
-            margin-bottom: 0.75rem;
-        }
-
-        .legal-section ul {
-            color: var(--color-text-muted);
-            line-height: 1.7;
-            margin-bottom: 0.75rem;
-            padding-left: 1.5rem;
-        }
-
-        .legal-section li {
-            margin-bottom: 0.5rem;
-        }
-
-        .legal-section li strong {
-            color: var(--color-text);
-        }
-
-        .legal-section a {
-            color: var(--color-accent);
-            font-weight: 500;
-        }
-
-        .legal-contact {
-            margin-top: 3rem;
-            padding: 2rem 2.5rem;
-            background: var(--color-bg-alt);
-            border-radius: var(--radius);
-            text-align: center;
-            color: var(--color-text-muted);
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-
-        .legal-contact a {
-            color: var(--color-accent);
-            font-weight: 500;
-        }
-
-        @media (max-width: 768px) {
-            .legal-page {
-                padding: 6rem 0 3rem;
-            }
-        }
-
-        .lang-toggle {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-
-        .lang-toggle button {
-            padding: 0.75rem 1.5rem;
-            font-family: var(--font-body);
-            font-size: 0.875rem;
-            font-weight: 500;
-            border: 1px solid var(--color-border);
-            background: var(--color-bg-alt);
-            color: var(--color-text-muted);
-            border-radius: var(--radius);
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .lang-toggle button.active,
-        .lang-toggle button:hover {
-            background: var(--color-accent);
-            border-color: var(--color-accent);
-            color: #fff;
-        }
-
-        .lang-content { display: none; }
-        .lang-content.active { display: block; }
-
-        .lang-note {
-            font-style: italic;
-            color: var(--color-text-muted);
-            margin-bottom: 2rem;
-            padding: 1rem 1.5rem;
-            background: var(--color-bg-alt);
-            border-radius: var(--radius);
-            font-size: 0.9rem;
-        }
+        .doc-section li strong { color: var(--color-text); }
     </style>
 </head>
 <body>
     <div id="shared-header"></div>
     <script src="header.js"></script>
 
-    <main class="legal-page">
+    <main class="doc-page">
         <div class="container">
             <a href="/" class="back-link">Back to Home</a>
 
-            <div class="legal-header">
+            <div class="doc-header">
                 <h1>Ticket Terms &amp; Conditions</h1>
-                <p class="legal-intro">Elsewhere 2026 &mdash; General Conditions of Participation and Access</p>
+                <p class="doc-intro">Elsewhere 2026 &mdash; General Conditions of Participation and Access</p>
             </div>
 
             <div class="lang-toggle">
@@ -181,23 +45,23 @@
 
             <!-- ==================== ENGLISH ==================== -->
             <div class="lang-content active" data-lang="en">
-            <div class="legal-content">
+            <div class="doc-content">
                 <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Who organizes Elsewhere?</h2>
                     <p>Elsewhere 2026 (the &ldquo;Event&rdquo;) is organized by Asociaci&oacute;n Nobodies Collective, a non-profit cultural association based in Spain (the &ldquo;Organizer&rdquo; or &ldquo;NCA&rdquo;).</p>
                     <p>For any legal inquiries related to the Event or these Terms and Conditions, you may contact: <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>What kind of event is Elsewhere?</h2>
                     <p>Elsewhere is a temporary participatory community event inspired by the principles of the global Burning Man cultural movement. The Event is created collectively by you and every participant through art, collaboration, and shared responsibility.</p>
                     <p>Elsewhere is not a traditional commercial festival. You contribute to the experience through your presence, participation, and respect for the community guidelines established by NCA.</p>
                     <p>The Event takes place in a remote and challenging environment and requires a high degree of personal responsibility and self-reliance.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>What am I agreeing to when I buy a ticket?</h2>
                     <p>The purchase, transfer, or use of a ticket for Elsewhere constitutes acceptance of these Terms and Conditions.</p>
                     <p>You also agree to comply with:</p>
@@ -211,7 +75,7 @@
                     <p>Official communications may be made through the Event website, email communications, or other official digital communication channels designated by NCA.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>How do tickets and event access work?</h2>
                     <p>A valid ticket is required to access the Event.</p>
                     <p>Tickets grant the holder a revocable license to attend the Event, subject to compliance with these Terms and Conditions and all Event rules and NCA may revoke this license and remove you from the Event if these Terms and Conditions or Event rules are violated.</p>
@@ -219,27 +83,27 @@
                     <p>People found on site without a valid ticket or credential may be removed from the Event.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>What are the ticket tiers?</h2>
                     <p>Tickets are available in several tiers. The base ticket price for Elsewhere 2026 is &euro;315. All ticket tiers grant the same access to the Event &mdash; there are no VIP areas, priority entry, or additional services associated with higher-priced tickets.</p>
                     <p>Higher-priced ticket tiers (such as &ldquo;VIP&rdquo; tickets) are for generous members of our community who wish to contribute more to the association. The amount above the base price of &euro;315 is considered a voluntary donation to Asociaci&oacute;n Nobodies Collective.</p>
                     <p>The only thing VIP ticket holders receive beyond standard admission is the love and adoration of the community.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Can I transfer my ticket to someone else?</h2>
                     <p>You can transfer your ticket to another person until the day before the start of the Event.</p>
                     <p>Transfers are free of charge unless a fee is imposed by the ticketing platform used to process the transfer.</p>
                     <p>NCA reserves the right to refuse entry to a transferred ticket holder if their presence would violate Event rules or pose a safety or community risk, in the same manner as for any other participant.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Can minors attend the event?</h2>
                     <p>If you are under the age of 18 you must be accompanied by a parent or legal guardian.</p>
                     <p>The accompanying adult assumes full responsibility for the minor during the Event and agrees to these Terms and Conditions on the minor&rsquo;s behalf.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Can the NCA refuse my entry or remove me?</h2>
                     <p>NCA reserves the right to deny entry to or remove you from the Event without refund if you:</p>
                     <ul>
@@ -251,7 +115,7 @@
                     <p>The Event operates as a temporary community and participation is conditional upon respecting its shared principles and guidelines.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>What is my responsibility as a participant?</h2>
                     <p>You are responsible for your own wellbeing and safety during the Event.</p>
                     <p>You must:</p>
@@ -265,7 +129,7 @@
                     <p>The Event takes place in a remote and potentially harsh environment, and you must exercise personal responsibility at all times.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>What risks do I accept by attending the event?</h2>
                     <p>Participation in the Event involves inherent risks, including but not limited to:</p>
                     <ul>
@@ -277,12 +141,12 @@
                     <p>By attending the Event, you voluntarily assume all risks associated with participation.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>What responsibility does NCA have if something goes wrong?</h2>
                     <p>To the maximum extent permitted by law, participants agree that NCA, its board members, volunteers, contractors, collaborators, and agents will not be held liable for damages, injuries, losses, or expenses arising from participation in the Event, except where liability cannot be excluded under applicable law.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>What happens if the event changes or is cancelled?</h2>
                     <p>NCA reserves the right to modify, postpone, or cancel the Event if necessary due to circumstances including but not limited to:</p>
                     <ul>
@@ -299,14 +163,14 @@
                     </ul>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>What health and safety rules must I follow?</h2>
                     <p>Participants must comply with all health and safety measures implemented by NCA or required by authorities.</p>
                     <p>This may include emergency procedures, evacuation protocols, or public health measures necessary to protect you and the surrounding community.</p>
                     <p>Failure to comply with safety instructions may result in removal from the Event.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>What are the rules about photos, video, and media at the event?</h2>
                     <p>You acknowledge that photography, audio, and video recording may occur during the Event.</p>
                     <p>You must respect the privacy and consent of others when capturing or sharing images or recordings.</p>
@@ -314,37 +178,37 @@
                     <p>Additional guidance regarding media and image rights may be provided in Event policies or the Survival Guide.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>How will my personal data be handled?</h2>
                     <p>Personal data collected during ticket purchase or participation in the Event will be processed in accordance with applicable data protection laws.</p>
                     <p>Further information about how personal data is handled is provided in the Event&rsquo;s <a href="privacy-policy.html">Privacy Notice</a>.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Can these terms or event rules change?</h2>
                     <p>NCA may update these Terms and Conditions or Event rules when necessary.</p>
                     <p>You will be informed of relevant updates through official Event communication channels.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Which laws apply at Elsewhere?</h2>
                     <p>These Terms and Conditions are governed by Spanish law.</p>
                     <p>Any disputes arising in connection with the Event will be subject to the jurisdiction of the courts and tribunals of Huesca, Spain, unless mandatory consumer protection rules provide otherwise.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Entire agreement</h2>
                     <p>These Terms and Conditions constitute the entire agreement governing participation in the Event and supersede any prior communications, statements, or representations relating to participation in the Event.</p>
                     <p>Participation in the Event is governed exclusively by these Terms and Conditions together with the documents referenced herein, including the Survival Guide, the <a href="code-of-conduct.html">Participant Code of Conduct</a>, the <a href="refund-policy.html">Refund Policy</a>, and the <a href="privacy-policy.html">Privacy Notice</a>.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Official language</h2>
                     <p>These Terms and Conditions are provided in English for your convenience.</p>
                     <p>An official Spanish version of these Terms and Conditions exists. In the event of any discrepancy or inconsistency between language versions, the Spanish version will prevail.</p>
                 </section>
 
-                <div class="legal-contact">
+                <div class="doc-contact">
                     <p>Questions about these terms? Contact <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                 </div>
             </div>
@@ -352,22 +216,22 @@
 
             <!-- ==================== SPANISH ==================== -->
             <div class="lang-content" data-lang="es">
-            <div class="legal-content">
+            <div class="doc-content">
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>&iquest;Qui&eacute;n organiza Elsewhere?</h2>
                     <p>Elsewhere 2026 (el &ldquo;Evento&rdquo;) est&aacute; organizado por la Asociaci&oacute;n Nobodies Collective, una asociaci&oacute;n cultural sin &aacute;nimo de lucro con sede en Espa&ntilde;a (el &ldquo;Organizador&rdquo; o &ldquo;NCA&rdquo;).</p>
                     <p>Para cualquier consulta legal relacionada con el Evento o estos T&eacute;rminos y Condiciones, puede contactar con: <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>&iquest;Qu&eacute; tipo de evento es Elsewhere?</h2>
                     <p>Elsewhere es un evento comunitario participativo temporal inspirado en los principios del movimiento cultural global Burning Man. El Evento es creado colectivamente por ti y por cada participante a trav&eacute;s del arte, la colaboraci&oacute;n y la responsabilidad compartida.</p>
                     <p>Elsewhere no es un festival comercial tradicional. T&uacute; contribuyes a la experiencia con tu presencia, participaci&oacute;n y respeto a las directrices comunitarias establecidas por NCA.</p>
                     <p>El Evento tiene lugar en un entorno remoto y desafiante y requiere un alto grado de responsabilidad personal y autosuficiencia.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>&iquest;Qu&eacute; estoy aceptando al comprar una entrada?</h2>
                     <p>La compra, transferencia o uso de una entrada para Elsewhere constituye la aceptaci&oacute;n de estos T&eacute;rminos y Condiciones.</p>
                     <p>Tambi&eacute;n aceptas cumplir con:</p>
@@ -381,7 +245,7 @@
                     <p>Las comunicaciones oficiales podr&aacute;n realizarse a trav&eacute;s del sitio web del Evento, comunicaciones por correo electr&oacute;nico u otros canales de comunicaci&oacute;n digital oficiales designados por NCA.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>&iquest;C&oacute;mo funcionan las entradas y el acceso al evento?</h2>
                     <p>Se requiere una entrada v&aacute;lida para acceder al Evento.</p>
                     <p>Las entradas otorgan al titular una licencia revocable para asistir al Evento, sujeta al cumplimiento de estos T&eacute;rminos y Condiciones y de todas las normas del Evento, y NCA podr&aacute; revocar esta licencia y expulsarte del Evento si se incumplen estos T&eacute;rminos y Condiciones o las normas del Evento.</p>
@@ -389,27 +253,27 @@
                     <p>Las personas que se encuentren en el recinto sin una entrada o credencial v&aacute;lida podr&aacute;n ser expulsadas del Evento.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>&iquest;Cu&aacute;les son los niveles de entrada?</h2>
                     <p>Las entradas est&aacute;n disponibles en varios niveles. El precio base de la entrada para Elsewhere 2026 es de 315&nbsp;&euro;. Todos los niveles de entrada otorgan el mismo acceso al Evento &mdash; no hay zonas VIP, acceso prioritario ni servicios adicionales asociados a las entradas de mayor precio.</p>
                     <p>Los niveles de entrada de mayor precio (como las entradas &ldquo;VIP&rdquo;) est&aacute;n destinados a miembros generosos de nuestra comunidad que desean contribuir m&aacute;s a la asociaci&oacute;n. El importe por encima del precio base de 315&nbsp;&euro; se considera una donaci&oacute;n voluntaria a la Asociaci&oacute;n Nobodies Collective.</p>
                     <p>Lo &uacute;nico que los titulares de entradas VIP reciben m&aacute;s all&aacute; de la admisi&oacute;n est&aacute;ndar es el amor y la admiraci&oacute;n de la comunidad.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>&iquest;Puedo transferir mi entrada a otra persona?</h2>
                     <p>Puedes transferir tu entrada a otra persona hasta el d&iacute;a anterior al inicio del Evento.</p>
                     <p>Las transferencias son gratuitas, salvo que la plataforma de venta de entradas utilizada para procesar la transferencia aplique alguna tarifa.</p>
                     <p>NCA se reserva el derecho de denegar la entrada a un titular de entrada transferida si su presencia infringiese las normas del Evento o supusiese un riesgo para la seguridad o la comunidad, del mismo modo que para cualquier otro participante.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>&iquest;Pueden los menores asistir al evento?</h2>
                     <p>Si eres menor de 18 a&ntilde;os, debes estar acompa&ntilde;ado/a por un padre, madre o tutor legal.</p>
                     <p>El adulto acompa&ntilde;ante asume la plena responsabilidad del menor durante el Evento y acepta estos T&eacute;rminos y Condiciones en nombre del menor.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>&iquest;Puede NCA denegar mi entrada o expulsarme?</h2>
                     <p>NCA se reserva el derecho de denegar la entrada o expulsarte del Evento sin reembolso si:</p>
                     <ul>
@@ -421,7 +285,7 @@
                     <p>El Evento funciona como una comunidad temporal y la participaci&oacute;n est&aacute; condicionada al respeto de sus principios y directrices compartidos.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>&iquest;Cu&aacute;l es mi responsabilidad como participante?</h2>
                     <p>Eres responsable de tu propio bienestar y seguridad durante el Evento.</p>
                     <p>Debes:</p>
@@ -435,7 +299,7 @@
                     <p>El Evento tiene lugar en un entorno remoto y potencialmente duro, y debes ejercer la responsabilidad personal en todo momento.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>&iquest;Qu&eacute; riesgos acepto al asistir al evento?</h2>
                     <p>La participaci&oacute;n en el Evento conlleva riesgos inherentes, incluyendo, entre otros:</p>
                     <ul>
@@ -447,12 +311,12 @@
                     <p>Al asistir al Evento, asumes voluntariamente todos los riesgos asociados con la participaci&oacute;n.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>&iquest;Qu&eacute; responsabilidad tiene NCA si algo sale mal?</h2>
                     <p>En la m&aacute;xima medida permitida por la ley, los participantes aceptan que NCA, sus miembros de la junta directiva, voluntarios, contratistas, colaboradores y agentes no ser&aacute;n responsables de da&ntilde;os, lesiones, p&eacute;rdidas o gastos derivados de la participaci&oacute;n en el Evento, salvo cuando la responsabilidad no pueda excluirse conforme a la legislaci&oacute;n aplicable.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>&iquest;Qu&eacute; ocurre si el evento cambia o se cancela?</h2>
                     <p>NCA se reserva el derecho de modificar, posponer o cancelar el Evento si fuera necesario debido a circunstancias que incluyen, entre otras:</p>
                     <ul>
@@ -469,14 +333,14 @@
                     </ul>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>&iquest;Qu&eacute; normas de salud y seguridad debo seguir?</h2>
                     <p>Los participantes deben cumplir con todas las medidas de salud y seguridad implementadas por NCA o exigidas por las autoridades.</p>
                     <p>Esto puede incluir procedimientos de emergencia, protocolos de evacuaci&oacute;n o medidas de salud p&uacute;blica necesarias para protegerte a ti y a la comunidad circundante.</p>
                     <p>El incumplimiento de las instrucciones de seguridad puede resultar en la expulsi&oacute;n del Evento.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>&iquest;Cu&aacute;les son las normas sobre fotos, v&iacute;deo y medios en el evento?</h2>
                     <p>Reconoces que durante el Evento pueden realizarse fotograf&iacute;as, grabaciones de audio y de v&iacute;deo.</p>
                     <p>Debes respetar la privacidad y el consentimiento de los dem&aacute;s al capturar o compartir im&aacute;genes o grabaciones.</p>
@@ -484,37 +348,37 @@
                     <p>Se podr&aacute;n proporcionar directrices adicionales sobre derechos de medios e imagen en las pol&iacute;ticas del Evento o en la Gu&iacute;a de Supervivencia.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>&iquest;C&oacute;mo se tratar&aacute;n mis datos personales?</h2>
                     <p>Los datos personales recogidos durante la compra de entradas o la participaci&oacute;n en el Evento ser&aacute;n tratados de conformidad con la legislaci&oacute;n de protecci&oacute;n de datos aplicable.</p>
                     <p>M&aacute;s informaci&oacute;n sobre c&oacute;mo se tratan los datos personales se encuentra en el <a href="privacy-policy.html">Aviso de Privacidad</a> del Evento.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>&iquest;Pueden cambiar estos t&eacute;rminos o las normas del evento?</h2>
                     <p>NCA podr&aacute; actualizar estos T&eacute;rminos y Condiciones o las normas del Evento cuando sea necesario.</p>
                     <p>Se te informar&aacute; de las actualizaciones relevantes a trav&eacute;s de los canales de comunicaci&oacute;n oficiales del Evento.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>&iquest;Qu&eacute; leyes se aplican en Elsewhere?</h2>
                     <p>Estos T&eacute;rminos y Condiciones se rigen por la legislaci&oacute;n espa&ntilde;ola.</p>
                     <p>Cualquier controversia derivada del Evento estar&aacute; sujeta a la jurisdicci&oacute;n de los juzgados y tribunales de Huesca, Espa&ntilde;a, salvo que las normas imperativas de protecci&oacute;n del consumidor dispongan lo contrario.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Acuerdo completo</h2>
                     <p>Estos T&eacute;rminos y Condiciones constituyen el acuerdo completo que rige la participaci&oacute;n en el Evento y sustituyen a cualquier comunicaci&oacute;n, declaraci&oacute;n o representaci&oacute;n previa relacionada con la participaci&oacute;n en el Evento.</p>
                     <p>La participaci&oacute;n en el Evento se rige exclusivamente por estos T&eacute;rminos y Condiciones junto con los documentos aqu&iacute; referenciados, incluyendo la Gu&iacute;a de Supervivencia, el <a href="code-of-conduct.html">C&oacute;digo de Conducta del Participante</a>, la <a href="refund-policy.html">Pol&iacute;tica de Reembolso</a> y el <a href="privacy-policy.html">Aviso de Privacidad</a>.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Idioma oficial</h2>
                     <p>Estos T&eacute;rminos y Condiciones se proporcionan en espa&ntilde;ol como versi&oacute;n oficial.</p>
                     <p>En caso de discrepancia o inconsistencia entre las distintas versiones ling&uuml;&iacute;sticas, la versi&oacute;n en espa&ntilde;ol prevalecer&aacute;.</p>
                 </section>
 
-                <div class="legal-contact">
+                <div class="doc-contact">
                     <p>&iquest;Preguntas sobre estos t&eacute;rminos? Contacta con <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                 </div>
             </div>
@@ -522,23 +386,23 @@
 
             <!-- ==================== FRENCH ==================== -->
             <div class="lang-content" data-lang="fr">
-            <div class="legal-content">
+            <div class="doc-content">
                 <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Qui organise Elsewhere ?</h2>
                     <p>Elsewhere 2026 (l&rsquo;&laquo;&nbsp;&Eacute;v&eacute;nement&nbsp;&raquo;) est organis&eacute; par l&rsquo;Asociaci&oacute;n Nobodies Collective, une association culturelle &agrave; but non lucratif bas&eacute;e en Espagne (l&rsquo;&laquo;&nbsp;Organisateur&nbsp;&raquo; ou &laquo;&nbsp;NCA&nbsp;&raquo;).</p>
                     <p>Pour toute demande juridique li&eacute;e &agrave; l&rsquo;&Eacute;v&eacute;nement ou &agrave; ces Termes et Conditions, vous pouvez contacter : <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Quel type d&rsquo;&eacute;v&eacute;nement est Elsewhere ?</h2>
                     <p>Elsewhere est un &eacute;v&eacute;nement communautaire participatif temporaire inspir&eacute; des principes du mouvement culturel mondial Burning Man. L&rsquo;&Eacute;v&eacute;nement est cr&eacute;&eacute; collectivement par vous et par chaque participant &agrave; travers l&rsquo;art, la collaboration et la responsabilit&eacute; partag&eacute;e.</p>
                     <p>Elsewhere n&rsquo;est pas un festival commercial traditionnel. Vous contribuez &agrave; l&rsquo;exp&eacute;rience par votre pr&eacute;sence, votre participation et votre respect des directives communautaires &eacute;tablies par NCA.</p>
                     <p>L&rsquo;&Eacute;v&eacute;nement se d&eacute;roule dans un environnement isol&eacute; et exigeant et n&eacute;cessite un haut degr&eacute; de responsabilit&eacute; personnelle et d&rsquo;autonomie.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Qu&rsquo;est-ce que j&rsquo;accepte en achetant un billet ?</h2>
                     <p>L&rsquo;achat, le transfert ou l&rsquo;utilisation d&rsquo;un billet pour Elsewhere constitue l&rsquo;acceptation de ces Termes et Conditions.</p>
                     <p>Vous acceptez &eacute;galement de vous conformer &agrave; :</p>
@@ -552,7 +416,7 @@
                     <p>Les communications officielles peuvent &ecirc;tre effectu&eacute;es via le site web de l&rsquo;&Eacute;v&eacute;nement, par courrier &eacute;lectronique ou par tout autre canal de communication num&eacute;rique officiel d&eacute;sign&eacute; par NCA.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Comment fonctionnent les billets et l&rsquo;acc&egrave;s &agrave; l&rsquo;&eacute;v&eacute;nement ?</h2>
                     <p>Un billet valide est requis pour acc&eacute;der &agrave; l&rsquo;&Eacute;v&eacute;nement.</p>
                     <p>Les billets accordent au titulaire une licence r&eacute;vocable pour assister &agrave; l&rsquo;&Eacute;v&eacute;nement, sous r&eacute;serve du respect de ces Termes et Conditions et de toutes les r&egrave;gles de l&rsquo;&Eacute;v&eacute;nement, et NCA peut r&eacute;voquer cette licence et vous retirer de l&rsquo;&Eacute;v&eacute;nement si ces Termes et Conditions ou les r&egrave;gles de l&rsquo;&Eacute;v&eacute;nement sont viol&eacute;s.</p>
@@ -560,27 +424,27 @@
                     <p>Les personnes trouv&eacute;es sur le site sans billet ou justificatif valide pourront &ecirc;tre expuls&eacute;es de l&rsquo;&Eacute;v&eacute;nement.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Quels sont les niveaux de billets ?</h2>
                     <p>Les billets sont disponibles en plusieurs niveaux. Le prix de base du billet pour Elsewhere 2026 est de 315&nbsp;&euro;. Tous les niveaux de billets donnent le m&ecirc;me acc&egrave;s &agrave; l&rsquo;&Eacute;v&eacute;nement &mdash; il n&rsquo;y a pas de zones VIP, d&rsquo;entr&eacute;e prioritaire ni de services suppl&eacute;mentaires associ&eacute;s aux billets plus chers.</p>
                     <p>Les niveaux de billets &agrave; prix plus &eacute;lev&eacute; (tels que les billets &laquo;&nbsp;VIP&nbsp;&raquo;) sont destin&eacute;s aux membres g&eacute;n&eacute;reux de notre communaut&eacute; qui souhaitent contribuer davantage &agrave; l&rsquo;association. Le montant au-dessus du prix de base de 315&nbsp;&euro; est consid&eacute;r&eacute; comme un don volontaire &agrave; l&rsquo;Asociaci&oacute;n Nobodies Collective.</p>
                     <p>La seule chose que les titulaires de billets VIP re&ccedil;oivent au-del&agrave; de l&rsquo;admission standard est l&rsquo;amour et l&rsquo;admiration de la communaut&eacute;.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Puis-je transf&eacute;rer mon billet &agrave; quelqu&rsquo;un d&rsquo;autre ?</h2>
                     <p>Vous pouvez transf&eacute;rer votre billet &agrave; une autre personne jusqu&rsquo;&agrave; la veille du d&eacute;but de l&rsquo;&Eacute;v&eacute;nement.</p>
                     <p>Les transferts sont gratuits, sauf si des frais sont impos&eacute;s par la plateforme de billetterie utilis&eacute;e pour traiter le transfert.</p>
                     <p>NCA se r&eacute;serve le droit de refuser l&rsquo;entr&eacute;e &agrave; un titulaire de billet transf&eacute;r&eacute; si sa pr&eacute;sence violerait les r&egrave;gles de l&rsquo;&Eacute;v&eacute;nement ou pr&eacute;senterait un risque pour la s&eacute;curit&eacute; ou la communaut&eacute;, de la m&ecirc;me mani&egrave;re que pour tout autre participant.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Les mineurs peuvent-ils assister &agrave; l&rsquo;&eacute;v&eacute;nement ?</h2>
                     <p>Si vous avez moins de 18 ans, vous devez &ecirc;tre accompagn&eacute;(e) d&rsquo;un parent ou d&rsquo;un tuteur l&eacute;gal.</p>
                     <p>L&rsquo;adulte accompagnant assume l&rsquo;enti&egrave;re responsabilit&eacute; du mineur pendant l&rsquo;&Eacute;v&eacute;nement et accepte ces Termes et Conditions au nom du mineur.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>NCA peut-elle refuser mon entr&eacute;e ou m&rsquo;expulser ?</h2>
                     <p>NCA se r&eacute;serve le droit de refuser l&rsquo;entr&eacute;e ou de vous expulser de l&rsquo;&Eacute;v&eacute;nement sans remboursement si vous :</p>
                     <ul>
@@ -592,7 +456,7 @@
                     <p>L&rsquo;&Eacute;v&eacute;nement fonctionne comme une communaut&eacute; temporaire et la participation est conditionn&eacute;e au respect de ses principes et directives partag&eacute;s.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Quelle est ma responsabilit&eacute; en tant que participant ?</h2>
                     <p>Vous &ecirc;tes responsable de votre propre bien-&ecirc;tre et de votre s&eacute;curit&eacute; pendant l&rsquo;&Eacute;v&eacute;nement.</p>
                     <p>Vous devez :</p>
@@ -606,7 +470,7 @@
                     <p>L&rsquo;&Eacute;v&eacute;nement se d&eacute;roule dans un environnement isol&eacute; et potentiellement rude, et vous devez faire preuve de responsabilit&eacute; personnelle en tout temps.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Quels risques est-ce que j&rsquo;accepte en assistant &agrave; l&rsquo;&eacute;v&eacute;nement ?</h2>
                     <p>La participation &agrave; l&rsquo;&Eacute;v&eacute;nement comporte des risques inh&eacute;rents, incluant mais sans s&rsquo;y limiter :</p>
                     <ul>
@@ -618,12 +482,12 @@
                     <p>En assistant &agrave; l&rsquo;&Eacute;v&eacute;nement, vous assumez volontairement tous les risques associ&eacute;s &agrave; la participation.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Quelle responsabilit&eacute; NCA a-t-elle si quelque chose tourne mal ?</h2>
                     <p>Dans la mesure maximale permise par la loi, les participants acceptent que NCA, ses membres du conseil d&rsquo;administration, b&eacute;n&eacute;voles, prestataires, collaborateurs et agents ne seront pas tenus responsables des dommages, blessures, pertes ou d&eacute;penses d&eacute;coulant de la participation &agrave; l&rsquo;&Eacute;v&eacute;nement, sauf lorsque la responsabilit&eacute; ne peut &ecirc;tre exclue en vertu de la loi applicable.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Que se passe-t-il si l&rsquo;&eacute;v&eacute;nement change ou est annul&eacute; ?</h2>
                     <p>NCA se r&eacute;serve le droit de modifier, reporter ou annuler l&rsquo;&Eacute;v&eacute;nement si n&eacute;cessaire en raison de circonstances incluant mais sans s&rsquo;y limiter :</p>
                     <ul>
@@ -640,14 +504,14 @@
                     </ul>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Quelles r&egrave;gles de sant&eacute; et de s&eacute;curit&eacute; dois-je suivre ?</h2>
                     <p>Les participants doivent se conformer &agrave; toutes les mesures de sant&eacute; et de s&eacute;curit&eacute; mises en place par NCA ou exig&eacute;es par les autorit&eacute;s.</p>
                     <p>Cela peut inclure des proc&eacute;dures d&rsquo;urgence, des protocoles d&rsquo;&eacute;vacuation ou des mesures de sant&eacute; publique n&eacute;cessaires pour vous prot&eacute;ger ainsi que la communaut&eacute; environnante.</p>
                     <p>Le non-respect des instructions de s&eacute;curit&eacute; peut entra&icirc;ner l&rsquo;expulsion de l&rsquo;&Eacute;v&eacute;nement.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Quelles sont les r&egrave;gles concernant les photos, vid&eacute;os et m&eacute;dias lors de l&rsquo;&eacute;v&eacute;nement ?</h2>
                     <p>Vous reconnaissez que des photographies, des enregistrements audio et vid&eacute;o peuvent avoir lieu pendant l&rsquo;&Eacute;v&eacute;nement.</p>
                     <p>Vous devez respecter la vie priv&eacute;e et le consentement des autres lors de la capture ou du partage d&rsquo;images ou d&rsquo;enregistrements.</p>
@@ -655,37 +519,37 @@
                     <p>Des directives suppl&eacute;mentaires concernant les droits relatifs aux m&eacute;dias et &agrave; l&rsquo;image pourront &ecirc;tre fournies dans les politiques de l&rsquo;&Eacute;v&eacute;nement ou dans le Guide de Survie.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Comment mes donn&eacute;es personnelles seront-elles trait&eacute;es ?</h2>
                     <p>Les donn&eacute;es personnelles collect&eacute;es lors de l&rsquo;achat de billets ou de la participation &agrave; l&rsquo;&Eacute;v&eacute;nement seront trait&eacute;es conform&eacute;ment aux lois applicables en mati&egrave;re de protection des donn&eacute;es.</p>
                     <p>De plus amples informations sur le traitement des donn&eacute;es personnelles sont fournies dans l&rsquo;<a href="privacy-policy.html">Avis de Confidentialit&eacute;</a> de l&rsquo;&Eacute;v&eacute;nement.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Ces termes ou les r&egrave;gles de l&rsquo;&eacute;v&eacute;nement peuvent-ils changer ?</h2>
                     <p>NCA peut mettre &agrave; jour ces Termes et Conditions ou les r&egrave;gles de l&rsquo;&Eacute;v&eacute;nement lorsque cela est n&eacute;cessaire.</p>
                     <p>Vous serez inform&eacute;(e) des mises &agrave; jour pertinentes par les canaux de communication officiels de l&rsquo;&Eacute;v&eacute;nement.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Quelles lois s&rsquo;appliquent &agrave; Elsewhere ?</h2>
                     <p>Ces Termes et Conditions sont r&eacute;gis par le droit espagnol.</p>
                     <p>Tout litige d&eacute;coulant de l&rsquo;&Eacute;v&eacute;nement sera soumis &agrave; la comp&eacute;tence des tribunaux de Huesca, Espagne, sauf si les r&egrave;gles imp&eacute;ratives de protection des consommateurs en disposent autrement.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Accord int&eacute;gral</h2>
                     <p>Ces Termes et Conditions constituent l&rsquo;accord int&eacute;gral r&eacute;gissant la participation &agrave; l&rsquo;&Eacute;v&eacute;nement et remplacent toute communication, d&eacute;claration ou repr&eacute;sentation ant&eacute;rieure relative &agrave; la participation &agrave; l&rsquo;&Eacute;v&eacute;nement.</p>
                     <p>La participation &agrave; l&rsquo;&Eacute;v&eacute;nement est r&eacute;gie exclusivement par ces Termes et Conditions conjointement avec les documents r&eacute;f&eacute;renc&eacute;s ici, y compris le Guide de Survie, le <a href="code-of-conduct.html">Code de Conduite du Participant</a>, la <a href="refund-policy.html">Politique de Remboursement</a> et l&rsquo;<a href="privacy-policy.html">Avis de Confidentialit&eacute;</a>.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Langue officielle</h2>
                     <p>Ces Termes et Conditions sont fournis en fran&ccedil;ais pour votre commodit&eacute;.</p>
                     <p>Une version officielle en espagnol de ces Termes et Conditions existe. En cas de divergence ou d&rsquo;incoh&eacute;rence entre les versions linguistiques, la version espagnole pr&eacute;vaudra.</p>
                 </section>
 
-                <div class="legal-contact">
+                <div class="doc-contact">
                     <p>Des questions sur ces termes ? Contactez <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                 </div>
             </div>
@@ -693,23 +557,23 @@
 
             <!-- ==================== ITALIAN ==================== -->
             <div class="lang-content" data-lang="it">
-            <div class="legal-content">
+            <div class="doc-content">
                 <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Chi organizza Elsewhere?</h2>
                     <p>Elsewhere 2026 (l&rsquo;&ldquo;Evento&rdquo;) &egrave; organizzato dall&rsquo;Asociaci&oacute;n Nobodies Collective, un&rsquo;associazione culturale senza scopo di lucro con sede in Spagna (l&rsquo;&ldquo;Organizzatore&rdquo; o &ldquo;NCA&rdquo;).</p>
                     <p>Per qualsiasi richiesta legale relativa all&rsquo;Evento o a questi Termini e Condizioni, &egrave; possibile contattare: <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Che tipo di evento &egrave; Elsewhere?</h2>
                     <p>Elsewhere &egrave; un evento comunitario partecipativo temporaneo ispirato ai principi del movimento culturale globale Burning Man. L&rsquo;Evento &egrave; creato collettivamente da te e da ogni partecipante attraverso l&rsquo;arte, la collaborazione e la responsabilit&agrave; condivisa.</p>
                     <p>Elsewhere non &egrave; un festival commerciale tradizionale. Tu contribuisci all&rsquo;esperienza con la tua presenza, la tua partecipazione e il rispetto delle linee guida della comunit&agrave; stabilite da NCA.</p>
                     <p>L&rsquo;Evento si svolge in un ambiente remoto e impegnativo e richiede un alto grado di responsabilit&agrave; personale e autosufficienza.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Cosa sto accettando quando acquisto un biglietto?</h2>
                     <p>L&rsquo;acquisto, il trasferimento o l&rsquo;utilizzo di un biglietto per Elsewhere costituisce l&rsquo;accettazione di questi Termini e Condizioni.</p>
                     <p>Accetti inoltre di rispettare:</p>
@@ -723,7 +587,7 @@
                     <p>Le comunicazioni ufficiali possono essere effettuate tramite il sito web dell&rsquo;Evento, comunicazioni via email o altri canali di comunicazione digitale ufficiali designati da NCA.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Come funzionano i biglietti e l&rsquo;accesso all&rsquo;evento?</h2>
                     <p>&Egrave; necessario un biglietto valido per accedere all&rsquo;Evento.</p>
                     <p>I biglietti concedono al titolare una licenza revocabile per partecipare all&rsquo;Evento, subordinata al rispetto di questi Termini e Condizioni e di tutte le regole dell&rsquo;Evento, e NCA pu&ograve; revocare questa licenza e allontanarti dall&rsquo;Evento se questi Termini e Condizioni o le regole dell&rsquo;Evento vengono violati.</p>
@@ -731,27 +595,27 @@
                     <p>Le persone trovate sul sito senza un biglietto o una credenziale valida potranno essere allontanate dall&rsquo;Evento.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Quali sono i livelli di biglietto?</h2>
                     <p>I biglietti sono disponibili in diversi livelli. Il prezzo base del biglietto per Elsewhere 2026 &egrave; di 315&nbsp;&euro;. Tutti i livelli di biglietto garantiscono lo stesso accesso all&rsquo;Evento &mdash; non ci sono aree VIP, ingressi prioritari o servizi aggiuntivi associati ai biglietti a prezzo pi&ugrave; alto.</p>
                     <p>I livelli di biglietto a prezzo pi&ugrave; alto (come i biglietti &ldquo;VIP&rdquo;) sono destinati ai membri generosi della nostra comunit&agrave; che desiderano contribuire maggiormente all&rsquo;associazione. L&rsquo;importo superiore al prezzo base di 315&nbsp;&euro; &egrave; considerato una donazione volontaria all&rsquo;Asociaci&oacute;n Nobodies Collective.</p>
                     <p>L&rsquo;unica cosa che i titolari di biglietti VIP ricevono oltre all&rsquo;ammissione standard &egrave; l&rsquo;amore e l&rsquo;ammirazione della comunit&agrave;.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Posso trasferire il mio biglietto a qualcun altro?</h2>
                     <p>Puoi trasferire il tuo biglietto a un&rsquo;altra persona fino al giorno precedente l&rsquo;inizio dell&rsquo;Evento.</p>
                     <p>I trasferimenti sono gratuiti, salvo che la piattaforma di biglietteria utilizzata per elaborare il trasferimento applichi una commissione.</p>
                     <p>NCA si riserva il diritto di rifiutare l&rsquo;ingresso a un titolare di biglietto trasferito se la sua presenza violerebbe le regole dell&rsquo;Evento o rappresenterebbe un rischio per la sicurezza o la comunit&agrave;, allo stesso modo di qualsiasi altro partecipante.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>I minori possono partecipare all&rsquo;evento?</h2>
                     <p>Se hai meno di 18 anni, devi essere accompagnato/a da un genitore o tutore legale.</p>
                     <p>L&rsquo;adulto accompagnatore assume la piena responsabilit&agrave; del minore durante l&rsquo;Evento e accetta questi Termini e Condizioni per conto del minore.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>NCA pu&ograve; rifiutare il mio ingresso o allontanarmi?</h2>
                     <p>NCA si riserva il diritto di negare l&rsquo;ingresso o di allontanarti dall&rsquo;Evento senza rimborso se:</p>
                     <ul>
@@ -763,7 +627,7 @@
                     <p>L&rsquo;Evento funziona come una comunit&agrave; temporanea e la partecipazione &egrave; condizionata al rispetto dei suoi principi e delle sue linee guida condivise.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Qual &egrave; la mia responsabilit&agrave; come partecipante?</h2>
                     <p>Sei responsabile del tuo benessere e della tua sicurezza durante l&rsquo;Evento.</p>
                     <p>Devi:</p>
@@ -777,7 +641,7 @@
                     <p>L&rsquo;Evento si svolge in un ambiente remoto e potenzialmente duro, e devi esercitare la responsabilit&agrave; personale in ogni momento.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Quali rischi accetto partecipando all&rsquo;evento?</h2>
                     <p>La partecipazione all&rsquo;Evento comporta rischi intrinseci, tra cui, a titolo esemplificativo e non esaustivo:</p>
                     <ul>
@@ -789,12 +653,12 @@
                     <p>Partecipando all&rsquo;Evento, assumi volontariamente tutti i rischi associati alla partecipazione.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Quale responsabilit&agrave; ha NCA se qualcosa va storto?</h2>
                     <p>Nella misura massima consentita dalla legge, i partecipanti accettano che NCA, i suoi membri del consiglio di amministrazione, volontari, appaltatori, collaboratori e agenti non saranno ritenuti responsabili per danni, lesioni, perdite o spese derivanti dalla partecipazione all&rsquo;Evento, salvo nei casi in cui la responsabilit&agrave; non possa essere esclusa ai sensi della legge applicabile.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Cosa succede se l&rsquo;evento cambia o viene cancellato?</h2>
                     <p>NCA si riserva il diritto di modificare, posticipare o cancellare l&rsquo;Evento se necessario a causa di circostanze tra cui, a titolo esemplificativo e non esaustivo:</p>
                     <ul>
@@ -811,14 +675,14 @@
                     </ul>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Quali regole di salute e sicurezza devo seguire?</h2>
                     <p>I partecipanti devono rispettare tutte le misure di salute e sicurezza implementate da NCA o richieste dalle autorit&agrave;.</p>
                     <p>Ci&ograve; pu&ograve; includere procedure di emergenza, protocolli di evacuazione o misure di salute pubblica necessarie per proteggere te e la comunit&agrave; circostante.</p>
                     <p>Il mancato rispetto delle istruzioni di sicurezza pu&ograve; comportare l&rsquo;allontanamento dall&rsquo;Evento.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Quali sono le regole su foto, video e media all&rsquo;evento?</h2>
                     <p>Riconosci che durante l&rsquo;Evento possono essere effettuate fotografie, registrazioni audio e video.</p>
                     <p>Devi rispettare la privacy e il consenso degli altri quando catturi o condividi immagini o registrazioni.</p>
@@ -826,37 +690,37 @@
                     <p>Ulteriori indicazioni riguardanti i diritti sui media e sulle immagini potranno essere fornite nelle politiche dell&rsquo;Evento o nella Guida alla Sopravvivenza.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Come saranno trattati i miei dati personali?</h2>
                     <p>I dati personali raccolti durante l&rsquo;acquisto dei biglietti o la partecipazione all&rsquo;Evento saranno trattati in conformit&agrave; con le leggi applicabili sulla protezione dei dati.</p>
                     <p>Ulteriori informazioni sul trattamento dei dati personali sono fornite nell&rsquo;<a href="privacy-policy.html">Informativa sulla Privacy</a> dell&rsquo;Evento.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Questi termini o le regole dell&rsquo;evento possono cambiare?</h2>
                     <p>NCA pu&ograve; aggiornare questi Termini e Condizioni o le regole dell&rsquo;Evento quando necessario.</p>
                     <p>Sarai informato/a degli aggiornamenti pertinenti attraverso i canali di comunicazione ufficiali dell&rsquo;Evento.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Quali leggi si applicano a Elsewhere?</h2>
                     <p>Questi Termini e Condizioni sono regolati dalla legge spagnola.</p>
                     <p>Qualsiasi controversia derivante dall&rsquo;Evento sar&agrave; soggetta alla giurisdizione dei tribunali di Huesca, Spagna, salvo che le norme imperative di protezione dei consumatori dispongano diversamente.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Accordo completo</h2>
                     <p>Questi Termini e Condizioni costituiscono l&rsquo;intero accordo che regola la partecipazione all&rsquo;Evento e sostituiscono qualsiasi comunicazione, dichiarazione o rappresentazione precedente relativa alla partecipazione all&rsquo;Evento.</p>
                     <p>La partecipazione all&rsquo;Evento &egrave; regolata esclusivamente da questi Termini e Condizioni unitamente ai documenti qui referenziati, inclusa la Guida alla Sopravvivenza, il <a href="code-of-conduct.html">Codice di Condotta del Partecipante</a>, la <a href="refund-policy.html">Politica di Rimborso</a> e l&rsquo;<a href="privacy-policy.html">Informativa sulla Privacy</a>.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Lingua ufficiale</h2>
                     <p>Questi Termini e Condizioni sono forniti in italiano per comodit&agrave;.</p>
                     <p>Esiste una versione ufficiale in spagnolo di questi Termini e Condizioni. In caso di discrepanza o incoerenza tra le versioni linguistiche, prevarr&agrave; la versione spagnola.</p>
                 </section>
 
-                <div class="legal-contact">
+                <div class="doc-contact">
                     <p>Domande su questi termini? Contatta <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                 </div>
             </div>
@@ -864,23 +728,23 @@
 
             <!-- ==================== GERMAN ==================== -->
             <div class="lang-content" data-lang="de">
-            <div class="legal-content">
+            <div class="doc-content">
                 <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Wer organisiert Elsewhere?</h2>
                     <p>Elsewhere 2026 (die &bdquo;Veranstaltung&ldquo;) wird von der Asociaci&oacute;n Nobodies Collective organisiert, einem gemeinn&uuml;tzigen Kulturverein mit Sitz in Spanien (der &bdquo;Veranstalter&ldquo; oder &bdquo;NCA&ldquo;).</p>
                     <p>F&uuml;r rechtliche Anfragen im Zusammenhang mit der Veranstaltung oder diesen Allgemeinen Gesch&auml;ftsbedingungen k&ouml;nnen Sie sich an folgende Adresse wenden: <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Was f&uuml;r eine Veranstaltung ist Elsewhere?</h2>
                     <p>Elsewhere ist eine tempor&auml;re partizipative Gemeinschaftsveranstaltung, inspiriert von den Prinzipien der globalen Burning-Man-Kulturbewegung. Die Veranstaltung wird gemeinsam von dir und allen Teilnehmern durch Kunst, Zusammenarbeit und geteilte Verantwortung geschaffen.</p>
                     <p>Elsewhere ist kein traditionelles kommerzielles Festival. Du tr&auml;gst durch deine Anwesenheit, Teilnahme und Achtung der von NCA festgelegten Gemeinschaftsrichtlinien zum Erlebnis bei.</p>
                     <p>Die Veranstaltung findet in einer abgelegenen und herausfordernden Umgebung statt und erfordert ein hohes Ma&szlig; an Eigenverantwortung und Selbstst&auml;ndigkeit.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Was akzeptiere ich beim Kauf eines Tickets?</h2>
                     <p>Der Kauf, die &Uuml;bertragung oder die Nutzung eines Tickets f&uuml;r Elsewhere stellt die Annahme dieser Allgemeinen Gesch&auml;ftsbedingungen dar.</p>
                     <p>Du erkl&auml;rst dich au&szlig;erdem damit einverstanden, Folgendes einzuhalten:</p>
@@ -894,7 +758,7 @@
                     <p>Offizielle Mitteilungen k&ouml;nnen &uuml;ber die Website der Veranstaltung, per E-Mail oder &uuml;ber andere von NCA benannte offizielle digitale Kommunikationskan&auml;le erfolgen.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Wie funktionieren Tickets und der Zugang zur Veranstaltung?</h2>
                     <p>F&uuml;r den Zugang zur Veranstaltung ist ein g&uuml;ltiges Ticket erforderlich.</p>
                     <p>Tickets gew&auml;hren dem Inhaber eine widerrufliche Lizenz zur Teilnahme an der Veranstaltung, vorbehaltlich der Einhaltung dieser Allgemeinen Gesch&auml;ftsbedingungen und aller Veranstaltungsregeln. NCA kann diese Lizenz widerrufen und dich von der Veranstaltung entfernen, wenn diese Allgemeinen Gesch&auml;ftsbedingungen oder Veranstaltungsregeln verletzt werden.</p>
@@ -902,27 +766,27 @@
                     <p>Personen, die ohne g&uuml;ltiges Ticket oder Ausweis auf dem Gel&auml;nde angetroffen werden, k&ouml;nnen von der Veranstaltung entfernt werden.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Welche Ticketstufen gibt es?</h2>
                     <p>Tickets sind in mehreren Stufen erh&auml;ltlich. Der Grundpreis f&uuml;r ein Ticket f&uuml;r Elsewhere 2026 betr&auml;gt 315&nbsp;&euro;. Alle Ticketstufen gew&auml;hren denselben Zugang zur Veranstaltung &mdash; es gibt keine VIP-Bereiche, keinen bevorzugten Einlass und keine zus&auml;tzlichen Leistungen, die mit teureren Tickets verbunden sind.</p>
                     <p>H&ouml;herpreisige Ticketstufen (wie &bdquo;VIP&ldquo;-Tickets) sind f&uuml;r gro&szlig;z&uuml;gige Mitglieder unserer Gemeinschaft gedacht, die mehr zum Verein beitragen m&ouml;chten. Der Betrag &uuml;ber dem Grundpreis von 315&nbsp;&euro; gilt als freiwillige Spende an die Asociaci&oacute;n Nobodies Collective.</p>
                     <p>Das Einzige, was VIP-Ticketinhaber &uuml;ber den Standardeinlass hinaus erhalten, ist die Liebe und Bewunderung der Gemeinschaft.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Kann ich mein Ticket an jemand anderen &uuml;bertragen?</h2>
                     <p>Du kannst dein Ticket bis zum Tag vor Beginn der Veranstaltung an eine andere Person &uuml;bertragen.</p>
                     <p>&Uuml;bertragungen sind kostenlos, es sei denn, die f&uuml;r die Abwicklung der &Uuml;bertragung verwendete Ticketplattform erhebt eine Geb&uuml;hr.</p>
                     <p>NCA beh&auml;lt sich das Recht vor, einem &uuml;bertragenen Ticketinhaber den Eintritt zu verweigern, wenn dessen Anwesenheit gegen Veranstaltungsregeln versto&szlig;en oder ein Sicherheits- oder Gemeinschaftsrisiko darstellen w&uuml;rde, ebenso wie bei jedem anderen Teilnehmer.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>K&ouml;nnen Minderj&auml;hrige an der Veranstaltung teilnehmen?</h2>
                     <p>Wenn du unter 18 Jahre alt bist, musst du von einem Elternteil oder Erziehungsberechtigten begleitet werden.</p>
                     <p>Der begleitende Erwachsene &uuml;bernimmt die volle Verantwortung f&uuml;r den Minderj&auml;hrigen w&auml;hrend der Veranstaltung und akzeptiert diese Allgemeinen Gesch&auml;ftsbedingungen im Namen des Minderj&auml;hrigen.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Kann NCA mir den Eintritt verweigern oder mich entfernen?</h2>
                     <p>NCA beh&auml;lt sich das Recht vor, dir den Eintritt zu verweigern oder dich ohne R&uuml;ckerstattung von der Veranstaltung zu entfernen, wenn du:</p>
                     <ul>
@@ -934,7 +798,7 @@
                     <p>Die Veranstaltung funktioniert als tempor&auml;re Gemeinschaft, und die Teilnahme ist an die Achtung ihrer gemeinsamen Prinzipien und Richtlinien gebunden.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Was ist meine Verantwortung als Teilnehmer?</h2>
                     <p>Du bist f&uuml;r dein eigenes Wohlbefinden und deine Sicherheit w&auml;hrend der Veranstaltung verantwortlich.</p>
                     <p>Du musst:</p>
@@ -948,7 +812,7 @@
                     <p>Die Veranstaltung findet in einer abgelegenen und potenziell rauen Umgebung statt, und du musst jederzeit Eigenverantwortung aus&uuml;ben.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Welche Risiken akzeptiere ich durch die Teilnahme an der Veranstaltung?</h2>
                     <p>Die Teilnahme an der Veranstaltung beinhaltet inh&auml;rente Risiken, darunter unter anderem:</p>
                     <ul>
@@ -960,12 +824,12 @@
                     <p>Durch die Teilnahme an der Veranstaltung &uuml;bernimmst du freiwillig alle mit der Teilnahme verbundenen Risiken.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Welche Verantwortung tr&auml;gt NCA, wenn etwas schiefgeht?</h2>
                     <p>Im gr&ouml;&szlig;tm&ouml;glichen gesetzlich zul&auml;ssigen Umfang erkl&auml;ren sich die Teilnehmer damit einverstanden, dass NCA, ihre Vorstandsmitglieder, Freiwilligen, Auftragnehmer, Mitarbeiter und Vertreter nicht f&uuml;r Sch&auml;den, Verletzungen, Verluste oder Kosten haftbar gemacht werden, die aus der Teilnahme an der Veranstaltung entstehen, es sei denn, die Haftung kann nach geltendem Recht nicht ausgeschlossen werden.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Was passiert, wenn die Veranstaltung ge&auml;ndert oder abgesagt wird?</h2>
                     <p>NCA beh&auml;lt sich das Recht vor, die Veranstaltung zu &auml;ndern, zu verschieben oder abzusagen, wenn dies aufgrund von Umst&auml;nden erforderlich ist, darunter unter anderem:</p>
                     <ul>
@@ -982,14 +846,14 @@
                     </ul>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Welche Gesundheits- und Sicherheitsregeln muss ich befolgen?</h2>
                     <p>Teilnehmer m&uuml;ssen alle von NCA umgesetzten oder von Beh&ouml;rden geforderten Gesundheits- und Sicherheitsma&szlig;nahmen einhalten.</p>
                     <p>Dies kann Notfallverfahren, Evakuierungsprotokolle oder Ma&szlig;nahmen der &ouml;ffentlichen Gesundheit umfassen, die zum Schutz von dir und der umliegenden Gemeinschaft erforderlich sind.</p>
                     <p>Die Nichteinhaltung von Sicherheitsanweisungen kann zum Ausschluss von der Veranstaltung f&uuml;hren.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Welche Regeln gelten f&uuml;r Fotos, Videos und Medien bei der Veranstaltung?</h2>
                     <p>Du erkennst an, dass w&auml;hrend der Veranstaltung Fotografien, Audio- und Videoaufnahmen stattfinden k&ouml;nnen.</p>
                     <p>Du musst die Privatsph&auml;re und die Einwilligung anderer respektieren, wenn du Bilder oder Aufnahmen erstellst oder teilst.</p>
@@ -997,37 +861,37 @@
                     <p>Zus&auml;tzliche Hinweise zu Medien- und Bildrechten k&ouml;nnen in den Veranstaltungsrichtlinien oder im Survival Guide bereitgestellt werden.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Wie werden meine personenbezogenen Daten behandelt?</h2>
                     <p>Personenbezogene Daten, die beim Ticketkauf oder bei der Teilnahme an der Veranstaltung erhoben werden, werden in &Uuml;bereinstimmung mit den geltenden Datenschutzgesetzen verarbeitet.</p>
                     <p>Weitere Informationen zum Umgang mit personenbezogenen Daten finden sich in der <a href="privacy-policy.html">Datenschutzerkl&auml;rung</a> der Veranstaltung.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>K&ouml;nnen sich diese Bedingungen oder Veranstaltungsregeln &auml;ndern?</h2>
                     <p>NCA kann diese Allgemeinen Gesch&auml;ftsbedingungen oder die Veranstaltungsregeln bei Bedarf aktualisieren.</p>
                     <p>Du wirst &uuml;ber relevante Aktualisierungen &uuml;ber die offiziellen Kommunikationskan&auml;le der Veranstaltung informiert.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Welche Gesetze gelten bei Elsewhere?</h2>
                     <p>Diese Allgemeinen Gesch&auml;ftsbedingungen unterliegen spanischem Recht.</p>
                     <p>Alle Streitigkeiten im Zusammenhang mit der Veranstaltung unterliegen der Zust&auml;ndigkeit der Gerichte von Huesca, Spanien, sofern zwingende Verbraucherschutzvorschriften nichts anderes vorsehen.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Gesamte Vereinbarung</h2>
                     <p>Diese Allgemeinen Gesch&auml;ftsbedingungen stellen die gesamte Vereinbarung zur Regelung der Teilnahme an der Veranstaltung dar und ersetzen alle fr&uuml;heren Mitteilungen, Erkl&auml;rungen oder Zusicherungen im Zusammenhang mit der Teilnahme an der Veranstaltung.</p>
                     <p>Die Teilnahme an der Veranstaltung wird ausschlie&szlig;lich durch diese Allgemeinen Gesch&auml;ftsbedingungen zusammen mit den hierin referenzierten Dokumenten geregelt, einschlie&szlig;lich des Survival Guide, des <a href="code-of-conduct.html">Verhaltenskodex f&uuml;r Teilnehmer</a>, der <a href="refund-policy.html">R&uuml;ckerstattungsrichtlinie</a> und der <a href="privacy-policy.html">Datenschutzerkl&auml;rung</a>.</p>
                 </section>
 
-                <section class="legal-section">
+                <section class="doc-section">
                     <h2>Offizielle Sprache</h2>
                     <p>Diese Allgemeinen Gesch&auml;ftsbedingungen werden Ihnen auf Deutsch zur Verf&uuml;gung gestellt.</p>
                     <p>Eine offizielle spanische Version dieser Allgemeinen Gesch&auml;ftsbedingungen existiert. Im Falle von Abweichungen oder Widerspr&uuml;chen zwischen den Sprachversionen hat die spanische Version Vorrang.</p>
                 </section>
 
-                <div class="legal-contact">
+                <div class="doc-contact">
                     <p>Fragen zu diesen Bedingungen? Kontaktiere <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                 </div>
             </div>

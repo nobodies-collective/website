@@ -9,44 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .legal-page { padding: 8rem 0 4rem; }
-        .legal-header { text-align: center; margin-bottom: 3rem; }
-        .legal-header h1 { margin-bottom: 1rem; }
-        .legal-intro { color: var(--color-text-muted); font-size: 1.1rem; max-width: 700px; margin: 0 auto; padding-bottom: 2rem; border-bottom: 1px solid var(--color-border); line-height: 1.7; }
-        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; color: var(--color-text-muted); font-size: 0.9rem; }
-        .back-link:hover { color: var(--color-accent); }
-        .back-link::before { content: '\2190'; }
-        .legal-content { max-width: 800px; margin: 0 auto; }
-        .legal-section { margin-top: 3rem; }
-        .legal-section h2 { font-size: 1.5rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
-        .legal-section h3 { font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
-        .legal-section p { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; }
-        .legal-section ul { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; padding-left: 1.5rem; }
-        .legal-section li { margin-bottom: 0.5rem; }
-        .legal-section a { color: var(--color-accent); font-weight: 500; }
-        .legal-contact { margin-top: 3rem; padding: 2rem 2.5rem; background: var(--color-bg-alt); border-radius: var(--radius); text-align: center; color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.7; }
-        .legal-contact a { color: var(--color-accent); font-weight: 500; }
-        @media (max-width: 768px) { .legal-page { padding: 6rem 0 3rem; } }
-        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 2rem 0; flex-wrap: wrap; }
-        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
-        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
-        .lang-content { display: none; }
-        .lang-content.active { display: block; }
-        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
-    </style>
 </head>
 <body>
     <div id="shared-header"></div>
     <script src="header.js"></script>
 
-    <main class="legal-page">
+    <main class="doc-page">
         <div class="container">
             <a href="/" class="back-link">Back to Home</a>
 
-            <div class="legal-header">
+            <div class="doc-header">
                 <h1>Low-Income Tickets Policy</h1>
-                <p class="legal-intro">Elsewhere 2026</p>
+                <p class="doc-intro">Elsewhere 2026</p>
             </div>
 
             <div class="lang-toggle">
@@ -57,11 +31,11 @@
                 <button data-lang="de">Deutsch</button>
             </div>
 
-            <div class="legal-content">
+            <div class="doc-content">
 
                 <!-- ==================== SPANISH ==================== -->
                 <div class="lang-content active" data-lang="es">
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Pol&iacute;tica de Tickets de Bajos Ingresos &mdash; Elsewhere 2026</h2>
 
                         <h3>Solicitudes cerradas</h3>
@@ -77,7 +51,7 @@
                         <p>No se asignar&aacute;n nuevos c&oacute;digos de bajos ingresos a partir del 5 de junio de 2026.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Algunas cosas importantes a tener en cuenta</h2>
 
                         <p>Esta fue la ronda final de c&oacute;digos de bajos ingresos para Elsewhere 2026. Las personas solicitantes que no hayan recibido un c&oacute;digo no recibir&aacute;n uno este a&ntilde;o. Entendemos que esto es decepcionante y lamentamos no haber podido acomodar a todo el mundo.</p>
@@ -87,7 +61,7 @@
                         <p>Gracias por tu comprensi&oacute;n y por ser parte de Elsewhere. Trabajamos para que este espacio sea lo m&aacute;s accesible, inclusivo y justo posible para todas las personas que quieran formar parte de &eacute;l. &#x1F5A4;</p>
                     </section>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>La campa&ntilde;a de solicitud de tickets de bajos ingresos est&aacute; cerrada para 2026.</p>
                         <p>Para enterarte de futuras convocatorias, <a href="/#newsletter">suscr&iacute;bete a nuestro bolet&iacute;n</a>.</p>
                         <p>&iquest;Preguntas? Contacta con <a href="mailto:lowincometicket@nobodies.team">lowincometicket@nobodies.team</a></p>
@@ -98,7 +72,7 @@
                 <div class="lang-content" data-lang="en">
                     <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Low-Income Tickets Policy &mdash; Elsewhere 2026</h2>
 
                         <h3>Applications closed</h3>
@@ -114,7 +88,7 @@
                         <p>No new low-income codes will be assigned after 5 June 2026.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>A few important things to keep in mind</h2>
 
                         <p>This was the final round of low-income codes for Elsewhere 2026. Applicants who did not receive a code will not receive one this year. We understand this is disappointing, and we&rsquo;re sorry we couldn&rsquo;t accommodate everyone.</p>
@@ -124,7 +98,7 @@
                         <p>Thank you for your understanding and for being part of Elsewhere. We work to make this space as accessible, inclusive, and fair as possible for everyone who wants to be part of it. &#x1F5A4;</p>
                     </section>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>The low-income ticket application period is closed for 2026.</p>
                         <p>To hear about future low-income applications, <a href="/#newsletter">subscribe to our newsletter</a>.</p>
                         <p>Questions? Contact <a href="mailto:lowincometicket@nobodies.team">lowincometicket@nobodies.team</a></p>
@@ -135,7 +109,7 @@
                 <div class="lang-content" data-lang="fr">
                     <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Politique de Billets &agrave; Tarif R&eacute;duit &mdash; Elsewhere 2026</h2>
 
                         <h3>Candidatures cl&ocirc;tur&eacute;es</h3>
@@ -151,7 +125,7 @@
                         <p>Aucun nouveau code &agrave; tarif r&eacute;duit ne sera attribu&eacute; apr&egrave;s le 5 juin 2026.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Quelques points importants &agrave; garder &agrave; l&rsquo;esprit</h2>
 
                         <p>Il s&rsquo;agissait de la derni&egrave;re attribution de codes &agrave; tarif r&eacute;duit pour Elsewhere 2026. Les personnes qui n&rsquo;ont pas re&ccedil;u de code n&rsquo;en recevront pas cette ann&eacute;e. Nous comprenons que cela puisse &ecirc;tre d&eacute;cevant et nous sommes d&eacute;sol&eacute;s de ne pas avoir pu satisfaire toutes les demandes.</p>
@@ -161,7 +135,7 @@
                         <p>Merci pour votre compr&eacute;hension et de faire partie de Elsewhere. Nous &oelig;uvrons pour que cet espace soit aussi accessible, inclusif et &eacute;quitable que possible pour toutes les personnes qui souhaitent en faire partie. &#x1F5A4;</p>
                     </section>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>La p&eacute;riode de candidature pour les billets &agrave; tarif r&eacute;duit est cl&ocirc;tur&eacute;e pour 2026.</p>
                         <p>Pour &ecirc;tre inform&eacute;&middot;e des futures campagnes, <a href="/#newsletter">inscrivez-vous &agrave; notre newsletter</a>.</p>
                         <p>Des questions ? Contactez <a href="mailto:lowincometicket@nobodies.team">lowincometicket@nobodies.team</a></p>
@@ -172,7 +146,7 @@
                 <div class="lang-content" data-lang="it">
                     <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Politica sui Biglietti a Basso Reddito &mdash; Elsewhere 2026</h2>
 
                         <h3>Candidature chiuse</h3>
@@ -188,7 +162,7 @@
                         <p>Non verranno assegnati nuovi codici a basso reddito dopo il 5 giugno 2026.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Alcuni aspetti importanti da tenere a mente</h2>
 
                         <p>Questa &egrave; stata l&rsquo;ultima assegnazione di codici a basso reddito per Elsewhere 2026. Chi non ha ricevuto un codice non ne ricever&agrave; uno quest&rsquo;anno. Comprendiamo che questo possa essere deludente e ci dispiace non essere riusciti ad accogliere tutte le richieste.</p>
@@ -198,7 +172,7 @@
                         <p>Grazie per la tua comprensione e per far parte di Elsewhere. Lavoriamo affinch&eacute; questo spazio sia il pi&ugrave; accessibile, inclusivo e giusto possibile per tutte le persone che vogliono farne parte. &#x1F5A4;</p>
                     </section>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Il periodo di candidatura per i biglietti a basso reddito &egrave; chiuso per il 2026.</p>
                         <p>Per essere informato/a sulle future campagne, <a href="/#newsletter">iscriviti alla nostra newsletter</a>.</p>
                         <p>Domande? Contatta <a href="mailto:lowincometicket@nobodies.team">lowincometicket@nobodies.team</a></p>
@@ -209,7 +183,7 @@
                 <div class="lang-content" data-lang="de">
                     <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Richtlinie f&uuml;r einkommensreduzierte Tickets &mdash; Elsewhere 2026</h2>
 
                         <h3>Bewerbungen geschlossen</h3>
@@ -225,7 +199,7 @@
                         <p>Nach dem 5. Juni 2026 werden keine neuen einkommensreduzierten Codes mehr zugewiesen.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Einige wichtige Hinweise</h2>
 
                         <p>Dies war die letzte Vergaberunde einkommensreduzierter Codes f&uuml;r Elsewhere 2026. Bewerber*innen, die keinen Code erhalten haben, werden in diesem Jahr keinen mehr erhalten. Wir verstehen, dass dies entt&auml;uschend ist, und es tut uns leid, dass wir nicht alle Anfragen ber&uuml;cksichtigen konnten.</p>
@@ -235,7 +209,7 @@
                         <p>Vielen Dank f&uuml;r dein Verst&auml;ndnis und daf&uuml;r, dass du Teil von Elsewhere bist. Wir arbeiten daran, diesen Raum so zug&auml;nglich, inklusiv und fair wie m&ouml;glich f&uuml;r alle Menschen zu gestalten, die daran teilhaben m&ouml;chten. &#x1F5A4;</p>
                     </section>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Der Bewerbungszeitraum f&uuml;r einkommensreduzierte Tickets ist f&uuml;r 2026 abgeschlossen.</p>
                         <p>Um &uuml;ber zuk&uuml;nftige Kampagnen informiert zu werden, <a href="/#newsletter">abonniere unseren Newsletter</a>.</p>
                         <p>Fragen? Kontaktiere <a href="mailto:lowincometicket@nobodies.team">lowincometicket@nobodies.team</a></p>

@@ -9,154 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .legal-page {
-            padding: 8rem 0 4rem;
-        }
-
-        .legal-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .legal-header h1 {
-            margin-bottom: 1rem;
-        }
-
-        .legal-intro {
-            color: var(--color-text-muted);
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--color-border);
-            line-height: 1.7;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-            color: var(--color-text-muted);
-            font-size: 0.9rem;
-        }
-        .back-link:hover { color: var(--color-accent); }
-        .back-link::before { content: '\2190'; }
-
-        .legal-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .legal-section {
-            margin-top: 3rem;
-        }
-
-        .legal-section h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--color-accent);
-        }
-
-        .legal-section p {
-            color: var(--color-text-muted);
-            line-height: 1.7;
-            margin-bottom: 0.75rem;
-        }
-
-        .legal-section ul {
-            color: var(--color-text-muted);
-            line-height: 1.7;
-            margin-bottom: 0.75rem;
-            padding-left: 1.5rem;
-        }
-
-        .legal-section li {
-            margin-bottom: 0.5rem;
-        }
-
-        .legal-section a {
-            color: var(--color-accent);
-            font-weight: 500;
-        }
-
-        .legal-contact {
-            margin-top: 3rem;
-            padding: 2rem 2.5rem;
-            background: var(--color-bg-alt);
-            border-radius: var(--radius);
-            text-align: center;
-            color: var(--color-text-muted);
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-
-        .legal-contact a {
-            color: var(--color-accent);
-            font-weight: 500;
-        }
-
-        @media (max-width: 768px) {
-            .legal-page {
-                padding: 6rem 0 3rem;
-            }
-        }
-
-        .lang-toggle {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-
-        .lang-toggle button {
-            padding: 0.75rem 1.5rem;
-            font-family: var(--font-body);
-            font-size: 0.875rem;
-            font-weight: 500;
-            border: 1px solid var(--color-border);
-            background: var(--color-bg-alt);
-            color: var(--color-text-muted);
-            border-radius: var(--radius);
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .lang-toggle button.active,
-        .lang-toggle button:hover {
-            background: var(--color-accent);
-            border-color: var(--color-accent);
-            color: #fff;
-        }
-
-        .lang-content { display: none; }
-        .lang-content.active { display: block; }
-
-        .lang-note {
-            font-style: italic;
-            color: var(--color-text-muted);
-            margin-bottom: 2rem;
-            padding: 1rem 1.5rem;
-            background: var(--color-bg-alt);
-            border-radius: var(--radius);
-            font-size: 0.9rem;
-        }
-    </style>
 </head>
 <body>
     <div id="shared-header"></div>
     <script src="header.js"></script>
 
-    <main class="legal-page">
+    <main class="doc-page">
         <div class="container">
             <a href="/" class="back-link">Back to Home</a>
 
-            <div class="legal-header">
+            <div class="doc-header">
                 <h1>Privacy Notice &mdash; Ticketing</h1>
-                <p class="legal-intro">Elsewhere 2026 &mdash; Privacy Notice &mdash; Ticketing</p>
+                <p class="doc-intro">Elsewhere 2026 &mdash; Privacy Notice &mdash; Ticketing</p>
             </div>
 
             <div class="lang-toggle">
@@ -168,24 +32,24 @@
             </div>
 
             <div class="lang-content active" data-lang="en">
-                <div class="legal-content">
+                <div class="doc-content">
                     <p class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</p>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>1. Why am I reading this?</h2>
                         <p>When you buy a ticket for Elsewhere, we need to collect some personal information to process your registration, manage the event, and help keep the community safe.</p>
                         <p>This notice explains what information we collect, how we use it, and what rights you have over your data.</p>
                         <p>Elsewhere is organized by Nobodies Collective Association (&ldquo;NCA&rdquo;), which handles participant data in accordance with European data protection law (&ldquo;GDPR&rdquo;).</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>2. Who is responsible for my data?</h2>
                         <p>Your personal data is handled by:</p>
                         <p>Asociaci&oacute;n Nobodies Collective, the Organizer of Elsewhere.</p>
                         <p>If you have questions about how your data is handled, you can contact our data protection officer at: <a href="mailto:privacy@nobodies.team">privacy@nobodies.team</a></p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>3. What information do you collect about me?</h2>
                         <p>When you purchase or hold a ticket, we collect some personal information such as:</p>
                         <ul>
@@ -199,7 +63,7 @@
                         <p>If you transfer a ticket or receive one from another participant, your information may also be processed as part of managing that transfer.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>4. Why do you collect this information?</h2>
                         <p>Your information is used only for purposes related to organizing and operating the event. This includes things like:</p>
                         <ul>
@@ -213,7 +77,7 @@
                         <p>Your data will never be sold or used for unrelated commercial purposes.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>5. Why are you allowed to process my data?</h2>
                         <p>Under European data protection law, we process your data because it is necessary to:</p>
                         <ul>
@@ -223,7 +87,7 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>6. Who can access my data?</h2>
                         <p>Your information may be accessed by:</p>
                         <ul>
@@ -236,24 +100,24 @@
                         <p>These parties only receive the information necessary to perform their role.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>7. How are my payments handled?</h2>
                         <p>Ticket purchases are processed through the ticketing platform and its payment providers. The organizers do not receive or store your payment card information.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>8. Where is my data processed?</h2>
                         <p>Ticket purchases are processed through TicketTailor, a ticketing platform that may process data in the United Kingdom and other jurisdictions.</p>
                         <p>The United Kingdom benefits from an adequacy decision under European data protection law, meaning personal data transferred there receives a level of protection comparable to the European Union.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>9. How long do you keep my data?</h2>
                         <p>Your information is kept only for as long as necessary to operate the event and comply with legal obligations.</p>
                         <p>Some information related to ticket purchases and financial records may be retained for up to five years, or longer where required by law, in order to comply with accounting and legal requirements.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>10. What rights do I have?</h2>
                         <p>Under European data protection law, you have the right to:</p>
                         <ul>
@@ -267,7 +131,7 @@
                         <p>If you wish to exercise your rights, you can contact: <a href="mailto:privacy@nobodies.team">privacy@nobodies.team</a></p>
                     </section>
 
-                    <div class="legal-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
+                    <div class="doc-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
                         <h2 style="border-bottom: none; padding-bottom: 0; font-size: 1.2rem;">Important Note</h2>
                         <p>This document is one part of Elsewhere&rsquo;s participation framework. It works together with the other policies that govern participation in the event.</p>
                         <p>You should read it together with the rest of the framework, which includes:</p>
@@ -283,7 +147,7 @@
                         <p>Together, these documents explain how the event works, what you can expect from the organizers, and what is expected from you as a participant. By purchasing a ticket or attending Elsewhere, you agree to this framework.</p>
                     </div>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Questions about this notice? Contact <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </div>
 
@@ -292,22 +156,22 @@
             </div>
 
             <div class="lang-content" data-lang="es">
-                <div class="legal-content">
-                    <section class="legal-section">
+                <div class="doc-content">
+                    <section class="doc-section">
                         <h2>1. &iquest;Por qu&eacute; estoy leyendo esto?</h2>
                         <p>Cuando compras una entrada para Elsewhere, necesitamos recopilar cierta informaci&oacute;n personal para procesar tu registro, gestionar el evento y ayudar a mantener segura a la comunidad.</p>
                         <p>Este aviso explica qu&eacute; informaci&oacute;n recopilamos, c&oacute;mo la utilizamos y qu&eacute; derechos tienes sobre tus datos.</p>
                         <p>Elsewhere est&aacute; organizado por la Asociaci&oacute;n Nobodies Collective (&ldquo;NCA&rdquo;), que trata los datos de los participantes de conformidad con la legislaci&oacute;n europea de protecci&oacute;n de datos (&ldquo;GDPR&rdquo;).</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>2. &iquest;Qui&eacute;n es responsable de mis datos?</h2>
                         <p>Tus datos personales son tratados por:</p>
                         <p>Asociaci&oacute;n Nobodies Collective, la organizadora de Elsewhere.</p>
                         <p>Si tienes preguntas sobre c&oacute;mo se tratan tus datos, puedes contactar con nuestro responsable de protecci&oacute;n de datos en: <a href="mailto:privacy@nobodies.team">privacy@nobodies.team</a></p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>3. &iquest;Qu&eacute; informaci&oacute;n recopil&aacute;is sobre m&iacute;?</h2>
                         <p>Cuando compras o posees una entrada, recopilamos cierta informaci&oacute;n personal como:</p>
                         <ul>
@@ -321,7 +185,7 @@
                         <p>Si transfieres una entrada o recibes una de otro participante, tu informaci&oacute;n tambi&eacute;n puede ser tratada como parte de la gesti&oacute;n de esa transferencia.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>4. &iquest;Por qu&eacute; recopil&aacute;is esta informaci&oacute;n?</h2>
                         <p>Tu informaci&oacute;n se utiliza solo para fines relacionados con la organizaci&oacute;n y operaci&oacute;n del evento. Esto incluye cosas como:</p>
                         <ul>
@@ -335,7 +199,7 @@
                         <p>Tus datos nunca se vender&aacute;n ni se usar&aacute;n para fines comerciales no relacionados.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>5. &iquest;Por qu&eacute; se os permite tratar mis datos?</h2>
                         <p>En virtud de la legislaci&oacute;n europea de protecci&oacute;n de datos, tratamos tus datos porque es necesario para:</p>
                         <ul>
@@ -345,7 +209,7 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>6. &iquest;Qui&eacute;n puede acceder a mis datos?</h2>
                         <p>Tu informaci&oacute;n puede ser accesible por:</p>
                         <ul>
@@ -358,24 +222,24 @@
                         <p>Estas partes solo reciben la informaci&oacute;n necesaria para desempe&ntilde;ar su funci&oacute;n.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>7. &iquest;C&oacute;mo se gestionan mis pagos?</h2>
                         <p>Las compras de entradas se procesan a trav&eacute;s de la plataforma de ticketing y sus proveedores de pago. Los organizadores no reciben ni almacenan la informaci&oacute;n de tu tarjeta de pago.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>8. &iquest;D&oacute;nde se tratan mis datos?</h2>
                         <p>Las compras de entradas se procesan a trav&eacute;s de TicketTailor, una plataforma de ticketing que puede tratar datos en el Reino Unido y en otras jurisdicciones.</p>
                         <p>El Reino Unido se beneficia de una decisi&oacute;n de adecuaci&oacute;n en virtud de la legislaci&oacute;n europea de protecci&oacute;n de datos, lo que significa que los datos personales transferidos all&iacute; reciben un nivel de protecci&oacute;n comparable al de la Uni&oacute;n Europea.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>9. &iquest;Durante cu&aacute;nto tiempo conserv&aacute;is mis datos?</h2>
                         <p>Tu informaci&oacute;n se conserva solo durante el tiempo necesario para operar el evento y cumplir las obligaciones legales.</p>
                         <p>Cierta informaci&oacute;n relacionada con la compra de entradas y los registros financieros puede conservarse hasta cinco a&ntilde;os, o m&aacute;s tiempo cuando la ley lo exija, para cumplir requisitos contables y legales.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>10. &iquest;Qu&eacute; derechos tengo?</h2>
                         <p>En virtud de la legislaci&oacute;n europea de protecci&oacute;n de datos, tienes derecho a:</p>
                         <ul>
@@ -389,7 +253,7 @@
                         <p>Si deseas ejercer tus derechos, puedes contactar con: <a href="mailto:privacy@nobodies.team">privacy@nobodies.team</a></p>
                     </section>
 
-                    <div class="legal-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
+                    <div class="doc-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
                         <h2 style="border-bottom: none; padding-bottom: 0; font-size: 1.2rem;">Nota Importante</h2>
                         <p>Este documento forma parte del marco de participaci&oacute;n de Elsewhere. Funciona conjuntamente con las otras pol&iacute;ticas que rigen la participaci&oacute;n en el evento.</p>
                         <p>Debes leerlo junto con el resto del marco, que incluye:</p>
@@ -405,7 +269,7 @@
                         <p>En conjunto, estos documentos explican c&oacute;mo funciona el evento, qu&eacute; puedes esperar de los organizadores y qu&eacute; se espera de ti como participante. Al comprar una entrada o asistir a Elsewhere, aceptas este marco.</p>
                     </div>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>&iquest;Preguntas sobre este aviso? Contacta con <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </div>
 
@@ -414,24 +278,24 @@
             </div>
 
             <div class="lang-content" data-lang="fr">
-                <div class="legal-content">
+                <div class="doc-content">
                     <p class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</p>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>1. Pourquoi suis-je en train de lire ceci&nbsp;?</h2>
                         <p>Lorsque vous achetez un billet pour Elsewhere, nous devons collecter certaines informations personnelles afin de traiter votre inscription, g&eacute;rer l&rsquo;&eacute;v&eacute;nement et contribuer &agrave; la s&eacute;curit&eacute; de la communaut&eacute;.</p>
                         <p>Cet avis explique quelles informations nous collectons, comment nous les utilisons et quels droits vous avez sur vos donn&eacute;es.</p>
                         <p>Elsewhere est organis&eacute; par l&rsquo;Association Nobodies Collective (&laquo;&nbsp;NCA&nbsp;&raquo;), qui traite les donn&eacute;es des participants conform&eacute;ment au droit europ&eacute;en sur la protection des donn&eacute;es (&laquo;&nbsp;RGPD&nbsp;&raquo;).</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>2. Qui est responsable de mes donn&eacute;es&nbsp;?</h2>
                         <p>Vos donn&eacute;es personnelles sont trait&eacute;es par&nbsp;:</p>
                         <p>Asociaci&oacute;n Nobodies Collective, l&rsquo;organisateur d&rsquo;Elsewhere.</p>
                         <p>Si vous avez des questions sur la fa&ccedil;on dont vos donn&eacute;es sont trait&eacute;es, vous pouvez contacter notre responsable de la protection des donn&eacute;es &agrave;&nbsp;: <a href="mailto:privacy@nobodies.team">privacy@nobodies.team</a></p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>3. Quelles informations collectez-vous &agrave; mon sujet&nbsp;?</h2>
                         <p>Lorsque vous achetez ou d&eacute;tenez un billet, nous collectons certaines informations personnelles telles que&nbsp;:</p>
                         <ul>
@@ -445,7 +309,7 @@
                         <p>Si vous transf&eacute;rez un billet ou en recevez un d&rsquo;un autre participant, vos informations peuvent &eacute;galement &ecirc;tre trait&eacute;es dans le cadre de cette gestion.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>4. Pourquoi collectez-vous ces informations&nbsp;?</h2>
                         <p>Vos informations ne sont utilis&eacute;es qu&rsquo;&agrave; des fins li&eacute;es &agrave; l&rsquo;organisation et au fonctionnement de l&rsquo;&eacute;v&eacute;nement. Cela comprend notamment&nbsp;:</p>
                         <ul>
@@ -459,7 +323,7 @@
                         <p>Vos donn&eacute;es ne seront jamais vendues ni utilis&eacute;es &agrave; des fins commerciales sans rapport.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>5. Pourquoi &ecirc;tes-vous autoris&eacute;s &agrave; traiter mes donn&eacute;es&nbsp;?</h2>
                         <p>En vertu du droit europ&eacute;en de la protection des donn&eacute;es, nous traitons vos donn&eacute;es parce que cela est n&eacute;cessaire pour&nbsp;:</p>
                         <ul>
@@ -469,7 +333,7 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>6. Qui peut acc&eacute;der &agrave; mes donn&eacute;es&nbsp;?</h2>
                         <p>Vos informations peuvent &ecirc;tre accessibles &agrave;&nbsp;:</p>
                         <ul>
@@ -482,24 +346,24 @@
                         <p>Ces parties ne re&ccedil;oivent que les informations n&eacute;cessaires &agrave; l&rsquo;exercice de leur r&ocirc;le.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>7. Comment mes paiements sont-ils trait&eacute;s&nbsp;?</h2>
                         <p>Les achats de billets sont trait&eacute;s via la plateforme de billetterie et ses prestataires de paiement. Les organisateurs ne re&ccedil;oivent ni ne stockent les informations de votre carte de paiement.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>8. O&ugrave; mes donn&eacute;es sont-elles trait&eacute;es&nbsp;?</h2>
                         <p>Les achats de billets sont trait&eacute;s via TicketTailor, une plateforme de billetterie qui peut traiter les donn&eacute;es au Royaume-Uni et dans d&rsquo;autres juridictions.</p>
                         <p>Le Royaume-Uni b&eacute;n&eacute;ficie d&rsquo;une d&eacute;cision d&rsquo;ad&eacute;quation au titre du droit europ&eacute;en sur la protection des donn&eacute;es, ce qui signifie que les donn&eacute;es personnelles qui y sont transf&eacute;r&eacute;es b&eacute;n&eacute;ficient d&rsquo;un niveau de protection comparable &agrave; celui de l&rsquo;Union europ&eacute;enne.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>9. Combien de temps conservez-vous mes donn&eacute;es&nbsp;?</h2>
                         <p>Vos informations ne sont conserv&eacute;es que le temps n&eacute;cessaire au fonctionnement de l&rsquo;&eacute;v&eacute;nement et au respect des obligations l&eacute;gales.</p>
                         <p>Certaines informations relatives aux achats de billets et aux documents financiers peuvent &ecirc;tre conserv&eacute;es jusqu&rsquo;&agrave; cinq ans, ou plus longtemps si la loi l&rsquo;exige, afin de respecter les obligations comptables et l&eacute;gales.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>10. Quels sont mes droits&nbsp;?</h2>
                         <p>En vertu du droit europ&eacute;en sur la protection des donn&eacute;es, vous avez le droit de&nbsp;:</p>
                         <ul>
@@ -513,7 +377,7 @@
                         <p>Si vous souhaitez exercer vos droits, vous pouvez contacter&nbsp;: <a href="mailto:privacy@nobodies.team">privacy@nobodies.team</a></p>
                     </section>
 
-                    <div class="legal-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
+                    <div class="doc-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
                         <h2 style="border-bottom: none; padding-bottom: 0; font-size: 1.2rem;">Note importante</h2>
                         <p>Ce document constitue une partie du cadre de participation d&rsquo;Elsewhere. Il fonctionne avec les autres politiques qui r&eacute;gissent la participation &agrave; l&rsquo;&eacute;v&eacute;nement.</p>
                         <p>Vous devez le lire avec le reste du cadre, qui comprend&nbsp;:</p>
@@ -529,7 +393,7 @@
                         <p>Ensemble, ces documents expliquent le fonctionnement de l&rsquo;&eacute;v&eacute;nement, ce que vous pouvez attendre des organisateurs et ce qui est attendu de vous en tant que participant. En achetant un billet ou en participant &agrave; Elsewhere, vous acceptez ce cadre.</p>
                     </div>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Des questions sur cet avis&nbsp;? Contactez <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </div>
 
@@ -538,24 +402,24 @@
             </div>
 
             <div class="lang-content" data-lang="it">
-                <div class="legal-content">
+                <div class="doc-content">
                     <p class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</p>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>1. Perch&eacute; sto leggendo questo?</h2>
                         <p>Quando acquisti un biglietto per Elsewhere, dobbiamo raccogliere alcune informazioni personali per elaborare la tua registrazione, gestire l&rsquo;evento e contribuire alla sicurezza della comunit&agrave;.</p>
                         <p>Questa informativa spiega quali informazioni raccogliamo, come le utilizziamo e quali diritti hai sui tuoi dati.</p>
                         <p>Elsewhere &egrave; organizzato dalla Nobodies Collective Association (&ldquo;NCA&rdquo;), che tratta i dati dei partecipanti in conformit&agrave; alla normativa europea sulla protezione dei dati (&ldquo;GDPR&rdquo;).</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>2. Chi &egrave; responsabile dei miei dati?</h2>
                         <p>I tuoi dati personali sono trattati da:</p>
                         <p>Asociaci&oacute;n Nobodies Collective, l&rsquo;organizzatrice di Elsewhere.</p>
                         <p>Se hai domande su come vengono trattati i tuoi dati, puoi contattare il nostro responsabile della protezione dei dati all&rsquo;indirizzo: <a href="mailto:privacy@nobodies.team">privacy@nobodies.team</a></p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>3. Quali informazioni raccogliete su di me?</h2>
                         <p>Quando acquisti o possiedi un biglietto, raccogliamo alcune informazioni personali come:</p>
                         <ul>
@@ -569,7 +433,7 @@
                         <p>Se trasferisci un biglietto o ne ricevi uno da un altro partecipante, le tue informazioni possono essere trattate anche nell&rsquo;ambito della gestione di quel trasferimento.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>4. Perch&eacute; raccogliete queste informazioni?</h2>
                         <p>Le tue informazioni vengono utilizzate solo per finalit&agrave; legate all&rsquo;organizzazione e alla gestione dell&rsquo;evento. Ci&ograve; include cose come:</p>
                         <ul>
@@ -583,7 +447,7 @@
                         <p>I tuoi dati non saranno mai venduti n&eacute; utilizzati per finalit&agrave; commerciali non correlate.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>5. Perch&eacute; vi &egrave; consentito trattare i miei dati?</h2>
                         <p>Ai sensi della normativa europea sulla protezione dei dati, trattiamo i tuoi dati perch&eacute; &egrave; necessario per:</p>
                         <ul>
@@ -593,7 +457,7 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>6. Chi pu&ograve; accedere ai miei dati?</h2>
                         <p>Le tue informazioni possono essere accessibili a:</p>
                         <ul>
@@ -606,24 +470,24 @@
                         <p>Queste parti ricevono solo le informazioni necessarie per svolgere il proprio ruolo.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>7. Come vengono gestiti i miei pagamenti?</h2>
                         <p>Gli acquisti dei biglietti sono elaborati tramite la piattaforma di biglietteria e i suoi fornitori di pagamento. Gli organizzatori non ricevono n&eacute; memorizzano le informazioni della tua carta di pagamento.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>8. Dove vengono trattati i miei dati?</h2>
                         <p>Gli acquisti dei biglietti sono elaborati tramite TicketTailor, una piattaforma di biglietteria che pu&ograve; trattare i dati nel Regno Unito e in altre giurisdizioni.</p>
                         <p>Il Regno Unito beneficia di una decisione di adeguatezza ai sensi della normativa europea sulla protezione dei dati, il che significa che i dati personali trasferiti l&igrave; ricevono un livello di protezione comparabile a quello dell&rsquo;Unione Europea.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>9. Per quanto tempo conservate i miei dati?</h2>
                         <p>Le tue informazioni vengono conservate solo per il tempo necessario a gestire l&rsquo;evento e ad adempiere agli obblighi legali.</p>
                         <p>Alcune informazioni relative all&rsquo;acquisto di biglietti e ai registri finanziari possono essere conservate fino a cinque anni, o pi&ugrave; a lungo se richiesto dalla legge, al fine di adempiere agli obblighi contabili e legali.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>10. Quali diritti ho?</h2>
                         <p>Ai sensi della normativa europea sulla protezione dei dati, hai il diritto di:</p>
                         <ul>
@@ -637,7 +501,7 @@
                         <p>Se desideri esercitare i tuoi diritti, puoi contattare: <a href="mailto:privacy@nobodies.team">privacy@nobodies.team</a></p>
                     </section>
 
-                    <div class="legal-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
+                    <div class="doc-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
                         <h2 style="border-bottom: none; padding-bottom: 0; font-size: 1.2rem;">Nota importante</h2>
                         <p>Questo documento &egrave; una parte del quadro di partecipazione di Elsewhere. Funziona insieme alle altre politiche che disciplinano la partecipazione all&rsquo;evento.</p>
                         <p>Dovresti leggerlo insieme al resto del quadro, che include:</p>
@@ -653,7 +517,7 @@
                         <p>Insieme, questi documenti spiegano come funziona l&rsquo;evento, cosa puoi aspettarti dagli organizzatori e cosa ci si aspetta da te come partecipante. Acquistando un biglietto o partecipando a Elsewhere, accetti questo quadro.</p>
                     </div>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Domande su questa informativa? Contatta <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </div>
 
@@ -662,24 +526,24 @@
             </div>
 
             <div class="lang-content" data-lang="de">
-                <div class="legal-content">
+                <div class="doc-content">
                     <p class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</p>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>1. Warum lese ich das?</h2>
                         <p>Wenn Sie ein Ticket f&uuml;r Elsewhere kaufen, m&uuml;ssen wir einige personenbezogene Daten erfassen, um Ihre Registrierung zu bearbeiten, die Veranstaltung zu organisieren und zur Sicherheit der Gemeinschaft beizutragen.</p>
                         <p>Dieser Hinweis erl&auml;utert, welche Informationen wir erfassen, wie wir sie nutzen und welche Rechte Sie in Bezug auf Ihre Daten haben.</p>
                         <p>Elsewhere wird von der Nobodies Collective Association (&bdquo;NCA&ldquo;) organisiert, die Teilnehmerdaten im Einklang mit dem europ&auml;ischen Datenschutzrecht (&bdquo;DSGVO&ldquo;) verarbeitet.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>2. Wer ist f&uuml;r meine Daten verantwortlich?</h2>
                         <p>Ihre personenbezogenen Daten werden verarbeitet von:</p>
                         <p>Asociaci&oacute;n Nobodies Collective, der Organisatorin von Elsewhere.</p>
                         <p>Wenn Sie Fragen dazu haben, wie Ihre Daten verarbeitet werden, k&ouml;nnen Sie unseren Datenschutzbeauftragten kontaktieren: <a href="mailto:privacy@nobodies.team">privacy@nobodies.team</a></p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>3. Welche Informationen erfassen Sie &uuml;ber mich?</h2>
                         <p>Wenn Sie ein Ticket kaufen oder besitzen, erfassen wir einige personenbezogene Daten wie:</p>
                         <ul>
@@ -693,7 +557,7 @@
                         <p>Wenn Sie ein Ticket &uuml;bertragen oder eines von einem anderen Teilnehmer erhalten, k&ouml;nnen Ihre Informationen auch im Rahmen dieser &Uuml;bertragung verarbeitet werden.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>4. Warum erfassen Sie diese Informationen?</h2>
                         <p>Ihre Informationen werden nur f&uuml;r Zwecke verwendet, die mit der Organisation und dem Betrieb der Veranstaltung zusammenh&auml;ngen. Dazu geh&ouml;ren beispielsweise:</p>
                         <ul>
@@ -707,7 +571,7 @@
                         <p>Ihre Daten werden niemals verkauft oder f&uuml;r nicht zusammenh&auml;ngende kommerzielle Zwecke verwendet.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>5. Warum d&uuml;rfen Sie meine Daten verarbeiten?</h2>
                         <p>Nach europ&auml;ischem Datenschutzrecht verarbeiten wir Ihre Daten, weil dies erforderlich ist, um:</p>
                         <ul>
@@ -717,7 +581,7 @@
                         </ul>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>6. Wer kann auf meine Daten zugreifen?</h2>
                         <p>Ihre Informationen k&ouml;nnen zug&auml;nglich sein f&uuml;r:</p>
                         <ul>
@@ -730,24 +594,24 @@
                         <p>Diese Stellen erhalten nur die Informationen, die zur Erf&uuml;llung ihrer Aufgabe erforderlich sind.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>7. Wie werden meine Zahlungen verarbeitet?</h2>
                         <p>Ticketk&auml;ufe werden &uuml;ber die Ticketing-Plattform und deren Zahlungsdienstleister abgewickelt. Die Organisatoren erhalten oder speichern Ihre Zahlungskarteninformationen nicht.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>8. Wo werden meine Daten verarbeitet?</h2>
                         <p>Ticketk&auml;ufe werden &uuml;ber TicketTailor abgewickelt, eine Ticketing-Plattform, die Daten im Vereinigten K&ouml;nigreich und in anderen Rechtsordnungen verarbeiten kann.</p>
                         <p>F&uuml;r das Vereinigte K&ouml;nigreich besteht nach europ&auml;ischem Datenschutzrecht ein Angemessenheitsbeschluss, was bedeutet, dass dorthin &uuml;bermittelte personenbezogene Daten ein mit der Europ&auml;ischen Union vergleichbares Schutzniveau genie&szlig;en.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>9. Wie lange speichern Sie meine Daten?</h2>
                         <p>Ihre Informationen werden nur so lange aufbewahrt, wie es f&uuml;r den Betrieb der Veranstaltung und die Erf&uuml;llung rechtlicher Verpflichtungen erforderlich ist.</p>
                         <p>Einige Informationen im Zusammenhang mit Ticketk&auml;ufen und Finanzunterlagen k&ouml;nnen bis zu f&uuml;nf Jahre oder, sofern gesetzlich vorgeschrieben, l&auml;nger aufbewahrt werden, um buchhalterische und rechtliche Anforderungen zu erf&uuml;llen.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>10. Welche Rechte habe ich?</h2>
                         <p>Nach europ&auml;ischem Datenschutzrecht haben Sie das Recht:</p>
                         <ul>
@@ -761,7 +625,7 @@
                         <p>Wenn Sie Ihre Rechte aus&uuml;ben m&ouml;chten, k&ouml;nnen Sie sich an folgende Adresse wenden: <a href="mailto:privacy@nobodies.team">privacy@nobodies.team</a></p>
                     </section>
 
-                    <div class="legal-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
+                    <div class="doc-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
                         <h2 style="border-bottom: none; padding-bottom: 0; font-size: 1.2rem;">Wichtiger Hinweis</h2>
                         <p>Dieses Dokument ist ein Teil des Teilnahme-Rahmens von Elsewhere. Es wirkt zusammen mit den anderen Richtlinien, die die Teilnahme an der Veranstaltung regeln.</p>
                         <p>Sie sollten es zusammen mit dem restlichen Rahmen lesen, der Folgendes umfasst:</p>
@@ -777,7 +641,7 @@
                         <p>Zusammen erkl&auml;ren diese Dokumente, wie die Veranstaltung funktioniert, was Sie von den Organisatoren erwarten k&ouml;nnen und was von Ihnen als Teilnehmer erwartet wird. Durch den Kauf eines Tickets oder die Teilnahme an Elsewhere stimmen Sie diesem Rahmen zu.</p>
                     </div>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Fragen zu diesem Datenschutzhinweis? Kontaktieren Sie <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </div>
 

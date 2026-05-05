@@ -10,36 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        .legal-page { padding: 8rem 0 4rem; }
-        .legal-header { text-align: center; margin-bottom: 3rem; }
-        .legal-header h1 { margin-bottom: 1rem; }
-        .legal-intro { color: var(--color-text-muted); font-size: 1.1rem; max-width: 700px; margin: 0 auto; padding-bottom: 2rem; border-bottom: 1px solid var(--color-border); line-height: 1.7; }
-        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; color: var(--color-text-muted); font-size: 0.9rem; }
-        .back-link:hover { color: var(--color-accent); }
-        .back-link::before { content: '\2190'; }
-        .legal-content { max-width: 800px; margin: 0 auto; }
-        .legal-section { margin-top: 3rem; }
-        .legal-section h2 { font-size: 1.5rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
-        .legal-section h3 { font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
-        .legal-section p { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; }
-        .legal-section ul { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; padding-left: 1.5rem; }
-        .legal-section li { margin-bottom: 0.5rem; }
-        .legal-section a { color: var(--color-accent); font-weight: 500; }
-        .legal-section table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; }
-        .legal-section th { background: var(--color-bg-alt); font-weight: 600; text-align: left; padding: 0.75rem 1rem; border: 1px solid var(--color-border); color: var(--color-text); }
-        .legal-section td { padding: 0.75rem 1rem; border: 1px solid var(--color-border); color: var(--color-text-muted); vertical-align: top; }
-        .legal-section td ul { padding-left: 1.25rem; margin: 0; }
-        .legal-section td li { margin-bottom: 0.25rem; }
-        .legal-section em { font-style: italic; }
-        .legal-contact { margin-top: 3rem; padding: 2rem 2.5rem; background: var(--color-bg-alt); border-radius: var(--radius); text-align: center; color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.7; }
-        .legal-contact a { color: var(--color-accent); font-weight: 500; }
-        @media (max-width: 768px) { .legal-page { padding: 6rem 0 3rem; } }
-        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 2rem 0; flex-wrap: wrap; }
-        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
-        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
-        .lang-content { display: none; }
-        .lang-content.active { display: block; }
-        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+        /* Page-specific: residence-evidence table, em emphasis, quick-summary
+           callout box. Doc-page layout lives in style.css. */
+        .doc-section table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; }
+        .doc-section th { background: var(--color-bg-alt); font-weight: 600; text-align: left; padding: 0.75rem 1rem; border: 1px solid var(--color-border); color: var(--color-text); }
+        .doc-section td { padding: 0.75rem 1rem; border: 1px solid var(--color-border); color: var(--color-text-muted); vertical-align: top; }
+        .doc-section td ul { padding-left: 1.25rem; margin: 0; }
+        .doc-section td li { margin-bottom: 0.25rem; }
+        .doc-section em { font-style: italic; }
         .quick-summary { background: var(--color-bg-alt); border-left: 4px solid var(--color-accent); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
         .quick-summary h4 { color: var(--color-accent); margin-bottom: 0.75rem; font-size: 1rem; }
         .quick-summary ol { color: var(--color-text-muted); line-height: 1.7; padding-left: 1.5rem; margin: 0; }
@@ -50,13 +28,13 @@
     <div id="shared-header"></div>
     <script src="header.js"></script>
 
-    <main class="legal-page">
+    <main class="doc-page">
         <div class="container">
             <a href="/" class="back-link">Back to Home</a>
 
-            <div class="legal-header">
+            <div class="doc-header">
                 <h1>Local Residents Discount</h1>
-                <p class="legal-intro">Elsewhere &mdash; Monegros Region, Spain<br>Elsewhere 2026</p>
+                <p class="doc-intro">Elsewhere &mdash; Monegros Region, Spain<br>Elsewhere 2026</p>
             </div>
 
             <div class="lang-toggle">
@@ -65,11 +43,11 @@
                 <button data-lang="fr">Fran&ccedil;ais</button>
             </div>
 
-            <div class="legal-content">
+            <div class="doc-content">
 
                 <!-- ==================== SPANISH ==================== -->
                 <div class="lang-content active" data-lang="es">
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Descuento para Residentes Locales &mdash; Elsewhere 2026</h2>
 
                         <h3>Informaci&oacute;n general</h3>
@@ -87,12 +65,12 @@
                         </div>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>&iquest;Qui&eacute;n puede beneficiarse?</h2>
                         <p>El descuento est&aacute; disponible para cualquier persona que resida actualmente en la comarca de los Monegros o en sus municipios colindantes. Si no est&aacute;s seguro/a de si tu zona est&aacute; incluida, escr&iacute;benos y te lo confirmamos.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>C&oacute;mo solicitarlo</h2>
 
                         <h3>Paso 1: Reg&iacute;strate en Humans</h3>
@@ -136,7 +114,7 @@
                         <p><strong>Importante:</strong> Por favor, espera a que tu solicitud sea aprobada antes de comprar la entrada. Si compras una entrada a precio completo antes de solicitarlo, lamentablemente no podremos ofrecerte un reembolso ni un ajuste de precio.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>&iquest;No tienes documentos a tu nombre?</h2>
                         <p>Sabemos que no todo el mundo tiene facturas o un contrato de alquiler a su nombre. Por ejemplo, puede que vivas con tus padres, familiares o compa&ntilde;eros de piso. Eso no es ning&uacute;n problema. En estos casos, aceptaremos:</p>
                         <ul>
@@ -146,25 +124,25 @@
                         <p>Si tu situaci&oacute;n de vivienda no encaja en ninguna de las opciones anteriores, no te preocupes. Cu&eacute;ntanos tu caso y buscaremos una soluci&oacute;n.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Documentos digitales</h2>
                         <p>Aceptamos con gusto versiones digitales de cualquiera de los documentos mencionados. Capturas de pantalla de facturas online, extractos bancarios en PDF, fotos de cartas oficiales: todo vale, siempre que podamos ver claramente tu nombre, direcci&oacute;n y fecha.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>C&oacute;mo tratamos tus datos</h2>
                         <p>Tu privacidad es importante para nosotros. Los documentos enviados como parte de tu solicitud solo ser&aacute;n accesibles para el equipo de entradas de Elsewhere y se utilizar&aacute;n &uacute;nicamente para verificar tu residencia.</p>
                         <p>Todos los documentos se almacenar&aacute;n de forma segura durante un m&aacute;ximo de 30 d&iacute;as despu&eacute;s del evento y, transcurrido ese plazo, se eliminar&aacute;n de forma permanente. No compartiremos tu informaci&oacute;n con terceros.</p>
                         <p>Si tienes alguna pregunta sobre el tratamiento de tus datos, ponte en contacto con nosotros en <a href="mailto:tickets@nobodies.team">tickets@nobodies.team</a>.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Nuestro enfoque</h2>
                         <p>El objetivo de este proceso es confirmar que realmente vives en la zona, nada m&aacute;s. No pretendemos poner trabas a nadie. Nuestro equipo siempre aplicar&aacute; un criterio razonable y te dar&aacute; el beneficio de la duda en la medida de lo posible.</p>
                         <p>Si tienes alguna pregunta o necesitas ayuda con tu solicitud, escr&iacute;benos a <a href="mailto:tickets-verify@nobodies.team">tickets-verify@nobodies.team</a> y estaremos encantados de ayudarte.</p>
                     </section>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p><a href="mailto:tickets-verify@nobodies.team" style="font-weight: 700; font-size: 1.15rem;">Solicitar el descuento para residentes locales</a></p>
                         <p>&iquest;Preguntas sobre esta pol&iacute;tica? Contacta con <a href="mailto:tickets@nobodies.team">tickets@nobodies.team</a></p>
                     </div>
@@ -174,7 +152,7 @@
                 <div class="lang-content" data-lang="en">
                     <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Local Residents Discount &mdash; Elsewhere 2026</h2>
 
                         <h3>Overview</h3>
@@ -192,12 +170,12 @@
                         </div>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Who is eligible?</h2>
                         <p>The discount is available to anyone who currently lives within the Monegros comarca or its neighbouring municipalities. If you&rsquo;re not sure whether your area qualifies, drop us a line and we&rsquo;ll let you know.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>How to apply</h2>
 
                         <h3>Step 1: Register on Humans</h3>
@@ -241,7 +219,7 @@
                         <p><strong>Important:</strong> Please wait for your application to be approved before buying your ticket. If you purchase a full-price ticket before applying, we are unfortunately unable to offer a refund or price adjustment.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Don&rsquo;t have documents in your name?</h2>
                         <p>We know not everyone has bills or a lease in their own name. For example, you might live with parents, family, or housemates. That&rsquo;s completely fine. In these cases, we&rsquo;ll accept:</p>
                         <ul>
@@ -251,25 +229,25 @@
                         <p>If your living situation doesn&rsquo;t fit neatly into any of the above, don&rsquo;t worry. Just tell us about it and we&rsquo;ll work something out.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Digital documents</h2>
                         <p>We&rsquo;re happy to accept digital versions of any of the documents listed above. Screenshots of online bills, PDF bank statements, photos of official letters: all fine, as long as we can clearly see your name, address, and date.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>How we handle your data</h2>
                         <p>We take your privacy seriously. Documents submitted as part of your application will only be accessible to the Elsewhere ticketing team and will be used solely to verify your residency.</p>
                         <p>All documents will be stored securely for up to 30 days after the event and then permanently deleted. We will not share your information with any third parties.</p>
                         <p>If you have any questions about how your data is handled, please contact us at <a href="mailto:tickets@nobodies.team">tickets@nobodies.team</a>.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Our approach</h2>
                         <p>The point of this process is to confirm that you genuinely live locally, nothing more. We&rsquo;re not trying to catch anyone out. Our team will always apply reasonable judgement and give you the benefit of the doubt wherever we can.</p>
                         <p>If you have any questions or need help with your application, email us at <a href="mailto:tickets-verify@nobodies.team">tickets-verify@nobodies.team</a> and we&rsquo;ll be happy to help.</p>
                     </section>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p><a href="mailto:tickets-verify@nobodies.team" style="font-weight: 700; font-size: 1.15rem;">Apply for the local residents discount</a></p>
                         <p>Questions about this policy? Contact <a href="mailto:tickets@nobodies.team">tickets@nobodies.team</a></p>
                     </div>
@@ -279,7 +257,7 @@
                 <div class="lang-content" data-lang="fr">
                     <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>R&eacute;duction pour les R&eacute;sidents Locaux &mdash; Elsewhere 2026</h2>
 
                         <h3>Pr&eacute;sentation</h3>
@@ -297,12 +275,12 @@
                         </div>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Qui peut en b&eacute;n&eacute;ficier ?</h2>
                         <p>La r&eacute;duction est ouverte &agrave; toute personne r&eacute;sidant actuellement dans la comarca de Monegros ou dans les municipalit&eacute;s voisines. Si vous n&rsquo;&ecirc;tes pas s&ucirc;r(e) que votre zone soit &eacute;ligible, contactez-nous et nous vous le confirmerons.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Comment faire sa demande</h2>
 
                         <h3>&Eacute;tape 1 : S&rsquo;inscrire sur Humans</h3>
@@ -346,7 +324,7 @@
                         <p><strong>Important :</strong> Veuillez attendre l&rsquo;approbation de votre demande avant d&rsquo;acheter votre billet. Si vous achetez un billet plein tarif avant de faire votre demande, nous ne serons malheureusement pas en mesure de vous proposer un remboursement ou un ajustement de prix.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Vous n&rsquo;avez pas de documents &agrave; votre nom ?</h2>
                         <p>Nous savons que tout le monde n&rsquo;a pas de factures ou de bail &agrave; son nom. Par exemple, vous vivez peut-&ecirc;tre chez vos parents, en famille ou en colocation. Ce n&rsquo;est pas un probl&egrave;me. Dans ce cas, nous accepterons :</p>
                         <ul>
@@ -356,25 +334,25 @@
                         <p>Si votre situation de logement ne correspond pas aux cas mentionn&eacute;s, ne vous inqui&eacute;tez pas. Expliquez-nous votre situation et nous trouverons une solution.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Documents num&eacute;riques</h2>
                         <p>Nous acceptons volontiers les versions num&eacute;riques de tous les documents mentionn&eacute;s. Captures d&rsquo;&eacute;cran de factures en ligne, relev&eacute;s bancaires au format PDF, photos de courriers officiels : tout est accept&eacute;, &agrave; condition que votre nom, votre adresse et la date soient clairement lisibles.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Comment nous traitons vos donn&eacute;es</h2>
                         <p>Nous prenons votre vie priv&eacute;e au s&eacute;rieux. Les documents soumis dans le cadre de votre demande ne seront accessibles qu&rsquo;&agrave; l&rsquo;&eacute;quipe billetterie d&rsquo;Elsewhere et seront utilis&eacute;s uniquement pour v&eacute;rifier votre r&eacute;sidence.</p>
                         <p>Tous les documents seront conserv&eacute;s de mani&egrave;re s&eacute;curis&eacute;e pendant un maximum de 30 jours apr&egrave;s l&rsquo;&eacute;v&eacute;nement, puis d&eacute;finitivement supprim&eacute;s. Nous ne partagerons vos informations avec aucun tiers.</p>
                         <p>Si vous avez des questions sur le traitement de vos donn&eacute;es, contactez-nous &agrave; <a href="mailto:tickets@nobodies.team">tickets@nobodies.team</a>.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>Notre approche</h2>
                         <p>L&rsquo;objectif de ce processus est de confirmer que vous habitez r&eacute;ellement dans la r&eacute;gion, rien de plus. Nous ne cherchons pas &agrave; mettre qui que ce soit en difficult&eacute;. Notre &eacute;quipe fera toujours preuve de discernement et vous accordera le b&eacute;n&eacute;fice du doute dans la mesure du possible.</p>
                         <p>Si vous avez des questions ou besoin d&rsquo;aide pour votre demande, &eacute;crivez-nous &agrave; <a href="mailto:tickets-verify@nobodies.team">tickets-verify@nobodies.team</a> et nous serons ravis de vous aider.</p>
                     </section>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p><a href="mailto:tickets-verify@nobodies.team" style="font-weight: 700; font-size: 1.15rem;">Demander la r&eacute;duction pour r&eacute;sidents locaux</a></p>
                         <p>Des questions sur cette politique ? Contactez <a href="mailto:tickets@nobodies.team">tickets@nobodies.team</a></p>
                     </div>

@@ -9,154 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .legal-page {
-            padding: 8rem 0 4rem;
-        }
-
-        .legal-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .legal-header h1 {
-            margin-bottom: 1rem;
-        }
-
-        .legal-intro {
-            color: var(--color-text-muted);
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--color-border);
-            line-height: 1.7;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-            color: var(--color-text-muted);
-            font-size: 0.9rem;
-        }
-        .back-link:hover { color: var(--color-accent); }
-        .back-link::before { content: '\2190'; }
-
-        .legal-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .legal-section {
-            margin-top: 3rem;
-        }
-
-        .legal-section h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--color-accent);
-        }
-
-        .legal-section p {
-            color: var(--color-text-muted);
-            line-height: 1.7;
-            margin-bottom: 0.75rem;
-        }
-
-        .legal-section ul {
-            color: var(--color-text-muted);
-            line-height: 1.7;
-            margin-bottom: 0.75rem;
-            padding-left: 1.5rem;
-        }
-
-        .legal-section li {
-            margin-bottom: 0.5rem;
-        }
-
-        .legal-section a {
-            color: var(--color-accent);
-            font-weight: 500;
-        }
-
-        .legal-contact {
-            margin-top: 3rem;
-            padding: 2rem 2.5rem;
-            background: var(--color-bg-alt);
-            border-radius: var(--radius);
-            text-align: center;
-            color: var(--color-text-muted);
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-
-        .legal-contact a {
-            color: var(--color-accent);
-            font-weight: 500;
-        }
-
-        @media (max-width: 768px) {
-            .legal-page {
-                padding: 6rem 0 3rem;
-            }
-        }
-
-        .lang-toggle {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-
-        .lang-toggle button {
-            padding: 0.75rem 1.5rem;
-            font-family: var(--font-body);
-            font-size: 0.875rem;
-            font-weight: 500;
-            border: 1px solid var(--color-border);
-            background: var(--color-bg-alt);
-            color: var(--color-text-muted);
-            border-radius: var(--radius);
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .lang-toggle button.active,
-        .lang-toggle button:hover {
-            background: var(--color-accent);
-            border-color: var(--color-accent);
-            color: #fff;
-        }
-
-        .lang-content { display: none; }
-        .lang-content.active { display: block; }
-
-        .lang-note {
-            font-style: italic;
-            color: var(--color-text-muted);
-            margin-bottom: 2rem;
-            padding: 1rem 1.5rem;
-            background: var(--color-bg-alt);
-            border-radius: var(--radius);
-            font-size: 0.9rem;
-        }
-    </style>
 </head>
 <body>
     <div id="shared-header"></div>
     <script src="header.js"></script>
 
-    <main class="legal-page">
+    <main class="doc-page">
         <div class="container">
             <a href="/" class="back-link">Back to Home</a>
 
-            <div class="legal-header">
+            <div class="doc-header">
                 <h1>Media &amp; Image Policy</h1>
-                <p class="legal-intro">Elsewhere 2026</p>
+                <p class="doc-intro">Elsewhere 2026</p>
             </div>
 
             <div class="lang-toggle">
@@ -168,17 +32,17 @@
             </div>
 
             <div class="lang-content active" data-lang="en">
-                <div class="legal-content">
+                <div class="doc-content">
                     <p class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</p>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>1. Why does this policy exist?</h2>
                         <p>Elsewhere is a creative community where art, performance, and expression are everywhere. Photography and video are a natural part of documenting and sharing those moments.</p>
                         <p>At the same time, everyone deserves to feel comfortable and respected while participating in the event.</p>
                         <p>This policy explains how photography and filming work at Elsewhere and what is expected from you when capturing images of others.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>2. Can I take photos or videos at Elsewhere?</h2>
                         <p>Yes. Photography and video are generally welcome at the event.</p>
                         <p>However, Elsewhere is built on respect and consent. If you want to take photos or videos where people may be visible or recognizable, you should make sure they are comfortable being photographed before taking the picture.</p>
@@ -187,14 +51,14 @@
                         <p>A simple rule of thumb is: ask first &mdash; otherwise, don&rsquo;t take the photo.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>3. What if someone asks me not to photograph them?</h2>
                         <p>If someone asks you not to photograph or film them, you should respect that request.</p>
                         <p>Everyone participates in Elsewhere in their own way, and some people prefer not to appear in photos or videos.</p>
                         <p>Respecting those choices helps maintain a welcoming and safe environment for everyone.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>4. Will the event itself take photos or videos?</h2>
                         <p>Yes. The event may include photographers or videographers documenting the experience. These images may be used to:</p>
                         <ul>
@@ -206,7 +70,7 @@
                         <p>Official photographers are expected to follow the same consent principles described in this policy.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>5. What should I expect if I attend the event?</h2>
                         <p>Elsewhere is a shared environment where photography and video may take place.</p>
                         <p>At the same time, the event is built on respect and consent. Being present at Elsewhere does not mean you have agreed to be photographed or recorded in a way that makes you visible or recognizable.</p>
@@ -214,20 +78,20 @@
                         <p>If you are being photographed or recorded and you are not comfortable with it, you should feel able to say so.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>6. Can photos or videos be used commercially?</h2>
                         <p>Images taken at Elsewhere should not be used for commercial purposes without permission from the organizers and the people appearing in those images.</p>
                         <p>The goal of photography at Elsewhere is to document and celebrate the community, not to exploit it.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>7. What if I have concerns about an image of me?</h2>
                         <p>If you believe an image of you has been used inappropriately in connection with the event, you can contact the organizers.</p>
                         <p>We will make reasonable efforts to address concerns and resolve issues when possible.</p>
                         <p>You can reach us at: <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </section>
 
-                    <div class="legal-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
+                    <div class="doc-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
                         <h2 style="border-bottom: none; padding-bottom: 0; font-size: 1.2rem;">Important Note</h2>
                         <p>This document is one part of Elsewhere&rsquo;s participation framework. It works together with the other policies that govern participation in the event.</p>
                         <p>You should read it together with the rest of the framework, which includes:</p>
@@ -243,7 +107,7 @@
                         <p>Together, these documents explain how the event works, what you can expect from the organizers, and what is expected from you as a participant. By purchasing a ticket or attending Elsewhere, you agree to this framework.</p>
                     </div>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Questions about this policy? Contact <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </div>
 
@@ -252,15 +116,15 @@
             </div>
 
             <div class="lang-content" data-lang="es">
-                <div class="legal-content">
-                    <section class="legal-section">
+                <div class="doc-content">
+                    <section class="doc-section">
                         <h2>1. &iquest;Por qu&eacute; existe esta pol&iacute;tica?</h2>
                         <p>Elsewhere es una comunidad creativa donde el arte, la performance y la expresi&oacute;n est&aacute;n por todas partes. La fotograf&iacute;a y el v&iacute;deo son una parte natural de documentar y compartir esos momentos.</p>
                         <p>Al mismo tiempo, todo el mundo merece sentirse c&oacute;modo y respetado mientras participa en el evento.</p>
                         <p>Esta pol&iacute;tica explica c&oacute;mo funcionan la fotograf&iacute;a y la filmaci&oacute;n en Elsewhere y qu&eacute; se espera de ti cuando capturas im&aacute;genes de otras personas.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>2. &iquest;Puedo tomar fotos o v&iacute;deos en Elsewhere?</h2>
                         <p>S&iacute;. La fotograf&iacute;a y el v&iacute;deo son generalmente bienvenidos en el evento.</p>
                         <p>Sin embargo, Elsewhere se basa en el respeto y el consentimiento. Si quieres tomar fotos o v&iacute;deos en los que la gente pueda ser visible o reconocible, debes asegurarte de que se sientan c&oacute;modos con ser fotografiados antes de tomar la imagen.</p>
@@ -269,14 +133,14 @@
                         <p>Una regla pr&aacute;ctica sencilla es: pregunta primero; de lo contrario, no tomes la foto.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>3. &iquest;Qu&eacute; pasa si alguien me pide que no le fotograf&iacute;e?</h2>
                         <p>Si alguien te pide que no le fotograf&iacute;es o grabes, debes respetar esa solicitud.</p>
                         <p>Cada persona participa en Elsewhere a su manera, y algunas prefieren no aparecer en fotos o v&iacute;deos.</p>
                         <p>Respetar esas decisiones ayuda a mantener un entorno acogedor y seguro para todos.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>4. &iquest;El propio evento tomar&aacute; fotos o v&iacute;deos?</h2>
                         <p>S&iacute;. El evento puede incluir fot&oacute;grafos o vide&oacute;grafos documentando la experiencia. Estas im&aacute;genes pueden usarse para:</p>
                         <ul>
@@ -288,7 +152,7 @@
                         <p>Se espera que los fot&oacute;grafos oficiales sigan los mismos principios de consentimiento descritos en esta pol&iacute;tica.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>5. &iquest;Qu&eacute; debo esperar si asisto al evento?</h2>
                         <p>Elsewhere es un entorno compartido en el que puede haber fotograf&iacute;a y v&iacute;deo.</p>
                         <p>Al mismo tiempo, el evento se basa en el respeto y el consentimiento. Estar presente en Elsewhere no significa que hayas aceptado ser fotografiado o grabado de una manera que te haga visible o reconocible.</p>
@@ -296,20 +160,20 @@
                         <p>Si est&aacute;n haci&eacute;ndote una foto o grabando y no te sientes c&oacute;modo, debes sentirte capaz de decirlo.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>6. &iquest;Pueden utilizarse fotos o v&iacute;deos con fines comerciales?</h2>
                         <p>Las im&aacute;genes tomadas en Elsewhere no deben utilizarse con fines comerciales sin el permiso de los organizadores y de las personas que aparecen en ellas.</p>
                         <p>El objetivo de la fotograf&iacute;a en Elsewhere es documentar y celebrar la comunidad, no explotarla.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>7. &iquest;Y si tengo dudas sobre una imagen m&iacute;a?</h2>
                         <p>Si crees que se ha utilizado de forma inapropiada una imagen tuya en relaci&oacute;n con el evento, puedes ponerte en contacto con los organizadores.</p>
                         <p>Haremos esfuerzos razonables para atender las preocupaciones y resolver los problemas cuando sea posible.</p>
                         <p>Puedes escribirnos a: <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </section>
 
-                    <div class="legal-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
+                    <div class="doc-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
                         <h2 style="border-bottom: none; padding-bottom: 0; font-size: 1.2rem;">Nota Importante</h2>
                         <p>Este documento forma parte del marco de participaci&oacute;n de Elsewhere. Funciona conjuntamente con las otras pol&iacute;ticas que rigen la participaci&oacute;n en el evento.</p>
                         <p>Debes leerlo junto con el resto del marco, que incluye:</p>
@@ -325,7 +189,7 @@
                         <p>En conjunto, estos documentos explican c&oacute;mo funciona el evento, qu&eacute; puedes esperar de los organizadores y qu&eacute; se espera de ti como participante. Al comprar una entrada o asistir a Elsewhere, aceptas este marco.</p>
                     </div>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>&iquest;Preguntas sobre esta pol&iacute;tica? Contacta con <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </div>
 
@@ -334,17 +198,17 @@
             </div>
 
             <div class="lang-content" data-lang="fr">
-                <div class="legal-content">
+                <div class="doc-content">
                     <p class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</p>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>1. Pourquoi cette politique existe-t-elle&nbsp;?</h2>
                         <p>Elsewhere est une communaut&eacute; cr&eacute;ative o&ugrave; l&rsquo;art, la performance et l&rsquo;expression sont partout. La photographie et la vid&eacute;o font naturellement partie de la documentation et du partage de ces moments.</p>
                         <p>En m&ecirc;me temps, chacun m&eacute;rite de se sentir &agrave; l&rsquo;aise et respect&eacute; pendant sa participation &agrave; l&rsquo;&eacute;v&eacute;nement.</p>
                         <p>Cette politique explique comment fonctionnent la photographie et le tournage &agrave; Elsewhere, et ce qui est attendu de vous lorsque vous capturez des images d&rsquo;autrui.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>2. Puis-je prendre des photos ou des vid&eacute;os &agrave; Elsewhere&nbsp;?</h2>
                         <p>Oui. La photographie et la vid&eacute;o sont g&eacute;n&eacute;ralement les bienvenues lors de l&rsquo;&eacute;v&eacute;nement.</p>
                         <p>Cependant, Elsewhere repose sur le respect et le consentement. Si vous souhaitez prendre des photos ou des vid&eacute;os dans lesquelles des personnes peuvent &ecirc;tre visibles ou reconnaissables, vous devez vous assurer qu&rsquo;elles sont &agrave; l&rsquo;aise avec le fait d&rsquo;&ecirc;tre photographi&eacute;es avant de prendre l&rsquo;image.</p>
@@ -353,14 +217,14 @@
                         <p>Une r&egrave;gle simple est la suivante&nbsp;: demandez d&rsquo;abord, sinon ne prenez pas la photo.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>3. Que se passe-t-il si quelqu&rsquo;un me demande de ne pas le photographier&nbsp;?</h2>
                         <p>Si quelqu&rsquo;un vous demande de ne pas le photographier ou le filmer, vous devez respecter cette demande.</p>
                         <p>Chacun participe &agrave; Elsewhere &agrave; sa mani&egrave;re, et certaines personnes pr&eacute;f&egrave;rent ne pas appara&icirc;tre dans des photos ou des vid&eacute;os.</p>
                         <p>Respecter ces choix contribue &agrave; maintenir un environnement accueillant et s&ucirc;r pour tous.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>4. L&rsquo;&eacute;v&eacute;nement lui-m&ecirc;me prendra-t-il des photos ou des vid&eacute;os&nbsp;?</h2>
                         <p>Oui. L&rsquo;&eacute;v&eacute;nement peut inclure des photographes ou vid&eacute;astes documentant l&rsquo;exp&eacute;rience. Ces images peuvent &ecirc;tre utilis&eacute;es pour&nbsp;:</p>
                         <ul>
@@ -372,7 +236,7 @@
                         <p>Les photographes officiels sont tenus de respecter les m&ecirc;mes principes de consentement que ceux d&eacute;crits dans cette politique.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>5. &Agrave; quoi dois-je m&rsquo;attendre si je participe &agrave; l&rsquo;&eacute;v&eacute;nement&nbsp;?</h2>
                         <p>Elsewhere est un environnement partag&eacute; o&ugrave; des prises de photos et de vid&eacute;os peuvent avoir lieu.</p>
                         <p>En m&ecirc;me temps, l&rsquo;&eacute;v&eacute;nement repose sur le respect et le consentement. Le simple fait d&rsquo;&ecirc;tre pr&eacute;sent &agrave; Elsewhere ne signifie pas que vous avez accept&eacute; d&rsquo;&ecirc;tre photographi&eacute; ou enregistr&eacute; d&rsquo;une mani&egrave;re qui vous rende visible ou reconnaissable.</p>
@@ -380,20 +244,20 @@
                         <p>Si vous &ecirc;tes photographi&eacute; ou film&eacute; et que cela vous met mal &agrave; l&rsquo;aise, vous devez vous sentir libre de le dire.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>6. Les photos ou vid&eacute;os peuvent-elles &ecirc;tre utilis&eacute;es &agrave; des fins commerciales&nbsp;?</h2>
                         <p>Les images prises &agrave; Elsewhere ne doivent pas &ecirc;tre utilis&eacute;es &agrave; des fins commerciales sans l&rsquo;autorisation des organisateurs et des personnes qui apparaissent sur ces images.</p>
                         <p>L&rsquo;objectif de la photographie &agrave; Elsewhere est de documenter et de c&eacute;l&eacute;brer la communaut&eacute;, non de l&rsquo;exploiter.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>7. Que faire si j&rsquo;ai des pr&eacute;occupations concernant une image de moi&nbsp;?</h2>
                         <p>Si vous pensez qu&rsquo;une image de vous a &eacute;t&eacute; utilis&eacute;e de mani&egrave;re inappropri&eacute;e dans le cadre de l&rsquo;&eacute;v&eacute;nement, vous pouvez contacter les organisateurs.</p>
                         <p>Nous ferons des efforts raisonnables pour examiner les pr&eacute;occupations et r&eacute;soudre les probl&egrave;mes lorsque cela est possible.</p>
                         <p>Vous pouvez nous joindre &agrave;&nbsp;: <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </section>
 
-                    <div class="legal-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
+                    <div class="doc-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
                         <h2 style="border-bottom: none; padding-bottom: 0; font-size: 1.2rem;">Note importante</h2>
                         <p>Ce document constitue une partie du cadre de participation d&rsquo;Elsewhere. Il fonctionne avec les autres politiques qui r&eacute;gissent la participation &agrave; l&rsquo;&eacute;v&eacute;nement.</p>
                         <p>Vous devez le lire avec le reste du cadre, qui comprend&nbsp;:</p>
@@ -409,7 +273,7 @@
                         <p>Ensemble, ces documents expliquent le fonctionnement de l&rsquo;&eacute;v&eacute;nement, ce que vous pouvez attendre des organisateurs et ce qui est attendu de vous en tant que participant. En achetant un billet ou en participant &agrave; Elsewhere, vous acceptez ce cadre.</p>
                     </div>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Des questions sur cette politique&nbsp;? Contactez <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </div>
 
@@ -418,17 +282,17 @@
             </div>
 
             <div class="lang-content" data-lang="it">
-                <div class="legal-content">
+                <div class="doc-content">
                     <p class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</p>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>1. Perch&eacute; esiste questa politica?</h2>
                         <p>Elsewhere &egrave; una comunit&agrave; creativa in cui arte, performance ed espressione sono ovunque. Fotografia e video sono una parte naturale del documentare e condividere questi momenti.</p>
                         <p>Allo stesso tempo, tutti meritano di sentirsi a proprio agio e rispettati mentre partecipano all&rsquo;evento.</p>
                         <p>Questa politica spiega come funzionano fotografia e riprese a Elsewhere e cosa ci si aspetta da te quando catturi immagini di altre persone.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>2. Posso scattare foto o fare video a Elsewhere?</h2>
                         <p>S&igrave;. Fotografia e video sono generalmente benvenuti all&rsquo;evento.</p>
                         <p>Tuttavia, Elsewhere si fonda sul rispetto e sul consenso. Se vuoi scattare foto o fare video in cui le persone possano essere visibili o riconoscibili, dovresti assicurarti che si sentano a proprio agio nell&rsquo;essere fotografate prima di scattare l&rsquo;immagine.</p>
@@ -437,14 +301,14 @@
                         <p>Una semplice regola pratica &egrave;: chiedi prima; altrimenti, non scattare la foto.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>3. Cosa succede se qualcuno mi chiede di non fotografarlo?</h2>
                         <p>Se qualcuno ti chiede di non fotografarlo o riprenderlo, dovresti rispettare quella richiesta.</p>
                         <p>Ognuno partecipa a Elsewhere a modo proprio, e alcune persone preferiscono non comparire in foto o video.</p>
                         <p>Rispettare queste scelte aiuta a mantenere un ambiente accogliente e sicuro per tutti.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>4. L&rsquo;evento stesso scatter&agrave; foto o video?</h2>
                         <p>S&igrave;. L&rsquo;evento pu&ograve; includere fotografi o videomaker che documentano l&rsquo;esperienza. Queste immagini possono essere utilizzate per:</p>
                         <ul>
@@ -456,7 +320,7 @@
                         <p>Ci si aspetta che i fotografi ufficiali seguano gli stessi principi di consenso descritti in questa politica.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>5. Cosa dovrei aspettarmi se partecipo all&rsquo;evento?</h2>
                         <p>Elsewhere &egrave; un ambiente condiviso in cui fotografia e video possono avere luogo.</p>
                         <p>Allo stesso tempo, l&rsquo;evento si fonda su rispetto e consenso. Essere presenti a Elsewhere non significa aver accettato di essere fotografati o ripresi in modo da risultare visibili o riconoscibili.</p>
@@ -464,20 +328,20 @@
                         <p>Se vieni fotografato o ripreso e non ti senti a tuo agio, dovresti sentirti libero di dirlo.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>6. Foto o video possono essere usati commercialmente?</h2>
                         <p>Le immagini scattate a Elsewhere non dovrebbero essere utilizzate per scopi commerciali senza il permesso degli organizzatori e delle persone che compaiono in tali immagini.</p>
                         <p>L&rsquo;obiettivo della fotografia a Elsewhere &egrave; documentare e celebrare la comunit&agrave;, non sfruttarla.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>7. E se ho dubbi riguardo a un&rsquo;immagine di me?</h2>
                         <p>Se ritieni che un&rsquo;immagine che ti ritrae sia stata utilizzata in modo improprio in relazione all&rsquo;evento, puoi contattare gli organizzatori.</p>
                         <p>Faremo sforzi ragionevoli per affrontare le preoccupazioni e risolvere i problemi quando possibile.</p>
                         <p>Puoi contattarci a: <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </section>
 
-                    <div class="legal-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
+                    <div class="doc-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
                         <h2 style="border-bottom: none; padding-bottom: 0; font-size: 1.2rem;">Nota importante</h2>
                         <p>Questo documento &egrave; una parte del quadro di partecipazione di Elsewhere. Funziona insieme alle altre politiche che disciplinano la partecipazione all&rsquo;evento.</p>
                         <p>Dovresti leggerlo insieme al resto del quadro, che include:</p>
@@ -493,7 +357,7 @@
                         <p>Insieme, questi documenti spiegano come funziona l&rsquo;evento, cosa puoi aspettarti dagli organizzatori e cosa ci si aspetta da te come partecipante. Acquistando un biglietto o partecipando a Elsewhere, accetti questo quadro.</p>
                     </div>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Domande su questa politica? Contatta <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </div>
 
@@ -502,17 +366,17 @@
             </div>
 
             <div class="lang-content" data-lang="de">
-                <div class="legal-content">
+                <div class="doc-content">
                     <p class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</p>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>1. Warum gibt es diese Richtlinie?</h2>
                         <p>Elsewhere ist eine kreative Gemeinschaft, in der Kunst, Performance und Ausdruck allgegenw&auml;rtig sind. Fotografie und Video sind ein nat&uuml;rlicher Teil davon, diese Momente zu dokumentieren und zu teilen.</p>
                         <p>Gleichzeitig verdient es jeder, sich w&auml;hrend der Teilnahme an der Veranstaltung wohl und respektiert zu f&uuml;hlen.</p>
                         <p>Diese Richtlinie erkl&auml;rt, wie Fotografie und Filmaufnahmen bei Elsewhere funktionieren und was von Ihnen erwartet wird, wenn Sie Bilder anderer Personen aufnehmen.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>2. Darf ich bei Elsewhere Fotos oder Videos machen?</h2>
                         <p>Ja. Fotografie und Video sind bei der Veranstaltung grunds&auml;tzlich willkommen.</p>
                         <p>Elsewhere basiert jedoch auf Respekt und Einwilligung. Wenn Sie Fotos oder Videos machen m&ouml;chten, auf denen Personen sichtbar oder erkennbar sein k&ouml;nnen, sollten Sie sich vor der Aufnahme vergewissern, dass diese Personen damit einverstanden sind, fotografiert zu werden.</p>
@@ -521,14 +385,14 @@
                         <p>Eine einfache Faustregel lautet: erst fragen, sonst kein Foto machen.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>3. Was ist, wenn mich jemand bittet, ihn nicht zu fotografieren?</h2>
                         <p>Wenn Sie jemand bittet, ihn nicht zu fotografieren oder zu filmen, sollten Sie dieser Bitte nachkommen.</p>
                         <p>Jeder nimmt auf seine eigene Weise an Elsewhere teil, und manche Menschen m&ouml;chten nicht auf Fotos oder Videos erscheinen.</p>
                         <p>Diese Entscheidungen zu respektieren hilft, eine einladende und sichere Umgebung f&uuml;r alle aufrechtzuerhalten.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>4. Wird die Veranstaltung selbst Fotos oder Videos machen?</h2>
                         <p>Ja. Zur Veranstaltung k&ouml;nnen Fotografen oder Videografen geh&ouml;ren, die das Erlebnis dokumentieren. Diese Bilder k&ouml;nnen verwendet werden, um:</p>
                         <ul>
@@ -540,7 +404,7 @@
                         <p>Von offiziellen Fotografen wird erwartet, dass sie denselben Einwilligungsgrunds&auml;tzen folgen, die in dieser Richtlinie beschrieben sind.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>5. Was sollte ich erwarten, wenn ich an der Veranstaltung teilnehme?</h2>
                         <p>Elsewhere ist eine geteilte Umgebung, in der Fotografieren und Filmen stattfinden kann.</p>
                         <p>Gleichzeitig basiert die Veranstaltung auf Respekt und Einwilligung. Die blo&szlig;e Anwesenheit bei Elsewhere bedeutet nicht, dass Sie damit einverstanden sind, auf eine Weise fotografiert oder aufgenommen zu werden, die Sie sichtbar oder erkennbar macht.</p>
@@ -548,20 +412,20 @@
                         <p>Wenn Sie fotografiert oder gefilmt werden und sich dabei unwohl f&uuml;hlen, sollten Sie sich frei f&uuml;hlen, dies zu sagen.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>6. D&uuml;rfen Fotos oder Videos kommerziell verwendet werden?</h2>
                         <p>Bilder, die bei Elsewhere aufgenommen wurden, sollten nicht ohne die Erlaubnis der Organisatoren und der darauf erscheinenden Personen kommerziell genutzt werden.</p>
                         <p>Das Ziel der Fotografie bei Elsewhere ist es, die Gemeinschaft zu dokumentieren und zu feiern, nicht sie auszubeuten.</p>
                     </section>
 
-                    <section class="legal-section">
+                    <section class="doc-section">
                         <h2>7. Was ist, wenn ich Bedenken wegen eines Bildes von mir habe?</h2>
                         <p>Wenn Sie glauben, dass ein Bild von Ihnen im Zusammenhang mit der Veranstaltung unangemessen verwendet wurde, k&ouml;nnen Sie die Organisatoren kontaktieren.</p>
                         <p>Wir werden uns in angemessenem Umfang bem&uuml;hen, Bedenken zu pr&uuml;fen und Probleme nach M&ouml;glichkeit zu l&ouml;sen.</p>
                         <p>Sie erreichen uns unter: <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </section>
 
-                    <div class="legal-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
+                    <div class="doc-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
                         <h2 style="border-bottom: none; padding-bottom: 0; font-size: 1.2rem;">Wichtiger Hinweis</h2>
                         <p>Dieses Dokument ist ein Teil des Teilnahme-Rahmens von Elsewhere. Es wirkt zusammen mit den anderen Richtlinien, die die Teilnahme an der Veranstaltung regeln.</p>
                         <p>Sie sollten es zusammen mit dem restlichen Rahmen lesen, der Folgendes umfasst:</p>
@@ -577,7 +441,7 @@
                         <p>Zusammen erkl&auml;ren diese Dokumente, wie die Veranstaltung funktioniert, was Sie von den Organisatoren erwarten k&ouml;nnen und was von Ihnen als Teilnehmer erwartet wird. Durch den Kauf eines Tickets oder die Teilnahme an Elsewhere stimmen Sie diesem Rahmen zu.</p>
                     </div>
 
-                    <div class="legal-contact">
+                    <div class="doc-contact">
                         <p>Fragen zu dieser Richtlinie? Kontaktieren Sie <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
                     </div>
 
