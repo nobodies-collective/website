@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCA Board Meeting Minutes - May 4, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content h4 { margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.05rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>NCA Board Meeting Minutes</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Monday 4 May 2026, 19:00 CEST</span>
+                    </div>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <!-- ENGLISH -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>Chair:</strong> Ben D (facilitator)<br>
+                        <strong>Board present:</strong> Daniel T, Ben D, Peter D, Pablo V, Ward D<br>
+                        <strong>Also present:</strong> Daniela M S<br>
+                        <strong>Apologies:</strong> Chris O, Michelle T, Victor P
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Check-in and Agenda</h2>
+                        <ul>
+                            <li>Members gave brief personal updates.</li>
+                            <li>Pablo V flagged that he will have limited availability over the coming week due to personal commitments.</li>
+                            <li>The agenda was reviewed; Pablo V&rsquo;s volunteer recruitment item was folded into the production update.</li>
+                        </ul>
+
+                        <h2>2. Production Update</h2>
+                        <ul>
+                            <li>Daniela M S reported that vendor payments and contract signings begin this week. The most time-sensitive items (cabin and toilet hire) cannot be deferred further given limited regional vendor availability over the summer.</li>
+                            <li>The board confirmed that vendor payments should proceed on schedule. Delaying payments would not reduce overall risk.</li>
+                        </ul>
+
+                        <h2>3. Volunteer Recruitment &mdash; Critical Roles</h2>
+                        <ul>
+                            <li>Pablo V and Daniela M S reported on a pre-meeting call with Cantina coordinators highlighting acute volunteer shortages across the build, event and strike weeks, particularly for Cantina.</li>
+                            <li>Pablo V proposed a three-part plan, agreed by the board:
+                                <ol>
+                                    <li><strong>Simplify the volunteer sign-up flow</strong> in the Humans application so that new volunteers can register for a shift with the minimum required information, completing the rest of their profile afterwards.</li>
+                                    <li><strong>Default the shift listing to &ldquo;critical&rdquo; shifts only</strong>, using the existing critical / important / regular flag on shifts, until critical roles are filled.</li>
+                                    <li><strong>Send a clearly-worded urgent email</strong> to the existing community communicating the genuine need for volunteers in critical roles.</li>
+                                </ol>
+                            </li>
+                            <li><strong>Decision:</strong> Daniel T to spec the application changes this evening and send to Peter D for review and integration. Peter D noted limited availability midweek.</li>
+                            <li><strong>Decision:</strong> Daniela M S to coordinate with the comms team on the urgent communication and to push the volunteer recruitment message at the Thursday community call.</li>
+                            <li><strong>Decision:</strong> Daniela M S to confirm with department leads which shifts are genuinely critical so the default filter is honest.</li>
+                        </ul>
+
+                        <h4>Contingency Planning</h4>
+                        <ul>
+                            <li>Ward D and Daniel T discussed backup options should recruitment fall short, including a reduced build scope and external catering arrangements for Cantina. The board agreed contingency planning should proceed in parallel, but the recruitment plan should be tried first.</li>
+                            <li>Daniela M S noted that similar recruitment-urgency messaging is sent annually and may have lost impact; this informed the choice to combine messaging with concrete app changes.</li>
+                            <li>Daniel T proposed beginning recruitment for next year&rsquo;s build during this year&rsquo;s event, to break the late-planning cycle going forward.</li>
+                        </ul>
+
+                        <h2>4. Communications</h2>
+                        <ul>
+                            <li>Ben D updated the board on conversations through the past week to strengthen the comms team. New contributors have been brought in to support the team.</li>
+                            <li>Daniela M S has restructured the comms split: social media and newsletter handled by separate leads. The shared comms-planning Notion is being kept current.</li>
+                            <li>Once the targeted-messaging feature in Humans ships (expected end of this weekend), comms will move to highly targeted outreach (e.g. shift reminders, ticket reminders) alongside continued daily one-topic messages.</li>
+                            <li><strong>Action:</strong> Ben D to follow up regarding missing channel-format details on the comms-planning Notion.</li>
+                        </ul>
+
+                        <h2>5. Membership Review</h2>
+                        <ul>
+                            <li>A pending membership application was reviewed. The candidate meets the published criteria. Daniel T updated his vote from &ldquo;maybe&rdquo; to &ldquo;yes&rdquo;. Ben D to confirm with Chris O.</li>
+                        </ul>
+
+                        <h2>6. External Outreach Item &mdash; Deferred</h2>
+                        <ul>
+                            <li>A proposed external outreach option was discussed but not concluded. <strong>Action:</strong> Ben D to consult the association&rsquo;s legal advisor before any further action. Item to be revisited.</li>
+                        </ul>
+
+                        <h2>7. Board Members On Call &mdash; Deferred</h2>
+                        <ul>
+                            <li>Discussion of an availability protocol proposed by an external coordinator deferred to next week to allow Chris O and Michelle T to contribute. The proposer is comfortable with the delay.</li>
+                        </ul>
+
+                        <h2>8. Check-out</h2>
+                        <ul>
+                            <li>Members shared closing reflections. The board acknowledged the workload pressure and the shift to backup-plan thinking, while noting confidence in the agreed plan.</li>
+                        </ul>
+
+                        <h2>Action Items</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Action</th><th>Due</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Spec Humans shift-flow simplification and send to Peter D</td><td>Tonight</td></tr>
+                                <tr><td>Peter D</td><td>Review and integrate Daniel T&rsquo;s spec</td><td>This week</td></tr>
+                                <tr><td>Daniela M S</td><td>Coordinate urgent volunteer email with the comms team</td><td>This week</td></tr>
+                                <tr><td>Daniela M S</td><td>Validate which shifts are genuinely critical with department leads</td><td>This week</td></tr>
+                                <tr><td>Daniela M S</td><td>Push volunteer-recruitment message at Thursday community call</td><td>Thursday</td></tr>
+                                <tr><td>Ben D</td><td>Consult legal advisor on external outreach option</td><td>This week</td></tr>
+                                <tr><td>Ben D</td><td>Follow up regarding comms-planning Notion channel formats</td><td>This week</td></tr>
+                                <tr><td>Ben D</td><td>Confirm pending membership vote with Chris O</td><td>This week</td></tr>
+                                <tr><td>Ben D</td><td>Reschedule &ldquo;board members on call&rdquo; discussion to next week&rsquo;s agenda</td><td>Next meeting</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Minutes auto-generated and sanitised for publication.</em></p>
+                    </div>
+                </div>
+
+                <!-- SPANISH -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Presidente:</strong> Ben D (facilitador)<br>
+                        <strong>Junta presente:</strong> Daniel T, Ben D, Peter D, Pablo V, Ward D<br>
+                        <strong>Tambi&eacute;n presentes:</strong> Daniela M S<br>
+                        <strong>Excusas:</strong> Chris O, Michelle T, Victor P
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Saludo Inicial y Agenda</h2>
+                        <ul>
+                            <li>Las personas miembros compartieron breves actualizaciones personales.</li>
+                            <li>Pablo V indic&oacute; que tendr&aacute; disponibilidad limitada durante la pr&oacute;xima semana debido a compromisos personales.</li>
+                            <li>Se revis&oacute; la agenda; el punto de Pablo V sobre la captaci&oacute;n de voluntariado se integr&oacute; en la actualizaci&oacute;n de producci&oacute;n.</li>
+                        </ul>
+
+                        <h2>2. Actualizaci&oacute;n de Producci&oacute;n</h2>
+                        <ul>
+                            <li>Daniela M S inform&oacute; que los pagos a proveedores y la firma de contratos comienzan esta semana. Los elementos m&aacute;s sensibles al tiempo (alquiler de cabinas y ba&ntilde;os) no pueden aplazarse m&aacute;s, dada la disponibilidad limitada de proveedores en la regi&oacute;n durante el verano.</li>
+                            <li>La junta confirm&oacute; que los pagos a proveedores deben realizarse seg&uacute;n lo previsto. Retrasar los pagos no reducir&iacute;a el riesgo global.</li>
+                        </ul>
+
+                        <h2>3. Captaci&oacute;n de Voluntariado &mdash; Roles Cr&iacute;ticos</h2>
+                        <ul>
+                            <li>Pablo V y Daniela M S informaron sobre una llamada previa a la reuni&oacute;n con las personas coordinadoras de Cantina, en la que se destacaron carencias agudas de voluntariado en las semanas de montaje, evento y desmontaje, particularmente en Cantina.</li>
+                            <li>Pablo V propuso un plan de tres partes, acordado por la junta:
+                                <ol>
+                                    <li><strong>Simplificar el flujo de inscripci&oacute;n de voluntariado</strong> en la aplicaci&oacute;n Humans, de modo que las personas voluntarias nuevas puedan registrarse para un turno con la informaci&oacute;n m&iacute;nima necesaria, completando el resto de su perfil despu&eacute;s.</li>
+                                    <li><strong>Mostrar por defecto solo los turnos &laquo;cr&iacute;ticos&raquo;</strong>, usando el indicador existente de cr&iacute;tico / importante / regular en los turnos, hasta que los roles cr&iacute;ticos est&eacute;n cubiertos.</li>
+                                    <li><strong>Enviar un correo urgente claramente redactado</strong> a la comunidad existente comunicando la necesidad genuina de voluntariado en roles cr&iacute;ticos.</li>
+                                </ol>
+                            </li>
+                            <li><strong>Decisi&oacute;n:</strong> Daniel T especificar&aacute; los cambios en la aplicaci&oacute;n esta misma noche y los enviar&aacute; a Peter D para revisi&oacute;n e integraci&oacute;n. Peter D indic&oacute; disponibilidad limitada a mitad de semana.</li>
+                            <li><strong>Decisi&oacute;n:</strong> Daniela M S coordinar&aacute; con el equipo de comms la comunicaci&oacute;n urgente y empujar&aacute; el mensaje de captaci&oacute;n de voluntariado en la llamada comunitaria del jueves.</li>
+                            <li><strong>Decisi&oacute;n:</strong> Daniela M S confirmar&aacute; con las personas l&iacute;deres de departamento qu&eacute; turnos son genuinamente cr&iacute;ticos para que el filtro por defecto sea honesto.</li>
+                        </ul>
+
+                        <h4>Planes de Contingencia</h4>
+                        <ul>
+                            <li>Ward D y Daniel T discutieron opciones de respaldo en caso de que la captaci&oacute;n quede corta, incluyendo un alcance de construcci&oacute;n reducido y arreglos externos de catering para Cantina. La junta acord&oacute; que la planificaci&oacute;n de contingencia debe proceder en paralelo, pero que el plan de captaci&oacute;n debe intentarse primero.</li>
+                            <li>Daniela M S se&ntilde;al&oacute; que mensajes similares de urgencia de captaci&oacute;n se env&iacute;an cada a&ntilde;o y pueden haber perdido impacto; esto influy&oacute; en la decisi&oacute;n de combinar la mensajer&iacute;a con cambios concretos en la aplicaci&oacute;n.</li>
+                            <li>Daniel T propuso comenzar la captaci&oacute;n para la construcci&oacute;n del a&ntilde;o que viene durante el evento de este a&ntilde;o, para romper el ciclo de planificaci&oacute;n tard&iacute;a a futuro.</li>
+                        </ul>
+
+                        <h2>4. Comunicaciones</h2>
+                        <ul>
+                            <li>Ben D actualiz&oacute; a la junta sobre las conversaciones de la &uacute;ltima semana para reforzar el equipo de comms. Se han incorporado nuevas personas colaboradoras en apoyo al equipo.</li>
+                            <li>Daniela M S ha reestructurado la divisi&oacute;n de comms: redes sociales y bolet&iacute;n gestionadas por personas l&iacute;deres distintas. El Notion compartido de planificaci&oacute;n de comms se mantiene actualizado.</li>
+                            <li>Una vez que la funci&oacute;n de mensajer&iacute;a segmentada en Humans est&eacute; lista (previsto para el final de este fin de semana), comms pasar&aacute; a un alcance altamente segmentado (recordatorios de turnos, recordatorios de entradas) junto con los mensajes diarios de un solo tema.</li>
+                            <li><strong>Acci&oacute;n:</strong> Ben D dar&aacute; seguimiento sobre detalles de formato de canales que faltan en el Notion de planificaci&oacute;n de comms.</li>
+                        </ul>
+
+                        <h2>5. Revisi&oacute;n de Membres&iacute;a</h2>
+                        <ul>
+                            <li>Se revis&oacute; una solicitud de membres&iacute;a pendiente. La persona candidata cumple los criterios publicados. Daniel T actualiz&oacute; su voto de &laquo;quiz&aacute;s&raquo; a &laquo;s&iacute;&raquo;. Ben D confirmar&aacute; con Chris O.</li>
+                        </ul>
+
+                        <h2>6. Punto de Alcance Externo &mdash; Aplazado</h2>
+                        <ul>
+                            <li>Se discuti&oacute; una opci&oacute;n propuesta de alcance externo, pero no se concluy&oacute;. <strong>Acci&oacute;n:</strong> Ben D consultar&aacute; con la asesor&iacute;a legal de la asociaci&oacute;n antes de cualquier acci&oacute;n adicional. El punto se retomar&aacute;.</li>
+                        </ul>
+
+                        <h2>7. Personas de la Junta de Guardia &mdash; Aplazado</h2>
+                        <ul>
+                            <li>La discusi&oacute;n de un protocolo de disponibilidad propuesto por una persona coordinadora externa se aplaza a la pr&oacute;xima semana para permitir la contribuci&oacute;n de Chris O y Michelle T. Quien lo propone est&aacute; conforme con el aplazamiento.</li>
+                        </ul>
+
+                        <h2>8. Cierre</h2>
+                        <ul>
+                            <li>Las personas miembros compartieron breves reflexiones de cierre. La junta reconoci&oacute; la presi&oacute;n de carga de trabajo y el cambio hacia el pensamiento de plan de respaldo, manifestando al mismo tiempo confianza en el plan acordado.</li>
+                        </ul>
+
+                        <h2>Puntos de Acci&oacute;n</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Acci&oacute;n</th><th>Plazo</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Especificar la simplificaci&oacute;n del flujo de turnos en Humans y enviarla a Peter D</td><td>Esta noche</td></tr>
+                                <tr><td>Peter D</td><td>Revisar e integrar la especificaci&oacute;n de Daniel T</td><td>Esta semana</td></tr>
+                                <tr><td>Daniela M S</td><td>Coordinar el correo urgente de voluntariado con el equipo de comms</td><td>Esta semana</td></tr>
+                                <tr><td>Daniela M S</td><td>Validar con personas l&iacute;deres de departamento qu&eacute; turnos son genuinamente cr&iacute;ticos</td><td>Esta semana</td></tr>
+                                <tr><td>Daniela M S</td><td>Empujar el mensaje de captaci&oacute;n de voluntariado en la llamada comunitaria del jueves</td><td>Jueves</td></tr>
+                                <tr><td>Ben D</td><td>Consultar a la asesor&iacute;a legal sobre la opci&oacute;n de alcance externo</td><td>Esta semana</td></tr>
+                                <tr><td>Ben D</td><td>Dar seguimiento sobre formatos de canales en el Notion de planificaci&oacute;n de comms</td><td>Esta semana</td></tr>
+                                <tr><td>Ben D</td><td>Confirmar el voto pendiente de membres&iacute;a con Chris O</td><td>Esta semana</td></tr>
+                                <tr><td>Ben D</td><td>Reagendar la discusi&oacute;n de &laquo;personas de la junta de guardia&raquo; en la agenda de la pr&oacute;xima reuni&oacute;n</td><td>Pr&oacute;xima reuni&oacute;n</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Actas generadas autom&aacute;ticamente y depuradas para publicaci&oacute;n.</em></p>
+                    </div>
+                </div>
+
+                <!-- FRENCH -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Pr&eacute;sident :</strong> Ben D (facilitateur)<br>
+                        <strong>Conseil pr&eacute;sent :</strong> Daniel T, Ben D, Peter D, Pablo V, Ward D<br>
+                        <strong>&Eacute;galement pr&eacute;sente :</strong> Daniela M S<br>
+                        <strong>Excus&eacute;s :</strong> Chris O, Michelle T, Victor P
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Tour de Table et Ordre du Jour</h2>
+                        <ul>
+                            <li>Les membres ont partag&eacute; de br&egrave;ves mises &agrave; jour personnelles.</li>
+                            <li>Pablo V a indiqu&eacute; qu&rsquo;il aurait une disponibilit&eacute; limit&eacute;e la semaine &agrave; venir en raison d&rsquo;engagements personnels.</li>
+                            <li>L&rsquo;ordre du jour a &eacute;t&eacute; revu ; le point de Pablo V sur le recrutement b&eacute;n&eacute;vole a &eacute;t&eacute; int&eacute;gr&eacute; &agrave; la mise &agrave; jour de production.</li>
+                        </ul>
+
+                        <h2>2. Mise &agrave; Jour Production</h2>
+                        <ul>
+                            <li>Daniela M S a indiqu&eacute; que les paiements aux fournisseurs et la signature des contrats commencent cette semaine. Les &eacute;l&eacute;ments les plus sensibles au temps (location de cabines et de toilettes) ne peuvent &ecirc;tre report&eacute;s davantage compte tenu de la disponibilit&eacute; limit&eacute;e des fournisseurs r&eacute;gionaux pendant l&rsquo;&eacute;t&eacute;.</li>
+                            <li>Le conseil a confirm&eacute; que les paiements aux fournisseurs doivent se faire selon le calendrier pr&eacute;vu. Retarder les paiements ne r&eacute;duirait pas le risque global.</li>
+                        </ul>
+
+                        <h2>3. Recrutement B&eacute;n&eacute;vole &mdash; R&ocirc;les Critiques</h2>
+                        <ul>
+                            <li>Pablo V et Daniela M S ont rendu compte d&rsquo;un appel pr&eacute;-r&eacute;union avec les coordinateurs de Cantina mettant en lumi&egrave;re des p&eacute;nuries aigu&euml;s de b&eacute;n&eacute;voles sur les semaines de montage, d&rsquo;&eacute;v&eacute;nement et de d&eacute;montage, particuli&egrave;rement pour la Cantina.</li>
+                            <li>Pablo V a propos&eacute; un plan en trois volets, valid&eacute; par le conseil :
+                                <ol>
+                                    <li><strong>Simplifier le parcours d&rsquo;inscription b&eacute;n&eacute;vole</strong> dans l&rsquo;application Humans afin que les nouveaux b&eacute;n&eacute;voles puissent s&rsquo;inscrire &agrave; un cr&eacute;neau avec le minimum d&rsquo;informations requises, en compl&eacute;tant le reste de leur profil par la suite.</li>
+                                    <li><strong>Afficher par d&eacute;faut uniquement les cr&eacute;neaux &laquo;&nbsp;critiques&nbsp;&raquo;</strong>, en utilisant le marqueur existant critique / important / r&eacute;gulier sur les cr&eacute;neaux, jusqu&rsquo;&agrave; ce que les r&ocirc;les critiques soient pourvus.</li>
+                                    <li><strong>Envoyer un email urgent clairement formul&eacute;</strong> &agrave; la communaut&eacute; existante pour communiquer le besoin r&eacute;el de b&eacute;n&eacute;voles sur les r&ocirc;les critiques.</li>
+                                </ol>
+                            </li>
+                            <li><strong>D&eacute;cision :</strong> Daniel T sp&eacute;cifiera les modifications de l&rsquo;application ce soir et les enverra &agrave; Peter D pour revue et int&eacute;gration. Peter D a not&eacute; une disponibilit&eacute; limit&eacute;e en milieu de semaine.</li>
+                            <li><strong>D&eacute;cision :</strong> Daniela M S coordonnera avec l&rsquo;&eacute;quipe communications la communication urgente et portera le message de recrutement b&eacute;n&eacute;vole lors de l&rsquo;appel communautaire de jeudi.</li>
+                            <li><strong>D&eacute;cision :</strong> Daniela M S confirmera avec les responsables de d&eacute;partement quels cr&eacute;neaux sont r&eacute;ellement critiques afin que le filtre par d&eacute;faut soit honn&ecirc;te.</li>
+                        </ul>
+
+                        <h4>Plans de Repli</h4>
+                        <ul>
+                            <li>Ward D et Daniel T ont discut&eacute; d&rsquo;options de repli si le recrutement reste insuffisant, notamment une r&eacute;duction du p&eacute;rim&egrave;tre de construction et des arrangements de restauration externe pour la Cantina. Le conseil a convenu que la planification de repli doit avancer en parall&egrave;le, mais que le plan de recrutement doit &ecirc;tre essay&eacute; en premier.</li>
+                            <li>Daniela M S a fait remarquer que des messages d&rsquo;urgence de recrutement similaires sont envoy&eacute;s chaque ann&eacute;e et peuvent avoir perdu de leur impact ; cela a motiv&eacute; le choix de combiner messages et changements concrets dans l&rsquo;application.</li>
+                            <li>Daniel T a propos&eacute; de commencer le recrutement pour la construction de l&rsquo;ann&eacute;e prochaine pendant l&rsquo;&eacute;v&eacute;nement de cette ann&eacute;e, pour rompre le cycle de planification tardive.</li>
+                        </ul>
+
+                        <h2>4. Communications</h2>
+                        <ul>
+                            <li>Ben D a fait le point au conseil sur les &eacute;changes de la semaine pass&eacute;e visant &agrave; renforcer l&rsquo;&eacute;quipe communications. De nouveaux contributeurs ont rejoint l&rsquo;&eacute;quipe en soutien.</li>
+                            <li>Daniela M S a restructur&eacute; la r&eacute;partition communications : r&eacute;seaux sociaux et newsletter port&eacute;s par des responsables distincts. Le Notion partag&eacute; de planification communications est tenu &agrave; jour.</li>
+                            <li>Une fois la fonctionnalit&eacute; de messagerie cibl&eacute;e dans Humans livr&eacute;e (pr&eacute;vue pour la fin de ce week-end), les communications passeront &agrave; une diffusion hautement cibl&eacute;e (rappels de cr&eacute;neaux, rappels de billets) en parall&egrave;le des messages quotidiens mono-sujet.</li>
+                            <li><strong>Action :</strong> Ben D fera le suivi concernant les d&eacute;tails de format de canaux manquants sur le Notion de planification communications.</li>
+                        </ul>
+
+                        <h2>5. Examen d&rsquo;Adh&eacute;sion</h2>
+                        <ul>
+                            <li>Une candidature d&rsquo;adh&eacute;sion en attente a &eacute;t&eacute; examin&eacute;e. La personne candidate r&eacute;pond aux crit&egrave;res publi&eacute;s. Daniel T a modifi&eacute; son vote de &laquo;&nbsp;peut-&ecirc;tre&nbsp;&raquo; &agrave; &laquo;&nbsp;oui&nbsp;&raquo;. Ben D confirmera avec Chris O.</li>
+                        </ul>
+
+                        <h2>6. Point de Communication Externe &mdash; Report&eacute;</h2>
+                        <ul>
+                            <li>Une option propos&eacute;e de communication externe a &eacute;t&eacute; discut&eacute;e mais non conclue. <strong>Action :</strong> Ben D consultera le conseil juridique de l&rsquo;association avant toute action ult&eacute;rieure. Le point sera repris.</li>
+                        </ul>
+
+                        <h2>7. Membres du Conseil de Garde &mdash; Report&eacute;</h2>
+                        <ul>
+                            <li>La discussion d&rsquo;un protocole de disponibilit&eacute; propos&eacute; par une personne coordinatrice externe est report&eacute;e &agrave; la semaine prochaine pour permettre la contribution de Chris O et Michelle T. La personne propos&eacute;e est &agrave; l&rsquo;aise avec ce report.</li>
+                        </ul>
+
+                        <h2>8. Cl&ocirc;ture</h2>
+                        <ul>
+                            <li>Les membres ont partag&eacute; de br&egrave;ves r&eacute;flexions de cl&ocirc;ture. Le conseil a reconnu la pression de charge de travail et le glissement vers une r&eacute;flexion de plan de repli, tout en exprimant sa confiance dans le plan convenu.</li>
+                        </ul>
+
+                        <h2>Points d&rsquo;Action</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Personne</th><th>Action</th><th>&Eacute;ch&eacute;ance</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Sp&eacute;cifier la simplification du parcours de cr&eacute;neaux dans Humans et l&rsquo;envoyer &agrave; Peter D</td><td>Ce soir</td></tr>
+                                <tr><td>Peter D</td><td>Revoir et int&eacute;grer la sp&eacute;cification de Daniel T</td><td>Cette semaine</td></tr>
+                                <tr><td>Daniela M S</td><td>Coordonner l&rsquo;email urgent b&eacute;n&eacute;voles avec l&rsquo;&eacute;quipe communications</td><td>Cette semaine</td></tr>
+                                <tr><td>Daniela M S</td><td>Valider avec les responsables de d&eacute;partement les cr&eacute;neaux r&eacute;ellement critiques</td><td>Cette semaine</td></tr>
+                                <tr><td>Daniela M S</td><td>Porter le message de recrutement b&eacute;n&eacute;voles &agrave; l&rsquo;appel communautaire de jeudi</td><td>Jeudi</td></tr>
+                                <tr><td>Ben D</td><td>Consulter le conseil juridique sur l&rsquo;option de communication externe</td><td>Cette semaine</td></tr>
+                                <tr><td>Ben D</td><td>Faire le suivi des formats de canaux sur le Notion de planification communications</td><td>Cette semaine</td></tr>
+                                <tr><td>Ben D</td><td>Confirmer le vote d&rsquo;adh&eacute;sion en attente avec Chris O</td><td>Cette semaine</td></tr>
+                                <tr><td>Ben D</td><td>Reporter la discussion &laquo;&nbsp;membres du conseil de garde&nbsp;&raquo; &agrave; l&rsquo;ordre du jour de la semaine prochaine</td><td>Prochaine r&eacute;union</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Proc&egrave;s-verbaux g&eacute;n&eacute;r&eacute;s automatiquement et nettoy&eacute;s pour publication.</em></p>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanze tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Presidente:</strong> Ben D (facilitatore)<br>
+                        <strong>Consiglio presente:</strong> Daniel T, Ben D, Peter D, Pablo V, Ward D<br>
+                        <strong>Anche presente:</strong> Daniela M S<br>
+                        <strong>Assenti giustificati:</strong> Chris O, Michelle T, Victor P
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Apertura e Ordine del Giorno</h2>
+                        <ul>
+                            <li>I membri hanno condiviso brevi aggiornamenti personali.</li>
+                            <li>Pablo V ha segnalato che avr&agrave; disponibilit&agrave; limitata nella prossima settimana per impegni personali.</li>
+                            <li>L&rsquo;ordine del giorno &egrave; stato rivisto; il punto di Pablo V sul reclutamento volontari &egrave; stato integrato nell&rsquo;aggiornamento di produzione.</li>
+                        </ul>
+
+                        <h2>2. Aggiornamento Produzione</h2>
+                        <ul>
+                            <li>Daniela M S ha riferito che i pagamenti ai fornitori e la firma dei contratti iniziano questa settimana. Le voci pi&ugrave; sensibili dal punto di vista temporale (noleggio cabine e bagni) non possono essere ulteriormente rinviate, data la limitata disponibilit&agrave; di fornitori regionali durante l&rsquo;estate.</li>
+                            <li>Il consiglio ha confermato che i pagamenti ai fornitori devono procedere secondo il calendario previsto. Posticipare i pagamenti non ridurrebbe il rischio complessivo.</li>
+                        </ul>
+
+                        <h2>3. Reclutamento Volontari &mdash; Ruoli Critici</h2>
+                        <ul>
+                            <li>Pablo V e Daniela M S hanno riferito di una chiamata pre-riunione con i coordinatori della Cantina che ha evidenziato gravi carenze di volontari nelle settimane di montaggio, evento e smontaggio, in particolare per la Cantina.</li>
+                            <li>Pablo V ha proposto un piano in tre punti, condiviso dal consiglio:
+                                <ol>
+                                    <li><strong>Semplificare il flusso di iscrizione volontari</strong> nell&rsquo;applicazione Humans in modo che i nuovi volontari possano registrarsi a un turno con le informazioni minime richieste, completando il resto del profilo successivamente.</li>
+                                    <li><strong>Mostrare di default solo i turni &laquo;critici&raquo;</strong>, utilizzando l&rsquo;indicatore esistente critico / importante / regolare sui turni, finch&eacute; i ruoli critici non siano coperti.</li>
+                                    <li><strong>Inviare un&rsquo;email urgente formulata chiaramente</strong> alla comunit&agrave; esistente per comunicare la necessit&agrave; reale di volontari nei ruoli critici.</li>
+                                </ol>
+                            </li>
+                            <li><strong>Decisione:</strong> Daniel T specificher&agrave; le modifiche all&rsquo;applicazione questa sera e le invier&agrave; a Peter D per revisione e integrazione. Peter D ha indicato disponibilit&agrave; limitata a met&agrave; settimana.</li>
+                            <li><strong>Decisione:</strong> Daniela M S coordiner&agrave; con il team comunicazioni la comunicazione urgente e porter&agrave; il messaggio di reclutamento volontari alla chiamata comunitaria di gioved&igrave;.</li>
+                            <li><strong>Decisione:</strong> Daniela M S confermer&agrave; con i responsabili di dipartimento quali turni siano realmente critici, in modo che il filtro predefinito sia onesto.</li>
+                        </ul>
+
+                        <h4>Pianificazione di Contingenza</h4>
+                        <ul>
+                            <li>Ward D e Daniel T hanno discusso opzioni di riserva nel caso il reclutamento risulti insufficiente, inclusi un perimetro di costruzione ridotto e accordi di catering esterno per la Cantina. Il consiglio ha concordato che la pianificazione di contingenza proceda in parallelo, ma che il piano di reclutamento sia tentato per primo.</li>
+                            <li>Daniela M S ha osservato che messaggi di urgenza simili vengono inviati ogni anno e potrebbero aver perso impatto; questo ha motivato la scelta di combinare i messaggi con modifiche concrete all&rsquo;applicazione.</li>
+                            <li>Daniel T ha proposto di iniziare il reclutamento per la costruzione del prossimo anno durante l&rsquo;evento di quest&rsquo;anno, per rompere il ciclo di pianificazione tardiva.</li>
+                        </ul>
+
+                        <h2>4. Comunicazioni</h2>
+                        <ul>
+                            <li>Ben D ha aggiornato il consiglio sulle conversazioni della scorsa settimana per rafforzare il team comunicazioni. Nuove persone collaboratrici sono state coinvolte a supporto del team.</li>
+                            <li>Daniela M S ha ristrutturato la suddivisione delle comunicazioni: social media e newsletter gestiti da responsabili distinti. Il Notion condiviso di pianificazione comunicazioni viene mantenuto aggiornato.</li>
+                            <li>Una volta rilasciata la funzionalit&agrave; di messaggistica mirata in Humans (prevista per la fine di questo fine settimana), le comunicazioni passeranno a un&rsquo;attivit&agrave; di diffusione altamente mirata (promemoria turni, promemoria biglietti) in parallelo ai messaggi giornalieri mono-tema.</li>
+                            <li><strong>Azione:</strong> Ben D dar&agrave; seguito ai dettagli mancanti di formato dei canali sul Notion di pianificazione comunicazioni.</li>
+                        </ul>
+
+                        <h2>5. Revisione Adesione</h2>
+                        <ul>
+                            <li>&Egrave; stata esaminata una richiesta di adesione in sospeso. La persona candidata soddisfa i criteri pubblicati. Daniel T ha aggiornato il proprio voto da &laquo;forse&raquo; a &laquo;s&igrave;&raquo;. Ben D confermer&agrave; con Chris O.</li>
+                        </ul>
+
+                        <h2>6. Punto su Comunicazione Esterna &mdash; Rinviato</h2>
+                        <ul>
+                            <li>&Egrave; stata discussa un&rsquo;opzione proposta di comunicazione esterna ma non si &egrave; giunti a una conclusione. <strong>Azione:</strong> Ben D consulter&agrave; il consulente legale dell&rsquo;associazione prima di qualsiasi ulteriore azione. Il punto sar&agrave; ripreso.</li>
+                        </ul>
+
+                        <h2>7. Membri del Consiglio in Reperibilit&agrave; &mdash; Rinviato</h2>
+                        <ul>
+                            <li>La discussione di un protocollo di disponibilit&agrave; proposto da una persona coordinatrice esterna &egrave; rinviata alla prossima settimana per consentire il contributo di Chris O e Michelle T. La persona proponente &egrave; d&rsquo;accordo con il rinvio.</li>
+                        </ul>
+
+                        <h2>8. Chiusura</h2>
+                        <ul>
+                            <li>I membri hanno condiviso brevi riflessioni di chiusura. Il consiglio ha riconosciuto la pressione del carico di lavoro e il passaggio a un pensiero di piano di riserva, esprimendo al contempo fiducia nel piano concordato.</li>
+                        </ul>
+
+                        <h2>Punti d&rsquo;Azione</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Azione</th><th>Scadenza</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Specificare la semplificazione del flusso turni in Humans e inviarla a Peter D</td><td>Stasera</td></tr>
+                                <tr><td>Peter D</td><td>Revisionare e integrare la specifica di Daniel T</td><td>Questa settimana</td></tr>
+                                <tr><td>Daniela M S</td><td>Coordinare l&rsquo;email urgente volontari con il team comunicazioni</td><td>Questa settimana</td></tr>
+                                <tr><td>Daniela M S</td><td>Validare con i responsabili di dipartimento quali turni siano realmente critici</td><td>Questa settimana</td></tr>
+                                <tr><td>Daniela M S</td><td>Portare il messaggio di reclutamento volontari alla chiamata comunitaria di gioved&igrave;</td><td>Gioved&igrave;</td></tr>
+                                <tr><td>Ben D</td><td>Consultare il consulente legale sull&rsquo;opzione di comunicazione esterna</td><td>Questa settimana</td></tr>
+                                <tr><td>Ben D</td><td>Dare seguito ai formati dei canali sul Notion di pianificazione comunicazioni</td><td>Questa settimana</td></tr>
+                                <tr><td>Ben D</td><td>Confermare il voto di adesione in sospeso con Chris O</td><td>Questa settimana</td></tr>
+                                <tr><td>Ben D</td><td>Riprogrammare la discussione &laquo;membri del consiglio in reperibilit&agrave;&raquo; nell&rsquo;ordine del giorno della prossima riunione</td><td>Prossima riunione</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Verbali generati automaticamente e ripuliti per la pubblicazione.</em></p>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Bei Diskrepanzen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Vorsitz:</strong> Ben D (Moderator)<br>
+                        <strong>Vorstand anwesend:</strong> Daniel T, Ben D, Peter D, Pablo V, Ward D<br>
+                        <strong>Ebenfalls anwesend:</strong> Daniela M S<br>
+                        <strong>Entschuldigt:</strong> Chris O, Michelle T, Victor P
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Eingangsrunde und Tagesordnung</h2>
+                        <ul>
+                            <li>Die Mitglieder gaben kurze pers&ouml;nliche Updates.</li>
+                            <li>Pablo V wies darauf hin, dass er aufgrund pers&ouml;nlicher Verpflichtungen in der kommenden Woche eingeschr&auml;nkt verf&uuml;gbar sein wird.</li>
+                            <li>Die Tagesordnung wurde durchgesehen; Pablo Vs Punkt zur Freiwilligengewinnung wurde in das Produktionsupdate eingegliedert.</li>
+                        </ul>
+
+                        <h2>2. Produktionsupdate</h2>
+                        <ul>
+                            <li>Daniela M S berichtete, dass die Lieferantenzahlungen und Vertragsunterzeichnungen diese Woche beginnen. Die zeitkritischsten Posten (Anmietung von Kabinen und Toiletten) k&ouml;nnen aufgrund der begrenzten Verf&uuml;gbarkeit regionaler Lieferanten im Sommer nicht weiter aufgeschoben werden.</li>
+                            <li>Der Vorstand best&auml;tigte, dass die Lieferantenzahlungen wie geplant erfolgen sollen. Eine Verz&ouml;gerung der Zahlungen w&uuml;rde das Gesamtrisiko nicht verringern.</li>
+                        </ul>
+
+                        <h2>3. Freiwilligengewinnung &mdash; Kritische Rollen</h2>
+                        <ul>
+                            <li>Pablo V und Daniela M S berichteten von einem Vorgespr&auml;ch mit den Cantina-Koordinatorinnen und -Koordinatoren, das auf akute Engp&auml;sse bei den Freiwilligen in den Wochen Aufbau, Veranstaltung und Abbau hingewiesen hat, insbesondere f&uuml;r die Cantina.</li>
+                            <li>Pablo V schlug einen dreiteiligen Plan vor, der vom Vorstand mitgetragen wurde:
+                                <ol>
+                                    <li><strong>Vereinfachung des Anmeldeprozesses f&uuml;r Freiwillige</strong> in der Humans-Anwendung, sodass neue Freiwillige sich mit den minimal erforderlichen Angaben f&uuml;r eine Schicht eintragen k&ouml;nnen und ihr Profil danach vervollst&auml;ndigen.</li>
+                                    <li><strong>Standardm&auml;&szlig;ig nur &raquo;kritische&laquo; Schichten anzeigen</strong>, unter Verwendung der bestehenden Markierung kritisch / wichtig / regul&auml;r auf den Schichten, bis die kritischen Rollen besetzt sind.</li>
+                                    <li><strong>Eine klar formulierte dringende E-Mail</strong> an die bestehende Community senden, die den realen Bedarf an Freiwilligen f&uuml;r kritische Rollen kommuniziert.</li>
+                                </ol>
+                            </li>
+                            <li><strong>Beschluss:</strong> Daniel T spezifiziert die Anwendungs&auml;nderungen heute Abend und sendet sie an Peter D zur Pr&uuml;fung und Integration. Peter D wies auf eingeschr&auml;nkte Verf&uuml;gbarkeit zur Wochenmitte hin.</li>
+                            <li><strong>Beschluss:</strong> Daniela M S koordiniert mit dem Comms-Team die dringende Kommunikation und tr&auml;gt die Botschaft zur Freiwilligengewinnung im Community-Call am Donnerstag vor.</li>
+                            <li><strong>Beschluss:</strong> Daniela M S kl&auml;rt mit den Departmentleitungen, welche Schichten tats&auml;chlich kritisch sind, damit der Standardfilter ehrlich ist.</li>
+                        </ul>
+
+                        <h4>Notfallplanung</h4>
+                        <ul>
+                            <li>Ward D und Daniel T er&ouml;rterten R&uuml;ckfalloptionen f&uuml;r den Fall unzureichender Gewinnung, einschlie&szlig;lich eines reduzierten Aufbau-Umfangs und externer Catering-Vereinbarungen f&uuml;r die Cantina. Der Vorstand stimmte zu, dass Notfallplanung parallel verfolgt wird, dass aber zun&auml;chst der Gewinnungsplan versucht werden soll.</li>
+                            <li>Daniela M S merkte an, dass &auml;hnliche Dringlichkeitsbotschaften j&auml;hrlich versendet werden und an Wirkung verloren haben k&ouml;nnten; das hat die Entscheidung gepr&auml;gt, Botschaften mit konkreten Anwendungs&auml;nderungen zu kombinieren.</li>
+                            <li>Daniel T schlug vor, die Gewinnung f&uuml;r den Aufbau des n&auml;chsten Jahres bereits w&auml;hrend des diesj&auml;hrigen Events zu beginnen, um den Kreislauf der sp&auml;ten Planung zu durchbrechen.</li>
+                        </ul>
+
+                        <h2>4. Kommunikation</h2>
+                        <ul>
+                            <li>Ben D informierte den Vorstand &uuml;ber die Gespr&auml;che der vergangenen Woche zur St&auml;rkung des Comms-Teams. Neue Beitragende wurden zur Unterst&uuml;tzung des Teams hinzugezogen.</li>
+                            <li>Daniela M S hat die Comms-Aufteilung neu strukturiert: Social Media und Newsletter werden von getrennten Verantwortlichen betreut. Das geteilte Comms-Planungs-Notion wird aktuell gehalten.</li>
+                            <li>Sobald die zielgerichtete Nachrichtenfunktion in Humans ausgeliefert ist (voraussichtlich Ende dieses Wochenendes), wechseln die Comms zu hochgradig zielgerichteter Ansprache (z.&nbsp;B. Schicht-Erinnerungen, Ticket-Erinnerungen) parallel zu den t&auml;glichen Ein-Themen-Botschaften.</li>
+                            <li><strong>Aktion:</strong> Ben D folgt den fehlenden Kanal-Format-Details im Comms-Planungs-Notion nach.</li>
+                        </ul>
+
+                        <h2>5. Mitgliedschaftspr&uuml;fung</h2>
+                        <ul>
+                            <li>Ein offener Mitgliedsantrag wurde gepr&uuml;ft. Die kandidierende Person erf&uuml;llt die ver&ouml;ffentlichten Kriterien. Daniel T &auml;nderte sein Votum von &raquo;vielleicht&laquo; auf &raquo;ja&laquo;. Ben D best&auml;tigt mit Chris O.</li>
+                        </ul>
+
+                        <h2>6. Externer Kommunikationspunkt &mdash; Vertagt</h2>
+                        <ul>
+                            <li>Eine vorgeschlagene Option zur externen Kommunikation wurde diskutiert, aber nicht abgeschlossen. <strong>Aktion:</strong> Ben D konsultiert die Rechtsberatung des Vereins vor weiteren Ma&szlig;nahmen. Der Punkt wird wieder aufgegriffen.</li>
+                        </ul>
+
+                        <h2>7. Vorstand auf Bereitschaft &mdash; Vertagt</h2>
+                        <ul>
+                            <li>Die Diskussion eines von einer externen koordinierenden Person vorgeschlagenen Verf&uuml;gbarkeitsprotokolls wird auf n&auml;chste Woche vertagt, damit Chris O und Michelle T sich einbringen k&ouml;nnen. Die antragstellende Person ist mit der Verschiebung einverstanden.</li>
+                        </ul>
+
+                        <h2>8. Schlussrunde</h2>
+                        <ul>
+                            <li>Die Mitglieder teilten kurze Schlussreflexionen. Der Vorstand erkannte den Druck der Arbeitslast und den Wechsel zu R&uuml;ckfalldenken an, &auml;u&szlig;erte zugleich Vertrauen in den vereinbarten Plan.</li>
+                        </ul>
+
+                        <h2>Aktionspunkte</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Aktion</th><th>F&auml;lligkeit</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Spezifikation der Vereinfachung des Schichtablaufs in Humans erstellen und an Peter D senden</td><td>Heute Abend</td></tr>
+                                <tr><td>Peter D</td><td>Spezifikation von Daniel T pr&uuml;fen und integrieren</td><td>Diese Woche</td></tr>
+                                <tr><td>Daniela M S</td><td>Dringende Freiwilligen-E-Mail mit dem Comms-Team koordinieren</td><td>Diese Woche</td></tr>
+                                <tr><td>Daniela M S</td><td>Mit den Departmentleitungen kl&auml;ren, welche Schichten tats&auml;chlich kritisch sind</td><td>Diese Woche</td></tr>
+                                <tr><td>Daniela M S</td><td>Botschaft zur Freiwilligengewinnung im Community-Call am Donnerstag vortragen</td><td>Donnerstag</td></tr>
+                                <tr><td>Ben D</td><td>Rechtsberatung zur Option der externen Kommunikation konsultieren</td><td>Diese Woche</td></tr>
+                                <tr><td>Ben D</td><td>Kanal-Formate im Comms-Planungs-Notion nachverfolgen</td><td>Diese Woche</td></tr>
+                                <tr><td>Ben D</td><td>Offene Mitgliedschaftsabstimmung mit Chris O best&auml;tigen</td><td>Diese Woche</td></tr>
+                                <tr><td>Ben D</td><td>Diskussion &raquo;Vorstand auf Bereitschaft&laquo; auf die Tagesordnung der n&auml;chsten Woche verschieben</td><td>N&auml;chste Sitzung</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Protokoll automatisch erstellt und f&uuml;r die Ver&ouml;ffentlichung bereinigt.</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>
