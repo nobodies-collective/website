@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Meeting - May 14, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .resource-links { background: var(--color-bg-secondary); padding: 1.25rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .resource-links h3 { margin: 0 0 0.75rem 0; font-size: 1rem; }
+        .resource-links ul { list-style: none; padding: 0; margin: 0; }
+        .resource-links li { margin-bottom: 0.5rem; }
+        .resource-links a { color: var(--color-accent); font-weight: 500; }
+        .resource-links a:hover { text-decoration: underline; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 2rem; border-radius: 8px; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px; }
+        .transcript-section { margin-top: 2rem; border: 1px solid var(--color-border); border-radius: 8px; }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>Community Meeting</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Thursday 14 May 2026, 19:57 CEST</span>
+                    </div>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>With Daniel T (MC, standing in &mdash; Ellen, the scheduled MC, was unwell), Aaron R, Michael M (nurse), Pablo V, Cupcake, Tilke, the City Planning lead, and community members</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Full Records</h3>
+                        <ul>
+                            <li><a href="2026-05-14-community-transcript.html">Full transcript (English only)</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=NE4sDLKzyuI">Video recording (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/NE4sDLKzyuI" title="Community Meeting - May 14, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Ticketing and Buses</h2>
+                        <ul>
+                            <li>Aaron R confirmed that <strong>Wave 2 ticket sales close tonight</strong>, with prices rising by &euro;20 at midnight. Attendees were encouraged to prompt friends and barrio members who have not yet bought tickets.</li>
+                            <li>Bus tickets are on sale via the website; a couple of routes are already filling, so anyone needing a seat was advised to book promptly.</li>
+                        </ul>
+
+                        <h2>2. Volunteers and Participation</h2>
+                        <ul>
+                            <li>Michael M (nurse) reported that the overall picture has improved from a month ago but remains tight. The first on-site week is still around <strong>50% short of the labour needed for early build</strong> &mdash; unloading containers, construction, getting the site started.</li>
+                            <li>The structural concern is that people who do not come for the first week are then also absent in weeks two and three. A cantina/kitchen team has come together.</li>
+                            <li>Smaller pre-event teams (Barrio Support, LNT) and Gate are well staffed, with strong returning teams. The areas of greatest need are <strong>Malfare shift leads and site leads, and Strike</strong>, which is typically the hardest to staff.</li>
+                            <li>Anyone able to arrive early or stay on for one or more post-event days was asked to come forward. While numbers are below target, the commitment and output of those involved has been exceptional &mdash; a reminder to rest and look after each other.</li>
+                        </ul>
+
+                        <h2>3. City Planning &mdash; Container Placement</h2>
+                        <ul>
+                            <li>Barrio container placement is opening. Initially this will be via the existing PDF method; a new placement tool on Humans is expected to go live this weekend and is the preferred route as it reduces downstream rework.</li>
+                            <li>Barrios can download the PDF and begin planning their layout now. The deadline for finalising container placement is <strong>26&ndash;27 May</strong>.</li>
+                        </ul>
+
+                        <h2>4. Power Grid</h2>
+                        <ul>
+                            <li>Cupcake reported that roughly half of the barrios intending to connect to the grid have completed the required power-use form. Completed forms are the current <strong>top priority</strong> so the grid can be planned properly; barrios connecting to the grid were asked to submit without delay.</li>
+                            <li>Higher consumption from one area is being accommodated through grid reallocation, which the Power team is handling.</li>
+                        </ul>
+
+                        <h2>5. Barrio Build Bus</h2>
+                        <ul>
+                            <li>Cupcake flagged the Barrio Build bus for <strong>Wednesday 1 July</strong>. Interest has reached approximately 27 people &mdash; around the break-even point for running it. Anyone interested was directed to the sign-up links on Discord.</li>
+                        </ul>
+
+                        <h2>6. LNT / Toilets</h2>
+                        <ul>
+                            <li>No LNT representative was on the call, so there was no detailed update. It was noted that toilet provision and maintenance is a substantial line in the event budget (~9.3%).</li>
+                            <li>Pablo V added a forward-looking point that a future site could allow for compostable toilet structures, reducing this cost over time.</li>
+                        </ul>
+
+                        <h2>7. Art Grants</h2>
+                        <ul>
+                            <li>Daniel T gave a <strong>final call for Art Grant applications</strong>. Project leads and artists interested in bringing art to the event were encouraged to apply, and to secure tickets before tonight's price increase. There is an intention to grow the art-grant budget in future years.</li>
+                        </ul>
+
+                        <h2>8. Radical Inclusion &mdash; Guidance for Barrios</h2>
+                        <ul>
+                            <li>Tilke presented on behalf of the Inclusion team. In response to questions from some barrios about ethically complex application decisions amid current global events, the Inclusion team has produced written guidance, posted in the relevant Discord group and available on request by email.</li>
+                            <li>The guidance situates barrio decisions within the existing framework &mdash; the principles (including inclusion), the code of conduct (which every ticket-holder agrees to, covering discrimination and harassment), and the community standards on respectful interaction.</li>
+                            <li>It acknowledges the genuine difficulty barrio and camp leads face when applications touch on highly debated topics, and the tension between including some people and inadvertently excluding others. It also distinguishes discrimination from microaggressions.</li>
+                            <li>Practical tools offered: be specific and concrete in your barrio's stated values rather than relying on generic language; apply a consistent approach to all applicants; move difficult online exchanges into direct conversation; have a written conflict policy prepared in advance so responses are procedural rather than personal; and work towards repair where possible (referencing transformative-justice and community-accountability approaches).</li>
+                            <li>The Inclusion team has broad expertise (queerness, BIPOC, disability, harm reduction) and is available before and during the event; contact details are on the website and in the guidance document.</li>
+                            <li>In discussion, a community member offered a personal reflection on the difficulty of holding a safe, inclusive space for a community with diverse backgrounds and viewpoints. The shared view was that the event has consistently proceeded inclusively and that the Inclusion team's measured, principled approach is valued.</li>
+                            <li>Daniel T underlined that inclusion being a core principle is central to belonging in the community, that it must be handled with nuance, and that the Inclusion team is available and engaged before and during the event (and can be reached during the event via Malfare).</li>
+                        </ul>
+
+                        <h2>9. Flags and Symbols</h2>
+                        <ul>
+                            <li>In response to a question, Daniel T noted the established cultural norm &mdash; consistent with the Burning Man approach &mdash; of not displaying commercial symbols or national flags, to keep associations with the &ldquo;default world&rdquo; off the playa. This has held in practice in prior years.</li>
+                        </ul>
+
+                        <h2>Decisions</h2>
+                        <ul>
+                            <li>Container placement opens via PDF now; the Humans placement tool is expected live this weekend. Final placement deadline is 26&ndash;27 May.</li>
+                            <li>The Barrio Build bus on 1 July will run, having reached the interest threshold.</li>
+                            <li>The Inclusion team's written guidance for barrios stands as the reference for ethically complex application questions.</li>
+                        </ul>
+
+                        <h2>Action Items</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Action</th><th>Due</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>All</td><td>Buy Wave 2 tickets / prompt friends and barrio members before the midnight price increase; book bus tickets while routes remain open</td><td>Tonight</td></tr>
+                                <tr><td>All / camp networks</td><td>Recruit early-arrival volunteers for the first build week; flag interest in Malfare shift leads, site leads, and Strike</td><td>Ongoing</td></tr>
+                                <tr><td>Barrio leads</td><td>Download the placement PDF and begin barrio layout; submit container placement</td><td>By 26&ndash;27 May</td></tr>
+                                <tr><td>Barrios connecting to the grid</td><td>Complete the power-use form</td><td>ASAP</td></tr>
+                                <tr><td>Interested attendees</td><td>Register interest for the Barrio Build bus (1 July) via the Discord links</td><td>Ongoing</td></tr>
+                                <tr><td>Project leads / artists</td><td>Submit Art Grant applications (final call)</td><td>ASAP</td></tr>
+                                <tr><td>Barrio / camp leads</td><td>Read the Inclusion team's guidance; reach out to the Inclusion team for support before or during the event as needed</td><td>Ongoing</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Next call: the following week (regular community call rhythm).</em></p>
+                        <p><em>Minutes prepared from the audio recording.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
+
+                    <div class="attendees">
+                        <strong>Con Daniel T (presentador, sustituyendo &mdash; Ellen, la presentadora prevista, no se encontraba bien), Aaron R, Michael M (nurse), Pablo V, Cupcake, Tilke, el responsable de City Planning, y miembros de la comunidad</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Registros de la Reuni&oacute;n</h3>
+                        <ul>
+                            <li><a href="https://www.youtube.com/watch?v=NE4sDLKzyuI">Grabaci&oacute;n en v&iacute;deo (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/NE4sDLKzyuI" title="Community Meeting - May 14, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Entradas y Autobuses</h2>
+                        <ul>
+                            <li>Aaron R confirm&oacute; que <strong>la venta de entradas de la Oleada 2 cierra esta noche</strong>, con una subida de precio de &euro;20 a medianoche. Se anim&oacute; a los asistentes a avisar a amigos y miembros de barrio que a&uacute;n no han comprado entrada.</li>
+                            <li>Los billetes de autob&uacute;s est&aacute;n a la venta en el sitio web; un par de rutas ya se est&aacute;n llenando, por lo que se recomend&oacute; reservar pronto a quien necesite plaza.</li>
+                        </ul>
+
+                        <h2>2. Voluntarios y Participaci&oacute;n</h2>
+                        <ul>
+                            <li>Michael M (nurse) inform&oacute; de que el panorama general ha mejorado respecto a hace un mes, pero sigue siendo ajustado. La primera semana en el sitio sigue con una <strong>falta de cerca del 50% de la mano de obra necesaria para la construcci&oacute;n temprana</strong> &mdash; descarga de contenedores, construcci&oacute;n, poner en marcha el sitio.</li>
+                            <li>La preocupaci&oacute;n estructural es que quienes no vienen la primera semana tampoco est&aacute;n en la segunda ni la tercera para ayudar. Se ha formado un equipo de cantina/cocina.</li>
+                            <li>Los equipos m&aacute;s peque&ntilde;os previos al evento (Barrio Support, LNT) y Gate est&aacute;n bien cubiertos, con equipos s&oacute;lidos que repiten. Las &aacute;reas de mayor necesidad son <strong>responsables de turno y de sitio de Malfare, y el desmontaje (Strike)</strong>, que suele ser lo m&aacute;s dif&iacute;cil de cubrir.</li>
+                            <li>Se pidi&oacute; que diera un paso adelante quien pueda llegar pronto o quedarse uno o m&aacute;s d&iacute;as despu&eacute;s del evento. Aunque los n&uacute;meros est&aacute;n por debajo del objetivo, el compromiso y el trabajo de quienes participan ha sido excepcional &mdash; un recordatorio para descansar y cuidarse mutuamente.</li>
+                        </ul>
+
+                        <h2>3. City Planning &mdash; Colocaci&oacute;n de Contenedores</h2>
+                        <ul>
+                            <li>Se abre la colocaci&oacute;n de contenedores de barrio. Inicialmente ser&aacute; mediante el m&eacute;todo existente en PDF; se espera que una nueva herramienta de colocaci&oacute;n en Humans entre en funcionamiento este fin de semana, siendo la v&iacute;a preferida porque reduce el retrabajo posterior.</li>
+                            <li>Los barrios pueden descargar el PDF y empezar a planificar su distribuci&oacute;n ya. La fecha l&iacute;mite para finalizar la colocaci&oacute;n de contenedores es el <strong>26&ndash;27 de mayo</strong>.</li>
+                        </ul>
+
+                        <h2>4. Red El&eacute;ctrica</h2>
+                        <ul>
+                            <li>Cupcake inform&oacute; de que aproximadamente la mitad de los barrios que pretenden conectarse a la red han completado el formulario de uso de energ&iacute;a requerido. Los formularios completados son la <strong>m&aacute;xima prioridad</strong> actual para poder planificar la red correctamente; se pidi&oacute; a los barrios que se conectan a la red que lo env&iacute;en sin demora.</li>
+                            <li>Un mayor consumo de una zona se est&aacute; acomodando mediante la reasignaci&oacute;n de la red, de lo que se encarga el equipo de Power.</li>
+                        </ul>
+
+                        <h2>5. Autob&uacute;s de Construcci&oacute;n de Barrios</h2>
+                        <ul>
+                            <li>Cupcake se&ntilde;al&oacute; el autob&uacute;s de construcci&oacute;n de barrios para el <strong>mi&eacute;rcoles 1 de julio</strong>. El inter&eacute;s ha llegado a unas 27 personas &mdash; alrededor del punto de equilibrio para ponerlo en marcha. Se indic&oacute; a las personas interesadas los enlaces de inscripci&oacute;n en Discord.</li>
+                        </ul>
+
+                        <h2>6. LNT / Ba&ntilde;os</h2>
+                        <ul>
+                            <li>No hab&iacute;a representante de LNT en la llamada, por lo que no hubo una actualizaci&oacute;n detallada. Se se&ntilde;al&oacute; que la provisi&oacute;n y el mantenimiento de los ba&ntilde;os es una partida sustancial del presupuesto del evento (~9,3%).</li>
+                            <li>Pablo V a&ntilde;adi&oacute; una idea de futuro: un emplazamiento futuro podr&iacute;a permitir estructuras de ba&ntilde;os compostables, reduciendo este coste con el tiempo.</li>
+                        </ul>
+
+                        <h2>7. Becas de Arte</h2>
+                        <ul>
+                            <li>Daniel T hizo una <strong>&uacute;ltima llamada para las solicitudes de Becas de Arte</strong>. Se anim&oacute; a responsables de proyectos y artistas interesados en traer arte al evento a presentar su solicitud, y a asegurar sus entradas antes de la subida de precio de esta noche. Existe la intenci&oacute;n de aumentar el presupuesto de becas de arte en pr&oacute;ximos a&ntilde;os.</li>
+                        </ul>
+
+                        <h2>8. Inclusi&oacute;n Radical &mdash; Orientaci&oacute;n para Barrios</h2>
+                        <ul>
+                            <li>Tilke present&oacute; en nombre del equipo de Inclusi&oacute;n. En respuesta a preguntas de algunos barrios sobre decisiones de admisi&oacute;n &eacute;ticamente complejas en el contexto de los acontecimientos globales actuales, el equipo de Inclusi&oacute;n ha elaborado una gu&iacute;a escrita, publicada en el grupo de Discord correspondiente y disponible bajo petici&oacute;n por correo.</li>
+                            <li>La gu&iacute;a sit&uacute;a las decisiones de los barrios dentro del marco existente &mdash; los principios (incluida la inclusi&oacute;n), el c&oacute;digo de conducta (que todo titular de entrada acepta, sobre discriminaci&oacute;n y acoso) y las normas de comunidad sobre interacci&oacute;n respetuosa.</li>
+                            <li>Reconoce la dificultad real que afrontan los responsables de barrio y de camp cuando las solicitudes tocan temas muy debatidos, y la tensi&oacute;n entre incluir a unas personas y excluir involuntariamente a otras. Tambi&eacute;n distingue entre discriminaci&oacute;n y microagresiones.</li>
+                            <li>Herramientas pr&aacute;cticas ofrecidas: ser espec&iacute;fico y concreto en los valores declarados de tu barrio en lugar de recurrir a lenguaje gen&eacute;rico; aplicar un enfoque coherente con todos los solicitantes; llevar los intercambios dif&iacute;ciles en l&iacute;nea a una conversaci&oacute;n directa; tener una pol&iacute;tica de conflictos escrita preparada de antemano para que las respuestas sean procedimentales y no personales; y trabajar hacia la reparaci&oacute;n cuando sea posible (con referencia a enfoques de justicia transformadora y responsabilidad comunitaria).</li>
+                            <li>El equipo de Inclusi&oacute;n tiene amplia experiencia (cuestiones queer, BIPOC, discapacidad, reducci&oacute;n de da&ntilde;os) y est&aacute; disponible antes y durante el evento; los datos de contacto est&aacute;n en el sitio web y en el documento de la gu&iacute;a.</li>
+                            <li>En el debate, un miembro de la comunidad ofreci&oacute; una reflexi&oacute;n personal sobre la dificultad de sostener un espacio seguro e inclusivo para una comunidad con or&iacute;genes y puntos de vista diversos. La opini&oacute;n compartida fue que el evento se ha desarrollado de forma consistentemente inclusiva y que se valora el enfoque mesurado y de principios del equipo de Inclusi&oacute;n.</li>
+                            <li>Daniel T subray&oacute; que la inclusi&oacute;n, como principio fundamental, es central para la pertenencia a la comunidad, que debe manejarse con matiz, y que el equipo de Inclusi&oacute;n est&aacute; disponible e implicado antes y durante el evento (y se le puede contactar durante el evento a trav&eacute;s de Malfare).</li>
+                        </ul>
+
+                        <h2>9. Banderas y S&iacute;mbolos</h2>
+                        <ul>
+                            <li>En respuesta a una pregunta, Daniel T se&ntilde;al&oacute; la norma cultural establecida &mdash; coherente con el enfoque de Burning Man &mdash; de no exhibir s&iacute;mbolos comerciales ni banderas nacionales, para mantener fuera de la playa las asociaciones con el &laquo;mundo por defecto&raquo;. Esto se ha mantenido en la pr&aacute;ctica en a&ntilde;os anteriores.</li>
+                        </ul>
+
+                        <h2>Decisiones</h2>
+                        <ul>
+                            <li>La colocaci&oacute;n de contenedores se abre ahora v&iacute;a PDF; se espera la herramienta de colocaci&oacute;n en Humans activa este fin de semana. Fecha l&iacute;mite final de colocaci&oacute;n: 26&ndash;27 de mayo.</li>
+                            <li>El autob&uacute;s de construcci&oacute;n de barrios del 1 de julio se realizar&aacute;, al haber alcanzado el umbral de inter&eacute;s.</li>
+                            <li>La gu&iacute;a escrita del equipo de Inclusi&oacute;n para los barrios queda como referencia para las cuestiones de admisi&oacute;n &eacute;ticamente complejas.</li>
+                        </ul>
+
+                        <h2>Acciones a Realizar</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Acci&oacute;n</th><th>Plazo</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Todos</td><td>Comprar entradas de la Oleada 2 / avisar a amigos y miembros de barrio antes de la subida de precio de medianoche; reservar billetes de autob&uacute;s mientras queden rutas disponibles</td><td>Esta noche</td></tr>
+                                <tr><td>Todos / redes de camps</td><td>Reclutar voluntarios de llegada temprana para la primera semana de construcci&oacute;n; manifestar inter&eacute;s en responsables de turno y de sitio de Malfare, y Strike</td><td>Continuo</td></tr>
+                                <tr><td>Responsables de barrio</td><td>Descargar el PDF de colocaci&oacute;n y empezar la distribuci&oacute;n del barrio; enviar la colocaci&oacute;n de contenedores</td><td>Antes del 26&ndash;27 de mayo</td></tr>
+                                <tr><td>Barrios que se conectan a la red</td><td>Completar el formulario de uso de energ&iacute;a</td><td>Lo antes posible</td></tr>
+                                <tr><td>Personas interesadas</td><td>Registrar inter&eacute;s en el autob&uacute;s de construcci&oacute;n de barrios (1 de julio) v&iacute;a los enlaces de Discord</td><td>Continuo</td></tr>
+                                <tr><td>Responsables de proyecto / artistas</td><td>Presentar solicitudes de Becas de Arte (&uacute;ltima llamada)</td><td>Lo antes posible</td></tr>
+                                <tr><td>Responsables de barrio / camp</td><td>Leer la gu&iacute;a del equipo de Inclusi&oacute;n; contactar con el equipo de Inclusi&oacute;n para apoyo antes o durante el evento seg&uacute;n se necesite</td><td>Continuo</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Pr&oacute;xima llamada: la semana siguiente (ritmo habitual de llamadas comunitarias).</em></p>
+                        <p><em>Actas preparadas a partir de la grabaci&oacute;n de audio.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Avec Daniel T (animateur, en remplacement &mdash; Ellen, l&rsquo;animatrice pr&eacute;vue, n&rsquo;&eacute;tait pas bien), Aaron R, Michael M (nurse), Pablo V, Cupcake, Tilke, le responsable du City Planning, et des membres de la communaut&eacute;</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Archives de la R&eacute;union</h3>
+                        <ul>
+                            <li><a href="2026-05-14-community-transcript.html">Transcription compl&egrave;te (en anglais uniquement)</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=NE4sDLKzyuI">Enregistrement vid&eacute;o (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/NE4sDLKzyuI" title="Community Meeting - May 14, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Billetterie et Bus</h2>
+                        <ul>
+                            <li>Aaron R a confirm&eacute; que <strong>la vente de billets de la Vague 2 se termine ce soir</strong>, avec une hausse de prix de &euro;20 &agrave; minuit. Les participants ont &eacute;t&eacute; encourag&eacute;s &agrave; pr&eacute;venir les amis et membres de barrio qui n&rsquo;ont pas encore achet&eacute; de billet.</li>
+                            <li>Les billets de bus sont en vente sur le site web ; quelques itin&eacute;raires se remplissent d&eacute;j&agrave;, il est donc conseill&eacute; &agrave; toute personne ayant besoin d&rsquo;une place de r&eacute;server rapidement.</li>
+                        </ul>
+
+                        <h2>2. B&eacute;n&eacute;voles et Participation</h2>
+                        <ul>
+                            <li>Michael M (nurse) a rapport&eacute; que la situation globale s&rsquo;est am&eacute;lior&eacute;e par rapport &agrave; il y a un mois, mais reste tendue. La premi&egrave;re semaine sur site manque encore d&rsquo;environ <strong>50% de la main-d&rsquo;&oelig;uvre n&eacute;cessaire pour la construction pr&eacute;coce</strong> &mdash; d&eacute;chargement des conteneurs, construction, d&eacute;marrage du site.</li>
+                            <li>La pr&eacute;occupation structurelle est que les personnes qui ne viennent pas la premi&egrave;re semaine sont aussi absentes les deuxi&egrave;me et troisi&egrave;me semaines. Une &eacute;quipe cantine/cuisine s&rsquo;est constitu&eacute;e.</li>
+                            <li>Les plus petites &eacute;quipes d&rsquo;avant-&eacute;v&eacute;nement (Barrio Support, LNT) et Gate sont bien pourvues, avec de solides &eacute;quipes qui reviennent. Les besoins les plus importants concernent <strong>les responsables de cr&eacute;neau et de site Malfare, et le d&eacute;montage (Strike)</strong>, g&eacute;n&eacute;ralement le plus difficile &agrave; pourvoir.</li>
+                            <li>Toute personne pouvant arriver t&ocirc;t ou rester un ou plusieurs jours apr&egrave;s l&rsquo;&eacute;v&eacute;nement a &eacute;t&eacute; invit&eacute;e &agrave; se manifester. M&ecirc;me si les chiffres sont en de&ccedil;&agrave; de l&rsquo;objectif, l&rsquo;engagement et le travail des personnes impliqu&eacute;es ont &eacute;t&eacute; exceptionnels &mdash; un rappel &agrave; se reposer et &agrave; prendre soin les uns des autres.</li>
+                        </ul>
+
+                        <h2>3. City Planning &mdash; Placement des Conteneurs</h2>
+                        <ul>
+                            <li>Le placement des conteneurs de barrio s&rsquo;ouvre. Dans un premier temps, ce sera via la m&eacute;thode PDF existante ; un nouvel outil de placement sur Humans devrait &ecirc;tre op&eacute;rationnel ce week-end et constitue la voie pr&eacute;f&eacute;r&eacute;e car il r&eacute;duit le retravail en aval.</li>
+                            <li>Les barrios peuvent t&eacute;l&eacute;charger le PDF et commencer &agrave; planifier leur agencement d&egrave;s maintenant. La date limite pour finaliser le placement des conteneurs est le <strong>26&ndash;27 mai</strong>.</li>
+                        </ul>
+
+                        <h2>4. R&eacute;seau &Eacute;lectrique</h2>
+                        <ul>
+                            <li>Cupcake a rapport&eacute; qu&rsquo;environ la moiti&eacute; des barrios pr&eacute;voyant de se connecter au r&eacute;seau ont rempli le formulaire d&rsquo;utilisation d&rsquo;&eacute;nergie requis. Les formulaires remplis sont la <strong>priorit&eacute; absolue</strong> actuelle pour planifier correctement le r&eacute;seau ; il a &eacute;t&eacute; demand&eacute; aux barrios se connectant au r&eacute;seau de l&rsquo;envoyer sans d&eacute;lai.</li>
+                            <li>Une consommation plus &eacute;lev&eacute;e d&rsquo;une zone est prise en compte par une r&eacute;allocation du r&eacute;seau, g&eacute;r&eacute;e par l&rsquo;&eacute;quipe Power.</li>
+                        </ul>
+
+                        <h2>5. Bus de Construction des Barrios</h2>
+                        <ul>
+                            <li>Cupcake a signal&eacute; le bus de construction des barrios pour le <strong>mercredi 1er juillet</strong>. L&rsquo;int&eacute;r&ecirc;t a atteint environ 27 personnes &mdash; proche du seuil de rentabilit&eacute; pour le faire rouler. Les personnes int&eacute;ress&eacute;es ont &eacute;t&eacute; orient&eacute;es vers les liens d&rsquo;inscription sur Discord.</li>
+                        </ul>
+
+                        <h2>6. LNT / Toilettes</h2>
+                        <ul>
+                            <li>Aucun repr&eacute;sentant LNT n&rsquo;&eacute;tait pr&eacute;sent &agrave; l&rsquo;appel, il n&rsquo;y a donc pas eu de mise &agrave; jour d&eacute;taill&eacute;e. Il a &eacute;t&eacute; not&eacute; que la fourniture et l&rsquo;entretien des toilettes repr&eacute;sentent une part substantielle du budget de l&rsquo;&eacute;v&eacute;nement (~9,3%).</li>
+                            <li>Pablo V a ajout&eacute; une perspective d&rsquo;avenir : un futur site pourrait permettre des structures de toilettes compostables, r&eacute;duisant ce co&ucirc;t au fil du temps.</li>
+                        </ul>
+
+                        <h2>7. Bourses d&rsquo;Art</h2>
+                        <ul>
+                            <li>Daniel T a lanc&eacute; un <strong>dernier appel pour les demandes de Bourses d&rsquo;Art</strong>. Les responsables de projets et les artistes souhaitant amener de l&rsquo;art &agrave; l&rsquo;&eacute;v&eacute;nement ont &eacute;t&eacute; encourag&eacute;s &agrave; postuler, et &agrave; s&eacute;curiser leurs billets avant la hausse de prix de ce soir. Il y a l&rsquo;intention d&rsquo;augmenter le budget des bourses d&rsquo;art dans les ann&eacute;es &agrave; venir.</li>
+                        </ul>
+
+                        <h2>8. Inclusion Radicale &mdash; Orientations pour les Barrios</h2>
+                        <ul>
+                            <li>Tilke a pr&eacute;sent&eacute; au nom de l&rsquo;&eacute;quipe Inclusion. En r&eacute;ponse aux questions de certains barrios sur des d&eacute;cisions d&rsquo;admission &eacute;thiquement complexes dans le contexte des &eacute;v&eacute;nements mondiaux actuels, l&rsquo;&eacute;quipe Inclusion a r&eacute;dig&eacute; des orientations &eacute;crites, publi&eacute;es dans le groupe Discord concern&eacute; et disponibles sur demande par e-mail.</li>
+                            <li>Les orientations situent les d&eacute;cisions des barrios dans le cadre existant &mdash; les principes (dont l&rsquo;inclusion), le code de conduite (que tout d&eacute;tenteur de billet accepte, couvrant discrimination et harc&egrave;lement) et les standards de communaut&eacute; sur l&rsquo;interaction respectueuse.</li>
+                            <li>Elles reconnaissent la difficult&eacute; r&eacute;elle des responsables de barrio et de camp lorsque les candidatures touchent &agrave; des sujets tr&egrave;s d&eacute;battus, et la tension entre inclure certaines personnes et en exclure involontairement d&rsquo;autres. Elles distinguent aussi discrimination et microagressions.</li>
+                            <li>Outils pratiques propos&eacute;s : &ecirc;tre sp&eacute;cifique et concret dans les valeurs affich&eacute;es de votre barrio plut&ocirc;t que de recourir &agrave; un langage g&eacute;n&eacute;rique ; appliquer une approche coh&eacute;rente &agrave; tous les candidats ; d&eacute;placer les &eacute;changes en ligne difficiles vers une conversation directe ; disposer d&rsquo;une politique de conflit &eacute;crite pr&eacute;par&eacute;e &agrave; l&rsquo;avance pour que les r&eacute;ponses soient proc&eacute;durales plut&ocirc;t que personnelles ; et travailler vers la r&eacute;paration lorsque c&rsquo;est possible (en r&eacute;f&eacute;rence aux approches de justice transformatrice et de responsabilit&eacute; communautaire).</li>
+                            <li>L&rsquo;&eacute;quipe Inclusion poss&egrave;de une large expertise (questions queer, BIPOC, handicap, r&eacute;duction des risques) et est disponible avant et pendant l&rsquo;&eacute;v&eacute;nement ; les coordonn&eacute;es sont sur le site web et dans le document d&rsquo;orientation.</li>
+                            <li>Lors de la discussion, un membre de la communaut&eacute; a offert une r&eacute;flexion personnelle sur la difficult&eacute; de tenir un espace s&ucirc;r et inclusif pour une communaut&eacute; aux origines et points de vue divers. L&rsquo;avis partag&eacute; &eacute;tait que l&rsquo;&eacute;v&eacute;nement s&rsquo;est d&eacute;roul&eacute; de mani&egrave;re constamment inclusive et que l&rsquo;approche mesur&eacute;e et fond&eacute;e sur des principes de l&rsquo;&eacute;quipe Inclusion est appr&eacute;ci&eacute;e.</li>
+                            <li>Daniel T a soulign&eacute; que l&rsquo;inclusion, en tant que principe fondamental, est centrale pour l&rsquo;appartenance &agrave; la communaut&eacute;, qu&rsquo;elle doit &ecirc;tre trait&eacute;e avec nuance, et que l&rsquo;&eacute;quipe Inclusion est disponible et engag&eacute;e avant et pendant l&rsquo;&eacute;v&eacute;nement (et joignable pendant l&rsquo;&eacute;v&eacute;nement via Malfare).</li>
+                        </ul>
+
+                        <h2>9. Drapeaux et Symboles</h2>
+                        <ul>
+                            <li>En r&eacute;ponse &agrave; une question, Daniel T a rappel&eacute; la norme culturelle &eacute;tablie &mdash; conforme &agrave; l&rsquo;approche de Burning Man &mdash; de ne pas afficher de symboles commerciaux ni de drapeaux nationaux, afin de garder hors de la playa les associations avec le &laquo; monde par d&eacute;faut &raquo;. Cela s&rsquo;est maintenu en pratique les ann&eacute;es pr&eacute;c&eacute;dentes.</li>
+                        </ul>
+
+                        <h2>D&eacute;cisions</h2>
+                        <ul>
+                            <li>Le placement des conteneurs s&rsquo;ouvre maintenant via PDF ; l&rsquo;outil de placement sur Humans est attendu en ligne ce week-end. Date limite finale de placement : 26&ndash;27 mai.</li>
+                            <li>Le bus de construction des barrios du 1er juillet aura lieu, le seuil d&rsquo;int&eacute;r&ecirc;t ayant &eacute;t&eacute; atteint.</li>
+                            <li>Les orientations &eacute;crites de l&rsquo;&eacute;quipe Inclusion pour les barrios font office de r&eacute;f&eacute;rence pour les questions d&rsquo;admission &eacute;thiquement complexes.</li>
+                        </ul>
+
+                        <h2>Actions &agrave; R&eacute;aliser</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Personne</th><th>Action</th><th>D&eacute;lai</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Tous</td><td>Acheter les billets de la Vague 2 / pr&eacute;venir les amis et membres de barrio avant la hausse de prix de minuit ; r&eacute;server les billets de bus tant que des itin&eacute;raires restent disponibles</td><td>Ce soir</td></tr>
+                                <tr><td>Tous / r&eacute;seaux de camps</td><td>Recruter des b&eacute;n&eacute;voles &agrave; arriv&eacute;e pr&eacute;coce pour la premi&egrave;re semaine de construction ; manifester son int&eacute;r&ecirc;t pour les responsables de cr&eacute;neau et de site Malfare, et Strike</td><td>Continu</td></tr>
+                                <tr><td>Responsables de barrio</td><td>T&eacute;l&eacute;charger le PDF de placement et commencer l&rsquo;agencement du barrio ; soumettre le placement des conteneurs</td><td>Avant le 26&ndash;27 mai</td></tr>
+                                <tr><td>Barrios se connectant au r&eacute;seau</td><td>Remplir le formulaire d&rsquo;utilisation d&rsquo;&eacute;nergie</td><td>D&egrave;s que possible</td></tr>
+                                <tr><td>Personnes int&eacute;ress&eacute;es</td><td>Enregistrer son int&eacute;r&ecirc;t pour le bus de construction des barrios (1er juillet) via les liens Discord</td><td>Continu</td></tr>
+                                <tr><td>Responsables de projet / artistes</td><td>Soumettre les demandes de Bourses d&rsquo;Art (dernier appel)</td><td>D&egrave;s que possible</td></tr>
+                                <tr><td>Responsables de barrio / camp</td><td>Lire les orientations de l&rsquo;&eacute;quipe Inclusion ; contacter l&rsquo;&eacute;quipe Inclusion pour du soutien avant ou pendant l&rsquo;&eacute;v&eacute;nement selon les besoins</td><td>Continu</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Prochain appel : la semaine suivante (rythme habituel des appels communautaires).</em></p>
+                        <p><em>Proc&egrave;s-verbal pr&eacute;par&eacute; &agrave; partir de l&rsquo;enregistrement audio.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Con Daniel T (moderatore, in sostituzione &mdash; Ellen, la moderatrice prevista, non stava bene), Aaron R, Michael M (nurse), Pablo V, Cupcake, Tilke, il responsabile del City Planning, e membri della comunit&agrave;</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Archivi della Riunione</h3>
+                        <ul>
+                            <li><a href="2026-05-14-community-transcript.html">Trascrizione completa (solo in inglese)</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=NE4sDLKzyuI">Registrazione video (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/NE4sDLKzyuI" title="Community Meeting - May 14, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Biglietteria e Autobus</h2>
+                        <ul>
+                            <li>Aaron R ha confermato che <strong>la vendita dei biglietti dell&rsquo;Ondata 2 si chiude stasera</strong>, con un aumento di prezzo di &euro;20 a mezzanotte. I partecipanti sono stati incoraggiati ad avvisare amici e membri di barrio che non hanno ancora acquistato il biglietto.</li>
+                            <li>I biglietti degli autobus sono in vendita sul sito; un paio di tratte si stanno gi&agrave; riempiendo, quindi a chi necessita di un posto &egrave; stato consigliato di prenotare presto.</li>
+                        </ul>
+
+                        <h2>2. Volontari e Partecipazione</h2>
+                        <ul>
+                            <li>Michael M (nurse) ha riferito che il quadro generale &egrave; migliorato rispetto a un mese fa, ma resta teso. La prima settimana sul sito manca ancora di circa il <strong>50% della manodopera necessaria per la costruzione anticipata</strong> &mdash; scarico dei container, costruzione, avvio del sito.</li>
+                            <li>La preoccupazione strutturale &egrave; che chi non viene la prima settimana &egrave; assente anche nella seconda e nella terza. Si &egrave; formata una squadra cantina/cucina.</li>
+                            <li>Le squadre pi&ugrave; piccole pre-evento (Barrio Support, LNT) e Gate sono ben coperte, con solide squadre che ritornano. Le aree di maggior bisogno sono <strong>i responsabili di turno e di sito Malfare, e lo smontaggio (Strike)</strong>, di solito il pi&ugrave; difficile da coprire.</li>
+                            <li>&Egrave; stato chiesto di farsi avanti a chiunque possa arrivare presto o fermarsi uno o pi&ugrave; giorni dopo l&rsquo;evento. Sebbene i numeri siano sotto l&rsquo;obiettivo, l&rsquo;impegno e il lavoro di chi partecipa sono stati eccezionali &mdash; un promemoria a riposare e prendersi cura gli uni degli altri.</li>
+                        </ul>
+
+                        <h2>3. City Planning &mdash; Posizionamento dei Container</h2>
+                        <ul>
+                            <li>Si apre il posizionamento dei container di barrio. Inizialmente avverr&agrave; tramite il metodo PDF esistente; un nuovo strumento di posizionamento su Humans dovrebbe essere operativo questo fine settimana ed &egrave; la via preferita perch&eacute; riduce il rilavoro successivo.</li>
+                            <li>I barrios possono scaricare il PDF e iniziare a pianificare la disposizione fin da ora. La scadenza per finalizzare il posizionamento dei container &egrave; il <strong>26&ndash;27 maggio</strong>.</li>
+                        </ul>
+
+                        <h2>4. Rete Elettrica</h2>
+                        <ul>
+                            <li>Cupcake ha riferito che circa met&agrave; dei barrios che intendono collegarsi alla rete ha compilato il modulo richiesto sull&rsquo;uso di energia. I moduli compilati sono la <strong>priorit&agrave; assoluta</strong> attuale per pianificare correttamente la rete; ai barrios che si collegano alla rete &egrave; stato chiesto di inviarlo senza indugio.</li>
+                            <li>Un consumo pi&ugrave; elevato di una zona viene gestito tramite riassegnazione della rete, di cui si occupa il team Power.</li>
+                        </ul>
+
+                        <h2>5. Autobus per la Costruzione dei Barrios</h2>
+                        <ul>
+                            <li>Cupcake ha segnalato l&rsquo;autobus per la costruzione dei barrios per <strong>mercoled&igrave; 1&deg; luglio</strong>. L&rsquo;interesse ha raggiunto circa 27 persone &mdash; intorno al punto di pareggio per farlo partire. Le persone interessate sono state indirizzate ai link di iscrizione su Discord.</li>
+                        </ul>
+
+                        <h2>6. LNT / Bagni</h2>
+                        <ul>
+                            <li>Non c&rsquo;era un rappresentante LNT alla chiamata, quindi non c&rsquo;&egrave; stato un aggiornamento dettagliato. &Egrave; stato osservato che la fornitura e la manutenzione dei bagni &egrave; una voce sostanziale del budget dell&rsquo;evento (~9,3%).</li>
+                            <li>Pablo V ha aggiunto una prospettiva futura: un sito futuro potrebbe consentire strutture per bagni compostabili, riducendo questo costo nel tempo.</li>
+                        </ul>
+
+                        <h2>7. Borse d&rsquo;Arte</h2>
+                        <ul>
+                            <li>Daniel T ha lanciato un&rsquo;<strong>ultima chiamata per le domande di Borse d&rsquo;Arte</strong>. I responsabili di progetto e gli artisti interessati a portare arte all&rsquo;evento sono stati incoraggiati a candidarsi e ad assicurarsi i biglietti prima dell&rsquo;aumento di prezzo di stasera. C&rsquo;&egrave; l&rsquo;intenzione di aumentare il budget delle borse d&rsquo;arte negli anni futuri.</li>
+                        </ul>
+
+                        <h2>8. Inclusione Radicale &mdash; Orientamenti per i Barrios</h2>
+                        <ul>
+                            <li>Tilke ha presentato a nome del team Inclusione. In risposta a domande di alcuni barrios su decisioni di ammissione eticamente complesse nel contesto degli eventi globali attuali, il team Inclusione ha prodotto una guida scritta, pubblicata nel relativo gruppo Discord e disponibile su richiesta via e-mail.</li>
+                            <li>La guida colloca le decisioni dei barrios all&rsquo;interno del quadro esistente &mdash; i principi (inclusione compresa), il codice di condotta (che ogni titolare di biglietto accetta, su discriminazione e molestie) e gli standard di comunit&agrave; sull&rsquo;interazione rispettosa.</li>
+                            <li>Riconosce la reale difficolt&agrave; che i responsabili di barrio e di camp affrontano quando le candidature toccano temi molto dibattuti, e la tensione tra includere alcune persone ed escluderne involontariamente altre. Distingue inoltre la discriminazione dalle microaggressioni.</li>
+                            <li>Strumenti pratici offerti: essere specifici e concreti nei valori dichiarati del proprio barrio anzich&eacute; ricorrere a un linguaggio generico; applicare un approccio coerente a tutti i candidati; spostare gli scambi online difficili verso una conversazione diretta; avere una politica sui conflitti scritta preparata in anticipo affinch&eacute; le risposte siano procedurali e non personali; e lavorare verso la riparazione quando possibile (con riferimento ad approcci di giustizia trasformativa e responsabilit&agrave; comunitaria).</li>
+                            <li>Il team Inclusione ha un&rsquo;ampia esperienza (tematiche queer, BIPOC, disabilit&agrave;, riduzione del danno) ed &egrave; disponibile prima e durante l&rsquo;evento; i contatti sono sul sito e nel documento di guida.</li>
+                            <li>Nella discussione, un membro della comunit&agrave; ha offerto una riflessione personale sulla difficolt&agrave; di tenere uno spazio sicuro e inclusivo per una comunit&agrave; con background e punti di vista diversi. L&rsquo;opinione condivisa &egrave; stata che l&rsquo;evento si &egrave; svolto in modo costantemente inclusivo e che l&rsquo;approccio misurato e di principio del team Inclusione &egrave; apprezzato.</li>
+                            <li>Daniel T ha sottolineato che l&rsquo;inclusione, in quanto principio fondamentale, &egrave; centrale per l&rsquo;appartenenza alla comunit&agrave;, che va gestita con sfumatura, e che il team Inclusione &egrave; disponibile e coinvolto prima e durante l&rsquo;evento (e raggiungibile durante l&rsquo;evento tramite Malfare).</li>
+                        </ul>
+
+                        <h2>9. Bandiere e Simboli</h2>
+                        <ul>
+                            <li>In risposta a una domanda, Daniel T ha richiamato la norma culturale consolidata &mdash; coerente con l&rsquo;approccio di Burning Man &mdash; di non esporre simboli commerciali o bandiere nazionali, per tenere fuori dalla playa le associazioni con il &laquo;mondo predefinito&raquo;. Ci&ograve; si &egrave; mantenuto nella pratica negli anni precedenti.</li>
+                        </ul>
+
+                        <h2>Decisioni</h2>
+                        <ul>
+                            <li>Il posizionamento dei container si apre ora via PDF; lo strumento di posizionamento su Humans &egrave; atteso online questo fine settimana. Scadenza finale di posizionamento: 26&ndash;27 maggio.</li>
+                            <li>L&rsquo;autobus per la costruzione dei barrios del 1&deg; luglio si far&agrave;, avendo raggiunto la soglia di interesse.</li>
+                            <li>La guida scritta del team Inclusione per i barrios resta il riferimento per le questioni di ammissione eticamente complesse.</li>
+                        </ul>
+
+                        <h2>Azioni da Intraprendere</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Azione</th><th>Scadenza</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Tutti</td><td>Acquistare i biglietti dell&rsquo;Ondata 2 / avvisare amici e membri di barrio prima dell&rsquo;aumento di prezzo di mezzanotte; prenotare i biglietti degli autobus finch&eacute; restano tratte disponibili</td><td>Stasera</td></tr>
+                                <tr><td>Tutti / reti di camp</td><td>Reclutare volontari ad arrivo anticipato per la prima settimana di costruzione; manifestare interesse per i responsabili di turno e di sito Malfare, e Strike</td><td>Continuo</td></tr>
+                                <tr><td>Responsabili di barrio</td><td>Scaricare il PDF di posizionamento e iniziare la disposizione del barrio; inviare il posizionamento dei container</td><td>Entro il 26&ndash;27 maggio</td></tr>
+                                <tr><td>Barrios che si collegano alla rete</td><td>Compilare il modulo sull&rsquo;uso di energia</td><td>Quanto prima</td></tr>
+                                <tr><td>Persone interessate</td><td>Registrare l&rsquo;interesse per l&rsquo;autobus di costruzione dei barrios (1&deg; luglio) tramite i link Discord</td><td>Continuo</td></tr>
+                                <tr><td>Responsabili di progetto / artisti</td><td>Inviare le domande di Borse d&rsquo;Arte (ultima chiamata)</td><td>Quanto prima</td></tr>
+                                <tr><td>Responsabili di barrio / camp</td><td>Leggere la guida del team Inclusione; contattare il team Inclusione per supporto prima o durante l&rsquo;evento secondo necessit&agrave;</td><td>Continuo</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Prossima chiamata: la settimana successiva (ritmo abituale delle chiamate comunitarie).</em></p>
+                        <p><em>Verbale preparato a partire dalla registrazione audio.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Mit Daniel T (Moderator, in Vertretung &mdash; Ellen, die vorgesehene Moderatorin, war unwohl), Aaron R, Michael M (nurse), Pablo V, Cupcake, Tilke, dem City-Planning-Verantwortlichen, und Community-Mitgliedern</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Sitzungsunterlagen</h3>
+                        <ul>
+                            <li><a href="2026-05-14-community-transcript.html">Vollst&auml;ndiges Transkript (nur auf Englisch)</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=NE4sDLKzyuI">Videoaufzeichnung (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/NE4sDLKzyuI" title="Community Meeting - May 14, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Ticketverkauf und Busse</h2>
+                        <ul>
+                            <li>Aaron R best&auml;tigte, dass <strong>der Ticketverkauf der Welle 2 heute Abend endet</strong>, mit einer Preiserh&ouml;hung um &euro;20 um Mitternacht. Die Teilnehmenden wurden ermutigt, Freundinnen, Freunde und Barrio-Mitglieder zu erinnern, die noch kein Ticket gekauft haben.</li>
+                            <li>Bustickets sind &uuml;ber die Website erh&auml;ltlich; einige Routen f&uuml;llen sich bereits, daher wurde allen, die einen Platz ben&ouml;tigen, geraten, z&uuml;gig zu buchen.</li>
+                        </ul>
+
+                        <h2>2. Freiwillige und Teilnahme</h2>
+                        <ul>
+                            <li>Michael M (nurse) berichtete, dass sich das Gesamtbild gegen&uuml;ber dem Vormonat verbessert hat, aber angespannt bleibt. In der ersten Woche vor Ort fehlen noch rund <strong>50% der f&uuml;r den fr&uuml;hen Aufbau ben&ouml;tigten Arbeitskraft</strong> &mdash; Entladen von Containern, Bau, Inbetriebnahme des Gel&auml;ndes.</li>
+                            <li>Die strukturelle Sorge ist, dass Personen, die in der ersten Woche nicht kommen, auch in der zweiten und dritten Woche fehlen. Ein Kantinen-/K&uuml;chenteam hat sich gebildet.</li>
+                            <li>Kleinere Vor-Event-Teams (Barrio Support, LNT) und Gate sind gut besetzt, mit starken, wiederkehrenden Teams. Der gr&ouml;&szlig;te Bedarf besteht bei <strong>Malfare-Schicht- und Gel&auml;ndeverantwortlichen sowie beim Abbau (Strike)</strong>, der typischerweise am schwersten zu besetzen ist.</li>
+                            <li>Alle, die fr&uuml;h anreisen oder einen oder mehrere Tage nach dem Event bleiben k&ouml;nnen, wurden gebeten, sich zu melden. Auch wenn die Zahlen unter dem Ziel liegen, war das Engagement und die Leistung der Beteiligten au&szlig;ergew&ouml;hnlich &mdash; eine Erinnerung, sich auszuruhen und aufeinander zu achten.</li>
+                        </ul>
+
+                        <h2>3. City Planning &mdash; Container-Platzierung</h2>
+                        <ul>
+                            <li>Die Container-Platzierung der Barrios &ouml;ffnet. Zun&auml;chst &uuml;ber die bestehende PDF-Methode; ein neues Platzierungstool auf Humans soll dieses Wochenende online gehen und ist der bevorzugte Weg, da es sp&auml;tere Nacharbeit reduziert.</li>
+                            <li>Barrios k&ouml;nnen das PDF herunterladen und jetzt mit der Layoutplanung beginnen. Die Frist zur Fertigstellung der Container-Platzierung ist der <strong>26.&ndash;27. Mai</strong>.</li>
+                        </ul>
+
+                        <h2>4. Stromnetz</h2>
+                        <ul>
+                            <li>Cupcake berichtete, dass etwa die H&auml;lfte der Barrios, die sich ans Netz anschlie&szlig;en wollen, das erforderliche Stromnutzungsformular ausgef&uuml;llt hat. Ausgef&uuml;llte Formulare sind derzeit <strong>oberste Priorit&auml;t</strong>, damit das Netz richtig geplant werden kann; Barrios, die sich ans Netz anschlie&szlig;en, wurden gebeten, es unverz&uuml;glich einzureichen.</li>
+                            <li>Ein h&ouml;herer Verbrauch eines Bereichs wird durch Netz-Neuzuteilung aufgefangen, worum sich das Power-Team k&uuml;mmert.</li>
+                        </ul>
+
+                        <h2>5. Barrio-Aufbau-Bus</h2>
+                        <ul>
+                            <li>Cupcake wies auf den Barrio-Aufbau-Bus am <strong>Mittwoch, 1. Juli</strong> hin. Das Interesse hat etwa 27 Personen erreicht &mdash; rund um die Gewinnschwelle, um ihn fahren zu lassen. Interessierte wurden zu den Anmeldelinks auf Discord verwiesen.</li>
+                        </ul>
+
+                        <h2>6. LNT / Toiletten</h2>
+                        <ul>
+                            <li>Es war kein LNT-Vertreter im Call, daher gab es kein detailliertes Update. Es wurde angemerkt, dass Bereitstellung und Wartung der Toiletten ein erheblicher Posten im Veranstaltungsbudget sind (~9,3%).</li>
+                            <li>Pablo V f&uuml;gte eine zukunftsgerichtete &Uuml;berlegung hinzu: ein zuk&uuml;nftiges Gel&auml;nde k&ouml;nnte kompostierbare Toilettenstrukturen erm&ouml;glichen und diese Kosten mit der Zeit senken.</li>
+                        </ul>
+
+                        <h2>7. Kunstf&ouml;rderung</h2>
+                        <ul>
+                            <li>Daniel T gab einen <strong>letzten Aufruf f&uuml;r Antr&auml;ge auf Kunstf&ouml;rderung</strong>. Projektverantwortliche und K&uuml;nstlerinnen und K&uuml;nstler, die Kunst zum Event bringen m&ouml;chten, wurden ermutigt, sich zu bewerben und ihre Tickets vor der heutigen Preiserh&ouml;hung zu sichern. Es besteht die Absicht, das Kunstf&ouml;rderbudget in kommenden Jahren zu erh&ouml;hen.</li>
+                        </ul>
+
+                        <h2>8. Radikale Inklusion &mdash; Orientierung f&uuml;r Barrios</h2>
+                        <ul>
+                            <li>Tilke pr&auml;sentierte im Namen des Inklusionsteams. Als Reaktion auf Fragen einiger Barrios zu ethisch komplexen Aufnahmeentscheidungen im Kontext aktueller globaler Ereignisse hat das Inklusionsteam einen schriftlichen Leitfaden erstellt, ver&ouml;ffentlicht in der betreffenden Discord-Gruppe und auf Anfrage per E-Mail verf&uuml;gbar.</li>
+                            <li>Der Leitfaden verortet Barrio-Entscheidungen im bestehenden Rahmen &mdash; den Prinzipien (einschlie&szlig;lich Inklusion), dem Verhaltenskodex (dem jede Person mit Ticket zustimmt, zu Diskriminierung und Bel&auml;stigung) und den Community-Standards zu respektvoller Interaktion.</li>
+                            <li>Er anerkennt die echte Schwierigkeit von Barrio- und Camp-Verantwortlichen, wenn Bewerbungen stark debattierte Themen ber&uuml;hren, und das Spannungsverh&auml;ltnis, manche Menschen einzuschlie&szlig;en und andere unbeabsichtigt auszuschlie&szlig;en. Er unterscheidet zudem Diskriminierung von Mikroaggressionen.</li>
+                            <li>Angebotene praktische Werkzeuge: in den erkl&auml;rten Werten des eigenen Barrios spezifisch und konkret sein statt generischer Sprache; einen konsistenten Ansatz auf alle Bewerbenden anwenden; schwierige Online-Austausche in ein direktes Gespr&auml;ch verlagern; eine im Voraus vorbereitete schriftliche Konfliktrichtlinie haben, damit Reaktionen verfahrensbasiert statt pers&ouml;nlich sind; und wo m&ouml;glich auf Wiedergutmachung hinarbeiten (mit Bezug auf Ans&auml;tze transformativer Gerechtigkeit und gemeinschaftlicher Verantwortung).</li>
+                            <li>Das Inklusionsteam verf&uuml;gt &uuml;ber breite Expertise (Queerness, BIPOC, Behinderung, Harm Reduction) und ist vor und w&auml;hrend des Events verf&uuml;gbar; Kontaktdaten stehen auf der Website und im Leitfaden-Dokument.</li>
+                            <li>In der Diskussion bot ein Community-Mitglied eine pers&ouml;nliche Reflexion &uuml;ber die Schwierigkeit an, einen sicheren, inklusiven Raum f&uuml;r eine Community mit vielf&auml;ltigen Hintergr&uuml;nden und Sichtweisen zu halten. Die geteilte Auffassung war, dass das Event durchg&auml;ngig inklusiv verlaufen ist und dass der besonnene, prinzipiengeleitete Ansatz des Inklusionsteams gesch&auml;tzt wird.</li>
+                            <li>Daniel T betonte, dass Inklusion als Kernprinzip zentral f&uuml;r die Zugeh&ouml;rigkeit zur Community ist, mit Nuance behandelt werden muss, und dass das Inklusionsteam vor und w&auml;hrend des Events verf&uuml;gbar und engagiert ist (und w&auml;hrend des Events &uuml;ber Malfare erreichbar ist).</li>
+                        </ul>
+
+                        <h2>9. Flaggen und Symbole</h2>
+                        <ul>
+                            <li>Auf eine Frage hin verwies Daniel T auf die etablierte kulturelle Norm &mdash; im Einklang mit dem Burning-Man-Ansatz &mdash; keine kommerziellen Symbole oder Nationalflaggen zu zeigen, um Assoziationen mit der &laquo;Default-Welt&raquo; von der Playa fernzuhalten. Dies hat sich in der Praxis in fr&uuml;heren Jahren gehalten.</li>
+                        </ul>
+
+                        <h2>Entscheidungen</h2>
+                        <ul>
+                            <li>Die Container-Platzierung &ouml;ffnet jetzt via PDF; das Platzierungstool auf Humans wird dieses Wochenende online erwartet. Endg&uuml;ltige Platzierungsfrist: 26.&ndash;27. Mai.</li>
+                            <li>Der Barrio-Aufbau-Bus am 1. Juli wird fahren, da die Interessensschwelle erreicht wurde.</li>
+                            <li>Der schriftliche Leitfaden des Inklusionsteams f&uuml;r Barrios gilt als Referenz f&uuml;r ethisch komplexe Aufnahmefragen.</li>
+                        </ul>
+
+                        <h2>Ma&szlig;nahmen</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Ma&szlig;nahme</th><th>Frist</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Alle</td><td>Welle-2-Tickets kaufen / Freundinnen, Freunde und Barrio-Mitglieder vor der Mitternachts-Preiserh&ouml;hung erinnern; Bustickets buchen, solange Routen verf&uuml;gbar sind</td><td>Heute Abend</td></tr>
+                                <tr><td>Alle / Camp-Netzwerke</td><td>Fr&uuml;h anreisende Freiwillige f&uuml;r die erste Aufbauwoche gewinnen; Interesse an Malfare-Schicht- und Gel&auml;ndeverantwortlichen sowie Strike signalisieren</td><td>Laufend</td></tr>
+                                <tr><td>Barrio-Verantwortliche</td><td>Das Platzierungs-PDF herunterladen und mit dem Barrio-Layout beginnen; Container-Platzierung einreichen</td><td>Bis 26.&ndash;27. Mai</td></tr>
+                                <tr><td>Barrios mit Netzanschluss</td><td>Das Stromnutzungsformular ausf&uuml;llen</td><td>Schnellstm&ouml;glich</td></tr>
+                                <tr><td>Interessierte</td><td>Interesse am Barrio-Aufbau-Bus (1. Juli) &uuml;ber die Discord-Links registrieren</td><td>Laufend</td></tr>
+                                <tr><td>Projektverantwortliche / K&uuml;nstler:innen</td><td>Antr&auml;ge auf Kunstf&ouml;rderung einreichen (letzter Aufruf)</td><td>Schnellstm&ouml;glich</td></tr>
+                                <tr><td>Barrio- / Camp-Verantwortliche</td><td>Den Leitfaden des Inklusionsteams lesen; das Inklusionsteam bei Bedarf vor oder w&auml;hrend des Events um Unterst&uuml;tzung kontaktieren</td><td>Laufend</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>N&auml;chster Call: in der folgenden Woche (regul&auml;rer Rhythmus der Community-Calls).</em></p>
+                        <p><em>Protokoll erstellt aus der Audioaufzeichnung.</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>
