@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Meeting - May 21, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .resource-links { background: var(--color-bg-secondary); padding: 1.25rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .resource-links h3 { margin: 0 0 0.75rem 0; font-size: 1rem; }
+        .resource-links ul { list-style: none; padding: 0; margin: 0; }
+        .resource-links li { margin-bottom: 0.5rem; }
+        .resource-links a { color: var(--color-accent); font-weight: 500; }
+        .resource-links a:hover { text-decoration: underline; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 2rem; border-radius: 8px; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px; }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>Community Meeting</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Thursday 21 May 2026, 19:56 CEST</span>
+                    </div>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>With Daniel T (MC), Michael M (nurse), Daniela S, Tancredi T, Chris O, Nora A, Axel P, Fadija C, Markus L, W (leading MoN), and other community members (~30 on the call)</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Full Records</h3>
+                        <ul>
+                            <li><a href="2026-05-21-community-transcript.html">Full transcript (English only)</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=wON3Tc-LV50">Video recording (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/wON3Tc-LV50" title="Community Meeting - May 21, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>A short call this week, with two main threads &mdash; a finance milestone and a substantial discussion of volunteer recruitment and infrastructure prioritisation for a smaller-than-usual event.</p>
+
+                        <h2>1. Toilets Paid &mdash; Finance Milestone</h2>
+                        <ul>
+                            <li>Daniel T confirmed the toilet payment has been made: <strong>&euro;69,000 transferred today</strong>. He flagged this as an important milestone (and an eye-watering one), and hoped a future site might allow a more cost-effective approach.</li>
+                        </ul>
+
+                        <h2>2. Scale of the Event &mdash; ~2,000 vs ~3,000</h2>
+                        <ul>
+                            <li>The event is on track for roughly <strong>2,000 tickets sold</strong>, against about 3,000 last year &mdash; around two-thirds of usual numbers. This proportionally reduces the expected volunteer pool (optimistically ~2,000 volunteers if the same sign-up rate holds), with knock-on effects on what can be built.</li>
+                            <li>The framing throughout was that this will simply be a somewhat different event &mdash; fewer or simpler structures, with prioritisation of what genuinely must be built.</li>
+                        </ul>
+
+                        <h2>3. Volunteers and Recruitment</h2>
+                        <ul>
+                            <li>Michael M (nurse) gave the volunteer update (sharing the dashboard on screen; images to be circulated afterwards). Numbers are down markedly &mdash; and it is not only numbers but skill and experience, as some long-involved people who favoured a &ldquo;no-go&rdquo;/year-off earlier in the year have indeed taken the year off.</li>
+                            <li>Strong areas: <strong>Gate, Power, Barrio Support</strong> (built up well from the ground), pre-event Nomads (nights/weekends always a struggle).</li>
+                            <li>Greatest need: the on-site pre-event period, especially infrastructure/build labour. The final pre-event week typically needs ~44 people for infrastructure; currently <strong>~14 are signed up</strong>. First-crew week and setup week are the thin points. Strike is, as ever, hard to staff.</li>
+                            <li>Contingency planning is needed, but Michael M cautioned strongly against casually naming individual structures to drop &mdash; those structures have people who have planned around them year-round. Any reductions need preemptive, respectful discussion.</li>
+                            <li>Morale and looking after volunteers remains the priority. Appreciation was expressed to all those showing up and putting in energy.</li>
+                            <li>Daniel T added that <strong>stipends and other support are available</strong> to help people who could come but face financial barriers &mdash; please put such people in touch.</li>
+                        </ul>
+
+                        <h3>How to get in touch / who to contact</h3>
+                        <ul>
+                            <li>Discord, WhatsApp, Telegram, or any board member (Daniel, Michael/nurse, Frank, Daniela). Messages will be noticed and answered; if one person doesn&rsquo;t reply, try another.</li>
+                        </ul>
+
+                        <h2>4. Recruitment Strategy &mdash; Spread the Word</h2>
+                        <ul>
+                            <li>The core recognition: existing channels (email, WhatsApp, Telegram, Discord updates) are reaching the same ~1,000&ndash;2,500 already-engaged people. The need is to reach <em>beyond</em> that pool.</li>
+                            <li>The community itself is the best &ldquo;comms team&rdquo; &mdash; ~30 people on the call spreading the word to their own networks and barrio groups can reach thousands.</li>
+                            <li>Comms (Nora A) will draft / re-share an <strong>easy-to-forward recruitment message within the next day or two</strong>, posted in the usual channels (Telegram, WhatsApp, Discord <code>updates</code>); Daniela&rsquo;s link on volunteering to be shared too.</li>
+                            <li>Personal, authentic messages (&ldquo;here&rsquo;s why <em>I</em> think you should come and build&rdquo;) often land better than polished broadcasts.</li>
+                            <li>Specific gaps to target: Facebook groups and other European burner communities (not yet really worked); the francophone community (Axel P offered to reach friends and other barrios).</li>
+                        </ul>
+
+                        <h2>5. Short-Stint and Weekend Volunteers &mdash; Do They Help?</h2>
+                        <ul>
+                            <li>In response to Tancredi T&rsquo;s question about weekend/short-stay volunteers for build:</li>
+                            <li>Yes &mdash; skilled people who come <em>to work</em> (not to acclimatise/party early) can make a real difference, even for a weekend. Work weekends are welcome.</li>
+                            <li>It helps greatly to know in advance who is arriving and when, so labour can be planned and teams formed on arrival.</li>
+                            <li>The same applies to <strong>Strike</strong>, which feels &ldquo;all or nothing&rdquo; but needn&rsquo;t be &mdash; people are encouraged to rest in Barcelona Mon/Tue post-event and return for a couple of strike days.</li>
+                            <li>&ldquo;Build&rdquo; as a term is being de-emphasised: much of the needed work is logistics, admin, and operating/decorating, not heavy lifting. There is a role for every skill set, including admin in the shade.</li>
+                            <li>This is not a year to be picky: good attitude and willingness to be directed is enough.</li>
+                        </ul>
+
+                        <h2>6. Infrastructure Prioritisation &mdash; Decision Path</h2>
+                        <ul>
+                            <li><strong>No decisions were made on the call &mdash; only discussion.</strong> Coordinators to convene next week to decide.</li>
+                            <li>Daniela S will email all project coordinators to schedule a meeting <strong>Wednesday</strong> to prioritise infrastructure: map structures, estimate people-days each needs, identify where to simplify, and decide collectively what to scale back.</li>
+                            <li>Approaches floated for simplification: build the Gate from a cabin + shade rather than a full wood build; use containers/cabins with shades on top (&agrave; la Ubertown) for communal shade/rest areas; keep things functional even where not &ldquo;pretty.&rdquo;</li>
+                            <li><strong>MoN</strong> (the large communal shade structure) was discussed as a candidate to reconsider. W, who is leading MoN, asked for clarity sooner rather than later, since teams and volunteers are already committed and a half-built outcome is the worst case. Michael M and Daniela S both affirmed their work is valued and nothing is being unilaterally cut; &ldquo;maybe this is MoN&rsquo;s year&rdquo; was raised as a genuine open question for the smaller event (pulling people together rather than spreading thin).</li>
+                            <li>A request was noted for an <strong>accessibility / build-schedule chart</strong> showing what is meant to be built on which day &mdash; the infrastructure team to consider producing this.</li>
+                        </ul>
+
+                        <h2>7. Appreciation and Positive Notes</h2>
+                        <ul>
+                            <li>Daniel T closed on the hard cornerstones being secured: permits, insurance, sites booked, toilets paid, and finances in good order (credit to Peter on finance/budgeting) &mdash; the event will not lose money. With those in place, ~2,000 capable, adaptable burners can still have a great week.</li>
+                            <li>Chris O shared positive news: Malfare shift leads and Nomads are <strong>covered for Friday night</strong> &mdash; the toughest night &mdash; even if the rest of the week remains thin. Appreciation to those who signed up. More Malfare recruitment talk to come separately.</li>
+                        </ul>
+
+                        <h2>Decisions</h2>
+                        <ul>
+                            <li>No structural/infrastructure cuts decided on the call &mdash; these are explicitly <strong>discussions only</strong> until the coordinators&rsquo; meeting.</li>
+                            <li>Coordinators to meet <strong>Wednesday</strong> to prioritise infrastructure and decide what to simplify/scale back for the smaller event.</li>
+                            <li>Adopt a community-driven recruitment approach: a standardised, easy-to-forward message that members distribute through their own networks.</li>
+                        </ul>
+
+                        <h2>Action Items</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Action</th><th>Due</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Michael M (nurse)</td><td>Share volunteer dashboard images with the team</td><td>This week</td></tr>
+                                <tr><td>Nora A / Comms</td><td>Draft an easy-to-forward recruitment message and post in usual channels (Telegram, WhatsApp, Discord <code>updates</code>)</td><td>Within 1&ndash;2 days</td></tr>
+                                <tr><td>Daniela S</td><td>Email all project coordinators to schedule the Wednesday infrastructure-prioritisation meeting</td><td>Immediately after the call</td></tr>
+                                <tr><td>All / community</td><td>Spread the recruitment message through personal networks, barrio groups, FB groups, and other European/francophone burner communities</td><td>Ongoing</td></tr>
+                                <tr><td>All</td><td>Put financially-constrained-but-willing volunteers in touch re: stipends/support</td><td>Ongoing</td></tr>
+                                <tr><td>Infrastructure team</td><td>Produce an accessibility / build-schedule chart (what is built on which day)</td><td>Soon</td></tr>
+                                <tr><td>All who can</td><td>Come early / stay for strike / offer skilled weekend help where possible; flag arrival dates in advance</td><td>Ongoing</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Next call: the following week (regular community call rhythm).</em></p>
+                        <p><em>Minutes prepared from the audio recording.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
+
+                    <div class="attendees">
+                        <strong>Con Daniel T (presentador), Michael M (nurse), Daniela S, Tancredi T, Chris O, Nora A, Axel P, Fadija C, Markus L, W (responsable de MoN) y otros miembros de la comunidad (~30 en la llamada)</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Registros de la Reuni&oacute;n</h3>
+                        <ul>
+                            <li><a href="https://www.youtube.com/watch?v=wON3Tc-LV50">Grabaci&oacute;n en v&iacute;deo (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/wON3Tc-LV50" title="Community Meeting - May 21, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Una llamada corta esta semana, con dos hilos principales: un hito financiero y una discusi&oacute;n sustancial sobre el reclutamiento de voluntarios y la priorizaci&oacute;n de la infraestructura para un evento m&aacute;s peque&ntilde;o de lo habitual.</p>
+
+                        <h2>1. Ba&ntilde;os Pagados &mdash; Hito Financiero</h2>
+                        <ul>
+                            <li>Daniel T confirm&oacute; que el pago de los ba&ntilde;os se ha realizado: <strong>&euro;69.000 transferidos hoy</strong>. Lo se&ntilde;al&oacute; como un hito importante (e impactante), y dese&oacute; que un futuro emplazamiento pudiera permitir un enfoque m&aacute;s rentable.</li>
+                        </ul>
+
+                        <h2>2. Escala del Evento &mdash; ~2.000 frente a ~3.000</h2>
+                        <ul>
+                            <li>El evento va camino de vender aproximadamente <strong>2.000 entradas</strong>, frente a unas 3.000 el a&ntilde;o pasado &mdash; alrededor de dos tercios de las cifras habituales. Esto reduce proporcionalmente el grupo de voluntarios previsto (optimistamente ~2.000 voluntarios si se mantiene la misma tasa de inscripci&oacute;n), con efectos en cascada sobre lo que se puede construir.</li>
+                            <li>El planteamiento general fue que ser&aacute; simplemente un evento algo diferente &mdash; menos estructuras o m&aacute;s sencillas, con priorizaci&oacute;n de lo que realmente debe construirse.</li>
+                        </ul>
+
+                        <h2>3. Voluntarios y Reclutamiento</h2>
+                        <ul>
+                            <li>Michael M (nurse) hizo la actualizaci&oacute;n sobre voluntarios (compartiendo el panel en pantalla; se enviar&aacute;n im&aacute;genes despu&eacute;s). Los n&uacute;meros han bajado de forma notable &mdash; y no es solo cuesti&oacute;n de n&uacute;meros, sino de competencias y experiencia, ya que algunas personas con mucha implicaci&oacute;n que apoyaron una posici&oacute;n de &laquo;no-go&raquo;/a&ntilde;o sab&aacute;tico a principios de a&ntilde;o se han tomado efectivamente el a&ntilde;o libre.</li>
+                            <li>&Aacute;reas fuertes: <strong>Gate, Power, Barrio Support</strong> (construido desde cero), Nomads pre-evento (las noches y fines de semana siempre son dif&iacute;ciles).</li>
+                            <li>Mayor necesidad: el periodo pre-evento en el sitio, especialmente la mano de obra de infraestructura/construcci&oacute;n. La &uacute;ltima semana pre-evento suele necesitar ~44 personas para infraestructura; actualmente hay <strong>~14 inscritos</strong>. La semana de primer equipo y la semana de montaje son los puntos cr&iacute;ticos. Strike, como siempre, es dif&iacute;cil de cubrir.</li>
+                            <li>Es necesaria una planificaci&oacute;n de contingencia, pero Michael M advirti&oacute; firmemente contra nombrar a la ligera estructuras individuales que se vayan a descartar &mdash; esas estructuras tienen personas que llevan todo el a&ntilde;o planific&aacute;ndolas. Cualquier reducci&oacute;n requiere una discusi&oacute;n previa y respetuosa.</li>
+                            <li>La moral y el cuidado de los voluntarios siguen siendo la prioridad. Se expres&oacute; agradecimiento a quienes est&aacute;n apareciendo y poniendo energ&iacute;a.</li>
+                            <li>Daniel T a&ntilde;adi&oacute; que <strong>hay becas y otros apoyos disponibles</strong> para ayudar a personas que podr&iacute;an venir pero se enfrentan a barreras econ&oacute;micas &mdash; por favor poned a esas personas en contacto.</li>
+                        </ul>
+
+                        <h3>C&oacute;mo ponerse en contacto / con qui&eacute;n</h3>
+                        <ul>
+                            <li>Discord, WhatsApp, Telegram, o cualquier miembro de la junta (Daniel, Michael/nurse, Frank, Daniela). Los mensajes se atender&aacute;n; si una persona no responde, probad con otra.</li>
+                        </ul>
+
+                        <h2>4. Estrategia de Reclutamiento &mdash; Difundir el Mensaje</h2>
+                        <ul>
+                            <li>El reconocimiento central: los canales existentes (correo, WhatsApp, Telegram, Discord updates) est&aacute;n llegando al mismo grupo de ~1.000&ndash;2.500 personas ya muy implicadas. Hay que llegar <em>m&aacute;s all&aacute;</em> de ese grupo.</li>
+                            <li>La propia comunidad es el mejor &laquo;equipo de comms&raquo; &mdash; ~30 personas en la llamada difundiendo el mensaje a sus propias redes y grupos de barrio pueden llegar a miles.</li>
+                            <li>Comms (Nora A) redactar&aacute; / volver&aacute; a compartir un <strong>mensaje de reclutamiento f&aacute;cil de reenviar en uno o dos d&iacute;as</strong>, publicado en los canales habituales (Telegram, WhatsApp, Discord <code>updates</code>); tambi&eacute;n se compartir&aacute; el enlace de Daniela sobre voluntariado.</li>
+                            <li>Los mensajes personales y aut&eacute;nticos (&laquo;por qu&eacute; <em>yo</em> creo que deber&iacute;as venir a construir&raquo;) a menudo llegan mejor que las difusiones m&aacute;s pulidas.</li>
+                            <li>Huecos espec&iacute;ficos a cubrir: grupos de Facebook y otras comunidades burner europeas (a&uacute;n no trabajadas a fondo); la comunidad francoparlante (Axel P se ofreci&oacute; a llegar a amigos y otros barrios).</li>
+                        </ul>
+
+                        <h2>5. Voluntarios de Corta Estancia y de Fin de Semana &mdash; &iquest;Ayudan?</h2>
+                        <ul>
+                            <li>En respuesta a la pregunta de Tancredi T sobre voluntarios de fin de semana / estancias cortas para construcci&oacute;n:</li>
+                            <li>S&iacute; &mdash; personas con habilidades que vienen <em>a trabajar</em> (y no a aclimatarse / empezar la fiesta pronto) pueden marcar una diferencia real, incluso un fin de semana. Los fines de semana de trabajo son bienvenidos.</li>
+                            <li>Ayuda mucho saber con antelaci&oacute;n qui&eacute;n llega y cu&aacute;ndo, para poder planificar la mano de obra y formar equipos al llegar.</li>
+                            <li>Lo mismo aplica a <strong>Strike</strong>, que parece &laquo;todo o nada&raquo; pero no tiene por qu&eacute; serlo &mdash; se anima a la gente a descansar en Barcelona lunes/martes post-evento y volver un par de d&iacute;as de strike.</li>
+                            <li>El t&eacute;rmino &laquo;build&raquo; se est&aacute; desenfatizando: gran parte del trabajo necesario es log&iacute;stica, administraci&oacute;n y operaci&oacute;n/decoraci&oacute;n, no carga pesada. Hay un papel para cada conjunto de habilidades, incluso la administraci&oacute;n a la sombra.</li>
+                            <li>Este no es el a&ntilde;o para ser exigente: con buena actitud y disposici&oacute;n a recibir indicaciones es suficiente.</li>
+                        </ul>
+
+                        <h2>6. Priorizaci&oacute;n de Infraestructura &mdash; Camino de Decisi&oacute;n</h2>
+                        <ul>
+                            <li><strong>No se tomaron decisiones en la llamada &mdash; solo hubo discusi&oacute;n.</strong> Los coordinadores se reunir&aacute;n la pr&oacute;xima semana para decidir.</li>
+                            <li>Daniela S enviar&aacute; un correo a todos los coordinadores de proyecto para convocar una reuni&oacute;n el <strong>mi&eacute;rcoles</strong> y priorizar la infraestructura: mapear las estructuras, estimar los d&iacute;as-persona necesarios para cada una, identificar d&oacute;nde simplificar y decidir colectivamente qu&eacute; reducir.</li>
+                            <li>Enfoques planteados para simplificar: construir el Gate a partir de una cabina + sombra en lugar de una construcci&oacute;n completa de madera; usar contenedores/cabinas con sombras encima (al estilo Ubertown) para zonas comunes de sombra/descanso; mantener las cosas funcionales aunque no sean &laquo;bonitas&raquo;.</li>
+                            <li>Se habl&oacute; de <strong>MoN</strong> (la gran estructura comunal de sombra) como candidata a reconsiderar. W, que est&aacute; liderando MoN, pidi&oacute; claridad cuanto antes, ya que hay equipos y voluntarios ya comprometidos y un resultado a medio construir es el peor escenario. Michael M y Daniela S afirmaron que su trabajo se valora y que nada se est&aacute; cancelando unilateralmente; &laquo;quiz&aacute; este sea el a&ntilde;o de MoN&raquo; se plante&oacute; como una pregunta abierta genuina para el evento m&aacute;s peque&ntilde;o (juntar a la gente en lugar de dispersarla).</li>
+                            <li>Se anot&oacute; una petici&oacute;n de una <strong>tabla accesible / calendario de construcci&oacute;n</strong> que muestre qu&eacute; se va a construir cada d&iacute;a &mdash; el equipo de infraestructura considerar&aacute; producirla.</li>
+                        </ul>
+
+                        <h2>7. Agradecimientos y Notas Positivas</h2>
+                        <ul>
+                            <li>Daniel T cerr&oacute; recordando las piezas duras ya aseguradas: permisos, seguros, sitios reservados, ba&ntilde;os pagados y finanzas en orden (m&eacute;rito de Peter en finanzas/presupuesto) &mdash; el evento no perder&aacute; dinero. Con esas piezas en su sitio, ~2.000 burners capaces y adaptables a&uacute;n pueden tener una gran semana.</li>
+                            <li>Chris O comparti&oacute; una buena noticia: los responsables de turno de Malfare y los Nomads <strong>est&aacute;n cubiertos para la noche del viernes</strong> &mdash; la noche m&aacute;s dura &mdash; aunque el resto de la semana siga ajustado. Agradecimiento a quienes se han apuntado. M&aacute;s charla de reclutamiento de Malfare en otro momento.</li>
+                        </ul>
+
+                        <h2>Decisiones</h2>
+                        <ul>
+                            <li>No se decidieron recortes estructurales/de infraestructura en la llamada &mdash; son expl&iacute;citamente <strong>solo discusiones</strong> hasta la reuni&oacute;n de coordinadores.</li>
+                            <li>Los coordinadores se reunir&aacute;n el <strong>mi&eacute;rcoles</strong> para priorizar la infraestructura y decidir qu&eacute; simplificar/reducir para el evento m&aacute;s peque&ntilde;o.</li>
+                            <li>Adoptar un enfoque de reclutamiento impulsado por la comunidad: un mensaje estandarizado y f&aacute;cil de reenviar que los miembros distribuyen a trav&eacute;s de sus propias redes.</li>
+                        </ul>
+
+                        <h2>Acciones a Realizar</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Acci&oacute;n</th><th>Plazo</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Michael M (nurse)</td><td>Compartir im&aacute;genes del panel de voluntarios con el equipo</td><td>Esta semana</td></tr>
+                                <tr><td>Nora A / Comms</td><td>Redactar un mensaje de reclutamiento f&aacute;cil de reenviar y publicarlo en los canales habituales (Telegram, WhatsApp, Discord <code>updates</code>)</td><td>En 1&ndash;2 d&iacute;as</td></tr>
+                                <tr><td>Daniela S</td><td>Enviar correo a todos los coordinadores de proyecto para convocar la reuni&oacute;n de priorizaci&oacute;n de infraestructura del mi&eacute;rcoles</td><td>Inmediatamente despu&eacute;s de la llamada</td></tr>
+                                <tr><td>Todos / comunidad</td><td>Difundir el mensaje de reclutamiento a trav&eacute;s de redes personales, grupos de barrio, grupos de FB y otras comunidades burner europeas/francoparlantes</td><td>Continuo</td></tr>
+                                <tr><td>Todos</td><td>Poner en contacto a voluntarios dispuestos pero con limitaciones econ&oacute;micas para las becas/apoyos</td><td>Continuo</td></tr>
+                                <tr><td>Equipo de infraestructura</td><td>Producir una tabla accesible / calendario de construcci&oacute;n (qu&eacute; se construye cada d&iacute;a)</td><td>Pronto</td></tr>
+                                <tr><td>Quienes puedan</td><td>Llegar pronto / quedarse a strike / ofrecer ayuda cualificada en fin de semana cuando sea posible; avisar de la fecha de llegada con antelaci&oacute;n</td><td>Continuo</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Pr&oacute;xima llamada: la semana siguiente (ritmo habitual de llamadas comunitarias).</em></p>
+                        <p><em>Actas preparadas a partir de la grabaci&oacute;n de audio.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Avec Daniel T (animateur), Michael M (nurse), Daniela S, Tancredi T, Chris O, Nora A, Axel P, Fadija C, Markus L, W (responsable de MoN) et d&rsquo;autres membres de la communaut&eacute; (~30 sur l&rsquo;appel)</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Archives de la R&eacute;union</h3>
+                        <ul>
+                            <li><a href="2026-05-21-community-transcript.html">Transcription compl&egrave;te (en anglais uniquement)</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=wON3Tc-LV50">Enregistrement vid&eacute;o (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/wON3Tc-LV50" title="Community Meeting - May 21, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Un appel court cette semaine, avec deux fils principaux : un jalon financier et une discussion substantielle sur le recrutement des b&eacute;n&eacute;voles et la priorisation de l&rsquo;infrastructure pour un &eacute;v&eacute;nement plus petit que d&rsquo;habitude.</p>
+
+                        <h2>1. Toilettes Pay&eacute;es &mdash; Jalon Financier</h2>
+                        <ul>
+                            <li>Daniel T a confirm&eacute; que le paiement des toilettes a &eacute;t&eacute; effectu&eacute; : <strong>&euro;69 000 transf&eacute;r&eacute;s aujourd&rsquo;hui</strong>. Il l&rsquo;a signal&eacute; comme un jalon important (et &eacute;dificateur), et a esp&eacute;r&eacute; qu&rsquo;un futur site permettrait une approche plus rentable.</li>
+                        </ul>
+
+                        <h2>2. &Eacute;chelle de l&rsquo;&Eacute;v&eacute;nement &mdash; ~2 000 contre ~3 000</h2>
+                        <ul>
+                            <li>L&rsquo;&eacute;v&eacute;nement est en voie de vendre environ <strong>2 000 billets</strong>, contre environ 3 000 l&rsquo;an dernier &mdash; soit environ deux tiers des chiffres habituels. Cela r&eacute;duit proportionnellement le vivier de b&eacute;n&eacute;voles attendu (au mieux ~2 000 b&eacute;n&eacute;voles si le m&ecirc;me taux d&rsquo;inscription se maintient), avec des effets en cascade sur ce qui peut &ecirc;tre construit.</li>
+                            <li>Le cadrage g&eacute;n&eacute;ral &eacute;tait que ce sera simplement un &eacute;v&eacute;nement un peu diff&eacute;rent &mdash; moins de structures ou des structures plus simples, avec une priorisation de ce qui doit vraiment &ecirc;tre construit.</li>
+                        </ul>
+
+                        <h2>3. B&eacute;n&eacute;voles et Recrutement</h2>
+                        <ul>
+                            <li>Michael M (nurse) a fait le point sur les b&eacute;n&eacute;voles (en partageant le tableau de bord &agrave; l&rsquo;&eacute;cran ; des images seront diffus&eacute;es ensuite). Les chiffres sont en baisse marqu&eacute;e &mdash; et il ne s&rsquo;agit pas seulement de chiffres, mais aussi de comp&eacute;tences et d&rsquo;exp&eacute;rience, certaines personnes tr&egrave;s impliqu&eacute;es qui penchaient pour un &laquo;&nbsp;no-go&nbsp;&raquo;/ann&eacute;e sabbatique en d&eacute;but d&rsquo;ann&eacute;e ayant effectivement pris une ann&eacute;e off.</li>
+                            <li>Points forts : <strong>Gate, Power, Barrio Support</strong> (construit en partant de z&eacute;ro), Nomads pr&eacute;-&eacute;v&eacute;nement (les soirs et week-ends sont toujours difficiles).</li>
+                            <li>Besoin le plus important : la p&eacute;riode pr&eacute;-&eacute;v&eacute;nement sur site, en particulier la main-d&rsquo;&oelig;uvre infrastructure/construction. La derni&egrave;re semaine pr&eacute;-&eacute;v&eacute;nement n&eacute;cessite g&eacute;n&eacute;ralement ~44 personnes pour l&rsquo;infrastructure ; actuellement <strong>~14 sont inscrites</strong>. La semaine de premier &eacute;quipage et la semaine d&rsquo;installation sont les points minces. Strike est, comme toujours, difficile &agrave; pourvoir.</li>
+                            <li>Une planification de contingence est n&eacute;cessaire, mais Michael M a mis en garde fermement contre le fait de citer &agrave; la l&eacute;g&egrave;re des structures individuelles &agrave; abandonner &mdash; ces structures ont des personnes qui ont planifi&eacute; toute l&rsquo;ann&eacute;e autour d&rsquo;elles. Toute r&eacute;duction n&eacute;cessite une discussion pr&eacute;alable et respectueuse.</li>
+                            <li>Le moral et le soin aux b&eacute;n&eacute;voles restent la priorit&eacute;. Gratitude exprim&eacute;e &agrave; tous ceux qui se pr&eacute;sentent et apportent leur &eacute;nergie.</li>
+                            <li>Daniel T a ajout&eacute; que <strong>des allocations et autres aides sont disponibles</strong> pour aider les personnes qui pourraient venir mais qui font face &agrave; des obstacles financiers &mdash; merci de mettre ces personnes en contact.</li>
+                        </ul>
+
+                        <h3>Comment se mettre en contact / &agrave; qui s&rsquo;adresser</h3>
+                        <ul>
+                            <li>Discord, WhatsApp, Telegram, ou tout membre du conseil (Daniel, Michael/nurse, Frank, Daniela). Les messages seront remarqu&eacute;s et auront une r&eacute;ponse ; si une personne ne r&eacute;pond pas, essayez-en une autre.</li>
+                        </ul>
+
+                        <h2>4. Strat&eacute;gie de Recrutement &mdash; Faire Passer le Message</h2>
+                        <ul>
+                            <li>La reconnaissance centrale : les canaux existants (e-mail, WhatsApp, Telegram, Discord updates) atteignent le m&ecirc;me groupe de ~1 000&ndash;2 500 personnes d&eacute;j&agrave; tr&egrave;s impliqu&eacute;es. Il faut atteindre <em>au-del&agrave;</em> de ce groupe.</li>
+                            <li>La communaut&eacute; elle-m&ecirc;me est la meilleure &laquo;&nbsp;&eacute;quipe comms&nbsp;&raquo; &mdash; ~30 personnes sur l&rsquo;appel diffusant le message &agrave; leurs propres r&eacute;seaux et groupes de barrio peuvent atteindre des milliers de personnes.</li>
+                            <li>Comms (Nora A) r&eacute;digera / repartagera un <strong>message de recrutement facile &agrave; transf&eacute;rer dans un ou deux jours</strong>, post&eacute; sur les canaux habituels (Telegram, WhatsApp, Discord <code>updates</code>) ; le lien de Daniela sur le b&eacute;n&eacute;volat sera &eacute;galement partag&eacute;.</li>
+                            <li>Les messages personnels et authentiques (&laquo;&nbsp;voici pourquoi <em>je</em> pense que tu devrais venir construire&nbsp;&raquo;) ont souvent plus d&rsquo;impact qu&rsquo;une diffusion plus polie.</li>
+                            <li>Lacunes sp&eacute;cifiques &agrave; viser : groupes Facebook et autres communaut&eacute;s burner europ&eacute;ennes (pas encore vraiment travaill&eacute;s) ; la communaut&eacute; francophone (Axel P s&rsquo;est propos&eacute; pour atteindre des amis et d&rsquo;autres barrios).</li>
+                        </ul>
+
+                        <h2>5. B&eacute;n&eacute;voles Courts et de Week-end &mdash; Cela Aide-t-il ?</h2>
+                        <ul>
+                            <li>En r&eacute;ponse &agrave; la question de Tancredi T sur les b&eacute;n&eacute;voles de week-end / courts s&eacute;jours pour la construction :</li>
+                            <li>Oui &mdash; des personnes comp&eacute;tentes qui viennent <em>pour travailler</em> (et non pour s&rsquo;acclimater / commencer la f&ecirc;te en avance) peuvent faire une r&eacute;elle diff&eacute;rence, m&ecirc;me un week-end. Les week-ends de travail sont les bienvenus.</li>
+                            <li>Cela aide beaucoup de savoir &agrave; l&rsquo;avance qui arrive et quand, pour pouvoir planifier la main-d&rsquo;&oelig;uvre et former les &eacute;quipes &agrave; l&rsquo;arriv&eacute;e.</li>
+                            <li>La m&ecirc;me chose s&rsquo;applique &agrave; <strong>Strike</strong>, qui para&icirc;t &laquo;&nbsp;tout ou rien&nbsp;&raquo; mais ne doit pas l&rsquo;&ecirc;tre &mdash; on encourage les gens &agrave; se reposer &agrave; Barcelone lundi/mardi post-&eacute;v&eacute;nement et &agrave; revenir pour deux jours de strike.</li>
+                            <li>Le terme &laquo;&nbsp;build&nbsp;&raquo; est d&eacute;-emphasis&eacute; : une grande partie du travail n&eacute;cessaire est logistique, administration et op&eacute;ration/d&eacute;coration, pas du portage lourd. Il y a un r&ocirc;le pour chaque type de comp&eacute;tence, y compris l&rsquo;administration &agrave; l&rsquo;ombre.</li>
+                            <li>Ce n&rsquo;est pas une ann&eacute;e pour faire la fine bouche : une bonne attitude et la disposition &agrave; suivre les instructions suffisent.</li>
+                        </ul>
+
+                        <h2>6. Priorisation de l&rsquo;Infrastructure &mdash; Chemin de D&eacute;cision</h2>
+                        <ul>
+                            <li><strong>Aucune d&eacute;cision n&rsquo;a &eacute;t&eacute; prise pendant l&rsquo;appel &mdash; il s&rsquo;agit uniquement de discussion.</strong> Les coordinateurs se r&eacute;uniront la semaine prochaine pour d&eacute;cider.</li>
+                            <li>Daniela S enverra un e-mail &agrave; tous les coordinateurs de projet pour fixer une r&eacute;union le <strong>mercredi</strong> afin de prioriser l&rsquo;infrastructure : cartographier les structures, estimer les jours-personnes n&eacute;cessaires pour chacune, identifier o&ugrave; simplifier et d&eacute;cider collectivement ce qu&rsquo;il convient de r&eacute;duire.</li>
+                            <li>Approches &eacute;voqu&eacute;es pour simplifier : construire le Gate &agrave; partir d&rsquo;une cabine + ombre plut&ocirc;t qu&rsquo;une construction en bois compl&egrave;te ; utiliser des conteneurs/cabines avec des ombres sur le dessus (&agrave; la mani&egrave;re d&rsquo;Ubertown) pour les zones communes d&rsquo;ombre/repos ; garder les choses fonctionnelles m&ecirc;me si elles ne sont pas &laquo;&nbsp;jolies&nbsp;&raquo;.</li>
+                            <li><strong>MoN</strong> (la grande structure communale d&rsquo;ombre) a &eacute;t&eacute; &eacute;voqu&eacute; comme candidat &agrave; reconsid&eacute;rer. W, qui dirige MoN, a demand&eacute; une clart&eacute; rapide, car des &eacute;quipes et des b&eacute;n&eacute;voles sont d&eacute;j&agrave; engag&eacute;s et un r&eacute;sultat &agrave; moiti&eacute; construit est le pire sc&eacute;nario. Michael M et Daniela S ont tous deux affirm&eacute; que son travail est valoris&eacute; et que rien n&rsquo;est annul&eacute; unilat&eacute;ralement ; &laquo;&nbsp;peut-&ecirc;tre est-ce l&rsquo;ann&eacute;e de MoN&nbsp;&raquo; a &eacute;t&eacute; pos&eacute; comme une vraie question ouverte pour l&rsquo;&eacute;v&eacute;nement plus petit (rassembler les gens plut&ocirc;t que de les disperser).</li>
+                            <li>Une demande a &eacute;t&eacute; not&eacute;e pour un <strong>tableau accessible / calendrier de construction</strong> montrant ce qui est cens&eacute; &ecirc;tre construit chaque jour &mdash; l&rsquo;&eacute;quipe infrastructure va envisager de le produire.</li>
+                        </ul>
+
+                        <h2>7. Reconnaissance et Notes Positives</h2>
+                        <ul>
+                            <li>Daniel T a cl&ocirc;tur&eacute; en rappelant les pierres angulaires d&eacute;j&agrave; s&eacute;curis&eacute;es : permis, assurance, sites r&eacute;serv&eacute;s, toilettes pay&eacute;es et finances en bon ordre (m&eacute;rite &agrave; Peter pour les finances/le budget) &mdash; l&rsquo;&eacute;v&eacute;nement ne perdra pas d&rsquo;argent. Avec ces &eacute;l&eacute;ments en place, ~2 000 burners capables et adaptables peuvent encore passer une excellente semaine.</li>
+                            <li>Chris O a partag&eacute; une bonne nouvelle : les responsables de cr&eacute;neau Malfare et les Nomads sont <strong>couverts pour la nuit de vendredi</strong> &mdash; la nuit la plus difficile &mdash; m&ecirc;me si le reste de la semaine reste tendu. Reconnaissance &agrave; ceux qui se sont inscrits. Plus de discussions sur le recrutement Malfare &agrave; suivre s&eacute;par&eacute;ment.</li>
+                        </ul>
+
+                        <h2>D&eacute;cisions</h2>
+                        <ul>
+                            <li>Aucune r&eacute;duction structurelle/d&rsquo;infrastructure n&rsquo;a &eacute;t&eacute; d&eacute;cid&eacute;e pendant l&rsquo;appel &mdash; ce sont explicitement <strong>uniquement des discussions</strong> jusqu&rsquo;&agrave; la r&eacute;union des coordinateurs.</li>
+                            <li>Les coordinateurs se r&eacute;uniront <strong>mercredi</strong> pour prioriser l&rsquo;infrastructure et d&eacute;cider ce qu&rsquo;il convient de simplifier/r&eacute;duire pour l&rsquo;&eacute;v&eacute;nement plus petit.</li>
+                            <li>Adopter une approche de recrutement pilot&eacute;e par la communaut&eacute; : un message standardis&eacute; et facile &agrave; transf&eacute;rer que les membres distribuent &agrave; travers leurs propres r&eacute;seaux.</li>
+                        </ul>
+
+                        <h2>Actions &agrave; R&eacute;aliser</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Personne</th><th>Action</th><th>D&eacute;lai</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Michael M (nurse)</td><td>Partager les images du tableau de bord des b&eacute;n&eacute;voles avec l&rsquo;&eacute;quipe</td><td>Cette semaine</td></tr>
+                                <tr><td>Nora A / Comms</td><td>R&eacute;diger un message de recrutement facile &agrave; transf&eacute;rer et le publier sur les canaux habituels (Telegram, WhatsApp, Discord <code>updates</code>)</td><td>Sous 1&ndash;2 jours</td></tr>
+                                <tr><td>Daniela S</td><td>Envoyer un e-mail &agrave; tous les coordinateurs de projet pour fixer la r&eacute;union de priorisation infrastructure du mercredi</td><td>Imm&eacute;diatement apr&egrave;s l&rsquo;appel</td></tr>
+                                <tr><td>Tous / communaut&eacute;</td><td>Diffuser le message de recrutement &agrave; travers les r&eacute;seaux personnels, groupes de barrio, groupes FB et autres communaut&eacute;s burner europ&eacute;ennes/francophones</td><td>Continu</td></tr>
+                                <tr><td>Tous</td><td>Mettre en contact les b&eacute;n&eacute;voles motiv&eacute;s mais contraints financi&egrave;rement pour les allocations/aides</td><td>Continu</td></tr>
+                                <tr><td>&Eacute;quipe infrastructure</td><td>Produire un tableau accessible / calendrier de construction (ce qui est construit chaque jour)</td><td>Bient&ocirc;t</td></tr>
+                                <tr><td>Tous ceux qui peuvent</td><td>Arriver t&ocirc;t / rester pour le strike / proposer une aide qualifi&eacute;e le week-end si possible ; signaler la date d&rsquo;arriv&eacute;e &agrave; l&rsquo;avance</td><td>Continu</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Prochain appel : la semaine suivante (rythme habituel des appels communautaires).</em></p>
+                        <p><em>Proc&egrave;s-verbal pr&eacute;par&eacute; &agrave; partir de l&rsquo;enregistrement audio.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Con Daniel T (moderatore), Michael M (nurse), Daniela S, Tancredi T, Chris O, Nora A, Axel P, Fadija C, Markus L, W (responsabile di MoN) e altri membri della comunit&agrave; (~30 alla chiamata)</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Archivi della Riunione</h3>
+                        <ul>
+                            <li><a href="2026-05-21-community-transcript.html">Trascrizione completa (solo in inglese)</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=wON3Tc-LV50">Registrazione video (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/wON3Tc-LV50" title="Community Meeting - May 21, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Una chiamata breve questa settimana, con due fili principali: un traguardo finanziario e una discussione sostanziale sul reclutamento dei volontari e sulla priorizzazione dell&rsquo;infrastruttura per un evento pi&ugrave; piccolo del solito.</p>
+
+                        <h2>1. Bagni Pagati &mdash; Traguardo Finanziario</h2>
+                        <ul>
+                            <li>Daniel T ha confermato che il pagamento dei bagni &egrave; stato effettuato: <strong>&euro;69.000 trasferiti oggi</strong>. Lo ha segnalato come un traguardo importante (e impressionante), e ha sperato che un sito futuro possa consentire un approccio pi&ugrave; conveniente.</li>
+                        </ul>
+
+                        <h2>2. Scala dell&rsquo;Evento &mdash; ~2.000 contro ~3.000</h2>
+                        <ul>
+                            <li>L&rsquo;evento &egrave; sulla strada di vendere circa <strong>2.000 biglietti</strong>, contro circa 3.000 lo scorso anno &mdash; circa due terzi dei numeri abituali. Ci&ograve; riduce proporzionalmente il bacino di volontari atteso (ottimisticamente ~2.000 volontari se si mantiene lo stesso tasso di iscrizione), con effetti a cascata su cosa si pu&ograve; costruire.</li>
+                            <li>L&rsquo;impostazione generale &egrave; che sar&agrave; semplicemente un evento un po&rsquo; diverso &mdash; meno strutture o pi&ugrave; semplici, con priorit&agrave; a ci&ograve; che davvero deve essere costruito.</li>
+                        </ul>
+
+                        <h2>3. Volontari e Reclutamento</h2>
+                        <ul>
+                            <li>Michael M (nurse) ha aggiornato sui volontari (condividendo la dashboard sullo schermo; immagini verranno diffuse in seguito). I numeri sono in netto calo &mdash; e non si tratta solo di numeri ma anche di competenze ed esperienza, dato che alcune persone molto coinvolte che a inizio anno propendevano per un &laquo;no-go&raquo;/anno sabbatico hanno effettivamente preso un anno off.</li>
+                            <li>Aree forti: <strong>Gate, Power, Barrio Support</strong> (costruito da zero), Nomads pre-evento (le notti e i weekend sono sempre difficili).</li>
+                            <li>Necessit&agrave; maggiore: il periodo pre-evento sul sito, in particolare la manodopera per infrastrutture/costruzione. L&rsquo;ultima settimana pre-evento richiede di solito ~44 persone per l&rsquo;infrastruttura; attualmente <strong>~14 sono iscritte</strong>. La prima settimana di crew e quella di setup sono i punti deboli. Strike &egrave;, come sempre, difficile da coprire.</li>
+                            <li>&Egrave; necessaria una pianificazione di contingenza, ma Michael M ha messo fortemente in guardia dal nominare con leggerezza singole strutture da eliminare &mdash; quelle strutture hanno persone che hanno pianificato tutto l&rsquo;anno intorno a loro. Qualsiasi riduzione richiede una discussione preventiva e rispettosa.</li>
+                            <li>Il morale e la cura dei volontari rimangono la priorit&agrave;. Riconoscimento espresso a chi si sta facendo avanti e mettendo energia.</li>
+                            <li>Daniel T ha aggiunto che <strong>sono disponibili borse e altri supporti</strong> per aiutare persone che potrebbero venire ma incontrano barriere economiche &mdash; per favore mettete queste persone in contatto.</li>
+                        </ul>
+
+                        <h3>Come mettersi in contatto / con chi</h3>
+                        <ul>
+                            <li>Discord, WhatsApp, Telegram, o qualsiasi membro del consiglio (Daniel, Michael/nurse, Frank, Daniela). I messaggi verranno notati e avranno risposta; se una persona non risponde, provatene un&rsquo;altra.</li>
+                        </ul>
+
+                        <h2>4. Strategia di Reclutamento &mdash; Diffondere il Messaggio</h2>
+                        <ul>
+                            <li>Il riconoscimento centrale: i canali esistenti (e-mail, WhatsApp, Telegram, Discord updates) raggiungono lo stesso gruppo di ~1.000&ndash;2.500 persone gi&agrave; molto coinvolte. Bisogna raggiungere <em>oltre</em> quel gruppo.</li>
+                            <li>La comunit&agrave; stessa &egrave; il miglior &laquo;team comms&raquo; &mdash; ~30 persone alla chiamata che diffondono il messaggio alle proprie reti e gruppi di barrio possono raggiungere migliaia di persone.</li>
+                            <li>Comms (Nora A) redigerr&agrave; / ricondivider&agrave; un <strong>messaggio di reclutamento facile da inoltrare entro uno o due giorni</strong>, pubblicato sui canali abituali (Telegram, WhatsApp, Discord <code>updates</code>); verr&agrave; condiviso anche il link di Daniela sul volontariato.</li>
+                            <li>I messaggi personali e autentici (&laquo;ecco perch&eacute; <em>io</em> penso che dovresti venire a costruire&raquo;) spesso funzionano meglio di trasmissioni pi&ugrave; rifinite.</li>
+                            <li>Lacune specifiche da colmare: gruppi Facebook e altre comunit&agrave; burner europee (non ancora lavorate a fondo); la comunit&agrave; francofona (Axel P si &egrave; offerto di raggiungere amici e altri barrios).</li>
+                        </ul>
+
+                        <h2>5. Volontari di Breve Durata e di Fine Settimana &mdash; Aiutano?</h2>
+                        <ul>
+                            <li>In risposta alla domanda di Tancredi T sui volontari di weekend / breve permanenza per la costruzione:</li>
+                            <li>S&igrave; &mdash; persone competenti che vengono <em>per lavorare</em> (non per acclimatarsi / iniziare la festa in anticipo) possono fare una vera differenza, anche solo per un weekend. I weekend di lavoro sono i benvenuti.</li>
+                            <li>Aiuta molto sapere in anticipo chi arriva e quando, per pianificare la manodopera e formare squadre all&rsquo;arrivo.</li>
+                            <li>Lo stesso vale per <strong>Strike</strong>, che sembra &laquo;tutto o niente&raquo; ma non deve esserlo &mdash; si incoraggia a riposare a Barcellona luned&igrave;/marted&igrave; post-evento e tornare per un paio di giorni di strike.</li>
+                            <li>Il termine &laquo;build&raquo; viene de-enfatizzato: molta del lavoro necessario &egrave; logistica, amministrazione e operativit&agrave;/decorazione, non lavoro fisico pesante. C&rsquo;&egrave; un ruolo per ogni tipo di competenza, inclusa l&rsquo;amministrazione all&rsquo;ombra.</li>
+                            <li>Non &egrave; l&rsquo;anno per essere selettivi: bastano un buon atteggiamento e la disponibilit&agrave; a ricevere indicazioni.</li>
+                        </ul>
+
+                        <h2>6. Prioritizzazione dell&rsquo;Infrastruttura &mdash; Percorso Decisionale</h2>
+                        <ul>
+                            <li><strong>Nessuna decisione &egrave; stata presa durante la chiamata &mdash; solo discussione.</strong> I coordinatori si riuniranno la prossima settimana per decidere.</li>
+                            <li>Daniela S invier&agrave; un&rsquo;e-mail a tutti i coordinatori di progetto per fissare una riunione il <strong>mercoled&igrave;</strong> per dare priorit&agrave; all&rsquo;infrastruttura: mappare le strutture, stimare i giorni-persona necessari per ciascuna, individuare dove semplificare e decidere collettivamente cosa ridurre.</li>
+                            <li>Approcci proposti per semplificare: costruire il Gate a partire da una cabina + ombra invece di una costruzione completa in legno; usare container/cabine con ombreggianti sopra (alla maniera di Ubertown) per zone comuni d&rsquo;ombra/riposo; mantenere le cose funzionali anche se non &laquo;belle&raquo;.</li>
+                            <li>Si &egrave; parlato di <strong>MoN</strong> (la grande struttura comunale d&rsquo;ombra) come candidata da riconsiderare. W, che sta guidando MoN, ha chiesto chiarezza il prima possibile, dato che squadre e volontari sono gi&agrave; impegnati e un risultato a met&agrave; &egrave; lo scenario peggiore. Michael M e Daniela S hanno entrambi affermato che il suo lavoro &egrave; apprezzato e che nulla viene tagliato unilateralmente; &laquo;forse questo &egrave; l&rsquo;anno di MoN&raquo; &egrave; stato posto come una vera domanda aperta per l&rsquo;evento pi&ugrave; piccolo (riunire le persone invece di disperderle).</li>
+                            <li>&Egrave; stata annotata la richiesta di una <strong>tabella accessibile / calendario di costruzione</strong> che mostri cosa va costruito in quale giorno &mdash; il team infrastruttura valuter&agrave; di produrla.</li>
+                        </ul>
+
+                        <h2>7. Riconoscimenti e Note Positive</h2>
+                        <ul>
+                            <li>Daniel T ha chiuso ricordando i pilastri gi&agrave; assicurati: permessi, assicurazioni, siti prenotati, bagni pagati e finanze in ordine (merito di Peter per finanze/budget) &mdash; l&rsquo;evento non perder&agrave; soldi. Con questi pilastri in posizione, ~2.000 burners capaci e adattabili possono ancora avere una grande settimana.</li>
+                            <li>Chris O ha condiviso una buona notizia: i responsabili di turno Malfare e i Nomads sono <strong>coperti per la notte di venerd&igrave;</strong> &mdash; la notte pi&ugrave; difficile &mdash; anche se il resto della settimana rimane teso. Riconoscimento a chi si &egrave; iscritto. Pi&ugrave; discussione sul reclutamento Malfare in un altro momento.</li>
+                        </ul>
+
+                        <h2>Decisioni</h2>
+                        <ul>
+                            <li>Nessun taglio strutturale/di infrastruttura deciso durante la chiamata &mdash; sono esplicitamente <strong>solo discussioni</strong> fino alla riunione dei coordinatori.</li>
+                            <li>I coordinatori si incontreranno <strong>mercoled&igrave;</strong> per dare priorit&agrave; all&rsquo;infrastruttura e decidere cosa semplificare/ridurre per l&rsquo;evento pi&ugrave; piccolo.</li>
+                            <li>Adottare un approccio di reclutamento guidato dalla comunit&agrave;: un messaggio standardizzato e facile da inoltrare che i membri distribuiscono attraverso le proprie reti.</li>
+                        </ul>
+
+                        <h2>Azioni da Intraprendere</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Azione</th><th>Scadenza</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Michael M (nurse)</td><td>Condividere con il team le immagini della dashboard dei volontari</td><td>Questa settimana</td></tr>
+                                <tr><td>Nora A / Comms</td><td>Redigere un messaggio di reclutamento facile da inoltrare e pubblicarlo sui canali abituali (Telegram, WhatsApp, Discord <code>updates</code>)</td><td>Entro 1&ndash;2 giorni</td></tr>
+                                <tr><td>Daniela S</td><td>Inviare e-mail a tutti i coordinatori di progetto per fissare la riunione di prioritizzazione dell&rsquo;infrastruttura del mercoled&igrave;</td><td>Subito dopo la chiamata</td></tr>
+                                <tr><td>Tutti / comunit&agrave;</td><td>Diffondere il messaggio di reclutamento attraverso reti personali, gruppi di barrio, gruppi FB e altre comunit&agrave; burner europee/francofone</td><td>Continuo</td></tr>
+                                <tr><td>Tutti</td><td>Mettere in contatto volontari motivati ma con vincoli economici per borse/supporti</td><td>Continuo</td></tr>
+                                <tr><td>Team infrastruttura</td><td>Produrre una tabella accessibile / calendario di costruzione (cosa si costruisce in quale giorno)</td><td>Presto</td></tr>
+                                <tr><td>Chi pu&ograve;</td><td>Arrivare in anticipo / restare per lo strike / offrire aiuto qualificato nel weekend dove possibile; segnalare in anticipo la data di arrivo</td><td>Continuo</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Prossima chiamata: la settimana successiva (ritmo abituale delle chiamate comunitarie).</em></p>
+                        <p><em>Verbale preparato a partire dalla registrazione audio.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Mit Daniel T (Moderator), Michael M (nurse), Daniela S, Tancredi T, Chris O, Nora A, Axel P, Fadija C, Markus L, W (verantwortlich f&uuml;r MoN) und weiteren Community-Mitgliedern (~30 im Call)</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Sitzungsunterlagen</h3>
+                        <ul>
+                            <li><a href="2026-05-21-community-transcript.html">Vollst&auml;ndiges Transkript (nur auf Englisch)</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=wON3Tc-LV50">Videoaufzeichnung (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/wON3Tc-LV50" title="Community Meeting - May 21, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Ein kurzer Call diese Woche, mit zwei Hauptstr&auml;ngen: ein finanzieller Meilenstein und eine substanzielle Diskussion &uuml;ber Freiwilligenrekrutierung und Infrastruktur-Priorisierung f&uuml;r ein kleineres Event als gewohnt.</p>
+
+                        <h2>1. Toiletten Bezahlt &mdash; Finanzieller Meilenstein</h2>
+                        <ul>
+                            <li>Daniel T best&auml;tigte, dass die Zahlung f&uuml;r die Toiletten erfolgt ist: <strong>&euro;69.000 heute &uuml;berwiesen</strong>. Er nannte es einen wichtigen (und beeindruckenden) Meilenstein und hoffte, dass ein zuk&uuml;nftiges Gel&auml;nde einen kosteng&uuml;nstigeren Ansatz erlauben k&ouml;nnte.</li>
+                        </ul>
+
+                        <h2>2. Gr&ouml;&szlig;e des Events &mdash; ~2.000 gegen&uuml;ber ~3.000</h2>
+                        <ul>
+                            <li>Das Event ist auf dem Weg, etwa <strong>2.000 Tickets</strong> zu verkaufen, gegen&uuml;ber rund 3.000 im Vorjahr &mdash; etwa zwei Drittel der &uuml;blichen Zahlen. Das reduziert proportional den erwarteten Pool an Freiwilligen (optimistisch ~2.000 Freiwillige, wenn die Anmelderate gleich bleibt), mit Folgewirkungen darauf, was gebaut werden kann.</li>
+                            <li>Die durchg&auml;ngige Rahmung war, dass es einfach ein etwas anderes Event wird &mdash; weniger oder einfachere Strukturen, mit Priorisierung dessen, was wirklich gebaut werden muss.</li>
+                        </ul>
+
+                        <h2>3. Freiwillige und Rekrutierung</h2>
+                        <ul>
+                            <li>Michael M (nurse) gab das Freiwilligen-Update (Dashboard auf dem Bildschirm geteilt; Bilder werden im Anschluss verteilt). Die Zahlen sind deutlich r&uuml;ckl&auml;ufig &mdash; und es geht nicht nur um Zahlen, sondern auch um Kompetenzen und Erfahrung, da einige lang Engagierte, die fr&uuml;her im Jahr ein &laquo;No-go&raquo;/Sabbatjahr favorisierten, tats&auml;chlich ein Jahr pausieren.</li>
+                            <li>Starke Bereiche: <strong>Gate, Power, Barrio Support</strong> (von Grund auf aufgebaut), Pre-Event-Nomads (N&auml;chte/Wochenenden sind immer schwierig).</li>
+                            <li>Gr&ouml;&szlig;ter Bedarf: die Vor-Event-Phase vor Ort, besonders Arbeitskraft f&uuml;r Infrastruktur/Aufbau. Die letzte Pre-Event-Woche braucht &uuml;blicherweise ~44 Personen f&uuml;r Infrastruktur; aktuell sind <strong>~14 angemeldet</strong>. Die First-Crew-Woche und die Setup-Woche sind die d&uuml;nnen Stellen. Strike ist, wie immer, schwer zu besetzen.</li>
+                            <li>Kontingenzplanung ist n&ouml;tig, aber Michael M warnte nachdr&uuml;cklich davor, einzelne Strukturen leichtfertig als zu streichen zu nennen &mdash; diese Strukturen haben Menschen, die ein ganzes Jahr darum herum geplant haben. Jede Reduzierung erfordert eine vorbereitende, respektvolle Diskussion.</li>
+                            <li>Moral und Sorge um die Freiwilligen bleiben Priorit&auml;t. Anerkennung an alle, die sich melden und Energie einbringen.</li>
+                            <li>Daniel T erg&auml;nzte, dass <strong>Stipendien und andere Unterst&uuml;tzungen verf&uuml;gbar sind</strong>, um Menschen zu helfen, die kommen k&ouml;nnten, aber finanzielle H&uuml;rden haben &mdash; bitte solche Personen in Kontakt bringen.</li>
+                        </ul>
+
+                        <h3>Wie man Kontakt aufnimmt / an wen man sich wendet</h3>
+                        <ul>
+                            <li>Discord, WhatsApp, Telegram oder jedes Vorstandsmitglied (Daniel, Michael/nurse, Frank, Daniela). Nachrichten werden bemerkt und beantwortet; antwortet eine Person nicht, versucht es bei einer anderen.</li>
+                        </ul>
+
+                        <h2>4. Rekrutierungsstrategie &mdash; Die Botschaft Verbreiten</h2>
+                        <ul>
+                            <li>Die zentrale Erkenntnis: die bestehenden Kan&auml;le (E-Mail, WhatsApp, Telegram, Discord Updates) erreichen dieselbe Gruppe von ~1.000&ndash;2.500 ohnehin stark Engagierten. Wir m&uuml;ssen <em>&uuml;ber</em> diese Gruppe hinaus gelangen.</li>
+                            <li>Die Community selbst ist das beste &laquo;Comms-Team&raquo; &mdash; ~30 Personen im Call, die die Botschaft in ihre eigenen Netzwerke und Barrio-Gruppen tragen, erreichen Tausende.</li>
+                            <li>Comms (Nora A) wird in den n&auml;chsten ein bis zwei Tagen eine <strong>leicht weiterleitbare Rekrutierungsbotschaft</strong> verfassen / erneut teilen, in den &uuml;blichen Kan&auml;len (Telegram, WhatsApp, Discord <code>updates</code>); auch Danielas Link zum Volunteering wird geteilt.</li>
+                            <li>Pers&ouml;nliche, authentische Nachrichten (&laquo;hier ist, warum <em>ich</em> finde, du solltest kommen und mit aufbauen&raquo;) wirken oft besser als ausgefeilte Broadcasts.</li>
+                            <li>Spezifische L&uuml;cken: Facebook-Gruppen und weitere europ&auml;ische Burner-Communities (bisher kaum bearbeitet); die frankophone Community (Axel P bot an, Freundinnen und Freunde und andere Barrios zu erreichen).</li>
+                        </ul>
+
+                        <h2>5. Kurze Eins&auml;tze und Wochenend-Freiwillige &mdash; Hilft Das?</h2>
+                        <ul>
+                            <li>Auf Tancredi Ts Frage zu Wochenend-/Kurzzeit-Freiwilligen f&uuml;r den Aufbau:</li>
+                            <li>Ja &mdash; kompetente Leute, die <em>zum Arbeiten</em> kommen (und nicht, um sich zu akklimatisieren / fr&uuml;h die Party zu starten), k&ouml;nnen einen echten Unterschied machen, sogar an einem Wochenende. Arbeitswochenenden sind willkommen.</li>
+                            <li>Es hilft sehr, im Voraus zu wissen, wer wann ankommt, damit die Arbeitskraft geplant und Teams bei Ankunft gebildet werden k&ouml;nnen.</li>
+                            <li>Dasselbe gilt f&uuml;r <strong>Strike</strong>, das sich wie &laquo;alles oder nichts&raquo; anf&uuml;hlt, aber nicht so sein muss &mdash; man wird ermutigt, Mo/Di nach dem Event in Barcelona auszuruhen und f&uuml;r ein paar Strike-Tage zur&uuml;ckzukehren.</li>
+                            <li>Der Begriff &laquo;Build&raquo; wird entdramatisiert: viel der n&ouml;tigen Arbeit ist Logistik, Verwaltung und Betrieb/Dekoration, kein schweres Heben. F&uuml;r jede Kompetenz gibt es eine Rolle, einschlie&szlig;lich Admin im Schatten.</li>
+                            <li>Dies ist nicht das Jahr, w&auml;hlerisch zu sein: eine gute Haltung und die Bereitschaft, sich anweisen zu lassen, reichen.</li>
+                        </ul>
+
+                        <h2>6. Infrastruktur-Priorisierung &mdash; Entscheidungsweg</h2>
+                        <ul>
+                            <li><strong>Im Call wurden keine Entscheidungen getroffen &mdash; nur Diskussion.</strong> Die Koordinator:innen treffen sich n&auml;chste Woche zur Entscheidung.</li>
+                            <li>Daniela S wird allen Projekt-Koordinator:innen eine E-Mail senden, um ein Treffen am <strong>Mittwoch</strong> anzusetzen, um Infrastruktur zu priorisieren: Strukturen kartieren, die Personentage f&uuml;r jede absch&auml;tzen, identifizieren, wo vereinfacht werden kann, und gemeinsam entscheiden, was reduziert wird.</li>
+                            <li>Vorgeschlagene Vereinfachungsans&auml;tze: das Gate aus einer Kabine + Schatten statt einer vollst&auml;ndigen Holzkonstruktion bauen; Container/Kabinen mit Schattenstrukturen oben (&aacute; la Ubertown) f&uuml;r gemeinsame Schatten-/Ruhebereiche nutzen; Dinge funktional halten, auch wenn sie nicht &laquo;h&uuml;bsch&raquo; sind.</li>
+                            <li>&Uuml;ber <strong>MoN</strong> (die gro&szlig;e gemeinschaftliche Schattenstruktur) wurde als Kandidat zum &Uuml;berdenken gesprochen. W, die MoN verantwortet, bat um Klarheit so bald wie m&ouml;glich, da Teams und Freiwillige bereits eingebunden sind und ein halb fertiges Ergebnis das schlechteste Szenario ist. Michael M und Daniela S bekr&auml;ftigten beide, dass ihre Arbeit gesch&auml;tzt wird und nichts einseitig gestrichen wird; &laquo;vielleicht ist dies Mons Jahr&raquo; wurde als echte offene Frage f&uuml;r das kleinere Event aufgeworfen (Menschen zusammenziehen statt zerstreuen).</li>
+                            <li>Eine Bitte um eine <strong>zug&auml;ngliche Tabelle / einen Bauzeitplan</strong>, der zeigt, was an welchem Tag gebaut werden soll, wurde notiert &mdash; das Infrastrukturteam pr&uuml;ft die Erstellung.</li>
+                        </ul>
+
+                        <h2>7. Anerkennung und Positive Anmerkungen</h2>
+                        <ul>
+                            <li>Daniel T schloss mit den bereits gesicherten Eckpfeilern: Genehmigungen, Versicherung, Sites gebucht, Toiletten bezahlt und Finanzen in Ordnung (Verdienst von Peter bei Finanzen/Budget) &mdash; das Event wird kein Geld verlieren. Mit diesen Eckpfeilern k&ouml;nnen ~2.000 f&auml;hige, anpassungsf&auml;hige Burners immer noch eine gro&szlig;artige Woche haben.</li>
+                            <li>Chris O teilte gute Nachrichten: Malfare-Schichtleitungen und Nomads sind <strong>f&uuml;r Freitagnacht abgedeckt</strong> &mdash; die schwierigste Nacht &mdash; auch wenn der Rest der Woche d&uuml;nn bleibt. Dank an alle, die sich angemeldet haben. Weitere Malfare-Rekrutierungsgespr&auml;che zu einem anderen Zeitpunkt.</li>
+                        </ul>
+
+                        <h2>Entscheidungen</h2>
+                        <ul>
+                            <li>Keine strukturellen/infrastrukturellen K&uuml;rzungen wurden im Call entschieden &mdash; es handelt sich ausdr&uuml;cklich um <strong>reine Diskussionen</strong> bis zum Koordinator:innen-Treffen.</li>
+                            <li>Die Koordinator:innen treffen sich am <strong>Mittwoch</strong>, um Infrastruktur zu priorisieren und zu entscheiden, was f&uuml;r das kleinere Event vereinfacht/reduziert wird.</li>
+                            <li>Ein community-getragener Rekrutierungsansatz wird verfolgt: eine standardisierte, leicht weiterleitbare Nachricht, die Mitglieder &uuml;ber ihre eigenen Netzwerke verteilen.</li>
+                        </ul>
+
+                        <h2>Ma&szlig;nahmen</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Ma&szlig;nahme</th><th>Frist</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Michael M (nurse)</td><td>Bilder vom Freiwilligen-Dashboard mit dem Team teilen</td><td>Diese Woche</td></tr>
+                                <tr><td>Nora A / Comms</td><td>Eine leicht weiterleitbare Rekrutierungsnachricht entwerfen und in den &uuml;blichen Kan&auml;len ver&ouml;ffentlichen (Telegram, WhatsApp, Discord <code>updates</code>)</td><td>Binnen 1&ndash;2 Tagen</td></tr>
+                                <tr><td>Daniela S</td><td>E-Mail an alle Projekt-Koordinator:innen senden, um das Mittwochs-Treffen zur Infrastruktur-Priorisierung anzusetzen</td><td>Direkt nach dem Call</td></tr>
+                                <tr><td>Alle / Community</td><td>Die Rekrutierungsnachricht &uuml;ber pers&ouml;nliche Netzwerke, Barrio-Gruppen, FB-Gruppen und weitere europ&auml;ische/frankophone Burner-Communities verbreiten</td><td>Laufend</td></tr>
+                                <tr><td>Alle</td><td>Motivierte, aber finanziell eingeschr&auml;nkte Freiwillige bez&uuml;glich Stipendien/Unterst&uuml;tzung in Kontakt bringen</td><td>Laufend</td></tr>
+                                <tr><td>Infrastrukturteam</td><td>Eine zug&auml;ngliche Tabelle / einen Bauzeitplan erstellen (was an welchem Tag gebaut wird)</td><td>Bald</td></tr>
+                                <tr><td>Alle, die k&ouml;nnen</td><td>Fr&uuml;h anreisen / f&uuml;r Strike bleiben / wo m&ouml;glich qualifizierte Wochenend-Hilfe anbieten; das Ankunftsdatum vorab signalisieren</td><td>Laufend</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>N&auml;chster Call: in der folgenden Woche (regul&auml;rer Rhythmus der Community-Calls).</em></p>
+                        <p><em>Protokoll erstellt aus der Audioaufzeichnung.</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>
