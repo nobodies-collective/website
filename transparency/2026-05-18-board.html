@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCA Board Meeting Minutes - May 18, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content h4 { margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.05rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>NCA Board Meeting Minutes</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Monday 18 May 2026, 19:00 CEST</span>
+                    </div>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <!-- ENGLISH -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>Chair:</strong> Ben D (facilitator; handed over to Daniel T on early departure)<br>
+                        <strong>Board present:</strong> Daniel T, Ben D, Peter D, Pablo V, Victor P, Chris O<br>
+                        <strong>Also present:</strong> Daniela M S (joined shortly after start)<br>
+                        <strong>Apologies:</strong> Ward D, Michelle T
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Check-in and Agenda</h2>
+                        <ul>
+                            <li>Members gave brief personal updates. Several flagged tiredness and high workload heading into the event period.</li>
+                            <li>Two substantive agenda items: (1) the board-members-on-call request from an operations coordinator, and (2) a volunteer-coordination update following a call with the volunteer coordination team.</li>
+                        </ul>
+
+                        <h2>2. Board Members On Call</h2>
+                        <ul>
+                            <li>Context: an operations coordinator had requested that board members take dedicated 24-hour on-call shifts during the event.</li>
+                            <li>The board did not support dedicated board on-call shifts. Key points:
+                                <ul>
+                                    <li>A board member physically stationed at Malfare adds no operational value and risks muddling the existing chain of command.</li>
+                                    <li>In genuinely hard Malfare or eviction situations, the Malfare team holds the relevant experience; the board convening late at night would not improve outcomes.</li>
+                                    <li>The real underlying needs are (a) a clear emergency-finance pathway and (b) confidence and backup for the Malfare team &mdash; not board presence per se.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Agreed direction:</strong>
+                                <ul>
+                                    <li>Board members will be available via a dedicated WhatsApp group that connects the Malfare team directly to the board (not routed through a single individual), to provide input when asked.</li>
+                                    <li>At least one reliably-sober board member (Victor P) to be available as an external sounding-board / check-in.</li>
+                                    <li>The legal-representation point (only specific signatories can act for the association) is covered by reachability rather than physical shifts; signing is very unlikely to be needed on-site overnight.</li>
+                                </ul>
+                            </li>
+                            <li>Daniela M S noted a possible legal question about whether certain (paid) roles must be physically present for a defined period, to be checked with legal counsel. She is also progressing an external, certified &ldquo;extraction&rdquo; role (a Spain-certified bouncer-type add-on) to take difficult removals off the organisation, plus a paid coordinator-on-call.</li>
+                            <li><strong>Decision:</strong> Finalise the board&rsquo;s position once Daniela M S presents a concrete outline of the on-call coordinator role. Daniel T to draft a response to the operations coordinator capturing the above and circulate to the board for input before sending.</li>
+                        </ul>
+
+                        <h2>3. Board Signing Authority &amp; Emergency Finance Protocol</h2>
+                        <ul>
+                            <li>Clarified that authority to sign and approve expenditure on behalf of the association is currently held by a very small number of people.</li>
+                            <li><strong>Decision:</strong> Establish a finance team (to include Peter D, Daniela M S and others) with delegated authority to approve emergency expenses, governed by pre-agreed policy limits, so that on-site financial decisions can be made without convening an emergency board meeting. Departmental financial responsibles (Cantina, Infrastructure, Power, with the remainder via Production) can route emergency approvals.</li>
+                        </ul>
+
+                        <h2>4. Insurance Update</h2>
+                        <ul>
+                            <li>Daniela M S reported insurance is in progress with the same brokers used previously, held up pending information between intermediaries. Alternative providers exist (largely the same underlying insurer) as a fallback.</li>
+                            <li>The board asked for a fallback trigger point if the current broker continues to delay.</li>
+                        </ul>
+
+                        <h2>5. Production Update</h2>
+                        <ul>
+                            <li>Vendor payments now batched weekly to reduce signing/transfer churn; a document list is being prepared for signature and transfer this week.</li>
+                            <li>Toilet hire locked (payment this week). Site-prep cost reduced to ~&euro;8K (from ~&euro;13K); alternative quotes were materially higher (&gt;&euro;25K), so the original vendor will be used.</li>
+                            <li>A broader volume of informational community communications will go out in the coming days.</li>
+                        </ul>
+
+                        <h2>6. Volunteer Coordination</h2>
+                        <ul>
+                            <li>Following a same-day call with the volunteer coordination team (Frank): many areas now have adequate volunteers, but certain departments remain significantly short.</li>
+                            <li>Issue to resolve identified as coordination as much as pure headcount: applicants to certain roles have not been receiving timely responses and have moved on; relevant departments might benefit from further team coordination support. A response-time problem has been identified and a solution is being put in place.</li>
+                            <li>The board discussed the rename from &ldquo;meta-lead&rdquo; to &ldquo;coordinator&rdquo; as a deliberate, functional (rather than hierarchical) framing that makes coordination needs visible, and noted positive examples where a coordinator has actively connected and onboarded volunteers.</li>
+                            <li>Discussion converged on empowering the existing volunteer-coordination function to act, rather than the board intervening directly in each area.</li>
+                            <li><strong>Decision:</strong> The board authorises volunteer coordination to identify departments lacking sufficient active coordination and to appoint additional coordinators to those areas as needed. This is recorded in the minutes to give that action explicit backing.</li>
+                            <li>Daniela M S noted the team is already reaching out to candidates directly, and proposed accepting willing applicants more readily where strict role criteria would otherwise block them. Six new travel-reimbursement applicants are being allocated (provisionally ~4 build / ~2 strike).</li>
+                            <li>Longer term: teams should select their own coordinators, choosing for coordination capability; the board&rsquo;s role here is a short-term nudge, not a standing function.</li>
+                        </ul>
+
+                        <h2>7. Event Staffing &mdash; Scaling to Capacity</h2>
+                        <ul>
+                            <li>With ticket sales tracking toward roughly two-thirds of prior years, the board noted it is unreasonable for teams to plan for full staffing at previous (3,000-participant) scale.</li>
+                            <li>Departments have heard the &ldquo;scale to two-thirds&rdquo; message but may lack a concrete grasp of what it means in practice, as staffing has historically been assessed visually on-site rather than from written plans. Most departments hold this information; for some it is less explicit.</li>
+                            <li>The recurring annual &ldquo;the event is in jeopardy&rdquo; recruitment messaging was judged to have lost impact on an already-saturated internal audience; the more effective levers are honest critical-shift prioritisation and responsiveness to applicants.</li>
+                        </ul>
+
+                        <h2>8. Open Threads</h2>
+                        <ul>
+                            <li><strong>Regional ranger network &amp; partner promotion:</strong> Victor P to take ownership of the thread and dispatch the ranger-network introduction to Chris O (Malfare). Promotion reach via the partner network seen as the high-value element; response pending insurance confirmation and submitted permit applications.</li>
+                            <li><strong>Ticketing legal analysis:</strong> A late-April legal analysis on ticketing insurance has no clear owner and the board was not copied. Daniela M S to check status with the relevant contact (recently unwell) or re-route.</li>
+                            <li><strong>Business plan:</strong> Confirmed complete.</li>
+                        </ul>
+
+                        <h2>9. Check-out</h2>
+                        <ul>
+                            <li>Members shared closing reflections &mdash; collective tiredness acknowledged alongside genuine positivity about team progress and the operational handover working well. The board noted, with relief, the resolution of a long-running infrastructure point with a neighbouring organisation.</li>
+                        </ul>
+
+                        <h2>Action Items</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Action</th><th>Due</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Draft response on board-on-call request; circulate to board for input</td><td>This week</td></tr>
+                                <tr><td>Daniel T</td><td>Follow up directly with Frank to confirm what support volunteer coordination needs</td><td>This week</td></tr>
+                                <tr><td>Daniel T / Pablo V</td><td>Review and sign the scheduled-payment document list to enable transfers</td><td>This week</td></tr>
+                                <tr><td>Peter D</td><td>Establish finance team &amp; emergency-expense policy/limits before the event</td><td>Before event</td></tr>
+                                <tr><td>Daniela M S</td><td>Provide concrete outline of the on-call coordinator role for board review</td><td>Next meeting</td></tr>
+                                <tr><td>Daniela M S</td><td>Finalise insurance; pursue alternatives if broker continues to delay</td><td>This week</td></tr>
+                                <tr><td>Daniela M S</td><td>Contact the six new build/strike applicants to onboard them</td><td>This week</td></tr>
+                                <tr><td>Daniela M S</td><td>Check ticketing legal-analysis status with relevant contact or re-route</td><td>This week</td></tr>
+                                <tr><td>Frank</td><td>Identify under-coordinated departments and appoint additional coordinators</td><td>This week</td></tr>
+                                <tr><td>Victor P</td><td>Own the regional ranger network thread; coordinate intro with Chris O</td><td>This week</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Minutes auto-generated and sanitised for publication.</em></p>
+                    </div>
+                </div>
+
+                <!-- SPANISH -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Presidente:</strong> Ben D (facilitador; cedi&oacute; el rol a Daniel T al retirarse antes)<br>
+                        <strong>Junta presente:</strong> Daniel T, Ben D, Peter D, Pablo V, Victor P, Chris O<br>
+                        <strong>Tambi&eacute;n presente:</strong> Daniela M S (se incorpor&oacute; poco despu&eacute;s del inicio)<br>
+                        <strong>Excusas:</strong> Ward D, Michelle T
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Saludo Inicial y Agenda</h2>
+                        <ul>
+                            <li>Las personas miembros compartieron breves actualizaciones personales. Varias se&ntilde;alaron cansancio y alta carga de trabajo de cara al per&iacute;odo del evento.</li>
+                            <li>Dos puntos sustantivos en la agenda: (1) la solicitud de personas de la junta de guardia por parte de una persona coordinadora de operaciones, y (2) una actualizaci&oacute;n sobre la coordinaci&oacute;n de voluntariado tras una llamada con el equipo de coordinaci&oacute;n de voluntariado.</li>
+                        </ul>
+
+                        <h2>2. Personas de la Junta de Guardia</h2>
+                        <ul>
+                            <li>Contexto: una persona coordinadora de operaciones hab&iacute;a solicitado que las personas miembros de la junta cubrieran turnos de guardia dedicados de 24 horas durante el evento.</li>
+                            <li>La junta no respald&oacute; turnos de guardia dedicados. Puntos clave:
+                                <ul>
+                                    <li>Una persona de la junta f&iacute;sicamente apostada en Malfare no a&ntilde;ade valor operativo y arriesga enturbiar la cadena de mando existente.</li>
+                                    <li>En situaciones genuinamente dif&iacute;ciles de Malfare o expulsi&oacute;n, el equipo de Malfare tiene la experiencia relevante; convocar a la junta a altas horas de la noche no mejorar&iacute;a los resultados.</li>
+                                    <li>Las necesidades reales subyacentes son (a) una v&iacute;a clara de financiaci&oacute;n de emergencia y (b) confianza y respaldo para el equipo de Malfare &mdash; no la presencia de la junta en s&iacute;.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Direcci&oacute;n acordada:</strong>
+                                <ul>
+                                    <li>Las personas miembros de la junta estar&aacute;n disponibles a trav&eacute;s de un grupo de WhatsApp dedicado que conecta al equipo de Malfare directamente con la junta (no canalizado a trav&eacute;s de una sola persona), para aportar criterio cuando se solicite.</li>
+                                    <li>Al menos una persona de la junta confiablemente sobria (Victor P) estar&aacute; disponible como apoyo externo de consulta.</li>
+                                    <li>El punto de representaci&oacute;n legal (solo personas firmantes espec&iacute;ficas pueden actuar por la asociaci&oacute;n) se cubre mediante disponibilidad y no mediante turnos f&iacute;sicos; es muy improbable que sea necesario firmar in situ durante la noche.</li>
+                                </ul>
+                            </li>
+                            <li>Daniela M S se&ntilde;al&oacute; una posible cuesti&oacute;n legal sobre si ciertos roles (remunerados) deben estar f&iacute;sicamente presentes durante un per&iacute;odo definido, a verificar con la asesor&iacute;a legal. Tambi&eacute;n est&aacute; avanzando un rol externo certificado de &laquo;extracci&oacute;n&raquo; (un complemento tipo personal de seguridad certificado en Espa&ntilde;a) para sacar las expulsiones dif&iacute;ciles de la organizaci&oacute;n, adem&aacute;s de una persona coordinadora de guardia remunerada.</li>
+                            <li><strong>Decisi&oacute;n:</strong> Finalizar la posici&oacute;n de la junta una vez que Daniela M S presente un esquema concreto del rol de coordinaci&oacute;n de guardia. Daniel T redactar&aacute; una respuesta a la persona coordinadora de operaciones recogiendo lo anterior y la circular&aacute; a la junta para recibir aportaciones antes de enviarla.</li>
+                        </ul>
+
+                        <h2>3. Autoridad de Firma de la Junta y Protocolo de Finanzas de Emergencia</h2>
+                        <ul>
+                            <li>Se aclar&oacute; que la autoridad para firmar y aprobar gastos en nombre de la asociaci&oacute;n recae actualmente en un n&uacute;mero muy reducido de personas.</li>
+                            <li><strong>Decisi&oacute;n:</strong> Constituir un equipo de finanzas (que incluya a Peter D, Daniela M S y otras personas) con autoridad delegada para aprobar gastos de emergencia, regida por l&iacute;mites de pol&iacute;tica acordados previamente, de modo que las decisiones financieras in situ puedan tomarse sin convocar una reuni&oacute;n de emergencia de la junta. Las personas responsables financieras de departamento (Cantina, Infraestructura, Energ&iacute;a, y el resto v&iacute;a Producci&oacute;n) pueden canalizar las aprobaciones de emergencia.</li>
+                        </ul>
+
+                        <h2>4. Actualizaci&oacute;n de Seguro</h2>
+                        <ul>
+                            <li>Daniela M S inform&oacute; que el seguro est&aacute; en curso con las mismas personas corredoras utilizadas previamente, ralentizado a la espera de informaci&oacute;n entre intermediarios. Existen proveedores alternativos (en gran parte con la misma aseguradora subyacente) como respaldo.</li>
+                            <li>La junta solicit&oacute; un punto de activaci&oacute;n de respaldo si la persona corredora actual sigue retras&aacute;ndose.</li>
+                        </ul>
+
+                        <h2>5. Actualizaci&oacute;n de Producci&oacute;n</h2>
+                        <ul>
+                            <li>Los pagos a proveedores se agrupan ahora semanalmente para reducir la rotaci&oacute;n de firmas y transferencias; se est&aacute; preparando una lista de documentos para firma y transferencia esta semana.</li>
+                            <li>Alquiler de ba&ntilde;os cerrado (pago esta semana). El coste de preparaci&oacute;n del sitio se ha reducido a ~8.000&nbsp;&euro; (desde ~13.000&nbsp;&euro;); las cotizaciones alternativas eran sustancialmente m&aacute;s altas (&gt;25.000&nbsp;&euro;), por lo que se utilizar&aacute; el proveedor original.</li>
+                            <li>En los pr&oacute;ximos d&iacute;as saldr&aacute; un mayor volumen de comunicaciones informativas a la comunidad.</li>
+                        </ul>
+
+                        <h2>6. Coordinaci&oacute;n de Voluntariado</h2>
+                        <ul>
+                            <li>Tras una llamada del mismo d&iacute;a con el equipo de coordinaci&oacute;n de voluntariado (Frank): muchas &aacute;reas cuentan ahora con voluntariado adecuado, pero ciertos departamentos siguen significativamente cortos.</li>
+                            <li>El problema a resolver se identific&oacute; como tanto de coordinaci&oacute;n como de mero n&uacute;mero: las personas candidatas a ciertos roles no han estado recibiendo respuestas a tiempo y se han desentendido; los departamentos relevantes podr&iacute;an beneficiarse de mayor apoyo de coordinaci&oacute;n del equipo. Se ha identificado un problema de tiempos de respuesta y se est&aacute; implementando una soluci&oacute;n.</li>
+                            <li>La junta discuti&oacute; el cambio de nombre de &laquo;meta-lead&raquo; a &laquo;coordinaci&oacute;n&raquo; como un encuadre deliberado, funcional (en lugar de jer&aacute;rquico) que visibiliza las necesidades de coordinaci&oacute;n, y se&ntilde;al&oacute; ejemplos positivos en los que una persona coordinadora ha conectado activamente e incorporado voluntariado.</li>
+                            <li>La discusi&oacute;n convergi&oacute; en empoderar la funci&oacute;n existente de coordinaci&oacute;n de voluntariado para actuar, en lugar de que la junta intervenga directamente en cada &aacute;rea.</li>
+                            <li><strong>Decisi&oacute;n:</strong> La junta autoriza a la coordinaci&oacute;n de voluntariado a identificar departamentos sin coordinaci&oacute;n activa suficiente y a designar personas coordinadoras adicionales en esas &aacute;reas seg&uacute;n sea necesario. Esto queda registrado en las actas para dar respaldo expl&iacute;cito a esa acci&oacute;n.</li>
+                            <li>Daniela M S se&ntilde;al&oacute; que el equipo ya est&aacute; contactando a personas candidatas directamente, y propuso aceptar m&aacute;s f&aacute;cilmente a candidaturas dispuestas cuando criterios estrictos de rol lo bloquear&iacute;an de otro modo. Seis nuevas personas solicitantes de reembolso de viaje se est&aacute;n asignando (provisionalmente ~4 construcci&oacute;n / ~2 desmontaje).</li>
+                            <li>A m&aacute;s largo plazo: los equipos deber&iacute;an seleccionar a sus propias personas coordinadoras, eligiendo por capacidad de coordinaci&oacute;n; el papel de la junta aqu&iacute; es un empuj&oacute;n a corto plazo, no una funci&oacute;n permanente.</li>
+                        </ul>
+
+                        <h2>7. Dotaci&oacute;n del Evento &mdash; Escalado a la Capacidad</h2>
+                        <ul>
+                            <li>Con las ventas de entradas en torno a dos tercios de a&ntilde;os anteriores, la junta se&ntilde;al&oacute; que no es razonable que los equipos planifiquen para una dotaci&oacute;n completa a la escala anterior (3.000 participantes).</li>
+                            <li>Los departamentos han recibido el mensaje de &laquo;escalar a dos tercios&raquo; pero pueden carecer de una idea concreta de lo que significa en la pr&aacute;ctica, dado que la dotaci&oacute;n se ha evaluado hist&oacute;ricamente de forma visual in situ en lugar de a partir de planes escritos. La mayor&iacute;a de departamentos cuenta con esta informaci&oacute;n; para algunos es menos expl&iacute;cita.</li>
+                            <li>Se valor&oacute; que la mensajer&iacute;a recurrente anual de &laquo;el evento est&aacute; en peligro&raquo; para captaci&oacute;n ha perdido impacto en una audiencia interna ya saturada; las palancas m&aacute;s eficaces son una priorizaci&oacute;n honesta de los turnos cr&iacute;ticos y la capacidad de respuesta hacia las personas candidatas.</li>
+                        </ul>
+
+                        <h2>8. Asuntos Abiertos</h2>
+                        <ul>
+                            <li><strong>Red regional de rangers y promoci&oacute;n v&iacute;a socios:</strong> Victor P asumir&aacute; la responsabilidad del tema y enviar&aacute; la introducci&oacute;n a la red de rangers a Chris O (Malfare). El alcance de promoci&oacute;n v&iacute;a la red de socios se considera el elemento de mayor valor; respuesta pendiente de la confirmaci&oacute;n del seguro y de las solicitudes de permiso presentadas.</li>
+                            <li><strong>An&aacute;lisis legal de ticketing:</strong> Un an&aacute;lisis legal de finales de abril sobre seguro de ticketing no tiene responsable claro y la junta no fue copiada. Daniela M S verificar&aacute; el estado con la persona de contacto relevante (recientemente indispuesta) o redirigir&aacute;.</li>
+                            <li><strong>Plan de negocio:</strong> Confirmado como completo.</li>
+                        </ul>
+
+                        <h2>9. Cierre</h2>
+                        <ul>
+                            <li>Las personas miembros compartieron reflexiones de cierre &mdash; se reconoci&oacute; el cansancio colectivo junto con una positividad genuina sobre el progreso del equipo y el buen funcionamiento del traspaso operativo. La junta se&ntilde;al&oacute;, con alivio, la resoluci&oacute;n de un punto de infraestructura de larga data con una organizaci&oacute;n vecina.</li>
+                        </ul>
+
+                        <h2>Puntos de Acci&oacute;n</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Acci&oacute;n</th><th>Plazo</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Redactar respuesta sobre la solicitud de junta de guardia; circular a la junta para aportaciones</td><td>Esta semana</td></tr>
+                                <tr><td>Daniel T</td><td>Hacer seguimiento directo con Frank para confirmar qu&eacute; apoyo necesita la coordinaci&oacute;n de voluntariado</td><td>Esta semana</td></tr>
+                                <tr><td>Daniel T / Pablo V</td><td>Revisar y firmar la lista de documentos de pagos programados para habilitar las transferencias</td><td>Esta semana</td></tr>
+                                <tr><td>Peter D</td><td>Constituir el equipo de finanzas y los l&iacute;mites/pol&iacute;tica de gastos de emergencia antes del evento</td><td>Antes del evento</td></tr>
+                                <tr><td>Daniela M S</td><td>Proporcionar un esquema concreto del rol de coordinaci&oacute;n de guardia para revisi&oacute;n de la junta</td><td>Pr&oacute;xima reuni&oacute;n</td></tr>
+                                <tr><td>Daniela M S</td><td>Finalizar el seguro; explorar alternativas si la persona corredora sigue retras&aacute;ndose</td><td>Esta semana</td></tr>
+                                <tr><td>Daniela M S</td><td>Contactar a las seis nuevas personas solicitantes de construcci&oacute;n/desmontaje para incorporarlas</td><td>Esta semana</td></tr>
+                                <tr><td>Daniela M S</td><td>Verificar el estado del an&aacute;lisis legal de ticketing con la persona de contacto o redirigir</td><td>Esta semana</td></tr>
+                                <tr><td>Frank</td><td>Identificar departamentos con coordinaci&oacute;n insuficiente y designar personas coordinadoras adicionales</td><td>Esta semana</td></tr>
+                                <tr><td>Victor P</td><td>Asumir el tema de la red regional de rangers; coordinar la presentaci&oacute;n con Chris O</td><td>Esta semana</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Actas generadas autom&aacute;ticamente y depuradas para publicaci&oacute;n.</em></p>
+                    </div>
+                </div>
+
+                <!-- FRENCH -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Pr&eacute;sident :</strong> Ben D (facilitateur ; relais pass&eacute; &agrave; Daniel T lors d&rsquo;un d&eacute;part anticip&eacute;)<br>
+                        <strong>Conseil pr&eacute;sent :</strong> Daniel T, Ben D, Peter D, Pablo V, Victor P, Chris O<br>
+                        <strong>&Eacute;galement pr&eacute;sente :</strong> Daniela M S (a rejoint peu apr&egrave;s le d&eacute;but)<br>
+                        <strong>Excus&eacute;s :</strong> Ward D, Michelle T
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Tour de Table et Ordre du Jour</h2>
+                        <ul>
+                            <li>Les membres ont partag&eacute; de br&egrave;ves mises &agrave; jour personnelles. Plusieurs ont signal&eacute; de la fatigue et une charge de travail &eacute;lev&eacute;e &agrave; l&rsquo;approche de la p&eacute;riode de l&rsquo;&eacute;v&eacute;nement.</li>
+                            <li>Deux points substantiels &agrave; l&rsquo;ordre du jour : (1) la demande de membres du conseil de garde &eacute;manant d&rsquo;une personne coordinatrice des op&eacute;rations, et (2) une mise &agrave; jour sur la coordination b&eacute;n&eacute;vole apr&egrave;s un appel avec l&rsquo;&eacute;quipe de coordination b&eacute;n&eacute;vole.</li>
+                        </ul>
+
+                        <h2>2. Membres du Conseil de Garde</h2>
+                        <ul>
+                            <li>Contexte : une personne coordinatrice des op&eacute;rations avait demand&eacute; que les membres du conseil assurent des cr&eacute;neaux de garde d&eacute;di&eacute;s de 24 heures durant l&rsquo;&eacute;v&eacute;nement.</li>
+                            <li>Le conseil n&rsquo;a pas soutenu de cr&eacute;neaux de garde d&eacute;di&eacute;s. Points cl&eacute;s :
+                                <ul>
+                                    <li>Un membre du conseil physiquement post&eacute; &agrave; Malfare n&rsquo;ajoute aucune valeur op&eacute;rationnelle et risque de brouiller la cha&icirc;ne de commandement existante.</li>
+                                    <li>Dans des situations Malfare ou d&rsquo;exclusion v&eacute;ritablement difficiles, l&rsquo;&eacute;quipe Malfare poss&egrave;de l&rsquo;exp&eacute;rience pertinente ; convoquer le conseil tard dans la nuit n&rsquo;am&eacute;liorerait pas les r&eacute;sultats.</li>
+                                    <li>Les besoins r&eacute;els sous-jacents sont (a) une voie claire de financement d&rsquo;urgence et (b) la confiance et le soutien pour l&rsquo;&eacute;quipe Malfare &mdash; pas la pr&eacute;sence du conseil en tant que telle.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Orientation convenue :</strong>
+                                <ul>
+                                    <li>Les membres du conseil seront disponibles via un groupe WhatsApp d&eacute;di&eacute; reliant l&rsquo;&eacute;quipe Malfare directement au conseil (sans passer par une seule personne), pour apporter des avis sur demande.</li>
+                                    <li>Au moins un membre du conseil fiablement sobre (Victor P) sera disponible comme appui externe / point de contact.</li>
+                                    <li>Le point de repr&eacute;sentation l&eacute;gale (seules certaines personnes signataires peuvent agir au nom de l&rsquo;association) est couvert par la joignabilit&eacute; plut&ocirc;t que par des cr&eacute;neaux physiques ; il est tr&egrave;s peu probable qu&rsquo;une signature soit n&eacute;cessaire sur place de nuit.</li>
+                                </ul>
+                            </li>
+                            <li>Daniela M S a soulev&eacute; une question l&eacute;gale possible quant &agrave; savoir si certains r&ocirc;les (r&eacute;mun&eacute;r&eacute;s) doivent &ecirc;tre physiquement pr&eacute;sents pendant une p&eacute;riode d&eacute;finie, &agrave; v&eacute;rifier aupr&egrave;s du conseil juridique. Elle fait &eacute;galement avancer un r&ocirc;le externe certifi&eacute; d&rsquo;&laquo;&nbsp;extraction&nbsp;&raquo; (un compl&eacute;ment de type s&eacute;curit&eacute; certifi&eacute; en Espagne) pour retirer les expulsions difficiles de l&rsquo;organisation, ainsi qu&rsquo;une personne coordinatrice de garde r&eacute;mun&eacute;r&eacute;e.</li>
+                            <li><strong>D&eacute;cision :</strong> Finaliser la position du conseil une fois que Daniela M S pr&eacute;sentera un sch&eacute;ma concret du r&ocirc;le de coordination de garde. Daniel T r&eacute;digera une r&eacute;ponse &agrave; la personne coordinatrice des op&eacute;rations reprenant ce qui pr&eacute;c&egrave;de et la fera circuler au conseil pour avis avant envoi.</li>
+                        </ul>
+
+                        <h2>3. Autorit&eacute; de Signature du Conseil et Protocole de Finances d&rsquo;Urgence</h2>
+                        <ul>
+                            <li>Il a &eacute;t&eacute; clarifi&eacute; que l&rsquo;autorit&eacute; de signer et d&rsquo;approuver les d&eacute;penses au nom de l&rsquo;association est actuellement d&eacute;tenue par un tr&egrave;s petit nombre de personnes.</li>
+                            <li><strong>D&eacute;cision :</strong> &Eacute;tablir une &eacute;quipe finances (incluant Peter D, Daniela M S et d&rsquo;autres) avec une autorit&eacute; d&eacute;l&eacute;gu&eacute;e pour approuver les d&eacute;penses d&rsquo;urgence, encadr&eacute;e par des limites de politique convenues au pr&eacute;alable, afin que les d&eacute;cisions financi&egrave;res sur site puissent &ecirc;tre prises sans convoquer une r&eacute;union d&rsquo;urgence du conseil. Les responsables financiers de d&eacute;partement (Cantina, Infrastructure, &Eacute;nergie, le reste via Production) peuvent acheminer les approbations d&rsquo;urgence.</li>
+                        </ul>
+
+                        <h2>4. Mise &agrave; Jour Assurance</h2>
+                        <ul>
+                            <li>Daniela M S a indiqu&eacute; que l&rsquo;assurance est en cours avec les m&ecirc;mes courtiers utilis&eacute;s pr&eacute;c&eacute;demment, ralentie en attente d&rsquo;informations entre interm&eacute;diaires. Des fournisseurs alternatifs existent (largement la m&ecirc;me assurance sous-jacente) en repli.</li>
+                            <li>Le conseil a demand&eacute; un point de d&eacute;clenchement de repli si le courtier actuel continue de retarder.</li>
+                        </ul>
+
+                        <h2>5. Mise &agrave; Jour Production</h2>
+                        <ul>
+                            <li>Les paiements aux fournisseurs sont d&eacute;sormais group&eacute;s chaque semaine pour r&eacute;duire la rotation des signatures et virements ; une liste de documents est en pr&eacute;paration pour signature et virement cette semaine.</li>
+                            <li>Location de toilettes verrouill&eacute;e (paiement cette semaine). Le co&ucirc;t de pr&eacute;paration du site a &eacute;t&eacute; r&eacute;duit &agrave; ~8&nbsp;000&nbsp;&euro; (depuis ~13&nbsp;000&nbsp;&euro;) ; les devis alternatifs &eacute;taient nettement plus &eacute;lev&eacute;s (&gt;25&nbsp;000&nbsp;&euro;), le fournisseur d&rsquo;origine sera donc utilis&eacute;.</li>
+                            <li>Un volume plus large de communications informatives &agrave; la communaut&eacute; sortira dans les jours &agrave; venir.</li>
+                        </ul>
+
+                        <h2>6. Coordination B&eacute;n&eacute;vole</h2>
+                        <ul>
+                            <li>&Agrave; la suite d&rsquo;un appel le m&ecirc;me jour avec l&rsquo;&eacute;quipe de coordination b&eacute;n&eacute;vole (Frank) : de nombreux secteurs disposent maintenant de b&eacute;n&eacute;voles suffisants, mais certains d&eacute;partements restent significativement &agrave; court.</li>
+                            <li>La probl&eacute;matique &agrave; r&eacute;soudre a &eacute;t&eacute; identifi&eacute;e comme relevant autant de la coordination que du seul effectif : les candidatures &agrave; certains r&ocirc;les n&rsquo;ont pas re&ccedil;u de r&eacute;ponses dans les temps et sont pass&eacute;es &agrave; autre chose ; les d&eacute;partements concern&eacute;s pourraient b&eacute;n&eacute;ficier d&rsquo;un soutien suppl&eacute;mentaire en coordination d&rsquo;&eacute;quipe. Un probl&egrave;me de temps de r&eacute;ponse a &eacute;t&eacute; identifi&eacute; et une solution est en cours de mise en place.</li>
+                            <li>Le conseil a discut&eacute; du changement de nom de &laquo;&nbsp;meta-lead&nbsp;&raquo; vers &laquo;&nbsp;coordination&nbsp;&raquo; comme un cadrage d&eacute;lib&eacute;r&eacute;, fonctionnel (plut&ocirc;t que hi&eacute;rarchique) qui rend visibles les besoins de coordination, et a not&eacute; des exemples positifs o&ugrave; une personne coordinatrice a activement mis en lien et accueilli les b&eacute;n&eacute;voles.</li>
+                            <li>La discussion a converg&eacute; sur le fait d&rsquo;habiliter la fonction de coordination b&eacute;n&eacute;vole existante &agrave; agir, plut&ocirc;t qu&rsquo;une intervention directe du conseil dans chaque secteur.</li>
+                            <li><strong>D&eacute;cision :</strong> Le conseil autorise la coordination b&eacute;n&eacute;vole &agrave; identifier les d&eacute;partements manquant d&rsquo;une coordination active suffisante et &agrave; nommer des personnes coordinatrices suppl&eacute;mentaires dans ces secteurs si n&eacute;cessaire. Ceci est consign&eacute; au proc&egrave;s-verbal pour donner un appui explicite &agrave; cette action.</li>
+                            <li>Daniela M S a not&eacute; que l&rsquo;&eacute;quipe contacte d&eacute;j&agrave; directement les candidatures, et a propos&eacute; d&rsquo;accepter plus volontiers les candidatures motiv&eacute;es lorsque des crit&egrave;res stricts de r&ocirc;le les bloqueraient autrement. Six nouvelles candidatures de remboursement de voyage sont en cours d&rsquo;affectation (provisoirement ~4 montage / ~2 d&eacute;montage).</li>
+                            <li>&Agrave; plus long terme : les &eacute;quipes devraient choisir leurs propres personnes coordinatrices, en s&eacute;lectionnant pour la capacit&eacute; de coordination ; le r&ocirc;le du conseil ici est un coup de pouce &agrave; court terme, pas une fonction permanente.</li>
+                        </ul>
+
+                        <h2>7. Effectifs de l&rsquo;&Eacute;v&eacute;nement &mdash; Mise &agrave; l&rsquo;&Eacute;chelle</h2>
+                        <ul>
+                            <li>Les ventes de billets se situant autour des deux tiers des ann&eacute;es pr&eacute;c&eacute;dentes, le conseil a not&eacute; qu&rsquo;il n&rsquo;est pas raisonnable que les &eacute;quipes planifient des effectifs complets &agrave; l&rsquo;ancienne &eacute;chelle (3&nbsp;000 participants).</li>
+                            <li>Les d&eacute;partements ont entendu le message &laquo;&nbsp;mettre &agrave; l&rsquo;&eacute;chelle aux deux tiers&nbsp;&raquo; mais peuvent manquer d&rsquo;une compr&eacute;hension concr&egrave;te de ce que cela signifie en pratique, les effectifs ayant historiquement &eacute;t&eacute; &eacute;valu&eacute;s visuellement sur site plut&ocirc;t qu&rsquo;&agrave; partir de plans &eacute;crits. La plupart des d&eacute;partements d&eacute;tiennent cette information ; pour certains elle est moins explicite.</li>
+                            <li>La messagerie annuelle r&eacute;currente &laquo;&nbsp;l&rsquo;&eacute;v&eacute;nement est en p&eacute;ril&nbsp;&raquo; pour le recrutement a &eacute;t&eacute; jug&eacute;e avoir perdu de son impact sur une audience interne d&eacute;j&agrave; satur&eacute;e ; les leviers plus efficaces sont une priorisation honn&ecirc;te des cr&eacute;neaux critiques et une r&eacute;activit&eacute; envers les candidatures.</li>
+                        </ul>
+
+                        <h2>8. Sujets Ouverts</h2>
+                        <ul>
+                            <li><strong>R&eacute;seau r&eacute;gional de rangers et promotion partenaires :</strong> Victor P prendra la responsabilit&eacute; du sujet et transmettra la pr&eacute;sentation du r&eacute;seau ranger &agrave; Chris O (Malfare). La port&eacute;e promotionnelle via le r&eacute;seau partenaires est vue comme l&rsquo;&eacute;l&eacute;ment &agrave; forte valeur ; r&eacute;ponse en attente de la confirmation d&rsquo;assurance et des demandes de permis d&eacute;pos&eacute;es.</li>
+                            <li><strong>Analyse l&eacute;gale ticketing :</strong> Une analyse l&eacute;gale de fin avril sur l&rsquo;assurance ticketing n&rsquo;a pas de responsable clair et le conseil n&rsquo;a pas &eacute;t&eacute; mis en copie. Daniela M S v&eacute;rifiera le statut avec la personne de contact pertinente (r&eacute;cemment souffrante) ou r&eacute;orientera.</li>
+                            <li><strong>Plan d&rsquo;affaires :</strong> Confirm&eacute; complet.</li>
+                        </ul>
+
+                        <h2>9. Cl&ocirc;ture</h2>
+                        <ul>
+                            <li>Les membres ont partag&eacute; des r&eacute;flexions de cl&ocirc;ture &mdash; la fatigue collective a &eacute;t&eacute; reconnue, accompagn&eacute;e d&rsquo;une positivit&eacute; sinc&egrave;re sur les progr&egrave;s de l&rsquo;&eacute;quipe et le bon fonctionnement du relais op&eacute;rationnel. Le conseil a not&eacute;, avec soulagement, la r&eacute;solution d&rsquo;un point d&rsquo;infrastructure de longue date avec une organisation voisine.</li>
+                        </ul>
+
+                        <h2>Points d&rsquo;Action</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Personne</th><th>Action</th><th>&Eacute;ch&eacute;ance</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>R&eacute;diger une r&eacute;ponse sur la demande de conseil de garde ; faire circuler au conseil pour avis</td><td>Cette semaine</td></tr>
+                                <tr><td>Daniel T</td><td>Faire un suivi direct avec Frank pour confirmer le soutien dont la coordination b&eacute;n&eacute;vole a besoin</td><td>Cette semaine</td></tr>
+                                <tr><td>Daniel T / Pablo V</td><td>Revoir et signer la liste de documents de paiements planifi&eacute;s pour permettre les virements</td><td>Cette semaine</td></tr>
+                                <tr><td>Peter D</td><td>&Eacute;tablir l&rsquo;&eacute;quipe finances et la politique/limites de d&eacute;penses d&rsquo;urgence avant l&rsquo;&eacute;v&eacute;nement</td><td>Avant l&rsquo;&eacute;v&eacute;nement</td></tr>
+                                <tr><td>Daniela M S</td><td>Fournir un sch&eacute;ma concret du r&ocirc;le de coordination de garde pour revue du conseil</td><td>Prochaine r&eacute;union</td></tr>
+                                <tr><td>Daniela M S</td><td>Finaliser l&rsquo;assurance ; poursuivre des alternatives si le courtier continue de retarder</td><td>Cette semaine</td></tr>
+                                <tr><td>Daniela M S</td><td>Contacter les six nouvelles candidatures montage/d&eacute;montage pour les int&eacute;grer</td><td>Cette semaine</td></tr>
+                                <tr><td>Daniela M S</td><td>V&eacute;rifier le statut de l&rsquo;analyse l&eacute;gale ticketing avec le contact pertinent ou r&eacute;orienter</td><td>Cette semaine</td></tr>
+                                <tr><td>Frank</td><td>Identifier les d&eacute;partements sous-coordonn&eacute;s et nommer des personnes coordinatrices suppl&eacute;mentaires</td><td>Cette semaine</td></tr>
+                                <tr><td>Victor P</td><td>Porter le sujet du r&eacute;seau r&eacute;gional de rangers ; coordonner la pr&eacute;sentation avec Chris O</td><td>Cette semaine</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Proc&egrave;s-verbaux g&eacute;n&eacute;r&eacute;s automatiquement et nettoy&eacute;s pour publication.</em></p>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanze tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Presidente:</strong> Ben D (facilitatore; ha passato il ruolo a Daniel T per uscita anticipata)<br>
+                        <strong>Consiglio presente:</strong> Daniel T, Ben D, Peter D, Pablo V, Victor P, Chris O<br>
+                        <strong>Anche presente:</strong> Daniela M S (si &egrave; unita poco dopo l&rsquo;inizio)<br>
+                        <strong>Assenti giustificati:</strong> Ward D, Michelle T
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Apertura e Ordine del Giorno</h2>
+                        <ul>
+                            <li>I membri hanno condiviso brevi aggiornamenti personali. Diversi hanno segnalato stanchezza e alto carico di lavoro in vista del periodo dell&rsquo;evento.</li>
+                            <li>Due punti sostanziali all&rsquo;ordine del giorno: (1) la richiesta di membri del consiglio in reperibilit&agrave; da parte di una persona coordinatrice operativa, e (2) un aggiornamento sul coordinamento volontari dopo una chiamata con il team di coordinamento volontari.</li>
+                        </ul>
+
+                        <h2>2. Membri del Consiglio in Reperibilit&agrave;</h2>
+                        <ul>
+                            <li>Contesto: una persona coordinatrice operativa aveva richiesto che i membri del consiglio coprissero turni di reperibilit&agrave; dedicati di 24 ore durante l&rsquo;evento.</li>
+                            <li>Il consiglio non ha sostenuto turni di reperibilit&agrave; dedicati. Punti chiave:
+                                <ul>
+                                    <li>Un membro del consiglio fisicamente stanziato a Malfare non aggiunge valore operativo e rischia di confondere la catena di comando esistente.</li>
+                                    <li>In situazioni Malfare o di allontanamento realmente difficili, il team Malfare possiede l&rsquo;esperienza rilevante; convocare il consiglio a tarda notte non migliorerebbe gli esiti.</li>
+                                    <li>I bisogni reali sottostanti sono (a) un percorso chiaro di finanza d&rsquo;emergenza e (b) fiducia e supporto al team Malfare &mdash; non la presenza del consiglio di per s&eacute;.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Direzione condivisa:</strong>
+                                <ul>
+                                    <li>I membri del consiglio saranno disponibili tramite un gruppo WhatsApp dedicato che collega il team Malfare direttamente al consiglio (non veicolato attraverso una singola persona), per fornire pareri quando richiesto.</li>
+                                    <li>Almeno un membro del consiglio affidabilmente sobrio (Victor P) sar&agrave; disponibile come supporto esterno / punto di confronto.</li>
+                                    <li>Il punto di rappresentanza legale (solo specifiche persone firmatarie possono agire per l&rsquo;associazione) &egrave; coperto dalla reperibilit&agrave; pi&ugrave; che da turni fisici; &egrave; molto improbabile che sia necessario firmare in loco di notte.</li>
+                                </ul>
+                            </li>
+                            <li>Daniela M S ha segnalato una possibile questione legale su se alcuni ruoli (retribuiti) debbano essere fisicamente presenti per un periodo definito, da verificare con la consulenza legale. Sta inoltre portando avanti un ruolo esterno certificato di &laquo;estrazione&raquo; (un&rsquo;aggiunta tipo personale di sicurezza certificato in Spagna) per togliere all&rsquo;organizzazione gli allontanamenti difficili, oltre a una persona coordinatrice in reperibilit&agrave; retribuita.</li>
+                            <li><strong>Decisione:</strong> Finalizzare la posizione del consiglio una volta che Daniela M S presenti uno schema concreto del ruolo di coordinamento in reperibilit&agrave;. Daniel T redigger&agrave; una risposta alla persona coordinatrice operativa riprendendo quanto sopra e la far&agrave; circolare al consiglio per pareri prima di inviarla.</li>
+                        </ul>
+
+                        <h2>3. Autorit&agrave; di Firma del Consiglio e Protocollo Finanze d&rsquo;Emergenza</h2>
+                        <ul>
+                            <li>&Egrave; stato chiarito che l&rsquo;autorit&agrave; di firmare e approvare spese a nome dell&rsquo;associazione &egrave; attualmente detenuta da un numero molto ristretto di persone.</li>
+                            <li><strong>Decisione:</strong> Costituire un team finanze (che includa Peter D, Daniela M S e altre persone) con autorit&agrave; delegata ad approvare spese d&rsquo;emergenza, regolata da limiti di politica concordati in anticipo, in modo che le decisioni finanziarie in loco possano essere prese senza convocare una riunione d&rsquo;emergenza del consiglio. Le persone responsabili finanziarie di dipartimento (Cantina, Infrastruttura, Energia, il resto via Produzione) possono instradare le approvazioni d&rsquo;emergenza.</li>
+                        </ul>
+
+                        <h2>4. Aggiornamento Assicurazione</h2>
+                        <ul>
+                            <li>Daniela M S ha riferito che l&rsquo;assicurazione &egrave; in corso con le stesse persone broker utilizzate in precedenza, rallentata in attesa di informazioni tra intermediari. Esistono fornitori alternativi (in gran parte con la stessa assicurazione sottostante) come ripiego.</li>
+                            <li>Il consiglio ha chiesto un punto di attivazione di ripiego se la persona broker attuale continua a ritardare.</li>
+                        </ul>
+
+                        <h2>5. Aggiornamento Produzione</h2>
+                        <ul>
+                            <li>I pagamenti ai fornitori sono ora raggruppati settimanalmente per ridurre la rotazione di firme e bonifici; una lista di documenti &egrave; in preparazione per firma e bonifico questa settimana.</li>
+                            <li>Noleggio bagni bloccato (pagamento questa settimana). Il costo di preparazione del sito &egrave; stato ridotto a ~8.000&nbsp;&euro; (da ~13.000&nbsp;&euro;); i preventivi alternativi erano sensibilmente pi&ugrave; alti (&gt;25.000&nbsp;&euro;), quindi verr&agrave; utilizzato il fornitore originale.</li>
+                            <li>Nei prossimi giorni uscir&agrave; un volume pi&ugrave; ampio di comunicazioni informative alla comunit&agrave;.</li>
+                        </ul>
+
+                        <h2>6. Coordinamento Volontari</h2>
+                        <ul>
+                            <li>A seguito di una chiamata nello stesso giorno con il team di coordinamento volontari (Frank): molte aree dispongono ora di volontari adeguati, ma alcuni dipartimenti restano significativamente carenti.</li>
+                            <li>Il problema da risolvere &egrave; stato identificato come tanto di coordinamento quanto di mero numero: le candidature ad alcuni ruoli non hanno ricevuto risposte tempestive e si sono spostate altrove; i dipartimenti rilevanti potrebbero beneficiare di un ulteriore supporto al coordinamento del team. &Egrave; stato identificato un problema di tempi di risposta ed &egrave; in corso una soluzione.</li>
+                            <li>Il consiglio ha discusso il cambio di nome da &laquo;meta-lead&raquo; a &laquo;coordinamento&raquo; come una scelta deliberata, funzionale (anzich&eacute; gerarchica) che rende visibili le esigenze di coordinamento, e ha rilevato esempi positivi in cui una persona di coordinamento ha attivamente collegato e accolto i volontari.</li>
+                            <li>La discussione &egrave; convergeta sul dare potere alla funzione esistente di coordinamento volontari per agire, piuttosto che sul consiglio che interviene direttamente in ogni area.</li>
+                            <li><strong>Decisione:</strong> Il consiglio autorizza il coordinamento volontari a identificare i dipartimenti privi di sufficiente coordinamento attivo e a nominare persone di coordinamento aggiuntive in quelle aree secondo necessit&agrave;. Ci&ograve; viene messo a verbale per dare un sostegno esplicito a tale azione.</li>
+                            <li>Daniela M S ha osservato che il team sta gi&agrave; contattando direttamente le candidature, e ha proposto di accettare pi&ugrave; prontamente le candidature disponibili dove criteri rigidi di ruolo le bloccherebbero altrimenti. Sei nuove candidature di rimborso viaggio sono in fase di assegnazione (provvisoriamente ~4 montaggio / ~2 smontaggio).</li>
+                            <li>A pi&ugrave; lungo termine: i team dovrebbero scegliere le proprie persone di coordinamento, selezionando per capacit&agrave; di coordinamento; il ruolo del consiglio qui &egrave; uno stimolo a breve termine, non una funzione permanente.</li>
+                        </ul>
+
+                        <h2>7. Personale dell&rsquo;Evento &mdash; Adeguamento alla Capacit&agrave;</h2>
+                        <ul>
+                            <li>Con le vendite di biglietti che si attestano intorno ai due terzi degli anni precedenti, il consiglio ha rilevato che non &egrave; ragionevole che i team pianifichino la dotazione completa al precedente livello (3.000 partecipanti).</li>
+                            <li>I dipartimenti hanno ricevuto il messaggio di &laquo;adeguarsi ai due terzi&raquo; ma potrebbero non avere una comprensione concreta di cosa significhi in pratica, dato che la dotazione &egrave; stata storicamente valutata visivamente in loco anzich&eacute; da piani scritti. La maggior parte dei dipartimenti possiede questa informazione; per alcuni &egrave; meno esplicita.</li>
+                            <li>La ricorrente messaggistica annuale di reclutamento &laquo;l&rsquo;evento &egrave; a rischio&raquo; &egrave; stata giudicata aver perso impatto su un pubblico interno gi&agrave; saturo; le leve pi&ugrave; efficaci sono una prioritizzazione onesta dei turni critici e la reattivit&agrave; verso le candidature.</li>
+                        </ul>
+
+                        <h2>8. Questioni Aperte</h2>
+                        <ul>
+                            <li><strong>Rete regionale di rangers e promozione partner:</strong> Victor P assumer&agrave; la responsabilit&agrave; del tema e trasmetter&agrave; la presentazione della rete ranger a Chris O (Malfare). La portata promozionale tramite la rete partner &egrave; vista come l&rsquo;elemento ad alto valore; risposta in attesa della conferma assicurativa e delle domande di permesso presentate.</li>
+                            <li><strong>Analisi legale ticketing:</strong> Un&rsquo;analisi legale di fine aprile sull&rsquo;assicurazione ticketing non ha un responsabile chiaro e il consiglio non &egrave; stato copiato. Daniela M S verificher&agrave; lo stato con il contatto rilevante (recentemente indisposto) o reindirizzer&agrave;.</li>
+                            <li><strong>Piano di business:</strong> Confermato completo.</li>
+                        </ul>
+
+                        <h2>9. Chiusura</h2>
+                        <ul>
+                            <li>I membri hanno condiviso riflessioni di chiusura &mdash; stanchezza collettiva riconosciuta accanto a una genuina positivit&agrave; sui progressi del team e sul buon funzionamento del passaggio di consegne operativo. Il consiglio ha notato, con sollievo, la risoluzione di un punto di infrastruttura di lunga data con un&rsquo;organizzazione vicina.</li>
+                        </ul>
+
+                        <h2>Punti d&rsquo;Azione</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Azione</th><th>Scadenza</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Redigere risposta sulla richiesta di consiglio in reperibilit&agrave;; far circolare al consiglio per pareri</td><td>Questa settimana</td></tr>
+                                <tr><td>Daniel T</td><td>Fare un follow-up diretto con Frank per confermare il supporto necessario al coordinamento volontari</td><td>Questa settimana</td></tr>
+                                <tr><td>Daniel T / Pablo V</td><td>Rivedere e firmare la lista di documenti di pagamenti pianificati per abilitare i bonifici</td><td>Questa settimana</td></tr>
+                                <tr><td>Peter D</td><td>Costituire il team finanze e la politica/limiti di spese d&rsquo;emergenza prima dell&rsquo;evento</td><td>Prima dell&rsquo;evento</td></tr>
+                                <tr><td>Daniela M S</td><td>Fornire uno schema concreto del ruolo di coordinamento in reperibilit&agrave; per revisione del consiglio</td><td>Prossima riunione</td></tr>
+                                <tr><td>Daniela M S</td><td>Finalizzare l&rsquo;assicurazione; perseguire alternative se il broker continua a ritardare</td><td>Questa settimana</td></tr>
+                                <tr><td>Daniela M S</td><td>Contattare le sei nuove candidature montaggio/smontaggio per integrarle</td><td>Questa settimana</td></tr>
+                                <tr><td>Daniela M S</td><td>Verificare lo stato dell&rsquo;analisi legale ticketing con il contatto rilevante o reindirizzare</td><td>Questa settimana</td></tr>
+                                <tr><td>Frank</td><td>Identificare i dipartimenti sotto-coordinati e nominare persone di coordinamento aggiuntive</td><td>Questa settimana</td></tr>
+                                <tr><td>Victor P</td><td>Assumere il tema della rete regionale di rangers; coordinare la presentazione con Chris O</td><td>Questa settimana</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Verbali generati automaticamente e ripuliti per la pubblicazione.</em></p>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Bei Diskrepanzen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Vorsitz:</strong> Ben D (Moderator; &Uuml;bergabe an Daniel T bei fr&uuml;her Abreise)<br>
+                        <strong>Vorstand anwesend:</strong> Daniel T, Ben D, Peter D, Pablo V, Victor P, Chris O<br>
+                        <strong>Ebenfalls anwesend:</strong> Daniela M S (kam kurz nach Beginn dazu)<br>
+                        <strong>Entschuldigt:</strong> Ward D, Michelle T
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Eingangsrunde und Tagesordnung</h2>
+                        <ul>
+                            <li>Die Mitglieder gaben kurze pers&ouml;nliche Updates. Mehrere wiesen auf M&uuml;digkeit und hohe Arbeitsbelastung im Vorfeld des Veranstaltungszeitraums hin.</li>
+                            <li>Zwei substantielle Tagesordnungspunkte: (1) die Anfrage zu Vorstandsmitgliedern in Bereitschaft seitens einer operativ koordinierenden Person, und (2) ein Update zur Freiwilligenkoordination nach einem Gespr&auml;ch mit dem Freiwilligenkoordinationsteam.</li>
+                        </ul>
+
+                        <h2>2. Vorstandsmitglieder in Bereitschaft</h2>
+                        <ul>
+                            <li>Kontext: eine operativ koordinierende Person hatte gebeten, dass Vorstandsmitglieder dedizierte 24-Stunden-Bereitschaftsschichten w&auml;hrend der Veranstaltung &uuml;bernehmen.</li>
+                            <li>Der Vorstand unterst&uuml;tzte keine dedizierten Vorstands-Bereitschaftsschichten. Kernpunkte:
+                                <ul>
+                                    <li>Ein Vorstandsmitglied, das physisch in Malfare stationiert ist, f&uuml;gt keinen operativen Wert hinzu und droht, die bestehende Befehlskette zu verwischen.</li>
+                                    <li>In wirklich schwierigen Malfare- oder Verweis-Situationen liegt die relevante Erfahrung beim Malfare-Team; sp&auml;te n&auml;chtliche Vorstandsversammlungen w&uuml;rden die Ergebnisse nicht verbessern.</li>
+                                    <li>Die eigentlichen zugrundeliegenden Bed&uuml;rfnisse sind (a) ein klarer Notfall-Finanzierungspfad und (b) Vertrauen und R&uuml;ckhalt f&uuml;r das Malfare-Team &mdash; nicht die Anwesenheit des Vorstands an sich.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Vereinbarte Richtung:</strong>
+                                <ul>
+                                    <li>Vorstandsmitglieder werden &uuml;ber eine dedizierte WhatsApp-Gruppe erreichbar sein, die das Malfare-Team direkt mit dem Vorstand verbindet (nicht &uuml;ber eine einzelne Person geleitet), um auf Anfrage Input zu geben.</li>
+                                    <li>Mindestens ein verl&auml;sslich n&uuml;chternes Vorstandsmitglied (Victor P) ist als externer Sounding Board / Anlaufpunkt verf&uuml;gbar.</li>
+                                    <li>Der Punkt der rechtlichen Vertretung (nur bestimmte zeichnungsberechtigte Personen k&ouml;nnen f&uuml;r den Verein handeln) wird durch Erreichbarkeit statt durch physische Schichten abgedeckt; eine Unterschrift wird sehr wahrscheinlich nicht vor Ort &uuml;ber Nacht erforderlich sein.</li>
+                                </ul>
+                            </li>
+                            <li>Daniela M S wies auf eine m&ouml;gliche rechtliche Frage hin, ob bestimmte (bezahlte) Rollen f&uuml;r einen definierten Zeitraum physisch anwesend sein m&uuml;ssen, was mit der Rechtsberatung zu pr&uuml;fen ist. Sie treibt zudem eine externe, zertifizierte &raquo;Extraktions&laquo;-Rolle voran (eine in Spanien zertifizierte Erg&auml;nzung im Stil von Sicherheitspersonal), um schwierige Verweisungen aus der Organisation herauszunehmen, sowie eine bezahlte Bereitschafts-Koordination.</li>
+                            <li><strong>Beschluss:</strong> Die Position des Vorstands wird finalisiert, sobald Daniela M S einen konkreten Entwurf der Bereitschafts-Koordinationsrolle vorlegt. Daniel T verfasst eine Antwort an die operativ koordinierende Person mit obigen Punkten und leitet sie vor dem Versand an den Vorstand zur Stellungnahme weiter.</li>
+                        </ul>
+
+                        <h2>3. Zeichnungsberechtigung des Vorstands und Notfall-Finanzprotokoll</h2>
+                        <ul>
+                            <li>Es wurde klargestellt, dass die Befugnis, im Namen des Vereins zu zeichnen und Ausgaben zu genehmigen, derzeit bei einer sehr kleinen Zahl von Personen liegt.</li>
+                            <li><strong>Beschluss:</strong> Einrichtung eines Finanzteams (mit Peter D, Daniela M S und weiteren) mit delegierter Befugnis zur Genehmigung von Notausgaben, geregelt durch vorab vereinbarte Richtlinien-Grenzen, damit Finanzentscheidungen vor Ort getroffen werden k&ouml;nnen, ohne eine Notvorstandssitzung einberufen zu m&uuml;ssen. Departmentale Finanzverantwortliche (Cantina, Infrastruktur, Strom, der Rest &uuml;ber Produktion) k&ouml;nnen Notgenehmigungen leiten.</li>
+                        </ul>
+
+                        <h2>4. Versicherungsupdate</h2>
+                        <ul>
+                            <li>Daniela M S berichtete, dass die Versicherung mit denselben zuvor genutzten Maklern in Bearbeitung ist, verz&ouml;gert durch ausstehende Informationen zwischen Vermittlern. Alternative Anbieter (gr&ouml;&szlig;tenteils mit derselben zugrundeliegenden Versicherung) bestehen als R&uuml;ckfall.</li>
+                            <li>Der Vorstand bat um einen R&uuml;ckfall-Ausl&ouml;sepunkt, falls der derzeitige Makler weiter verz&ouml;gert.</li>
+                        </ul>
+
+                        <h2>5. Produktionsupdate</h2>
+                        <ul>
+                            <li>Lieferantenzahlungen werden nun w&ouml;chentlich geb&uuml;ndelt, um Unterschriften-/&Uuml;berweisungs-Fluktuation zu reduzieren; eine Dokumentenliste wird f&uuml;r Unterschrift und &Uuml;berweisung in dieser Woche vorbereitet.</li>
+                            <li>Toilettenmiete gesichert (Zahlung diese Woche). Die Site-Vorbereitungskosten wurden auf ~8.000&nbsp;&euro; reduziert (von ~13.000&nbsp;&euro;); alternative Angebote waren deutlich h&ouml;her (&gt;25.000&nbsp;&euro;), daher wird der urspr&uuml;ngliche Anbieter genutzt.</li>
+                            <li>Ein umfangreicheres Volumen an informativer Kommunikation an die Community geht in den n&auml;chsten Tagen raus.</li>
+                        </ul>
+
+                        <h2>6. Freiwilligenkoordination</h2>
+                        <ul>
+                            <li>Im Anschluss an einen Anruf am selben Tag mit dem Freiwilligenkoordinationsteam (Frank): viele Bereiche verf&uuml;gen nun &uuml;ber ausreichend Freiwillige, aber bestimmte Departments bleiben deutlich unterbesetzt.</li>
+                            <li>Das zu l&ouml;sende Problem wurde ebenso sehr als Koordinations- wie als reines Mengenproblem identifiziert: Bewerbende f&uuml;r bestimmte Rollen haben keine zeitnahen R&uuml;ckmeldungen erhalten und sich anderweitig orientiert; die betreffenden Departments k&ouml;nnten von weiterer Unterst&uuml;tzung bei der Teamkoordination profitieren. Ein Problem mit Reaktionszeiten wurde identifiziert, und eine L&ouml;sung wird gerade umgesetzt.</li>
+                            <li>Der Vorstand diskutierte die Umbenennung von &raquo;Meta-Lead&laquo; in &raquo;Koordination&laquo; als bewusste, funktionale (statt hierarchische) Rahmung, die Koordinationsbedarfe sichtbar macht, und verwies auf positive Beispiele, bei denen eine koordinierende Person Freiwillige aktiv verbunden und eingearbeitet hat.</li>
+                            <li>Die Diskussion konvergierte darauf, die bestehende Freiwilligenkoordinationsfunktion zum Handeln zu erm&auml;chtigen, anstatt dass der Vorstand direkt in jedem Bereich eingreift.</li>
+                            <li><strong>Beschluss:</strong> Der Vorstand erm&auml;chtigt die Freiwilligenkoordination, Departments mit unzureichender aktiver Koordination zu identifizieren und bei Bedarf zus&auml;tzliche Koordinierende in diese Bereiche zu benennen. Dies wird im Protokoll festgehalten, um dieser Handlung ausdr&uuml;ckliche R&uuml;ckendeckung zu geben.</li>
+                            <li>Daniela M S merkte an, dass das Team bereits Kandidatinnen und Kandidaten direkt anspricht, und schlug vor, bereitwillige Bewerbende leichter zu akzeptieren, wo strenge Rollenkriterien das ansonsten blockieren w&uuml;rden. Sechs neue Bewerbende auf Reisekostenerstattung werden derzeit zugeteilt (vorl&auml;ufig ~4 Aufbau / ~2 Abbau).</li>
+                            <li>L&auml;ngerfristig: Teams sollten ihre eigenen Koordinierenden ausw&auml;hlen und dabei nach Koordinationsf&auml;higkeit ausw&auml;hlen; die Rolle des Vorstands ist hier ein kurzfristiger Anschub, keine stehende Funktion.</li>
+                        </ul>
+
+                        <h2>7. Personalbedarf der Veranstaltung &mdash; Skalierung auf Kapazit&auml;t</h2>
+                        <ul>
+                            <li>Da die Ticketverk&auml;ufe sich etwa auf zwei Drittel der Vorjahre bel&auml;ufen, hielt der Vorstand fest, dass es f&uuml;r Teams unangemessen ist, die volle Besetzung der vorherigen Gr&ouml;&szlig;e (3.000 Teilnehmende) zu planen.</li>
+                            <li>Die Departments haben die Botschaft &raquo;auf zwei Drittel skalieren&laquo; geh&ouml;rt, k&ouml;nnten aber kein konkretes Verst&auml;ndnis daf&uuml;r haben, was das in der Praxis bedeutet, da die Besetzung historisch eher visuell vor Ort als anhand schriftlicher Pl&auml;ne beurteilt wurde. Die meisten Departments verf&uuml;gen &uuml;ber diese Information; bei einigen ist sie weniger explizit.</li>
+                            <li>Die wiederkehrende j&auml;hrliche Rekrutierungsbotschaft &raquo;die Veranstaltung ist in Gefahr&laquo; wurde als wirkungslos f&uuml;r ein bereits ges&auml;ttigtes internes Publikum eingesch&auml;tzt; die wirksameren Hebel sind eine ehrliche Priorisierung kritischer Schichten und Reaktionsf&auml;higkeit gegen&uuml;ber Bewerbenden.</li>
+                        </ul>
+
+                        <h2>8. Offene Themen</h2>
+                        <ul>
+                            <li><strong>Regionales Ranger-Netzwerk und Partner-Promotion:</strong> Victor P &uuml;bernimmt die Verantwortung f&uuml;r das Thema und leitet die Vorstellung des Ranger-Netzwerks an Chris O (Malfare) weiter. Die Promotionsreichweite &uuml;ber das Partnernetzwerk gilt als hochwertiges Element; R&uuml;ckmeldung ausstehend pendend bis Versicherungsbest&auml;tigung und eingereichte Genehmigungsantr&auml;ge.</li>
+                            <li><strong>Rechtliche Analyse Ticketing:</strong> Eine rechtliche Analyse von Ende April zur Ticketing-Versicherung hat keinen klaren Verantwortlichen, und der Vorstand wurde nicht in Kopie gesetzt. Daniela M S pr&uuml;ft den Status mit der relevanten Kontaktperson (k&uuml;rzlich unwohl) oder leitet um.</li>
+                            <li><strong>Businessplan:</strong> Vollst&auml;ndig best&auml;tigt.</li>
+                        </ul>
+
+                        <h2>9. Schlussrunde</h2>
+                        <ul>
+                            <li>Die Mitglieder teilten Schlussreflexionen &mdash; kollektive M&uuml;digkeit wurde anerkannt, zugleich echte Positivit&auml;t &uuml;ber die Fortschritte des Teams und die gut funktionierende operative &Uuml;bergabe. Der Vorstand stellte mit Erleichterung die Aufl&ouml;sung eines lange schwelenden Infrastrukturthemas mit einer benachbarten Organisation fest.</li>
+                        </ul>
+
+                        <h2>Aktionspunkte</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Aktion</th><th>F&auml;lligkeit</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Antwort zur Anfrage Vorstand-in-Bereitschaft entwerfen; zur Stellungnahme im Vorstand zirkulieren</td><td>Diese Woche</td></tr>
+                                <tr><td>Daniel T</td><td>Direktes Follow-up mit Frank, um zu kl&auml;ren, welche Unterst&uuml;tzung die Freiwilligenkoordination braucht</td><td>Diese Woche</td></tr>
+                                <tr><td>Daniel T / Pablo V</td><td>Liste geplanter Zahlungsdokumente pr&uuml;fen und unterzeichnen, um &Uuml;berweisungen zu erm&ouml;glichen</td><td>Diese Woche</td></tr>
+                                <tr><td>Peter D</td><td>Finanzteam und Notausgaben-Richtlinien/-Grenzen vor dem Event einrichten</td><td>Vor dem Event</td></tr>
+                                <tr><td>Daniela M S</td><td>Konkretes Konzept der Bereitschafts-Koordinationsrolle zur Vorstandspr&uuml;fung vorlegen</td><td>N&auml;chste Sitzung</td></tr>
+                                <tr><td>Daniela M S</td><td>Versicherung finalisieren; Alternativen verfolgen, falls der Makler weiter verz&ouml;gert</td><td>Diese Woche</td></tr>
+                                <tr><td>Daniela M S</td><td>Die sechs neuen Aufbau-/Abbau-Bewerbenden kontaktieren, um sie einzubinden</td><td>Diese Woche</td></tr>
+                                <tr><td>Daniela M S</td><td>Status der rechtlichen Ticketing-Analyse mit der relevanten Kontaktperson pr&uuml;fen oder umleiten</td><td>Diese Woche</td></tr>
+                                <tr><td>Frank</td><td>Unter-koordinierte Departments identifizieren und zus&auml;tzliche Koordinierende benennen</td><td>Diese Woche</td></tr>
+                                <tr><td>Victor P</td><td>Das Thema des regionalen Ranger-Netzwerks &uuml;bernehmen; Vorstellung mit Chris O koordinieren</td><td>Diese Woche</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Protokoll automatisch erstellt und f&uuml;r die Ver&ouml;ffentlichung bereinigt.</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>
