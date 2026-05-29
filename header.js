@@ -41,7 +41,7 @@
                         '<ul class="nav-dropdown-menu">' +
                             '<li><a href="' + prefix + '/transparency.html">Transparency</a></li>' +
                             '<li><a href="' + prefix + '/transparency.html">Meetings</a></li>' +
-                            '<li><a href="' + prefix + '/updates.html">Updates</a></li>' +
+                            /* Hidden: updates link (stale) '<li><a href="' + prefix + '/updates.html">Updates</a></li>' + */
                         '</ul>' +
                     '</li>' +
                     '<li><a href="' + prefix + '/#useful-links">Links</a></li>' +
