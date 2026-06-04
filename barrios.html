@@ -328,7 +328,7 @@
                 badges += '<span class="barrio-badge barrio-badge--kids">Kids welcome</span>';
             }
             if (typeof b.timesAtNowhere === 'number' && b.timesAtNowhere >= 5) {
-                badges += '<span class="barrio-badge barrio-badge--veteran">' + b.timesAtNowhere + ' years</span>';
+                badges += '<span class="barrio-badge barrio-badge--veteran">' + b.timesAtNowhere + ' years at similar event</span>';
             }
 
             return '<a class="barrio-card" href="' + HUMANS_BASE + '/Barrios/' + encodeURIComponent(b.slug) + '" target="_blank" rel="noopener noreferrer">' +
