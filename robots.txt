@@ -1,10 +1,4 @@
 User-agent: *
 Allow: /
 
-# Community-call material (chats, transcripts, summaries) kept out of search indexes
-Disallow: /transparency/*-community-chat.html
-Disallow: /transparency/*-community-transcript.html
-Disallow: /transparency/*-community.html
-Disallow: /transparency/2026-02-12-barrio-survey.html
-
 Sitemap: https://nobodies.team/sitemap.xml
