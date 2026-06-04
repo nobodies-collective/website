@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main pages -->
-  <url><loc>https://nobodies.team/</loc><priority>1.0</priority></url>
-  <url><loc>https://nobodies.team/faq.html</loc><priority>0.8</priority></url>
-  <url><loc>https://nobodies.team/art-grants.html</loc><priority>0.8</priority></url>
-  <url><loc>https://nobodies.team/barrios.html</loc><priority>0.8</priority></url>
-  <url><loc>https://nobodies.team/volunteering.html</loc><priority>0.8</priority></url>
-  <url><loc>https://nobodies.team/survival-guide.html</loc><priority>0.8</priority></url>
-  <url><loc>https://nobodies.team/consent.html</loc><priority>0.7</priority></url>
-  <url><loc>https://nobodies.team/inclusion.html</loc><priority>0.7</priority></url>
-  <url><loc>https://nobodies.team/speaking-about-elsewhere.html</loc><priority>0.6</priority></url>
-  <url><loc>https://nobodies.team/transparency.html</loc><priority>0.7</priority></url>
-  <url><loc>https://nobodies.team/updates.html</loc><priority>0.6</priority></url>
-  <url><loc>https://nobodies.team/newsletters.html</loc><priority>0.6</priority></url>
+  <url><loc>https://nobodies.team/</loc><lastmod>2026-06-04</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://nobodies.team/faq.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://nobodies.team/art-grants.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://nobodies.team/barrios.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://nobodies.team/volunteering.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://nobodies.team/survival-guide.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://nobodies.team/consent.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://nobodies.team/inclusion.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://nobodies.team/speaking-about-elsewhere.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nobodies.team/transparency.html</loc><lastmod>2026-06-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://nobodies.team/updates.html</loc><lastmod>2026-06-04</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nobodies.team/newsletters.html</loc><lastmod>2026-06-04</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 
   <!-- Redirects -->
   <url><loc>https://nobodies.team/join/</loc><priority>0.3</priority></url>
 
   <!-- Tickets -->
-  <url><loc>https://nobodies.team/low-income-tickets.html</loc><priority>0.6</priority></url>
-  <url><loc>https://nobodies.team/local-residents-discount.html</loc><priority>0.5</priority></url>
-  <url><loc>https://nobodies.team/getting-there.html</loc><priority>0.7</priority></url>
-  <url><loc>https://nobodies.team/bus-tickets.html</loc><priority>0.6</priority></url>
-  <url><loc>https://nobodies.team/refund-policy.html</loc><priority>0.4</priority></url>
+  <url><loc>https://nobodies.team/low-income-tickets.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nobodies.team/local-residents-discount.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://nobodies.team/getting-there.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://nobodies.team/bus-tickets.html</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nobodies.team/refund-policy.html</loc><lastmod>2026-06-04</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
 
   <!-- Legal / Policy -->
   <url><loc>https://nobodies.team/code-of-conduct.html</loc><priority>0.5</priority></url>
