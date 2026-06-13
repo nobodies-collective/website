@@ -30,7 +30,6 @@
   --full-fg: #7A1B1B;
   --accent: #C8964A;
   --accent-light: #F0E0C0;
-  --red: #C0392B;
   --radius: 10px;
   --radius-sm: 6px;
 }
@@ -89,10 +88,6 @@ header p {
 }
 .btn:hover { opacity: 0.85; }
 .btn-light { background: rgba(255,255,255,0.12); color: var(--sand); border-color: rgba(255,255,255,0.15); }
-.btn-accent { background: var(--accent); color: #fff; }
-.btn-ghost { background: transparent; color: var(--ink-mid); border-color: var(--dust); }
-.btn-ghost:hover { background: var(--sand-dark); }
-.btn-danger { background: var(--full-bg); color: var(--red); border-color: #E8C0C0; }
 
 main { padding: 32px 40px 60px; max-width: 1100px; margin: 0 auto; }
 
@@ -119,25 +114,6 @@ main { padding: 32px 40px 60px; max-width: 1100px; margin: 0 auto; }
   line-height: 1.5;
 }
 
-.day-note.empty { font-style: italic; color: var(--dust); cursor: pointer; }
-.day-note.empty:hover { color: var(--ink-light); }
-
-.icon-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--ink-light);
-  padding: 4px 6px;
-  border-radius: var(--radius-sm);
-  font-size: 14px;
-  line-height: 1;
-  transition: all 0.15s;
-  display: inline-flex;
-  align-items: center;
-}
-.icon-btn:hover { background: var(--sand-dark); color: var(--ink); }
-.icon-btn.danger:hover { background: var(--full-bg); color: var(--red); }
-
 .vehicles-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
@@ -150,19 +126,7 @@ main { padding: 32px 40px 60px; max-width: 1100px; margin: 0 auto; }
   border: 1px solid var(--dust);
   border-radius: var(--radius);
   padding: 16px;
-  position: relative;
 }
-
-.card-actions {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  gap: 2px;
-  opacity: 0;
-  transition: opacity 0.15s;
-}
-.vehicle-card:hover .card-actions { opacity: 1; }
 
 .v-type {
   font-size: 10px;
@@ -171,7 +135,6 @@ main { padding: 32px 40px 60px; max-width: 1100px; margin: 0 auto; }
   text-transform: uppercase;
   color: var(--ink-light);
   margin-bottom: 3px;
-  padding-right: 52px;
 }
 
 .v-label {
@@ -190,8 +153,6 @@ main { padding: 32px 40px 60px; max-width: 1100px; margin: 0 auto; }
   margin-bottom: 10px;
   line-height: 1.4;
 }
-
-.person-list { margin-bottom: 10px; }
 
 .person {
   display: flex;
@@ -235,177 +196,15 @@ main { padding: 32px 40px 60px; max-width: 1100px; margin: 0 auto; }
 .b-self { background: var(--self-bg); color: var(--self-fg); }
 .b-train { background: var(--train-bg); color: var(--train-fg); }
 
-.remove-person {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--dust);
-  font-size: 16px;
-  padding: 0 2px;
-  line-height: 1;
-  transition: color 0.15s;
-  flex-shrink: 0;
-}
-.remove-person:hover { color: var(--red); }
-
-.add-person-row {
-  display: flex;
-  gap: 5px;
-  margin-top: 8px;
-}
-.add-person-row input {
-  flex: 1;
-  font-family: 'Inter', sans-serif;
-  font-size: 12px;
-  padding: 5px 8px;
-  border: 1px solid var(--dust);
-  border-radius: var(--radius-sm);
-  background: var(--sand);
-  color: var(--ink);
-  min-width: 0;
-}
-.add-person-row input:focus { outline: none; border-color: var(--accent); background: #fff; }
-.add-person-row select {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  padding: 5px 4px;
-  border: 1px solid var(--dust);
-  border-radius: var(--radius-sm);
-  background: var(--sand);
-  color: var(--ink);
-  max-width: 80px;
-}
-.add-person-row select:focus { outline: none; border-color: var(--accent); }
-.add-person-row .add-btn {
-  background: var(--ink);
-  color: var(--sand);
-  border: none;
-  border-radius: var(--radius-sm);
-  width: 26px;
-  height: 26px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  flex-shrink: 0;
-  transition: opacity 0.15s;
-}
-.add-person-row .add-btn:hover { opacity: 0.75; }
-
-.add-vehicle-card {
-  border: 1.5px dashed var(--dust);
-  border-radius: var(--radius);
-  min-height: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  cursor: pointer;
-  color: var(--ink-light);
-  font-size: 13px;
-  font-weight: 500;
-  transition: all 0.15s;
-  background: transparent;
-}
-.add-vehicle-card:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-light); }
-.add-vehicle-card svg { opacity: 0.5; }
-.add-vehicle-card:hover svg { opacity: 1; }
-
 .divider {
   height: 1px;
   background: var(--dust);
   margin: 32px 0;
 }
 
-.add-day-row {
-  margin-top: 8px;
-}
-
-/* Modal */
-.modal-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(28,26,23,0.55);
-  z-index: 200;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-.modal-overlay.open { display: flex; }
-
-.modal {
-  background: #fff;
-  border-radius: var(--radius);
-  padding: 24px;
-  width: 360px;
-  max-width: 100%;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-}
-.modal h3 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 16px;
-}
-.modal label {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--ink-mid);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  display: block;
-  margin-top: 14px;
-  margin-bottom: 5px;
-}
-.modal label:first-of-type { margin-top: 0; }
-.modal input, .modal textarea, .modal select {
-  width: 100%;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  padding: 9px 12px;
-  border: 1px solid var(--dust);
-  border-radius: var(--radius-sm);
-  color: var(--ink);
-  background: var(--sand);
-}
-.modal input:focus, .modal textarea:focus, .modal select:focus {
-  outline: none;
-  border-color: var(--accent);
-  background: #fff;
-}
-.modal textarea { resize: vertical; min-height: 70px; }
-.modal-actions {
-  display: flex;
-  gap: 8px;
-  justify-content: flex-end;
-  margin-top: 20px;
-}
-
-/* Toast */
-.toast {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  background: var(--ink);
-  color: var(--sand);
-  font-size: 13px;
-  padding: 10px 18px;
-  border-radius: var(--radius-sm);
-  opacity: 0;
-  transform: translateY(8px);
-  transition: all 0.25s;
-  z-index: 300;
-  pointer-events: none;
-}
-.toast.show { opacity: 1; transform: translateY(0); }
-
-/* Print */
 @media print {
   header { background: var(--ink) !important; -webkit-print-color-adjust: exact; }
-  .header-actions, .card-actions, .icon-btn, .remove-person, .add-person-row, .add-vehicle-card, .add-day-row { display: none !important; }
+  .header-actions { display: none !important; }
   .vehicle-card { break-inside: avoid; }
 }
 
@@ -425,59 +224,47 @@ main { padding: 32px 40px 60px; max-width: 1100px; margin: 0 auto; }
   </div>
   <div class="header-actions">
     <button class="btn btn-light" onclick="window.print()">🖨 print</button>
-    <button class="btn btn-accent" onclick="exportJSON()">↓ save</button>
   </div>
 </header>
 
-<main id="main">
-  <!-- rendered by JS -->
-</main>
-
-<div class="modal-overlay" id="modal-overlay">
-  <div class="modal" id="modal-box"></div>
-</div>
-
-<div class="toast" id="toast"></div>
+<main id="main"></main>
 
 <script>
-let uid = 200;
-function nid() { return 'x' + (uid++); }
-
-let data = [
+const data = [
   {
-    id:'d1', date:'Sunday 14 June', note:'Direct to site — early arrival.',
+    date:'Sunday 14 June', note:'Direct to site — early arrival.',
     vehicles: [
-      { id:'v1', type:'Personal vehicle', label:"Ward's van", route:'→ site direct',
-        people: [{id:'p1',name:'Ward',role:'driver'},{id:'p2',name:'Daniela',role:'passenger'}] },
-      { id:'v2', type:'Personal vehicle', label:"Gabe's car", route:'→ site direct',
-        people: [{id:'p3',name:'Gabe',role:'driver'},{id:'p4',name:'Javi',role:'passenger'}] },
-      { id:'v3', type:'Own vehicle', label:'Dominik', route:'→ site direct',
-        people: [{id:'p5',name:'Dominik',role:'driver'}] },
+      { type:'Personal vehicle', label:"Ward's van", route:'→ site direct',
+        people: [{name:'Ward',role:'driver'},{name:'Daniela',role:'passenger'}] },
+      { type:'Personal vehicle', label:"Gabe's car", route:'→ site direct',
+        people: [{name:'Gabe',role:'driver'},{name:'Javi',role:'passenger'}] },
+      { type:'Own vehicle', label:'Dominik', route:'→ site direct',
+        people: [{name:'Dominik',role:'driver'}] },
     ]
   },
   {
-    id:'d2', date:'Monday 15 June',
+    date:'Monday 15 June',
     note:'Pick up Mad Max vans from Área Alquiler Barcelona → load at storage → drive to site. Zaragoza people carriers (6-seater + 9-seater) TBC — confirm driver(s) and timing in person.',
     vehicles: [
-      { id:'v4', type:'Mad Max — Van 1', label:'Rental van', route:'BCN pickup → storage → Sariñena',
-        people: [{id:'p6',name:'Cupcake',role:'driver'},{id:'p7',name:'Bo',role:'passenger'},{id:'p8',name:'Cayce',role:'passenger'}] },
-      { id:'v5', type:'Mad Max — Van 2', label:'Rental van', route:'BCN pickup → storage → Sariñena',
-        people: [{id:'p9',name:'Elli',role:'driver'},{id:'p10',name:'Ants',role:'passenger'},{id:'p11',name:'Charlie',role:'passenger'}] },
-      { id:'v6', type:'Own vehicle', label:"Dov's van", route:'Madrid → Zaragoza → Sariñena',
-        people: [{id:'p12',name:'Dov',role:'driver'},{id:'p13',name:'open seat',role:'available'},{id:'p14',name:'open seat',role:'available'}] },
-      { id:'v7', type:'Train → station pickup', label:'Yllza', route:'Train to Sariñena — pickup at station. Bags in a van.',
-        people: [{id:'p15',name:'Yllza',role:'train'}] },
-      { id:'v8', type:'Self-arranged', label:'Zak', route:'→ arriving Monday, own arrangements',
-        people: [{id:'p17',name:'Zak',role:'self'}] },
+      { type:'Mad Max — Van 1', label:'Rental van', route:'BCN pickup → storage → Sariñena',
+        people: [{name:'Cupcake',role:'driver'},{name:'Bo',role:'passenger'},{name:'Cayce',role:'passenger'}] },
+      { type:'Mad Max — Van 2', label:'Rental van', route:'BCN pickup → storage → Sariñena',
+        people: [{name:'Elli',role:'driver'},{name:'Ants',role:'passenger'},{name:'Charlie',role:'passenger'}] },
+      { type:'Own vehicle', label:"Dov's van", route:'Madrid → Zaragoza → Sariñena',
+        people: [{name:'Dov',role:'driver'},{name:'open seat',role:'available'},{name:'open seat',role:'available'}] },
+      { type:'Train → station pickup', label:'Yllza', route:'Train to Sariñena — pickup at station. Bags in a van.',
+        people: [{name:'Yllza',role:'train'}] },
+      { type:'Self-arranged', label:'Zak', route:'→ arriving Monday, own arrangements',
+        people: [{name:'Zak',role:'self'}] },
     ]
   },
   {
-    id:'d3', date:'Tuesday 16 June', note:'',
+    date:'Tuesday 16 June', note:'',
     vehicles: [
-      { id:'v9', type:'Own vehicle — full', label:"Vincenzo's van", route:'Barcelona → Sariñena',
-        people: [{id:'p18',name:'Vincenzo',role:'driver'},{id:'p19',name:'Leanne',role:'passenger'},{id:'p20',name:'Rebar',role:'passenger'}] },
-      { id:'v10', type:'Self-arranged', label:'Ian Salter', route:'Valencia → Lleida (hotel Mon night) → Sariñena by bicycle + train',
-        people: [{id:'p21',name:'Ian Salter',role:'self'}] },
+      { type:'Own vehicle — full', label:"Vincenzo's van", route:'Barcelona → Sariñena',
+        people: [{name:'Vincenzo',role:'driver'},{name:'Leanne',role:'passenger'},{name:'Rebar',role:'passenger'}] },
+      { type:'Self-arranged', label:'Ian Salter', route:'Valencia → Lleida (hotel Mon night) → Sariñena by bicycle + train',
+        people: [{name:'Ian Salter',role:'self'}] },
     ]
   }
 ];
@@ -499,198 +286,33 @@ function initials(name) {
   return name.trim().split(' ').map(w => w[0] || '').join('').slice(0,2).toUpperCase();
 }
 
-function render() {
-  const main = document.getElementById('main');
-  main.innerHTML = data.map((day, di) => `
-    <div class="day-section" id="${day.id}">
-      <div class="day-header-row">
-        <span class="day-date">${day.date}</span>
-        <button class="icon-btn" onclick="openEditDay(${di})" title="edit day">✏️</button>
-        <button class="icon-btn danger" onclick="removeDay(${di})" title="remove day">🗑</button>
-      </div>
-      ${day.note
-        ? `<p class="day-note" onclick="openEditDay(${di})">${day.note}</p>`
-        : `<p class="day-note empty" onclick="openEditDay(${di})">add a note...</p>`}
-      <div class="vehicles-grid">
-        ${day.vehicles.map((v, vi) => `
-          <div class="vehicle-card">
-            <div class="card-actions">
-              <button class="icon-btn" onclick="openEditVehicle(${di},${vi})" title="edit">✏️</button>
-              <button class="icon-btn danger" onclick="removeVehicle(${di},${vi})" title="remove">🗑</button>
-            </div>
-            <p class="v-type">${v.type}</p>
-            <p class="v-label">${v.label}</p>
-            <p class="v-route">${v.route}</p>
-            <div class="person-list">
-              ${v.people.map((p, pi) => `
-                <div class="person">
-                  <div class="avatar ${ROLE_AV[p.role] || 'av-passenger'}">${initials(p.name)}</div>
-                  <span class="person-name">${p.name}</span>
-                  ${ROLE_BADGE[p.role] || ''}
-                  <button class="remove-person" onclick="removePerson(${di},${vi},${pi})" title="remove">×</button>
-                </div>
-              `).join('')}
-            </div>
-            <div class="add-person-row">
-              <input type="text" placeholder="add name…" id="np-${v.id}" onkeydown="if(event.key==='Enter')addPerson(${di},${vi})">
-              <select id="nr-${v.id}">
-                <option value="passenger">passenger</option>
-                <option value="driver">driver</option>
-                <option value="available">available</option>
-                <option value="self">self</option>
-                <option value="train">train</option>
-              </select>
-              <button class="add-btn" onclick="addPerson(${di},${vi})" title="add person">+</button>
-            </div>
+document.getElementById('main').innerHTML = data.map((day, di) => `
+  <div class="day-section">
+    <div class="day-header-row">
+      <span class="day-date">${day.date}</span>
+    </div>
+    ${day.note ? `<p class="day-note">${day.note}</p>` : ''}
+    <div class="vehicles-grid">
+      ${day.vehicles.map(v => `
+        <div class="vehicle-card">
+          <p class="v-type">${v.type}</p>
+          <p class="v-label">${v.label}</p>
+          <p class="v-route">${v.route}</p>
+          <div>
+            ${v.people.map(p => `
+              <div class="person">
+                <div class="avatar ${ROLE_AV[p.role] || 'av-passenger'}">${initials(p.name)}</div>
+                <span class="person-name">${p.name}</span>
+                ${ROLE_BADGE[p.role] || ''}
+              </div>
+            `).join('')}
           </div>
-        `).join('')}
-        <div class="add-vehicle-card" onclick="openAddVehicle(${di})" role="button" tabindex="0">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
-          add vehicle
         </div>
-      </div>
+      `).join('')}
     </div>
-    ${di < data.length - 1 ? '<div class="divider"></div>' : ''}
-  `).join('') + `
-    <div class="add-day-row">
-      <button class="btn btn-ghost" onclick="addDay()">+ add day</button>
-    </div>
-  `;
-}
-
-function addPerson(di, vi) {
-  const v = data[di].vehicles[vi];
-  const inp = document.getElementById('np-' + v.id);
-  const sel = document.getElementById('nr-' + v.id);
-  const name = inp.value.trim();
-  if (!name) return;
-  v.people.push({ id: nid(), name, role: sel.value });
-  inp.value = '';
-  render();
-}
-
-function removePerson(di, vi, pi) {
-  data[di].vehicles[vi].people.splice(pi, 1);
-  render();
-}
-
-function removeVehicle(di, vi) {
-  if (confirm('Remove this vehicle?')) {
-    data[di].vehicles.splice(vi, 1);
-    render();
-  }
-}
-
-function removeDay(di) {
-  if (confirm('Remove this day?')) {
-    data.splice(di, 1);
-    render();
-  }
-}
-
-function addDay() {
-  const id = nid();
-  data.push({ id, date: 'New day', note: '', vehicles: [] });
-  render();
-  setTimeout(() => openEditDay(data.length - 1), 50);
-}
-
-// Modal helpers
-function showModal(html) {
-  document.getElementById('modal-box').innerHTML = html;
-  document.getElementById('modal-overlay').classList.add('open');
-}
-function closeModal() {
-  document.getElementById('modal-overlay').classList.remove('open');
-}
-document.getElementById('modal-overlay').addEventListener('click', e => {
-  if (e.target === document.getElementById('modal-overlay')) closeModal();
-});
-
-function openEditDay(di) {
-  const d = data[di];
-  showModal(`
-    <h3>Edit day</h3>
-    <label>Date / heading</label>
-    <input id="m-date" value="${d.date}">
-    <label>Note</label>
-    <textarea id="m-note">${d.note || ''}</textarea>
-    <div class="modal-actions">
-      <button class="btn btn-ghost" onclick="closeModal()">cancel</button>
-      <button class="btn btn-accent" onclick="saveDay(${di})">save</button>
-    </div>
-  `);
-}
-function saveDay(di) {
-  data[di].date = document.getElementById('m-date').value;
-  data[di].note = document.getElementById('m-note').value;
-  closeModal(); render();
-}
-
-function openAddVehicle(di) {
-  showModal(`
-    <h3>Add vehicle</h3>
-    <label>Type / sub-label</label>
-    <input id="m-type" placeholder="e.g. Mad Max — Van 3">
-    <label>Name / vehicle label</label>
-    <input id="m-label" placeholder="e.g. Rental van">
-    <label>Route</label>
-    <input id="m-route" placeholder="e.g. BCN → Sariñena">
-    <div class="modal-actions">
-      <button class="btn btn-ghost" onclick="closeModal()">cancel</button>
-      <button class="btn btn-accent" onclick="saveNewVehicle(${di})">add</button>
-    </div>
-  `);
-}
-function saveNewVehicle(di) {
-  const type = document.getElementById('m-type').value.trim();
-  const label = document.getElementById('m-label').value.trim();
-  const route = document.getElementById('m-route').value.trim();
-  if (!label) return;
-  data[di].vehicles.push({ id: nid(), type: type || 'Vehicle', label, route, people: [] });
-  closeModal(); render();
-}
-
-function openEditVehicle(di, vi) {
-  const v = data[di].vehicles[vi];
-  showModal(`
-    <h3>Edit vehicle</h3>
-    <label>Type / sub-label</label>
-    <input id="m-type" value="${v.type}">
-    <label>Name / vehicle label</label>
-    <input id="m-label" value="${v.label}">
-    <label>Route</label>
-    <input id="m-route" value="${v.route}">
-    <div class="modal-actions">
-      <button class="btn btn-ghost" onclick="closeModal()">cancel</button>
-      <button class="btn btn-accent" onclick="saveEditVehicle(${di},${vi})">save</button>
-    </div>
-  `);
-}
-function saveEditVehicle(di, vi) {
-  data[di].vehicles[vi].type = document.getElementById('m-type').value;
-  data[di].vehicles[vi].label = document.getElementById('m-label').value;
-  data[di].vehicles[vi].route = document.getElementById('m-route').value;
-  closeModal(); render();
-}
-
-function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 2500);
-}
-
-function exportJSON() {
-  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'rideshare-data.json';
-  a.click();
-  showToast('Saved rideshare-data.json');
-}
-
-render();
+  </div>
+  ${di < data.length - 1 ? '<div class="divider"></div>' : ''}
+`).join('');
 </script>
 </body>
 </html>
