@@ -77,6 +77,76 @@
     <div id="shared-header"></div>
     <script src="header.js" defer></script>
 
+    <!-- ===== TEMP: Mobile-only "Looking for the site?" directions banner =====
+         Shown ONLY on real touch devices (phones/tablets), not on narrow desktop
+         windows, via @media (hover: none) and (pointer: coarse). Fixed below the
+         menu bar so it causes zero layout shift. Build-mode disclaimer + map link.
+         Update the message / remove this whole block when the event opens. -->
+    <style>
+        .site-directions-banner { display: none; }
+        @media (hover: none) and (pointer: coarse) {
+            .site-directions-banner {
+                display: block;
+                position: fixed;
+                top: 3.85rem;
+                left: 0.75rem;
+                right: 0.75rem;
+                z-index: 99;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 6px 20px rgba(44, 36, 24, 0.28);
+                font-family: var(--font-body, sans-serif);
+            }
+        }
+        .site-directions-banner summary {
+            list-style: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.65rem 0.9rem;
+            background: var(--color-accent, #c2703e);
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.95rem;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .site-directions-banner summary::-webkit-details-marker { display: none; }
+        .site-directions-banner summary::marker { content: ''; }
+        .sdb-label { flex: 1; }
+        .sdb-chevron { transition: transform 0.2s ease; font-size: 0.8rem; }
+        .site-directions-banner[open] .sdb-chevron { transform: rotate(180deg); }
+        .sdb-body {
+            padding: 0.8rem 0.9rem 0.95rem;
+            background: var(--color-bg, #faf5ee);
+            color: var(--color-text, #2c2418);
+        }
+        .sdb-warn { margin: 0 0 0.75rem; font-size: 0.88rem; line-height: 1.5; }
+        .sdb-map-link {
+            display: block;
+            text-align: center;
+            background: var(--color-purple, #7a8b6a);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.6rem 0.9rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+        }
+    </style>
+    <details class="site-directions-banner">
+        <summary>
+            <span aria-hidden="true">📍</span>
+            <span class="sdb-label">Looking for the site?</span>
+            <span class="sdb-chevron" aria-hidden="true">▾</span>
+        </summary>
+        <div class="sdb-body">
+            <p class="sdb-warn"><strong>The site is in build mode.</strong> Please don't come to the site unless you have an early-entry ticket for event build. We'll update this with full arrival info closer to the event.</p>
+            <a class="sdb-map-link" href="https://maps.app.goo.gl/yfNHKy6LCj8fTj6v9" target="_blank" rel="noopener noreferrer">Open directions in Google&nbsp;Maps →</a>
+        </div>
+    </details>
+    <!-- ===== END temp directions banner ===== -->
+
     <main>
         <section class="hero">
             <div class="hero-slideshow">
