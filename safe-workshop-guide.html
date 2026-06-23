@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Facilitator Safety Guide | Elsewhere &mdash; by Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .guide-page {
+            padding: 8rem 0 4rem;
+        }
+
+        .guide-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .guide-header h1 {
+            margin-bottom: 1rem;
+            color: #c2703e;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+        .back-link:hover { color: var(--color-accent); }
+        .back-link::before { content: '\2190'; }
+
+        .guide-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .guide-intro {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--color-text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .guide-intro p {
+            margin-bottom: 1rem;
+        }
+
+        .guide-intro strong, .guide-intro b {
+            color: var(--color-text);
+        }
+
+        .guide-section {
+            margin-top: 3rem;
+        }
+
+        .guide-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+            color: #c2703e;
+        }
+
+        .guide-section h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            margin-top: 1.5rem;
+            color: #9b59b6;
+        }
+
+        .guide-section p {
+            color: var(--color-text-muted);
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+        }
+
+        .guide-section p strong, .guide-section li strong {
+            color: var(--color-text);
+        }
+
+        .guide-section ul, .guide-section ol {
+            color: var(--color-text-muted);
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+        }
+
+        .guide-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .guide-section li ul {
+            margin-top: 0.5rem;
+        }
+
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .checklist li {
+            padding: 0.5rem 0;
+            padding-left: 1.75rem;
+            position: relative;
+        }
+
+        .checklist li::before {
+            content: '\2610';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+        }
+
+        .highlight-box {
+            background: #f9f0e6;
+            border-left: 4px solid #c2703e;
+            padding: 1rem 1.25rem;
+            margin: 1rem 0;
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+
+        .highlight-box p {
+            color: var(--color-text) !important;
+        }
+
+        .guide-divider {
+            border: none;
+            border-top: 3px solid var(--color-accent);
+            margin: 4rem 0;
+        }
+
+        .guide-footer {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+            text-align: center;
+            color: var(--color-text-muted);
+            line-height: 1.7;
+        }
+
+        .guide-footer a {
+            color: var(--color-accent);
+            font-weight: 600;
+        }
+
+        .pdf-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--color-accent);
+            color: #fff;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+        }
+        .pdf-link:hover {
+            background: #e08040;
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .guide-page {
+                padding: 6rem 0 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="shared-header"></div>
+    <script src="header.js"></script>
+
+    <main class="guide-page">
+        <div class="container">
+            <a href="consent.html" class="back-link">Back to Consent</a>
+
+            <div class="guide-header">
+                <h1>Workshop Facilitator Safety Guide</h1>
+                <a href="docs/safe-workshop-guide.pdf" class="pdf-link" target="_blank">Download PDF Version</a>
+            </div>
+
+            <div class="guide-content">
+                <div class="guide-intro">
+                    <p>This guide is for workshop facilitators, barrio leads managing spaces that host workshops, and anyone interested in ensuring the safety of workshop participants, trying to avoid potential harms that may come with higher-risk activities, and taking responsibility to address harm when it happens. <strong>Also, please see below for the Workshop Consent Angel Guide as a related resource!</strong></p>
+
+                    <p>The Elsewhere Consent Team have created this guide because each year we receive a few consent incident reports that happened at workshops that did not have sufficient safety precautions for the activities planned. This is a risk not only during workshops that are obviously sex-oriented, but <strong>also other workshops that involve touching other participants</strong>. So even if you are planning a workshop that involves non-sexual touch, this guide is for you.</p>
+
+                    <p>We have found that even when a workshop is <em>not</em> described as sexual or kinky in the What, Where, When Guide and is not intended to become sexual or kinky in nature, if the workshop is not facilitated well, it can change in its nature during the workshop and result in some participants being hurt, harassed, or touched inappropriately.</p>
+
+                    <p>This guide is not intended to establish mandatory criteria for the workshop to take place, but to provide you with a set of questions to ask to yourself before committing to facilitating or hosting any workshop, as well as sharing some good practices to put into place, and things to consider after a workshop to learn how to improve.</p>
+                </div>
+
+                <section class="guide-section">
+                    <h2>1. Will the workshop include any activities that put participants at risk of serious harm if something goes wrong, such as sensual touching, sex, kink, BDSM, or consensually violent activities?</h2>
+
+                    <p>This year, we are aiming to provide more clarity in the What, Where, When Guide regarding which events are appropriate for which ages, and to help everyone to decide what&rsquo;s best for themselves, regardless of age. To do this, we have created some new categories to choose from to designate the appropriate type of workshop:</p>
+
+                    <ul>
+                        <li>Kids Event</li>
+                        <li>All Ages (appropriate for kids and adults alike, non-sexual)</li>
+                        <li>Adults Only, Non-sexual (and non-kink related)</li>
+                        <li>Adults Only, Sexual (includes sexual or sensual touch, kink, or other high-risk activities)</li>
+                    </ul>
+
+                    <p>Workshops that are assigned to the last category include sensual or sexual touch, kink activities, BDSM, consensual violence, or anything that puts participants at higher risk of harm. This category can help make participants aware that in such a workshop, they can expect:</p>
+
+                    <ul>
+                        <li>To see and hear other participants participating in sex-related activities</li>
+                        <li>To be led by an experienced and trained facilitator who is sensitive to their safety from the start to the end of the experience</li>
+                        <li>To have support available from trained angels at any point during the experience</li>
+                    </ul>
+
+                    <p>Be aware that if you categorize the workshop in any category but the last one, and Elsewhere gets a report that any of the workshop participants were triggered or harmed because the workshop turned sensual, sexual, or kinky in nature without intervention from the facilitator, the Consent Committee may contact you after Elsewhere to discuss your ability to lead similar workshop responsibly in the future.</p>
+
+                    <p>If you have any doubt in your ability to prevent such a switch in the nature of the workshop, it&rsquo;s better to mark it in the <em>Adults only, Sexual</em> category, and organize your workshop accordingly using the tips in this guide.</p>
+                </section>
+
+                <section class="guide-section">
+                    <h2>2. Do you have the relevant level of training &amp; experience to maintain a safe environment for everyone (including the facilitator)?</h2>
+
+                    <p>Many workshops in which consent incidents took place were the very first attempt by the facilitator to lead a workshop.</p>
+
+                    <div class="highlight-box">
+                        <p><strong>Is this your first Elsewhere or Burn event, and the first workshop you have ever facilitated that involves touching others?</strong></p>
+                    </div>
+
+                    <p><strong><em>If Yes:</em></strong> We appreciate you would like to contribute to the event by offering a workshop. However <em>if this workshop involves touch</em>, this may be too early for you to organize a workshop on your own. Unfortunately we have several examples of first-time facilitators who endangered others because they didn&rsquo;t properly secure the activity they were leading.</p>
+
+                    <p>For this first year, we encourage you to attend many workshops and observe what precautions other facilitators use to create a safe experience for everyone in such an inter-cultural context. Feel free to talk to facilitators of workshops similar in nature and ask for advice and tips.</p>
+
+                    <p><strong>When you lead a workshop for the first time, please find some experienced co-facilitators</strong> who are willing to help you in establishing appropriate safety precautions for the workshop.</p>
+
+                    <p>We encourage you to ask other participants (such as people from the barrio hosting the event) to check your preparation document and help you to improve it and/or provide some support to facilitate it safely.</p>
+                </section>
+
+                <section class="guide-section">
+                    <h2>3. Workshop logistics and setup</h2>
+
+                    <p>Some of the risks can come from a setup that is not appropriate for the type of workshop.</p>
+
+                    <p><strong>Example:</strong> If the group is big and the space is large, it&rsquo;s more likely for the facilitator to miss it if someone misbehaves, especially if they are at the opposite side of the space from where the facilitator is standing. Some people may even try to take advantage of this and intentionally position themselves far away from the facilitator.</p>
+
+                    <p><strong>Example:</strong> If the ending time is not properly monitored, the time scheduled for workshop integration or after-care at the end could be shortened, and someone needing support after the experience may be pushed out without getting that support because the following workshop in the space can&rsquo;t start late.</p>
+
+                    <p>In your planning, here are some questions to consider to minimize these risks:</p>
+
+                    <ul class="checklist">
+                        <li>What type of space do I need? Consider:
+                            <ul>
+                                <li>Level of privacy</li>
+                                <li>Level of comfort</li>
+                            </ul>
+                        </li>
+                        <li>What is the maximum number of people I can host confidently?</li>
+                        <li>Do I need some help to monitor the door and close it when we reach maximum capacity?</li>
+                        <li>For how long should I reserve the space for my workshop? Consider:
+                            <ul>
+                                <li>How much time would I need <em>before</em> the workshop to prepare the space?</li>
+                                <li>How much time <em>after</em> the workshop would I need to clean the space before leaving?</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="guide-section">
+                    <h2>4. Do I have a consent introduction for my workshop?</h2>
+
+                    <p><strong><em>No matter the topic</em> (whether it involves touch or not), every workshop needs an introduction on how consent will be practiced.</strong> At a minimum, please explain the following qualities of consent:</p>
+
+                    <ul>
+                        <li>Consent is informed, free of any pressure, and specific to the immediate activity proposed</li>
+                        <li>Only proceed if the other person gives you a clear and engaged yes</li>
+                        <li>Each person has the ability to change their mind and leave the space at any time</li>
+                    </ul>
+
+                    <p>Consider including a detailed explanation of how to express a No verbally and non-verbally, and have the participants practice expressing No before the main activity begins, which can make it feel easier and more accessible for participants to express No or Stop later in the workshop.</p>
+
+                    <p>It is important to consider your position as the workshop facilitator as well as how participants will interact with each other. Participants in a workshop can feel like they have to do what the facilitator asks of them since they joined the workshop, even if they&rsquo;re not comfortable with it in the moment. <strong>It&rsquo;s important to remind participants that each exercise or activity is an invitation</strong>, and they are free to sit out of any specific activity, take a moment to themselves when needed, or leave the workshop entirely if they need to.</p>
+
+                    <p><strong>No one should be allowed to join the workshop after the consent introduction.</strong> There were several reports about participants who behaved in a problematic manner due to having missed this introduction and the agreement amongst the workshop participants about how to ensure that the experience would be safe and fun for everyone.</p>
+                </section>
+
+                <section class="guide-section">
+                    <h2>5. Does the workshop involve touching another person&rsquo;s body?</h2>
+
+                    <h3>If no touching will be involved:</h3>
+
+                    <p>The risk of any harmful consent breach is lower, but keep in mind that the Code of Conduct is not only about preventing sexual assault, but also includes discrimination, harassment, misuse of power, and unwanted photos or videos.</p>
+
+                    <p>Bystanders and the visibility of your workshop needs to be considered as well. Is the workshop content appropriate for all ages to see/hear? Does it involve content that is highly controversial or triggering? If necessary, please choose a location that provides a barrier such that families and those who do not want to participate or witness it for their own wellbeing can easily avoid it. In addition to the barrier, a sign at the entrance indicating that it is 18+/Adults Only can help make people aware of what they might find inside to make an informed decision.</p>
+
+                    <h3>If it is likely to include touching:</h3>
+
+                    <p>While consent awareness is essential for a sensual, sexual, or kinky workshop, this does not mean that it can be skipped for a non-sexual workshop that involves touch. We may not want to be hugged by someone, or touched in certain ways. Consent involving touch goes beyond sexuality, and is important for any kind of touch, and also applies in other ways, such as being very close in someone&rsquo;s personal space or being photographed. Therefore any workshop specifically focused on touch, even if it is not a sexual, sensual, kink or BDSM workshop, should involve consent awareness. Moreover, <strong>where the line is drawn of what exactly constitutes a sexual or non-sexual touch is not easy to define</strong>. While there are certain areas of touch that are generally associated with sexual touch (such as the genital area), there is also touch on areas which do not have this connotation &ndash; but depending on the intent and energy, would still be felt and/or perceived as sexual.</p>
+
+                    <p>There are numerous reasons to treat a workshop involving non-sexual touch, particularly between people that don&rsquo;t already know each other, with the same standards of consent awareness (or arguably even more, as people can fall under the trap of <em>assuming</em> that everyone is at Elsewhere to explore what we can do with our bodies and enjoy it, but end up hurting someone).</p>
+
+                    <p>Some additional tips and considerations:</p>
+
+                    <ul>
+                        <li><strong>Angels are essential (see below for the consent angel guide!).</strong> Make sure to have at least one person who can keep their eyes and ears focused only on consent during the entire workshop (commonly called <em>consent angels</em>). Depending on the size of the group, you may need more than one angel. Additionally, the angel(s) would need to have enough energy, focus and attention available for the task. If you do not have enough angels available for the size of the workshop with enough energy, focus and attention at that time, it is essential to <strong>cancel the workshop or reduce the number of participants</strong> to have a sufficient number of angels for the size of the group. We recommend arranging to have the number of angels based on the maximum capacity of your workshop so that you don&rsquo;t have to cancel the workshop or turn away participants after they arrive. You can finalize the number of angels that will stay after the doors have closed (or ticket sales have closed if this is a ticketed event outside of a Burn) and you know the total number of participants.</li>
+
+                        <li>Assess <strong>what level of experience the activity may require</strong> for your participants and <strong>include this information in the workshop description</strong>. Perhaps your workshop content could give different options for different experience levels (beginners/ experienced) instead of assuming that everyone will adapt easily. Perhaps you need to offer a separate workshop entirely, or a separate introductory session prior to the workshop for the beginners.</li>
+
+                        <li>Assess in advance how well your workshop proposal and introduction demonstrates that <strong>LGBTQIA+ people and people with mental and/or physical limitations are welcome and safe</strong> (ideally based on input from people in these groups) and adjust accordingly if necessary.</li>
+
+                        <li><strong>Forming pairs is a delicate moment</strong> in a workshop involving touch, so plan this portion of the workshop with extra attention. Imagining a type of &lsquo;bad case scenario&rsquo;, if a participant has malicious intent, this is the moment where they would ensure that they would be paired with someone they have their eyes on. It is also a time where insecurities can play up. If someone is afraid of being &lsquo;left out&rsquo;, they might accept a partner for the workshop they actually don&rsquo;t feel comfortable with, therefore potentially ignoring their gut feelings/instincts, which may result in a negative outcome. If pairs are being formed in a more randomized manner, then it is also vital that this still happens with consent in mind &ndash; nobody should be partnered with someone that they feel would not work. As pairs are formed, people have different boundaries regarding touch and need to feel safe and comfortable to express them. Forming pairs can also be triggering, because another participant might remind them of someone else, and that can influence their perception. This, in turn, may potentially make clear communication or boundaries more difficult. Inclusion also means that the needs of participants may pop up here, and ensuring that everyone feels heard, considered and witnessed in this process helps to nourish a healthy, consent-aware container for what is to follow, and the workshop as a whole. In short, this is a delicate moment where it is extra important to emphasize consent awareness, and which has a big impact on the general sense of trust, safety and belonging in the workshop. It&rsquo;s an area that you as the facilitator, and the consent angels supporting your workshop, should be extra vigilant to the vibe and body language of participants.</li>
+
+                        <li><strong>Misuse of power dynamic.</strong> When it comes to pairings in workshops, distorted power dynamics need to be carefully monitored. Some of these distorted power dynamics are more apparently visible for the facilitator. These may include factors such as age, gender or skin tone, which are mostly more visible factors &ndash; although this is not always the case, as, for example, some people may look younger or older than they are. Pairings that require particular attention, for example, are pairings where one person is generally the person that carries more privilege. The classic example would be an older (presumably heterosexual) fair-skinned cis-man, paired with a younger woman. There are other risk factors that would affect power dynamics that may not be apparent for a workshop facilitator right away. Someone&rsquo;s personal history, particularly in case someone has had experiences such as being the victim of unwanted touch, including sexual abuse. Personality traits may also come into play: some people have, because of their temperament or because of how they are raised, difficulty with the awareness of their personal boundaries, and/or expressing their boundaries. Neurodiversity is another example of a complicating factor that may result in distorted power dynamics, and may also not be easily visible right away. Identified queer identities also carry potential higher risk. Finally, <strong>we highly discourage any facilitator from getting involved themselves in the workshop activity</strong>, both because there is <u>a significant power imbalance</u> and because they would not be able to have their full attention on other participants&rsquo; safety if they are busy &ldquo;having fun&rdquo;.</li>
+
+                        <li><strong>If someone leaves the workshop space</strong> (of course anyone can leave the workshop if they do not feel comfortable at any time), make sure that either you or an angel <strong>does a quick check-in</strong> to assess whether they need some support after a difficult interaction.</li>
+
+                        <li><strong>Ensure that everyone is present and accountable, including during the closure/integration period of the workshop.</strong>
+                            <p>The closing segment of a workshop can give an opportunity to reflect back on the whole workshop. This provides the opportunity to look back on what went well, and where challenges arose. This helps to encourage learning around consent and touch, to emphasize the importance of consent, and to give space to share experiences of all kinds.</p>
+                            <p>This segment is also a time to resolve issues, so they can be addressed in a communal way, and building this into the workshop is vital. The closing helps to create a safer space, so that any lingering issues can be heard.</p>
+                            <p>The closing could consist of the following elements:</p>
+                            <ul>
+                                <li>Review of the workshop as a whole. This would include a summary of what happened, including time for reflection and sharing of experiences.</li>
+                                <li>Opportunity for feedback. Asking for feedback from the participants, to give opportunity to share what was valuable, and what could be improved. This is also important for learning about how the facilitation went, so it can be adjusted in the future, to ensure that needs of the participants are heard and met.</li>
+                                <li>Reminding participants about the importance of consent and any agreements the group has made about confidentiality of the participants&rsquo; personal experiences. It is always good to <strong>repeat that consent is an ongoing practice</strong>. If participants would like to continue engaging with another participant outside of the workshop, remind them that they would need to discuss that with the participant and get consent, because consent is specific to a particular time, place, and action; it can&rsquo;t be assumed to be ongoing or apply to other interactions.</li>
+                                <li>Reminding participants that you are available later if there is any need for a chat after they have realized that something went wrong for them in this workshop.</li>
+                                <li>Reminding participants of the existence of the <strong>consent reporting boxes and the Safer Space</strong>, which is open every day Tuesday-Sunday from 16:30 to 18:30 for a confidential chat.</li>
+                                <li>Closing moment such as a ritual, or a closing circle, or anything else that clearly marks the end of the workshop as a whole.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p>Thank you for reading this far, and taking care of each other! <strong>See below for the Workshop Consent Angel Guide!</strong></p>
+                </section>
+
+                <hr class="guide-divider">
+
+                <section class="guide-section">
+                    <h2 style="font-size: 1.75rem;">Workshop Consent Angel Guide</h2>
+                </section>
+
+                <section class="guide-section">
+                    <h2>1. The Consent Angel&rsquo;s Role</h2>
+
+                    <p>Consent is central to most of our interactions with others, but is especially critical for exploration in any sex or sex-adjacent context &ndash; whether in a play space or a workshop. Consent Angels help support both participants and facilitators in maintaining an environment that&rsquo;s as safe and positive as possible.</p>
+
+                    <p>Consent Angels are people who have experience with play spaces or workshops of a sexual nature, or at least do not feel uncomfortable observing other people exploring their juicy fantasies.</p>
+
+                    <p>As an Angel, it is your responsibility to arrive at your shift on time, and in a reasonable state of mind. Make sure you have enough energy and focus, and do not arrive intoxicated.</p>
+
+                    <p>All workshop Angels are encouraged to familiarise themselves with the official <strong>Workshop Facilitator Safety Guide</strong> (see above).</p>
+
+                    <p>As a workshop consent Angel, prepare to be sober, have energy to be present throughout the workshop, and <strong>do not participate in the workshop activities yourself no matter how tempting</strong>.</p>
+
+                    <p>The most important task of a workshop Angel is to be present, visible and to keep an eye on whether the participants are interacting in a safe and consensual manner. <strong>The workshop Angel needs to briefly introduce themselves at the start of the workshop so everyone knows who they are.</strong></p>
+                </section>
+
+                <section class="guide-section">
+                    <h2>2. At each workshop, the following consent introduction should be done before starting.</h2>
+
+                    <p>Agree with the facilitator whether they or the Angel will do the consent introduction. Agree with the facilitator that no new participants are allowed to join after the consent introduction.</p>
+
+                    <ul>
+                        <li>Consent is informed, free of any pressure, and specific to the immediate activity proposed.</li>
+                        <li>Only proceed if the other person gives you a clear and engaged YES</li>
+                        <li>Each person has the ability to change their mind and leave the space at any time. (Reversible)</li>
+                        <li>Anyone can come to the Consent Angels if anything happens or they do not feel safe.</li>
+                        <li>Remind the participants that other participants&rsquo; personal experiences are confidential &ndash; each person should only talk about their own experiences without using names or identifying information about others.</li>
+                        <li>Emphasise that if participants would like to continue engaging with each other outside of the workshop, they would need to discuss consent again. Consent can&rsquo;t be assumed to be ongoing or apply to other interactions.</li>
+                        <li>You are available later if there is any need for a chat after they have realised that something went wrong for them in this Workshop.</li>
+                        <li>Share the resources that are available in case of issues: Welfare, for emotional support, The Safer Space for a confidential chat specifically about consent violation, with a trained volunteer (open every day Tuesday &ndash; Sunday from 16:30 to 18:30) and the Consent Violation Reporting Boxes. Note that if needed, a Safer Space volunteer on call can be contacted around the clock.</li>
+                    </ul>
+                </section>
+
+                <section class="guide-section">
+                    <h2>3. During a workshop:</h2>
+
+                    <ul>
+                        <li>Don&rsquo;t stand next to the facilitator. Stand on the opposite side of the space so that you can keep an eye on what&rsquo;s happening from another angle.</li>
+                        <li>Be aware that workshop facilitators may not remember to maintain good consent practices at all times if caught up in their workshop &ndash; especially if they&rsquo;re not aware of the increased sensitivity/power imbalance of their position of authority in the workshop. This is another reason to remain visually separate from them in the eyes of participants.</li>
+                        <li>If anyone leaves the workshop, check in if they need some support after a difficult interaction.</li>
+                    </ul>
+
+                    <p><strong>Be especially on the lookout for:</strong></p>
+
+                    <ul>
+                        <li>Any encounters which do not seem consensual: Look out for freezing, silence, stiffness, shaking, tunnel-vision, tears.</li>
+                        <li>Visitors being too intoxicated to safely consent.</li>
+                        <li>Anything that looks like an unwanted touch.</li>
+                        <li>Predatory behavior.</li>
+                    </ul>
+
+                    <p>If there is a problem that you need to escalate while on or after a Sex Positive workshop, follow the actions below.</p>
+                </section>
+
+                <section class="guide-section">
+                    <h2>4. When Things Get Out of Hand</h2>
+
+                    <p>If a situation occurs which you feel like you cannot handle, whether it is conflicts, fights, consent cases, a visitor feeling mentally or physically unwell, there are several options available.</p>
+
+                    <div class="highlight-box">
+                        <p><strong>Please ensure that the impacted person consents to the steps you would like to take, BEFORE taking further action.</strong></p>
+                    </div>
+
+                    <ul>
+                        <li><strong>Malfare/No-Mads:</strong> Take the person to Malfare (open 24/7), or contact the No-Mads, the walking representatives of Malfare, they can help with interpersonal conflicts.</li>
+                        <li><strong>The Red Cross:</strong> Take the person to The Red Cross, for medical issues.</li>
+                        <li><strong>Welfare Enough:</strong> Take the person to Welfare Enough for emotional support, open 24/7.</li>
+                        <li><strong>The Safer Space:</strong> Walk the person to The Safer Space, a private cabin where anyone who feels they have experienced a violation can have a confidential conversation with a trained listener. <strong>The Safer Space is located in the space between Malfare and Welfare enough and open 16:30-18:30 Tuesday-Sunday. Volunteers can be identified from their blue hat.</strong> Outside of these hours there is always one Safer-Space qualified volunteer available, who can be reached via radio via Malfare.</li>
+                        <li><strong>Consent Reporting Box:</strong> Help someone file a Report at one of the Consent Violation Reporting Boxes: one is at Welfare Enough, the other is in a Yellow Tent in the green freecamping zone. Physical forms are available at Welfare.</li>
+                        <li><strong>Online Consent Reporting Form:</strong> Inform people of the option to fill out the Incident Report Form, which can be filled out during or after Elsewhere. They are checked every day at 15:00 during Elsewhere.</li>
+                    </ul>
+                </section>
+
+                <div class="guide-footer">
+                    <p>Last updated: 24 May 2026</p>
+                    <p><em>Congratulations, you made it to the end!</em> This is just the first version of this guide. If you have any feedback or additional tips and advice to share from your experience leading workshops that involve touch, sex, BDSM, kink, or consensual violence, we would love to include them. Please email <a href="mailto:consent@nobodies.team">consent@nobodies.team</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="shared-footer"></div>
+    <script src="footer.js"></script>
+</body>
+</html>
