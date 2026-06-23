@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitfaden f&uuml;r Eingreifen als Zeug:in | Elsewhere &mdash; by Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .guide-page { padding: 8rem 0 4rem; }
+        .guide-header { text-align: center; margin-bottom: 3rem; }
+        .guide-header h1 { margin-bottom: 1rem; color: #c2703e; }
+        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; color: var(--color-text-muted); font-size: 0.9rem; }
+        .back-link:hover { color: var(--color-accent); }
+        .back-link::before { content: '\2190'; }
+        .guide-content { max-width: 800px; margin: 0 auto; }
+        .guide-intro { font-size: 1rem; line-height: 1.7; color: var(--color-text-muted); margin-bottom: 2rem; }
+        .guide-intro p { margin-bottom: 1rem; }
+        .guide-intro strong, .guide-intro b { color: var(--color-text); }
+        .guide-section { margin-top: 3rem; }
+        .guide-section h2 { font-size: 1.5rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); color: #c2703e; }
+        .guide-section h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; margin-top: 1.5rem; color: #9b59b6; }
+        .guide-section p { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; }
+        .guide-section p strong, .guide-section li strong { color: var(--color-text); }
+        .guide-section ul, .guide-section ol { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; padding-left: 1.5rem; }
+        .guide-section li { margin-bottom: 0.5rem; }
+        .guide-section li ul { margin-top: 0.5rem; }
+        .highlight-box { background: #f9f0e6; border-left: 4px solid #c2703e; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 var(--radius) var(--radius) 0; }
+        .highlight-box p { color: var(--color-text) !important; }
+        .risk-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+        .risk-table th { background: #c2703e; color: #fff; padding: 0.75rem; text-align: left; font-weight: 600; }
+        .risk-table td { padding: 0.75rem; border-bottom: 1px solid #e0d6cc; vertical-align: top; color: var(--color-text-muted); }
+        .risk-table tr:nth-child(even) { background: var(--color-bg-alt); }
+        .risk-table td strong { color: var(--color-text); }
+        .guide-footer { margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); text-align: center; color: var(--color-text-muted); line-height: 1.7; }
+        .guide-footer a { color: var(--color-accent); font-weight: 600; }
+        @media (max-width: 768px) {
+            .guide-page { padding: 6rem 0 3rem; }
+            .risk-table { font-size: 0.85rem; }
+            .risk-table th, .risk-table td { padding: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div id="shared-header"></div>
+    <script src="header.js"></script>
+
+    <main class="guide-page">
+        <div class="container">
+            <a href="consent.html#de" class="back-link">Zur&uuml;ck zu Konsens</a>
+
+            <div class="guide-header">
+                <h1>Leitfaden f&uuml;r Eingreifen als Zeug:in</h1>
+                <p style="color: #9b59b6; font-weight: 600; font-size: 1.1rem;">Was tun, wenn du eine Konsensverletzung, problematisches Verhalten oder einfach ein ungutes Gef&uuml;hl beobachtest</p>
+            </div>
+
+            <div class="guide-content">
+                <div class="guide-intro">
+                    <p>Manchmal beobachten wir Verhalten, das nicht mit guten Prinzipien von Konsens und F&uuml;rsorge &uuml;bereinstimmt. Oft ist es schwer zu wissen, was man tun soll, und oft gibt es keine &bdquo;richtige&ldquo; Antwort. Dieser Leitfaden bietet einige Werkzeuge und Orientierung, die dir helfen k&ouml;nnen zu entscheiden, wie du mit solchen Situationen umgehst &ndash; aber guter Wille und F&uuml;rsorge werden immer das Wichtigste bleiben.</p>
+
+                    <p>Im Folgenden findest du eine Zusammenfassung der wichtigsten Werkzeuge f&uuml;r bestimmte Situationen, eine Tabelle, welche Ma&szlig;nahmen in welchen Situationen zuerst in Betracht gezogen werden sollten, gefolgt von einer tiefergehenden Diskussion &uuml;ber einige der wichtigsten Kategorien von Verhalten, die du beobachten k&ouml;nntest.</p>
+                </div>
+
+                <section class="guide-section">
+                    <h2>Leitprinzipien</h2>
+
+                    <ul>
+                        <li><strong>Geh von gutem Willen aus, reagiere auf die Wirkung.</strong> Viele Menschen, die Unbehagen verursachen, handeln nicht mit b&ouml;ser Absicht. Missverst&auml;ndnisse, schlechte Kommunikation, soziale Unbeholfenheit, ver&auml;nderte Bewusstseinszust&auml;nde und kulturelle Unterschiede k&ouml;nnen das Verhalten beeinflussen.
+                            <ul>
+                                <li>Allerdings beseitigen gute Absichten nicht die Verantwortung. Du kannst Menschen mit Neugier und Freundlichkeit begegnen und trotzdem Verhaltensweisen unterbrechen, die Risiko oder Unbehagen erzeugen.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Greife zum Wohl der Situation ein, nicht um zu bestrafen.</strong> Das Ziel einer Intervention ist es, die Sicherheit zu verbessern, die betroffenen Personen zu unterst&uuml;tzen und der Situation zu helfen, sich in eine ges&uuml;ndere Richtung zu entwickeln. Sei dir bewusst, dass Situationen schnell eskalieren k&ouml;nnen; konzentriere dich auf das, was jetzt gebraucht wird, statt darauf, wer Recht hat.</li>
+                        <li><strong>Passe deine Reaktion dem Risikoniveau an.</strong> Eine klare Konsensverletzung erfordert eine andere Reaktion als eine unbeholfene Interaktion oder ein vages Gef&uuml;hl, dass etwas nicht stimmt. Je ernster und unmittelbarer das Risiko, desto direkter sollte die Intervention sein.</li>
+                    </ul>
+                </section>
+
+                <section class="guide-section">
+                    <h2>Werkzeugkasten f&uuml;r Eingreifen: Die 5 D&rsquo;s</h2>
+
+                    <ul>
+                        <li><strong>Ablenken (Distract):</strong> Nimm die Spannung aus dem Moment, ohne ihn zu benennen. Frag die Person, die sich unwohl zu f&uuml;hlen scheint, nach der Uhrzeit, dem Weg zum Wasserpunkt oder ob sie deine:n Freund:in gesehen hat. Lass etwas fallen. Beginne ein unzusammenh&auml;ngendes Gespr&auml;ch. Du beschuldigst niemanden &ndash; du f&uuml;gst einfach eine zweite Person zur Situation hinzu, was oft schon ausreicht.</li>
+                        <li><strong>Verz&ouml;gerte Reaktion (Delayed):</strong> Wenn der Moment vorbei ist oder du dir nicht sicher genug warst, um im Moment zu handeln, erkundige dich danach. &bdquo;Hey, alles gut? Willst du dich kurz hinsetzen?&ldquo; Bei jemandem zu bleiben ist bereits Hilfe.</li>
+                        <li><strong>Direkte Reaktion (Direct):</strong> Benenne das Verhalten klar und ruhig, oder biete der Person einen Ausweg: &bdquo;Alles okay? Komm, lass uns Wasser holen.&ldquo; Nutze dies, wenn du dich dabei sicher f&uuml;hlst. Es ist die sichtbarste Option und nicht immer die richtige.</li>
+                        <li><strong>Delegieren (Delegate):</strong> Finde jemanden, dessen Aufgabe das ist. Winke eine:n Nomad herbei, oder geh zum Welfare oder zu Malfare. Sei deutlich: Sag, was du gesehen hast und was du brauchst. &bdquo;Die Person im gr&uuml;nen Mantel l&auml;sst die andere nicht gehen. K&ouml;nnt ihr mir helfen, sie da rauszuholen?&ldquo;</li>
+                        <li><strong>Dokumentieren (Document):</strong> Nur wenn bereits jemand der betroffenen Person hilft. Halte sicheren Abstand, notiere Uhrzeit und Ort, und frag danach die betroffene Person, was sie damit machen m&ouml;chte. Die Aufzeichnung geh&ouml;rt ihr, nicht dir.</li>
+                    </ul>
+                </section>
+
+                <section class="guide-section">
+                    <h2>Werkzeuge dem Risikoniveau anpassen</h2>
+
+                    <table class="risk-table">
+                        <thead>
+                            <tr>
+                                <th>Stufe</th>
+                                <th>Was du sehen k&ouml;nntest</th>
+                                <th>Passende Werkzeuge</th>
+                                <th>Wer noch helfen kann</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Komisches Gef&uuml;hl</strong></td>
+                                <td>Jemand wirkt in die Enge getrieben oder unwohl. Nichts Offensichtliches ist passiert.</td>
+                                <td>Ablenken, Verz&ouml;gert</td>
+                                <td>Ein:e Nomad in der N&auml;he</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Druck</strong></td>
+                                <td>Anhaltende unerw&uuml;nschte Aufmerksamkeit. Ein Nein wird verhandelt.</td>
+                                <td>Ablenken, Direkt, Delegieren</td>
+                                <td>Nomad, Welfare, Safer Space</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Verletzlichkeit</strong></td>
+                                <td>Zu berauscht um zuzustimmen, allein oder in Not.</td>
+                                <td>Bei der Person bleiben und Delegieren</td>
+                                <td>Welfare, Malfare, Rotes Kreuz, Safer Space</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Klarer Schaden</strong></td>
+                                <td>Offene Bel&auml;stigung oder laufende Konsensverletzung.</td>
+                                <td>Direkt, Delegieren, Dokumentieren</td>
+                                <td>Nomad, Malfare</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Gefahr</strong></td>
+                                <td>Risiko f&uuml;r die k&ouml;rperliche Unversehrtheit. Medizinischer Notfall.</td>
+                                <td>Sofort delegieren!</td>
+                                <td>Nomad, Malfare (wir haben einen Krankenwagen, Sanit&auml;ter:innen und Sicherheitspersonal vor Ort; Hilfe ist wahrscheinlich schneller und besser koordiniert &uuml;ber Malfare)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="guide-section">
+                    <h2>Eingreifen in der Praxis</h2>
+
+                    <h3>Komisches Gef&uuml;hl (siehe unten f&uuml;r mehr dazu!)</h3>
+                    <p>Wenn jemand deutlich unwohl wirkt, brauchst du keine Beweise. <strong>Ablenken:</strong> Geh hin&uuml;ber und sprich mit der Person, die sich unwohl zu f&uuml;hlen scheint. Frag etwas Allt&auml;gliches, gib ihr einen Moment und einen Ausweg. Oder schaffe eine kleine Ablenkung. Du stellst einfach sicher, dass sie nicht allein darin ist. <strong>Verz&ouml;gert:</strong> Erkundige dich sp&auml;ter, wie es ihr geht.</p>
+
+                    <h3>Jemand wird unter Druck gesetzt</h3>
+                    <p>Die Aufmerksamkeit h&ouml;rt nicht auf, das NEIN wird verhandelt, der K&ouml;rper sagt nein, auch wenn die Worte unsicher sind. Wie die Konsens-Seite sagt: Schweigen, Passivit&auml;t oder eine Unterwerfungsreaktion ist ein Nein. Brich den Moment mit <strong>Ablenken</strong>, winke eine:n Nomad herbei zum <strong>Delegieren</strong>, oder versuche eine sanfte <strong>direkte Reaktion</strong>, die auf F&uuml;rsorge ausgerichtet ist:</p>
+                    <p>&bdquo;Willst du mitkommen und Wasser holen?&ldquo; Halte deinen Fokus auf der Person, die unter Druck steht.</p>
+
+                    <h3>Jemand, der nicht f&uuml;r sich selbst sorgen kann</h3>
+                    <p>Eine Person, die bewusstlos, stark berauscht, allein oder in tiefer emotionaler Not ist, kann nicht zustimmen und ist m&ouml;glicherweise nicht in der Lage, f&uuml;r sich selbst zu sorgen. Lass sie nicht allein. Bleib bei ihr oder versuche, sie zum Welfare zu bringen. Oder du kannst <strong>delegieren:</strong> Bitte jemanden, Hilfe zu holen, oder winke eine:n Nomad herbei. Wenn sie in diesem Zustand ins Visier genommen wird, behandle es als klaren Schaden und kontaktiere Malfare.</p>
+
+                    <div class="highlight-box">
+                        <p><strong>Bei jemandem zu bleiben, bis Hilfe kommt, ist eines der n&uuml;tzlichsten Dinge, die man hier tun kann.</strong></p>
+                    </div>
+
+                    <h3>Klare Bel&auml;stigung oder schwere Konsensverletzung im Gange</h3>
+                    <p>Wenn es nicht mehr zweideutig ist, ist schnelles Eingreifen wichtig.</p>
+                    <p><strong>Direkte Reaktion:</strong> Wenn m&ouml;glich, hole Hilfe, statt es allein zu handhaben. Wenn du dich sicher f&uuml;hlst (allein oder mit Unterst&uuml;tzung anderer), sei direkt: Benenne das Verhalten, sag, dass es nicht in Ordnung ist, und bleib ruhig.</p>
+                    <p><strong>Delegieren:</strong> Normalerweise die sicherste Option. Finde eine:n Nomad oder geh zu Malfare, rund um die Uhr ge&ouml;ffnet f&uuml;r Sicherheit und zwischenmenschliche Konflikte.</p>
+                    <p><strong>Dokumentieren:</strong> Nur wenn bereits jemand der Person hilft, und denk daran, dass die Aufzeichnung der betroffenen Person geh&ouml;rt.</p>
+
+                    <h3>Gefahr oder medizinischer Notfall</h3>
+                    <p>Wenn die k&ouml;rperliche Unversehrtheit einer Person gef&auml;hrdet ist, geht es nicht mehr um subtile Werkzeuge. Kontaktiere sofort Malfare &uuml;ber eine:n Nomad (wir haben einen Krankenwagen, Sanit&auml;ter:innen und Sicherheitspersonal vor Ort; die Nomads erreichen das gesamte Team einschlie&szlig;lich der Standortleitung per Funk und k&ouml;nnen den genauen Standort durchgeben und sich mit dem Rettungsdienst koordinieren, falls n&ouml;tig). Bring dich und andere in Sicherheit, falls zutreffend. Es wird nicht erwartet, dass du physisch eingreifst oder dich in Gefahr bringst. Spiel nicht den Helden und werde nicht Teil des Problems.</p>
+                </section>
+
+                <section class="guide-section">
+                    <h2>Ein Hinweis zu &bdquo;komischen Vibes&ldquo; oder &bdquo;unheimlichem Gef&uuml;hl&ldquo;, wenn es kein konkret negatives Verhalten gibt</h2>
+
+                    <p>Sei dir deiner eigenen Situation und Vorurteile bewusst. Substanzkonsum und ver&auml;nderte Bewusstseinszust&auml;nde k&ouml;nnen es leichter machen, Dinge negativ zu interpretieren, die es nicht sind. Umgekehrt k&ouml;nnen andere in diesem Zustand sich anders als &bdquo;normal&ldquo; verhalten, aber ohne b&ouml;se Absicht.</p>
+
+                    <p>Schau dir die anderen um dich herum an &ndash; besonders Menschen, von denen du denkst, dass sie vom Verhalten oder der Ausstrahlung der Person betroffen sein k&ouml;nnten. Wie reagieren sie? Wenn sonst niemand es zu bemerken oder negativ darauf zu reagieren scheint, ist es vielleicht am besten, die Situation neu zu bewerten. Wenn du bequem im Raum bleiben kannst, tu es, aber bewege dich vielleicht etwas und &auml;ndere deinen Fokus. Wenn nicht, entscheide, ob du den Raum verlassen oder die Person direkt ansprechen solltest &ndash; wobei du dein eigenes Unbehagen &uuml;bernimmst, statt es auf andere zu projizieren. Denk daran: In dieser Kategorie gibt es kein aktiv negatives Verhalten, daher ist es generell keine gute Idee, b&ouml;se Absicht anzunehmen.</p>
+
+                    <p>Wenn andere negativ auf die Ausstrahlung der Person zu reagieren scheinen &ndash; zum Beispiel Leute, die in ihrer N&auml;he tanzen und konsequent diesen Bereich verlassen, oder die sich unwohl f&uuml;hlen, wenn sie in der N&auml;he sind &ndash; entscheide, ob du dich wohl dabei f&uuml;hlst, die Person anzusprechen. Auch hier: Versuche, keine b&ouml;se Absicht anzunehmen. H&auml;ufig bleiben Menschen in ihren Gedanken stecken und fangen an zu spiralen, besonders in der intensiven Umgebung eines Burns, und erst recht wenn Substanzen im Spiel sind. Manchmal reicht eine freundliche Interaktion, jemand der fragt wie es geht, um sie aus diesem Zustand herauszuholen.</p>
+
+                    <p>Beispiele, wie du in solchen Situationen auf Menschen zugehen k&ouml;nntest, wenn du das Gef&uuml;hl hast, dass es das Richtige ist:</p>
+
+                    <ul>
+                        <li>Beginne ein leichtes, aber nicht inhaltsleeres Gespr&auml;ch: Sag etwas Nettes &uuml;ber den DJ und frag, was sie von der Musik halten. Frag, ob sie eine positive Erfahrung teilen k&ouml;nnen, die sie auf dem Burn gemacht haben, oder ob es Workshops gibt, auf die sie sich freuen.</li>
+                        <li>Frag, wie es ihnen geht. Sei ehrlich und sag, dass du eine komische Stimmung sp&uuml;rst und nach dem Rechten sehen willst, oder frag einfach, wenn du aufrichtig an der Antwort interessiert sein kannst.</li>
+                        <li>Biete Verbindung, Gespr&auml;ch, Wasser, Essen, einen Spaziergang oder Gesellschaft an &ndash; manchmal reicht ein kurzer Moment der Verbindung, um jemanden aus einem schlechten Kopfraum herauszuholen.</li>
+                    </ul>
+
+                    <p>Wenn deine anf&auml;ngliche Interaktion ausgereicht zu haben scheint, um die Stimmung zu ver&auml;ndern &ndash; gut gemacht, du hast einem Mitmenschen in Not geholfen! Wenn nicht, &uuml;berlege, ob du deinen Standort wechseln solltest f&uuml;r deinen eigenen Seelenfrieden, oder ob du jemanden wie eine:n Barrio-Konsens-/Welfare-Verantwortliche:n, eine:n Consent Angel oder eine:n Nomad bitten solltest, aufmerksam zu sein.</p>
+                </section>
+
+                <div class="guide-footer">
+                    <p><em>Danke, dass du diesen Leitfaden gelesen hast und dir die Sicherheit und das Wohlbefinden aller bei Elsewhere am Herzen liegt.</em></p>
+                    <p>Wenn du Feedback oder Vorschl&auml;ge hast, schreib bitte an <a href="mailto:consent@nobodies.team">consent@nobodies.team</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="shared-footer"></div>
+    <script src="footer.js"></script>
+</body>
+</html>

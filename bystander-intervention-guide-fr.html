@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide d&rsquo;Intervention des T&eacute;moins | Elsewhere &mdash; by Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .guide-page { padding: 8rem 0 4rem; }
+        .guide-header { text-align: center; margin-bottom: 3rem; }
+        .guide-header h1 { margin-bottom: 1rem; color: #c2703e; }
+        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; color: var(--color-text-muted); font-size: 0.9rem; }
+        .back-link:hover { color: var(--color-accent); }
+        .back-link::before { content: '\2190'; }
+        .guide-content { max-width: 800px; margin: 0 auto; }
+        .guide-intro { font-size: 1rem; line-height: 1.7; color: var(--color-text-muted); margin-bottom: 2rem; }
+        .guide-intro p { margin-bottom: 1rem; }
+        .guide-intro strong, .guide-intro b { color: var(--color-text); }
+        .guide-section { margin-top: 3rem; }
+        .guide-section h2 { font-size: 1.5rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); color: #c2703e; }
+        .guide-section h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; margin-top: 1.5rem; color: #9b59b6; }
+        .guide-section p { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; }
+        .guide-section p strong, .guide-section li strong { color: var(--color-text); }
+        .guide-section ul, .guide-section ol { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; padding-left: 1.5rem; }
+        .guide-section li { margin-bottom: 0.5rem; }
+        .guide-section li ul { margin-top: 0.5rem; }
+        .highlight-box { background: #f9f0e6; border-left: 4px solid #c2703e; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 var(--radius) var(--radius) 0; }
+        .highlight-box p { color: var(--color-text) !important; }
+        .risk-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+        .risk-table th { background: #c2703e; color: #fff; padding: 0.75rem; text-align: left; font-weight: 600; }
+        .risk-table td { padding: 0.75rem; border-bottom: 1px solid #e0d6cc; vertical-align: top; color: var(--color-text-muted); }
+        .risk-table tr:nth-child(even) { background: var(--color-bg-alt); }
+        .risk-table td strong { color: var(--color-text); }
+        .guide-footer { margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); text-align: center; color: var(--color-text-muted); line-height: 1.7; }
+        .guide-footer a { color: var(--color-accent); font-weight: 600; }
+        @media (max-width: 768px) {
+            .guide-page { padding: 6rem 0 3rem; }
+            .risk-table { font-size: 0.85rem; }
+            .risk-table th, .risk-table td { padding: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div id="shared-header"></div>
+    <script src="header.js"></script>
+
+    <main class="guide-page">
+        <div class="container">
+            <a href="consent.html#fr" class="back-link">Retour au Consentement</a>
+
+            <div class="guide-header">
+                <h1>Guide d&rsquo;Intervention des T&eacute;moins</h1>
+                <p style="color: #9b59b6; font-weight: 600; font-size: 1.1rem;">Que faire si vous &ecirc;tes t&eacute;moin d&rsquo;une violation du consentement, d&rsquo;un comportement probl&eacute;matique, ou si quelque chose vous semble anormal</p>
+            </div>
+
+            <div class="guide-content">
+                <div class="guide-intro">
+                    <p>Il arrive que l&rsquo;on observe des comportements qui ne correspondent pas aux bons principes de consentement et de bienveillance. Il est souvent difficile de savoir quoi faire, et il n&rsquo;y a souvent pas de &laquo;&nbsp;bonne&nbsp;&raquo; r&eacute;ponse. Ce guide propose des outils et des conseils pour vous aider &agrave; g&eacute;rer ces situations, mais la bonne volont&eacute; et la bienveillance resteront toujours le plus important.</p>
+
+                    <p>Vous trouverez ci-dessous un r&eacute;sum&eacute; des principaux outils utilisables dans certaines situations, un tableau indiquant quelles actions envisager en priorit&eacute; selon le type de situation, puis une discussion plus approfondie sur les principales cat&eacute;gories de comportements dont vous pourriez &ecirc;tre t&eacute;moin.</p>
+                </div>
+
+                <section class="guide-section">
+                    <h2>Principes Directeurs</h2>
+
+                    <ul>
+                        <li><strong>Pr&eacute;sumez la bonne volont&eacute;, r&eacute;agissez &agrave; l&rsquo;impact.</strong> Beaucoup de personnes qui cr&eacute;ent de l&rsquo;inconfort n&rsquo;agissent pas avec une intention malveillante. Les malentendus, la mauvaise communication, la maladresse sociale, les &eacute;tats modifi&eacute;s de conscience et les diff&eacute;rences culturelles peuvent affecter le comportement.
+                            <ul>
+                                <li>Cependant, les bonnes intentions n&rsquo;effacent pas la responsabilit&eacute;. Vous pouvez aborder les gens avec curiosit&eacute; et bienveillance tout en interrompant les comportements qui cr&eacute;ent un risque ou de l&rsquo;inconfort.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Intervenez pour am&eacute;liorer la situation, pas pour punir.</strong> L&rsquo;objectif de l&rsquo;intervention est d&rsquo;am&eacute;liorer la s&eacute;curit&eacute;, de soutenir les personnes affect&eacute;es et d&rsquo;aider la situation &agrave; &eacute;voluer dans une direction plus saine. Soyez conscient&middot;e que les situations peuvent escalader rapidement&nbsp;; concentrez-vous sur ce qui est n&eacute;cessaire maintenant plut&ocirc;t que sur d&eacute;terminer qui a raison ou tort.</li>
+                        <li><strong>Adaptez votre r&eacute;ponse au niveau de risque.</strong> Une violation claire du consentement n&eacute;cessite une r&eacute;ponse diff&eacute;rente d&rsquo;une interaction maladroite ou d&rsquo;un vague sentiment que quelque chose ne va pas. Plus le risque est grave et imm&eacute;diat, plus l&rsquo;intervention doit &ecirc;tre directe.</li>
+                    </ul>
+                </section>
+
+                <section class="guide-section">
+                    <h2>Bo&icirc;te &agrave; Outils d&rsquo;Intervention&nbsp;: Les 5 D</h2>
+
+                    <ul>
+                        <li><strong>Distraire&nbsp;:</strong> D&eacute;samorcez le moment sans le nommer. Demandez l&rsquo;heure &agrave; la personne qui semble mal &agrave; l&rsquo;aise, le chemin vers le point d&rsquo;eau, ou si elle a vu votre ami&middot;e. Faites tomber quelque chose. Lancez une conversation sans rapport. Vous n&rsquo;accusez personne&nbsp;; vous ajoutez simplement une deuxi&egrave;me personne &agrave; la situation, ce qui suffit souvent.</li>
+                        <li><strong>R&eacute;ponse diff&eacute;r&eacute;e&nbsp;:</strong> Si le moment est pass&eacute;, ou si vous n&rsquo;&eacute;tiez pas assez s&ucirc;r&middot;e pour agir sur le coup, prenez des nouvelles apr&egrave;s. &laquo;&nbsp;H&eacute;, &ccedil;a va&nbsp;? Tu veux t&rsquo;asseoir un moment&nbsp;?&nbsp;&raquo; Rester avec quelqu&rsquo;un, c&rsquo;est d&eacute;j&agrave; de l&rsquo;aide.</li>
+                        <li><strong>R&eacute;ponse directe&nbsp;:</strong> Nommez le comportement simplement et calmement, ou offrez une porte de sortie&nbsp;: &laquo;&nbsp;Tout va bien&nbsp;? Viens prendre de l&rsquo;eau avec moi.&nbsp;&raquo; Utilisez cette approche quand vous vous sentez en s&eacute;curit&eacute;. C&rsquo;est l&rsquo;option la plus visible et pas toujours la plus adapt&eacute;e.</li>
+                        <li><strong>D&eacute;l&eacute;guer&nbsp;:</strong> Trouvez quelqu&rsquo;un dont c&rsquo;est le r&ocirc;le. Faites signe &agrave; un&middot;e Nomad, ou allez au Welfare ou &agrave; Malfare. Soyez clair&middot;e&nbsp;: dites ce que vous avez vu et ce dont vous avez besoin. &laquo;&nbsp;La personne en manteau vert ne laisse pas l&rsquo;autre partir. Pouvez-vous m&rsquo;aider &agrave; l&rsquo;en sortir&nbsp;?&nbsp;&raquo;</li>
+                        <li><strong>Documenter&nbsp;:</strong> Uniquement si quelqu&rsquo;un aide d&eacute;j&agrave; la personne en difficult&eacute;. Gardez une distance de s&eacute;curit&eacute;, notez l&rsquo;heure et le lieu, puis demandez &agrave; la personne concern&eacute;e ce qu&rsquo;elle souhaite en faire. Le document lui appartient, pas &agrave; vous.</li>
+                    </ul>
+                </section>
+
+                <section class="guide-section">
+                    <h2>Adapter les Outils au Niveau de Risque</h2>
+
+                    <table class="risk-table">
+                        <thead>
+                            <tr>
+                                <th>Niveau</th>
+                                <th>Ce que vous pourriez observer</th>
+                                <th>Outils adapt&eacute;s</th>
+                                <th>Qui d&rsquo;autre peut aider</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Mauvaise ambiance</strong></td>
+                                <td>Quelqu&rsquo;un semble coinc&eacute;&middot;e ou mal &agrave; l&rsquo;aise. Rien d&rsquo;explicite ne s&rsquo;est produit.</td>
+                                <td>Distraire, Diff&eacute;r&eacute;</td>
+                                <td>Un&middot;e Nomad &agrave; proximit&eacute;</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pression</strong></td>
+                                <td>Attention insistante non d&eacute;sir&eacute;e. Un non est n&eacute;goci&eacute;.</td>
+                                <td>Distraire, Direct, D&eacute;l&eacute;guer</td>
+                                <td>Nomad, Welfare, Safer Space</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Vuln&eacute;rabilit&eacute;</strong></td>
+                                <td>Trop intoxiqu&eacute;&middot;e pour consentir, seul&middot;e, ou en d&eacute;tresse.</td>
+                                <td>Rester avec la personne et D&eacute;l&eacute;guer</td>
+                                <td>Welfare, Malfare, Croix-Rouge, Safer Space</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pr&eacute;judice clair</strong></td>
+                                <td>Harc&egrave;lement ouvert ou violation du consentement en cours.</td>
+                                <td>Direct, D&eacute;l&eacute;guer, Documenter</td>
+                                <td>Nomad, Malfare</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Danger</strong></td>
+                                <td>Risque pour l&rsquo;int&eacute;grit&eacute; physique. Urgence m&eacute;dicale.</td>
+                                <td>D&eacute;l&eacute;guer imm&eacute;diatement&nbsp;!</td>
+                                <td>Nomad, Malfare (nous avons une ambulance, des m&eacute;decins et la s&eacute;curit&eacute; sur place&nbsp;; l&rsquo;aide sera probablement plus rapide et mieux coordonn&eacute;e en contactant Malfare)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="guide-section">
+                    <h2>L&rsquo;Intervention en Pratique</h2>
+
+                    <h3>Mauvaise ambiance (voir ci-dessous pour plus de d&eacute;tails&nbsp;!)</h3>
+                    <p>Si quelqu&rsquo;un semble clairement mal &agrave; l&rsquo;aise, vous n&rsquo;avez pas besoin de preuves. <strong>Distraire&nbsp;:</strong> Approchez-vous et parlez &agrave; la personne qui semble mal &agrave; l&rsquo;aise. Posez une question ordinaire, offrez-lui un moment et une sortie. Ou cr&eacute;ez une petite distraction. Vous faites simplement en sorte qu&rsquo;elle ne soit pas seule. <strong>Diff&eacute;r&eacute;&nbsp;:</strong> Prenez des nouvelles plus tard pour voir comment elle se sent.</p>
+
+                    <h3>Quelqu&rsquo;un subit de la pression</h3>
+                    <p>L&rsquo;attention ne s&rsquo;arr&ecirc;te pas, le NON est n&eacute;goci&eacute;, le corps dit non m&ecirc;me si les mots sont incertains. Comme le dit la page sur le consentement, le silence, la passivit&eacute; ou une r&eacute;action de soumission est un non. Brisez le moment avec <strong>Distraire</strong>, faites signe &agrave; un&middot;e Nomad pour <strong>D&eacute;l&eacute;guer</strong>, ou essayez une <strong>R&eacute;ponse directe</strong> douce orient&eacute;e vers le soin&nbsp;:</p>
+                    <p>&laquo;&nbsp;Tu veux venir prendre de l&rsquo;eau avec moi&nbsp;?&nbsp;&raquo; Gardez votre attention sur la personne qui subit la pression.</p>
+
+                    <h3>Quelqu&rsquo;un qui ne peut pas prendre soin de lui-m&ecirc;me/elle-m&ecirc;me</h3>
+                    <p>Une personne inconsciente, tr&egrave;s intoxiqu&eacute;e, seule ou en d&eacute;tresse &eacute;motionnelle profonde ne peut pas consentir et peut ne pas &ecirc;tre en mesure de prendre soin d&rsquo;elle-m&ecirc;me. Ne la laissez pas. Restez avec elle ou essayez de l&rsquo;accompagner au Welfare selon la situation. Ou bien <strong>d&eacute;l&eacute;guez&nbsp;:</strong> demandez &agrave; quelqu&rsquo;un d&rsquo;aller chercher de l&rsquo;aide, ou faites signe &agrave; un&middot;e Nomad. Si elle est cibl&eacute;e dans cet &eacute;tat, traitez la situation comme un pr&eacute;judice clair et contactez Malfare.</p>
+
+                    <div class="highlight-box">
+                        <p><strong>Rester avec quelqu&rsquo;un jusqu&rsquo;&agrave; l&rsquo;arriv&eacute;e des secours est l&rsquo;une des choses les plus utiles que l&rsquo;on puisse faire ici.</strong></p>
+                    </div>
+
+                    <h3>Harc&egrave;lement clair ou violation grave du consentement en cours</h3>
+                    <p>Quand ce n&rsquo;est plus ambigu, une intervention rapide est importante.</p>
+                    <p><strong>R&eacute;ponse directe&nbsp;:</strong> Si possible, cherchez de l&rsquo;aide plut&ocirc;t que de g&eacute;rer seul&middot;e. Si vous vous sentez en s&eacute;curit&eacute; (seul&middot;e ou avec d&rsquo;autres pour vous soutenir), soyez direct&middot;e&nbsp;: nommez le comportement, dites que ce n&rsquo;est pas acceptable, et restez calme.</p>
+                    <p><strong>D&eacute;l&eacute;guer&nbsp;:</strong> G&eacute;n&eacute;ralement l&rsquo;option la plus s&ucirc;re. Trouvez un&middot;e Nomad ou allez &agrave; Malfare, ouvert 24h/24 pour la s&eacute;curit&eacute; et les conflits interpersonnels.</p>
+                    <p><strong>Documenter&nbsp;:</strong> Uniquement si quelqu&rsquo;un aide d&eacute;j&agrave; la personne, et rappelez-vous que le document appartient &agrave; la personne concern&eacute;e.</p>
+
+                    <h3>Danger ou urgence m&eacute;dicale</h3>
+                    <p>S&rsquo;il y a un risque pour l&rsquo;int&eacute;grit&eacute; physique de quelqu&rsquo;un, il ne s&rsquo;agit plus d&rsquo;outils subtils. Contactez Malfare imm&eacute;diatement en demandant un&middot;e Nomad (nous avons une ambulance, des m&eacute;decins et la s&eacute;curit&eacute; sur place&nbsp;; les Nomads joindront toute l&rsquo;&eacute;quipe, y compris les responsables de site, par radio et pourront donner la localisation exacte en coordination avec les services d&rsquo;urgence si n&eacute;cessaire). &Eacute;loignez-vous et &eacute;loignez les autres du danger si n&eacute;cessaire. On n&rsquo;attend pas de vous que vous interveniez physiquement ou que vous vous mettiez en danger. Ne jouez pas les h&eacute;ros et ne faites pas partie du probl&egrave;me.</p>
+                </section>
+
+                <section class="guide-section">
+                    <h2>Une Note sur les &laquo;&nbsp;Mauvaises Vibrations&nbsp;&raquo; ou le &laquo;&nbsp;Sentiment de Mal-&ecirc;tre&nbsp;&raquo; Sans Comportement Concr&egrave;tement N&eacute;gatif</h2>
+
+                    <p>Soyez conscient&middot;e de votre propre situation et de vos biais. La consommation de substances et les &eacute;tats de conscience modifi&eacute;s peuvent faciliter l&rsquo;interpr&eacute;tation n&eacute;gative de choses qui ne le sont pas. Inversement, d&rsquo;autres personnes dans cet &eacute;tat peuvent se comporter diff&eacute;remment de la &laquo;&nbsp;normale&nbsp;&raquo;, mais sans mauvaise intention.</p>
+
+                    <p>Observez les autres autour de vous &ndash; notamment les personnes que vous pensez potentiellement affect&eacute;es par le comportement ou l&rsquo;ambiance de la personne. Comment r&eacute;agissent-elles&nbsp;? Si personne d&rsquo;autre ne semble remarquer ou r&eacute;agir n&eacute;gativement, il est peut-&ecirc;tre pr&eacute;f&eacute;rable de r&eacute;&eacute;valuer. Si vous pouvez rester confortablement dans l&rsquo;espace, faites-le, mais peut-&ecirc;tre bougez un peu et changez votre focus. Si vous ne pouvez pas, d&eacute;cidez si vous devez quitter l&rsquo;espace ou aborder la personne directement &ndash; en assumant votre propre sentiment d&rsquo;inconfort plut&ocirc;t que de le projeter sur les autres. Rappelez-vous que dans cette cat&eacute;gorie, il n&rsquo;y a pas de comportement activement n&eacute;gatif&nbsp;; il est donc g&eacute;n&eacute;ralement d&eacute;conseill&eacute; de pr&eacute;sumer une mauvaise intention.</p>
+
+                    <p>Si d&rsquo;autres semblent r&eacute;agir n&eacute;gativement &agrave; l&rsquo;ambiance de la personne &ndash; par exemple des gens qui dansent pr&egrave;s d&rsquo;elle quittent syst&eacute;matiquement cet espace, ou semblent mal &agrave; l&rsquo;aise &agrave; proximit&eacute; &ndash; d&eacute;cidez si vous vous sentez &agrave; l&rsquo;aise pour approcher la personne. Encore une fois, essayez de ne pas pr&eacute;sumer de mauvaises intentions. Souvent, les gens se retrouvent coinc&eacute;s dans leurs pens&eacute;es et commencent &agrave; spiraler, surtout dans l&rsquo;environnement intense d&rsquo;un burn, et encore plus si des substances sont impliqu&eacute;es. Parfois, une simple interaction amicale, quelqu&rsquo;un qui prend des nouvelles, suffit &agrave; les sortir de cet &eacute;tat.</p>
+
+                    <p>Exemples de fa&ccedil;ons d&rsquo;aborder les gens dans ces situations si vous estimez que c&rsquo;est la bonne chose &agrave; faire&nbsp;:</p>
+
+                    <ul>
+                        <li>Engagez une conversation l&eacute;g&egrave;re mais pas creuse&nbsp;: dites quelque chose de sympa sur le DJ et demandez ce qu&rsquo;ils pensent de la musique. Demandez s&rsquo;ils peuvent partager une exp&eacute;rience positive qu&rsquo;ils ont v&eacute;cue au burn, ou s&rsquo;il y a des ateliers qu&rsquo;ils attendent avec impatience.</li>
+                        <li>Demandez-leur comment ils vont. Soyez honn&ecirc;te et dites que vous ressentez une ambiance bizarre et voulez prendre des nouvelles, ou demandez simplement, si vous pouvez &ecirc;tre sinc&egrave;rement int&eacute;ress&eacute;&middot;e par la r&eacute;ponse.</li>
+                        <li>Offrez de la connexion, de la conversation, de l&rsquo;eau, de la nourriture, une promenade ou de la compagnie &ndash; parfois un bref moment de connexion suffit &agrave; sortir quelqu&rsquo;un d&rsquo;un mauvais &eacute;tat d&rsquo;esprit.</li>
+                    </ul>
+
+                    <p>Si votre interaction initiale semble avoir suffi &agrave; changer l&rsquo;ambiance, bravo d&rsquo;avoir aid&eacute; un&middot;e semblable dans le besoin&nbsp;! Sinon, r&eacute;fl&eacute;chissez &agrave; savoir si vous devez changer d&rsquo;endroit pour votre tranquillit&eacute; d&rsquo;esprit, ou si vous devriez demander &agrave; quelqu&rsquo;un comme un&middot;e responsable consentement/bien-&ecirc;tre de barrio, un&middot;e consent angel ou un&middot;e Nomad d&rsquo;&ecirc;tre vigilant&middot;e.</p>
+                </section>
+
+                <div class="guide-footer">
+                    <p><em>Merci d&rsquo;avoir lu ce guide et de vous soucier de la s&eacute;curit&eacute; et du bien-&ecirc;tre de toutes et tous &agrave; Elsewhere.</em></p>
+                    <p>Si vous avez des retours ou des suggestions, veuillez &eacute;crire &agrave; <a href="mailto:consent@nobodies.team">consent@nobodies.team</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="shared-footer"></div>
+    <script src="footer.js"></script>
+</body>
+</html>

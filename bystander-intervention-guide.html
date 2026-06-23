@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bystander Intervention Guide | Elsewhere &mdash; by Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .guide-page { padding: 8rem 0 4rem; }
+        .guide-header { text-align: center; margin-bottom: 3rem; }
+        .guide-header h1 { margin-bottom: 1rem; color: #c2703e; }
+        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; color: var(--color-text-muted); font-size: 0.9rem; }
+        .back-link:hover { color: var(--color-accent); }
+        .back-link::before { content: '\2190'; }
+        .guide-content { max-width: 800px; margin: 0 auto; }
+        .guide-intro { font-size: 1rem; line-height: 1.7; color: var(--color-text-muted); margin-bottom: 2rem; }
+        .guide-intro p { margin-bottom: 1rem; }
+        .guide-intro strong, .guide-intro b { color: var(--color-text); }
+        .guide-section { margin-top: 3rem; }
+        .guide-section h2 { font-size: 1.5rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); color: #c2703e; }
+        .guide-section h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; margin-top: 1.5rem; color: #9b59b6; }
+        .guide-section p { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; }
+        .guide-section p strong, .guide-section li strong { color: var(--color-text); }
+        .guide-section ul, .guide-section ol { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; padding-left: 1.5rem; }
+        .guide-section li { margin-bottom: 0.5rem; }
+        .guide-section li ul { margin-top: 0.5rem; }
+        .highlight-box { background: #f9f0e6; border-left: 4px solid #c2703e; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 var(--radius) var(--radius) 0; }
+        .highlight-box p { color: var(--color-text) !important; }
+        .risk-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+        .risk-table th { background: #c2703e; color: #fff; padding: 0.75rem; text-align: left; font-weight: 600; }
+        .risk-table td { padding: 0.75rem; border-bottom: 1px solid #e0d6cc; vertical-align: top; color: var(--color-text-muted); }
+        .risk-table tr:nth-child(even) { background: var(--color-bg-alt); }
+        .risk-table td strong { color: var(--color-text); }
+        .guide-footer { margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); text-align: center; color: var(--color-text-muted); line-height: 1.7; }
+        .guide-footer a { color: var(--color-accent); font-weight: 600; }
+        .pdf-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1rem; padding: 0.75rem 1.5rem; background: var(--color-accent); color: #fff; border-radius: var(--radius); font-weight: 600; font-size: 0.95rem; transition: background 0.2s; }
+        .pdf-link:hover { background: #e08040; color: #fff; }
+        @media (max-width: 768px) {
+            .guide-page { padding: 6rem 0 3rem; }
+            .risk-table { font-size: 0.85rem; }
+            .risk-table th, .risk-table td { padding: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div id="shared-header"></div>
+    <script src="header.js"></script>
+
+    <main class="guide-page">
+        <div class="container">
+            <a href="consent.html" class="back-link">Back to Consent</a>
+
+            <div class="guide-header">
+                <h1>Bystander Intervention Guide</h1>
+                <p style="color: #9b59b6; font-weight: 600; font-size: 1.1rem;">What to do if you witness a consent violation, problematic behavior, or something just feels off</p>
+                <a href="docs/bystander-intervention-guide.pdf" class="pdf-link" target="_blank">Download PDF Version</a>
+            </div>
+
+            <div class="guide-content">
+                <div class="guide-intro">
+                    <p>Sometimes we observe behavior that isn&rsquo;t in line with good principles of consent and care. Often it&rsquo;s hard to know what to do about this, and often there is no &ldquo;right&rdquo; answer. This guide provides some tools, and guidance that can help you decide how to approach these situations, but good will and care will always be most important.</p>
+
+                    <p>Below is a summary of the main tools you can use in certain situations, and a table of which actions to consider first in certain types of situations, followed by some deeper discussion about some of the main categories of behavior you might witness.</p>
+                </div>
+
+                <section class="guide-section">
+                    <h2>Guiding Principles</h2>
+
+                    <ul>
+                        <li><strong>Assume goodwill, respond to impact.</strong> Many people who create discomfort are not acting with harmful intent. Misunderstandings, poor communication, social awkwardness, altered states, cultural differences can affect how people act.
+                            <ul>
+                                <li>However, good intentions do not remove responsibility. You can approach people with curiosity and kindness while still interrupting behaviors that create risk or discomfort.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Intervene for the benefit of the situation, not to punish.</strong> The goal of intervention is to improve safety, support the affected people and help the situation move in a healthier direction. Be aware that situations can escalate rapidly, so focus on what is needed now rather than on proving who is right or wrong.</li>
+                        <li><strong>Match your response to the level of risk.</strong> A clear consent violation requires a different response than an awkward interaction or a vague feeling that something is off. The more serious and immediate the risk, the more direct the intervention should be.</li>
+                    </ul>
+                </section>
+
+                <section class="guide-section">
+                    <h2>Bystander Intervention Toolbox: The 5 D&rsquo;s</h2>
+
+                    <ul>
+                        <li><strong>Distract:</strong> Take the heat out of the moment without naming it. Ask the person who seems uncomfortable for the time, the way to the water point, or whether they have seen your friend. Drop something. Start an unrelated chat. You are not accusing anyone, you are just adding a second person to the situation, which is often all it takes.</li>
+                        <li><strong>Delayed response:</strong> If the moment has passed, or you were not sure enough to act in it, check in afterwards. &ldquo;Hey, are you okay? Do you want to sit down for a minute?&rdquo; Staying with someone is help.</li>
+                        <li><strong>Direct response:</strong> Name the behaviour plainly and calmly, or offer the person a way out: &ldquo;Are you good? Come grab water with me.&rdquo; Use this when you feel safe doing so. It is the most visible option and not always the right one.</li>
+                        <li><strong>Delegate:</strong> Get someone whose job this is. Wave down a Nomad, or go to Welfare or Malfare. Be clear: say what you saw and what you want. &ldquo;The person in the green coat will not let that one leave. Can you help me get them out?&rdquo;</li>
+                        <li><strong>Document:</strong> Only if someone is already helping the person in need. Keep a safe distance, note time and place, and afterwards ask the affected person what they want done with it. The record belongs to them, not to you.</li>
+                    </ul>
+                </section>
+
+                <section class="guide-section">
+                    <h2>Matching Bystander Tools to Risk Level</h2>
+
+                    <table class="risk-table">
+                        <thead>
+                            <tr>
+                                <th>Level</th>
+                                <th>What you might see</th>
+                                <th>Tools that fit</th>
+                                <th>Who else can help</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Weird vibe</strong></td>
+                                <td>Someone looks cornered or uneasy. Nothing overt has happened.</td>
+                                <td>Distract, Delayed</td>
+                                <td>A Nomad nearby</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pressure</strong></td>
+                                <td>Persistent unwanted attention. A no is being talked around.</td>
+                                <td>Distract, Direct, Delegate</td>
+                                <td>Nomad, Welfare, Safer Space</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Vulnerable</strong></td>
+                                <td>Too intoxicated to consent, alone, or in distress.</td>
+                                <td>Stay with them and Delegate</td>
+                                <td>Welfare, Malfare, Red Cross, Safer Space</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Clear harm</strong></td>
+                                <td>Open harassment or a consent violation in progress.</td>
+                                <td>Direct, Delegate, Document</td>
+                                <td>Nomad, Malfare</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Danger</strong></td>
+                                <td>Risk to someone&rsquo;s body. A medical emergency.</td>
+                                <td>Delegate now!</td>
+                                <td>Nomad, Malfare (we have an ambulance, medics, security on site so help is likely to be faster and more coordinated by contacting Malfare)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="guide-section">
+                    <h2>Bystander Intervention in Practice</h2>
+
+                    <h3>Weird vibe (but see below for more discussion about this!)</h3>
+                    <p>If someone clearly seems uncomfortable, you do not need proof. <strong>Distract:</strong> Walk over and talk to the person who seems uncomfortable. Ask something ordinary, give them a moment and an exit. Or create a small distraction. You are simply making sure they are not alone in it. <strong>Delayed:</strong> Check in with the person later, to see how they&rsquo;re feeling.</p>
+
+                    <h3>Someone is being pressured</h3>
+                    <p>The attention will not stop, the NO is being negotiated, the body says no even if the words are unsure. As the consent page puts it, silence, passivity or a fawn response is a no. Break the moment with <strong>Distract</strong>, wave down a Nomad to <strong>Delegate</strong>, or try a soft <strong>Direct response</strong> aimed at care, such as:</p>
+                    <p>&ldquo;Want to come grab water with me?&rdquo; Keep your focus on the person being pressured.</p>
+
+                    <h3>Someone who cannot look after themselves</h3>
+                    <p>A person who is unconscious, very intoxicated, alone or in deep emotional distress, cannot consent and may not be able to care for themselves. Do not leave them. Stay with them or try to get them to Welfare as appropriate. Or, you can <strong>delegate:</strong> ask someone to fetch help, or flag down a Nomad. If they are being targeted while in this state, treat it as clear harm and get Malfare.</p>
+
+                    <div class="highlight-box">
+                        <p><strong>Staying with someone until help arrives is one of the most useful things anyone here can do.</strong></p>
+                    </div>
+
+                    <h3>Clear harassment or serious consent violation in progress</h3>
+                    <p>When it is no longer ambiguous, fast intervention is important.</p>
+                    <p><strong>Direct response:</strong> If you can, get help rather than handling it alone. If you feel safe doing so (whether alone or with others supporting you), be direct: name the behaviour, say it is not ok, and stay calm.</p>
+                    <p><strong>Delegate:</strong> Usually the safest option. Find a Nomad or go to Malfare, open around the clock for safety and interpersonal harm.</p>
+                    <p><strong>Document:</strong> Only if someone is already helping the person, and remember the record belongs to the affected person.</p>
+
+                    <h3>Danger or a medical emergency</h3>
+                    <p>If there is a risk of harm to someone, this stops being about subtle tools. Get Malfare at once by asking for a Nomad (we have an ambulance, medics and security on site and Nomads will reach the whole team including site leads through their radios and be able to give the exact location co-ordinating with emergency services if needed). Move yourself and others away from danger if applicable. You are not expected to physically intervene or put yourself at risk. Don&rsquo;t be a hero, and don&rsquo;t become part of the problem.</p>
+                </section>
+
+                <section class="guide-section">
+                    <h2>A Note About &ldquo;Weird Vibes&rdquo; or &ldquo;Creepy Feeling&rdquo; Where There Is No Concrete Negative Behavior</h2>
+
+                    <p>Be aware of your own situation and biases. Substance use and altered consciousness can make it easier to interpret things in a negative way that aren&rsquo;t. Conversely, others in this state can be more likely to behave differently than &ldquo;normal&rdquo;, but without any ill intent.</p>
+
+                    <p>Look at others around you &ndash; especially people you feel might be affected by the person&rsquo;s behavior or vibe. How are they reacting to it? If nobody else seems to notice or be reacting negatively to it, it may be best to re-assess. If you can comfortably stay in the space, go for it, but maybe move a little, and change your focus. If you can&rsquo;t, decide whether you should leave the space, or engage with the person directly &ndash; but owning your own feeling of discomfort rather than putting it on others. See below for some possible tips on how to interact in cases like this. Remember, in this category there is no actively negative behavior, so it&rsquo;s generally a bad idea to assume ill intent.</p>
+
+                    <p>If others seem to be reacting negatively to the person&rsquo;s vibe &ndash; for example people dancing near them consistently leaving that space for other parts of the dance-floor, or looking uncomfortable while near them &ndash; decide if you feel comfortable approaching the person. Again, try not to assume ill intent. A lot of times people get stuck in their heads and start spiraling, especially in the intense environment of a burn, and especially if substances are involved. Sometimes all it takes is a friendly interaction, someone checking in to see how they&rsquo;re doing, or similar to get them out of that headspace.</p>
+
+                    <p>Examples of ways you could approach people in these situations if you feel it&rsquo;s the right thing to do:</p>
+
+                    <ul>
+                        <li>Start light, but not pointless, conversation: Say something nice about the DJ and ask what they think of the music. Ask if they can share a positive experience they&rsquo;ve had at the burn, or if there are any workshops they&rsquo;re looking forward to.</li>
+                        <li>Ask how they&rsquo;re doing. Either be honest and say you&rsquo;re feeling a weird vibe and want to check in, or just ask, if you can be genuinely interested in the answer.</li>
+                        <li>Offer connection, conversation, water, food, a walk, or company &ndash; sometimes a brief moment of connection is all it takes to get someone out of a bad head-space.</li>
+                    </ul>
+
+                    <p>If your initial interaction feels like it was enough to change the vibe, good job for helping a fellow human in need! If not, consider whether you need to change your own location for peace of mind, or whether you should ask someone such as a barrio consent/welfare lead, consent angel, or Nomad to be aware.</p>
+                </section>
+
+                <div class="guide-footer">
+                    <p><em>Thank you for reading this guide and for caring about the safety and wellbeing of everyone at Elsewhere.</em></p>
+                    <p>If you have feedback or suggestions, please email <a href="mailto:consent@nobodies.team">consent@nobodies.team</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="shared-footer"></div>
+    <script src="footer.js"></script>
+</body>
+</html>
