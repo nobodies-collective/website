@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guida al Consenso per i Barrios di Elsewhere | Elsewhere &mdash; by Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .guide-page { padding: 8rem 0 4rem; }
+        .guide-header { text-align: center; margin-bottom: 3rem; }
+        .guide-header h1 { margin-bottom: 1rem; color: #c2703e; }
+        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; color: var(--color-text-muted); font-size: 0.9rem; }
+        .back-link:hover { color: var(--color-accent); }
+        .back-link::before { content: '\2190'; }
+        .guide-content { max-width: 800px; margin: 0 auto; }
+        .guide-intro { font-size: 1rem; line-height: 1.7; color: var(--color-text-muted); margin-bottom: 2rem; }
+        .guide-intro p { margin-bottom: 1rem; }
+        .guide-intro strong, .guide-intro b { color: var(--color-text); }
+        .guide-section { margin-top: 3rem; }
+        .guide-section h2 { font-size: 1.5rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); color: #c2703e; }
+        .guide-section h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; margin-top: 1.5rem; color: #9b59b6; }
+        .guide-section p { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; }
+        .guide-section p strong, .guide-section li strong { color: var(--color-text); }
+        .guide-section ul, .guide-section ol { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; padding-left: 1.5rem; }
+        .guide-section li { margin-bottom: 0.5rem; }
+        .guide-section li ul { margin-top: 0.5rem; }
+        .highlight-box { background: #f9f0e6; border-left: 4px solid #c2703e; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 var(--radius) var(--radius) 0; }
+        .highlight-box p { color: var(--color-text) !important; }
+        .support-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0; }
+        .support-card { background: var(--color-bg-alt); border-radius: var(--radius); padding: 1.25rem; }
+        .support-card h4 { color: #9b59b6; margin-bottom: 0.5rem; font-size: 1rem; }
+        .support-card p { font-size: 0.95rem; }
+        .support-card ul { font-size: 0.95rem; }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+        .action-table th { background: #7b2d53; color: #fff; padding: 0.75rem; text-align: left; font-weight: 600; }
+        .action-table td { padding: 0.75rem; border-bottom: 1px solid #e0d6cc; vertical-align: top; color: var(--color-text-muted); }
+        .action-table tr:nth-child(even) { background: var(--color-bg-alt); }
+        .action-table td strong { color: var(--color-text); }
+        .action-table .category-header { background: #f5e6c8; }
+        .action-table .category-header td { font-weight: 700; color: #5a3e1b; }
+        .action-table .example-row td { font-style: italic; color: var(--color-text-muted); }
+        .conduct-list { list-style: none; padding-left: 0; }
+        .conduct-list li { padding: 0.5rem 0 0.5rem 1.75rem; position: relative; }
+        .conduct-list li::before { content: '\2718'; position: absolute; left: 0; color: #c0392b; font-weight: bold; }
+        .flowchart-note { background: #e8f5e9; border-left: 4px solid #4caf50; padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 var(--radius) var(--radius) 0; }
+        .flowchart-note p { color: var(--color-text) !important; }
+        .guide-footer { margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); text-align: center; color: var(--color-text-muted); line-height: 1.7; }
+        .guide-footer a { color: var(--color-accent); font-weight: 600; }
+        .pdf-download { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--color-accent); color: #fff; padding: 0.5rem 1.25rem; border-radius: var(--radius); font-weight: 600; font-size: 0.95rem; margin-bottom: 2rem; text-decoration: none; }
+        .pdf-download:hover { opacity: 0.9; color: #fff; }
+        @media (max-width: 768px) {
+            .guide-page { padding: 6rem 0 3rem; }
+            .support-grid { grid-template-columns: 1fr; }
+            .action-table { font-size: 0.85rem; }
+            .action-table th, .action-table td { padding: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div id="shared-header"></div>
+    <script src="header.js"></script>
+
+    <main class="guide-page">
+        <div class="container">
+            <a href="consent.html#it" class="back-link">Torna al Consenso</a>
+
+            <div class="guide-header">
+                <h1>Guida al Consenso per i Barrios di Elsewhere</h1>
+                <p style="color: #9b59b6; font-weight: 600; font-size: 1.1rem;">Cura, Responsabilit&agrave; e Riduzione del Danno</p>
+            </div>
+
+            <div class="guide-content">
+                <div class="guide-intro">
+                    <p>Benvenuti nella Guida al Consenso per i Barrios!</p>
+
+                    <p>Questa guida fornisce strumenti pratici per aiutare i barrios a coltivare una forte cultura del consenso prima, durante e dopo l&rsquo;evento. Descrive responsabilit&agrave;, strutture di supporto, percorsi di segnalazione e modi per integrare il consenso nella vita quotidiana del barrio.</p>
+
+                    <p>La cultura del consenso non viene fornita dall&rsquo;esterno da Elsewhere. Il gruppo Consenso fornisce strutture, formazione, sistemi di segnalazione e supporto. <strong>Ma la cultura stessa &egrave; creata da ogni barrio e dai partecipanti.</strong></p>
+
+                    <p>Per supporto diretto alla comunit&agrave;: usa il <strong>gruppo WhatsApp Consenso</strong> o <a href="mailto:consent@nobodies.team">consent@nobodies.team</a></p>
+                </div>
+
+                <section class="guide-section">
+                    <h2>1. Costruire una Cultura del Consenso Prima dell&rsquo;Arrivo</h2>
+
+                    <p>La cultura del consenso inizia molto prima di arrivare sul sito.</p>
+
+                    <h3>&#9733; Ogni barrio dovrebbe discutere attivamente: COSA SIGNIFICA CONSENSO</h3>
+
+                    <p>Il consenso &egrave; un <strong>accordo volontario, informato, esplicito, continuativo e revocabile</strong> per fare qualcosa di specifico insieme. Si applica a:</p>
+
+                    <ul>
+                        <li>Contatto fisico (sessuale e non sessuale)</li>
+                        <li>Accesso a spazi privati</li>
+                        <li>Prendere in prestito oggetti</li>
+                        <li>Fotografia e video</li>
+                        <li>Offrire sostanze, cibo o bevande</li>
+                        <li>Assegnazione di compiti</li>
+                        <li>Partecipazione al montaggio e smontaggio</li>
+                        <li>Attivit&agrave; sessuale</li>
+                        <li>Interazioni rivolte al pubblico</li>
+                        <li>Lavoro emotivo e aspettative di leadership</li>
+                    </ul>
+
+                    <h3>&#9733; Stabilisci le norme di consenso del tuo barrio</h3>
+
+                    <p>Ogni barrio definisce la propria micro-cultura. Chiarisci:</p>
+
+                    <ul>
+                        <li>Quali comportamenti sono benvenuti</li>
+                        <li>Cosa richiede un check-in esplicito</li>
+                        <li>Quali spazi sono privati</li>
+                        <li>Norme sull&rsquo;attivit&agrave; sessuale (se applicabile)</li>
+                        <li>Come i visitatori dovrebbero interagire con lo spazio</li>
+                        <li>Come si possono sollevare preoccupazioni in modo sicuro</li>
+                    </ul>
+
+                    <h3>&#9733; Integra il consenso nell&rsquo;assegnazione del lavoro</h3>
+
+                    <p>Il consenso si applica anche al <strong>lavoro collettivo</strong>. Quando si assegnano compiti, <strong>le aspettative, le competenze e i rischi devono essere comunicati chiaramente</strong>, la partecipazione deve essere sempre volontaria, e <strong>le persone devono poter rifiutare senza pressioni</strong>.</p>
+
+                    <p><strong>Le pause e il riposo</strong> devono essere normalizzati, e bisogna prestare attenzione alla <strong>prevenzione del sovraccarico e del burnout</strong>, restando vigili rispetto a forme sottili di coercizione attraverso pressione della leadership, aspettative sociali, paura di deludere gli altri o gerarchie informali.</p>
+                </section>
+
+                <section class="guide-section">
+                    <h2>2. Responsabilit&agrave; Legali</h2>
+
+                    <p>Per mantenere l&rsquo;evento conforme alla legge spagnola:</p>
+
+                    <div class="support-grid">
+                        <div class="support-card">
+                            <h4>Spazi Sex+</h4>
+                            <p>Qualsiasi spazio in cui possa avvenire attivit&agrave; sessuale:</p>
+                            <ul>
+                                <li>Deve essere visibilmente segnalato come <strong>18+</strong></li>
+                                <li>I minori devono essere esplicitamente esclusi</li>
+                            </ul>
+                            <p>Se un intero barrio &egrave; sex-positive, questo deve essere comunicato chiaramente.</p>
+                        </div>
+                        <div class="support-card">
+                            <h4>Spazi con Servizio di Alcolici</h4>
+                            <p>Le aree che servono alcolici devono essere chiaramente contrassegnate. I barrios che servono alcolici devono avere piani per:</p>
+                            <ul>
+                                <li>Prevenire l&rsquo;intossicazione eccessiva</li>
+                                <li>Supportare i partecipanti vulnerabili</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="guide-section">
+                    <h2>3. Educare il Tuo Barrio</h2>
+
+                    <p>Elsewhere fornisce:</p>
+                    <ul>
+                        <li>Codice di Condotta dei Partecipanti</li>
+                        <li>Guida alla Facilitazione dei Workshop &ndash; Guida per i Consent Angel</li>
+                        <li>Presentazione educativa sul consenso riutilizzabile se non hai i tuoi materiali</li>
+                        <li>Guida al Consenso per i Barrios (questo documento!)</li>
+                        <li>Poster e materiali QR per le segnalazioni</li>
+                        <li>Supporto WhatsApp Consenso</li>
+                        <li>Safer Space</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <p><strong>Tutto ci&ograve; che va oltre &egrave; creato dal barrio.</strong></p>
+                    </div>
+
+                    <h3>&#9733; Aspettativa minima</h3>
+                    <p>Ogni barrio dovrebbe fornire un breve <strong>orientamento sul consenso all&rsquo;arrivo</strong>, che copra:</p>
+                    <ul>
+                        <li><strong>Basi del consenso</strong> (Definizioni ed esempi)</li>
+                        <li><strong>Norme specifiche del barrio</strong> (Come funziona il tuo barrio)</li>
+                        <li><strong>Supporto disponibile</strong> (Dove i partecipanti possono cercare aiuto)</li>
+                        <li><strong>Percorsi di segnalazione</strong> (Come possono essere documentati gli incidenti)</li>
+                    </ul>
+
+                    <h3>&#9733; Se ospiti eventi sex+</h3>
+                    <p>Sono richieste ulteriori misure di sicurezza: <strong>Consent angel sobri.</strong> Decidi se il barrio fornir&agrave; consent angel ai facilitatori dei workshop, o se ne porteranno di propri, ma devono esserci.</p>
+
+                    <p>Restano sobri per tutta la durata, monitorano le interazioni, notano il disagio precocemente e intervengono quando necessario, offrendo supporto discreto e vie d&rsquo;uscita.</p>
+
+                    <p>I partecipanti devono sapere chi sono, come contattarli, e che ritirarsi &egrave; sempre permesso. Consulta la guida fornita di seguito e assicurati che anche i facilitatori dei workshop l&rsquo;abbiano letta!</p>
+                </section>
+
+                <section class="guide-section">
+                    <h2>4. Codice di Condotta dei Partecipanti</h2>
+
+                    <p>Elsewhere non tollera:</p>
+
+                    <ul class="conduct-list">
+                        <li>Insulti, abusi mentali o verbali, bullismo o intimidazione</li>
+                        <li>Abuso fisico, comportamento ostile, comportamento minaccioso o uso di armi</li>
+                        <li>Minacce di danno verso se stessi o altri</li>
+                        <li>Discriminazione o molestie basate su sesso, genere, orientamento sessuale, razza, religione o credo, nazionalit&agrave;, lingua/e parlata/e, disabilit&agrave;, et&agrave; o qualsiasi altra caratteristica</li>
+                        <li>Molestie sessuali, attenzioni sessuali indesiderate o contatto fisico non voluto</li>
+                        <li>Attivit&agrave; sessuale in spazi pubblici o in qualsiasi luogo non esplicitamente designato per tale attivit&agrave;</li>
+                        <li>Ripetuta violazione della Sound Policy di Elsewhere, incluso il mancato rispetto del coprifuoco mattutino del suono amplificato</li>
+                        <li>Qualsiasi animale sul sito (ad eccezione di animali da assistenza con previo accordo scritto)</li>
+                        <li>Scattare e/o condividere fotografie o video senza il consenso di tutte le persone riprese</li>
+                        <li>L&rsquo;uso di droni</li>
+                        <li>Comportamento che spreca quantit&agrave; eccessive di risorse e/o tempo dei volontari, o che mette a rischio l&rsquo;evento in qualsiasi modo</li>
+                        <li>Qualsiasi attivit&agrave; illegale</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <p><strong>Tutti i partecipanti accettano questo codice durante l&rsquo;acquisto del biglietto.</strong></p>
+                    </div>
+                </section>
+
+                <section class="guide-section">
+                    <h2>5. Supporto Disponibile a Elsewhere</h2>
+
+                    <div class="support-grid">
+                        <div class="support-card">
+                            <h4>Nomad</h4>
+                            <p>Supporto itinerante da Malfare</p>
+                        </div>
+                        <div class="support-card">
+                            <h4>Malfare</h4>
+                            <p>Sicurezza e conflitti interpersonali</p>
+                        </div>
+                        <div class="support-card">
+                            <h4>Sicurezza</h4>
+                            <p>Accessibile tramite Malfare</p>
+                        </div>
+                        <div class="support-card">
+                            <h4>Welfare Enough</h4>
+                            <p>Supporto emotivo generale</p>
+                        </div>
+                    </div>
+
+                    <h3>Safer Space</h3>
+                    <p>Il Safer Space &egrave; accessibile 24 ore su 24, 7 giorni su 7, tramite un volontario Safer Space presente nella tenda Welfare o da un volontario reperibile via radio.</p>
+
+                    <p>Il Safer Space offre supporto confidenziale per incidenti recenti, esperienze passate che riemergono sul sito, partecipanti che cercano supporto per la responsabilizzazione e Barrio Lead che gestiscono incidenti.</p>
+
+                    <div class="highlight-box">
+                        <p><strong>Supporto Safer Space per i Barrios:</strong></p>
+                        <p>&bull; Il Safer Space &egrave; disponibile per tutti coloro che sono coinvolti o che rispondono a una violazione del consenso</p>
+                        <p>&bull; Una seconda opzione di supporto se qualcuno chiede pi&ugrave; privacy dopo una violazione del consenso, anche tra membri del barrio</p>
+                    </div>
+
+                    <p>Obiettivi del Safer Space:</p>
+                    <ul>
+                        <li>Ridurre il rischio di trauma a lungo termine</li>
+                        <li>Offrire stabilizzazione immediata</li>
+                        <li>Fornire percorsi di documentazione se desiderato</li>
+                    </ul>
+                </section>
+
+                <section class="guide-section">
+                    <h2>6. Segnalazione</h2>
+
+                    <p>Assicurati che tutti nel tuo barrio sappiano come segnalare, o aiutare un amico a segnalare, in caso di violazione del consenso. Questo pu&ograve; essere fatto di persona o online.</p>
+
+                    <h3>Modulo di segnalazione online</h3>
+                    <p>Disponibile durante e dopo l&rsquo;evento.</p>
+
+                    <div class="highlight-box">
+                        <p><strong>Segnala gli incidenti, anche quelli piccoli. Il riconoscimento di pattern dipende dalle segnalazioni.</strong></p>
+                    </div>
+                </section>
+
+                <section class="guide-section">
+                    <h2>7. Risposta al Consenso</h2>
+
+                    <p>Due Consent Response Lead esaminano gli incidenti segnalati (violazioni del Codice di Condotta).</p>
+
+                    <p>Il Team di Risposta al Consenso utilizza un <strong>approccio di giustizia riparativa</strong>. Non &egrave; un tribunale. Il suo scopo &egrave;: <strong>Apprendimento / Responsabilizzazione / Sicurezza della comunit&agrave; e sostenibilit&agrave; dell&rsquo;evento / Riparazione comportamentale</strong></p>
+
+                    <p>Possibili risposte: documentazione statistica, comunicazione con le persone coinvolte (una persona segnalata, leader dei workshop, team dei barrio, gestori di spazi, infrastruttura ecc.) per esplorare come creare pi&ugrave; sicurezza al prossimo evento, apertura di una Sessione di Consenso, e in casi estremi un ban temporaneo.</p>
+
+                    <h3>Le sessioni di consenso includono:</h3>
+                    <p>Contatto con il segnalante per assicurarsi che ci sia il consenso a tenere una sessione &#10145; Due incontri online con la persona segnalata (e un accompagnatore se lo desidera) e un Team di Sessione di Consenso di tre persone &#10145; Accordo di Partecipazione (se concordiamo insieme che &egrave; possibile includere in sicurezza la persona segnalata, viene solitamente creato un accordo riguardante la sua partecipazione che pu&ograve; includere restrizioni sul sito, check-in giornalieri, evitare la persona che ha fatto la segnalazione, scrittura riflessiva e formazione ecc.) &#10145; Incontro post-evento per riflettere su come &egrave; andata e possibilmente procedere senza la necessit&agrave; di un accordo</p>
+                </section>
+
+                <section class="guide-section">
+                    <h2>8. Praticare il Consenso e Rispondere alle Preoccupazioni</h2>
+
+                    <p>Il consenso richiede attenzione continua. <strong>I check-in devono essere normalizzati</strong>, il disagio o la pressione devono essere attivamente notati, e <strong>l&rsquo;intervento precoce dovrebbe dare priorit&agrave; a facili vie d&rsquo;uscita da situazioni scomode</strong>. Particolare attenzione deve essere prestata alla coercizione sottile attraverso dinamiche di leadership o pressione del montaggio.</p>
+
+                    <p>Ogni barrio idealmente dovrebbe designare almeno due referenti per il consenso per fornire supporto confidenziale, ascoltare senza giudizio, stabilizzare le situazioni e collegare le persone alle risorse appropriate.</p>
+
+                    <p>Quando sorgono preoccupazioni, <strong>la sicurezza immediata ha la priorit&agrave;</strong>. La risposta dovrebbe seguire l&rsquo;iniziativa della persona coinvolta, evitare supposizioni o escalation senza consenso, e concentrarsi sulla cura e stabilizzazione piuttosto che sulla punizione.</p>
+                </section>
+
+                <section class="guide-section">
+                    <h2>9. Creare un Piano d&rsquo;Azione per il Consenso del Tuo Barrio</h2>
+
+                    <p>Incoraggiamo i barrios a preparare un Piano d&rsquo;Azione per il Consenso che pu&ograve; includere:</p>
+
+                    <ul>
+                        <li>Talk di benvenuto o orientamento sul consenso</li>
+                        <li>Pratiche di benessere per il montaggio e smontaggio</li>
+                        <li>Segnaletica sul consenso e norme degli spazi condivisi</li>
+                        <li>Referenti designati per il consenso all&rsquo;interno del barrio</li>
+                        <li>Pratiche pi&ugrave; sicure per bar, gifting o sostanze</li>
+                        <li>Workshop o attivit&agrave; incentrate sul consenso</li>
+                        <li>Consent angel per eventi a rischio pi&ugrave; elevato</li>
+                    </ul>
+
+                    <p>Usa il modello qui sotto per delineare come il tuo barrio sosterr&agrave; la cultura del consenso <em>internamente</em> (tra i membri del barrio) e <em>esternamente</em> (per tutta la comunit&agrave; di Elsewhere).</p>
+
+                    <h3>Modello del Piano d&rsquo;Azione per il Consenso</h3>
+
+                    <table class="action-table">
+                        <tr class="category-header"><td colspan="4"><strong>(Interno) Comunicazione pre-evento</strong></td></tr>
+                        <tr><th>Cosa?</th><th>Chi?</th><th>Come?</th></tr>
+                        <tr class="example-row"><td>(esempio) Newsletter del barrio. Breve introduzione sull&rsquo;importanza del consenso.</td><td>Consent Lead</td><td>Condividere risorse utili.</td></tr>
+                    </table>
+
+                    <table class="action-table">
+                        <tr class="category-header"><td colspan="4"><strong>(Interno) Gestione Montaggio/Smontaggio e Prevenzione Burnout</strong></td></tr>
+                        <tr><th>Cosa?</th><th>Chi?</th><th>Come?</th></tr>
+                        <tr class="example-row"><td>(esempio) Monitorare il livello di competenza necessario per un compito</td><td>Responsabili Montaggio e Smontaggio</td><td>Prima dell&rsquo;evento, identificare i compiti rischiosi/pericolosi</td></tr>
+                    </table>
+
+                    <table class="action-table">
+                        <tr class="category-header"><td colspan="4"><strong>(Interno) Costruire infrastruttura per supportare le pratiche di consenso</strong></td></tr>
+                        <tr><th>Cosa?</th><th>Chi?</th><th>Come?</th></tr>
+                        <tr class="example-row"><td>(esempio) Concordare l&rsquo;uso dei vari spazi nel campo e organizzare la segnaletica</td><td>Consent Lead e team di costruzione del campo</td><td>Creare segnaletica comprensibile a tutti (colori o disegni)</td></tr>
+                    </table>
+
+                    <table class="action-table">
+                        <tr class="category-header"><td colspan="4"><strong>(Interno) Educare i membri del barrio sulle linee guida e risorse per il consenso al loro arrivo</strong></td></tr>
+                        <tr><th>Cosa?</th><th>Chi?</th><th>Come?</th></tr>
+                        <tr class="example-row"><td>(esempio) Talk di sensibilizzazione sul consenso durante la riunione di orientamento del barrio</td><td>Consent Lead (+ aiuto se necessario)</td><td>Un talk di 15 minuti sul consenso in generale, sulle pratiche di consenso del barrio e una spiegazione di dove si trovano le altre risorse sul consenso a Elsewhere</td></tr>
+                    </table>
+
+                    <table class="action-table">
+                        <tr class="category-header"><td colspan="4"><strong>(Interno) Durante l&rsquo;evento</strong></td></tr>
+                        <tr><th>Cosa?</th><th>Chi?</th><th>Come?</th></tr>
+                        <tr class="example-row"><td>(esempio) Check-in sul benessere</td><td>Consent Lead</td><td>Inviti periodici informali ai membri del barrio per esprimere qualsiasi preoccupazione</td></tr>
+                    </table>
+
+                    <table class="action-table">
+                        <tr class="category-header"><td colspan="4"><strong>(Esterno) Eventi incentrati sul consenso</strong></td></tr>
+                        <tr><th>Cosa?</th><th>Chi?</th><th>Come?</th></tr>
+                        <tr class="example-row"><td>(esempio) Workshop sul consenso per il Respect Day (marted&igrave;)</td><td>Membro del barrio</td><td>Workshop di 90 minuti con esercizi interattivi</td></tr>
+                    </table>
+
+                    <table class="action-table">
+                        <tr class="category-header"><td colspan="4"><strong>(Esterno) Eventi, Attivit&agrave; e Doni</strong></td></tr>
+                        <tr><th>Cosa?</th><th>Chi?</th><th>Come?</th></tr>
+                        <tr class="example-row"><td>(esempio) Il Bar / bevande regalate alla comunit&agrave;</td><td>Membri del barrio che gestiscono il bar</td><td>Creare un cartello menu con opzioni alcoliche chiaramente indicate; formare lo staff del bar a non fare pressione per bere eccessivamente; offrire anche opzioni analcoliche; avere una persona sobria per ogni turno per il supporto alla sicurezza.</td></tr>
+                        <tr class="example-row"><td>(esempio) Evento orgia</td><td>Il facilitatore + consent angel sobri designati</td><td>Parlare con il facilitatore. Confermare che far&agrave; un talk sul consenso all&rsquo;inizio e indicher&agrave; chi sono i consent angel. Le porte verranno chiuse dopo l&rsquo;inizio dell&rsquo;evento. Fornire materiali per il sesso pi&ugrave; sicuro.</td></tr>
+                    </table>
+
+                    <table class="action-table">
+                        <tr class="category-header"><td colspan="4"><strong>(Esterno) Altri giorni</strong></td></tr>
+                        <tr><th>Cosa?</th><th>Chi?</th><th>Come?</th></tr>
+                        <tr class="example-row"><td>Altri workshop: introduzione al consenso, incorporare i principi del consenso</td><td></td><td></td></tr>
+                    </table>
+                </section>
+
+                <section class="guide-section">
+                    <h2>Processo per Incidenti di Consenso/Welfare</h2>
+
+                    <div class="flowchart-note">
+                        <p><strong>Qualunque cosa tu faccia, sii consapevole del tuo sistema nervoso &mdash; se non sei calmo/a e regolato/a non puoi aiutare gli altri e finirai per far escalare la situazione piuttosto che de-escalarla. Chiedi supporto.</strong></p>
+                    </div>
+
+                    <p><strong>Noti un incidente o qualcuno te lo segnala.</strong> Fermati, valuta, chiedi supporto se necessario. Se non sei sicuro/a &mdash; non ignorarlo.</p>
+
+                    <p><strong>1. &Egrave; necessaria un&rsquo;azione immediata</strong> per fermare l&rsquo;incidente e mantenere il barrio sicuro?</p>
+                    <ul>
+                        <li><strong>S&Igrave;:</strong> Agisci/intervieni se &egrave; sicuro e/o chiedi a qualcuno di cercare supporto da un Nomad. <strong>Resta con loro o monitora</strong> la situazione da un luogo sicuro fino all&rsquo;arrivo dell&rsquo;aiuto.</li>
+                    </ul>
+
+                    <p><strong>2. Qualcuno sembra aver bisogno di supporto?</strong></p>
+                    <ul>
+                        <li><strong>S&Igrave;:</strong> Invitali al welfare (del Barrio o di Elsewhere), chiedi a qualcuno del Team Welfare di assistere.</li>
+                    </ul>
+                    <p>Chiedi se desiderano qualcun altro come supporto, ad esempio un amico, qualcuno di un altro genere, qualcuno che parla la loro lingua. Chiedi come stanno. Ascolta senza esprimere giudizi o fare domande guidate. Informali del Safer Space, del Welfare e offriti di aiutarli ad accedervi. Se vogliono restare, offri acqua, t&egrave; ecc. Solo quando sono regolati (potrebbe essere il giorno dopo) chiedi se sono d&rsquo;accordo a parlare di cosa &egrave; successo. Segui con un check-in successivo.</p>
+
+                    <p><strong>3. Qualcuno ha violato il Codice di Condotta?</strong></p>
+                    <ul>
+                        <li><strong>S&Igrave;:</strong> PREPARA UNA SEGNALAZIONE DI INCIDENTE (i consent lead possono assistere). Spiega il processo NCA e chiedi se sono disposti a fare una segnalazione. Se S&Igrave;, aiutali a compilarla. Se NO, compilala senza la loro partecipazione e senza rivelare la loro identit&agrave;.</li>
+                    </ul>
+
+                    <p><strong>4. &Egrave; al di fuori della Cultura del Barrio?</strong></p>
+                    <ul>
+                        <li><strong>S&Igrave;:</strong> SE non compromette l&rsquo;anonimato desiderato dalla persona che ha subito il danno e/o da un testimone (chiedi a loro), E ti senti a tuo agio: PARLA CON LA PERSONA CHE HA FATTO/DETTO LA COSA. Porta alla sua attenzione il suo comportamento e chiedi di rifletterci. Falle sapere che &egrave; benvenuta a parlare con qualcuno del Team Consenso/Welfare per supporto/orientamento. Informa il/la Consent/Welfare Lead in modo che possa tenere nota di eventuali pattern.</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <p>Se c&rsquo;&egrave; un pattern di comportamento al di fuori della Cultura del Barrio e/o siamo preoccupati per l&rsquo;individuo &mdash; digli che siamo preoccupati per lui/lei e che se non &egrave; disposto/a a cercare supporto, potrebbe non essere benvenuto/a nel Barrio. (Questa decisione verrebbe presa da tutti i lead insieme.)</p>
+                    </div>
+                </section>
+
+                <div class="guide-footer">
+                    <p><em>Grazie per aver letto questa guida e per il tuo impegno nel creare una cultura del consenso forte nel tuo barrio.</em></p>
+                    <p>Se hai feedback o suggerimenti, scrivi a <a href="mailto:consent@nobodies.team">consent@nobodies.team</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="shared-footer"></div>
+    <script src="footer.js"></script>
+</body>
+</html>
