@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Der Elsewhere Survival Guide 2026 | Nobodies Collective</title>
+    <meta name="description" content="Ein Feldhandbuch zum Aufbau, Bewohnen und Abbau einer Stadt auf Zeit für sechs Tage in der Monegros-Wüste. Alles, was Sie brauchen, um bei Elsewhere 2026 zu überleben und aufzublühen.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ============================================================
+           SURVIVAL GUIDE — editorial "field manual" styling
+           Adapted from the print PDF. Palette + type recreated for web.
+           ============================================================ */
+        .sg-page {
+            --sg-bg: #f4efe6;
+            --sg-paper: #efe8db;
+            --sg-ink: #15140f;
+            --sg-rust: #c2410c;
+            --sg-rust-dk: #a8370a;
+            --sg-muted: #5d5648;
+            --sg-line: rgba(21, 20, 15, 0.22);
+            --sg-line-soft: rgba(21, 20, 15, 0.12);
+            --sg-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+
+            background: var(--sg-bg);
+            color: var(--sg-ink);
+            font-family: var(--font-body);
+            padding-top: 0;
+            overflow-x: hidden;
+        }
+        body:has(.sg-page) { background: #f4efe6; }
+
+        .sg-wrap {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        .sg-wrap--wide { max-width: 1280px; }
+
+        .sg-page p { margin: 0 0 1rem; }
+        .sg-page a { color: var(--sg-rust); font-weight: 600; }
+        .sg-page a:hover { color: var(--sg-rust-dk); }
+
+        /* ---- running header / eyebrow ---- */
+        .sg-runhead {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 1rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--sg-muted);
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--sg-ink);
+            margin-bottom: 2.5rem;
+        }
+        .sg-runhead .r { color: var(--sg-rust); }
+
+        .sg-eyebrow {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--sg-rust);
+            margin-bottom: 1rem;
+        }
+
+        /* ---- display headings ---- */
+        .sg-h2 {
+            font-family: var(--sg-serif);
+            font-weight: 800;
+            font-size: clamp(2.3rem, 5.5vw, 3.7rem);
+            line-height: 0.98;
+            letter-spacing: -0.01em;
+            margin: 0 0 1.25rem;
+        }
+        .sg-h3 {
+            font-family: var(--sg-serif);
+            font-weight: 700;
+            font-size: clamp(1.5rem, 3vw, 2.1rem);
+            line-height: 1.05;
+            margin: 0 0 0.9rem;
+        }
+        .sg-h4 {
+            font-family: var(--sg-serif);
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin: 0 0 0.6rem;
+        }
+        .sg-lead {
+            font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+            line-height: 1.5;
+            font-weight: 400;
+            max-width: 46ch;
+            margin-bottom: 1.5rem;
+        }
+        .sg-page .sg-muted { color: var(--sg-muted); }
+        .sg-small { font-size: 0.92rem; color: var(--sg-muted); line-height: 1.65; }
+
+        /* ============== HERO / COVER ============== */
+        .sg-hero {
+            padding: 7.5rem 0 3.5rem;
+            position: relative;
+        }
+        .sg-hero-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            font-size: 0.66rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--sg-muted);
+            padding-bottom: 0.7rem;
+            border-bottom: 1px solid var(--sg-ink);
+            margin-bottom: 3rem;
+        }
+        .sg-hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .sg-tag {
+            display: inline-block;
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--sg-rust);
+            border: 1px solid var(--sg-rust);
+            padding: 0.35rem 0.6rem;
+            margin: 0 0.4rem 0.5rem 0;
+            border-radius: 2px;
+        }
+        .sg-tag--ink { color: var(--sg-ink); border-color: var(--sg-ink); }
+        .sg-cover-kicker {
+            display: inline-block;
+            background: var(--sg-rust);
+            color: var(--sg-bg);
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            padding: 0.35rem 0.7rem;
+            margin-bottom: 1.4rem;
+            border-radius: 2px;
+        }
+        .sg-cover-title {
+            font-family: var(--sg-serif);
+            font-weight: 900;
+            font-size: clamp(3.2rem, 9vw, 6.4rem);
+            line-height: 0.9;
+            letter-spacing: -0.015em;
+            margin: 0 0 1.5rem;
+        }
+        .sg-cover-title em {
+            font-style: italic;
+            color: var(--sg-rust);
+            font-weight: 800;
+        }
+        .sg-cover-sub {
+            font-size: 1.1rem;
+            line-height: 1.55;
+            max-width: 40ch;
+            margin-bottom: 1.8rem;
+        }
+        .sg-cover-img img {
+            width: 100%;
+            height: 100%;
+            max-height: 540px;
+            object-fit: cover;
+            border-radius: 2px;
+            display: block;
+        }
+
+        /* ============== SECTION SHELL ============== */
+        .sg-section { padding: 3.5rem 0; }
+        .sg-chapter { padding: 4.5rem 0 1rem; position: relative; }
+        .sg-chapter-head { position: relative; margin-bottom: 2.5rem; }
+        .sg-ghost {
+            position: absolute;
+            top: -3.5rem;
+            right: -0.5rem;
+            font-family: var(--sg-serif);
+            font-weight: 900;
+            font-size: clamp(7rem, 20vw, 15rem);
+            line-height: 1;
+            color: rgba(21, 20, 15, 0.05);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .sg-chapter-head > * { position: relative; z-index: 1; }
+        .sg-divider {
+            border: 0;
+            border-top: 1px solid var(--sg-line);
+            margin: 3.5rem 0;
+        }
+
+        /* ============== CALLOUTS ============== */
+        .sg-callout {
+            background: var(--sg-rust);
+            color: var(--sg-bg);
+            padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 4vw, 3rem);
+            border-radius: 2px;
+            margin: 2.5rem 0;
+        }
+        .sg-callout p {
+            font-family: var(--sg-serif);
+            font-style: italic;
+            font-weight: 600;
+            font-size: clamp(1.6rem, 4vw, 2.6rem);
+            line-height: 1.12;
+            margin: 0;
+        }
+        .sg-callout--dark { background: var(--sg-ink); }
+        .sg-callout--center { text-align: center; }
+
+        /* stat block (40°+) */
+        .sg-stat {
+            background: var(--sg-rust);
+            color: var(--sg-bg);
+            border-radius: 2px;
+            padding: 1.6rem 1.8rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .sg-stat .big {
+            font-family: var(--sg-serif);
+            font-weight: 900;
+            font-size: clamp(3rem, 8vw, 5rem);
+            line-height: 0.9;
+        }
+        .sg-stat .lbl {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            opacity: 0.85;
+            margin-bottom: 0.3rem;
+        }
+
+        /* ============== CARDS ============== */
+        .sg-cards {
+            display: grid;
+            gap: 1.25rem;
+            grid-template-columns: repeat(3, 1fr);
+            margin: 1.5rem 0;
+        }
+        .sg-cards--2 { grid-template-columns: repeat(2, 1fr); }
+        .sg-card {
+            border: 1px solid var(--sg-line);
+            border-radius: 2px;
+            padding: 1.3rem 1.35rem;
+            background: rgba(255, 255, 255, 0.18);
+        }
+        .sg-card h4 {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--sg-rust);
+            margin: 0 0 0.6rem;
+        }
+        .sg-card p { font-size: 0.95rem; line-height: 1.6; color: var(--sg-muted); margin: 0; }
+        .sg-card p + p { margin-top: 0.6rem; }
+        .sg-card .sg-num {
+            font-family: var(--sg-serif);
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: var(--sg-rust);
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+        .sg-card .sg-card-title {
+            display: block;
+            font-weight: 700;
+            font-size: 1.02rem;
+            color: var(--sg-ink);
+            margin-bottom: 0.15rem;
+        }
+        .sg-card .sg-card-sub {
+            display: block;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--sg-rust);
+            margin-bottom: 0.55rem;
+        }
+
+        /* ============== NOTE BOXES ============== */
+        .sg-note {
+            border: 1px solid var(--sg-line);
+            border-left: 3px solid var(--sg-rust);
+            border-radius: 2px;
+            padding: 1.1rem 1.3rem;
+            margin: 1.5rem 0;
+            background: rgba(194, 65, 12, 0.04);
+        }
+        .sg-note h5 {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--sg-rust);
+            margin: 0 0 0.5rem;
+        }
+        .sg-note p { font-size: 0.95rem; line-height: 1.6; color: var(--sg-muted); margin: 0; }
+        .sg-note--warn { border-left-color: var(--sg-ink); background: rgba(21, 20, 15, 0.04); }
+        .sg-note--warn h5 { color: var(--sg-ink); }
+
+        /* ============== SPLIT (text + media) ============== */
+        .sg-split {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 2.75rem;
+            align-items: start;
+        }
+        .sg-split--rev .sg-split-media { order: -1; }
+        .sg-fig img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 2px;
+        }
+        .sg-fig figcaption {
+            font-size: 0.78rem;
+            color: var(--sg-muted);
+            margin-top: 0.5rem;
+            line-height: 1.5;
+        }
+
+        /* ============== CHECKLISTS ============== */
+        .sg-checks {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem 2.5rem;
+        }
+        .sg-check { list-style: none; margin: 0.5rem 0 0; padding: 0; }
+        .sg-check li {
+            position: relative;
+            padding: 0.32rem 0 0.32rem 1.7rem;
+            font-size: 0.96rem;
+            line-height: 1.45;
+            border-bottom: 1px solid var(--sg-line-soft);
+        }
+        .sg-check li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 0.85rem;
+            height: 0.85rem;
+            border: 1.5px solid var(--sg-rust);
+            border-radius: 2px;
+        }
+        .sg-sublabel {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--sg-rust);
+            margin: 1.4rem 0 0.2rem;
+        }
+
+        /* plain bullet list */
+        .sg-list { margin: 0.5rem 0 1rem 0; padding: 0; list-style: none; }
+        .sg-list li {
+            position: relative;
+            padding: 0.28rem 0 0.28rem 1.4rem;
+            font-size: 0.97rem;
+            line-height: 1.5;
+        }
+        .sg-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--sg-rust);
+            font-weight: 700;
+        }
+
+        /* ============== TABLE (sound zones) ============== */
+        .sg-table-wrap { overflow-x: auto; margin: 1.5rem 0; -webkit-overflow-scrolling: touch; }
+        .sg-table {
+            width: 100%;
+            min-width: 640px;
+            border-collapse: collapse;
+            font-size: 0.86rem;
+        }
+        .sg-table th, .sg-table td {
+            text-align: left;
+            padding: 0.7rem 0.8rem;
+            border-bottom: 1px solid var(--sg-line);
+            vertical-align: top;
+        }
+        .sg-table thead th {
+            font-size: 0.66rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border-bottom: 1.5px solid var(--sg-ink);
+        }
+        .sg-table tbody th {
+            font-weight: 700;
+            white-space: nowrap;
+            color: var(--sg-muted);
+            font-size: 0.78rem;
+        }
+        .sg-dot {
+            display: inline-block;
+            width: 0.6rem; height: 0.6rem;
+            border-radius: 50%;
+            margin-right: 0.35rem;
+            vertical-align: middle;
+        }
+
+        /* ============== TIMELINE ============== */
+        .sg-timeline {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.25rem;
+            margin-top: 1.5rem;
+        }
+        .sg-tl-col h4 {
+            font-family: var(--sg-serif);
+            font-weight: 700;
+            font-size: 1.15rem;
+            margin: 0 0 0.6rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 2px solid var(--sg-rust);
+        }
+        .sg-tl-col p { font-size: 0.85rem; line-height: 1.5; color: var(--sg-muted); margin: 0 0 0.7rem; }
+        .sg-tl-col strong { color: var(--sg-ink); }
+
+        /* ============== CONTENTS ============== */
+        .sg-toc { margin: 0; padding: 0; list-style: none; }
+        .sg-toc li { border-bottom: 1px solid var(--sg-line); }
+        .sg-toc a {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            padding: 1rem 0.2rem;
+            color: var(--sg-ink);
+            font-weight: 600;
+            transition: color 0.15s, padding 0.15s;
+        }
+        .sg-toc a:hover { color: var(--sg-rust); padding-left: 0.5rem; }
+        .sg-toc .n {
+            font-family: var(--sg-serif);
+            font-weight: 800;
+            color: var(--sg-rust);
+            font-size: 1.1rem;
+            min-width: 2rem;
+        }
+        .sg-toc .t {
+            font-family: var(--sg-serif);
+            font-weight: 700;
+            font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+        }
+
+        /* recipe / definition rows */
+        .sg-deflist { margin: 0.5rem 0; }
+        .sg-deflist .row {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 0.45rem 0;
+            border-bottom: 1px solid var(--sg-line-soft);
+            font-size: 0.93rem;
+        }
+        .sg-deflist .row span:last-child { color: var(--sg-muted); text-align: right; }
+
+        /* back to contents */
+        .sg-back {
+            display: inline-block;
+            margin: 1rem 0 0;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--sg-muted) !important;
+        }
+        .sg-back:hover { color: var(--sg-rust) !important; }
+
+        .sg-back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 6.5rem 0 0;
+            color: var(--sg-muted) !important;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .sg-back-link::before { content: '\2190'; }
+
+        .sg-meta-foot {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--sg-muted);
+            border-top: 1px solid var(--sg-ink);
+            padding-top: 1rem;
+            margin-top: 3rem;
+        }
+
+        /* ============== LANGUAGE SWITCHER ============== */
+        .sg-langbar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.5rem;
+            border-top: 1px solid var(--sg-line);
+            border-bottom: 1px solid var(--sg-line);
+            padding: 0.9rem 0;
+        }
+        .sg-langbar .lb-label {
+            font-size: 0.66rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--sg-muted);
+            margin-right: 0.4rem;
+        }
+        .sg-langbar a {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--sg-ink);
+            padding: 0.32rem 0.75rem;
+            border: 1px solid var(--sg-line);
+            border-radius: 2px;
+            text-decoration: none;
+        }
+        .sg-langbar a:hover { border-color: var(--sg-rust); color: var(--sg-rust); }
+        .sg-langbar a.active { background: var(--sg-rust); border-color: var(--sg-rust); color: var(--sg-bg); }
+        .sg-langbar .lb-spacer { flex: 1 1 auto; }
+        .sg-langbar a.lb-hub { border: 0; padding: 0.32rem 0; color: var(--sg-muted); }
+        .sg-langbar a.lb-hub:hover { color: var(--sg-rust); }
+        @media (max-width: 540px) { .sg-langbar .lb-spacer { display: none; } }
+
+        /* ============== RESPONSIVE ============== */
+        @media (max-width: 860px) {
+            .sg-hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .sg-cover-img { order: -1; }
+            .sg-cover-img img { max-height: 320px; }
+            .sg-split { grid-template-columns: 1fr; gap: 1.75rem; }
+            .sg-split--rev .sg-split-media { order: 0; }
+            .sg-cards { grid-template-columns: repeat(2, 1fr); }
+            .sg-checks { grid-template-columns: 1fr; }
+            .sg-timeline { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 540px) {
+            .sg-hero { padding-top: 6rem; }
+            .sg-cards, .sg-cards--2 { grid-template-columns: 1fr; }
+            .sg-timeline { grid-template-columns: 1fr; }
+            .sg-deflist .row { flex-direction: column; gap: 0.1rem; }
+            .sg-deflist .row span:last-child { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+    <div id="shared-header"></div>
+    <script src="header.js"></script>
+
+    <main class="sg-page">
+
+        <!-- ============ COVER ============ -->
+        <header class="sg-hero">
+            <div class="sg-wrap">
+                <div class="sg-hero-top">
+                    <span>Ausgabe 2026 · V1</span>
+                    <span>Feldhandbuch · Von Nobodies, für Nobodies</span>
+                    <span>01</span>
+                </div>
+                <div class="sg-hero-grid">
+                    <div>
+                        <span class="sg-cover-kicker">Drucken &amp; Einpacken · Ausgabe Juni 2026</span>
+                        <h1 class="sg-cover-title">Der <em>Elsewhere</em><br>Survival&nbsp;Guide.</h1>
+                        <p class="sg-cover-sub">Ein Feldhandbuch zum Aufbau, Bewohnen und Abbau einer Stadt auf Zeit für sechs Tage in der Monegros-Wüste. Elsewhere ist kein Ort, den man besucht. Man lässt ihn entstehen.</p>
+                        <div>
+                            <span class="sg-tag">7 &rarr; 12 July 2026 · Spanien</span>
+                            <span class="sg-tag sg-tag--ink">Kein Kommerz</span>
+                            <span class="sg-tag sg-tag--ink">Leave No Trace</span>
+                            <br>
+                            <span class="sg-tag">Nobodies Collective</span>
+                            <span class="sg-tag">Offizieller Regional Burn</span>
+                        </div>
+                    </div>
+                    <div class="sg-cover-img">
+                        <img src="images/survival-guide/cover.jpg" alt="Sonnenaufgang über der Wüstenstadt Elsewhere, Gestalten als Silhouetten vor dem Staub" loading="eager">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ============ LANGUAGE SWITCHER ============ -->
+        <div class="sg-wrap">
+            <nav class="sg-langbar" aria-label="Language and format">
+                <span class="lb-label">Lesen auf</span>
+                <a href="survival-guide-en.html" lang="en">English</a>
+                <a href="survival-guide-es.html" lang="es" hreflang="es">Espa&ntilde;ol</a>
+                <a href="survival-guide-fr.html" lang="fr" hreflang="fr">Fran&ccedil;ais</a>
+                <a href="survival-guide-it.html" lang="it" hreflang="it">Italiano</a>
+                <a href="survival-guide-de.html" class="active" lang="de" hreflang="de">Deutsch</a>
+                <span class="lb-spacer"></span>
+                <a href="survival-guide.html" class="lb-hub">Guide-Übersicht &amp; druckbares PDF &rarr;</a>
+            </nav>
+        </div>
+
+        <!-- ============ CONTENTS ============ -->
+        <section class="sg-section" id="contents">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Vorspann</span><span class="r">Inhalt</span></div>
+                <h2 class="sg-h2">Inhalt.</h2>
+                <p class="sg-lead sg-muted">Sieben Kapitel. Lesen Sie sie der Reihe nach &mdash; oder springen Sie zu dem Abschnitt, der zur jeweils aktuellen Krise passt.</p>
+                <ol class="sg-toc">
+                    <li><a href="#ch1"><span class="n">01</span><span class="t">Was ist Elsewhere?</span></a></li>
+                    <li><a href="#ch2"><span class="n">02</span><span class="t">Mitmachen</span></a></li>
+                    <li><a href="#ch3"><span class="n">03</span><span class="t">Vorbereiten</span></a></li>
+                    <li><a href="#ch4"><span class="n">04</span><span class="t">Überleben vor Ort</span></a></li>
+                    <li><a href="#ch5"><span class="n">05</span><span class="t">Die Wüste teilen</span></a></li>
+                    <li><a href="#ch6"><span class="n">06</span><span class="t">Praktische Infos</span></a></li>
+                    <li><a href="#ch7"><span class="n">07</span><span class="t">Sicherheitsinfos</span></a></li>
+                </ol>
+                <p class="sg-small" style="margin-top:1.5rem;">Lieber auf Papier? <a href="docs/survival-guide.pdf" target="_blank" rel="noopener">Laden Sie das druckbare PDF herunter</a> &mdash; drucken, falten, im Zelt verstauen.</p>
+            </div>
+        </section>
+
+        <!-- ============ TIMELINE ============ -->
+        <section class="sg-section" id="timeline">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Vorspann</span><span class="r">Zeitplan · Vom Aufbau bis zum Abbau</span></div>
+                <h2 class="sg-h2">Zeitplan.</h2>
+                <p class="sg-lead sg-muted">Bestätigte Meilensteine für Elsewhere 2026. Tragen Sie sie in Ihren Kalender ein; die Wüste wartet nicht auf Sie.</p>
+                <div class="sg-timeline">
+                    <div class="sg-tl-col">
+                        <h4>März</h4>
+                        <p><strong>14 Mar</strong> &mdash; Verkauf der Volunteer-Tickets startet.</p>
+                        <p><strong>20 Mar</strong> &mdash; Öffentlicher Ticketverkauf startet. Wave-1-Preise enden am 14 April.</p>
+                    </div>
+                    <div class="sg-tl-col">
+                        <h4>April</h4>
+                        <p><strong>19 Apr</strong> &mdash; Bewerbungen für Barrio &amp; Placement öffnen.</p>
+                        <p>Registrieren Sie sich auf Humans &mdash; humans.nobodies.team &mdash;, um Rollen und Schichten zu durchstöbern.</p>
+                    </div>
+                    <div class="sg-tl-col">
+                        <h4>Mai</h4>
+                        <p><strong>4 May, 20:00 CEST</strong> &mdash; Bustickets (Barcelona &harr; Gelände) im Verkauf.</p>
+                        <p>Kaufen Sie Ihre Ausrüstung. Wasserkanister, Schatten, Baustahl, Gaffer.</p>
+                    </div>
+                    <div class="sg-tl-col">
+                        <h4>Juni</h4>
+                        <p><strong>~12 Jun</strong> &mdash; Placement-Crew trifft ein.</p>
+                        <p><strong>~15 Jun</strong> &mdash; Aufbauphase beginnt. Packen und umpacken.</p>
+                    </div>
+                    <div class="sg-tl-col">
+                        <h4>Juli</h4>
+                        <p><strong>7 &rarr; 12 Jul</strong> &mdash; Elsewhere findet statt.</p>
+                        <p><strong>~22 Jul</strong> &mdash; Abbau endet. Die Wüste ist wieder zu Staub geworden.</p>
+                    </div>
+                </div>
+                <div class="sg-cards" style="margin-top:2.5rem;">
+                    <div class="sg-card"><h4>Website</h4><p>nobodies.team &mdash; bereinigte Sitzungsprotokolle, FAQ und Richtlinien-Updates, sobald sie eintreffen.</p></div>
+                    <div class="sg-card"><h4>Discord</h4><p>Der zentrale Knotenpunkt. Arbeitsgruppen, Mitfahr-Threads, Governance-Updates, Austausch in Echtzeit.</p></div>
+                    <div class="sg-card"><h4>Humans</h4><p>humans.nobodies.team &mdash; registrieren Sie sich als Volunteer, Mitglied oder Mitwirkende:r. Schichten durchsuchen, abstimmen, koordinieren.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CHAPTER 01 ============ -->
+        <section class="sg-chapter" id="ch1">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 01</span><span class="r">Was ist Elsewhere?</span></div>
+                <div class="sg-chapter-head">
+                    <span class="sg-ghost" aria-hidden="true">01</span>
+                    <span class="sg-eyebrow">Kapitel Eins</span>
+                    <h2 class="sg-h2">Was ist<br>Elsewhere?</h2>
+                </div>
+                <div class="sg-split">
+                    <div>
+                        <p>Elsewhere ist ein sechstägiges partizipatives Zusammentreffen in der Monegros-Wüste, organisiert vom Nobodies Collective, einem gemeinnützigen, von seinen Mitgliedern getragenen spanischen Verein (NCA). Seit 2026 ist Elsewhere ein <strong>offiziell anerkannter Regional Burn</strong> unter der Burning Man Organization. Er beruht auf den zehn Burning-Man-Prinzipien, auf radikaler Teilhabe und auf allem, was Sie selbst einbringen.</p>
+                        <p class="sg-muted">Es gibt keine Zuschauer. Es gibt keine VIPs. Es gibt kein <em>die da</em> &mdash; nur uns, und wir stecken alle gemeinsam darin. Sie sind Publikum und Darsteller zugleich. Sie bauen die Barrios, Sie machen die Kunst, Sie kochen die Mahlzeiten, Sie fegen die Playa.</p>
+                        <p class="sg-muted">Wenn Sie hierhergekommen sind in der Hoffnung, das gemeinsame Ethos und die vertrauten Gesichter früherer Treffen in dieser Wüste wiederzufinden &mdash; dann sind Sie richtig.</p>
+                    </div>
+                    <div class="sg-split-media">
+                        <figure class="sg-fig"><img src="images/survival-guide/what-is.jpg" alt="Eine einzelne Gestalt durchquert die dunstige Monegros-Wüste" loading="lazy"></figure>
+                    </div>
+                </div>
+                <div class="sg-callout">
+                    <p>Man geht nicht nach Elsewhere. Man lässt es entstehen.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About this guide -->
+        <section class="sg-section">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 01</span><span class="r">Über diesen Guide</span></div>
+                <div class="sg-split sg-split--rev">
+                    <div class="sg-split-media">
+                        <figure class="sg-fig"><img src="images/survival-guide/about-aerial.jpg" alt="Luftaufnahme der bunten Barrios und Menschenmengen von Elsewhere" loading="lazy"></figure>
+                    </div>
+                    <div>
+                        <h3 class="sg-h3">Über diesen Guide.</h3>
+                        <p>Alles, was Sie wissen müssen, um sechs Tage in der Wüste zu überstehen, ohne Ihre Würde, Ihre Freunde oder Ihre Wasserflasche zu verlieren.</p>
+                        <p class="sg-muted">Drucken Sie ihn aus. Falten Sie ihn. Verstauen Sie ihn im Zelt. Wenn Sie ein Ticket für jemand anderen gekauft haben, sorgen Sie dafür, dass auch diese Person ein eigenes Exemplar bekommt.</p>
+                        <p class="sg-small">Diese Ausgabe ging im Juni 2026 in Druck. Manche Details können sich bis Juli noch ändern &mdash; prüfen Sie alles Operative anhand der FAQ auf nobodies.team und der neuesten angepinnten Beiträge auf Discord.</p>
+                    </div>
+                </div>
+                <div class="sg-cards" style="margin-top:2rem;">
+                    <div class="sg-card"><h4>Nobodies.team</h4><p>Die offizielle Seite. FAQ, Erklärungen des Vorstands, Ticket-Regelung für Geringverdiener, Transparenzhinweise.</p></div>
+                    <div class="sg-card"><h4>Discord</h4><p>discord.gg/Xmj6YbFwSM &mdash; das lebendige Nervensystem der Community. Abteilungskanäle, Governance, Mitfahrgelegenheiten.</p></div>
+                    <div class="sg-card"><h4>Humans</h4><p>humans.nobodies.team &mdash; melden Sie sich für Schichten an, bewerben Sie sich als Mitwirkende:r oder Mitglied, erhalten Sie Stimmrechte.</p></div>
+                </div>
+                <div class="sg-callout sg-callout--dark">
+                    <p>Das Erste, was Sie wissen sollten: Elsewhere ist überhaupt nicht wie die Festivals, die Sie bisher besucht haben.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10 Core Principles -->
+        <section class="sg-section">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 01</span><span class="r">Zehn Grundprinzipien</span></div>
+                <h3 class="sg-h3">10 Grundprinzipien.</h3>
+                <p class="sg-lead sg-muted">Keine Gebote. Keine Regeln. Ein gemeinsamer Kompass &mdash; zehn Ideen, auf die die Community immer wieder zurückkommt, wenn es darum geht, wie man gemeinsam in einer Wüste miteinander umgeht.</p>
+                <div class="sg-cards">
+                    <div class="sg-card"><span class="sg-num">01</span><span class="sg-card-title">Kooperation</span><span class="sg-card-sub">Gemeinsam sind wir stärker.</span><p>Wenn wir uns gegenseitig das Leben leichter oder schöner machen können, dann tun wir es. Leihen Sie das Werkzeug. Teilen Sie den Schatten. Reichen Sie den Becher weiter.</p></div>
+                    <div class="sg-card"><span class="sg-num">02</span><span class="sg-card-title">Leave No Trace</span><span class="sg-card-sub">Von Staub zu Staub.</span><p>Alles, was Sie mitbringen, kann zu MOOP werden &mdash; Matter Out Of Place. Ihr Müll, Ihre Verantwortung. Immer.</p></div>
+                    <div class="sg-card"><span class="sg-num">03</span><span class="sg-card-title">Eigenverantwortung</span><span class="sg-card-sub">Sorgen Sie für sich selbst.</span><p>Essen, Wasser, Unterkunft, eine Umarmung, eine ruhige halbe Stunde &mdash; besorgen Sie sich, was Sie brauchen. Und bitten Sie dann die Menschen um Sie herum, wenn die Eigenverantwortung an ihre Grenzen kommt.</p></div>
+                    <div class="sg-card"><span class="sg-num">04</span><span class="sg-card-title">Teilhabe</span><span class="sg-card-sub">Auftauchen, mitmachen.</span><p>Was Sie hineingeben, kommt zurück. Die Arbeit ist das Spiel; das Spiel ist die Arbeit. Hier gibt es kein Publikum.</p></div>
+                    <div class="sg-card"><span class="sg-num">05</span><span class="sg-card-title">Schenken</span><span class="sg-card-sub">Ohne Hintergedanken.</span><p>Ein Lied, ein Bier, eine helfende Hand beim Ziehen eines Herings. Geschenke kommen ohne Erwartung einer Gegenleistung &mdash; genau das ist der Sinn.</p></div>
+                    <div class="sg-card"><span class="sg-num">06</span><span class="sg-card-title">Unmittelbarkeit</span><span class="sg-card-sub">Das Jetzt ist alles.</span><p>Seien Sie hier, seien Sie elsewhere, seien Sie präsent. Die ganze Stadt verschwindet in zwei Wochen. Verpassen Sie sie nicht durch einen Bildschirm.</p></div>
+                    <div class="sg-card"><span class="sg-num">07</span><span class="sg-card-title">Kein Kommerz</span><span class="sg-card-sub">Nichts ist zu verkaufen.</span><p>Keine Verkäufer, keine Sponsoren, keine Logos. Das Geld aus der Gleichung zu nehmen, macht Schenken und Kooperation erst echt. Ice ist die einzige Ausnahme.</p></div>
+                    <div class="sg-card"><span class="sg-num">08</span><span class="sg-card-title">Inklusion</span><span class="sg-card-sub">Jede:r kann ein Nobody sein.</span><p>Heißen Sie Menschen so willkommen, wie Sie selbst willkommen geheißen werden möchten. Toleranz reicht nicht &mdash; aktive Inklusion ist die Aufgabe.</p></div>
+                    <div class="sg-card"><span class="sg-num">09</span><span class="sg-card-title">Gemeinschaft</span><span class="sg-card-sub">Eine Familie von Einzelnen.</span><p>Ein bunt zusammengewürfelter Haufen eigenverantwortlicher Fremder, zusammengehalten vom einfachen Wunsch, zu etwas zu gehören, das größer ist als wir selbst.</p></div>
+                    <div class="sg-card"><span class="sg-num">10</span><span class="sg-card-title">Selbstausdruck</span><span class="sg-card-sub">Seien Sie, wer Sie sind.</span><p>Tragen Sie es, tanzen Sie es, singen Sie es, bauen Sie es. Drücken Sie sich laut aus &mdash; und denken Sie daran, dass alle um Sie herum dasselbe Recht haben.</p></div>
+                </div>
+                <div class="sg-split" style="margin-top:1.5rem; align-items:center;">
+                    <div class="sg-callout sg-callout--center" style="margin:0;">
+                        <p>Gemeinsam stärker, jedes Mal.</p>
+                    </div>
+                    <div class="sg-split-media">
+                        <figure class="sg-fig"><img src="images/survival-guide/community-pile.jpg" alt="Ein fröhlicher Haufen von Teilnehmenden zusammen im Staub" loading="lazy"></figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What to expect / glossary -->
+        <section class="sg-section">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 01</span><span class="r">Was Sie vor Ort erwartet</span></div>
+                <h3 class="sg-h3">Was Sie erwartet.</h3>
+                <p class="sg-lead sg-muted">Niemand will, dass Sie krank werden, sich verletzen oder Schlimmeres. Damit unter all dem ein Sicherheitsnetz gespannt ist, kommen engagierte Crews drei Wochen vor Öffnung der Tore aufs Gelände &mdash; sie spannen Schatten, ziehen Strom, bauen die Toiletten, pflanzen die Stadt.</p>
+                <div class="sg-cards">
+                    <div class="sg-card"><h4>Kunst</h4><p>Von Teilnehmenden gemacht. Große Skulpturen, winzige Gesten, Dinge, über die Sie im Staub stolpern. Die offene Wüste ist ihr Zuhause.</p></div>
+                    <div class="sg-card"><h4>Artomobiles</h4><p>Langsam rollende Kunstfahrzeuge &mdash; motorisiert oder mit Pedalkraft. Sie nehmen Sie vielleicht mit. Sie spielen Ihnen vielleicht ein Lied.</p></div>
+                    <div class="sg-card"><h4>Barrios</h4><p>Thematische Nachbarschaften, gebaut von Gruppen von Teilnehmenden. Bewerben Sie sich um ein Placement und steuern Sie etwas Öffentliches bei &mdash; eine Bar, einen Workshop, eine Bühne &mdash;, und Sie bekommen ein Grundstück.</p></div>
+                    <div class="sg-card"><h4>Free Camp</h4><p>Sie wollen sich keinem Barrio anschließen? Campen Sie auf eigene Faust. Wer zuerst kommt, campt zuerst. Sie kümmern sich selbst um Wasser, Essen, Schatten.</p></div>
+                    <div class="sg-card"><h4>Werkhaus</h4><p>Das Zuhause der Aufbau- und Abbau-Crews &mdash; eine gemeinsame Schattenstruktur, ein Ort zum Ausruhen, Essen und Campen an der Seite der Menschen, die die Stadt bauen.</p></div>
+                    <div class="sg-card"><h4>Gate &amp; Greeters</h4><p>Der einzige Ein- und Ausgang. Das Gate prüft Ticket und Ausweis und gibt Ihnen ein Bändchen. Die Greeters heißen Sie willkommen. Am Eingang werden keine Tickets verkauft.</p></div>
+                    <div class="sg-card"><h4>Fire Arena</h4><p>Die einzige Zone, in der Feuer-Performance erlaubt ist &mdash; nach Einbruch der Dunkelheit und unter Aufsicht.</p></div>
+                    <div class="sg-card"><h4>Middle of the Desert</h4><p>Das gemeinschaftliche Herz &mdash; ein großer beschatteter Raum mit Soundsystem. Vorträge, Workshops, Konzerte, Tanzflächen und Nachmittagsschläfchen, wenn die Sonne zu viel ist.</p></div>
+                    <div class="sg-card"><h4>Cantina</h4><p>Die Crew-Küche. Wenn Sie eine 6-stündige Schicht während der Event-Zeit übernehmen, ist eine Mahlzeit Teil der Abmachung. Das Herz des Betriebs während Auf- und Abbau.</p></div>
+                    <div class="sg-card"><h4>Malfare Complex</h4><p>Der rund um die Uhr besetzte Sicherheits-/Sanitäts-/Welfare-Knotenpunkt. Cruz Roja (Red Cross), das Welfare-Team und die Nomads an der Peripherie sind alle hier ansässig.</p></div>
+                    <div class="sg-card"><h4>Welfare</h4><p>Ein 24 Stunden geöffneter, ruhiger, nüchterner, vertraulicher Ort zum Ankommen, Durchatmen, Runterkommen. Rund um die Uhr geöffnet; geschulte Zuhörende im Dienst.</p></div>
+                    <div class="sg-card"><h4>Info Point</h4><p>Die Schaltzentrale für Teilnehmende. Melden Sie sich für Schichten an, fragen Sie alles, finden Sie Mitfahrgelegenheiten, geben Sie Fundsachen ab.</p></div>
+                    <div class="sg-card"><h4>Ice</h4><p>Das einzige, was vor Ort verkauft wird. Täglich 13:00&ndash;19:00 geöffnet, rund &euro;2,50 für einen 2&nbsp;kg-Beutel. Nur Bargeld.</p></div>
+                    <div class="sg-card"><h4>Inclusion Hub</h4><p>Ein sicherer, nüchterner Raum für Familien und alle, die einen ruhigeren Rhythmus brauchen. Täglich von der Community gestaltete Aktivitäten, abseits der größeren Soundsysteme.</p></div>
+                    <div class="sg-card"><h4>Toiletten</h4><p>Vollständig geschlossene mobile Toiletten, dazu überall verteilte Urinale für alle Geschlechter. Rollstuhlgerechte und menstruationsfreundliche Optionen sind vor Ort.</p></div>
+                    <div class="sg-card"><h4>Recycling Zone</h4><p>Wohin Ihr sortierter Müll kommt. Von Volunteers betrieben &mdash; packen Sie mit an. Täglich geöffnet 11:00&ndash;19:00 (Di&ndash;Sa), am letzten Tag 9:00&ndash;18:00.</p></div>
+                </div>
+                <div class="sg-cards sg-cards--2" style="margin-top:1.5rem;">
+                    <div class="sg-note"><h5>Am Gate bereithalten</h5><p>Ihr Ticket (gedruckt oder auf einem geladenen Handy) UND einen gültigen Ausweis, dessen Name mit dem Ticket ÜBEREINSTIMMT. Stimmen die Namen nicht überein &mdash; kommen Sie nicht rein. Keine Ausnahmen.</p></div>
+                    <div class="sg-note"><h5>Profi-Tipp</h5><p>Sortieren Sie Ihren Müll am Zelt, BEVOR Sie ihn zur Recycling Zone bringen. Wenn Sie es nicht tun, machen Sie es dort &mdash; in der Sonne &mdash; vor Publikum.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Harsh environment -->
+        <section class="sg-section">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 01</span><span class="r">Raue Umgebung · Vorsicht!</span></div>
+                <div class="sg-split" style="align-items:start;">
+                    <div>
+                        <h3 class="sg-h3">Raue Umgebung.</h3>
+                        <p>Elsewhere findet in einer echten Wüste statt &mdash; heiß, trocken, ungeschützt, ohne jeden Komfort von zu Hause. Sich daran zu gewöhnen braucht Zeit.</p>
+                        <p class="sg-muted">Wundern Sie sich nicht, wenn sich Ihr erster oder zweiter Tag hart anfühlt. Dinge, die Sie im Alltag wegstecken, treffen Sie hier draußen härter. Gehen Sie es langsam an.</p>
+                    </div>
+                    <div class="sg-split-media">
+                        <div class="sg-stat">
+                            <span class="lbl">Rechnen Sie mit</span>
+                            <span class="big">40&deg;+</span>
+                            <p style="margin:0.8rem 0 0; font-size:0.95rem; line-height:1.5;">Temperaturen von weit über 40&deg;C / 105&deg;F. Respektieren Sie die Sonne. Dies ist nicht der Ort, um an Ihrer Bräune zu arbeiten.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sg-cards" style="margin-top:1.5rem;">
+                    <div class="sg-card"><h4>Siesta</h4><p>Bleiben Sie zwischen 13 und 16 Uhr aus der Sonne. Versuchen Sie eine Siesta &mdash; genau das tun die Einheimischen.</p></div>
+                    <div class="sg-card"><h4>Bedecken</h4><p>Hüte, Sonnenbrillen, Sonnencreme, nasse Kleidung und Unterstände verringern Ihre Sonnenbelastung.</p></div>
+                    <div class="sg-card"><h4>Trinken</h4><p>3&ndash;5 Liter pro Person und Tag. Trinken Sie, bevor Sie durstig sind. Halten Sie Ihren Urin klar.</p></div>
+                </div>
+                <a href="#contents" class="sg-back">&uarr; Zurück zum Inhalt</a>
+            </div>
+        </section>
+
+        <!-- ============ CHAPTER 02 ============ -->
+        <section class="sg-chapter" id="ch2">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 02</span><span class="r">Mitmachen · Volunteering</span></div>
+                <div class="sg-chapter-head">
+                    <span class="sg-ghost" aria-hidden="true">02</span>
+                    <span class="sg-eyebrow">Kapitel Zwei</span>
+                    <h2 class="sg-h2">Mitmachen.</h2>
+                </div>
+                <div class="sg-split sg-split--rev">
+                    <div class="sg-split-media">
+                        <div class="sg-card" style="background:rgba(194,65,12,0.05);">
+                            <h4>Humans</h4>
+                            <p>humans.nobodies.team &mdash; die offizielle Plattform. Legen Sie ein Konto an, durchstöbern Sie die Abteilungen, melden Sie sich für Schichten an, bewerben Sie sich als Mitwirkende:r oder Mitglied.</p>
+                            <p style="margin-top:0.8rem;"><strong style="color:var(--sg-rust);">Profi-Tipp &rarr;</strong> Volunteers erhalten Zugang zu einem eigenen Ticketverkauf vor der öffentlichen Welle.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="sg-lead">Elsewhere wird von den Menschen gebaut, die dafür auftauchen. Es gibt kein &lsquo;die da&rsquo;, das das Event leitet &mdash; nur uns.</p>
+                        <ul class="sg-list">
+                            <li>Früh kommen für den Aufbau oder länger bleiben für den Abbau</li>
+                            <li>Eine Schicht während der Event-Zeit übernehmen</li>
+                            <li>Kunst machen und mitbringen</li>
+                            <li>Einen Workshop leiten, Musik machen, eine Show auf die Beine stellen</li>
+                            <li>Ein Barrio gründen und betreiben</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sg-section">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 02</span><span class="r">Rollen &amp; Engagement</span></div>
+                <h3 class="sg-h3">Drei Ebenen des Engagements.</h3>
+                <p class="sg-lead sg-muted">Nobodies Collective ist ein von seinen Mitgliedern getragener Verein. Über das &lsquo;Volunteer&rsquo;-Sein hinaus können Sie sich auf drei verschiedenen Ebenen einbringen &mdash; jede mit eigenen Rechten und Pflichten.</p>
+                <div class="sg-cards">
+                    <div class="sg-card"><h4>Mitglieder (Asociados)</h4><p>Das demokratische Rückgrat. Stimmen Sie in der Generalversammlung ab, kandidieren Sie für den Vorstand. Bewerbung über Humans &mdash; erfordert mehr als 3 Monate substanziellen Beitrags ODER eine erfolgreiche Leitungsrolle bei einem ähnlichen Event in Spanien.</p></div>
+                    <div class="sg-card"><h4>Mitwirkende</h4><p>Menschen, die außerhalb der Event-Zeit Vorbereitungsarbeit leisten &mdash; Dokumente, Designs, Pläne, Builds. Unterschreiben eine leichte Vereinbarung (IP &amp; DSGVO). Werden oft zur Abstimmung über Community-Angelegenheiten eingeladen.</p></div>
+                    <div class="sg-card"><h4>Volunteers</h4><p>Alle mit Ticket, die vor Ort eine Schicht übernehmen. Kein zusätzlicher Papierkram &mdash; der Code of Conduct, dem Sie beim Kauf zugestimmt haben, genügt.</p></div>
+                </div>
+
+                <h3 class="sg-h3" style="margin-top:2.5rem;">Wo Sie sich einklinken können.</h3>
+                <p class="sg-muted">Keine besonderen Fähigkeiten nötig &mdash; nur Motivation. Mischen und kombinieren Sie.</p>
+                <div class="sg-checks" style="grid-template-columns:repeat(2,1fr);">
+                    <ul class="sg-list">
+                        <li>Kochen Sie gern? &rarr; Cantina.</li>
+                        <li>Geduldiges Ohr, sanfte Stimme? &rarr; Welfare.</li>
+                        <li>Sprechen Sie viele Sprachen? &rarr; Dolmetscher:innen.</li>
+                        <li>Lötkolben? &rarr; Strom, Kommunikation, Sound &amp; Licht.</li>
+                        <li>Eine Antwort auf alles? &rarr; Info Point.</li>
+                        <li>Schwere Maschinen? &rarr; Logistik.</li>
+                    </ul>
+                    <ul class="sg-list">
+                        <li>Liegt Ihnen das Land am Herzen? &rarr; Leave No Trace.</li>
+                        <li>Gehen &amp; anderen helfen? &rarr; Malfare / Nomads.</li>
+                        <li>Energie für den Laden? &rarr; Ice.</li>
+                        <li>Erstes freundliches Gesicht? &rarr; Gate &amp; Greeters.</li>
+                        <li>Familien &amp; teilnehmende Kinder unterstützen? &rarr; Inclusion Hub.</li>
+                        <li>Tabellenkalkulations-Genie? &rarr; Produktion &amp; Verwaltung.</li>
+                    </ul>
+                </div>
+                <div class="sg-cards" style="margin-top:1.5rem;">
+                    <div class="sg-card"><h4>Aufbau (~15 Jun &rarr; 7 Jul)</h4><p>Drei Wochen, in denen die Stadt aus dem Staub erhoben wird &mdash; Stromgräben, Schattenstrukturen, das Vermessen der Straßen, das Versorgen der Crew. Harte Arbeit, tiefe Freundschaften, kostenlose Mahlzeiten in der Cantina.</p></div>
+                    <div class="sg-card"><h4>Abbau (12 &rarr; ~22 Jul)</h4><p>Viele werden Ihnen sagen, dass der Abbau der beste Teil ist. Kleine Crew, lange Abende, die letzten Vorräte als Abendessen und die Jagd nach jedem Krümel MOOP, bis die Wüste unberührt aussieht.</p></div>
+                    <div class="sg-card"><h4>Das ganze Jahr</h4><p>Der Verein ist das ganze Jahr aktiv. Koordinator:innen, Leads, Arbeitsgruppen. Treten Sie Discord und der Humans-App bei, um sich über den Juli hinaus einzubringen.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sg-section">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 02</span><span class="r">Kunst &amp; Teilhabe</span></div>
+                <div class="sg-split">
+                    <div>
+                        <h3 class="sg-h3">Bringen Sie Kunst mit.</h3>
+                        <p>Kunst bei Elsewhere ist kein für ein Publikum kuratiertes Programm &mdash; sie ist das Geschenk, das Sie einer Community bringen, die zurückschenkt. Von einer Klang-Arbeit in einer stillen Ecke bis zu einer Skulptur, in die man hineinklettern kann, zählt alles.</p>
+                        <h4 class="sg-h4" style="margin-top:1.5rem;">Beim Art-Team registrieren</h4>
+                        <p class="sg-muted">Ob Sie mit einem fertigen Werk, einer halb gebackenen Idee auftauchen oder vorhaben, vor Ort etwas zu improvisieren &mdash; registrieren Sie sich beim Art-Team, bevor Sie bauen. Es hilft bei Standortwahl, Sicherheit, Material und einem kleinen Zuschuss, wenn Ihr Projekt dafür in Frage kommt.</p>
+                        <ul class="sg-list">
+                            <li>Künstler:innen bringen ihr eigenes Material und Werkzeug mit &mdash; ein kleines Notfall-Kit ist vor Ort.</li>
+                            <li>Alles aus Metall über 2&nbsp;m muss geerdet werden.</li>
+                            <li>Bewerbungen für Kunstzuschüsse enden am 17 May.</li>
+                        </ul>
+                    </div>
+                    <div class="sg-split-media">
+                        <figure class="sg-fig"><img src="images/survival-guide/art-sculpture.jpg" alt="Eine skulpturale Schattenstruktur, die in der Wüste steht" loading="lazy"></figure>
+                    </div>
+                </div>
+                <div class="sg-cards" style="margin-top:1.5rem;">
+                    <div class="sg-card"><h4>Artomobiles</h4><p>Mutant Vehicles &mdash; motorisiert oder mit Pedal &mdash; müssen vor der Anreise vorab registriert werden. Vor Ort wird jedes Artomobile auf allgemeine Sicherheit geprüft. Bestehen Sie die Prüfung, erhalten Sie Ihren Artomobile Pass, dann dürfen Sie vor Ort fahren. Auch Soundregeln gelten &mdash; die Wüste ist klein und Klang trägt weit.</p></div>
+                    <div class="sg-card"><h4>Innovationsprojekte</h4><p>Machen Sie die Stadt besser. Schnellerer Aufbau, klügere Beleuchtung, weniger Wasser, grünere Energie, weniger Fahrzeuge, schlauere Abfallströme. Muss weder partizipativ noch künstlerisch sein &mdash; auch hinter den Kulissen und funktional ist großartig.</p></div>
+                    <div class="sg-card"><h4>Workshops &amp; Performances</h4><p>Tanz, Musik, Vorträge, Yoga, Knotenkunde, Fermentation, Aktzeichnen, Philosophie, Repair-Cafés. Alles ist möglich. Reichen Sie Ihr Event beim WWW Guide ein, damit die Leute es finden.</p></div>
+                    <div class="sg-card"><h4>Ein Barrio gründen</h4><p>Gemeinschaftscamps bündeln Ressourcen &mdash; teilen Kosten, teilen Küchen, verteilen Arbeit, bauen etwas Öffentliches, das der Rest der Stadt nutzen kann. Eine Bar, eine Bühne, ein Teehaus, ein Trampolin, ein Bällebad. Bewerben Sie sich über das Barrios-Team um ein Placement.</p></div>
+                </div>
+                <a href="#contents" class="sg-back">&uarr; Zurück zum Inhalt</a>
+            </div>
+        </section>
+
+        <!-- ============ CHAPTER 03 ============ -->
+        <section class="sg-chapter" id="ch3">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 03</span><span class="r">Vorbereiten</span></div>
+                <div class="sg-chapter-head">
+                    <span class="sg-ghost" aria-hidden="true">03</span>
+                    <span class="sg-eyebrow">Kapitel Drei</span>
+                    <h2 class="sg-h2">Vorbereiten.</h2>
+                </div>
+                <div class="sg-split sg-split--rev">
+                    <div class="sg-split-media">
+                        <figure class="sg-fig"><img src="images/survival-guide/getprepared-dusk.jpg" alt="Ein Wüstencamp als Silhouette in der Abenddämmerung" loading="lazy"></figure>
+                    </div>
+                    <div>
+                        <p class="sg-lead">Jetzt, da Sie die Grundlagen gelesen haben, sprechen wir über Sie. Was Sie wissen müssen &mdash; und was Sie mitbringen müssen.</p>
+                        <div class="sg-note sg-note--warn">
+                            <h5>Bitte bedenken Sie</h5>
+                            <p>Alles, was Sie nach Elsewhere mitbringen, MUSS nach dem Event wieder mit nach Hause genommen werden. Auch kaputt. Auch dreckig. Auch wenn Sie es nicht mehr haben wollen. Die Volunteers der Waste &amp; Recycling Zone nehmen nur Ihren Lebensmittel- und Getränkemüll entgegen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sg-section">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 03</span><span class="r">Was Sie mitbringen · Checkliste</span></div>
+                <h3 class="sg-h3">Was Sie mitbringen sollten.</h3>
+                <p class="sg-lead sg-muted">Packen Sie leicht, packen Sie klug, packen Sie zweimal. Nutzen Sie dies als Master-Checkliste.</p>
+                <div class="sg-checks">
+                    <div>
+                        <p class="sg-sublabel">Dokumente</p>
+                        <ul class="sg-check">
+                            <li>Gültiger Personalausweis oder Reisepass</li>
+                            <li>Gedrucktes Ticket mit Ihrem Namen (oder geladenes Handy)</li>
+                            <li>Europäische Krankenversicherungskarte oder Nachweis einer Alternative</li>
+                        </ul>
+                        <p class="sg-sublabel">Kleidung &amp; Co.</p>
+                        <ul class="sg-check">
+                            <li>Handtuch</li>
+                            <li>Sonnenbrille</li>
+                            <li>Geschlossene Schuhe (Flip-Flops zum Gehen lieber weglassen)</li>
+                            <li>Schichten für sehr heiße Tage &amp; möglicherweise eiskalte Nächte</li>
+                            <li>Schutzbrille &mdash; für häufige, wirklich staubige Winde</li>
+                            <li>Hut, Tuch, Mütze &mdash; alles, was die Sonne abhält</li>
+                            <li>Regenkleidung &mdash; für eine Wüste wird es ganz schön matschig</li>
+                        </ul>
+                        <p class="sg-sublabel">Campingausrüstung</p>
+                        <ul class="sg-check">
+                            <li>Zelt und Schattenstruktur</li>
+                            <li>30&nbsp;cm (12 Zoll) lange Heringe oder Baustahl (es wird sehr windig)</li>
+                            <li>Mehrjahreszeiten-Schlafsack oder zusätzliche Decke</li>
+                            <li>Isomatte &mdash; der Boden entzieht dem Körper Wärme</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="sg-sublabel">Zubehör</p>
+                        <ul class="sg-check">
+                            <li>Wasserflasche</li>
+                            <li>Sonnencreme</li>
+                            <li>Ein stabiler Becher &mdash; wiederverwendbar, kein Glas. Pflicht.</li>
+                            <li>Tragbarer Aschenbecher (für Raucher)</li>
+                            <li>Taschenlampe mit Batterien &mdash; eine LED-Stirnlampe ist am besten</li>
+                            <li>Gürtel oder Rucksack &mdash; Sie tragen ständig etwas mit sich herum</li>
+                            <li>Starkes Mückenschutzmittel</li>
+                            <li>Augenspülung, Ersatz-Kontaktlinsen, Ihre Brille</li>
+                            <li>Pflanzensprüher / Wasserpistole zum Abkühlen</li>
+                            <li>Ohrstöpsel &amp; Schlafmaske &mdash; nicht alle schlafen, wenn Sie schlafen</li>
+                        </ul>
+                        <p class="sg-sublabel">Hygiene</p>
+                        <ul class="sg-check">
+                            <li>Erste-Hilfe-Set</li>
+                            <li>Händedesinfektionsmittel</li>
+                            <li>Umweltfreundliche Seife</li>
+                            <li>Alle Medikamente (verschreibungspflichtige &amp; rezeptfreie)</li>
+                            <li>Transparente Müllbeutel &amp; Ziplock-Tüten für MOOP</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sg-note">
+                    <h5>Kühle Lagerung</h5>
+                    <p>Wenn Ihre Medikamente kühl gelagert werden müssen, planen Sie im Voraus. Wenden Sie sich bei Fragen oder Bedenken an welfare@nobodies.team.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="sg-section">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 03</span><span class="r">Checkliste 2/2 + Verboten</span></div>
+                <div class="sg-split">
+                    <div>
+                        <h3 class="sg-h3">Wahrscheinlich auch mitbringen.</h3>
+                        <ul class="sg-check">
+                            <li>Taschenmesser oder Multitool</li>
+                            <li>Ein Paar Arbeitshandschuhe</li>
+                            <li>Plastikflaschen oder Tennisbälle, um gefährliche Baustahl-Heringe abzudecken</li>
+                            <li>Kabelbinder</li>
+                            <li>Gaffer- oder Panzertape</li>
+                            <li>Ein Gummihammer</li>
+                            <li>Eine Schaufel</li>
+                            <li>Eine Uhr</li>
+                            <li>Tragbarer Aschenbecher</li>
+                            <li>Lippenbalsam / Lippenpflegestift</li>
+                            <li>Haarbürste</li>
+                            <li>Tampons, Binden, Menstruationstasse</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="sg-h3">Verbotene Gegenstände.</h3>
+                        <p class="sg-muted">Lassen Sie alles, was zerbrechen oder im Wind davonfliegen kann, zu Hause.</p>
+                        <div class="sg-cards sg-cards--2" style="margin:1rem 0;">
+                            <div class="sg-card"><h4>Glas</h4><p>Flaschen, Gläser und alles, was zerspringen kann.</p></div>
+                            <div class="sg-card"><h4>Federn &amp; Glitzer</h4><p>Auch biologisch abbaubar. Der Abbau-Trupp kann den Unterschied nicht erkennen.</p></div>
+                            <div class="sg-card"><h4>Überflüssige Verpackung</h4><p>Entfernen Sie äußere Schichten (z.&nbsp;B. Karton) vor der Ankunft.</p></div>
+                            <div class="sg-card"><h4>Sprengstoff</h4><p>Signalraketen, Raketen, Schusswaffen (inkl. BB- / Luft- / Paintball-Waffen).</p></div>
+                            <div class="sg-card"><h4>Feuerwerk</h4><p>Brennende Fackeln, Holzkohle-Grills, Brandgefahren.</p></div>
+                            <div class="sg-card"><h4>Feststoff-Feuer</h4><p>Grills oder feste Brennstoffe jeder Art.</p></div>
+                            <div class="sg-card"><h4>Himmelslaternen</h4><p>Auch als chinesische Laternen bekannt.</p></div>
+                            <div class="sg-card"><h4>Haustiere</h4><p>Nur vorab registrierte Assistenzhunde erlaubt.</p></div>
+                            <div class="sg-card"><h4>Kunstrasen, Styropor</h4><p>Plastiktüten, Einwegbecher.</p></div>
+                            <div class="sg-card"><h4>Lebende Pflanzen</h4><p>Und &mdash; am wichtigsten &mdash; eine schlechte Einstellung.</p></div>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="sg-h3" style="margin-top:1.5rem;">Verlieren Sie Ihre Sachen nicht.</h3>
+                <p class="sg-muted">Jedes Jahr gehen viele Dinge verloren. Ein paar kleine Gewohnheiten erhöhen die Chance, dass Ihre Sachen nach Hause zurückfinden.</p>
+                <ul class="sg-list">
+                    <li>Beschriften Sie Ihren Becher und Ihre Wasserflasche mit einem Permanentmarker oder Namensschild.</li>
+                    <li>Ersetzen Sie den Sperrbildschirm Ihres Handys durch Ihre Kontaktdaten.</li>
+                    <li>Flip-Flops verschwinden ständig &mdash; machen Sie Ihre leicht erkennbar.</li>
+                    <li>Stunden an einem Kostüm verbracht? Fügen Sie ein Schild mit Ihren Kontaktdaten hinzu.</li>
+                    <li>Wenn eine Tasse seit Generationen in der Familie ist&hellip; lassen Sie sie vielleicht zu Hause.</li>
+                </ul>
+                <a href="#contents" class="sg-back">&uarr; Zurück zum Inhalt</a>
+            </div>
+        </section>
+
+        <!-- ============ CHAPTER 04 ============ -->
+        <section class="sg-chapter" id="ch4">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 04</span><span class="r">Überleben vor Ort</span></div>
+                <div class="sg-chapter-head">
+                    <span class="sg-ghost" aria-hidden="true">04</span>
+                    <span class="sg-eyebrow">Kapitel Vier</span>
+                    <h2 class="sg-h2">Überleben<br>vor Ort.</h2>
+                </div>
+                <p class="sg-lead">Sobald Sie hier sind, stellt die Wüste alles auf die Probe. Campen Sie klug, essen Sie gut, trinken Sie mehr Wasser, als vernünftig erscheint, und respektieren Sie die Toiletten.</p>
+                <div class="sg-cards sg-cards--2">
+                    <div>
+                        <h3 class="sg-h3">Wohin mit meinem Zelt?</h3>
+                        <p class="sg-muted">Elsewhere ist in mehrere Soundzonen unterteilt, von laut bis leise. Eine Karte der Soundzonen und Freecamping-Bereiche ist am Gate erhältlich.</p>
+                        <ul class="sg-list">
+                            <li>Freecamping gilt nach dem Prinzip „Wer zuerst kommt, mahlt zuerst" &mdash; kein Reservieren von Plätzen vor dem Event.</li>
+                            <li>In der Quiet Zone gilt: KEINE Fahrzeuge, KEINE Generatoren, KEIN verstärkter Sound.</li>
+                            <li>Kein Campen auf der Peripheriestraße oder außerhalb der Campingbereiche.</li>
+                            <li>Halten Sie mindestens 100&nbsp;m Abstand zu allen Überschwemmungsbereichen &mdash; Ihr Zelt könnte weggespült werden.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="sg-h3">Unterstand.</h3>
+                        <p class="sg-muted">Vermeiden Sie billige Sofort-Unterstände, die einen Sturm nicht überstehen. Schattenmaterial sollte mindestens zu 80% UV-beständig sein &mdash; besser noch: zwei Lagen verwenden.</p>
+                        <p class="sg-muted">Verwenden Sie Seil oder Kabel, um Ihren Unterstand zu verankern. 30&nbsp;cm (12 Zoll) lange Heringe oder Baustahl sind nötig, um Ihr Zelt gegen starke Winde zu sichern.</p>
+                        <div class="sg-note"><h5>Profi-Tipp</h5><p>Beschweren Sie Ihr Zelt. Wenn Ihre Heringe herausfallen, fliegt Ihr Zelt nicht davon. Bringen Sie Metallplatten mit, um sie an windigen Tagen um die Lamellen zu legen.</p></div>
+                    </div>
+                </div>
+                <div class="sg-cards sg-cards--2" style="margin-top:1.5rem;">
+                    <div>
+                        <h3 class="sg-h3">Essen &amp; Wasser.</h3>
+                        <p class="sg-muted">Es gibt keine zentrale Wasserversorgung. Wir empfehlen 6&ndash;8 Liter pro Tag und Person &mdash; trinken, duschen, kochen, abwaschen.</p>
+                        <p class="sg-muted">Bringen Sie genug Essen für Ihre gesamte Gruppe für die ganze Dauer mit. Getrocknete, eingedoste und andere nicht verderbliche Lebensmittel sind empfehlenswert. Frisches Obst und Gemüse hält nicht &mdash; nur so viel wie für die ersten drei Tage. Snacks sind schön und eignen sich gut als Geschenke.</p>
+                    </div>
+                    <div>
+                        <h3 class="sg-h3">Kochausrüstung.</h3>
+                        <p class="sg-muted">Bringen Sie Ihren eigenen Becher, Teller, Besteck und Spülzeug mit. Wegwerfartikel sind die größte Müllquelle.</p>
+                        <p class="sg-muted">Gas ist der einzige zugelassene Brennstoff &mdash; keine Holzkohle- oder Feststoff-Grills. Halten Sie sich weit von allen brennbaren Materialien fern, einschließlich Zelten und Unterständen, und stellen Sie sicher, dass die Ausrüstung in gutem Zustand ist.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sg-section">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 04</span><span class="r">Toiletten, Generatoren, Blitze</span></div>
+                <div class="sg-split">
+                    <div>
+                        <h3 class="sg-h3">Wie man die Toiletten benutzt.</h3>
+                        <p class="sg-muted">Nur die 3 P sollten in eine Toilette gelangen: Pipi, Po (Kot), Papier. Keine Feuchttücher, Tampons, kein Plastik oder andere Gegenstände.</p>
+                        <p class="sg-muted">Jedes Dixi-Klo wird regelmäßig mit Toilettenpapier und Händedesinfektionsmittel aufgefüllt. Die Toiletten werden von einer Armee fantastischer Shit Ninjas betreut &mdash; jedes Barrio ist für einen Toilettenblock verantwortlich. Welches Barrio das ist, hängt im Holzkasten neben den Toiletten aus.</p>
+                        <p class="sg-muted">Wenn es ein Problem gibt (fehlendes Papier, Desinfektionsmittel usw.), geben Sie ihnen Bescheid, damit es schnellstmöglich behoben werden kann &mdash; zum Vorteil aller.</p>
+                        <div class="sg-note sg-note--warn"><h5>Wichtig</h5><p>Bitte verrichten Sie Ihr großes Geschäft ausschließlich in den bereitgestellten Toiletten. Menschliche Fäkalien sind giftig und können schwere Krankheiten verursachen.</p></div>
+                    </div>
+                    <div>
+                        <h3 class="sg-h3">Generator- &amp; Gassicherheit.</h3>
+                        <ul class="sg-list">
+                            <li>Wenn Sie einen Generator mitbringen, campen Sie nicht in der No-Sound-Zone. Bauen Sie eine Schalldämmung darum herum &mdash; oder teilen Sie sich einen größeren, leiseren.</li>
+                            <li>Platzieren Sie Generatoren innerhalb Ihrer Camp-Grenze, &ge;10&nbsp;m von der Peripheriestraße und &ge;25&nbsp;m von Vegetation entfernt.</li>
+                            <li>Alle Generatoren müssen einen geerdeten Erdspieß haben &mdash; zertifiziert von unserem Team und einem örtlichen Elektriker.</li>
+                            <li>Benzintanks &amp; Gasflaschen: im Schatten, weit von Hitzequellen entfernt, CE-gekennzeichnet.</li>
+                            <li>Große Tanks müssen abgesperrt werden. Benzin &ge;15&nbsp;m vom Generator entfernt lagern.</li>
+                            <li>Gummikomponenten in gutem Zustand, von Hitze ferngehalten.</li>
+                        </ul>
+                        <div class="sg-cards sg-cards--2">
+                            <div class="sg-note"><h5>Vorsicht &mdash; Gelbe Flagge</h5><p>Eine gelbe Flagge bedeutet vergrabenes Stromkabel. Nicht graben.</p></div>
+                            <div class="sg-note"><h5>Feuerlöscher</h5><p>6&nbsp;kg ABC-Pulver. Auch bei reiner Kochausrüstung: Halten Sie einen in Küchennähe bereit.</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sg-note sg-note--warn">
+                    <h5>Gewitter</h5>
+                    <p>Das Gelände ist durch Blitzableiter geschützt, aber seien Sie vorsichtig. Legen Sie sich nicht auf den Boden &mdash; stellen Sie sich mit eng zusammenstehenden Füßen hin oder setzen Sie sich auf einen Stuhl ohne Bodenkontakt. In einem Container oder Auto sind Sie sicher (Faradayscher Käfig). Bleiben Sie nach einem Blitzeinschlag ein paar Minuten drinnen, damit sich das Metall entlädt. Alle Metallstrukturen über 2&nbsp;m Höhe müssen geerdet sein. Nähern Sie sich keinem Generator, wenn Sie nicht dafür qualifiziert sind.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="sg-section">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 04</span><span class="r">Verstehen, wo Sie sind</span></div>
+                <h3 class="sg-h3">Sie &amp; die Monegros-Wüste.</h3>
+                <p class="sg-lead sg-muted">Es gibt Dinge, die Sie in der Standardwelt meistern, die bei Elsewhere viel schwerer auszuhalten sein werden. So wirkt die Wüste auf Sie &mdash; und so schützen Sie sich.</p>
+                <div class="sg-cards">
+                    <div class="sg-card"><h4>Sonne / Hitze</h4><p>Bleiben Sie zwischen 13 und 16&nbsp;Uhr aus der Sonne. Versuchen Sie eine Siesta. Hüte, Sonnenbrillen, Sonnencreme, nasse Kleidung, Unterstand.</p></div>
+                    <div class="sg-card"><h4>Wind</h4><p>Wunderschöne Staubteufel. Stark genug, um Zelte davonfliegen zu lassen. Befestigen Sie alles ordentlich am Boden.</p></div>
+                    <div class="sg-card"><h4>Staub</h4><p>Sie werden ihn schmecken, essen, einatmen. Schutzbrillen sind nicht nur zum Cool-Aussehen da &mdash; sie schützen Sie.</p></div>
+                    <div class="sg-card"><h4>Stürme &amp; Regen</h4><p>Großartig UND gefährlich. Graben Sie Gräben um Ihr Zelt, um nicht Teil eines neu entstandenen Flusses zu werden.</p></div>
+                    <div class="sg-card"><h4>Gelände</h4><p>Die Hügel bestehen aus lockerem Lehm &mdash; nicht zum Klettern. Die Bereiche rund um das Gelände enthalten Löcher und tiefe Risse. Das Gelände verlassen = Verletzungsgefahr.</p></div>
+                    <div class="sg-card"><h4>Biogefahr</h4><p>Der nahegelegene Fluss enthält chemische Abwässer aus der Landwirtschaft und ist NICHT sauber.</p></div>
+                </div>
+                <div class="sg-split" style="margin-top:2rem;">
+                    <div>
+                        <h3 class="sg-h3">Trinken Sie genug Wasser?</h3>
+                        <p class="sg-muted">Einige Anzeichen, dass es nicht so ist:</p>
+                        <ul class="sg-list">
+                            <li>Sie tragen nicht jederzeit eine Wasserflasche bei sich.</li>
+                            <li>Sie nippen, statt richtig zu trinken.</li>
+                            <li>Sie warten, bis Sie durstig sind (zu spät).</li>
+                            <li>Sie werden gereizt.</li>
+                            <li>Ihr Urin ist alles andere als klar und reichlich.</li>
+                        </ul>
+                        <p class="sg-small">Symptome von Dehydrierung: Kopfschmerzen, Magenkrämpfe, Bauchschmerzen, Verstopfung, grippeähnliche Symptome. Bringen Sie Betroffene in den Schatten und kontaktieren Sie Welfare. Alkohol, Koffein und andere Drogen erhöhen das Dehydrierungsrisiko.</p>
+                    </div>
+                    <div class="sg-split-media">
+                        <div class="sg-card" style="background:rgba(194,65,12,0.05);">
+                            <h4>Rezept für Rehydrierungsflüssigkeit (10&nbsp;L)</h4>
+                            <div class="sg-deflist">
+                                <div class="row"><span>Salz (Natrium)</span><span>26&nbsp;g</span></div>
+                                <div class="row"><span>Natriumbicarbonat</span><span>29&nbsp;g</span></div>
+                                <div class="row"><span>Kaliumchlorid (natriumarmes Salz)</span><span>15&nbsp;g</span></div>
+                                <div class="row"><span>Saft (keine Grapefruit)</span><span>5&nbsp;L</span></div>
+                                <div class="row"><span>Sprudelwasser</span><span>1.5&nbsp;L</span></div>
+                                <div class="row"><span>Eis (~2&nbsp;L)</span><span>1 Beutel</span></div>
+                                <div class="row"><span>Wasser</span><span>1.5&nbsp;L</span></div>
+                            </div>
+                            <p style="margin-top:0.7rem;">Gut mischen und rehydrieren. Oder bringen Sie Ihre Lieblings-Sport- / Elektrolytbeutel mit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sg-section">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 04</span><span class="r">Leave No Trace</span></div>
+                <h3 class="sg-h3">Leave no trace.</h3>
+                <p class="sg-lead sg-muted">Sie übernehmen Verantwortung für Ihre Umweltauswirkungen. Denken Sie daran &mdash; es darf kein Beweis dafür zurückbleiben, dass Sie jemals bei Elsewhere waren.</p>
+                <div class="sg-split">
+                    <div>
+                        <h4 class="sg-h4">Die Regeln.</h4>
+                        <ul class="sg-list">
+                            <li>Entfernen Sie alle überflüssige Verpackung vor der Abreise.</li>
+                            <li>MOOP (Matter Out Of Place) gehört nicht auf den Boden &mdash; heben Sie es auf, wenn Sie es sehen.</li>
+                            <li>Verwenden Sie transparente Müllbeutel, damit Volunteers sicher sortieren können.</li>
+                            <li>Räumen Sie täglich Müll aus Ihrem Campingbereich / Barrio.</li>
+                            <li>Bringen Sie Müll während der Öffnungszeiten zur Recycling Zone.</li>
+                            <li>Verlassen Sie Ihr Barrio / Camp mindestens eine Stunde, bevor die W&amp;R Zone schließt.</li>
+                            <li>Fahren Sie in die Stadt? Werfen Sie sortierten Müll dort in die Recyclingcontainer.</li>
+                            <li>Nehmen Sie Ihre Sachen wieder mit nach Hause &mdash; wenn Sie es mitgebracht haben, können Sie es zurücknehmen. Wir können keine kaputten Zelte, Stühle, Teppiche oder ähnliche große Gegenstände annehmen.</li>
+                            <li>Planen Sie Zeit ein, um beim Packen &amp; Aufräumen zu helfen.</li>
+                            <li>Machen Sie vor der Abreise eine Kontrollrunde durch Ihren Zeltbereich.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="sg-h4">Die W&amp;R Zone.</h4>
+                        <p class="sg-muted">Der ausgewiesene Ort für Müll und Recycling. Mit Sorgfalt und Respekt zu nutzen &mdash; Volunteers sollten sich nicht mit den Sachen abmühen müssen, die Sie nicht wollen. Täglich geöffnet 11:00&ndash;19:00 (Di&ndash;Sa), Sonntag 9:00&ndash;18:00.</p>
+                        <div class="sg-cards sg-cards--2">
+                            <div class="sg-card"><h4><span class="sg-dot" style="background:#d9a514;"></span>Gelb</h4><p>Metall, Plastik &amp; Tetrapaks.</p></div>
+                            <div class="sg-card"><h4><span class="sg-dot" style="background:#3f8f4f;"></span>Glascontainer</h4><p>Glas, Flaschen und Gläser.</p></div>
+                            <div class="sg-card"><h4><span class="sg-dot" style="background:#2f6fb0;"></span>Blau</h4><p>Sauberes Papier und Karton. Keine Taschentücher.</p></div>
+                            <div class="sg-card"><h4><span class="sg-dot" style="background:#2a2a2a;"></span>Schwarz</h4><p>Restmüll &mdash; so wenig wie möglich.</p></div>
+                            <div class="sg-card"><h4>Kompostlöcher</h4><p>Kompost &amp; schmutzige Taschentücher. Kein Fleisch, Fisch oder Milchprodukte.</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sg-note">
+                    <h5>Grauwasser</h5>
+                    <p>Werfen Sie es nicht in die Toiletten oder den Kompost. Verwenden Sie umweltfreundliche Seifen und Reinigungsmittel. Filtern Sie es, um große Bestandteile zu entfernen. Essensreste &rarr; kompostierbar (kein Fleisch / Fisch / Milchprodukte). Sammeln Sie es dann entweder, um es in der Stadt zu entsorgen, legen Sie einen Verdunstungsteich / ein Delta an oder verteilen Sie es im umliegenden Gebüsch. Der Boden hier ist nicht sehr durchlässig &mdash; graben Sie keine tiefen Teiche, das Wasser versickert nicht und Sie ziehen Fliegen und Mücken an.</p>
+                </div>
+                <div class="sg-callout sg-callout--dark sg-callout--center">
+                    <p>Von Staub zu Staub &#10022; Hinterlassen Sie nur Fußspuren &#10022; Das ist Ihr Zuhause.</p>
+                </div>
+                <a href="#contents" class="sg-back">&uarr; Zurück zum Inhalt</a>
+            </div>
+        </section>
+
+        <!-- ============ CHAPTER 05 ============ -->
+        <section class="sg-chapter" id="ch5">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 05</span><span class="r">Die Wüste teilen</span></div>
+                <div class="sg-chapter-head">
+                    <span class="sg-ghost" aria-hidden="true">05</span>
+                    <span class="sg-eyebrow">Kapitel Fünf</span>
+                    <h2 class="sg-h2">Leben mit<br>anderen Nobodies.</h2>
+                </div>
+                <p class="sg-lead">Kinder, Inklusion, Pronomen, Fotografie, Drohnen, Sound. Die Kunst, eine Stadt auf Zeit zu teilen, ohne sich gegenseitig das Leben schwer zu machen.</p>
+                <div class="sg-split">
+                    <div>
+                        <h3 class="sg-h3">Kinder.</h3>
+                        <p class="sg-muted">Aus Sicht von Elsewhere und des Gesetzes ist ein Kind jede Person unter 18 Jahren. Prüfen Sie die Öffnungszeiten der Barrios für Minderjährige und den WWW Guide für familienfreundliche Workshops. Darüber hinaus schreibt Elsewhere nicht vor, was für Ihre Kinder angemessen ist &mdash; das tun Sie als Elternteil oder betreuende Person.</p>
+                        <p class="sg-muted">Kinder können von der rauen Umgebung stärker betroffen sein als Erwachsene. Verlorene Kinder unter 12 werden zu Welfare gebracht, bis ihre erwachsene Betreuungsperson gefunden ist. Der Inclusion Hub ist ein Knotenpunkt für Familien.</p>
+                    </div>
+                    <div>
+                        <h3 class="sg-h3">Nur für Erwachsene.</h3>
+                        <p class="sg-muted">Minderjährigen alkoholische Getränke auszuschenken ist illegal &mdash; sie tragen ein andersfarbiges Bändchen.</p>
+                        <p class="sg-muted">Sexuelle Handlungen vorzunehmen, wo Minderjährige anwesend sein könnten, ist in Spanien eine schwere Straftat. Wenn Sie sich darauf einlassen, tun Sie es privat oder in Räumen nur für Erwachsene &mdash; markiert auf der Playspaces Map am Info Point.</p>
+                    </div>
+                </div>
+                <div class="sg-note">
+                    <h5>Inclusion-Team</h5>
+                    <p>Unterstützt Teilnehmende mit Behinderungen &mdash; sprechen Sie uns an zu Mobilität, Guides in Großschrift, Begleitpersonen-Tickets und allen anderen besonderen Bedürfnissen &mdash; Familien, BIPOC-Teilnehmende, LGBTQIA+, alle mit Bedürfnissen oder Anliegen, die über die anderer Teilnehmender hinausgehen. Kontaktieren Sie uns unter inclusion@nobodies.team und finden Sie mehr unter nobodies.team/inclusion</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="sg-section">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 05</span><span class="r">Pronomen &amp; Menstruationspflege</span></div>
+                <div class="sg-split">
+                    <div>
+                        <h3 class="sg-h3">Über Pronomen.</h3>
+                        <p class="sg-muted">Ein Pronomen ist ein Wort, das ein Nomen (insbesondere Namen) ersetzt &mdash; sie/ihr, er/ihm, they/them. Jede Person kann beliebige Pronomen verwenden. Helfen Sie einander, die richtigen Pronomen für eine Person zu verwenden.</p>
+                        <p class="sg-sublabel">Stellen Sie sich vor</p>
+                        <p class="sg-muted">Stellen Sie sich mit Ihrem Namen und Ihren Pronomen vor, egal ob Sie mit einer Person oder einer Gruppe sprechen. Fragen Sie die andere Person nach ihren Pronomen und geben Sie Ihr Bestes, sie sich zu merken.</p>
+                        <p class="sg-sublabel">Die Pronomen vergessen?</p>
+                        <p class="sg-muted">Fragen Sie noch einmal nach. Wenn die Person nicht mehr da ist, verwenden Sie ihren Namen (oder they/them), bis Sie wieder fragen können.</p>
+                        <p class="sg-sublabel">Einen Fehler gemacht?</p>
+                        <p class="sg-muted">Korrigieren Sie sich. Es ist nicht nötig, sich übermäßig zu entschuldigen &mdash; das kann es schlimmer machen.</p>
+                        <p class="sg-sublabel">Mit einer Gruppe sprechen</p>
+                        <p class="sg-muted">&ldquo;Willkommen alle zusammen&rdquo;, &ldquo;Hallo Leute&rdquo;, &ldquo;Hallo zusammen&rdquo;, &ldquo;Hi an alle.&rdquo; Wenn Sie einen Workshop leiten, machen Sie deutlich, für wen er ist, und stellen Sie sich mit Ihren Pronomen vor.</p>
+                    </div>
+                    <div>
+                        <h3 class="sg-h3">Menstruation Stations.</h3>
+                        <p class="sg-muted">Barrierefreie Toiletten mit Handwaschgelegenheit, für Menschen, die ihre Periode haben und eine hygienische Möglichkeit zum Wechseln von Menstruationsprodukten brauchen. Diese Toiletten heißen vor Ort TAP (&ldquo;Total Access! Period.&rdquo;).</p>
+                        <p class="sg-muted">Hinweis: Diese Toiletten haben eine begrenzte Kapazität. Bitte nutzen Sie sie nur, wenn Sie mit Ihrer Menstruation zu tun haben oder Barrierefreiheit benötigen. Wenn die Wassereimer für die Handwaschgelegenheiten leer sind, seien Sie bitte so freundlich und füllen Sie sie am nächstgelegenen Barrio wieder auf.</p>
+                        <p class="sg-muted">Die Stationen sind mit einem Zahlenschloss gesichert, damit sie für die Menschen, die sie brauchen, sauber bleiben. Den Code erhalten Sie bei Welfare und am Info Point. Wenn diese geschlossen sind, erhalten Sie ihn bei Welfare.</p>
+                        <div class="sg-note"><h5>Pronomen sichtbar machen</h5><p>Stecken Sie einen Button an. Schreiben Sie sie auf Ihr Namensschild. Setzen Sie sie in Ihre Bio. Helfen Sie anderen, sich zu erinnern.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sg-section">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 05</span><span class="r">Consent</span></div>
+                <h3 class="sg-h3">Consent.</h3>
+                <p class="sg-lead">Bei Elsewhere sind wir frei, uns auszudrücken, zu teilen, mitzugestalten und im Moment zu sein. Aber wenn unser Handeln das Erleben einer anderen Person direkt verändert, müssen wir deren Einverständnis (Consent) einholen.</p>
+                <p class="sg-muted">Consent geht nicht nur um Sex. Es geht darum, sich rückzuversichern, bevor man einem Wunsch nachgeht, der andere betrifft &mdash; einschließlich nicht-sexueller Berührung, der Nutzung fremder Gegenstände, des Schenkens und des Fotografierens.</p>
+                <div class="sg-cards sg-cards--2">
+                    <div class="sg-card"><span class="sg-num">01</span><span class="sg-card-title">Wissen, was Ihres ist und was ihres.</span><p>Mein Körper gehört mir, dein Körper gehört dir. Selbst beiläufige, verspielte Berührung, die normal erscheint, wird vielleicht nicht gut aufgenommen. Die einzige Art, es zu erfahren, ist zu fragen.</p></div>
+                    <div class="sg-card"><span class="sg-num">02</span><span class="sg-card-title">Bitten Sie um das, was Sie wollen.</span><p>Von einer Person, die einwilligungsfähig ist. Wenn jemand bewusstlos ist, schläft oder zu berauscht ist, kann diese Person nicht zustimmen.</p></div>
+                    <div class="sg-card"><span class="sg-num">03</span><span class="sg-card-title">Hören Sie auf die Antwort.</span><p>Handeln Sie nicht, wenn es etwas anderes als ein klares, begeistertes Ja ist. Versuchen Sie nicht zu überreden. Schweigen ist keine Zustimmung.</p></div>
+                    <div class="sg-card"><span class="sg-num">04</span><span class="sg-card-title">Zeigen Sie Dankbarkeit &mdash; besonders für ein &ldquo;Nein.&rdquo;</span><p>Es ist leicht, einem Ja zu danken. Schwerer und wichtiger ist es, einem Nein zu danken.</p></div>
+                    <div class="sg-card"><span class="sg-num">05</span><span class="sg-card-title">Vergewissern Sie sich immer wieder.</span><p>Zustimmung zu einer Handlung gibt keine Zustimmung zu anderen. Kommunizieren Sie weiter und passen Sie sich an, wie sich die Situation entwickelt.</p></div>
+                    <div class="sg-card"><span class="sg-num">06</span><span class="sg-card-title">Setzen Sie sich für Consent ein.</span><p>Achten Sie auf die Menschen um Sie herum. Fragen Sie auch bei anderen nach, sogar bei Fremden. Lieber nachfragen, als zuzulassen, dass Schaden geschieht.</p></div>
+                    <div class="sg-card"><span class="sg-num">07</span><span class="sg-card-title">Guter Wille zählt.</span><p>Bieten Sie an, was gegenseitige Leichtigkeit, Fürsorge oder Freude schafft &mdash; nicht Druck, Verpflichtung, Verwirrung oder emotionale Schuld. Ihre Absicht setzt das Erleben einer anderen Person nicht außer Kraft. Wenn Sie unsicher sind, ob Ihr Wunsch, Ihre Aufmerksamkeit, Energie oder Präsenz willkommen ist, halten Sie inne und fragen Sie nach.</p></div>
+                    <div class="sg-card"><span class="sg-num">08</span><span class="sg-card-title">Consent beseitigt das Risiko nicht.</span><p>Verschiedene Handlungen bergen verschiedene emotionale, körperliche, soziale und gesundheitliche Risiken. Ein Ja löscht nicht die Verantwortung für Fürsorge, Aufmerksamkeit, Kommunikation oder Konsequenzen. Seien Sie ehrlich über das Maß des Risikos &mdash; sich selbst und anderen gegenüber.</p></div>
+                </div>
+                <p class="sg-small">Consent ist ein großes Thema. Für mehr Informationen und einige großartige Guides wie den Relationship Survival Guide und den Guide to Navigating Sex+ Spaces at Burns besuchen Sie <a href="consent.html">nobodies.team/consent</a></p>
+                <div class="sg-callout sg-callout--center">
+                    <p>Geben Sie nur, was geschätzt wird. Nehmen Sie nur, was angeboten wird.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="sg-section">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 05</span><span class="r">Meldung &amp; Code of Conduct</span></div>
+                <div class="sg-split">
+                    <div>
+                        <h3 class="sg-h3">Wenn Sie eine Consent-Verletzung erleben.</h3>
+                        <p class="sg-sublabel">Im Notfall</p>
+                        <p class="sg-muted">Nomads oder jede:r in der Nähe können helfen. Bitten Sie um Hilfe &mdash; bitten Sie jemanden, einen Nomad zu finden. Nomads sind die Vertreter:innen von Malfare. Sie sind nüchtern, geschult, haben Funkgeräte und stehen rund um die Uhr bereit, um vertraulich bei Verletzungen, Sicherheitsbedenken und zwischenmenschlichen Konflikten zu helfen. Sie besorgen Ihnen jede benötigte Hilfe.</p>
+                        <p class="sg-sublabel">Welfare &amp; der Safer Space</p>
+                        <p class="sg-muted">Wir bieten rund um die Uhr Eins-zu-eins-Unterstützung bei Welfare. Sie können vertraulich mit einer geschulten freiwilligen Person in einer privaten, bequemen, klimatisierten Kabine (dem Safer Space) sprechen. Team-Mitglieder des Safer Space verschiedener Geschlechter und mit verschiedenen Sprachen sind rund um die Uhr entweder im Welfare-Zelt oder auf Abruf verfügbar.</p>
+                        <p class="sg-muted">Wenn Sie eine Consent-Verletzung oder einen heftigen Vorfall erlebt haben, sind wir für Sie da. Manchmal tauchen während des Events Erinnerungen an einen vergangenen Vorfall auf &mdash; es kann sogar sein, dass Sie sich daran erinnern, selbst den Consent einer anderen Person verletzt zu haben. Aus welchem Grund auch immer: Wenn Sie sich im Schock, verletzlich fühlen oder Schwierigkeiten haben, mit Ihrem Erleben umzugehen, suchen Sie bitte Hilfe und unterstützen Sie andere dabei, dasselbe zu tun.</p>
+                        <p class="sg-sublabel">Einen Vorfall melden</p>
+                        <p class="sg-muted">Wenn Sie glauben, dass von einer teilnehmenden Person beim Event eine unmittelbare Gefahr für die Community ausgeht, sprechen Sie mit einem Nomad oder gehen Sie zu Malfare. Consent Incident Report Forms (Meldeformulare für Vorfälle) sind bei Welfare erhältlich, in einem kleinen gelben Zelt im Free-Camping-Bereich und online über einen QR-Code (jede Toilette hat den QR-Code). Bitten Sie einen Barrio Consent Lead oder ein Team-Mitglied des Safer Space um Unterstützung beim Ausfüllen des Formulars. Die Meldeboxen werden täglich von 15.00&ndash;15.30 Uhr geleert, Dienstag bis Sonntag.</p>
+                        <p class="sg-muted">Nach dem Event werden die Meldungen von den Consent Response Leads bearbeitet (mehr zu unserem Ansatz und unseren Prozessen unter <a href="consent.html">nobodies.team/consent</a>). Es lohnt sich immer, einen Vorfall zu melden &mdash; er wird vertraulich behandelt, und es gibt viele Wege, wie er unserer Community helfen kann, sicherer zu werden.</p>
+                        <div class="sg-note sg-note--warn"><h5>Participant Code of Conduct</h5><p>Sie haben ihm beim Ticketkauf zugestimmt. Werfen Sie einen Blick darauf, was darin steht. Wichtig &mdash; Kontaktinformationen von Ihrem Ticket können auf Anfrage an die Consent Response Leads weitergegeben werden, falls eine Verletzung festgestellt wird.</p></div>
+                    </div>
+                    <div>
+                        <h3 class="sg-h3">Fotografie.</h3>
+                        <p class="sg-muted">Fragen Sie immer um Erlaubnis. Machen Sie kein Foto von jemandem gegen dessen Willen. Wenn die Person Sie bittet, ein gerade gemachtes Foto zu löschen, tun Sie es bitte.</p>
+                        <p class="sg-muted">Bei einem Streit winken Sie einen Nomad heran oder kommen Sie zu Welfare, damit Volunteers vermitteln können. Ihr Recht, ein Foto zu machen, hebt niemals das Recht einer anderen Person auf Privatsphäre auf.</p>
+                        <p class="sg-muted">Seien Sie vorsichtig mit dem Posten im Internet. Stellen Sie zu 100% sicher, dass jede Person auf einem Foto damit einverstanden ist, dass es gepostet wird, bevor es online geht. Markieren Sie niemanden ohne ausdrückliche Erlaubnis. Keine Fotos für kommerzielle Zwecke ohne schriftliche Genehmigung des Nobodies Collective.</p>
+                        <p class="sg-muted">Zugelassene Journalist:innen tragen &ldquo;Media&rdquo;-Schilder &mdash; wie bei jeder Person mit Kamera können Sie sie bitten, Sie nicht zu fotografieren.</p>
+                        <h3 class="sg-h3" style="margin-top:1.5rem;">Drohnen.</h3>
+                        <p class="sg-muted">Um Privatsphäre und Grenzen zu respektieren, ist unbefugter Drohnenflug auf dem Gelände während des Events nicht erlaubt. Sie dürfen AUSSERHALB des Geländes fliegen &mdash; halten Sie aber 50&nbsp;m horizontalen Abstand zur Geländegrenze. Bestimmte Flüge können vorab vom Comms-Team genehmigt werden.</p>
+                        <div class="sg-note"><h5>Achtung</h5><p>Unbefugte Flüge werden wahrscheinlich mit einer riesigen Steinschleuder abgeschossen.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sg-section">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 05</span><span class="r">Emotionales Überleben</span></div>
+                <div class="sg-split">
+                    <div>
+                        <h3 class="sg-h3">Emotionales Überleben.</h3>
+                        <p class="sg-sublabel">Bei Elsewhere ist alles härter.</p>
+                        <p class="sg-muted">Das gilt auch für die Art, wie Sie mit Dingen umgehen. Der Austausch kann sich zeitweise zu intensiv anfühlen. Sie fühlen sich vielleicht etwas allein oder entfremdet, ohne die vertrauten Annehmlichkeiten, auf die Sie sich verlassen können.</p>
+                        <p class="sg-muted">Es gibt viele Wege, damit umzugehen &mdash; und die Community ist da, um zu helfen. Sie müssen es nicht allein schaffen.</p>
+                        <div class="sg-callout sg-callout--dark" style="margin-bottom:0;">
+                            <p>Vergessen Sie nicht, den Elsewhere Emotional Survival Guide zu lesen.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="sg-h4">Tipps.</h4>
+                        <ul class="sg-list">
+                            <li>Seien Sie sanft zu Ihrem Körper.</li>
+                            <li>Suchen Sie Hilfe, wenn Sie sie brauchen.</li>
+                            <li>Benennen Sie Ihre Grenzen und kommunizieren Sie &mdash; mit Fremden und geliebten Menschen gleichermaßen.</li>
+                            <li>Machen Sie die Erfahrung, die Sie glücklich macht.</li>
+                            <li>Verbinden Sie sich auf Weisen, mit denen Sie sich wohlfühlen.</li>
+                            <li>Nehmen Sie sich nach Elsewhere Zeit, über Ihre Entscheidungen nachzudenken &mdash; beim Event und in der Standardwelt.</li>
+                        </ul>
+                        <figure class="sg-fig" style="margin-top:1rem;"><img src="images/survival-guide/tents-wide.jpg" alt="Ein weiter Blick über Zelte in der Wüste zur goldenen Stunde" loading="lazy"></figure>
+                    </div>
+                </div>
+                <a href="#contents" class="sg-back">&uarr; Zurück zum Inhalt</a>
+            </div>
+        </section>
+
+        <!-- ============ CHAPTER 06 ============ -->
+        <section class="sg-chapter" id="ch6">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 06</span><span class="r">Praktische Infos · Soundzonen</span></div>
+                <div class="sg-chapter-head">
+                    <span class="sg-ghost" aria-hidden="true">06</span>
+                    <span class="sg-eyebrow">Kapitel Sechs</span>
+                    <h2 class="sg-h2">Sound.</h2>
+                </div>
+                <div class="sg-split sg-split--rev">
+                    <div class="sg-split-media">
+                        <figure class="sg-fig"><img src="images/survival-guide/night-neon.jpg" alt="Leuchtende Neon-Kunstinstallation in der Wüste bei Nacht" loading="lazy"></figure>
+                    </div>
+                    <div>
+                        <p class="sg-lead">Elsewhere ist ein 24-Stunden-Erlebnis auf kleinem Gelände. Nicht alle schlafen oder tanzen, wenn Sie es tun. Kontrollieren Sie, wie weit Ihr Sound trägt.</p>
+                    </div>
+                </div>
+                <div class="sg-table-wrap">
+                    <table class="sg-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th><span class="sg-dot" style="background:#b3331a;"></span>Rote Zone</th>
+                                <th><span class="sg-dot" style="background:#e0772e;"></span>Orange Zone</th>
+                                <th><span class="sg-dot" style="background:#e8b84a;"></span>Gelbe Zone</th>
+                                <th><span class="sg-dot" style="background:#6a9bb5;"></span>Grüne Zone</th>
+                                <th><span class="sg-dot" style="background:#3f6f93;"></span>Blaue Zone</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><th>Sonnenaufgang &rarr; 11:00</th><td>Wohnzimmerparty</td><td>Wohnzimmerparty</td><td>Wohnzimmerparty</td><td>Gesprächslautstärke</td><td>Gesprächslautstärke</td></tr>
+                            <tr><th>11:00 &rarr; Sonnenuntergang</th><td>Discoth&egrave;que</td><td>Bar-Lautstärke</td><td>Wohnzimmerparty</td><td>Gesprächslautstärke</td><td>Kein Sound</td></tr>
+                            <tr><th>Sonnenuntergang &rarr; 04:00</th><td>Discoth&egrave;que</td><td>Discoth&egrave;que</td><td>Bar-Lautstärke</td><td>Wohnzimmerparty</td><td>Kein Sound</td></tr>
+                            <tr><th>04:00 &rarr; Sonnenaufgang</th><td>Discoth&egrave;que (bis 7 Uhr)</td><td>Bar-Lautstärke (bis 3 Uhr)</td><td>Wohnzimmerparty</td><td>Gespräch</td><td>Kein Sound</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="sg-cards">
+                    <div class="sg-card"><h4>Discoth&egrave;que</h4><p>Club-Lautstärke. Keine Einschränkungen &mdash; aber über 95&nbsp;dB kann Hörschäden verursachen.</p></div>
+                    <div class="sg-card"><h4>Bar-Lautstärke</h4><p>(Trendige) Bar &mdash; mittleres Soundsystem, nicht mehr als ~1500&nbsp;W pro Kanal (max. 95&nbsp;dB).</p></div>
+                    <div class="sg-card"><h4>Wohnzimmerparty</h4><p>Hausparty mit normalen Lautsprechern aufgedreht. Auf 5&nbsp;m müssen Sie die Stimme heben, um zu reden. ~70&ndash;85&nbsp;dB.</p></div>
+                    <div class="sg-card"><h4>Gespräch</h4><p>Auf 5&nbsp;m Abstand ein normales Gespräch führen. ~55&ndash;70&nbsp;dB.</p></div>
+                    <div class="sg-card"><h4>Kein Sound</h4><p>Still. KEIN Lärm über Gesprächslautstärke. KEINE Soundsysteme. Generatoren &amp; Autos zu keiner Zeit erlaubt.</p></div>
+                    <div class="sg-card"><h4>Brauchen Sie Hilfe?</h4><p>Sehen Sie in unsere Sound-FAQ oder kontaktieren Sie sound@nobodies.team</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sg-section">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 06</span><span class="r">Die Karte · Orientieren Sie sich</span></div>
+                <h3 class="sg-h3">Die Karte.</h3>
+                <p class="sg-lead sg-muted">Eine Vogelperspektive der Stadt auf Zeit &mdash; Barrios, Soundzonen, Toiletten, Sehenswürdigkeiten, Parkplätze und die Straße zum Gate. Ordnen Sie die Zonenfarben der Sound-Tabelle oben zu.</p>
+                <figure class="sg-fig">
+                    <img src="images/survival-guide/site-map.jpg" alt="Offizielle Geländekarte von Elsewhere 2026 mit Barrios, farbcodierten Soundzonen, Toiletten, Parkplätzen, der W&R Zone und der Straße zum Gate" loading="lazy">
+                    <figcaption>Elsewhere 2026 · Offizielle Geländekarte. Das Layout ist orientierend und kann sich bis Juli noch ändern &mdash; bestätigen Sie Zonengrenzen und Freecamping-Bereiche am Gate und Info Point.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="sg-section">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 06</span><span class="r">Einkaufen &amp; Gas</span></div>
+                <h3 class="sg-h3">Dinge kaufen.</h3>
+                <p class="sg-lead sg-muted">Billig ist teuer. Wenn Sie minderwertige Möbel kaufen, müssen Sie sie nächstes Jahr wieder kaufen.</p>
+                <div class="sg-note">
+                    <h5>Lokal ausgegebenes Geld hat Gewicht</h5>
+                    <p>Unsere örtliche Gastgeber-Community hat uns in den letzten Jahren unterstützt &mdash; lokal einzukaufen fördert das Event und unterstützt uns. Bitte erwägen Sie, unterwegs anzuhalten und einzukaufen oder eine Mahlzeit und ein Getränk in Sari&ntilde;ena oder anderen lokalen Orten zu genießen. Mehrere Geschäfte in Sari&ntilde;ena verkaufen Elsewhere-Essentials für die letzte Minute &mdash; Wasserflaschen, Campingartikel, Sonnenbrillen &mdash;, und lokale Unternehmen zu unterstützen ist immer besser als bestimmte Online-Händler.</p>
+                </div>
+                <div class="sg-split">
+                    <div>
+                        <h4 class="sg-h4">Spanische Öffnungszeiten.</h4>
+                        <p class="sg-sublabel">Kleine Geschäfte</p>
+                        <p class="sg-muted">9:30 &rarr; 13:30 und 17:00 &rarr; 20:00. Samstagnachmittag und sonntags geschlossen.</p>
+                        <p class="sg-sublabel">Supermärkte</p>
+                        <p class="sg-muted">9:00 &rarr; 21:00, Montag bis Samstag. Supermärkte außerhalb der Stadt wie Carrefour haben in der Regel an sechs Tagen die Woche 10:00 &rarr; 22:00 geöffnet.</p>
+                        <p class="sg-muted">Sonntags ist fast nichts geöffnet. Nur große Einkaufszentren und Supermarktketten in Zaragoza und Huesca öffnen am ersten Sonntag jedes Monats.</p>
+                        <h4 class="sg-h4" style="margin-top:1.5rem;">Gas (Vorsicht &mdash; Spanien hat sein eigenes System).</h4>
+                        <p class="sg-muted">Die meisten Baumärkte oder die Sanitärabteilung großer DIY-Märkte wie Leroy Merlin verkaufen kleine Campinggas-Kartuschen. 6&nbsp;kg-Butanflaschen (butano) gibt es an den Tankstellen von Repsol, Campsa und Petronor &mdash; auch in Sari&ntilde;ena. Pfand hinterlegen, Flasche zurückgeben. 12,5&nbsp;kg-Flaschen erfordern einen Vertrag und höheres Pfand.</p>
+                        <p class="sg-muted">Propan (propano) ist schwer zu kaufen. Spanische Gasflaschen verwenden einen speziellen Bajonettanschluss &mdash; stellen Sie sicher, dass Sie den richtigen Adapter haben. Manche Baumärkte verkaufen Umsetzer.</p>
+                    </div>
+                    <div>
+                        <h4 class="sg-h4">Wo einkaufen.</h4>
+                        <div class="sg-cards sg-cards--2">
+                            <div class="sg-card"><h4>Castej&oacute;n de Monegros</h4><p>Der nächstgelegene kleine Ort zum Gelände, aber wegen schlechter Straßenverhältnisse schwerer zu erreichen. Tante-Emma-Laden, Tankstelle (verkauft auch Eis), Bäckerei, Metzgerei.</p></div>
+                            <div class="sg-card"><h4>Sari&ntilde;ena</h4><p>Etwas größer, größere Auswahl. Geldautomaten, größere Supermärkte, Baumarkt (ferreter&iacute;a), Apotheke (farmacia), nächstgelegenes Gesundheitszentrum, zwei Hotels, Bahnhof (etwa 3&nbsp;km vom Ort entfernt).</p></div>
+                            <div class="sg-card"><h4>Fraga oder Lleida</h4><p>Einen Blick wert für Lebensmittel, wenn Sie aus Barcelona oder von Norden kommen.</p></div>
+                            <div class="sg-card"><h4>Huesca / Zaragoza</h4><p>Die regionalen Handelszentren. Cash &amp; Carry (Makro &mdash; nur für Karteninhaber), Supermärkte (Carrefour), DIY &amp; Holz (Leroy Merlin, Brico Depot, Aki), allgemeine Baumärkte, Fahrzeug- &amp; Werkzeugverleih.</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sg-note sg-note--warn">
+                    <h5>Stadttauglich kleiden</h5>
+                    <p>Bitte denken Sie daran, sich zivilisationstauglich zu kleiden, wenn Sie in die Stadt fahren. Die Einheimischen haben Elsewhere stark unterstützt &mdash; ihre Geschäfte zu unterstützen hält die Beziehung warm.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="sg-section">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 06</span><span class="r">Anreise</span></div>
+                <h3 class="sg-h3">Anreise.</h3>
+                <div class="sg-cards">
+                    <div class="sg-card"><h4>Fahrgemeinschaften</h4><p>Mitfahren ist eine coole Art, mit Freunden zu reisen oder neue zu finden. Reduziert Verkehr, Umweltverschmutzung und Reisekosten.</p></div>
+                    <div class="sg-card"><h4>Mietwagen</h4><p>In den regionalen Handelszentren verfügbar. Planen Sie im Voraus &mdash; die Kompatibilität spanischer Gasflaschen ist wichtig, wenn Sie kochen.</p></div>
+                    <div class="sg-card"><h4>Eigenes Fahrzeug</h4><p>Nutzen Sie Ihr eigenes Fahrzeug. Achten Sie auf die Straßenverhältnisse, besonders in der Nähe von Castej&oacute;n.</p></div>
+                    <div class="sg-card"><h4>Zug</h4><p>Der nächstgelegene Bahnhof ist Sari&ntilde;ena &mdash; etwa 3&nbsp;km vom Ort entfernt. Die Bushaltestelle ist am Bahnhof.</p></div>
+                    <div class="sg-card"><h4>Elsewhere-Bus</h4><p>Jedes Jahr mietet ein engagiertes Team mehrere Busse, meist von / zum Flughafen &amp; Bahnhof Barcelona. Sehen Sie in den Newsletter oder die Website.</p></div>
+                    <div class="sg-card"><h4>Flugzeug</h4><p>Nächstgelegene Flughäfen: Zaragoza, Barcelona, Reus. Ebenfalls nützlich: Girona, Bilbao, Madrid, Valencia.</p></div>
+                </div>
+                <h3 class="sg-h3" style="margin-top:2rem;">Parken.</h3>
+                <p class="sg-muted">Elsewhere ist ein verkehrsfreies Event, außer für Artomobiles unter bestimmten Bedingungen. Wenn Sie auf dem Gelände ankommen, haben Sie zwei Möglichkeiten:</p>
+                <div class="sg-cards sg-cards--2">
+                    <div class="sg-card"><h4>Parkplatz</h4><p>Wenn Sie Ihr Fahrzeug während der Woche brauchen (z.&nbsp;B. Lebensmittel) &mdash; holen Sie sich am Gate eine Parkplatz-Genehmigung und legen Sie sie hinter die Windschutzscheibe. Laden Sie zuerst in Ihrem Campingbereich aus, fahren Sie dann auf den Parkplatz. Einmal geparkt, können Sie nicht wieder hineinfahren.</p></div>
+                    <div class="sg-card"><h4>Parken auf dem Gelände</h4><p>Wenn Sie Ihr Fahrzeug in der Nähe Ihres Campingbereichs / Barrios haben möchten &mdash; holen Sie sich am Gate eine On-Site-Genehmigung und legen Sie sie hinter die Windschutzscheibe. Sie können es bis zum Ende Ihres Aufenthalts nicht bewegen.</p></div>
+                </div>
+                <h3 class="sg-h3" style="margin-top:2rem;">Fahrregeln.</h3>
+                <ul class="sg-list">
+                    <li>Die Gate-Straße öffnet und schließt 30 Minuten vor/nach den Betriebszeiten des Gate. Kommen Sie früh &mdash; warten Sie. Kommen Sie spät &mdash; werden Sie abgewiesen. Keine Ausnahmen.</li>
+                    <li>Nachts kein Fahren auf dem Gelände. Ankunft am Gate nach 21:30 &mdash; über Nacht parken, zu Fuß aufs Gelände. Fahrzeug nach 08:00 abholen.</li>
+                    <li>Halten Sie das Tempolimit von 10&nbsp;km/h auf dem Gelände ein. Wenn Sie Staub im Rückspiegel sehen, fahren Sie zu schnell.</li>
+                    <li>Private Fahrzeuge nur auf den Peripheriestraßen erlaubt. Artomobiles dürfen im zentralen Bereich fahren.</li>
+                </ul>
+                <div class="sg-note sg-note--warn"><h5>Wichtig &mdash; Regen</h5><p>Bei Regen wird der letzte Teil der Straße gesperrt und keine Fahrzeuge zugelassen. Keine Ausnahme. Bleiben Sie in der Stadt, trinken Sie einen Kaffee, warten Sie eine Stunde, nachdem der Regen aufgehört hat.</p></div>
+            </div>
+        </section>
+
+        <section class="sg-section">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 06</span><span class="r">Wegbeschreibung &amp; Gate-Zeiten</span></div>
+                <div class="sg-split">
+                    <div>
+                        <h3 class="sg-h3">Wegbeschreibung.</h3>
+                        <p class="sg-muted">Beginnen Sie mit der Repsol-Tankstelle (Avenida de Fraga 17, Sari&ntilde;ena) zu Ihrer Linken und fahren Sie aus Sari&ntilde;ena hinaus. Stellen Sie km auf 0.</p>
+                        <div class="sg-deflist">
+                            <div class="row"><span><strong>0.4 km</strong></span><span>Über die Brücke fahren und rechts halten.</span></div>
+                            <div class="row"><span><strong>7.4 km</strong></span><span>Rechts abbiegen (großes braunes Schild mit der Aufschrift RUTA JUBIERRE). Auf der Hauptstraße bleiben.</span></div>
+                            <div class="row"><span><strong>13.3 km</strong></span><span>Die Brücke überqueren.</span></div>
+                            <div class="row"><span><strong>13.9 km</strong></span><span>90&deg;-Winkel (Schild COTO DEPORTIVO DE CAZA). Der Straße bergauf Richtung Ermita folgen.</span></div>
+                            <div class="row"><span><strong>14.0 km</strong></span><span>An der Ermita zu Ihrer Linken vorbeifahren und geradeaus weiter.</span></div>
+                            <div class="row"><span><strong>14.6 km</strong></span><span>Abzweigung zum Gelände von 2013 &mdash; NICHT abbiegen. Geradeaus weiter.</span></div>
+                            <div class="row"><span><strong>15.1 km</strong></span><span>Abzweigung zum Gelände von 2016 &mdash; NICHT abbiegen. Geradeaus weiter.</span></div>
+                            <div class="row"><span><strong>17.1 km</strong></span><span>Links auf die Straße nach Elsewhere abbiegen&hellip;</span></div>
+                            <div class="row"><span><strong>19.5 km</strong></span><span>Welcome home! Sie haben das Gate erreicht.</span></div>
+                        </div>
+                        <div class="sg-note"><h5>GPS &mdash; Elsewhere 2026</h5><p>41&deg;40&prime;45.4&Prime; N, 0&deg;09&prime;04.3&Prime; W &mdash; 41.679270, -0.151182</p></div>
+                    </div>
+                    <div>
+                        <h3 class="sg-h3">Öffnungszeiten des Gate.</h3>
+                        <p class="sg-sublabel">Vor dem Event (Early-Entry-Ticket erforderlich)</p>
+                        <ul class="sg-list">
+                            <li>Mi 1 &rarr; So 5 July: 10:00 &rarr; 22:00</li>
+                            <li>Mo 6 July: 14:00 &rarr; 00:00</li>
+                        </ul>
+                        <p class="sg-small">Wir können erst öffnen, nachdem wir unsere Genehmigungsinspektion abgeschlossen haben. Wir sollten bis 14:00 fertig sein, aber wenn Sie genau um 14:00 ankommen, müssen Sie möglicherweise warten, bis die Inspektion abgeschlossen ist.</p>
+                        <p class="sg-sublabel">Event</p>
+                        <ul class="sg-list">
+                            <li>Di 7 &rarr; Do 9 July: 10:00 &rarr; 22:00</li>
+                            <li>Fr 10 July: 10:00 &rarr; 18:00</li>
+                            <li>Sa 11 &rarr; So 12 July: NUR AUSGANG · KEIN EINLASS</li>
+                        </ul>
+                        <p class="sg-small">Es gibt einen Sicherheits-Checkpoint 30 Minuten Fahrt vom Gate entfernt. Wenn Sie dort mit weniger als 30 Minuten bis zur Schließung des Gate ankommen, werden Sie nicht eingelassen &mdash; rechnen Sie es nicht zu knapp. Wenn Sie nach Einbruch der Dunkelheit auf dem Gelände ankommen, müssen Sie Ihr Auto am Gate lassen und es am nächsten Tag abholen. Wenn Sie aufgrund äußerer Einflüsse außerhalb der offiziellen Zeiten ankommen, kontaktieren Sie gate@nobodies.team.</p>
+                        <div class="sg-note sg-note--warn"><h5>Early Entry</h5><p>Wenn Sie vor dem 6 July ohne Early-Entry-Ticket am Gate auftauchen, werden Sie abgewiesen.</p></div>
+                    </div>
+                </div>
+                <a href="#contents" class="sg-back">&uarr; Zurück zum Inhalt</a>
+            </div>
+        </section>
+
+        <!-- ============ CHAPTER 07 ============ -->
+        <section class="sg-chapter" id="ch7">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 07</span><span class="r">Sicherheitsinfos</span></div>
+                <div class="sg-chapter-head">
+                    <span class="sg-ghost" aria-hidden="true">07</span>
+                    <span class="sg-eyebrow">Kapitel Sieben</span>
+                    <h2 class="sg-h2">Sicherheit.</h2>
+                </div>
+                <p class="sg-lead">Lesen Sie dies aufmerksam. Im Notfall werden Sie sich dafür danken, es getan zu haben.</p>
+                <div class="sg-split">
+                    <div>
+                        <div class="sg-callout sg-callout--dark" style="margin-top:0;">
+                            <p style="font-size:clamp(1.3rem,3vw,1.8rem);">Notrufnummern<br>112 &nbsp;·&nbsp; +34 613 145 492</p>
+                        </div>
+                        <p class="sg-small">Wählen Sie 112 für alle nationalen Notdienste. Oder rufen Sie die Direktleitung von Elsewhere an.</p>
+                    </div>
+                    <div>
+                        <h3 class="sg-h3">EU-Krankenversicherungskarte.</h3>
+                        <p class="sg-muted">Gesundheitszentren behandeln jede Person kostenlos, aber Sie zahlen Medikamente in der Apotheke selbst. Wenn ein Krankenhausbesuch nötig ist, zahlen Sie selbst, wenn Sie keine Europäische Krankenversicherungskarte haben.</p>
+                        <p class="sg-sublabel">Sari&ntilde;ena</p>
+                        <p class="sg-muted">Centro de salud &mdash; 25 Minuten entfernt. Carretera Zaragoza, Avenida Zaragoza 10, 22200 Sari&ntilde;ena. +34 974 571 027 (Notfälle) · +34 974 571 202 (Termine)</p>
+                        <p class="sg-sublabel">Huesca (Krankenhaus)</p>
+                        <p class="sg-muted">Über 1 Stunde entfernt. Hospital San Jorge, Avenida Mart&iacute;nez de Velasco 36, 22004 Huesca. +34 974 247 000</p>
+                    </div>
+                </div>
+                <h3 class="sg-h3" style="margin-top:2rem;">Evakuierung des Geländes.</h3>
+                <p class="sg-muted">Aufgrund der Größe des Events ist Elsewhere verpflichtet, einen genehmigten Evakuierungsplan zu haben und ein Mittel, ihn allen Teilnehmenden mitzuteilen.</p>
+                <div class="sg-cards">
+                    <div class="sg-card"><h4>Alle</h4><p>Evakuieren Sie wie vom Welfare Shift Lead und dem Welfare-Personal (Warnwesten) angewiesen, über die ausgewiesenen Routen.</p></div>
+                    <div class="sg-card"><h4>Menschen mit Behinderungen</h4><p>Werden abgeholt und zum Evakuierungspunkt gebracht. Eigene Fahrzeuge dürfen genutzt werden. Halten Sie am Gate mit einer Liste, wer vom Gelände gebracht wurde.</p></div>
+                    <div class="sg-card"><h4>Red Cross</h4><p>Entscheidet, ob die in ihrer Obhut befindlichen Personen sich selbst transportieren können oder Transport per Gelände-Fahrzeug / Krankenwagen brauchen.</p></div>
+                    <div class="sg-card"><h4>Berauschte Teilnehmende</h4><p>Werden von Freunden begleitet oder von Personen, die bereit sind, Kraft und Überzeugung einzusetzen, um sie vom Gelände zu bringen.</p></div>
+                    <div class="sg-card"><h4>Barrio Leads</h4><p>Stellen sicher, dass alle Camp-Mitglieder gezählt sind &mdash; besonders in den Zelten.</p></div>
+                    <div class="sg-card"><h4>Eltern</h4><p>Sind jederzeit für ihre Kinder verantwortlich.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sg-section">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 07</span><span class="r">Brandschutz</span></div>
+                <h3 class="sg-h3">Brandschutz.</h3>
+                <div class="sg-note sg-note--warn">
+                    <h5>Extreme Waldbrandgefahr</h5>
+                    <p>In Los Monegros besteht extreme Waldbrandgefahr. In diesem Gebiet gilt ein totales Feuerverbot. Dies wird gesetzlich durchgesetzt.</p>
+                </div>
+                <div class="sg-split">
+                    <div>
+                        <h4 class="sg-h4">Das bedeutet&hellip;</h4>
+                        <ul class="sg-list">
+                            <li>Kein Feuerwerk, keine Feuerfackeln, keine Knaller.</li>
+                            <li>Schnipsen Sie keine Zigarettenkippen weg.</li>
+                            <li>Keine Grills, Lagerfeuer oder anderen Feuer (Gasgrills &amp; Gas-Campingkocher sind okay; kein fester Brennstoff).</li>
+                            <li>Keine Küchen oder Hitzequellen innerhalb von 10&nbsp;m innerhalb der Geländegrenze.</li>
+                            <li>Kein Spielen mit Feuer-Requisiten außerhalb der Fire Arena und der vorgesehenen Zeiten.</li>
+                        </ul>
+                        <h4 class="sg-h4" style="margin-top:1.5rem;">Wenn Sie ein Feuer entdecken.</h4>
+                        <ul class="sg-list">
+                            <li>Rufen Sie um Hilfe. Stellen Sie sicher, dass die Leute Ihr Anliegen verstehen.</li>
+                            <li>Bringen Sie Menschen vom Feuer weg.</li>
+                            <li>Bringen Sie brennbare Stoffe (Holz, Zelte, Benzin) so weit wie möglich weg.</li>
+                            <li>Bekämpfen Sie das Feuer nur so weit, wie Sie sich sicher fühlen.</li>
+                            <li>Verbrauchen Sie nicht weniger als 2 Feuerlöscher zur Bekämpfung des Feuers.</li>
+                            <li>Verwenden Sie Erde oder Wasser, um es weiter zu löschen.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="sg-h4">Feueralarm &amp; Übung.</h4>
+                        <p class="sg-muted">Zwei Arten von Feuerereignissen würden eine schnelle Evakuierung des Geländes auslösen:</p>
+                        <ul class="sg-list">
+                            <li>Ein Feuer auf dem Gelände.</li>
+                            <li>Ein Feuer außerhalb des Geländes, das das Event bedroht.</li>
+                        </ul>
+                        <p class="sg-muted">Wenn das Personal des Nobodies Collective der Ansicht ist, dass das Feuer nicht eingedämmt werden kann, wird eine Evakuierung des Geländes durchgeführt. Der Welfare Shift Lead ist für die Evakuierung verantwortlich und kann je nach Verlauf des Geschehens vom Protokoll abweichen.</p>
+                        <div class="sg-note"><h5>Sirenenalarm</h5><p>Gehen Sie schnell zum Sammelpunkt (vor dem Red Cross) und lassen Sie Ihre Sachen zurück. Seien Sie bereit, zum Evakuierungspunkt zu laufen &mdash; Ermita de San Miguel &mdash;, sofern das Welfare-Personal nichts anderes anweist.</p></div>
+                        <p class="sg-small">Feuerübung &mdash; wenn Sie einen Early-Entry-Pass haben, müssen Sie teilnehmen. Die rechtliche Genehmigung des Events hängt davon ab. Kein Witz.</p>
+                        <div class="sg-note"><h5>Feuereffekte in Ihrem Camp / Kunstwerk?</h5><p>Kontaktieren Sie uns vor dem Event unter firesafety@nobodies.team</p></div>
+                    </div>
+                </div>
+                <div class="sg-callout sg-callout--dark sg-callout--center">
+                    <p>Spielen Sie nicht den Helden &#10022; Werden Sie nicht selbst Teil des Problems.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="sg-section">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Kapitel 07</span><span class="r">Allgemeine Teilnahmebedingungen</span></div>
+                <h3 class="sg-h3">Allgemeine Bedingungen für Teilnahme &amp; Zugang &mdash; 2026.</h3>
+                <p class="sg-muted">Der Kauf des Tickets und/oder der Eintritt zum Event bedeutet die Annahme und das Einverständnis mit den folgenden Geschäftsbedingungen, als teilnehmende Person.</p>
+                <div class="sg-cards sg-cards--2">
+                    <div class="sg-card"><h4>1 · Haftungsausschluss</h4><p>Die teilnehmende Person übernimmt durch den Besuch dieses Events freiwillig das Risiko von Sachverlust, schwerer Verletzung oder Tod und übernimmt die volle Verantwortung und Haftung für ihre Teilnahme.</p><p>Kunstinstallationen, Theme Camps (Barrios), Fahrzeuge, Events und Performances sind nicht im Besitz von Nobodies Collective S.L. und werden nicht von ihr betrieben. Die teilnehmende Person übernimmt jegliches Risiko von Verletzung oder Verlust, das aus deren Betrieb entsteht, und stellt Nobodies Collective von jedem damit verbundenen Anspruch frei. Sie übernehmen die Risiken körperlicher Aktivität oder Arbeit und die Verantwortung für Schutzausrüstung &mdash; deren Verwendung, wenn erforderlich, und die Überprüfung ihres Zustands.</p><p>Die teilnehmende Person erklärt sich bereit, Nobodies Collective, ihre leitenden Personen, Direktoren, Mitglieder, Angestellten, Volunteers, Vertreter:innen, Beauftragten, Auftragnehmer, Subunternehmer und andere Teilnehmende von allen Schäden, Verletzungen, Verlusten, Haftungen und Kosten freizustellen, die aus der Teilnahme an einem Programm, Event, einer Aktivität oder Dienstleistung entstehen.</p></div>
+                    <div class="sg-card"><h4>2 · Bitte bedenken Sie</h4><p>Die teilnehmende Person erklärt sich bereit, diese Bedingungen, die Regeln im Survival Guide, die Prinzipien der Teilhabe einzuhalten und das lokale und nationale spanische Recht zu befolgen. Alle Fahrzeuge, die das Eventgelände betreten und verlassen, können vom Gate-Personal durchsucht werden. Teilnehmende müssen genug Essen, Wasser, Unterkunft und Erste Hilfe mitbringen, um eine Woche in einer rauen Wüstenumgebung zu überleben. Kommerzieller Verkauf ist verboten, ebenso Schusswaffen, feste Brennstoffe, Feuerwerk, Raketen und andere Sprengstoffe.</p><p>Dies ist ein Leave-No-Trace-Event. Sie werden gebeten, zusätzlich zu Ihrem eigenen Camp mindestens eine Stunde zur Reinigung des Geländes beizutragen, bevor Sie abreisen.</p></div>
+                    <div class="sg-card"><h4>3 · Hausrecht</h4><p>Kinder unter 18 Jahren müssen von ihrem Elternteil oder Vormund begleitet werden. Die begleitende erwachsene Person stimmt den Vertragsbedingungen im Namen des Kindes zu und ist allein für es verantwortlich, wobei sie Nobodies Collective während des Events von jeglicher Haftung freistellt.</p><p>Verhalten, das dem Code of Conduct und dem Gesetz zuwiderläuft, führt zum Verweis ohne Wiedereintritt und zur Benachrichtigung der zuständigen Behörden. Das Betreten oder Verbleiben beim Event ohne Ticket oder gültiges Bändchen &mdash; oder anderen dabei zu helfen &mdash; führt zum sofortigen Verweis und zur Benachrichtigung der Rechtsbehörden. Der Eintritt ist eine widerrufliche Lizenz.</p></div>
+                    <div class="sg-card"><h4>4 · Vorzeitige Beendigung des Events</h4><p>Der Ticketbetrag ist nach dem Kauf zu keinem Zeitpunkt erstattungsfähig, wenn das Event abgesagt wird &mdash; einschließlich vorzeitiger Beendigung aufgrund von rauem Wetter, Naturereignissen, behördlicher Regulierung oder anderen Bedingungen außerhalb der Kontrolle von Nobodies Collective.</p></div>
+                    <div class="sg-card"><h4>5 · Datenschutz</h4><p>Zum Schutz der Privatsphäre und der freien Meinungsäußerung ist die Verwendung von bei Elsewhere aufgenommenen Bildern (außer für den persönlichen Gebrauch) ohne vorherige schriftliche Zustimmung von Nobodies Collective streng verboten. Jegliches während des Events aufgenommene Bild, Tonmaterial, Video oder jeglicher Text wird unwiderruflich der Organisation übertragen. Verkauf, Vermietung, Verpachtung oder Abtretung dieser Elemente an Dritte vor, während oder nach dem Event ist verboten. Jeder Verstoß wird verfolgt; die Nichtannahme dieser Klausel ist ein Grund für Ausschluss oder sofortigen Verweis ohne Anspruch auf Erstattung.</p></div>
+                    <div class="sg-card"><h4>6 · Gesundheitsvorsorge &amp; Sicherheit</h4><p>Das Event handelt im Einklang mit den Vorschriften der Diputaci&oacute;n General de Arag&oacute;n in Gesundheitsfragen und kann im Interesse der Teilnehmenden und der lokalen Gemeinschaften außerordentliche Vorsorge- und Sicherheitsmaßnahmen umsetzen.</p></div>
+                    <div class="sg-card"><h4>7 · Aktualisierungen</h4><p>Nobodies Collective kann die teilnehmende Person per E-Mail oder Post mit Neuigkeiten kontaktieren. Diese Bedingungen können aktualisiert werden &mdash; die endgültige Fassung finden Sie im neuesten Survival Guide. Das Event und diese Bedingungen unterliegen spanischem Recht. Im Streitfall akzeptiert die teilnehmende Person die Zuständigkeit der Gerichte und Tribunale von Barcelona. Bei Übersetzungsdiskrepanzen ist die spanische Fassung maßgeblich.</p></div>
+                </div>
+                <div class="sg-note sg-note--warn"><h5>Beachten Sie</h5><p>Nach spanischem Recht kann die Polizei Ihr Auto bei geringem Verdacht durchsuchen. Denken Sie daran, zu kooperieren.</p></div>
+                <a href="#contents" class="sg-back">&uarr; Zurück zum Inhalt</a>
+            </div>
+        </section>
+
+        <!-- ============ CLOSING ============ -->
+        <section class="sg-section" id="welcome-home" style="padding-bottom:1rem;">
+            <div class="sg-wrap">
+                <div class="sg-runhead"><span>Nachspann</span><span class="r">Letztes Wort</span></div>
+                <span class="sg-eyebrow">Das letzte Wort</span>
+                <h2 class="sg-h2" style="font-size:clamp(3rem,8vw,5.5rem);">Welcome<br>home.</h2>
+                <p class="sg-lead">Man besucht Elsewhere nicht. Man erschafft es. Bringen Sie Wasser mit. Bringen Sie Geduld mit. Bringen Sie etwas zum Verschenken mit. Wir sehen uns auf dem Field of Dirt.</p>
+                <div class="sg-cards">
+                    <div class="sg-card"><h4>Für Infos</h4><p><a href="/">www.nobodies.team</a></p></div>
+                    <div class="sg-card"><h4>E-Mail</h4><p><a href="mailto:hello@nobodies.team">hello@nobodies.team</a></p></div>
+                    <div class="sg-card"><h4>Notfälle</h4><p>112 · +34 613 145 492</p></div>
+                </div>
+                <div class="sg-meta-foot">
+                    <span>Survival Guide · Ausgabe 2026 · v1 · Editierbar</span>
+                    <span>Von Staub zu Staub</span>
+                </div>
+                <a href="/" class="sg-back-link">Zurück zur Startseite</a>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="shared-footer"></div>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

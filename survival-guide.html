@@ -3,161 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survival Guide | Elsewhere — by Nobodies Collective</title>
+    <title>The Elsewhere Survival Guide 2026 | Nobodies Collective</title>
+    <meta name="description" content="The Elsewhere 2026 Survival Guide — read the full field manual online in five languages, or download the printable PDF.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="alternate" hreflang="en" href="survival-guide-en.html">
+    <link rel="alternate" hreflang="es" href="survival-guide-es.html">
+    <link rel="alternate" hreflang="fr" href="survival-guide-fr.html">
+    <link rel="alternate" hreflang="it" href="survival-guide-it.html">
+    <link rel="alternate" hreflang="de" href="survival-guide-de.html">
     <style>
-        .guide-page {
-            padding: 8rem 0 4rem;
+        .sg-hub {
+            --sg-bg: #f4efe6; --sg-ink: #15140f; --sg-rust: #c2410c; --sg-rust-dk: #a8370a;
+            --sg-muted: #5d5648; --sg-line: rgba(21,20,15,0.22); --sg-line-soft: rgba(21,20,15,0.12);
+            --sg-serif: 'Playfair Display', Georgia, serif;
+            background: var(--sg-bg); color: var(--sg-ink); padding-top: 0;
         }
+        body:has(.sg-hub) { background: #f4efe6; }
+        .sg-hub-wrap { max-width: 920px; margin: 0 auto; padding: 0 1.5rem; }
+        .sg-hub p { margin: 0 0 1rem; }
+        .sg-hub a { color: var(--sg-rust); font-weight: 600; }
+        .sg-hub a:hover { color: var(--sg-rust-dk); }
 
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-            color: var(--color-text-muted);
-            font-size: 0.9rem;
+        .sg-hub-hero { padding: 8rem 0 1rem; }
+        .sg-hub-eyebrow {
+            font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+            color: var(--sg-rust); margin-bottom: 1rem;
         }
-        .back-link:hover { color: var(--color-accent); }
-        .back-link::before { content: '\2190'; }
-
-        .guide-content {
-            max-width: 700px;
-            margin: 0 auto;
-            text-align: center;
-            padding: 4rem 0;
+        .sg-hub-title {
+            font-family: var(--sg-serif); font-weight: 900; line-height: 0.95; letter-spacing: -0.015em;
+            font-size: clamp(2.6rem, 7vw, 5rem); margin: 0 0 1.25rem;
         }
+        .sg-hub-title em { font-style: italic; color: var(--sg-rust); font-weight: 800; }
+        .sg-hub-lead { font-size: clamp(1.1rem, 2.2vw, 1.3rem); line-height: 1.55; max-width: 52ch; color: var(--sg-ink); }
 
-        .guide-content h1 {
-            margin-bottom: 1.5rem;
+        .sg-hub-section { padding: 2.5rem 0; }
+        .sg-hub-h2 {
+            font-family: var(--sg-serif); font-weight: 700; font-size: clamp(1.5rem, 3vw, 2rem);
+            margin: 0 0 0.4rem;
         }
+        .sg-hub-sub { color: var(--sg-muted); margin-bottom: 1.5rem; }
+        .sg-runrule { border: 0; border-top: 1px solid var(--sg-ink); margin: 0 0 2.5rem; }
 
-        .guide-content p {
-            color: var(--color-text-muted);
-            font-size: 1.15rem;
-            line-height: 1.7;
-            margin-bottom: 1rem;
+        .sg-lang-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .sg-lang-card {
+            display: flex; flex-direction: column; gap: 0.2rem;
+            border: 1px solid var(--sg-line); border-radius: 2px; padding: 1.15rem 1.3rem;
+            text-decoration: none; color: var(--sg-ink); transition: border-color 0.15s, transform 0.15s;
+            background: rgba(255,255,255,0.18);
         }
-
-        .pdf-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1rem; padding: 0.75rem 1.5rem; background: var(--color-accent); color: #fff; border-radius: var(--radius); font-weight: 600; font-size: 0.95rem; transition: background 0.2s; }
-        .pdf-link:hover { background: #e08040; color: #fff; }
-
-        .guide-coming-soon {
-            margin-top: 2.5rem;
-            padding: 2rem 2.5rem;
-            background: var(--color-bg-alt);
-            border-radius: var(--radius);
-            color: var(--color-text-muted);
-            font-size: 1.05rem;
-            line-height: 1.7;
+        .sg-lang-card:hover { border-color: var(--sg-rust); transform: translateY(-2px); color: var(--sg-ink); }
+        .sg-lang-card .lc-name {
+            font-family: var(--sg-serif); font-weight: 700; font-size: 1.4rem; display: flex;
+            justify-content: space-between; align-items: center;
         }
+        .sg-lang-card .lc-name::after { content: '\2192'; color: var(--sg-rust); font-family: var(--font-body); }
+        .sg-lang-card .lc-desc { font-size: 0.92rem; color: var(--sg-muted); line-height: 1.45; }
 
-        .guide-coming-soon a {
-            color: var(--color-accent);
-            font-weight: 500;
+        .sg-pdf {
+            display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;
+            border: 1px solid var(--sg-line); border-left: 3px solid var(--sg-rust); border-radius: 2px;
+            padding: 1.4rem 1.6rem; background: rgba(194,65,12,0.04);
         }
-
-        .guide-legal {
-            margin-top: 3rem;
-            padding: 2.5rem;
-            background: var(--color-bg-alt);
-            border-radius: var(--radius);
-            text-align: left;
+        .sg-pdf-txt h3 { font-family: var(--sg-serif); font-weight: 700; font-size: 1.25rem; margin: 0 0 0.3rem; }
+        .sg-pdf-txt p { margin: 0; color: var(--sg-muted); font-size: 0.92rem; line-height: 1.5; }
+        .sg-pdf-btn {
+            display: inline-block; background: var(--sg-rust); color: #f4efe6 !important; font-weight: 700;
+            font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none;
+            padding: 0.85rem 1.4rem; border-radius: 2px; white-space: nowrap;
         }
+        .sg-pdf-btn:hover { background: var(--sg-rust-dk); color: #fff !important; }
 
-        .guide-legal-label {
-            margin-bottom: 0.75rem;
-            color: var(--color-accent);
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        .guide-legal h2,
-        .guide-legal h3 {
-            text-align: left;
-        }
-
-        .guide-legal h2 {
-            margin-bottom: 0.5rem;
-        }
-
-        .guide-legal h3 {
-            margin: 2rem 0 0.75rem;
-            font-size: 1.2rem;
-        }
-
-        .guide-legal p,
-        .guide-legal li {
-            color: var(--color-text-muted);
-            font-size: 1rem;
-            line-height: 1.75;
-        }
-
-        .guide-legal ul {
-            margin: 0.75rem 0 1.25rem 1.25rem;
-            padding: 0;
-        }
-
-        .guide-legal li + li {
-            margin-top: 0.35rem;
-        }
-
-        .guide-legal a {
-            color: var(--color-accent);
-            font-weight: 500;
-        }
-
-        .guide-legal-meta {
-            margin-top: 2rem;
-            padding-top: 1.25rem;
-            border-top: 1px solid rgba(0, 0, 0, 0.08);
-        }
-
-        .lang-toggle {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-
+        /* legal section (reused from the original page) */
+        .guide-legal { margin-top: 1rem; padding: 2.5rem; background: var(--color-bg-alt); border-radius: var(--radius); text-align: left; }
+        .guide-legal-label { margin-bottom: 0.75rem; color: var(--color-accent); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+        .guide-legal h2, .guide-legal h3 { text-align: left; }
+        .guide-legal h2 { margin-bottom: 0.5rem; }
+        .guide-legal h3 { margin: 2rem 0 0.75rem; font-size: 1.2rem; }
+        .guide-legal p, .guide-legal li { color: var(--color-text-muted); font-size: 1rem; line-height: 1.75; }
+        .guide-legal ul { margin: 0.75rem 0 1.25rem 1.25rem; padding: 0; }
+        .guide-legal li + li { margin-top: 0.35rem; }
+        .guide-legal a { color: var(--color-accent); font-weight: 500; }
+        .guide-legal-meta { margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid rgba(0,0,0,0.08); }
+        .lang-toggle { display: flex; gap: 0.5rem; margin: 0 0 1.5rem; flex-wrap: wrap; }
         .lang-toggle button {
-            padding: 0.75rem 1.5rem;
-            font-family: var(--font-body);
-            font-size: 0.875rem;
-            font-weight: 500;
-            border: 1px solid var(--color-border);
-            background: var(--color-bg-alt);
-            color: var(--color-text-muted);
-            border-radius: var(--radius);
-            cursor: pointer;
-            transition: all 0.2s;
+            padding: 0.6rem 1.2rem; font-family: var(--font-body); font-size: 0.82rem; font-weight: 600;
+            border: 1px solid var(--sg-line); background: transparent; color: var(--sg-muted);
+            border-radius: 2px; cursor: pointer; transition: all 0.2s;
         }
-
-        .lang-toggle button.active,
-        .lang-toggle button:hover {
-            background: var(--color-accent);
-            border-color: var(--color-accent);
-            color: #fff;
+        .lang-toggle button.active, .lang-toggle button:hover {
+            background: var(--sg-rust); border-color: var(--sg-rust); color: #fff;
         }
-
         .lang-content { display: none; }
         .lang-content.active { display: block; }
 
-        @media (max-width: 768px) {
-            .guide-page {
-                padding: 6rem 0 3rem;
-            }
+        .sg-hub-backlink {
+            display: inline-flex; align-items: center; gap: 0.5rem; margin: 4rem 0 0;
+            color: var(--sg-muted) !important; font-size: 0.85rem; font-weight: 600;
+        }
+        .sg-hub-backlink::before { content: '\2190'; }
 
-            .guide-legal {
-                padding: 1.75rem;
-            }
+        @media (max-width: 600px) {
+            .sg-hub-hero { padding-top: 6rem; }
+            .sg-lang-grid { grid-template-columns: 1fr; }
+            .guide-legal { padding: 1.75rem; }
         }
     </style>
 </head>
@@ -165,31 +117,58 @@
     <div id="shared-header"></div>
     <script src="header.js"></script>
 
-    <main class="guide-page">
-        <div class="container">
-            <a href="/" class="back-link">Back to Home</a>
+    <main class="sg-hub">
+        <section class="sg-hub-hero">
+            <div class="sg-hub-wrap">
+                <p class="sg-hub-eyebrow">Edition 2026 · Field Manual</p>
+                <h1 class="sg-hub-title">The <em>Elsewhere</em><br>Survival Guide.</h1>
+                <p class="sg-hub-lead">Everything you need to make it through six days in the Monegros desert without losing your dignity, your friends, or your water bottle. Read the full field manual online — or take the printable version with you.</p>
+            </div>
+        </section>
 
-            <div id="legal">
+        <section class="sg-hub-section">
+            <div class="sg-hub-wrap">
+                <h2 class="sg-hub-h2">Read online</h2>
+                <p class="sg-hub-sub">The complete guide, in your language. Light, fast, and easy to browse on any phone.</p>
+                <div class="sg-lang-grid">
+                    <a class="sg-lang-card" href="survival-guide-en.html" lang="en"><span class="lc-name">English</span><span class="lc-desc">The full field manual, online.</span></a>
+                    <a class="sg-lang-card" href="survival-guide-es.html" lang="es"><span class="lc-name">Español</span><span class="lc-desc">El manual de campo completo, en línea.</span></a>
+                    <a class="sg-lang-card" href="survival-guide-fr.html" lang="fr"><span class="lc-name">Français</span><span class="lc-desc">Le manuel de terrain complet, en ligne.</span></a>
+                    <a class="sg-lang-card" href="survival-guide-it.html" lang="it"><span class="lc-name">Italiano</span><span class="lc-desc">Il manuale da campo completo, online.</span></a>
+                    <a class="sg-lang-card" href="survival-guide-de.html" lang="de"><span class="lc-name">Deutsch</span><span class="lc-desc">Das komplette Feldhandbuch, online.</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="sg-hub-section">
+            <div class="sg-hub-wrap">
+                <h2 class="sg-hub-h2">Download &amp; print</h2>
+                <p class="sg-hub-sub">Prefer paper? Take the printable edition into the desert.</p>
+                <div class="sg-pdf">
+                    <div class="sg-pdf-txt">
+                        <h3>The Elsewhere Survival Guide — PDF</h3>
+                        <p>The full illustrated field manual. Print it, fold it, stash it in your tent. Large file (~33 MB) — best downloaded on Wi-Fi.</p>
+                    </div>
+                    <a class="sg-pdf-btn" href="docs/survival-guide.pdf" target="_blank" rel="noopener">Download PDF</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="sg-hub-section" id="legal">
+            <div class="sg-hub-wrap">
+                <hr class="sg-runrule">
+                <h2 class="sg-hub-h2">The fine print</h2>
+                <p class="sg-hub-sub">The participation agreements that let the event exist — in five languages.</p>
                 <div class="lang-toggle">
                     <button class="active" data-lang="en">English</button>
-                    <button data-lang="es">Espa&ntilde;ol</button>
-                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="es">Español</button>
+                    <button data-lang="fr">Français</button>
                     <button data-lang="it">Italiano</button>
                     <button data-lang="de">Deutsch</button>
                 </div>
 
                 <div class="lang-content active" data-lang="en">
-                    <div class="guide-content">
-                        <h1>Survival Guide</h1>
-                        <p>The Elsewhere 2026 Survival Guide is here.</p>
-                        <p>The guide covers everything you need to know to prepare for and thrive at Elsewhere &mdash; from what to bring and how to get there, to site rules, safety information, and Leave No Trace guidelines.</p>
-                        <a href="docs/survival-guide.pdf" class="pdf-link" target="_blank">Download PDF Version</a>
-
-                        <div class="guide-coming-soon">
-                            <p>For the latest updates, join our <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a>, or check the <a href="faq.html">FAQ</a> for answers to common questions.</p>
-                        </div>
-
-                        <section class="guide-legal">
+                    <section class="guide-legal">
                             <p class="guide-legal-label">Legal</p>
                             <h2>Survival Guide Legal Section</h2>
                             <p><strong>The Fine Print</strong></p>
@@ -283,21 +262,10 @@
                                 <p><strong>Version:</strong> 2.1<br><strong>Date:</strong> 17 March 2026</p>
                             </div>
                         </section>
-                    </div>
                 </div>
 
                 <div class="lang-content" data-lang="es">
-                    <div class="guide-content">
-                        <h1>Gu&iacute;a de Supervivencia</h1>
-                        <p>La Gu&iacute;a de Supervivencia de Elsewhere 2026 ya est&aacute; disponible.</p>
-                        <p>La gu&iacute;a cubre todo lo que necesitas saber para prepararte y desenvolverte bien en Elsewhere &mdash; desde qu&eacute; traer y c&oacute;mo llegar, hasta las normas del lugar, la informaci&oacute;n de seguridad y las pautas de Leave No Trace.</p>
-                        <a href="docs/survival-guide.pdf" class="pdf-link" target="_blank">Descargar versi&oacute;n PDF</a>
-
-                        <div class="guide-coming-soon">
-                            <p>Mientras tanto, &uacute;nete a nuestro <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a> para recibir las &uacute;ltimas actualizaciones, o consulta la <a href="faq.html">FAQ</a> para ver respuestas a preguntas frecuentes.</p>
-                        </div>
-
-                        <section class="guide-legal">
+                    <section class="guide-legal">
                             <p class="guide-legal-label">Legal</p>
                             <h2>Secci&oacute;n Legal de la Gu&iacute;a de Supervivencia</h2>
                             <p><strong>La letra peque&ntilde;a</strong></p>
@@ -391,21 +359,10 @@
                                 <p><strong>Versi&oacute;n:</strong> 2.1<br><strong>Fecha:</strong> 17 de marzo de 2026</p>
                             </div>
                         </section>
-                    </div>
                 </div>
 
                 <div class="lang-content" data-lang="fr">
-                    <div class="guide-content">
-                        <h1>Guide de Survie</h1>
-                        <p>Le Guide de Survie d'Elsewhere 2026 est d&eacute;sormais disponible.</p>
-                        <p>Le guide couvre tout ce que vous devez savoir pour vous pr&eacute;parer et vous &eacute;panouir &agrave; Elsewhere &mdash; de ce qu'il faut apporter et de la mani&egrave;re d'y arriver, jusqu'aux r&egrave;gles du site, aux informations de s&eacute;curit&eacute; et aux principes de Leave No Trace.</p>
-                        <a href="docs/survival-guide.pdf" class="pdf-link" target="_blank">T&eacute;l&eacute;charger la version PDF</a>
-
-                        <div class="guide-coming-soon">
-                            <p>En attendant, rejoignez notre <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a> pour les derni&egrave;res mises &agrave; jour, ou consultez la <a href="faq.html">FAQ</a> pour les r&eacute;ponses aux questions fr&eacute;quentes.</p>
-                        </div>
-
-                        <section class="guide-legal">
+                    <section class="guide-legal">
                             <p class="guide-legal-label">Juridique</p>
                             <h2>Section juridique du Guide de Survie</h2>
                             <p><strong>Les petites lignes</strong></p>
@@ -499,21 +456,10 @@
                                 <p><strong>Version :</strong> 2.1<br><strong>Date :</strong> 17 mars 2026</p>
                             </div>
                         </section>
-                    </div>
                 </div>
 
                 <div class="lang-content" data-lang="it">
-                    <div class="guide-content">
-                        <h1>Guida di Sopravvivenza</h1>
-                        <p>La Guida di Sopravvivenza di Elsewhere 2026 &egrave; ora disponibile.</p>
-                        <p>La guida copre tutto ci&ograve; che devi sapere per prepararti e vivere bene Elsewhere &mdash; da cosa portare e come arrivare, fino alle regole del sito, alle informazioni di sicurezza e alle linee guida Leave No Trace.</p>
-                        <a href="docs/survival-guide.pdf" class="pdf-link" target="_blank">Scarica la versione PDF</a>
-
-                        <div class="guide-coming-soon">
-                            <p>Nel frattempo, unisciti al nostro <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a> per ricevere gli ultimi aggiornamenti, oppure consulta la <a href="faq.html">FAQ</a> per trovare risposta alle domande pi&ugrave; comuni.</p>
-                        </div>
-
-                        <section class="guide-legal">
+                    <section class="guide-legal">
                             <p class="guide-legal-label">Legale</p>
                             <h2>Sezione Legale della Guida di Sopravvivenza</h2>
                             <p><strong>Le clausole essenziali</strong></p>
@@ -607,21 +553,10 @@
                                 <p><strong>Versione:</strong> 2.1<br><strong>Data:</strong> 17 marzo 2026</p>
                             </div>
                         </section>
-                    </div>
                 </div>
 
                 <div class="lang-content" data-lang="de">
-                    <div class="guide-content">
-                        <h1>Survival Guide</h1>
-                        <p>Der Elsewhere 2026 Survival Guide ist jetzt verf&uuml;gbar.</p>
-                        <p>Der Guide deckt alles ab, was Sie wissen m&uuml;ssen, um sich auf Elsewhere vorzubereiten und dort gut zurechtzukommen &mdash; von dem, was Sie mitbringen sollten und wie Sie anreisen, bis hin zu Platzregeln, Sicherheitsinformationen und Leave-No-Trace-Grunds&auml;tzen.</p>
-                        <a href="docs/survival-guide.pdf" class="pdf-link" target="_blank">PDF-Version herunterladen</a>
-
-                        <div class="guide-coming-soon">
-                            <p>Bis dahin k&ouml;nnen Sie unserem <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a> beitreten, um die neuesten Updates zu erhalten, oder die <a href="faq.html">FAQ</a> f&uuml;r Antworten auf h&auml;ufige Fragen lesen.</p>
-                        </div>
-
-                        <section class="guide-legal">
+                    <section class="guide-legal">
                             <p class="guide-legal-label">Rechtliches</p>
                             <h2>Rechtlicher Abschnitt des Survival Guide</h2>
                             <p><strong>Das Kleingedruckte</strong></p>
@@ -715,15 +650,15 @@
                                 <p><strong>Version:</strong> 2.1<br><strong>Datum:</strong> 17. M&auml;rz 2026</p>
                             </div>
                         </section>
-                    </div>
                 </div>
+
+                <a href="/" class="sg-hub-backlink">Back to Home</a>
             </div>
-        </div>
+        </section>
     </main>
 
     <div id="shared-footer"></div>
     <script src="footer.js"></script>
-
     <script src="script.js"></script>
     <script>
     document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
@@ -731,8 +666,8 @@
             var lang = this.dataset.lang;
             document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
             this.classList.add('active');
-            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
-            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            document.querySelectorAll('#legal .lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('#legal .lang-content[data-lang="' + lang + '"]');
             if (target) target.classList.add('active');
         });
     });
