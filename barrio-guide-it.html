@@ -1,0 +1,1706 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barrio Guide 2026 | Elsewhere — by Nobodies Collective</title>
+    <meta name="description" content="Tutto ciò che ti serve per avviare e gestire un barrio a Elsewhere 2026 — pianificazione, acqua, energia, audio, fuoco, Leave No Trace, sicurezza e altro. Leggibile online in cinque lingue.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="alternate" hreflang="en" href="barrio-guide-en.html">
+    <link rel="alternate" hreflang="es" href="barrio-guide-es.html">
+    <link rel="alternate" hreflang="fr" href="barrio-guide-fr.html">
+    <link rel="alternate" hreflang="it" href="barrio-guide-it.html">
+    <link rel="alternate" hreflang="de" href="barrio-guide-de.html">
+    <style>
+        .bg-page {
+            --bg-bg: #f4efe6; --bg-ink: #15140f; --bg-rust: #c2410c; --bg-rust-dk: #a8370a;
+            --bg-muted: #5d5648; --bg-line: rgba(21,20,15,0.20); --bg-line-soft: rgba(21,20,15,0.10);
+            --bg-serif: 'Playfair Display', Georgia, serif;
+            background: var(--bg-bg); color: var(--bg-ink); overflow-x: hidden;
+        }
+        body:has(.bg-page) { background: #f4efe6; }
+
+        .bg-wrap { max-width: 820px; margin: 0 auto; padding: 0 1.5rem; }
+        .bg-page p { margin: 0 0 1rem; line-height: 1.7; }
+        .bg-page a { color: var(--bg-rust); font-weight: 600; }
+        .bg-page a:hover { color: var(--bg-rust-dk); }
+        .bg-page strong { font-weight: 700; }
+
+        /* hero */
+        .bg-hero { padding: 7.5rem 0 1.5rem; }
+        .bg-hero-eyebrow {
+            font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+            color: var(--bg-rust); margin-bottom: 0.9rem;
+        }
+        .bg-hero h1 {
+            font-family: var(--bg-serif); font-weight: 800; line-height: 0.95; letter-spacing: -0.01em;
+            font-size: clamp(2.6rem, 7vw, 4.6rem); margin: 0 0 1.1rem;
+        }
+        .bg-hero h1 em { font-style: italic; color: var(--bg-rust); font-weight: 700; }
+        .bg-hero-sub { font-size: clamp(1.05rem, 2.2vw, 1.25rem); line-height: 1.55; max-width: 48ch; color: var(--bg-ink); }
+        .bg-hero-img { margin: 2rem 0 0; }
+        .bg-hero-img img { width: 100%; height: auto; max-height: 420px; object-fit: cover; border-radius: 3px; display: block; }
+
+        /* language switcher */
+        .bg-langbar {
+            display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;
+            border-top: 1px solid var(--bg-line); border-bottom: 1px solid var(--bg-line);
+            padding: 0.9rem 0; margin-top: 2rem;
+        }
+        .bg-langbar .lb-label { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--bg-muted); margin-right: 0.4rem; }
+        .bg-langbar a { font-size: 0.82rem; font-weight: 600; color: var(--bg-ink); padding: 0.32rem 0.75rem; border: 1px solid var(--bg-line); border-radius: 2px; text-decoration: none; }
+        .bg-langbar a:hover { border-color: var(--bg-rust); color: var(--bg-rust); }
+        .bg-langbar a.active { background: var(--bg-rust); border-color: var(--bg-rust); color: var(--bg-bg); }
+        .bg-langbar .lb-spacer { flex: 1 1 auto; }
+        .bg-langbar a.lb-pdf { border: 0; padding: 0.32rem 0; color: var(--bg-muted); }
+        .bg-langbar a.lb-pdf:hover { color: var(--bg-rust); }
+        @media (max-width: 560px) { .bg-langbar .lb-spacer { display: none; } }
+
+        /* welcome */
+        .bg-section { padding: 2.5rem 0; }
+        .bg-eyebrow { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--bg-rust); margin-bottom: 0.8rem; }
+        .bg-h2 { font-family: var(--bg-serif); font-weight: 700; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.02; margin: 0 0 1rem; }
+        .bg-h3 { font-weight: 700; font-size: clamp(1.15rem, 2.4vw, 1.4rem); margin: 1.8rem 0 0.6rem; color: var(--bg-ink); }
+        .bg-signoff { font-style: italic; color: var(--bg-muted); margin-top: 1.25rem; }
+
+        /* contents */
+        .bg-toc { margin: 0; padding: 0; list-style: none; columns: 2; column-gap: 2.5rem; }
+        .bg-toc li { break-inside: avoid; border-bottom: 1px solid var(--bg-line-soft); }
+        .bg-toc a { display: flex; gap: 0.8rem; align-items: baseline; padding: 0.7rem 0.2rem; color: var(--bg-ink); font-weight: 600; font-size: 0.98rem; }
+        .bg-toc a:hover { color: var(--bg-rust); }
+        .bg-toc .n { font-family: var(--bg-serif); font-weight: 800; color: var(--bg-rust); min-width: 1.6rem; }
+        @media (max-width: 560px) { .bg-toc { columns: 1; } }
+
+        /* chapter */
+        .bg-chapter { padding: 3rem 0 1rem; border-top: 1px solid var(--bg-line); }
+        .bg-chapter:first-of-type { border-top: 0; }
+        .bg-chnum { font-family: var(--bg-serif); font-weight: 800; font-size: 0.95rem; color: var(--bg-rust); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.4rem; }
+        .bg-chapter h2 { font-family: var(--bg-serif); font-weight: 800; font-size: clamp(1.9rem, 4.5vw, 3rem); line-height: 1; margin: 0 0 1.25rem; letter-spacing: -0.01em; }
+        .bg-page ul, .bg-page ol { margin: 0.4rem 0 1.25rem 1.3rem; padding: 0; }
+        .bg-page li { margin: 0.3rem 0; line-height: 1.6; }
+        .bg-page ul { list-style: none; }
+        .bg-page ul > li { position: relative; padding-left: 1.2rem; }
+        .bg-page ul > li::before { content: '—'; position: absolute; left: 0; color: var(--bg-rust); }
+        .bg-page ol { list-style: decimal; }
+        .bg-page ol > li { padding-left: 0.3rem; }
+
+        /* note / callout box */
+        .bg-note { border: 1px solid var(--bg-line); border-left: 3px solid var(--bg-rust); border-radius: 2px; padding: 1.1rem 1.3rem; margin: 1.5rem 0; background: rgba(194,65,12,0.04); }
+        .bg-note h4 { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bg-rust); margin: 0 0 0.5rem; }
+        .bg-note p:last-child, .bg-note ul:last-child, .bg-note ol:last-child { margin-bottom: 0; }
+        .bg-note--warn { border-left-color: var(--bg-ink); background: rgba(21,20,15,0.04); }
+        .bg-note--warn h4 { color: var(--bg-ink); }
+
+        /* figure */
+        .bg-fig { margin: 1.5rem 0; }
+        .bg-fig img { width: 100%; height: auto; display: block; border-radius: 3px; }
+        .bg-fig figcaption { font-size: 0.8rem; color: var(--bg-muted); margin-top: 0.5rem; line-height: 1.5; }
+        .bg-fig--narrow { max-width: 480px; }
+
+        /* simple table */
+        .bg-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+        .bg-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 480px; }
+        .bg-table th, .bg-table td { text-align: left; padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--bg-line); vertical-align: top; }
+        .bg-table thead th { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 1.5px solid var(--bg-ink); }
+
+        .bg-back { display: inline-block; margin: 1.25rem 0 0; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bg-muted) !important; }
+        .bg-back:hover { color: var(--bg-rust) !important; }
+        .bg-back::before { content: '\2191  '; }
+
+        .bg-backhome { display: inline-flex; align-items: center; gap: 0.5rem; margin: 4rem 0 0; color: var(--bg-muted) !important; font-size: 0.85rem; font-weight: 600; }
+        .bg-backhome::before { content: '\2190'; }
+
+        @media (max-width: 560px) { .bg-hero { padding-top: 6rem; } }
+    </style>
+</head>
+<body>
+    <div id="shared-header"></div>
+    <script src="header.js" defer></script>
+
+    <main class="bg-page">
+
+        <!-- ============ HERO ============ -->
+        <header class="bg-hero">
+            <div class="bg-wrap">
+                <p class="bg-hero-eyebrow">Elsewhere 2026 · For Nobodies, by Nobodies</p>
+                <h1>La guida al <em>Barrio</em>.</h1>
+                <p class="bg-hero-sub">Tutto ciò che ti serve per avviare, costruire e gestire un barrio a Elsewhere — pianificazione, acqua, energia, audio, fuoco, Leave No Trace e prendersi cura gli uni degli altri nel deserto dei Monegros.</p>
+                <div class="bg-hero-img">
+                    <img src="images/barrio-guide/img-00.jpg" alt="Un accampamento barrio a Elsewhere nel deserto dei Monegros" loading="eager">
+                </div>
+                <nav class="bg-langbar" aria-label="Language and format">
+                    <span class="lb-label">Leggi in</span>
+                    <a href="barrio-guide-en.html" lang="en">English</a>
+                    <a href="barrio-guide-es.html" lang="es" hreflang="es">Espa&ntilde;ol</a>
+                    <a href="barrio-guide-fr.html" lang="fr" hreflang="fr">Fran&ccedil;ais</a>
+                    <a href="barrio-guide-it.html" class="active" lang="it" hreflang="it">Italiano</a>
+                    <a href="barrio-guide-de.html" lang="de" hreflang="de">Deutsch</a>
+                    <span class="lb-spacer"></span>
+                    <a href="Barrio_Guide_2026.pdf" class="lb-pdf" target="_blank" rel="noopener">PDF stampabile &rarr;</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- ============ WELCOME ============ -->
+        <section class="bg-section" id="welcome">
+            <div class="bg-wrap">
+                <p class="bg-eyebrow">Benvenuti</p>
+                <h2 class="bg-h2">Benvenuti a Elsewhere!</h2>
+                <p>È fantastico che vi siate riuniti e abbiate formato un Barrio; accogliamo con piacere il vostro contributo al festival e speriamo che vi divertiate. I barrios sono una parte importante di Elsewhere. Attraverso la collaborazione, potete portare immaginazione, creatività, arte e spettacolo su una scala molto più grande di quanto potreste fare da soli.</p>
+                <p>Questo documento è una guida alla gestione di un Barrio. Non contiene solo alcune buone pratiche, ma anche requisiti importanti che chiediamo ai Barrios di rispettare. Prenditi il tempo di leggere la guida e non esitare a contattare il Barrio Support Team o a usare una qualsiasi delle risorse qui sotto:</p>
+                <ul>
+                    <li>Sito web di Elsewhere su <a href="https://nobodies.team/">nobodies.team</a></li>
+                    <li>Sito del volontariato &amp; registrazione dei Barrio <a href="https://humans.nobodies.team">humans.nobodies.team</a></li>
+                    <li>Gruppo Discord: <a href="https://discord.gg/Xmj6YbFwSM" target="_blank" rel="noopener">discord.gg/Xmj6YbFwSM</a></li>
+                    <li>Comunicazioni sul posto: <a href="https://chat.whatsapp.com/LlQA612FQiE5jSzO0rGQZx" target="_blank" rel="noopener">gruppo WhatsApp</a></li>
+                    <li>E-mail: <a href="mailto:barrios@nobodies.team">barrios@nobodies.team</a></li>
+                </ul>
+                <div class="bg-note">
+                    <p>Questo documento è stato messo insieme dai volontari del Barrio Support Team. Non riflette necessariamente le opinioni della Nobodies Collective Association. La guida è destinata all'uso esclusivamente all'interno della comunità di Elsewhere e non è pensata per essere pubblicata o diffusa al di fuori di Elsewhere. Se trovi errori, vuoi migliorare questa guida o renderla disponibile in altre lingue &mdash; fatti sentire, il tuo supporto è benvenuto!</p>
+                </div>
+                <p>Nel frattempo, continua a leggere e fatti prendere dall'entusiasmo!</p>
+                <p class="bg-signoff">Abbracci polverosi,<br>Il vostro Barrio Support Team</p>
+            </div>
+        </section>
+
+        <!-- ============ CONTENTS ============ -->
+        <section class="bg-section" id="contents">
+            <div class="bg-wrap">
+                <p class="bg-eyebrow">Indice</p>
+                <h2 class="bg-h2">Cosa c'è dentro.</h2>
+                <ol class="bg-toc">
+                    <li><a href="#ch1"><span class="n">1</span><span>Pianificazione</span></a></li>
+                    <li><a href="#ch2"><span class="n">2</span><span>Portare le tue cose da e verso Elsewhere</span></a></li>
+                    <li><a href="#ch3"><span class="n">3</span><span>Creare una comunità</span></a></li>
+                    <li><a href="#ch4"><span class="n">4</span><span>Organizzare eventi al tuo barrio</span></a></li>
+                    <li><a href="#ch5"><span class="n">5</span><span>Acqua e water cube</span></a></li>
+                    <li><a href="#ch6"><span class="n">6</span><span>Cibo e bevande</span></a></li>
+                    <li><a href="#ch7"><span class="n">7</span><span>Costruire strutture</span></a></li>
+                    <li><a href="#ch8"><span class="n">8</span><span>Generatori ed elettricità</span></a></li>
+                    <li><a href="#ch9"><span class="n">9</span><span>Impianti audio</span></a></li>
+                    <li><a href="#ch10"><span class="n">10</span><span>Fuoco e gas</span></a></li>
+                    <li><a href="#ch11"><span class="n">11</span><span>Leave No Trace</span></a></li>
+                    <li><a href="#ch12"><span class="n">12</span><span>Salute e sicurezza</span></a></li>
+                    <li><a href="#ch13"><span class="n">13</span><span>Impatto ambientale</span></a></li>
+                    <li><a href="#ch14"><span class="n">14</span><span>Pagamento delle cose</span></a></li>
+                    <li><a href="#ch15"><span class="n">15</span><span>Nel (improbabile) caso di un'emergenza</span></a></li>
+                    <li><a href="#ch16"><span class="n">16</span><span>Come arrivare a Elsewhere</span></a></li>
+                    <li><a href="#ch17"><span class="n">17</span><span>Partecipazione all'organizzazione generale</span></a></li>
+                </ol>
+            </div>
+        </section>
+
+
+<section class="bg-chapter" id="ch1">
+    <div class="bg-wrap">
+        <p class="bg-chnum">Chapter 1</p>
+        <h2>Pianificazione.</h2>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-01.jpg" alt="Un accampamento barrio nel deserto dei Monegros a Elsewhere" loading="lazy"><figcaption>Un barrio a Elsewhere.</figcaption></figure>
+
+        <h3 class="bg-h3">Cos'è un Barrio e dovremmo formarne uno?</h3>
+        <p>Un barrio è un gruppo di partecipanti che si riuniscono attorno a un tema, campeggiando insieme e creando un pezzo della città effimera nel deserto dei Monegros. I barrios (a volte chiamati camp) sono tutti unici ma aderiscono ad alcuni principi condivisi. I barrios sono:</p>
+        <ul>
+            <li><strong>Accoglienti e inclusivi</strong> &mdash; visivamente stimolanti e con un piano per l'accessibilità e la gestione della folla.</li>
+            <li><strong>Interattivi</strong> &mdash; offrono attività, eventi o servizi disponibili all'intera comunità.</li>
+            <li><strong>Da buoni vicini</strong> &mdash; mantengono il suono entro i limiti della zona, supportano i barrios vicini quando possibile e aiutano a risolvere eventuali dispute sui confini che dovessero sorgere.</li>
+            <li><strong>Responsabili</strong> nel non lasciare alcuna traccia del loro passaggio sulla playa, sia all'interno del campsite assegnato sia oltre, tenendo sotto controllo il MOOP.</li>
+            <li><strong>Sufficientemente sicuri</strong> &mdash; i barrios devono rispettare i requisiti di sicurezza stabiliti dalla legge spagnola e le regole stabilite da NCA.</li>
+            <li><strong>Registrati</strong> &mdash; infine, i camp devono inviare il modulo di registrazione del barrio, fornire una planimetria del camp e ordinare i servizi di cui hanno bisogno entro le scadenze.</li>
+        </ul>
+
+        <p><strong>Qual è la differenza tra essere un Barrio e accamparsi nel Free Camp?</strong></p>
+        <p>Ci sono poche cose che puoi fare come Barrio che non puoi fare come Free Camp. Le differenze principali sono:</p>
+        <ul>
+            <li>Come Barrio ottieni uno spazio riservato sulla playa e devi fornire una planimetria del sito. L'area minima per un Barrio è di 10 x 15 m. Non c'è un numero massimo o minimo di campeggiatori richiesto per formare un Barrio.</li>
+            <li>Come Barrio puoi inserire eventi nella What? Where? When? Guide*</li>
+            <li>Per costruire le strutture del barrio, parte del gruppo avrà diritto all'Early Entry (fino a cinque giorni).</li>
+            <li>I Barrios sono tenuti a designare dei referenti (lead) responsabili di determinati ambiti per supportare l'organizzazione complessiva. Ogni barrio deve avere referenti per:
+                <ul>
+                    <li>Leave No Trace (LNT) &mdash; questo referente è responsabile di elaborare un piano LNT prima dell'evento, di garantire che i rifiuti del barrio siano correttamente riciclati e che il sito del barrio venga lasciato pulito alla fine dell'evento</li>
+                    <li>Welfare</li>
+                    <li>Consenso</li>
+                    <li>Shit Ninja e TAP Dancer &mdash; referente/i che si occupano delle porta potties e delle TAP (Total Accessible Pee/Poop/Period stations, bagni dotati di una stazione per lavarsi le mani, riservati esclusivamente a chi ha necessità di accessibilità o sta mestruando)</li>
+                    <li>Referente tecnico responsabile dell'energia (Power) &mdash; persona in contatto con l'Elsewhere Power Team che coordina la sicurezza elettrica, l'allacciamento alla rete e l'installazione dei parafulmini</li>
+                </ul>
+            </li>
+        </ul>
+        <p>* In realtà non c'è assolutamente nulla che ti impedisca di organizzare un evento a Elsewhere anche se non fai parte di un barrio. Tuttavia, dobbiamo sapere dove siete tu e il tuo evento, il che può essere difficile nelle aree di Free Camping. Alcuni Barrios saranno felici di permetterti di ospitare un evento usando il loro spazio; puoi trovare i barrios registrati qui: <a href="https://humans.nobodies.team/Barrios">https://humans.nobodies.team/Barrios</a>.</p>
+
+        <h3 class="bg-h3">Requisiti delle autorità spagnole</h3>
+        <p>Il concetto di &ldquo;Radical Self Reliance&rdquo; (autosufficienza radicale) applicato ai Barrios potrebbe significare lasciare che qualsiasi banda di pazzi campeggi insieme, costruendo poi una qualunque vecchia struttura ombreggiante, folgorandosi a vicenda, vivendo in condizioni igieniche pessime e cucinando cibo terribile che fa venire il mal di stomaco a tutti, per poi finire uccisi da un fulmine che colpisce la loro struttura metallica alta tre metri e priva di messa a terra.</p>
+        <p>Tuttavia, una condizione per l'uso del sito da parte delle autorità locali è trattare l'evento come un campeggio, rispettando tutte le normative nazionali in vigore. Le autorità locali ispezionano il sito il lunedì e solo dopo concedono la licenza affinché l'evento possa svolgersi. Per quanto possa sembrare un guastafeste, le normative sono sensate e contribuiscono in qualche misura a far sì che i Barrios riducano la necessità di servizi di emergenza. L'unica cosa di cui Elsewhere non ha bisogno è gravare sui servizi di emergenza o sanitari della cittadina locale.</p>
+        <p>Troverai i requisiti legali elencati in ciascuna sezione, evidenziati in rosso come qui sotto:</p>
+        <div class="bg-note"><h4>Requisito legale</h4>
+            <p>Il perimetro dell'area di campeggio deve essere recintato o comunque identificato, lasciando almeno 10 m tra qualsiasi vegetazione e l'area di campeggio. Inoltre, nessuna cucina o fonte di calore può essere posizionata entro i primi 10 m all'interno del perimetro e deve trovarsi a più di 20 metri da qualsiasi vegetazione.</p>
+        </div>
+        <p>Alcuni requisiti si applicano solo ai singoli barrios, mentre altri valgono per tutta NCA (l'associazione organizzatrice di Elsewhere). Tieni presente che le normative possono cambiare e alcune di esse cambiano effettivamente con breve preavviso, quindi presta attenzione a eventuali modifiche.</p>
+
+        <h3 class="bg-h3">Registrazione del barrio</h3>
+        <p>Il tuo primo passo sarà registrarti come barrio su <a href="https://humans.nobodies.team/Barrios">https://humans.nobodies.team/Barrios</a>. Se hai domande in questa fase, la cosa migliore è contattarci via Discord o e-mail all'indirizzo <a href="mailto:barrios@nobodies.team">barrios@nobodies.team</a>.</p>
+
+        <h3 class="bg-h3">Posizionamento e pianificazione urbanistica</h3>
+        <ol>
+            <li><strong>Calcola lo spazio necessario.</strong> Quando registri il tuo Barrio, dovrai indicare quanto spazio ti serve. Per capirlo, una regola pratica è moltiplicare il numero di persone che dormono nel tuo camp per 15 o 20 m&sup2;. Questo serve a calcolare le dimensioni del lotto da usare per tutte le strutture, compresi gli spazi per dormire e vivere. A questo aggiungi separatamente le dimensioni approssimative dei tuoi spazi più grandi per dance/party/workshop/strutture.</li>
+            <li><strong>Posizionare il barrio sulla mappa.</strong> Questo passaggio si fa con l'app di auto-posizionamento (ti daremo il link quando aprirà). Qui non vale il &ldquo;chi prima arriva meglio alloggia&rdquo;. Se un barrio è già sul punto che desideri, verrà aperto un canale Discord apposito per discutere con loro e trovare una soluzione. La city planning sarà presente per qualsiasi problema tecnico durante questo processo.</li>
+            <li><strong>Fermi tutti!</strong> Una volta che tutti hanno trovato un posto, il processo di posizionamento è concluso e non si possono più fare cambiamenti &mdash; fermi tutti! La city planning armonizzerà ora ogni cosa e preparerà la mappa per il passaggio successivo.</li>
+            <li><strong>Posizionamento dei container.</strong> Ora sarà il momento di posizionare i container. La City Planning ti invierà un nuovo link all'app con un nuovo strumento per aggiungere container e portacabine. Ti invieremo anche una mappa vecchio stile come quella nella figura qui sotto, dove potrai posizionare i tuoi container e rimandarla alla city planning. Con queste informazioni, il barrio support farà in modo che i tuoi container vengano consegnati esattamente nel punto giusto.</li>
+            <li>A questo punto puoi iniziare a immaginare la disposizione del tuo camp!</li>
+        </ol>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-02.jpg" alt="Mappa del sito che mostra container, water cube e punto d'ingresso" loading="lazy"><figcaption>Mappa aggiornata che mostra container, water cube e punto d'ingresso.</figcaption></figure>
+
+        <h3 class="bg-h3">Pianificare la disposizione</h3>
+        <p>Ci sono molte cose da considerare quando si pianifica la disposizione e si costruisce un Barrio. Qui sotto trovi alcuni punti da tenere a mente, con maggiori dettagli nelle sezioni successive del documento.</p>
+
+        <p><strong>Affacciarsi su &ldquo;The Playa&rdquo;</strong></p>
+        <p>La maggior parte dei Barrios avrà una sorta di affaccio sull'area comune del sito, nota come &ldquo;Playa&rdquo;. È qui che i visitatori verranno a visitare il tuo Barrio. Come Barrio dovresti avere un'area aperta al pubblico. Puoi naturalmente avere anche un'area privata, però assicurati che sia chiaramente segnalata se vuoi un po' di privacy.</p>
+        <p>Tieni sempre la cucina lontana dagli spazi pubblici, a meno che non ti piaccia avere hippy a caso che si mangiano il tuo cibo!</p>
+
+        <p><strong>Parcheggio</strong></p>
+        <p>Durante l'Early Entry (costruzione) o lo strike non servono i pass per i veicoli sul sito e puoi usare il tuo veicolo per portare le tue belle cose e i tuoi splendidi amici. Se non hai un pass per il sito, assicurati di parcheggiare il tuo veicolo nell'area di parcheggio designata al Gate prima dell'inizio dell'evento.</p>
+        <p>Durante l'evento, i veicoli nel Barrio o nel free camping non possono muoversi affatto, nemmeno per la spesa o per andare al fiume. Non puoi usare l'auto parcheggiata all'interno fino alla fine dell'evento (domenica).</p>
+        <p>Elsewhere scoraggia le persone dal parcheggiare all'interno del Barrio. Possono essere fatte eccezioni per i veicoli necessari a supportare installazioni artistiche, l'accesso ai disabili e quelli con cui vengono trasportate grandi quantità di provviste per il Barrio. In tutti i casi, durante l'evento è richiesto un pass per veicolo sul sito.</p>
+        <p>Indica sulla tua planimetria dove devono essere parcheggiati i veicoli.</p>
+        <div class="bg-note"><h4>Regole per i veicoli</h4>
+            <p>I pass per i veicoli saranno disponibili presso la Barrio Reception al momento del check-in. È consentito un solo pass per veicolo sul sito per camp. Quest'auto deve essere guidata:</p>
+            <ul>
+                <li>Non più veloce di 7km all'ora e solo durante il giorno</li>
+                <li>Nessun transito sarà consentito sul sito dalle 21:30 alle 7:30.</li>
+                <li>Usa solo la strada perimetrale, niente guida attraverso il sito/playa (controlla la mappa)</li>
+            </ul>
+        </div>
+
+        <p><strong>Pioggia!</strong></p>
+        <p>A Elsewhere piove, e quando piove, piove fortissimo!</p>
+        <p>Prevedi nel tuo Barrio una struttura che offra riparo dalla pioggia. Valuta se la tua cucina debba essere impermeabile. Fai anche particolare attenzione a tenere asciutta l'attrezzatura elettrica (es. le postazioni dei DJ).</p>
+        <p>È utile prevedere lo scavo di canali di scolo per deviare l'acqua lontano dalla tenda o dalla struttura. Quando piove forte, si formano ruscelli che attraversano il sito, i quali possono allagare e rovinare l'interno delle strutture e delle tende dei Barrios. Le tende e le altre strutture non devono essere posizionate nelle aree dove l'acqua scorre naturalmente in caso di pioggia, né sulla strada perimetrale o sui percorsi interni.</p>
+
+        <h3 class="bg-h3">Inclusione nel design</h3>
+        <p>Tutti i Barrios devono avere uno spazio pubblico utilizzabile da tutti i partecipanti a Elsewhere, a seconda della vostra offerta. Nel progettare e disporre il vostro spazio, tenete a mente i partecipanti meno abili fisicamente. Ecco alcuni suggerimenti dal nostro referente per l'inclusione per creare una migliore accessibilità per gli utenti in sedia a rotelle e per le persone con disabilità visive.</p>
+        <ul>
+            <li><strong>Crea più di un ingresso e un'uscita.</strong> Tieni presente che se un Barrio ha molte persone al suo interno, è utile per un utente in sedia a rotelle avere percorsi alternativi per entrare/uscire, senza dover far spostare tutti.</li>
+            <li><strong>Copri cavi e canali di scolo.</strong> I cavi elettrici interrati nella terra vanno compattati per consentire l'accesso ai veicoli e alle sedie a rotelle. Anche se i canali di scolo sono necessari per la protezione dalla pioggia, prevedi un'area larga almeno un metro che sia piatta/coperta per l'accesso in sedia a rotelle. Se necessario, la si può scavare quando piove!</li>
+            <li><strong>Camminamenti.</strong> Mantieni tutti i camminamenti larghi almeno un metro e senza ostacoli! Pensaci quando pianti i tondini di ferro (rebar), tendi corde, posizioni mobili e decorazioni ecc. Assicurati di pensare a ogni ingresso/uscita (davanti / dietro / destra / sinistra).</li>
+            <li><strong>Luci &amp; Visibilità.</strong> Metti un po' di luce sul nome del tuo Barrio, almeno qualche LED per renderlo visibile da 1m, ancora meglio se lo si può vedere da dieci metri di distanza. Utile per persone ipovedenti e/o con disorientamento (mancanza di abilità fisica auto-inflitta).</li>
+            <li><strong>Gradini e pericoli di inciampo.</strong> Niente gradini da nessuna parte! Trova/pensa a modi per evitare i gradini. Non esiste un gradino PICCOLO. Individua e copri i pericoli di inciampo (corde, tondini di ferro, picchetti delle tende e fissaggi) con protezioni come palline da tennis o lattine usate come illuminazione e luci. Questa dovrebbe essere una cosa ovvia, perché aiuta i Burner ipovedenti a camminare. Inciampare in qualcosa al buio è l'infortunio più comune a Elsewhere per chiunque, abile o meno!</li>
+            <li><strong>Tende (di stoffa).</strong> Tagliale a circa 5 cm dal pavimento. Non puoi aprire una tenda quando le ruote anteriori ci sono sopra!</li>
+            <li><strong>Sedute, materassi.</strong> Non per terra: rialzali di 50 cm. Se usi i pallet, fissali insieme. Non mettere le sedute direttamente sul pavimento, è troppo difficile rialzarsi da soli senza usare le gambe.</li>
+            <li><strong>Amache.</strong> Più alta è la tensione dell'amaca, più facile è entrarci/uscirne. Non appenderle a più di 50 cm dal pavimento.</li>
+            <li><strong>Tavoli / banchi da lavoro.</strong> Lascia spazio per piedi e ruote anteriori sotto il tavolo, senza ostacoli davanti per l'accesso. Altezza tavolo: min 70cm sotto il piano (per l'accesso del ginocchio), max 85cm sopra il piano del tavolo (80cm va bene).</li>
+            <li><strong>Secondi piani e terrazze.</strong> Se non sai come renderlo accessibile a tutti, rendilo (inaccessibile) a nessuno. Ma se vuoi, per esempio: forca / carrucola / corda / paranco / ascensore o montacarichi fai-da-te / sistema di carrucole.</li>
+            <li><strong>Aree per cambiarsi.</strong> Alcuni eventi a Elsewhere potrebbero richiedere ai partecipanti di cambiarsi i vestiti, o più probabilmente di toglierseli! I Barrios dovrebbero tenere conto delle persone con problemi di mobilità. Uno dei modi migliori in cui un utente in sedia a rotelle può cambiarsi i vestiti è usando un materasso su un letto (nota bene, non per terra).</li>
+        </ul>
+
+        <h3 class="bg-h3">Early Entry</h3>
+        <p>Il team ticketing fornirà a ogni referente di Barrio un'allocazione online di Early Entry, per consentire alla squadra di costruzione l'accesso al sito prima dell'inizio dell'evento. Il pass di accesso Early Entry sarà collegato al codice del biglietto del costruttore per l'evento. Dovrai inserire e-mail e numeri di biglietto di ogni membro della crew di costruzione nello strumento online di allocazione Early Entry. È importante registrare le proprie esigenze di early entry il prima possibile dopo aver ricevuto l'allocazione del tuo barrio dal team ticketing di Elsewhere.</p>
+        <p>L'early entry inizia da mercoledì 1° luglio. Se stai costruendo un progetto particolarmente enorme e ritieni di dover arrivare sul sito prima, faccelo sapere. L'early entry sembra divertente &mdash; tuttavia&hellip;</p>
+        <div class="bg-note"><h4>Importante</h4>
+            <p>L'early entry serve a lavorare sodo e ad allestire il tuo Barrio, non a fare festa!!!</p>
+        </div>
+        <p>Sì, devi alzarti alle 06:00 per poter iniziare a lavorare alle 07:00! Gli orari di lavoro dell'intero sito sono tipicamente dalle 07:00 alle 13:00, poi dalle 16:00 alle 20:00. Chiunque venga trovato a fare festa, a suonare musica ad alto volume o a creare disturbo di notte verrà rimproverato severamente!</p>
+
+        <p><strong>I numeri sono limitati</strong></p>
+        <p>Tipicamente, fino al 25% del tuo Barrio avrà il permesso di entrare sul sito in anticipo per aiutare nell'allestimento, quindi ogni Barrio deve valutare il giusto mix di persone. Se hai un Barrio piccolo con molta infrastruttura, quella percentuale potrebbe essere più alta. Ogni caso viene valutato singolarmente.</p>
+
+        <p><strong>Non sarai nutrito da Werkhaus/Cantina!</strong></p>
+        <p>La Cantina è una cucina gestita per supportare l'organizzazione NCA durante l'allestimento e lo strike. Non provvede al sostentamento degli affamati allestitori dei Barrio! Quindi, ogni Barrio deve avere come priorità una cucina funzionante. Il lavoro di allestimento di un camp è piuttosto faticoso, quindi i Barrios devono pianificare il vitto per la propria crew di allestimento. Deve essere CIBO VERO e non noodle istantanei! Considera di reclutare un membro Early Entry del Barrio per sovrintendere al vitto degli altri.</p>
+
+        <p><strong>Evita di portare bambini durante la costruzione</strong></p>
+        <p>L'allestimento è di fatto un cantiere edile: le misure di sicurezza non sono ancora in vigore. La maggior parte degli incidenti a Elsewhere avviene durante l'allestimento. È fortemente raccomandato di non portare bambini come parte della crew di costruzione del tuo Barrio.</p>
+
+        <h3 class="bg-h3">Arrivare sul sito per la costruzione</h3>
+        <p>I primi ad arrivare al Barrio devono pianificare di arrivare durante le ore di luce &mdash; prima delle 21:00. Se è buio: stai fuori dal sito e passa la notte in un bel letto comodo (o in un fosso da qualche parte). Guidare in giro di notte sul sito sarà pericoloso, per te e potenzialmente per gli altri. Potresti lasciare il veicolo al gate e raggiungere il sito a piedi, ma se hai intenzione di guidare sul sito nel cuore della notte e perdere tempo a montare una tenda (svegliando tutti nel farlo) scordatelo! Goditi il NON essere sulla playa!</p>
+        <p>Non arrivare il lunedì mattina prima di mezzogiorno. È in questo momento che viene effettuata l'ispezione del sito, testato l'allarme antincendio ed eseguita l'esercitazione di evacuazione. Il Gate sarà chiuso durante questo periodo. Aprirà quando l'ispezione sarà completata.</p>
+        <div class="bg-note"><h4>Regola del Gate</h4>
+            <p>La strada del gate chiuderà 30 minuti prima della chiusura del gate. Tutti i veicoli DEVONO aver superato la security entro quel momento.</p>
+            <p><strong>Orari di apertura del Gate</strong></p>
+            <ul>
+                <li>Mercoledì 1° luglio: dalle 10 alle 22.</li>
+                <li>Giovedì 2 luglio: dalle 10 alle 22.</li>
+                <li>Venerdì 3 luglio: dalle 10 alle 22.</li>
+                <li>Sabato 4 luglio: dalle 10 alle 22.</li>
+                <li>Domenica 5 luglio: dalle 10 alle 22.</li>
+            </ul>
+        </div>
+        <p>Contatta <a href="mailto:gate@nobodies.team">gate@nobodies.team</a> il prima possibile in caso di arrivi con il treno mattutino a Sari&ntilde;ena prima dell'apertura del Gate al mattino, e cercheranno di fare del loro meglio.</p>
+
+        <p><strong>Prima tappa: la Barrio Reception</strong></p>
+        <p>Fai il check-in alla Barrio Reception appena arrivi, chiedi indicazioni al Gate se ti servono. La barrio reception è il luogo dove potrai ritirare gli articoli pre-acquistati come GPL, estintori e pass per i veicoli. Durante la costruzione, la barrio reception avrà anche servizi molto limitati che puoi usare per ricaricare attrezzi e telefoni, acqua per sanificare i water cube e informazioni su come farti consegnare l'acqua e ispezionare gli estintori.</p>
+
+        <p><strong>Trovare il tuo posto</strong></p>
+        <p>Controlla l'ultima mappa di Elsewhere per la posizione del tuo barrio: potrebbe essere cambiata rispetto all'ultima mappa che hai scaricato. I Barrios saranno segnati a terra da bandiere. Le bandiere con due nomi indicano i confini tra Barrios. Controlla entrambi i lati di una bandiera.</p>
+        <div class="bg-note"><h4>Importante</h4>
+            <ul>
+                <li>Devi lasciare almeno cinque metri di spazio libero tra il sito del tuo Barrio e il nastro di delimitazione. Questi spazi liberi sono strade, dove passeranno grandi camion. Permettono inoltre ai veicoli di emergenza di accedere se necessario e consentono un facile accesso agli altri Barrios. Se metti lì le tue tende, verranno rimosse senza preavviso, o magari schiacciate da un camion. Comunicalo a tutti i membri del tuo camp.</li>
+                <li>Devi anche lasciare almeno dieci metri di spazio libero tra il tuo Barrio e qualsiasi vegetazione, e 100 metri dalle barrancas / burroni. Questo per ragioni di sicurezza, ed è una prescrizione imposta dalle autorità e dalle normative locali.</li>
+            </ul>
+        </div>
+        <p>Se hai dubbi, il team di City Planning può aiutarti a raggiungere il tuo posto.</p>
+        <div class="bg-note"><h4>Requisito legale</h4>
+            <p>Devi lasciare almeno dieci metri di spazio libero tra il tuo Barrio e qualsiasi vegetazione, e 100 metri dalle barrancas / burroni.</p>
+        </div>
+
+        <h3 class="bg-h3">Partire dopo lo strike</h3>
+        <p>Quando tutte le strutture sono smontate e sei quasi pronto a partire, invia un messaggio sul canale WhatsApp dei Barrios dicendo che ti stai preparando a partire e qualcuno del team LNT o Barrio Support verrà a controllare il tuo lotto.</p>
+        <p>I Barrios devono aver lasciato Elsewhere entro mercoledì 9 luglio, ma si possono prendere accordi affinché i Barrios restino più a lungo. Chiunque lavori per NCA svolgendo mansioni di strike è ovviamente il benvenuto a restare se necessario.</p>
+
+        <a href="#contents" class="bg-back">Torna all'indice</a>
+    </div>
+</section>
+
+<section class="bg-chapter" id="ch2">
+    <div class="bg-wrap">
+        <p class="bg-chnum">Chapter 2</p>
+        <h2>Portare le tue cose da e verso Elsewhere.</h2>
+
+        <p>Allora, hai un Barrio e un sacco di entusiasmanti progetti artistici e di ROBA da portare a Elsewhere! Non comprare un vecchio furgone due settimane prima del festival, sovraccaricarlo e guidare per diverse migliaia di chilometri, per poi sorprenderti quando si rompe.</p>
+        <p>Consigli per portare un furgone pieno di roba a Elsewhere:</p>
+        <ul>
+            <li>Fai squadra con un altro Barrio se viene dalla tua stessa zona.</li>
+            <li>Noleggia o usa un furgone che sai funzionare!</li>
+            <li>Se usi il tuo furgone, fagli fare un tagliando prima del viaggio.</li>
+            <li>Stipula un'assicurazione europea con copertura per i guasti.</li>
+            <li>Assicurati che la copertura preveda il traino fino al sito e poi di nuovo a casa. Immancabilmente un veicolo sostitutivo non è abbastanza grande.</li>
+            <li>Assicurati di avere il kit di lampadine di ricambio e gli accessori di sicurezza richiesti dalla legge in Spagna. Se attraversi altri paesi (es. la Francia), verifica anche i requisiti legali per le lampadine dei fari, gli etilometri, i kit di primo soccorso, i triangoli di emergenza e altro.</li>
+            <li>Se attraversi la Francia, dovrai esporre un adesivo &ldquo;Crit&rsquo;Air&rdquo; sul finestrino. Vedi il seguente link: <a href="https://www.certificat-air.gouv.fr/">https://www.certificat-air.gouv.fr/</a></li>
+            <li>Assicurati di avere abbastanza giubbotti ad alta visibilità per tutti coloro che viaggiano nel furgone.</li>
+        </ul>
+        <p>Alcune informazioni utili sui requisiti per guidare in Spagna e Francia si trovano qui:</p>
+        <ul>
+            <li><a href="https://www.rac.co.uk/drive/travel/country/spain/">https://www.rac.co.uk/drive/travel/country/spain/</a></li>
+            <li><a href="https://francepeages.com/blog/driving-france-requirements-checklist">https://francepeages.com/blog/driving-france-requirements-checklist</a></li>
+        </ul>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-03.jpg" alt="Un furgone caricato con casse impilabili etichettate pronto per il viaggio" loading="lazy"><figcaption>Carica le tue cose in casse impilabili etichettate.</figcaption></figure>
+
+        <h3 class="bg-h3">Caricare un furgone</h3>
+        <p>Consigliamo di comprare casse da trasloco in plastica impilabili come quelle usate per spostare gli uffici e di metterci dentro tutta la tua roba. Etichettale chiaramente attaccando del nastro adesivo telato sulle casse e scrivendoci sopra. Carico e scarico saranno molto più facili e si romperà meno roba. Inoltre, è essenziale quando trasporti roba per altri Barrios.</p>
+        <p>Se porti bagagli e attrezzatura per i tuoi compagni di camp, valuta di dare loro in anticipo queste casse di plastica da usare al posto delle valigie. Questo renderà il tuo furgone più facile da caricare e ottimizzerai l'uso dello spazio. Potresti voler ricordare ai tuoi compagni di camp di non mettere nulla di illegale nelle loro casse o bagagli; il conducente e i passeggeri del furgone saranno ritenuti responsabili se beccati alla dogana durante l'attraversamento delle frontiere.</p>
+        <p>Le cose delicate e i dispositivi audiovisivi che costano un sacco di soldi dovrebbero essere imballati in flight case, o almeno circondati da materiale spugnoso per proteggerli. Etichetta il verso in cui devono stare.</p>
+
+        <h3 class="bg-h3">Dal Regno Unito: guidare attraverso la Francia o prendere un traghetto</h3>
+        <p>Se hai base nel Regno Unito, prendere uno dei traghetti diretti in Spagna è allettante ma può sembrare costoso. Consigliamo di farlo per i seguenti motivi:</p>
+        <ul>
+            <li>Ottieni 24 ore di riposo prima (e dopo l'evento, se torni in traghetto),</li>
+            <li>Puoi bere BIRRA, fare docce E avere un letto!</li>
+            <li>È il momento di farti ripagare per aver portato la roba di tutti gli altri</li>
+            <li>Guidare attraverso la Francia è piuttosto costoso se sommi i pedaggi e il carburante speso, più i costi di alloggio se decidi di fermarti da qualche parte lungo il percorso</li>
+            <li>Attenzione ai problemi legati alla Brexit se viaggi dal Regno Unito.</li>
+            <li>Spenderai più soldi in carburante se il tuo furgone è molto carico</li>
+            <li>Potresti vedere un delfino!</li>
+        </ul>
+
+        <h3 class="bg-h3">Container di stoccaggio</h3>
+        <p>Esistono ormai circa 50 container di proprietà dei Barrios e gestiti tramite NCA attraverso il Barrio Support team. Ogni anno, il trasporto e lo stoccaggio per l'anno successivo devono essere pagati prima dell'inizio dell'evento. Contatta il Barrio support team per le istruzioni su come acquistare un container, registrarlo per il ritiro e pagare il suo stoccaggio dopo l'evento.</p>
+        <p>Il team di City Planning e barrio support ti aiuterà a posizionare il container sul lotto (vedi la sezione su Posizionamento e pianificazione urbanistica).</p>
+        <div class="bg-note"><h4>Nota</h4>
+            <p>Quest'anno vorremmo collaborare con tutti per fare in modo che i container siano più facilmente identificabili in futuro: registra i numeri di serie, scatta foto e incoraggia tutti a etichettare e/o dipingere i propri container e a inviarle a <a href="mailto:barrios@nobodies.team">barrios@nobodies.team</a>.</p>
+        </div>
+
+        <h3 class="bg-h3">Cosa puoi e cosa non puoi conservare nei container</h3>
+        <div class="bg-note"><h4>Le regole</h4>
+            <p>I container sono soggetti a regole sullo stoccaggio, e i seguenti articoli sono vietati:</p>
+            <ul>
+                <li>Cibo o beni deperibili. Tutti gli utensili da cucina, gli apparecchi e le attrezzature usati per la preparazione o conservazione del cibo, inclusi piatti e posate, devono essere puliti prima di essere riposti. Il minimo odore di cibo attirerà moltissimi ratti!</li>
+                <li>Materiali, liquidi o gas combustibili, infiammabili, esplosivi o ossidanti, es. vernici, benzina, olio, solventi per pulizia, bombole di gas, pellicola al nitrato di cellulosa, fuochi d'artificio</li>
+                <li>Armi da fuoco, armi, munizioni, esplosivi o loro componenti</li>
+                <li>Sostanze chimiche, materiali radioattivi, agenti biologici; inquinanti, materiali tossici o pericolosi o merci contaminate o altri materiali di natura potenzialmente pericolosa</li>
+                <li>Qualsiasi articolo che emette fumi, odori o esalazioni</li>
+                <li>Rifiuti</li>
+                <li>Persone</li>
+            </ul>
+        </div>
+        <p>I generatori possono essere conservati nei Container; tuttavia, a questi va prima svuotato tutto il carburante. Un'opzione è semplicemente far funzionare il generatore finché non esaurisce il carburante, comunque cerca prima di togliere tutto il carburante con metodi sicuri. Lascia il tappo del serbatoio aperto per qualche ora per far evaporare eventuale carburante residuo, assicurandoti che sia lontano da qualsiasi fonte di accensione e con un cartello sopra. Richiudi bene il tappo prima dello stoccaggio.</p>
+        <p>Leggi attentamente la sezione sulle bombole di gas.</p>
+
+        <p><strong>Consigli sui container:</strong></p>
+        <ul>
+            <li>Devi esporre un cartello sull'interno delle porte del tuo container che indichi ai tuoi compagni di camp cosa non vi si può conservare. Ritiralo presso la Barrio reception sul posto.</li>
+            <li>I container sono stoccati sotto il sole nelle campagne spagnole. Non mettere nel container nulla che possa essere danneggiato dal calore.</li>
+            <li>Non mettere mai nulla di infiammabile nel container.</li>
+            <li>Il container non è assicurato. Consigliamo di non conservarvi attrezzatura costosa. Solo robaccia da hippy!</li>
+            <li>Non conservare liquidi o acqua. Durante l'inverno potrebbe gelare e l'acqua si spargerà ovunque.</li>
+            <li>Cerca di riempire il container in modo uniforme. Se viene caricato solo a un'estremità, il contenuto si sposterà. I container vengono caricati sul camion di trasporto con una gru e possono inclinarsi di circa 30 gradi.</li>
+            <li>Metti gli articoli essenziali e d'emergenza selezionati come ultime cose vicino alla porta del container, il che significa anche che saranno le prime cose ad essere scaricate l'anno prossimo dalla tua crew di costruzione. Consigliamo di includere:
+                <ul>
+                    <li>Attrezzatura essenziale da cucina &mdash; più il fornello (ma non includere le bombole di gas!).</li>
+                    <li>Coltello, forbici</li>
+                    <li>Kit di primo soccorso</li>
+                    <li>Kit di attrezzi d'emergenza</li>
+                    <li>Mazzetta o mazza</li>
+                    <li>Torcia</li>
+                    <li>Tende, sacchi a pelo e materassi per le prime persone che arriveranno l'anno prossimo.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <a href="#contents" class="bg-back">Torna all'indice</a>
+    </div>
+</section>
+
+<section class="bg-chapter" id="ch3">
+    <div class="bg-wrap">
+        <p class="bg-chnum">Chapter 3</p>
+        <h2>Creare una comunità.</h2>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-04.jpg" alt="Membri del barrio riuniti come comunità" loading="lazy"><figcaption>Un barrio è un insieme di singole persone.</figcaption></figure>
+
+        <h3 class="bg-h3">Inclusione</h3>
+        <p>Il tuo Barrio è un insieme di singole persone, con tutti i vantaggi e le frustrazioni che ciò comporta. Ci sarà sempre uno squilibrio tra i membri che sembrano lavorare più degli altri. Alcune persone potranno dedicare più tempo prima per l'allestimento o dopo per lo strike, mentre altre potrebbero non essere in grado di restare oltre i giorni del festival. È importante che i compiti di qualsiasi Barrio siano condivisi nel modo più equo possibile.</p>
+        <p>Cerca di reclutare membri concentrati sul tema del Barrio, inclusi gli eventi che il Barrio organizza. Assicurati che possano incontrarsi con gli altri membri del Barrio prima dell'evento. L'inclusione radicale è un principio fondamentale. Cerca di reclutare una gamma diversificata e inclusiva di età, generi, etnie, abilità, nazionalità e persone di diverso orientamento sessuale. Tieni anche presente che le persone tendono a reclutare a propria immagine. Un Barrio fatto solo di DJ si ammazzerebbe a vicenda!</p>
+
+        <h3 class="bg-h3">Orientamento</h3>
+        <p>Consigliamo di tenere una sessione di benvenuto/orientamento per tutti i compagni di camp all'inizio della settimana, presentando a tutti le &ldquo;regole&rdquo; del Barrio e le responsabilità di ciascuno.</p>
+        <p>I punti importanti da affrontare includono:</p>
+        <ul>
+            <li>Come funziona il camp, inclusi i turni del camp: cucina, mansioni, faccende</li>
+            <li>Leave no trace &mdash; come smaltire le cose, come funziona il riciclo, cos'è il MOOP</li>
+            <li>Salute e sicurezza &mdash; lavarsi le mani, tenersi puliti, non lasciare cibo in giro, kit di primo soccorso</li>
+            <li>Da dove viene l'acqua, come funzionano le docce e come evitare di consumare tutta l'acqua!</li>
+            <li>Questioni legate al consenso e ai comportamenti accettabili nel tuo camp</li>
+            <li>Politica sul rumore e regole della zona audio</li>
+        </ul>
+        <div class="bg-note"><h4>Promemoria</h4>
+            <p>Cogli l'occasione per ricordare a tutti non solo le loro responsabilità nel Barrio, ma anche più in generale a Elsewhere. Ricorda ai membri del barrio chi sono i referenti del barrio all'evento, come iscriversi ai turni degli eventi e quali sono i bagni a voi attribuiti.</p>
+        </div>
+
+        <h3 class="bg-h3">Bambini</h3>
+        <p>Il sistema a semaforo per i camp &ldquo;kid friendly&rdquo; ha funzionato molto bene negli ultimi due anni e lo stiamo implementando di nuovo. Durante la registrazione del barrio, compilerai informazioni su quanto il tuo barrio è adatto ai bambini. Per condividere informazioni direttamente con i genitori, contatta <a href="mailto:inclusion@nobodies.team">inclusion@nobodies.team</a> in anticipo oppure passa dalla Ohana House e aggiornaci durante l'evento.</p>
+
+        <p><strong>Il tuo Barrio è adatto ai bambini oppure no?</strong></p>
+        <p>&ldquo;Adatto ai bambini&rdquo; è auto-definito, e puoi stabilire che preferiresti niente minori non accompagnati. Fornire questa informazione non garantisce nulla ma informa i genitori. Nessuno controllerà i bambini che entrano in camp che si definiscono per soli adulti, ma avviseremo i genitori della tua preferenza. Se vuoi qualcosa di più visivo o ufficiale, esporre un cartello al tuo Barrio che indica &ldquo;solo adulti&rdquo; o identificare chiaramente le aree per soli adulti può essere utile.</p>
+
+        <p><strong>A volte sei Solo Adulti, a volte no?</strong></p>
+        <p>Se il tuo Barrio ha un programma variabile o potrebbe essere considerato &ldquo;consigliata la guida dei genitori&rdquo;, puoi fornire alcuni dettagli nella descrizione del tuo barrio, per esempio:</p>
+        <ul>
+            <li>i bambini vanno bene di giorno ma non di notte</li>
+            <li>è adatto ai bambini, ma i genitori devono essere consapevoli che si svolgono attività per adulti</li>
+        </ul>
+
+        <p><strong>Alcune parti del tuo Barrio sono per soli adulti, altre aperte a tutte le età?</strong></p>
+        <p>Se vuoi che avvisiamo i genitori di questo, contatta <a href="mailto:inclusion@nobodies.team">inclusion@nobodies.team</a> e faccelo sapere nello specifico. Altrimenti, cartelli con scritto Solo Adulti o 18+ affissi davanti alle aree per soli adulti sono utili.</p>
+
+        <p><strong>Se hai bambini che campeggiano con te, faccelo sapere!</strong></p>
+        <p>Siamo curiosi e vogliamo conoscere tutti i bambini di Elsewhere, ma anche altri bambini potrebbero voler passare del tempo con i bambini del tuo camp.</p>
+
+        <p><strong>Hai workshop o attività adatte ai bambini al tuo Barrio?</strong></p>
+        <p>Puoi elencare gli eventi per bambini nella What? Where? When? Guide! Indica la fascia d'età di un evento quando lo inserisci; questi eventi saranno segnalati sia sul sito web sia nella guida cartacea. Questi eventi possono anche essere pubblicizzati alla Ohana house.</p>
+        <div class="bg-note"><h4>Nota</h4>
+            <p>Qualsiasi informazione tu condivida con l'Inclusion Team (<a href="mailto:inclusion@nobodies.team">inclusion@nobodies.team</a>) verrà raccolta e affissa alla Ohana House così da poterla condividere con genitori e famiglie.</p>
+        </div>
+        <div class="bg-note"><h4>Requisito legale</h4>
+            <p>La legge spagnola richiede che ai minori venga impedito di vedere materiale o attività vietate, in particolare atti sessuali e la somministrazione di alcol. Se organizzi un evento di questo tipo, assicurati che siano in posizione cartelli chiari che richiedano ai partecipanti di avere più di 18 anni.</p>
+        </div>
+
+        <a href="#contents" class="bg-back">Torna all'indice</a>
+    </div>
+</section>
+
+<section class="bg-chapter" id="ch4">
+    <div class="bg-wrap">
+        <p class="bg-chnum">Chapter 4</p>
+        <h2>Organizzare eventi al tuo barrio.</h2>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-05.jpg" alt="Un evento di barrio in pieno svolgimento a Elsewhere" loading="lazy"><figcaption>I barrios offrono spazi comuni, esperienze ed eventi.</figcaption></figure>
+
+        <p>I Barrios esistono per essere più di un'oasi nel deserto a puro beneficio dei compagni di camp. I Barrios sono un'espressione di ciò che voi, come collettivo, desiderate condividere; dovrebbero offrire spazi comuni, esperienze, eventi o qualsiasi altra cosa vi venga in mente.</p>
+        <p>La maggior parte dei Barrios organizza eventi specifici durante la settimana, che possono essere unici o quotidiani, e svolgersi a orari precisi o per tutto il giorno. Gli eventi sono categorizzati nella guida come, per esempio, Workshop, Party, Spiritualità/Guarigione, Performance/Arti e altro. Se hai intenzione di organizzare un evento e non trovi una categoria adatta &mdash; faccelo sapere a <a href="mailto:comms@nobodies.team">comms@nobodies.team</a>.</p>
+
+        <h3 class="bg-h3">La Elsewhere Guide &mdash; What? Where? When?</h3>
+        <p>Viene pubblicata una guida che include i dettagli di tutto ciò che accade durante la settimana. La guida è stampata come una rivista e viene consegnata alle persone al loro arrivo a Elsewhere.</p>
+        <p>Il sito &ldquo;What? Where? When?&rdquo; andrà online verso la fine di maggio. Per essere inclusi nella guida cartacea, gli eventi devono essere registrati sul sito prima di metà maggio. Maggiori informazioni sul sito della guida arriveranno presto. Tutti i partecipanti avranno accesso al sito in anticipo per creare la propria agenda degli eventi a cui vogliono partecipare durante la settimana.</p>
+        <p>Per qualsiasi domanda, non esitare a contattarci sul canale comms su Discord.</p>
+
+        <a href="#contents" class="bg-back">Torna all'indice</a>
+    </div>
+</section>
+
+<section class="bg-chapter" id="ch5">
+    <div class="bg-wrap">
+        <p class="bg-chnum">Chapter 5</p>
+        <h2>Acqua e water cube.</h2>
+
+        <figure class="bg-fig bg-fig--narrow"><img src="images/barrio-guide/img-06.jpg" alt="Un ratto caduto dentro un water cube aperto" loading="lazy"><figcaption>Parassiti potrebbero finire nel tuo cube.</figcaption></figure>
+
+        <h3 class="bg-h3">Ti serve un sacco d'acqua!</h3>
+        <p>L'acqua non è fornita dall'evento, e non c'è alcun rubinetto!!</p>
+        <p>La soluzione standard per l'approvvigionamento idrico è usare i &ldquo;Water Cube&rdquo;, tecnicamente chiamati &ldquo;IBC&rdquo; Cube, che sta per &ldquo;Intermediate bulk container&rdquo;. Ognuno contiene 1000 litri d'acqua, il che significa che ti serve un cube ogni 30 compagni di camp.</p>
+        <p>Il tuo Barrio deve avere tanti water cube quanti ne sono indicati nella tabella qui sotto:</p>
+        <table>
+            <thead>
+                <tr><th>Compagni di camp nel Barrio</th><th>30</th><th>60</th><th>90</th><th>120</th><th>150</th><th>180</th></tr>
+            </thead>
+            <tbody>
+                <tr><th>Water cube necessari</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+            </tbody>
+        </table>
+        <div class="bg-note"><h4>Requisito legale</h4>
+            <p>Docce: deve esserci almeno una doccia ogni 30 unità di campeggio o frazione di esse. Un'unità di campeggio è considerata un gruppo di quattro persone, quindi se il tuo camp ha più di 120 persone devi avere almeno due docce. Deve esserci abbastanza acqua disponibile da garantire un minimo di 30 litri d'acqua a persona al giorno per uso igienico. Questo non include l'acqua in bottiglia/potabile da bere.</p>
+        </div>
+        <div class="bg-note"><h4>Nota</h4>
+            <p>Spetta a te e al tuo Barrio comprare un water cube, sanificarlo, costruire qualcosa su cui appoggiarlo e poi riporlo nel tuo container o rimuoverlo dal sito. Come si fa tutto questo? Continua a leggere!</p>
+        </div>
+
+        <h3 class="bg-h3">Dove prendo un water cube?</h3>
+        <p>Le opzioni consigliate sono:</p>
+        <ol>
+            <li>Puoi comprarne o noleggiarne uno tramite il modulo d'ordine del barrio e ritirarlo presso la Barrio Reception sul posto.</li>
+            <li>Puoi comprarne uno ovunque, anche se dovrai organizzare il trasporto da e verso il sito!</li>
+        </ol>
+
+        <h3 class="bg-h3">Come sanifico un cube e gli impedisco di avvelenare TUTTI nel mio Barrio?</h3>
+        <p>Per sanificare il tuo cube, usa Candeggina Domestica (5% di cloro), non l'ingegnosa candeggina industriale né la candeggina hippy amica della terra fatta di canapa e fagioli mung. Sarebbe la candeggina nei contenitori gialli nei normali supermercati.</p>
+
+        <p><strong>Sanifica il cube prima dell'uso</strong></p>
+        <p>Togli dal cube il ratto, gli aghi usati e qualsiasi altro detrito. Porta il cube fuori dal sito, in un posto con accesso al sistema fognario.</p>
+        <p>Riempi il cube d'acqua fino a circa 1/5, aggiungi circa una tazza di detersivo per piatti e cinque litri di candeggina domestica e lascia agire per cinque minuti. Ruota ripetutamente il cube su ciascun lato così che tutti i lati si imbevano d'acqua, poi svuotalo attraverso il rubinetto, inizialmente in una bacinella o un secchio e poi il resto nel sistema fognario.</p>
+        <p>Immergi il tappo e il gruppo rubinetto nel secchio per altri 20 minuti. Elimina l'acqua saponata in eccesso con una canna o un'idropulitrice.</p>
+        <p>Infine scola attraverso il rubinetto in un contenitore. Non scaricare l'acqua con candeggina usata sulla superficie della playa: porta l'acqua da qualche parte in civiltà per svuotarla nel sistema fognario. In alternativa, usa la stessa quantità di acqua e candeggina ma con un'idropulitrice, con un apposito accessorio per la pulizia dei water cube.</p>
+
+        <p><strong>Sanifica il cube durante il riempimento</strong></p>
+        <p>Elsewhere è estremamente sensibile al fatto che le persone non si infettino con disturbi intestinali. È di fondamentale importanza che il cube sia mantenuto sanificato, altrimenti infetterà tutti nel camp. Quindi, a ogni riempimento, consigliamo di aggiungere un basso livello di candeggina: 10ml per cube. Aggiungilo mentre il cube viene riempito per permettere che si mescoli. Lascia riposare il cube per qualche ora affinché il sapore di candeggina si dissipi.</p>
+        <p>Questo basso livello di candeggina non è velenoso ed è una pratica comune e consolidata per le comunità che usano serbatoi d'acqua statici.</p>
+        <p>Se sei preoccupato che un leggero sapore di candeggina possa influire sulla tua cucina, puoi usare acqua in bottiglia / minerale. Anche aggiungere succo di limone aiuta.</p>
+        <p>Ai bambini, alle persone in gravidanza e alle persone con problemi immunitari si consiglia di bere acqua in bottiglia e di portare la propria acqua in bottiglia (autosufficienza).</p>
+
+        <h3 class="bg-h3">Deve stare su un supporto?</h3>
+        <p>Idealmente, sì. Devi versare l'acqua dal cube in altri contenitori. Attacca un rubinetto e tienilo ad almeno 70cm da terra perché tutti possano accedervi.</p>
+        <p>Tieni presente che 1000L d'acqua pesano 1 tonnellata, quindi la tua struttura deve essere robusta.</p>
+        <p>Ci sono alcune guide su come costruirne uno da soli, tuttavia il modo più facile ed economico per farlo è procurarsi quattro piccoli pallet di legno e avvitarli tutti insieme!</p>
+        <p>La buona notizia è che il Barrio Support Team noleggia pallet! I Barrios possono ordinarli tramite il Barrio Order Form.</p>
+
+        <figure class="bg-fig bg-fig--narrow"><img src="images/barrio-guide/img-07.jpg" alt="Un water cube rialzato su un supporto fatto di pallet di legno" loading="lazy"><figcaption>Supporto per water cube fatto con i pallet.</figcaption></figure>
+
+        <h3 class="bg-h3">Come faccio a far riempire il mio cube?</h3>
+        <p>Un'autocisterna visita il sito durante la settimana per riempire i water cube. Per ricevere la visita dell'autocisterna devi:</p>
+        <ol>
+            <li>Issare una bandiera sul tuo water cube per indicare che ha bisogno di essere riempito. Il tuo gentile Barrio Support Team distribuisce delle aste con una bandiera all'estremità per facilitare all'autocisterna il compito di trovarti. Per favore alzale solo quando devi riempire un cube.</li>
+            <li>Invia una richiesta di riempimento acqua sul canale WhatsApp dedicato. Questa richiesta viene cancellata quando il riempimento è completato.</li>
+        </ol>
+        <div class="bg-note"><h4>Importante</h4>
+            <p>Non aspettare che il tuo cube sia completamente vuoto per riempirlo!</p>
+            <p>Il team dell'autocisterna inizia il suo giro alle 10 ogni mattina. Il giro può richiedere alcune ore per essere completato, quindi potresti non ricevere la tua acqua fino a più tardi nella giornata.</p>
+            <p>Se non metti il tuo segnale sul water cube in tempo e l'autocisterna ti supera, non tornerà indietro per servirti. Dovrai aspettare il giorno seguente!</p>
+        </div>
+
+        <h3 class="bg-h3">Voucher per l'acqua</h3>
+        <p>Paghi i riempimenti usando un voucher che consegni all'autocisterna. Ogni voucher costa &euro;57 e riempie un cube con fino a 1.000 litri. Consigliamo a ogni Barrio di pre-acquistare un minimo di tre riempimenti d'acqua e 30 sacchi di ghiaccio prima dell'evento. Puntiamo a ridurre il più possibile le transazioni sul posto alla Rainmaker Station a No Info.</p>
+        <p>I voucher pagati in anticipo saranno pronti per il ritiro presso la Barrio Reception al tuo arrivo.</p>
+
+        <h3 class="bg-h3">Le normative richiedono un cartello sul tuo water cube</h3>
+        <div class="bg-note"><h4>Requisito legale</h4>
+            <p>L'acqua nei water cube deve essere contrassegnata come &ldquo;non potabile&rdquo;.</p>
+        </div>
+        <p>Sì, è vero. Dobbiamo tutti avere un cartello su ogni cube che dica &ldquo;Non potabile&rdquo;, in inglese e spagnolo. Non preoccuparti, l'acqua è potabile. Viva Espa&ntilde;a!</p>
+        <p>Se non hai un cartello da mettere sul cube, passa dalla barrio reception per prenderne uno.</p>
+
+        <h3 class="bg-h3">Come lo svuoto dopo l'evento?</h3>
+        <p>Il cube contiene acqua pulita, quindi può essere svuotato sul terreno della playa. Tuttavia, prima di farlo, scendi al Werkhaus e annuncia che hai un sacco d'acqua di cui sbarazzarti e un mucchio di persone sporche verrà a godersi la giornata spa al tuo Barrio! Assicurati solo che l'acqua non scorra in direzione della tenda di qualcuno.</p>
+
+        <h3 class="bg-h3">Conservare il cube dopo l'evento</h3>
+        <p>Il Barrios Support offre un servizio per conservare i water cube separatamente presso la struttura di Lopez. Questo può essere acquistato tramite il Barrio Order Form.</p>
+        <div class="bg-note"><h4>Importante</h4>
+            <p>Il cube deve essere svuotato, reso pronto per lo stoccaggio e trasportato alla Barrio Reception per poter essere conservato da Lopez. Lo stoccaggio deve essere prenotato prima dell'evento e non sul momento!</p>
+        </div>
+        <p>Il cube è una tua responsabilità, quindi devi rimuoverlo dal sito e conservarlo da qualche parte. Assicurati che:</p>
+        <ul>
+            <li>il cube sia vuoto</li>
+            <li>il tappo in alto sia allentato, ma non completamente tolto. Se togli il tappo del tutto, i ratti potrebbero caderci dentro e morire, causando la morte di fauna selvatica e un problema di ratto-morto-nel-water-cube per te l'anno prossimo.</li>
+            <li>il rubinetto sia aperto per far entrare e uscire l'aria</li>
+            <li>il foro del tappo sia coperto con un pezzo di tessuto fissato sopra il foro così che i ratti non entrino</li>
+        </ul>
+
+        <h3 class="bg-h3">Docce</h3>
+        <p><strong>Disposizione del sito</strong></p>
+        <p>Sistema le docce lontano dalle aree Cucina per la sicurezza alimentare. Considera la pendenza del sito per assicurarti che l'acqua sporca non scorra nella tenda di qualcuno / in uno spazio di attività / in una chill zone! Pianifica la posizione delle docce tenendo a mente le esigenze di accessibilità di tutti i membri del camp. Lascia uno spazio di almeno 2x2 metri.</p>
+        <p><strong>Inclusione &amp; Accessibilità</strong></p>
+        <p>Prevedi un ingresso piatto alla doccia per gli utenti in sedia a rotelle o le persone con difficoltà motorie. Può essere un pallet interrato e coperto con una stuoia &mdash; ma aggiungi delle assi al pallet per riempire gli spazi vuoti. Oppure una tavola, ma qualsiasi cosa è meglio di una pozza di fango!</p>
+        <p>Se usi sacche doccia, prevedi una carrucola per alzare e abbassare facilmente le sacche. Le sacche doccia devono pendere da un gancio che sia almeno 50cm più in alto della persona che si sta lavando, quindi una combinazione di carrucola e moschettone è il modo migliore per cambiare le sacche.</p>
+        <p>Una pompa elettrica e una doccetta a mano sono la cosa più facile per chiunque abbia problemi di mobilità (e anche per chi non ne ha). Se incorpori una pompa elettrica assicurati solo che abbia un timer, altrimenti il tuo camp prosciugherà il water cube in fretta immaginando di essere in uno spot di shampoo.</p>
+        <p>Assicurati che qualsiasi soffione della doccia possa essere staccato e raggiunto da una persona in sedia a rotelle e possa essere usato all'altezza della sedia (compreso lavarsi il sedere e i piedi).</p>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-08.jpg" alt="Una doccia da barrio con sacche doccia su una carrucola" loading="lazy"><figcaption>Pianifica le docce tenendo a mente accessibilità e consumo d'acqua.</figcaption></figure>
+
+        <h3 class="bg-h3">Acque reflue</h3>
+        <p>Ci sono vari gradi di acqua schifosa. Il sito è terreno agricolo e quindi tollera bassi livelli di cose come sapone e candeggina, e anzi beneficia di cose come il compost.</p>
+        <p><strong>Cose che possono andare sul terreno vicino al tuo Barrio:</strong></p>
+        <ul>
+            <li>Acqua della doccia &mdash; usa per favore saponi e shampoo ecologici. Niente tinte per capelli!</li>
+            <li>Acqua di cottura di cose come verdure bollite, patate, pasta</li>
+            <li>Ghiaccio sciolto</li>
+            <li>Acqua dalle borse frigo &mdash; se pulita!</li>
+        </ul>
+        <p><strong>Cose che devi raccogliere e portare nella zona di macchia lontano dal campeggio:</strong></p>
+        <ul>
+            <li>Liquidi di cottura &mdash; es. zuppa di pomodoro</li>
+            <li>Avanzi di bevande &mdash; tè, caffè, birra, bibite, vino</li>
+            <li>Acqua di lavaggio piatti, a meno che non sia macchiata, grassa o contaminata da cibo</li>
+        </ul>
+        <p><strong>Cose che devi smaltire al di fuori di Elsewhere:</strong></p>
+        <ul>
+            <li>Non versare grassi e oli di cottura sul terreno &mdash; raccoglili e tienili in un contenitore abbastanza grande e portali con te per smaltirli al di fuori di Elsewhere. La zona W&amp;R non può accettare oli e grassi di cottura.</li>
+        </ul>
+        <p>Il motivo principale per portare le cose lontano dal campeggio è che i liquidi di scarto possono attirare le mosche &mdash; le mosche possono spostarsi tra materiale contaminato e superfici pulite, portandosi dietro batteri lungo il tragitto. Può anche puzzare in modo sgradevole. Per favore non scaricare ripetutamente acque reflue nello stesso punto della macchia, altrimenti si svilupperanno cattivi odori. Non scaricarle a monte, o potrebbero essere trascinate di nuovo nel tuo camp quando piove.</p>
+        <p>Usa la tecnica dello spruzzo a mulinello per spargere l'acqua su una superficie più ampia, permettendole di evaporare più rapidamente.</p>
+        <div class="bg-note bg-note--warn"><h4>Avvertenza</h4>
+            <p>Tre regole importanti riguardo alle acque/liquidi reflui:</p>
+            <ol>
+                <li>Non versare liquidi reflui nelle porta potties!</li>
+                <li>Non versare liquidi reflui nelle porta potties!</li>
+                <li>NON versare liquidi reflui nelle porta potties!</li>
+            </ol>
+            <p>Le uniche cose che possono andare nelle porta potties sono quelle che escono dal tuo corpo, cioè cacca, pipì e vomito. Anche sangue. Se hai una bottiglia per la pipì nella tenda, quella può essere svuotata nella porta potty durante una camminata della vergogna di prima mattina.</p>
+        </div>
+
+        <h3 class="bg-h3">La Playa non è un parco acquatico</h3>
+        <p>Fai attenzione al consumo d'acqua del tuo Barrio. I membri del camp non hanno bisogno di fare tre docce al giorno o di lavarsi i capelli con shampoo + balsamo ogni giorno.</p>
+        <p>L'acqua è una risorsa preziosa e sta diventando sempre più scarsa. Molte regioni stanno vivendo la siccità. Allena te stesso e il tuo Barrio per un mondo con meno acqua e impara a renderti bello senza sprecare acqua. Assicurati di comunicarlo all'intero Barrio all'inizio dell'evento. Abbraccia la polvere.</p>
+        <p>[Potrai avere una spa-acquatica alla fine, quando dovrai svuotare il cube per lo stoccaggio.]</p>
+
+        <a href="#contents" class="bg-back">Torna all'indice</a>
+    </div>
+</section>
+
+<section class="bg-chapter" id="ch6">
+    <div class="bg-wrap">
+        <p class="bg-chnum">Chapter 6</p>
+        <h2>Cibo e bevande.</h2>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-09.jpg" alt="Compagni di camp che condividono un pasto comune a un barrio" loading="lazy"><figcaption>Cibo e bevande in comune uniscono un Barrio!</figcaption></figure>
+
+        <p>Cucinare un pasto a Elsewhere sarà circa cinque volte più difficile rispetto alla tua cucina di casa! Tenendolo a mente, cerca di scegliere ricette semplici ma nutrienti e di preparare il cibo fuori dal sito così da rendere la parte di cottura sul posto il più facile possibile. Alcuni Barrios preparano tutti i loro pasti, li congelano, li mettono in un congelatore e portano il tutto a Elsewhere. Un congelatore e il suo contenuto possono rimanere congelati fino a tre giorni durante il trasporto se è sigillato e non viene aperto.</p>
+        <p>Mantenere la cucina igienica e pulita è molto importante per mantenere in salute tutti a Elsewhere. Qui sotto trovi un sacco di buoni consigli.</p>
+
+        <h3 class="bg-h3">Organizzazione della cucina</h3>
+        <p><strong>Inclusione</strong></p>
+        <p>La disposizione della cucina potrebbe dover includere persone meno abili fisicamente di te. Pianifica di conseguenza per consentire l'accesso e la raggiungibilità in sedia a rotelle. Prevedi una segnaletica chiara per le persone ipovedenti.</p>
+        <p><strong>Conservazione</strong></p>
+        <p>Tieni tutto in contenitori, inclusi piatti, coltelli e forchette. Naturalmente i contenitori trasparenti sono migliori per trovare le cose! Conserva i cibi in modo corretto:</p>
+        <ul>
+            <li>Tieni i cibi secchi conservati all'ombra in contenitori con coperchio</li>
+            <li>Tieni frutta e verdura cruda conservate all'ombra e in contenitori con coperchio</li>
+            <li>Conserva i cibi ad alto rischio in una borsa frigo o in un frigorifero in ogni momento, come carne cruda, carne cotta, pollame, latticini, prodotti a base di uova, frutti di mare, verdura e frutta lavorate.</li>
+            <li>Evita cibi che devono essere refrigerati sotto i 5&deg;C a Elsewhere</li>
+            <li>Evita i frutti di mare a meno che non vengano acquistati e mangiati lo stesso giorno.</li>
+        </ul>
+        <p><strong>Lavare i piatti</strong></p>
+        <p>Usa un lavello a tre scomparti. La prima bacinella contiene acqua con detersivo per piatti, la seconda con acqua calda per risciacquare. La terza con acqua e una soluzione di candeggina. Metti un po' di candeggina nell'acqua di lavaggio piatti per evitare che le tue bacinelle diventino interessanti esperimenti microbiologici. Ricordati di portare con te del detersivo per piatti ecologico, perché in Spagna è difficile da trovare!</p>
+        <p>Vedi il seguente video per un esempio (scusa, è americano): <a href="https://youtu.be/T3dasib2lY8">https://youtu.be/T3dasib2lY8</a></p>
+        <p><strong>Pulizia</strong></p>
+        <ul>
+            <li>Tieni a portata di mano un flacone spray CHIARAMENTE ETICHETTATO di candeggina diluita per la pulizia. Scusa, sono misure statunitensi &mdash; ma utili: <a href="http://modernsurvivalblog.com/health/disinfectant-bleach-water-ratio/">http://modernsurvivalblog.com/health/disinfectant-bleach-water-ratio/</a></li>
+            <li>Non lasciare avanzi di cibo e piatti e tazze sporchi in giro per il camp</li>
+            <li>Lava tazze/bicchieri tra un uso e l'altro</li>
+            <li>Se cibo o bevande cadono, diluisci con acqua per tenere lontane le mosche</li>
+            <li>Porta con te carta moschicida e coperture per il cibo, perché le mosche sono una seccatura e faranno ammalare le persone</li>
+        </ul>
+        <p><strong>Gestione dei rifiuti</strong></p>
+        <ul>
+            <li>Tieni i bidoni dell'immondizia del camp lontani dalla cucina del camp e tieni sempre i coperchi sui bidoni</li>
+            <li>Procurati un buon bidone per gli scarti alimentari con coperchio a chiusura ermetica &mdash; così le mosche restano fuori, ricicli comunque il cibo e non c'è puzza né troppa sporcizia.</li>
+            <li>Non scaricare scarti alimentari nei buchi dei bagni o nei fossi attorno al campsite</li>
+            <li>Controlla le sezioni Leave No Trace e MOOP per maggiori informazioni su rifiuti e riciclo.</li>
+        </ul>
+        <p><strong>Sicurezza e igiene alimentare di base</strong></p>
+        <ul>
+            <li>È consigliabile non conservare cibo cotto, anche se hai un frigo.</li>
+            <li>Non riscaldare pasti già cotti in precedenza.</li>
+            <li>Fa piuttosto caldo. Se usi una borsa frigo con ghiaccio, assicurati che l'acqua dei sacchi di ghiaccio sciolto venga scolata e che il ghiaccio venga sostituito regolarmente con mani pulite.</li>
+            <li>Evita di condividere bevande, tazze, piatti e posate con altre persone.</li>
+        </ul>
+        <p><strong>Attrezzatura</strong></p>
+        <ul>
+            <li>Non avrai mai abbastanza strofinacci &mdash; per asciugare, per sollevare cose calde, per usarli come coperture antimosche</li>
+            <li>I gadget da cucina sono essenziali &mdash; pelapatate extra, apriscatole, forbici, coltelli affilati, taglieri, ecc. permetteranno ad altri campeggiatori di dare una mano in cucina all'occorrenza</li>
+            <li>Le pentole grandi piene di cibo sono dannatamente pesanti &mdash; assicurati di avere assistenti robusti e mestoli giganti con cui servire il cibo</li>
+        </ul>
+        <p><strong>Cose da preparare prima della partenza, i consigli di Messy:</strong></p>
+        <ul>
+            <li>Se c'è qualcosa di cui sai sicuramente di aver bisogno, compralo prima di partire &mdash; in particolare spezie, detersivo per piatti ecc. A meno che il tuo spagnolo non sia eccellente, identificare certi prodotti sarà difficile, se non impossibile.</li>
+            <li>Informati sulla situazione del ghiaccio prima di partire &mdash; l'anno scorso siamo diventati green e abbiamo comprato i mattoncini refrigeranti per le borse frigo. Questi venivano congelati dall'adorabile ice camp e ne avevamo abbastanza da rinnovarli ogni giorno &mdash; così il cibo non resta nell'acqua, non devi spendere soldi in ghiaccio ed è tutto un po' più green. Però funziona solo se hai un ice camp amichevole!</li>
+            <li>Mantieni le ricette semplici &mdash; le persone non vogliono cibo gourmet, vogliono la pancia piena! In questo modo è molto più facile per chi cucina e molto più veloce per gli affamati in attesa.</li>
+            <li>Snack &mdash; le persone hanno bisogno di mangiare quasi di continuo, tra il sudare nel caldo, il ballare come matti ecc, quindi tieni un sacco di snack salati e zuccherati che le persone possano afferrare quando vogliono. L'anno scorso abbiamo comprato madeleine all'ingrosso, che sono state un successo strepitoso.</li>
+            <li>Magari togli il focus dall'alcol &mdash; noi abbiamo gestito una cucina senza alcol. Tutti i soldi andavano al cibo, con le persone che si procuravano le proprie bevande all'occorrenza. Così nessuno si sente imbrogliato se non beve quanto gli altri &mdash; può evitare brutte sensazioni e mantiene anche bassi i costi.</li>
+        </ul>
+
+        <h3 class="bg-h3">Sicurezza antincendio</h3>
+        <p>La tua cucina deve essere posizionata ad almeno 20 m da qualsiasi vegetazione e a 10m dal perimetro del tuo sito. Presta attenzione alla disposizione della tua cucina rispetto alla sicurezza antincendio: le bombole di gas devono essere tenute all'ombra e il materiale infiammabile va tenuto ben lontano dall'area di cottura.</p>
+        <p>Ogni barrio è tenuto ad avere almeno un estintore a polvere ABC da 6 kg, che va collocato in un luogo accessibile con un cartello per estintore sopra. Dovresti anche avere una coperta antifiamma in cucina per poter coprire e soffocare rapidamente piccoli incendi. Assicurati che tutti nel camp sappiano come reagire in caso di incendio e come usare l'attrezzatura antincendio.</p>
+        <p>Non dovrebbero esserci combustibili solidi sul sito: questo significa niente legna che brucia, niente candele&hellip;</p>
+        <div class="bg-note bg-note--warn"><h4>Regole di sicurezza antincendio</h4>
+            <ul>
+                <li>Nessuna cucina o fonte di calore può essere posizionata entro i primi 10 m all'interno del perimetro e deve trovarsi a più di 20 metri da qualsiasi vegetazione.</li>
+                <li>Devi AVERE ALMENO un estintore a polvere ABC da 6 kg!</li>
+                <li>Le bombole di gas devono essere tenute all'ombra.</li>
+            </ul>
+        </div>
+
+        <h3 class="bg-h3">Nozioni di base sulla cucina</h3>
+        <p><strong>Nutrizione</strong></p>
+        <p>Abbiamo condotto studi sui requisiti nutrizionali per il campeggio nel deserto e, a parte le ovvie esigenze di reidratazione (alti livelli di sale), la dieta di tutti richiede alte proporzioni di proteine. Quindi, se pensavi che ogni pasto fosse un noodle istantaneo, ripensaci!</p>
+        <p>Questo può andare in contrasto con le esigenze dietetiche vegetariane e soprattutto vegane, quindi serve una pianificazione attenta. Alcuni suggerimenti:</p>
+        <ul>
+            <li>Le proteine nelle diete vegetariane includono uova, formaggio, Quorn, alternative alla carne</li>
+            <li>Le proteine nelle diete vegane (e quindi vegetariane) includono noci, lenticchie, fagioli, soia</li>
+            <li>Il Quorn non è vegano! Fai attenzione con altri &ldquo;sostituti della carne&rdquo;.</li>
+            <li>La pasta (di solito) non è vegana!</li>
+            <li>e già che ci siamo&hellip; I frutti di mare non sono Kosher!</li>
+        </ul>
+        <p><strong>Prima di iniziare a cucinare</strong></p>
+        <ul>
+            <li>Lavati: guarda la sezione sulla stazione per lavarsi (le mani)</li>
+            <li>Lava tutte le verdure &amp; rimuovi le bucce prima di cucinare</li>
+            <li>Pulisci i piani di lavoro con spray detergenti antibatterici</li>
+            <li>Rilava qualsiasi attrezzatura da cucina se è stata lasciata fuori</li>
+        </ul>
+        <p><strong>Durante la cottura</strong></p>
+        <ul>
+            <li>Cuoci bene il cibo ad alta temperatura (in particolare pollame, maiale, carne rossa, salsicce, fagioli)</li>
+            <li>Quando prepari o servi il cibo, tieni il cibo coperto con una copertura antimosche</li>
+        </ul>
+        <p><strong>Dopo la cottura</strong></p>
+        <ul>
+            <li>Riponilo; vedi Conservazione del cibo</li>
+            <li>Pulisci i piani di lavoro con spray detergenti antibatterici</li>
+            <li>Lavaggio piatti: prevedi un turno con persone dedicate che si lavano e sanificano le mani prima di iniziare</li>
+            <li>Asciuga gli oggetti puliti e conservali in contenitori con coperchio</li>
+        </ul>
+        <p><strong>I consigli di cucina di Eva:</strong></p>
+        <ul>
+            <li>Controlla le allergie alimentari del tuo camp e il numero di vegetariani così da poter pianificare di conseguenza. Non tollerare i mangiatori schizzinosi (solo veri vegetariani e allergie!) &mdash; le persone possono togliere i funghi (o qualunque cosa non gradiscano), non puoi cucinare loro pasti separati!</li>
+            <li>Cucina piatti in un'unica pentola &mdash; non tentare nulla di troppo elaborato, mantieni le cose semplici ma pianifica le ricette in modo che non sappia tutto uguale ogni singola sera</li>
+            <li>Se cucini per un sacco di persone, è una buona idea cucinare gli ingredienti separatamente in pentole diverse e poi unirli tutti alla fine</li>
+            <li>Fai pasta, riso, cous cous o stufati, che possono essere accompagnati dal pane</li>
+            <li>Il cibo secco si conserva bene (ovvio!) ma cose come chorizo secco e fagioli sono ottimi per gli ultimi giorni, perché si conservano davvero bene a lungo</li>
+            <li>I piatti in un'unica pentola sono buoni perché poi puoi fare un'insalata a parte o un contorno di verdure o avere roba extra da spolverarci sopra&hellip; Più cosette ci sono, meglio è &mdash; dà alle persone un senso di varietà</li>
+            <li>Evita le verdure a radice se puoi &mdash; sono una rottura da pelare e ci mettono molto a cuocere</li>
+            <li>Conosci le risorse alimentari locali: la Spagna ha cose diverse da Inghilterra/Olanda/Norvegia ecc, quindi non aspettarti enormi quantità di tofu, coriandolo macinato ecc a Sari&ntilde;ena &mdash; procurati quel genere di roba all'ingrosso a casa e portala con te</li>
+            <li>Aggiungere semi tostati a qualsiasi cosa la rende all'istante molto più glamour e gustosa</li>
+            <li>Puoi tenere il cibo al fresco avvolgendo un ripiano in un panno umido; puoi anche lasciare il tutto in acqua bassa</li>
+        </ul>
+
+        <h3 class="bg-h3">Fare la spesa</h3>
+        <p>Ci sono negozi locali a Sari&ntilde;ena, in particolare D&iacute;a ed Eroski, entrambi che riescono a far fronte alla domanda irregolare introdotta da Elsewhere. Consigliamo di andare a Zaragoza per una maggiore varietà di prodotti. Tieni anche presente:</p>
+        <ul>
+            <li>Gli orari di apertura spagnoli &mdash; specialmente la domenica, quando NON è aperto NULLA</li>
+            <li>I prodotti vegetariani sono piuttosto difficili da trovare in Spagna! Porta il tuo macinato di Quorn dal tuo paese.</li>
+            <li>I supermercati spagnoli vendono prodotti diversi, quindi ciò che a casa è facile da trovare potrebbe non essere disponibile in Spagna.</li>
+        </ul>
+        <p>Quando finalmente torni al camp con borse e borse di roba, consigliamo di impacchettare tutti gli ingredienti per ciascun giorno in scatole di cartone separate e di sigillarle con il nastro, scrivendo sulla scatola cosa contiene. Allo stesso modo, con gli ingredienti che devono essere tenuti al freddo, avvolgili in sacchetti zip lock separati per ciascun giorno e sigillali col nastro. Così renderai la cucina più facile il giorno stesso ma eviterai anche lo scenario in cui tutte le cipolle della settimana vengono fritte per il primo pasto.</p>
+        <p>Se ti senti particolarmente ben organizzato, puoi addirittura separare gli ingredienti per i diversi giorni mentre fai la spesa al supermercato. I risultati possono variare, e dipende da quante persone ti aiutano con la spesa.</p>
+
+        <h3 class="bg-h3">GHIACCIO</h3>
+        <p>Il ghiaccio è disponibile per l'acquisto sul posto. Può essere comprato da &ldquo;Ice Ice Baby&rdquo;, che si trova nel complesso NoInfo. Ogni sacco di ghiaccio costa &euro;2,50. Puoi scambiare il ghiaccio solo con i token. I token possono essere comprati dal Rainmaker a NoInfo e puoi anche pre-acquistare i token dal Barrio Order form (consigliato).</p>
+        <p><strong>Acquisto pre-evento</strong></p>
+        <p>Tutti i pre-acquisti si fanno tramite il Barrios Order Form. I Barrios possono pre-acquistare voucher per un massimo di 40 sacchi di ghiaccio per Barrio e ritirare i voucher alla Barrio Reception al loro arrivo.</p>
+        <p><strong>All'inizio della settimana</strong></p>
+        <ul>
+            <li>I Barrio ritirano i token con la loro prova d'acquisto alla Barrio Reception.</li>
+            <li>La vendita di token sarà disponibile anche sul posto quando il Rainmaker è a Ice Ice Baby. Vedi sotto per gli orari di apertura e la disponibilità del Rainmaker.</li>
+        </ul>
+        <p><strong>Durante l'evento</strong></p>
+        <ul>
+            <li>I volontari di Ice Ice Baby raccolgono i token in cambio di sacchi di ghiaccio. Non maneggiano denaro.</li>
+            <li>Gli orari di apertura di Ice Ice Baby sono dalle 11 alle 19.</li>
+            <li>Niente credito, non puoi ritirare token senza pagamento o prova d'acquisto tramite pre-ordine.</li>
+        </ul>
+
+        <h3 class="bg-h3">Consegne</h3>
+        <p>Non incoraggiamo i Barrios a farsi consegnare articoli direttamente sul sito, a causa della natura temporanea del festival che lo rende difficile da trovare e della sua inadeguatezza per la guida dei veicoli. Se hai bisogno di farti consegnare della roba, cerca di coordinarti con altri Barrios per far consegnare tutta la roba in un'unica spedizione invece di diverse. Indirizzali all'ingresso produzione*, che è una strada migliore da percorrere rispetto all'ingresso principale.</p>
+        <ul>
+            <li>Tieni presente che non c'è nessuno lì che &ldquo;firmi&rdquo; per qualcosa, quindi devi presentarti lì per la consegna. La guardia di sicurezza chiamerà via radio la produzione che invierà un messaggio sul canale WhatsApp.</li>
+            <li>Assicurati che un membro del tuo Barrio sul posto sia sul canale se aspetti consegne.</li>
+            <li>Se devono guidare fino al tuo Barrio, dovrai incontrarli all'ingresso produzione e accompagnare il loro tragitto attraverso il &ldquo;Field of Dirt&rdquo; (FoD) E RITORNO! Nessuno può attraversare il FoD non accompagnato.</li>
+            <li>Devi anche essere sobrio.</li>
+            <li>Preferiremmo che le consegne venissero trasferite sulla tua auto/furgone/carrello al gate o all'ingresso produzione piuttosto che far entrare camion e furgoni sul sito, a seconda della mole, a causa dei problemi del tipo guardare-le-tette-mentre-si-investono-gli-hippy.</li>
+            <li>Le consegne non possono essere effettuate dopo le 20:00.</li>
+        </ul>
+        <p><strong>L'ingresso produzione</strong></p>
+        <p>L'ingresso produzione a Elsewhere si trova nell'angolo in alto a sinistra della mappa. È la strada dalla Ermita San Miguel che ha una barriera con &ldquo;divieto di accesso&rdquo;. Contatta il Barrio Support team per istruzioni esatte o posizioni GPS.</p>
+        <p>I Barrios vogliono sempre usare l'ingresso produzione per le consegne. NCA tiene a che tu non lo faccia. Tuttavia, la strada del gate non è adatta a camion più grandi. L'ingresso produzione ha una security addestrata a far passare i conducenti solo se hanno pass speciali, quindi i camion di consegna a caso non verranno fatti entrare.</p>
+        <div class="bg-note"><h4>Nota</h4>
+            <p>Devi informare il referente del Barrio support che avrai una consegna in arrivo, contatta <a href="mailto:barrios@nobodies.team">barrios@nobodies.team</a> in anticipo.</p>
+        </div>
+
+        <a href="#contents" class="bg-back">Torna all'indice</a>
+    </div>
+</section>
+
+<section class="bg-chapter" id="ch7">
+    <div class="bg-wrap">
+        <p class="bg-chnum">Chapter 7</p>
+        <h2>Costruire strutture.</h2>
+
+        <h3 class="bg-h3">Strutture e opere d'arte</h3>
+        <p>Forse l'avrai sentito dire da altri, ma sì, a Elsewhere in generale fa molto caldo! Ci possono anche essere temporali improvvisi in cui cadono diversi centimetri di pioggia in pochissimo tempo. Venti forti accompagnano di solito i temporali, e i venti forti possono durare per diversi giorni.</p>
+        <p>Le strutture alte più di 2,5m devono essere approvate dal Build Lead, e possono essere effettuate ispezioni per verificare la sicurezza della struttura.</p>
+        <p>Dire che questo rende difficile fare riparo è un eufemismo! Troverai un sacco di consigli qui sotto, oltre a molte risorse online, come:</p>
+        <ul>
+            <li>Burning Man &mdash; Securing your structure</li>
+            <li>DIY your burn shelter shade cool and comfort</li>
+        </ul>
+        <div class="bg-note"><h4>Ispezione quotidiana</h4>
+            <p>Tutte le strutture più alte di 2,5mt saranno ispezionate quotidianamente da un tecnico competente, all'interno dell'organizzazione di Elsewhere, per certificarne l'integrità e la stabilità. Il tecnico compilerà e firmerà un modulo con dichiarazioni aggiornate, disponibile in caso di necessità.</p>
+        </div>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-10.jpg" alt="Una struttura ombreggiante costruita nel sito dell'evento nel deserto" loading="lazy"><figcaption>Una struttura ombreggiante di un barrio a Elsewhere.</figcaption></figure>
+
+        <h3 class="bg-h3">Consigli generali sulle strutture</h3>
+        <p><strong>Pianificazione e progettazione</strong></p>
+        <ul>
+            <li>Progettala e pianificala a fondo, compra i materiali in anticipo e tieni dei pezzi extra per qualsiasi cosa tu possa dover sostituire durante l'evento (bulloni, dadi, viti).</li>
+            <li>Realizza le parti complicate a casa, assemblale sul posto. È 10 volte più difficile fare le cose a Elsewhere rispetto a un'officina a casa. Sei anche a chilometri da un negozio di ferramenta, che apre rigorosamente secondo gli orari spagnoli.</li>
+            <li>Assembla la struttura a casa per intero in un campo. Se puoi, lasciala montata per diversi giorni per testarla. Costruire la tua struttura sarà più difficile sul posto, quindi fai più pratica possibile.</li>
+            <li>La tua struttura deve essere abbastanza semplice da poter essere realisticamente costruita prima dell'evento, non durante. Gli hippy sono già scarsi a costruire roba, ma gli hippy ubriachi/sballati sono ancora peggio.</li>
+            <li>Fai esaminare la tua struttura da un costruttore o un architetto.</li>
+            <li>Chiedi feedback ad altre persone nei gruppi di Elsewhere (Discord, WhatsApp) o al Barrio support team.</li>
+            <li>Pianifica il tuo sito e la tua struttura per usare il container come parte della struttura.</li>
+            <li>La tua area principale può essere un fantastico lavoro creativo di ingegneria e architettura, tuttavia, considera qualcosa di un po' più noioso ma pratico per la tua cucina. Tieni presente che la cucina deve sopravvivere intatta alle tempeste, e deve anche essere impermeabile. Puoi usare il container per le cose relative alla cucina ma non cucinarci dentro a causa dell'accumulo di gas. Si scaldano anche. Puoi usare i gazebo per la cucina ma assicurati che siano robusti e di aver ordinato gli accessori antitempesta per i fissaggi.</li>
+        </ul>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-11.jpg" alt="Struttura in rete ombreggiante che resiste al vento del deserto" loading="lazy"><figcaption>La rete ombreggiante lascia passare il vento dove i teloni lo catturerebbero.</figcaption></figure>
+
+        <p><strong>Materiali</strong></p>
+        <ul>
+            <li>Compra materiale di buona qualità che sopravvivrà a molte edizioni di Elsewhere! Evita la roba plasticosa ed economica che si sfalderà non appena arriva la prima tempesta di polvere! Investi in materiale sostenibile.</li>
+            <li>Usa rete ombreggiante, non usare teloni. I teloni, pur offrendo 100% di ombra, si trasformano in una vela con venti forti, il che finisce immancabilmente con la struttura rovinata. I teloni sono anche rumorosi al vento. La rete ombreggiante agricola o la rete mimetica creano una buona ombra e copertura senza intrappolare il vento.</li>
+            <li>La tua area principale può essere un fantastico lavoro creativo di ingegneria e architettura, tuttavia, considera qualcosa di un po' più noioso ma pratico per la tua cucina. Tieni presente che la cucina deve sopravvivere intatta alle tempeste, e deve anche essere impermeabile.</li>
+            <li>Cerca di limitare l'uso di materiale altamente inquinante e MOOPoso come sacchetti zip/fascette e nastro adesivo telato. Se proprio devi usarne, usa solo fascette riutilizzabili o sperimenta alternative (corde, cavi, &hellip;). Inoltre, la pellicola argentata di plastica delle coperte di sopravvivenza è rumorosa, MOOPosa e si strappa rapidamente!</li>
+        </ul>
+
+        <h3 class="bg-h3">Fissare la tua struttura al terreno</h3>
+        <p><strong>Trivelle (augers).</strong> Il Barrios Support noleggia l'uso di trivelle per aiutarti con la tua struttura ombreggiante o altre attività di scavo. Puoi prenotarlo tramite il Barrio Order Form.</p>
+        <p><strong>Fissaggi al terreno.</strong> Ci sono molte soluzioni per fissare strutture e ombreggiature saldamente al terreno, nessuna delle quali prevede normali picchetti da tenda. Considera l'uso di rebar a uncino (candy cane), tirafondi e catene o &ldquo;dead man's anchors&rdquo; (ancoraggi a corpo morto).</p>
+
+        <h3 class="bg-h3">Requisito di messa a terra</h3>
+        <div class="bg-note bg-note--warn"><h4>Avvertenza</h4>
+            <p>Tutte le strutture metalliche e le cupole devono essere messe a terra &ndash; questo include il tuo container se ne hai uno! È un requisito che questa messa a terra sia certificata da un elettricista locale. Elsewhere collabora con elettricisti certificati a livello locale, quindi se non puoi fornire una certificazione legale spagnola, puoi chiedere in Produzione di essere aggiunto all'elenco delle strutture che controlleranno. Puoi anche ordinare un servizio che aiuta a installare i picchetti di messa a terra direttamente tramite il Barrio Order form.</p>
+        </div>
+        <p><strong>Materiali.</strong> Porta per favore un'asta conduttrice, un morsetto di messa a terra, un filo di terra (10mm) e un connettore a blocco da fissare all'oggetto metallico. Ecco i link ai vari pezzi che ti serviranno:</p>
+        <ul>
+            <li>http://amzn.eu/hsbAoDE</li>
+            <li>http://amzn.eu/fDlqTRg</li>
+            <li>http://amzn.eu/igIkrn5</li>
+            <li>http://amzn.eu/j3Ol5o2</li>
+        </ul>
+        <p><strong>Picchetti di messa a terra.</strong> Il picchetto di messa a terra può essere conficcato nel terreno con una piccola mazzetta. Una volta collegato, versa circa 2L d'acqua attorno al picchetto per garantire la conduttività.</p>
+        <ul>
+            <li>http://amzn.eu/6MKUsW7</li>
+        </ul>
+        <p>Per rimuovere il parafulmine, puoi usare una pinza a morsa per ruotare l'asta, tirando verso l'alto allo stesso tempo. Guarda il seguente video su come rimuovere un picchetto di messa a terra e ignora i consigli di chiunque altro! https://youtu.be/ky_2NjaTPX8</p>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-12.jpg" alt="Picchetto di messa a terra collegato a un container marittimo" loading="lazy"><figcaption>Picchetto di messa a terra collegato a un container.</figcaption></figure>
+
+        <div class="bg-note bg-note--warn"><h4>Avvertenza</h4>
+            <p>Tutte le strutture metalliche, inclusi container, portacabine, cupole geodetiche, generatori, parafulmini e qualsiasi opera d'arte metallica di dimensioni pari o superiori a un parafulmine, devono essere messe a terra e la messa a terra deve essere certificata da un elettricista autorizzato.</p>
+        </div>
+
+        <a href="#contents" class="bg-back">Torna all'indice</a>
+    </div>
+</section>
+
+<section class="bg-chapter" id="ch8">
+    <div class="bg-wrap">
+        <p class="bg-chnum">Chapter 8</p>
+        <h2>Generatori ed elettricità.</h2>
+
+        <p>L'energia a Elsewhere è di due tipi. La maggior parte dei barrios vorrà collegarsi a una delle nostre due reti condivise &mdash; la Red Grid o la Yellow Grid &mdash; che forniscono corrente a 220V direttamente al tuo spazio, e sono l'opzione più semplice per la maggior parte dei camp. Se collegarsi a una rete non è pratico per la tua posizione (come nella blue zone), o se preferisci fare di testa tua, vale la pena considerare il solare per i barrios con esigenze energetiche modeste, oppure puoi usare un tuo generatore.</p>
+
+        <h3 class="bg-h3">Collegarsi alla Red o Yellow Grid</h3>
+        <p><strong>TLDR &mdash; i passaggi:</strong></p>
+        <ol>
+            <li>Stima il tuo fabbisogno di energia.</li>
+            <li>Contatta power@nobodies.team con il nome del tuo barrio, i contatti del referente energetico o tecnico del tuo barrio e il tuo fabbisogno di energia.</li>
+            <li>Dopo il posizionamento del barrio sarai assegnato alla rete più vicina e i tuoi contatti verranno trasmessi al coordinatore di quella rete.</li>
+            <li>Il gestore della rete ti contatterà per confermare il tuo posizionamento sulla rete, verificare che il tuo fabbisogno di energia sia corretto e dirti a che distanza sarai dal tuo quadro di distribuzione.</li>
+            <li>Dovrai assicurarti di avere un cavo abbastanza lungo da raggiungere da quel quadro di distribuzione fino alla posizione all'interno del tuo camp dove intendi suddividere l'energia. Questo DEVE essere fatto con un unico cavo. NON PUOI interrare i connettori. Questa posizione dovrà essere impermeabile.</li>
+            <li>Una volta sul posto ti verrà mostrato dove collegarti, scavi un canale fino al tuo camp per interrare il cavo.</li>
+        </ol>
+        <p>Le due reti condivise coprono parti diverse dell'evento. Ognuna funziona a 220V e usa connettori CEE a 3 poli (blu a poli tondi) &mdash; il connettore impermeabile da esterno standard che conoscerai dai campeggi e festival europei.</p>
+        <p>Per far collegare il tuo barrio, dovrai contattare il referente della rete della tua area. Confermeranno se ti trovi nella loro zona e ti predisporranno un punto di collegamento. Queste reti sono gestite dai barrios come uno sforzo collaborativo, quindi ci si aspetta che i barrios partecipanti diano anche una mano.</p>
+
+        <figure class="bg-fig bg-fig--narrow"><img src="images/barrio-guide/img-13.jpg" alt="Connettore di alimentazione da esterno CEE blu a 3 poli" loading="lazy"><figcaption>Connettore CEE a 3 poli (blu a poli tondi).</figcaption></figure>
+
+        <div class="bg-note"><h4>Domande sull'energia?</h4>
+            <ul>
+                <li>Red Grid: J&uuml;stin [email TBC]</li>
+                <li>Yellow Grid: Javier [email TBC]</li>
+                <li>Domande generali sull'energia: power@nobodies.team</li>
+            </ul>
+        </div>
+
+        <h3 class="bg-h3">Cosa ti servirà per collegarti</h3>
+        <p>Per collegarti alla rete ti servirà un cavo CEE a 3 poli &mdash; il cavo da esterno blu a poli tondi (BS4343 / CEE17). La misura standard da 16A trasporta fino a 3.840W, sufficienti per la maggior parte dei camp. Se fai funzionare qualcosa che consuma di più, parla con il tuo contatto della rete delle opzioni a maggiore amperaggio.</p>
+        <p>Assicurati che il tuo cavo sia abbastanza lungo da raggiungere dalla cassetta di derivazione più vicina della rete fino al punto in cui vuoi il tuo punto di distribuzione all'interno del camp &mdash; non solo fino al bordo del tuo Barrio. Il tuo contatto della rete confermerà la posizione della cassetta di derivazione una volta finalizzato il posizionamento, quindi vale la pena verificare con loro prima di comprare il cavo. Consigliamo di usare cavo gommato H07, a 3 conduttori con sezione (CSA) di 2,5mm&sup2;.</p>
+        <p>Se la tratta del cavo o qualsiasi connessione è esposta agli agenti atmosferici invece di essere riparata da una struttura, assicurati che tutto sia adeguatamente protetto dalle intemperie. I connettori CEE sono classificati per l'uso esterno ma non sono tutti uguali. Assicurati che le tue spine siano classificate IP67 &ndash; l'IP44 svolge per lo più il compito, ma incoraggiamo fortemente a usare l'IP67 dato l'ambiente ostile del deserto. In ogni caso non lasciare giunzioni o adattatori in una pozzanghera!</p>
+        <p>Dal punto di collegamento, consigliamo di far correre una dorsale CEE attorno al tuo barrio &mdash; un anello o una spina dorsale di cavo CEE classificato per esterni con scatole di derivazione per i singoli dispositivi. Questo mantiene le cose ordinate, sicure ed evita il pericolo di inciampo dello spaghetti-di-cavi che rovina la serata a tutti.</p>
+        <p>Se ti serve un riferimento per pianificare la disposizione del tuo cablaggio interno, il forum ePlaya di Burning Man ha molto materiale utile: https://eplaya.burningman.org/viewforum.php?f=278</p>
+
+        <h3 class="bg-h3">Calcolare il tuo fabbisogno di energia</h3>
+        <p>Che ti colleghi alla rete o alimenti il tuo barrio per conto tuo, devi sapere quanta energia consumerà il tuo camp.</p>
+        <p>Somma il wattaggio di tutto ciò che intendi far funzionare contemporaneamente. Alcuni suggerimenti:</p>
+        <ul>
+            <li>Impianti audio, amplificatori e altra attrezzatura: controlla il dato di potenza in ingresso sul retro o sotto. Per gli amplificatori che pilotano i diffusori, usa la potenza in ingresso dell'amplificatore, non quella del diffusore.</li>
+            <li>Un congelatore a pozzetto assorbe tipicamente circa 500W.</li>
+            <li>L'illuminazione LED è a basso consumo. Evita le lampadine a filamento o alogene.</li>
+            <li>I bollitori elettrici e le macchine del caffè sono energivori &mdash; usa il gas per bollire l'acqua invece. Come regola generale, evita qualsiasi cosa che produca calore elettricamente: tostapane, asciugacapelli, stufette elettriche e simili sono tutti enormi consumatori di energia.</li>
+            <li>Caricabatterie per telefoni e piccoli trasformatori: trascurabili, non preoccuparti di contarli.</li>
+            <li>Un comodo riferimento sul consumo degli elettrodomestici: https://www.daftlogic.com/information-appliance-power-consumption.htm</li>
+        </ul>
+        <div class="bg-note"><h4>Consiglio da pro</h4>
+            <p>Una trappola da evitare: non far funzionare un grande impianto audio &ldquo;a basso volume&rdquo; pensando che andrà tutto bene. I picchi e gli sbalzi all'accensione (o quando qualcuno strappa un cavo) possono far scattare la tua connessione anche se l'assorbimento medio sembra a posto. Dimensiona per il picco, non per la media.</p>
+        </div>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-14.jpg" alt="Pannelli solari che alimentano un camp nel deserto" loading="lazy"><figcaption>Il solare funziona splendidamente nel deserto caldo e soleggiato.</figcaption></figure>
+
+        <h3 class="bg-h3">Diventare autosufficienti radicali con il solare</h3>
+        <p>Non ti colleghi a una rete? Rispetto. Che sia impraticabile per la tua posizione, o semplicemente che tu voglia fare di testa tua, ci sono buone opzioni.</p>
+        <p><strong>Solare &mdash; sul serio, consideralo.</strong> Elsewhere è caldo, secco e molto soleggiato. Il solare funziona splendidamente qui, e per molti barrios è davvero l'opzione migliore &mdash; più silenzioso, più pulito e spesso più economico che far funzionare un generatore.</p>
+        <p>Se il tuo fabbisogno di energia è modesto, il solare è quasi sicuramente la scelta giusta. Illuminazione LED, ricarica dei telefoni, piccoli diffusori, laptop &mdash; tutto questo funziona tranquillamente con un paio di pannelli e un banco batterie senza mai toccare un inverter. I dispositivi a 12V DC (luci, caricatori USB, ventilatori) sono particolarmente efficienti in questo modo, ed evitare un inverter mantiene il tuo sistema semplice e basse le perdite. Vale anche la pena sapere che esistono versioni in DC di molti elettrodomestici comuni &mdash; inclusi i frigoriferi da campeggio &mdash; e questi tendono ad assorbire molta meno energia delle loro versioni a rete. Se si adattano alle esigenze del tuo barrio, sono un'ottima scelta.</p>
+        <p>Per sistemi più grandi &mdash; far funzionare un frigorifero più grande, un impianto audio serio o un congelatore &mdash; il solare resta un'opzione, richiede solo più pannelli, un banco batterie più grande e un inverter. È più un investimento iniziale, ma con una settimana di sole forte avrai parecchio con cui lavorare. Se prendi questa strada, dimensiona il banco batterie con generosità così da non restare a corto dopo il tramonto.</p>
+        <p>I pannelli non devono per forza essere costosi. Il mercato del solare usato è enorme in questo momento, e pannelli usati in condizioni perfettamente buone si possono avere per pochissimo &mdash; controlla gli annunci locali, le aziende agricole solari che rinnovano i loro parchi o le svendite di liquidazione degli installatori solari. Anche un solo pannello usato da 200W e una batteria per servizi si occuperanno di parecchio.</p>
+        <p>L'argomento a favore dell'acquisto: se riesci a trovare un uso per i pannelli durante il resto dell'anno &mdash; a casa, noleggiandoli o per altri progetti &mdash; si ripagano in fretta. L'argomento contro: se devono restare in un container per cinquanta settimane, pensaci due volte.</p>
+        <p>Il forum ePlaya ha una ricchezza di indicazioni pratiche sugli impianti solari a 12V per esattamente questo tipo di evento: https://eplaya.burningman.org/viewforum.php?f=278</p>
+
+        <h3 class="bg-h3">Usare un tuo generatore</h3>
+        <p>I generatori hanno senso per esigenze energetiche più grandi o quando il solare non è pratico per il tuo setup. Se il tuo Barrio ha bisogno di un wattaggio serio e non vuole la complessità di un grande impianto solare, un generatore è la risposta semplice.</p>
+        <p>Un piccolo generatore a valigetta (come un Honda 2200W) può tipicamente far funzionare un camp con un congelatore e un impianto audio ragionevole. Scegli l'unità con la potenza nominale più bassa che soddisfi le tue esigenze, e prevedi un po' di margine per gli errori. Spegnilo durante la notte &mdash; il tuo congelatore reggerà per qualche ora.</p>
+        <p>I generatori economici sono molto rumorosi. Se il tuo non è un modello inverter silenzioso, devi costruirgli attorno una cabina insonorizzata (baffle). I tuoi vicini ti ringrazieranno. Devi anche assicurarti che i tubi di scarico non puntino dritti verso il campsite dei tuoi vicini.</p>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-15.jpg" alt="Generatore portatile a valigetta" loading="lazy"><figcaption>Un piccolo generatore inverter a valigetta.</figcaption></figure>
+
+        <h3 class="bg-h3">Posizionamento e sicurezza del generatore</h3>
+        <div class="bg-note bg-note--warn"><h4>Avvertenza &mdash; regole non negoziabili</h4>
+            <p>Tieni a mente queste regole &mdash; sono non negoziabili:</p>
+            <ul>
+                <li>I generatori devono essere posizionati ad almeno 15m da qualsiasi area di campeggio e ad almeno 20m da qualsiasi vegetazione.</li>
+                <li>I generatori devono restare all'interno dello spazio designato del tuo Barrio.</li>
+                <li>Il carburante deve essere conservato ad almeno 15m dal generatore, in un contenitore a tenuta stagna, in un punto ombreggiato e ben ventilato lontano da qualsiasi cosa infiammabile.</li>
+                <li>Ogni generatore deve avere almeno un estintore a CO&sup2; nelle vicinanze. Tieni un estintore ABC anche vicino al tuo carburante. Gli estintori devono avere un cartello che ne segnali la posizione e devono essere stati certificati negli ultimi 12 mesi.</li>
+                <li>I generatori devono avere un picchetto di messa a terra collegato (vedi Messa a terra, sopra).</li>
+                <li>Assicurati che il generatore e il carburante non possano essere accidentalmente raggiunti dai partecipanti &mdash; installa barriere adeguate.</li>
+                <li>I generatori non sono ammessi nelle aree silenziose (blue zone).</li>
+            </ul>
+        </div>
+        <p><strong>Generatori trifase:</strong> Se il tuo generatore può erogare 400&ndash;415V (anche se non usi quell'uscita), il picchetto di messa a terra deve essere ispezionato dal nostro elettricista autorizzato prima dell'evento. Non dichiararlo in anticipo potrebbe comportare una violazione del permesso. Se questo ti riguarda, contatta power@nobodies.team con largo anticipo.</p>
+
+        <a href="#contents" class="bg-back">Torna all'indice</a>
+    </div>
+</section>
+
+<section class="bg-chapter" id="ch9">
+    <div class="bg-wrap">
+        <p class="bg-chnum">Chapter 9</p>
+        <h2>Impianti audio.</h2>
+
+        <h3 class="bg-h3">Requisiti per gli impianti audio</h3>
+        <p>Basti dire che gli impianti audio causano sempre problemi a Elsewhere. Sono direzionali, il che significa che conta moltissimo dove puntano i diffusori. Immancabilmente la scelta è tra puntarli verso il centro di Elsewhere o nella direzione opposta, verso la natura selvaggia. La natura selvaggia è di gran lunga l'opzione preferibile per gestire i livelli sonori.</p>
+        <p>Il team di City Planning a Elsewhere è responsabile del posizionamento dei Barrios e quindi si prende la colpa quando i campeggiatori vengono tenuti svegli tutta la notte dalla musica alta. Sii gentile con i volontari della City Planning e segui queste importanti regole:</p>
+        <div class="bg-note"><h4>Le regole</h4>
+            <ul>
+                <li>I diffusori devono essere rivolti lontano dal centro della playa e/o verso la strada perimetrale.</li>
+                <li>I Barrios della Red Zone devono accettare di acquistare un fonometro (Decibel meter). Il fonometro sarà calibrato con NCA e segnerà chiaramente il limite per indicare a ogni Barrio quando supera i limiti.</li>
+                <li>Durante tutte le ore in cui il suono può essere riprodotto a pieno volume, il Camp deve rispettare il limite di 96dB, con il microfono all'ingresso dello spazio dance.</li>
+                <li>Rispetta i Nomads &mdash; monitoreranno i livelli sonori e potranno agire contro un DJ o un Barrio che non rispetta i limiti di suono.</li>
+            </ul>
+            <p>Inoltre, ci sarà un sound check la domenica per assicurarsi che tutto sia configurato correttamente e che i diffusori puntino nella direzione giusta.</p>
+        </div>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-16.jpg" alt="Diffusori puntati lontano dal centro del sito" loading="lazy"><figcaption>Punta i diffusori lontano dal centro del sito.</figcaption></figure>
+
+        <p><strong>Consigli su suono e attrezzatura A/V a Elsewhere:</strong></p>
+        <ul>
+            <li>Fa caldo: non avere attrezzatura che giace al sole pieno mentre è accesa &mdash; tienila sempre all'ombra.</li>
+            <li>L'attrezzatura si sporcherà :(</li>
+            <li>Tieni sul posto un furgone in cui nascondere/chiudere l'attrezzatura costosa o tenerla all'asciutto se piove.</li>
+            <li>Disponi la tua area dormitorio in modo che le tende delle persone non siano sul percorso del suono.</li>
+        </ul>
+
+        <h3 class="bg-h3">Fonometri</h3>
+        <p>Tutti i barrios della red sound zone devono avere un fonometro. Il fonometro sarà calibrato con NCA e segnerà chiaramente il limite per indicare a ogni Barrio quando supera i limiti.</p>
+        <p>Installa un fonometro con un grande display (i numeri del display dovrebbero essere alti almeno 7cm o più), che misuri il suono costante, in un punto visibile al DJ (sopra la folla).</p>
+        <p>Durante il sound check di NCA prima dell'evento, se il fonometro non è ben calibrato, mettiamo un cartello sopra il fonometro con la differenza calibrata (solo quando la differenza è di 2dB o più). In questo modo, tutti conoscono il margine dello strumento.</p>
+
+        <figure class="bg-fig bg-fig--narrow"><img src="images/barrio-guide/img-17.jpg" alt="Fonometro con grande display montato sopra una folla" loading="lazy"><figcaption>Un fonometro con grande display visibile al DJ.</figcaption></figure>
+
+        <h3 class="bg-h3">Ridurre la propagazione del suono</h3>
+        <p>Il suono si propaga molto facilmente attraverso il terreno a Nowhere. Dovresti mettere i tuoi diffusori sopra qualcosa, idealmente ad almeno 50cm da terra. La maggior parte dei diffusori può essere messa su stativi. I diffusori per bassi o sub più grandi possono essere collocati su ponteggi o su un tavolo robusto.</p>
+        <p>I diffusori dovrebbero essere rivolti lontano dal sito e inclinati in modo che il suono non rimbalzi sulle colline vicine.</p>
+        <p>Se hai un furgone o un camion grande, posizionalo tra il tuo impianto audio e il sito per bloccare il rumore. Prova ad appendere tende pesanti dietro i diffusori &ndash; mettere tende attorno al tuo spazio festa lo fa sembrare più rumoroso dentro e più silenzioso fuori, quindi è un win&ndash;win!</p>
+        <p>Non importa quante volte glielo chiedi, i DJ finiscono sempre per mixare il brano successivo solo un po' più forte del precedente e il tuo volume cresce nel tempo. Quindi, se hai un PA oltre 1k o stai usando un diffusore per bassi, metti un limiter sul tuo sistema. Se usi diffusori per bassi, potresti trovare utile avere un limiter separato per questi.</p>
+        <p>Se hai un suono ricco di bassi, puoi usare un equalizzatore grafico per controllare quanto lontano si propagano i tuoi bassi, senza ridurre il volume complessivo. Più canali di EQ hai, più puoi regolare i tuoi bassi per ridurre la distanza, senza compromettere il suono complessivo. Alcuni EQ grafici dispongono anche di un filtro low cut, che ti permette di tagliare completamente le frequenze più basse, che non puoi sentire vicino ai diffusori ma che viaggiano molto lontano attraverso il sito. L'opzione più semplice ed economica che abbiamo trovato finora per fornire limiter, EQ grafico e filtro low cut in un'unica scatola è il Behringer DEQ1024. Facci sapere se trovi qualcosa di meglio.</p>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-18.jpg" alt="Diffusori rialzati su stativi da terra" loading="lazy"><figcaption>Solleva i diffusori da terra per ridurre la propagazione del suono.</figcaption></figure>
+
+        <h3 class="bg-h3">Le zone audio a Elsewhere</h3>
+        <p>Quando registri il tuo Barrio a Elsewhere, ti verrà chiesto in quale Zona vuoi che il tuo Barrio venga posizionato. Vedi la tabella qui sotto per una descrizione delle zone e dei rumori che possono essere tollerati in quelle zone.</p>
+
+        <div class="bg-note"><h4>Le regole d'oro dei DJ a Elsewhere*</h4>
+            <p>*da non prendere sul serio.</p>
+            <ol>
+                <li>Se qualcuno vuole davvero fare il DJ, non lasciarglielo fare per nessun motivo.</li>
+                <li>Se nessuno balla la tua musica, cambia la musica, o preferibilmente il DJ.</li>
+                <li>Ci saranno sempre almeno cinque hippy che ballano. Non perché la tua musica sia buona, è semplicemente che se smettono di ballare, cadono per terra.</li>
+                <li>(collegato al 3) Va bene spegnere la musica e andare a letto!</li>
+                <li>Se nessuno balla, alzare il volume della musica NON FUNZIONA! (vedi 2, 4).</li>
+            </ol>
+        </div>
+
+        <a href="#contents" class="bg-back">Torna all'indice</a>
+    </div>
+</section>
+
+<section class="bg-chapter" id="ch10">
+    <div class="bg-wrap">
+        <p class="bg-chnum">Chapter 10</p>
+        <h2>Fuoco e gas.</h2>
+
+        <p>Piuttosto deludente per un evento &ldquo;Burn&rdquo;, a Elsewhere non si possono bruciare solidi. Questo semplicemente perché la campagna circostante è macchia secca come l'esca, quindi qualsiasi cosa con braci volanti potrebbe far prendere fuoco a tutta la Spagna. Niente combustione di legna, carbone, erba, sacrifici umani ecc.</p>
+        <p>Puoi fare barbecue e usare forni a fiamma di gas. Puoi anche avere effetti di fiamma su opere d'arte. Le normative per l'uso delle fiamme nell'arte o altrove non sono qui ma sono trattate sotto Arte.</p>
+        <p>C'è di solito uno spettacolo di fuoco per chi vuole far roteare poi infuocati. Ora abbiamo anche un &ldquo;referente&rdquo; per il fuoco dell'area Barrio, può essere contattato a art@nobodies.team.</p>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-19.jpg" alt="Setup di cottura a fiamma di gas in una cucina di barrio" loading="lazy"><figcaption>Barbecue e forni a fiamma di gas sono ammessi; bruciare solidi no.</figcaption></figure>
+
+        <h3 class="bg-h3">Estintori e cartelli che li segnalano</h3>
+        <p>Fa parte del permesso che ogni barrio debba avere un estintore a polvere ABC da 6kg, e uno a CO2 da 2KG per un generatore o qualsiasi altro apparecchio che potrebbe essere danneggiato dalla polvere.</p>
+        <p>In passato, abbiamo fatto venire un rappresentante locale di estintori a ispezionare e ricertificare gli estintori e a venderne di nuovi. Abbiamo trovato questo processo piuttosto macchinoso e difficile da gestire, quindi siamo passati ai Barrios che noleggiano i propri estintori. Quindi, paghi in anticipo e puoi ritirarlo al check-in.</p>
+        <p>Se preferisci far ispezionare e certificare il tuo estintore dal tecnico del fuoco come in precedenza, sarà sul posto sabato sera alle 18 prima dell'evento, tuttavia dovrai pagarlo direttamente in contanti.</p>
+        <p>Puoi comprare un cartello luminescente per estintore dal Barrio Order Form, che è anch'esso un requisito.</p>
+
+        <figure class="bg-fig bg-fig--narrow"><img src="images/barrio-guide/img-20.jpg" alt="Cartello luminescente di segnalazione della posizione dell'estintore" loading="lazy"><figcaption>È richiesto un cartello luminescente per estintore.</figcaption></figure>
+
+        <div class="bg-note bg-note--warn"><h4>Avvertenza &mdash; regole sugli estintori</h4>
+            <ul>
+                <li>Ogni Barrio deve avere almeno un estintore a polvere ABC da 6 kg. Non prenderli dalle strade o da altrove, compranne uno che rispetti le normative!</li>
+                <li>Ogni Barrio deve avere estintori collocati attorno all'area cucina (tipo polvere ABC) e accanto ai propri generatori (CO2).</li>
+                <li>Ogni estintore deve avere un cartello luminescente che ne indichi la presenza.</li>
+            </ul>
+            <p>Terremo un'ispezione degli estintori sabato pomeriggio, dove potrai ritirare gli estintori acquistati in precedenza o ottenere una revisione ufficiale su quelli che hai comprato l'anno scorso.</p>
+        </div>
+
+        <h3 class="bg-h3">Gas butano e propano in Spagna</h3>
+        <p>In Spagna il butano è generalmente più usato del propano. Tieni presente che in Spagna il propano (attraverso un regolatore spagnolo) è a pressione più bassa rispetto ad altri paesi. (es., Butano/Propano 28/30Mb rispetto al Regno Unito 28/37Mb). Il tuo forno per pizza potrebbe non funzionare molto bene a meno che tu non investa in un regolatore speciale.</p>
+
+        <figure class="bg-fig bg-fig--narrow"><img src="images/barrio-guide/img-21.jpg" alt="Bombola di propano del tipo usato in Spagna" loading="lazy"><figcaption>Bombola di propano in Spagna (&ldquo;Propano&rdquo; in una fascia nera).</figcaption></figure>
+        <figure class="bg-fig bg-fig--narrow"><img src="images/barrio-guide/img-22.jpg" alt="Regolatore del gas e tubo spagnoli" loading="lazy"><figcaption>Regolatore spagnolo (&ldquo;regulador&rdquo;) e tubo (&ldquo;manguera&rdquo;).</figcaption></figure>
+
+        <p>Le bombole per entrambi sono molto simili, l'unica differenza è che il Propano ha &ldquo;Propano&rdquo; scritto in una fascia nera attorno alla bombola. Il butano è più comunemente usato in Spagna. L'attacco è lo stesso per Propano e Butano, e usano lo stesso regolatore.</p>
+
+        <h3 class="bg-h3">Come procurarsi una bombola di gas</h3>
+        <p>Il Barrio support ora vende bombole di propano e butano da consegnare sul posto. Il prezzo include una cauzione, che i Barrios riavranno indietro dopo aver restituito i vuoti. Le bombole possono essere ritirate alla Barrios reception al tuo arrivo. Esortiamo fortemente i Barrios a usare questo servizio, a meno che tu non voglia portarti via le bombole. Tieni presente che non possono essere conservate!</p>
+        <p>Altrimenti, le bombole possono essere comprate dai distributori di gas, tuttavia c'è una burocrazia che diventa difficile se non vivi in Spagna. I regolatori possono essere comprati nella maggior parte dei posti incluso la Ferreteria a Sari&ntilde;ena, anche il Brico Depot a Zaragoza. Oppure online prima dell'evento.</p>
+
+        <div class="bg-note bg-note--warn"><h4>Avvertenza &mdash; regole di stoccaggio del gas</h4>
+            <ul>
+                <li>Tutti i serbatoi di benzina e le bombole di gas devono essere adeguatamente protetti dal sole e lontani da tutte le fonti di calore.</li>
+                <li>Tutti i serbatoi di benzina e le bombole di gas devono avere la marcatura CE ed essere idonei a questo uso.</li>
+                <li>Tutti i componenti in gomma (tubi, connessioni) devono essere in buone condizioni, lontani dalle fonti di calore (sole, cucina) e protetti da manipolazioni accidentali e inappropriate. Un tecnico competente, all'interno dell'organizzazione di Elsewhere, effettuerà un controllo giornaliero di tutti gli impianti e connessioni antincendio e firmerà un modulo con dichiarazioni aggiornate, disponibile in caso di necessità.</li>
+                <li>La benzina deve essere conservata ad almeno 15m dal generatore e protetta dal sole e da qualsiasi altra fonte di calore. Inoltre, i grandi serbatoi devono essere recintati per evitare manipolazioni accidentali o inappropriate.</li>
+            </ul>
+        </div>
+
+        <h3 class="bg-h3">Ispezione degli impianti</h3>
+        <p>Il tuo impianto a gas, sia per cucinare sia per l'arte, sarà ispezionato. I motivi più comuni di bocciatura sono:</p>
+        <ul>
+            <li>Regolatore errato (o nessuno)
+                <ul>
+                    <li>Per cucina/butano, deve essere 28 mbar per il butano e 30mbar per il propano.</li>
+                    <li>In Spagna è venduto per lo più Butano. Per complicare ulteriormente le cose, in Spagna i regolatori per propano e butano sono uguali.</li>
+                    <li>Il tuo barbecue proveniente da un altro paese potrebbe richiedere una pressione diversa.</li>
+                </ul>
+            </li>
+            <li>Tubi vecchi
+                <ul>
+                    <li>I tubi del gas arancioni hanno tutti delle date sopra; non possono avere più di cinque anni e devono essere conformi alla norma ISO 10619-1:2017.</li>
+                    <li>I tubi non per propano, es. un pezzo di vecchia canna da giardino, saranno respinti.</li>
+                    <li>La Barrios reception avrà alcuni attrezzi per crimpare e tubo di ricambio, ma cerca per favore di sistemare questa cosa prima di venire a Elsewhere.</li>
+                </ul>
+            </li>
+        </ul>
+        <p>Le fascette stringitubo (o fascette a vite senza fine) possono essere usate per il gas a bassa pressione per l'uso nei fornelli ma non per gli effetti di fiamma, dove devono essere usati gli O-ring. Non stringere eccessivamente le fascette stringitubo.</p>
+
+        <figure class="bg-fig bg-fig--narrow"><img src="images/barrio-guide/img-23.jpg" alt="Fascette stringitubo usate su un tubo del gas" loading="lazy"><figcaption>Fascette stringitubo.</figcaption></figure>
+        <figure class="bg-fig bg-fig--narrow"><img src="images/barrio-guide/img-24.jpg" alt="Vecchio tubo del gas deteriorato e screpolato" loading="lazy"><figcaption>I tubi deteriorati o vecchi non supereranno l'ispezione.</figcaption></figure>
+
+        <h3 class="bg-h3">Maneggiare le bombole di gas</h3>
+        <p>È molto difficile bucare una bombola. Il pericolo sta nel gas che fuoriesce e si accumula in uno spazio confinato e non ventilato, specialmente se c'è una fonte di accensione nelle vicinanze.</p>
+        <p>Tutte le bombole di gas hanno valvole di sfogo della pressione progettate per aprirsi e far uscire il gas se la pressione diventa troppo alta. La pressione può aumentare in una bombola a causa delle variazioni di temperatura, specialmente se si scaldano per essere lasciate al sole o in un'auto/furgone con i finestrini chiusi. Come puoi immaginare, è un evento probabile nel deserto spagnolo! Pertanto, tutte le istruzioni di stoccaggio parlano di spazi ben ventilati, idealmente all'aperto.</p>
+        <div class="bg-note bg-note--warn"><h4>Avvertenza &mdash; trasportare le bombole</h4>
+            <ul>
+                <li>Tieni sempre una bombola in posizione verticale: non tenere mai una bombola coricata. Se la trasporti in auto, metti la bombola in verticale sul sedile posteriore, non dietro il guidatore, e passa la cintura di sicurezza attorno alla bombola per impedirle di spostarsi in avanti. Se è coricata e la valvola di sfogo della pressione deve aprirsi, espellerà liquido invece di gas!</li>
+                <li>Non trasportare bombole nel retro di un furgone chiuso: tieni sempre alcuni finestrini aperti. Trasporta le bombole in un rimorchio piuttosto che in un furgone, se hai questa possibilità.</li>
+                <li>Fissa sempre le bombole durante il trasporto per impedire che rotolino in giro.</li>
+                <li>Ovviamente &ndash; NON FUMARE mentre guidi con una bombola nel tuo veicolo! https://youtu.be/1uuvsdfWQB8</li>
+            </ul>
+            <p>Guarda questo video per vedere cosa succede se trasporti bombole di gas sciolte nel cassone di un pickup! https://youtu.be/p7RNYw11XHM</p>
+        </div>
+
+        <h3 class="bg-h3">Svuotare le bombole di gas</h3>
+        <p>Solo le bombole vendute a te all'inizio dell'evento possono essere lasciate alla Barrio Reception per essere ritirate! Non devono essere svuotate. Le bombole non devono essere conservate nei container!!</p>
+        <p>È consigliabile svuotare le bombole prima del trasporto:</p>
+        <ul>
+            <li>Brucia il gas in eccesso usando l'apparecchio per cui è stata progettata &mdash; es. barbecue, fornelli a gas.</li>
+            <li>Metti sempre un avviso che avverta le persone che un fornello è acceso ed è caldo (potrebbe non essere facile vedere una fiamma di giorno), di' loro di non spegnerlo e che è in corso la combustione del gas in eccesso.</li>
+            <li>Non limitarti a far uscire il gas dalla bombola. Non solo ci sarà un pericolo di incendio, ma la rapida depressurizzazione farà gelare il liquido nella bombola e crederai erroneamente che tutto il gas sia uscito.</li>
+            <li>Non crei un problema di impronta di carbonio bruciando il gas rispetto a rilasciarlo non bruciato nell'atmosfera! È la stessa quantità di carbonio. In forma di gas non bruciato non può essere scomposto dalle piante.</li>
+            <li>Una volta vuota, scollega sempre l'apparecchio e il regolatore.</li>
+            <li>Se c'è una valvola, chiudila. (Non tutte le bombole hanno valvole: dipende dal tipo di connettore). Se lasciata aperta c'è la possibilità che l'aria entri nella bombola e si mescoli con il gas, formando una combinazione esplosiva.</li>
+        </ul>
+
+        <a href="#contents" class="bg-back">Torna all'indice</a>
+    </div>
+</section>
+
+<section class="bg-chapter" id="ch11">
+    <div class="bg-wrap">
+        <p class="bg-chnum">Chapter 11</p>
+        <h2>Leave No Trace.</h2>
+
+        <p>C'è un sacco di consigli nell'Elsewhere Survival Guide riguardo al Leave No Trace, che non verranno ripetuti qui. Tuttavia, l'LNT è uno dei principi che richiede organizzazione, e tutti devono essere informati sull'argomento. Gli elementi di Leave No Trace trattati qui riguardano la gestione del Barrio piuttosto che i singoli individui.</p>
+
+        <h3 class="bg-h3">Il referente LNT del tuo Barrio</h3>
+        <p>Ogni Barrio deve nominare un referente leave-no-trace (LNT). Il team LNT di Elsewhere si metterà in contatto con il tuo camp per scambiare i contatti con quella persona e darle maggiori informazioni. L'LNT di Elsewhere inviterà tutti i Barrios a una riunione informativa prima dell'evento, in cui condividiamo trucchi e consigli per gestire l'LNT al tuo Barrio.</p>
+
+        <p><strong>Le missioni del referente LNT sono&hellip;</strong></p>
+        <p>&hellip;Durante l'evento:</p>
+        <ul>
+            <li>Educa i tuoi compagni di camp. Tutti dovrebbero conoscere il sistema di riciclo in Spagna, dove sono i bidoni, cosa va dove, dove portare la spazzatura ecc.</li>
+            <li>Imposta la gestione dei rifiuti e il riciclo nel Barrio, specialmente nelle aree Cucina e Bar.</li>
+            <li>Organizza un turno per portare la spazzatura alla zona W&amp;R quotidianamente e per fare il MOOP Sweep ogni giorno.</li>
+        </ul>
+        <p>&hellip;Pre- e Post-Evento:</p>
+        <ul>
+            <li>Avere un piano su come portare via tutto dal sito. Non abbandonare picchetti, pezzi di legno o mobili sul sito dando per scontato che se ne occuperà qualcun altro.</li>
+            <li>Organizza un MOOP Sweep dopo l'evento.</li>
+        </ul>
+        <p>Tieni presente che il ruolo del referente LNT in ogni Barrio è assicurarsi che queste cose accadano, non farle personalmente! Questi compiti sono faccende ideali per i compagni di camp sparkle-pony che non hanno contribuito granché in altri modi significativi&hellip;</p>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-25.jpg" alt="Fila di bidoni di riciclo differenziati a un barrio" loading="lazy"><figcaption>Bidoni separati per il sistema di riciclo spagnolo.</figcaption></figure>
+
+        <h3 class="bg-h3">Fare un piano LNT</h3>
+        <p><strong>Allestimento del Barrio per spazzatura e riciclo.</strong> Verifica in anticipo di avere una quantità sufficiente di bidoni con coperchio per far fronte al sistema di riciclo, questo ti renderà la vita più facile sul posto. Vorrai assicurarti di differenziare i rifiuti il meglio possibile all'interno del barrio, perché dovrai ri-differenziarli alla zona W&amp;R se è fatto male (il che è fastidioso!).</p>
+        <p>Ogni Barrio dovrebbe avere bidoni separati corrispondenti al sistema di riciclo in Spagna:</p>
+        <ol>
+            <li>Rifiuto indifferenziato</li>
+            <li>Imballaggi in plastica / cartoni tetra</li>
+            <li>Scatole di cartone, carta</li>
+            <li>Vetro</li>
+            <li>Compost</li>
+            <li>Lattine (tenute separate per essere schiacciate)</li>
+        </ol>
+
+        <p><strong>Consigli per impostare la raccolta dei rifiuti:</strong></p>
+        <ul>
+            <li>Raccogli i rifiuti riciclabili in bidoni riutilizzabili. I sacchetti di plastica possono essere usati solo per il rifiuto indifferenziato e gli imballaggi. Nessuna plastica è ammessa nel contenitore della carta, in quello del vetro o nelle buche del compost. Se arrivi alla zona W&amp;R con carta in un sacchetto di plastica, dovrai aprire il sacchetto prima di svuotare la carta.</li>
+            <li>Raccogli le lattine in bidoni separati. Le lattine devono essere schiacciate prima del riciclo. È piuttosto disgustoso tirare fuori lattine non schiacciate da sacchetti di plastica sporchi per schiacciarle.</li>
+            <li>Cerca di procurarti sacchetti di plastica trasparenti per i rifiuti in plastica. Poter vedere quanto eccellentemente hai differenziato i rifiuti in plastica senza frugare nel sacchetto renderà molto più facile il lavoro dei volontari della Zona W&amp;R. Per il rifiuto indifferenziato puoi usare normali sacchetti non trasparenti.</li>
+            <li>Non usare sacchetti per il riciclo del vetro. Svuota ogni residuo di vino/birra nel tuo contenitore per lo smaltimento dei liquidi. Sciacqualo, altrimenti attirerà le mosche &ndash; puoi usare la vecchia acqua di lavaggio piatti per questo &ndash; e lascia asciugare bottiglie/lattine, così che quando vanno nel contenitore non perdano ovunque. Tieni le bottiglie in scatole di cartone (o in qualche cassa di plastica se disponibile) per i seguenti motivi:
+                <ul>
+                    <li>I sacchetti si rompono e il vetro si frantuma, il che è difficile da pulire ed è un pericolo per gli hippy a piedi nudi!</li>
+                    <li>Quando arrivi alla zona W&amp;R, il vetro deve comunque essere infilato attraverso un foro stretto (e ricordati di togliere ogni tappo!). Se le hai messe nei sacchetti, dovrai semplicemente riaprirli!</li>
+                    <li>Se sono nei sacchetti, finisci con liquidi schifosi che colano sui tuoi piedi.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3 class="bg-h3">Pianificare la tua raccolta dei rifiuti</h3>
+        <p>I Barrios dovrebbero fare un Moop Sweep quotidiano e devono portare la loro spazzatura alla Zona W&amp;R ogni giorno. Questo significa che devi avere un programma di Rifiuti e Riciclo e implementare un turno per le persone che vanno alla Zona W&amp;R, così che non sia la stessa persona a farlo ogni giorno! Potrebbe anche essere una buona idea costruire uno schiaccia-lattine come modo divertente per ricordare a tutti che è super importante schiacciare le lattine.</p>
+        <p>Per rendere più facile il trasporto della spazzatura alla zona W&amp;R, specialmente se ne sei lontano, potresti considerare di costruire un piccolo carretto da trasporto o di portare un carrello a mano così che i tuoi compagni di camp non debbano trasportare spazzatura pesante sotto il sole e scottarsi.</p>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-26.jpg" alt="Carrello a mano usato per trasportare la spazzatura alla zona di riciclo" loading="lazy"><figcaption>Un carrello a mano facilita il giro quotidiano alla Zona W&amp;R.</figcaption></figure>
+
+        <h3 class="bg-h3">Valuta la MOOPabilità del tuo arredo</h3>
+        <p>Adoriamo tutti un camp splendidamente decorato, ma tieni presente che alcune decorazioni che sembrano super fighe come fiori di plastica o palloncini possono trasformarsi in un incubo di MOOP dopo che una grande tempesta o un grande party colpisce il tuo camp!</p>
+        <p>Evita tutto l'arredo plasticoso ed economico &ndash; che sembrerà solo misero e triste dopo una settimana nella polvere e finirà comunque nella spazzatura. Sii creativo e usa materiali sostenibili per creare decorazioni fantastiche. Oppure trova pezzi vintage fantastici di seconda mano da dipingere. Evita la roba economica dai siti low-cost come &lsquo;Temu&rsquo;. Riutilizza decorazioni di altri eventi della tua regione.</p>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-27.jpg" alt="Decorazione di camp sostenibile riciclata" loading="lazy"><figcaption>Usa un arredo sostenibile e riciclato invece della plastica economica.</figcaption></figure>
+
+        <h3 class="bg-h3">Durante l'evento &mdash; La Zona W&amp;R</h3>
+        <p>La Zona W&amp;R è la stazione di riciclo a Elsewhere. Quest'anno gli orari di apertura della Zona W&amp;R sono:</p>
+        <p><strong>Pre-evento:</strong></p>
+        <ul>
+            <li>Sabato &ndash; Lunedì (4&ndash;6 luglio): 16:00&ndash;18:00</li>
+        </ul>
+        <p><strong>Durante l'evento:</strong></p>
+        <ul>
+            <li>Da martedì a sabato (7&ndash;11 luglio): 11:00&ndash;19:00</li>
+            <li>Domenica (12 luglio): 09:00&ndash;18:00</li>
+        </ul>
+        <p><strong>Post-evento:</strong></p>
+        <ul>
+            <li>Lunedì (13 luglio): 11:00&ndash;15:00</li>
+            <li>Martedì (14 luglio): 14:00&ndash;16:00</li>
+        </ul>
+        <p>Non andare alla Zona W&amp;R al di fuori di questi orari. Anche se sai cosa stai facendo, qualcun altro potrebbe vederti e pensare che la Zona W&amp;R sia aperta e lasciare la propria roba nei posti sbagliati, quindi rispetta gli orari di apertura.</p>
+        <p>Ci saranno volontari ad aiutarti a mettere la spazzatura differenziata nel cassonetto giusto e ad assicurarsi che tu ricicli secondo il sistema spagnolo.</p>
+        <p>Lascia il tuo barrio per un giro alla Zona W&amp;R almeno un'ora prima della chiusura, perché la spazzatura deve essere controllata e spesso ri-differenziata correttamente.</p>
+        <div class="bg-note"><h4>Importante &mdash; quotidianamente, per legge</h4>
+            <p>La spazzatura deve essere portata alla stazione di riciclo OGNI GIORNO. Questo è un requisito legale. Permette anche di:</p>
+            <ul>
+                <li>Evitare l'accumulo di spazzatura al tuo camp e di attirare le mosche (che diffondono malattie e sono in generale dannatamente fastidiose).</li>
+                <li>Permettere al fornitore con cui lavoriamo di rimuovere la spazzatura man mano che viene prodotta durante la settimana. È molto più comodo che gestire una montagna insormontabile di spazzatura alla fine della settimana.</li>
+            </ul>
+            <p>La Zona W&amp;R ha bisogno di volontari, specialmente alla fine della settimana. Referenti LNT, iscrivete le persone! La spazzatura deve essere portata alla stazione di riciclo OGNI GIORNO.</p>
+        </div>
+
+        <h3 class="bg-h3">Formare i tuoi compagni di camp</h3>
+        <p>Il referente LNT del Barrio deve formare i suoi compagni di camp a:</p>
+        <ul>
+            <li>Rispettare il sistema di riciclo spagnolo: le cose possono confondere se vieni da un altro paese, dato che i sistemi non sono uguali, ma i bidoni hanno gli stessi colori&hellip;</li>
+            <li>Schiacciare completamente le lattine (comprese le scatolette) prima di gettarle in un posto sicuro.</li>
+            <li>Appiattire le scatole di cartone.</li>
+            <li>Tenere i coperchi su tutti i bidoni per ridurre le mosche.</li>
+            <li>Rimuovere i residui di cibo da qualsiasi riciclo.</li>
+            <li>Smettere di gettare carta velina (carta da cucina, carta igienica) nei bidoni della carta, quella va nei rifiuti organici (o nell'indifferenziato se sporca di rifiuti umani o preservativi ecc.).</li>
+            <li>Smettere di usare le lattine vuote delle bevande come posacenere!</li>
+        </ul>
+        <p>Il sistema di riciclo spagnolo funziona con un codice colore che potrebbe essere simile a quello del tuo paese. Tuttavia, la Zona W&amp;R ha tre grandi contenitori aperti dall'aspetto simile per indifferenziato, carta e plastica/imballaggi, un contenitore rotondo e chiuso per il vetro e buche per il compost scavate nel terreno. Assicurati di smaltire la tua spazzatura nel posto giusto, in caso di dubbio, conferma di nuovo con il tuo gentile guerriero della Zona W&amp;R di turno.</p>
+        <p>Ci sono materiali visivi stampabili sulla pagina Humans Barrio lead su cosa va dove, che puoi scaricare, stampare ed esporre in giro per il tuo barrio. Se non li trovi, contatta il Barrio Support o il team LNT e ti sistemeranno.</p>
+
+        <h3 class="bg-h3">Dopo l'evento &mdash; Buche e spostamento del terreno (uso delle trivelle)</h3>
+        <p>Non ci sono regole specifiche su quanto si possa scavare sul sito, ma basti dire che nessun Barrio dovrebbe scavare una grande buca e lasciarla aperta quando se ne va. Questo potrebbe causare un infortunio o un incidente, far rimanere bloccato un veicolo o fargli avere un incidente, oppure far ferire un animale in seguito.</p>
+        <p>Quando scavi una buca o usi una trivella, raccogli il terreno in eccesso in sacchi per macerie, big bag (come gli &ldquo;Hippo Bags&rdquo; nel Regno Unito) o sacche blu IKEA, che sono appena sollevabili quando piene di terra. Riponili fuori dai piedi e rimetti quel terreno nella buca alla fine della settimana.</p>
+
+        <h3 class="bg-h3">MOOP Sweep</h3>
+        <p>Matter Out Of Place (MOOP) &ndash; si riferisce generalmente a rifiuti o oggetti lasciati dove non dovrebbero stare. È sensato fare un MOOP sweep quotidianamente durante l'evento, e prima di partire.</p>
+        <p>Il periodo di strike può essere particolarmente difficile perché l'ambiente ostile ha già messo a dura prova il tuo corpo. Prendere decisioni sarà più difficile, quindi per evitare di commettere errori, decidi un piano LNT di Strike prima dell'evento. Non abbandonare mobili o sacchi di spazzatura sul sito o vicino al sito dopo l'evento e fai un MOOP Sweep una volta pronto a lasciare il sito.</p>
+        <p>Quando il tuo camp è smontato e il terreno che hai occupato è sgombro, raduna i tuoi compagni di camp per eseguire un MOOP sweep. È qui che file di compagni di camp felici (ma probabilmente stanchi) avanzano in fila attraverso il camp cercando QUALSIASI oggetto chiaramente fuori posto.</p>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-28.jpg" alt="Una fila di persone che esegue un MOOP sweep su un terreno sgombro" loading="lazy"><figcaption>Un MOOP sweep: file di compagni di camp che setacciano il terreno.</figcaption></figure>
+
+        <h3 class="bg-h3">La suddivisione LNT dettagliata</h3>
+
+        <p><strong>Carta/Cartone.</strong> Colore blu nel sistema spagnolo, contenitore aperto a Elsewhere. Carta ragionevolmente pulita e cartone appiattito. Assicurati che la carta sciolta non voli via alla più lieve brezza d'aria. Astieniti il più possibile dal farti spedire articoli grandi tramite corriere. Pur capendo che è comodo, mette una pressione inutile sulla Zona W&amp;R, perché gli articoli grandi arrivano sempre con grandi imballaggi.</p>
+        <p>Cose che non vanno nella carta/cartone:</p>
+        <ul>
+            <li>Niente carta velina (carta igienica, carta da cucina, tovaglioli): questi vanno nelle buche del compost. Unica eccezione: la carta velina con rifiuti umani sopra (feci, sangue, sperma), questa va nell'indifferenziato.</li>
+            <li>Niente contenitori tetra-pak: questi vanno nel bidone giallo.</li>
+        </ul>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-29.jpg" alt="Contenitore aperto per carta e cartone appiattito" loading="lazy"><figcaption>Carta/cartone &mdash; blu nel sistema spagnolo.</figcaption></figure>
+
+        <p><strong>Plastica/Imballaggi.</strong> Colore giallo nel sistema spagnolo, contenitore aperto a Elsewhere. Contenitori di plastica (bottiglie d'acqua, sacchetti di plastica, vasetti di yogurt, ecc.), lattine di bevande e cibo (schiacciate se possibile, altrimenti usa il martello fornito nella Zona W&amp;R), tetra pak, coperchi di metallo, foglio di alluminio e pellicola trasparente, vaschette di polistirolo, ecc. In generale, questo è per gli imballaggi alimentari. Assicurati di minimizzare la quantità di residui di cibo sull'imballaggio, per evitare cattivi odori, sacchetti che colano e la generale sensazione di schifo. Cerca di procurarti sacchi della spazzatura trasparenti così che i guerrieri della Zona W&amp;R possano controllarli senza doverli aprire.</p>
+        <p>Cose che non vanno nella plastica/imballaggi:</p>
+        <ul>
+            <li>Le plastiche dure (es. giocattoli, fascette) vanno nell'indifferenziato.</li>
+            <li>Grandi materiali da costruzione.</li>
+        </ul>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-30.jpg" alt="Contenitore aperto per rifiuti in plastica e imballaggi" loading="lazy"><figcaption>Plastica/imballaggi &mdash; giallo nel sistema spagnolo.</figcaption></figure>
+
+        <p><strong>Vetro.</strong> Colore verde nel sistema spagnolo, contenitore rotondo chiuso a Elsewhere. Bottiglie e barattoli di vetro, anche bicchieri rotti (ma se possibile non portarli proprio). Abbiamo una capacità limitata di smaltire il vetro e il vetro rotto diventa molto moopposo, quindi cerca di limitare la quantità di vetro che porti.</p>
+        <p>Cose che non vanno nel vetro:</p>
+        <ul>
+            <li>Coperchi di plastica o metallo, vanno nella plastica/imballaggi.</li>
+            <li>Tappi di sughero, vanno nella buca del compost se sono di sughero naturale, se fatti di plastica vanno nella plastica/imballaggi.</li>
+        </ul>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-31.jpg" alt="Contenitore rotondo chiuso per il riciclo del vetro" loading="lazy"><figcaption>Vetro &mdash; verde, un contenitore rotondo chiuso.</figcaption></figure>
+
+        <p><strong>Indifferenziato.</strong> Colore nero nel sistema spagnolo, contenitore aperto a Elsewhere. È qui che va tutto il materiale non riciclabile della spazzatura quotidiana. Uno dei nostri obiettivi è minimizzare la quantità di rifiuto indifferenziato creato durante l'evento, da qui l'importanza di conoscere il sistema di riciclo!</p>
+        <p>Cose che non vanno nell'indifferenziato:</p>
+        <ul>
+            <li>Qualsiasi cosa che potrebbe essere riciclata.</li>
+            <li>Materiali da costruzione, tende rotte, attrezzatura da campeggio, opere d'arte, tappeti e altri articoli grandi. Ciò che puoi portare a Elsewhere lo puoi riportare fuori. Se devi smaltire articoli grandi, continua a leggere.</li>
+        </ul>
+
+        <p><strong>Rifiuto Organico.</strong> Colore rosso nel sistema spagnolo, buche del compost nel terreno a Elsewhere. Cibo versato, frutta (compresi gli agrumi), verdura, noci, gusci d'uovo, tappi di sughero, bustine di tè, fondi di caffè, carta velina (carta igienica, carta da cucina, tovaglioli senza rifiuti umani sopra). Il rifiuto organico dovrebbe essere raccolto in un secchio per il compost riutilizzabile che puoi svuotare e sciacquare prima di rimetterlo in uso.</p>
+        <p>Cose che non vanno nel Rifiuto Organico:</p>
+        <ul>
+            <li>Sacchetti di plastica: che siano &ldquo;compostabili&rdquo; o no. I sacchetti compostabili hanno comunque bisogno di diversi anni nelle buche prima di decomporsi. Quindi, niente plastica di nessun tipo per favore! Non vogliamo lasciare nel terreno plastica che impiegherà centinaia di anni a sparire.</li>
+            <li>Non mettere nel compost avanzi di carne o pesce, anche se alla fine si decomporranno, sono una fonte di batteri e attirano sia mosche sia animali più grandi che vogliamo minimizzare.</li>
+        </ul>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-32.jpg" alt="Buca del compost scavata nel terreno per i rifiuti organici" loading="lazy"><figcaption>Rifiuto organico &mdash; rosso, nelle buche del compost nel terreno.</figcaption></figure>
+
+        <p><strong>Olio di cottura.</strong> Colore arancione nel sistema spagnolo, non disponibile a Elsewhere. Raccogli per favore il tuo olio di cottura in contenitori richiudibili (bottiglie PET o taniche). Questo può essere consegnato in qualsiasi supermercato spagnolo. Non abbiamo la capacità di gestire l'olio di cottura di tutti i partecipanti di Elsewhere.</p>
+
+        <h3 class="bg-h3">Sbarazzarsi degli articoli grandi</h3>
+        <p>Se un Barrio ha articoli grandi, legno avanzato dalla costruzione, sdraio rotte o gazebo o tende oltre ogni riparazione, ci sono due opzioni. Specialmente durante il Build puoi portare la tua grande spazzatura a questo centro di riciclo [INFORMAZIONI IN ARRIVO]. Oppure ordini dei cassoni da giardino tramite il barrio support. Questi possono essere forniti all'evento.</p>
+        <div class="bg-note bg-note--warn"><h4>Avvertenza &mdash; non abbandonare articoli grandi</h4>
+            <p>TUTTAVIA &mdash; Dovrai pagare per gettare via tali articoli. Incoraggiamo i Barrios a pre-ordinare un cassone prima dell'evento se sai di star facendo un grande progetto che comporta lo smaltimento di materiale da costruzione o di star svuotando il tuo container. Puoi ordinare un cassone intero, metà o un quarto. Ordina online sul Barrios Order form in anticipo.</p>
+            <p><strong>NON ABBANDONARE OGGETTI GRANDI ALLA ZONA W&amp;R.</strong></p>
+            <p>La Zona W&amp;R accetta solo la tua spazzatura quotidiana. Gli articoli grandi avanzati dalla costruzione o il materiale decorativo NON POSSONO essere smaltiti alla Zona W&amp;R. Non solo verrai additato e svergognato, ma potresti essere bandito dal tornare a Elsewhere. Se hai articoli che non puoi portare via con te o conservare da qualche parte, contatta il Barrio Support invece di provare a nasconderli da qualche parte!</p>
+        </div>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-33.jpg" alt="Cassone da giardino per lo smaltimento di grandi rifiuti da costruzione" loading="lazy"><figcaption>Pre-ordina un cassone per i grandi rifiuti da costruzione o decorativi.</figcaption></figure>
+
+        <a href="#contents" class="bg-back">Torna all'indice</a>
+    </div>
+</section>
+
+<section class="bg-chapter" id="ch12">
+    <div class="bg-wrap">
+        <p class="bg-chnum">Chapter 12</p>
+        <h2>Salute e sicurezza.</h2>
+
+        <p>L'autosufficienza è il principio guida per mantenere sani e al sicuro i membri del tuo barrio durante l'evento. I Barrios dovrebbero avere un buon kit di primo soccorso e sapere come usarlo. Malfare non fornisce materiale di primo soccorso e non dovremmo usare i servizi della Cruz Roja a meno che non sia necessario. Dopo l'autosufficienza viene l'affidamento agli amici, controlla con i tuoi vicini per vedere se possono aiutarti. E solo allora&hellip; Malfare. Malfare non è un'operazione di prima linea. Se finisci per dover andare fuori dal sito per visitare una farmacia / clinica / ospedale, è bene avvisare Malfare, possono anche aiutarti a capire come arrivarci. Tuttavia, Malfare non può organizzare questi viaggi né assumersi la responsabilità delle persone che devono tornare dai servizi sanitari al sito, questo è un compito per il guidatore sobrio di turno del tuo barrio.</p>
+
+        <p>Ogni barrio dovrebbe avere un referente &ldquo;Wellbeing&rdquo; nominato che si assicuri di:</p>
+        <ul>
+            <li>Raccogliere informazioni su eventuali membri del camp con condizioni mediche potenzialmente rilevanti (es. Epilessia, Diabete). Tali informazioni devono essere trattate con discrezione.</li>
+            <li>Assicurarsi che ci sia una stazione di primo soccorso nel camp, e una cassetta di primo soccorso ben fornita. Ti serve come minimo materiale per sciacquare gli occhi pieni di polvere, medicare tagli ed ematomi, lavare le ferite e trattare le punture di mosca nera. Idealmente, assicurati che all'interno del camp siano identificate persone che hanno fatto un corso di primo soccorso.</li>
+            <li>Sovrintendere alla costruzione di una stazione per lavarsi le mani.</li>
+            <li>Assicurarsi che siano prese tutte le misure possibili per tenere lontane le mosche dal camp.</li>
+            <li>Informare tutti i membri del camp sulla posizione e i servizi di Welfare Enough, Malfare, le posizioni del kit di primo soccorso e come usare la stazione per lavarsi le mani.</li>
+            <li>Assicurarsi che alcune persone del camp si iscrivano ai turni di volontariato presso Welfare Enough e Malfare!</li>
+            <li>Partecipare alla sessione di orientamento del Barrio per dare il benvenuto a tutti.</li>
+        </ul>
+        <p>Non ripeteremo ciò che è detto nella survival guide, quindi in questa sezione ci sono alcuni consigli su elementi relativi al Barrio.</p>
+
+        <h3 class="bg-h3">Essenziali per la costruzione</h3>
+        <p><strong>Sollevamento corretto.</strong> Il sollevamento corretto sembra noioso ma, se ti danneggi la schiena all'inizio del festival, immagina quanto poco divertente sarà il resto! Vedi: https://www.ergodyne.com/blog/the-eight-commandments-of-proper-lifting/</p>
+        <p>Sulla stessa linea, l'uso sicuro della scala: https://www.hse.gov.uk/work-at-height/ladders/</p>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-34.jpg" alt="Persona che usa una scala in modo non sicuro durante la costruzione" loading="lazy"><figcaption>Magari sei un figo essenziale per la costruzione, tuttavia, non usare una scala così.</figcaption></figure>
+
+        <h3 class="bg-h3">Lavoro e caldo</h3>
+        <p>Durante l'allestimento e lo strike, le ore migliori della giornata sono tra le 7:00 e le 12:00 e poi dalle 16:00 alle 20:00. Consigliamo di comprare un termometro economico da appendere all'ombra per monitorare la temperatura generale. A Elsewhere possono esserci ondate di calore in cui la temperatura sale oltre i quaranta, nel qual caso le ore di lavoro si accorciano. È molto facile soffrire di colpo di calore, nel qual caso è meglio sdraiarsi all'ombra e bere liquidi freschi. Consigliamo di evitare l'alcol, perché potrebbe disidratarti ulteriormente. Potresti ben perdere un giorno di allestimento a causa del meteo.</p>
+
+        <h3 class="bg-h3">Abbigliamento sensato durante il lavoro</h3>
+        <p>In particolare durante allestimento e strike, indossa calzature in cui il tuo piede sopravviva se ci viene fatto cadere sopra un elettroutensile con una punta da trapano appuntita! Infradito e piedi nudi sono una cattiva idea!</p>
+        <p>Farà caldo, quindi potresti essere tentato di indossare meno vestiti possibile, ma consigliamo di tenere almeno pantaloncini, un cappello e una T-shirt per evitare scottature solari o di bruciarti mentre saldi, produci scintille o testi effetti di fiamma. Inoltre, evita abiti larghi con frange e accessori penzolanti, e i capelli lunghi devono essere legati fuori dai piedi.</p>
+
+        <h3 class="bg-h3">Evitare la peste</h3>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-35.jpg" alt="Compagni di camp in costume al barrio, 2013" loading="lazy"><figcaption>Super Barrio Brothers, 2013.</figcaption></figure>
+
+        <p><strong>Dissenteria.</strong> La dissenteria in tutte le sue forme è causata da condizioni igieniche scadenti in cui i germi si trasmettono per via oro-fecale (dalla cacca alla bocca). Questo deriva da mani non pulite dopo essere andati in bagno, o dalle mosche. È quindi importante far capire a tutti i compagni di camp di lavarsi ripetutamente le mani e di eliminare le mosche.</p>
+        <div class="bg-note bg-note--warn"><h4>Avvertenza</h4>
+            <p>Elsewhere ha vissuto una brutta epidemia di dissenteria un anno. Questo ha gravato sulle autorità sanitarie locali e ha imposto una revisione delle questioni sanitarie sul sito. Teniamo molto a evitare che si ripeta.</p>
+        </div>
+
+        <h3 class="bg-h3">Stazioni per lavarsi le mani</h3>
+        <p>Lavarsi le mani in modo efficace si fa al meglio lavandosi con sapone antibatterico a fondo per 30 secondi presso le stazioni per lavarsi le mani. Consigliamo anche spazzolini per le unghie per togliere lo sporco da sotto le unghie. Richiediamo a ogni Barrio di avere una stazione per lavarsi le mani allestita vicino alla cucina perché le persone la usino, specialmente quando maneggiano cibo.</p>
+        <p>Anche contenitori di gel antibatterico per le mani dovrebbero essere messi in giro per il camp, specialmente nelle cucine e nei bar. Non è efficace quanto un lavaggio accurato delle mani sotto l'acqua corrente ma è più comodo. Segnala con cartelli dove lavarsi le mani. Le istruzioni su come fare una stazione sono qui: https://youtu.be/SMa5OTa3PnU</p>
+        <p>In termini di pianificazione del sito, le cucine dovrebbero essere sempre collocate lontano dai bagni.</p>
+        <p>Progetta per favore pensando all'inclusione: un visitatore al tuo Barrio potrebbe aver bisogno di usare la tua stazione, tieni presente:</p>
+        <ul>
+            <li>Un utente in sedia a rotelle non può azionare una pompa a pedale! Abbi un'opzione elettrica se possibile.</li>
+            <li>La stazione deve avere molto spazio libero per l'accesso.</li>
+            <li>Altezza della superficie della bacinella idealmente 80cm, con possibile accesso in sedia a rotelle sotto, ma nemmeno troppo alta!</li>
+        </ul>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-36.jpg" alt="Una stazione per lavarsi le mani del camp vicino alla cucina" loading="lazy"><figcaption>Una stazione per lavarsi le mani allestita vicino alla cucina.</figcaption></figure>
+
+        <h3 class="bg-h3">Tenere lontane le mosche</h3>
+        <p>Le mosche sono attirate specialmente da cibi zuccherati, carne e feci. Tieni tutto il cibo (aperto) in contenitori sigillati. Non lasciare che i piatti sporchi si accumulino; assicurati che tutti i piatti siano lavati subito. Le bevande avanzate dovrebbero essere svuotate in un contenitore generale per gli avanzi liquidi, che andrebbe tenuto coperto per ridurre le mosche. In generale, tieni una cucina ordinata senza cibo lasciato in giro.</p>
+        <ul>
+            <li>Tutti i bidoni dovrebbero avere coperchi (eccetto carta/cartone).</li>
+            <li>Appendi carta moschicida ovunque in cucina e sostituiscila regolarmente. Considera di appendere uno zampirone elettrico (bug-zapper) in cucina.</li>
+            <li>Cerca di avere ingressi alle aree del cibo attraverso barriere che contribuiscano in qualche misura a tenere lontane le mosche, es. tende di plastica, tende di perline ecc.</li>
+            <li>Tieni sempre la carne nelle borse frigo. La carne avanzata deve essere smaltita in bidoni o contenitori il più velocemente possibile. Non lasciarla in giro.</li>
+            <li>In generale, svuota i contenitori degli avanzi regolarmente e non lasciare che la spazzatura si accumuli.</li>
+            <li>Quando i bidoni sono pieni &ndash; non riempirli troppo, e legali bene per impedire alle mosche di entrare. Se i sacchetti si rompono, mettili in un doppio sacchetto.</li>
+        </ul>
+
+        <h3 class="bg-h3">Consenso</h3>
+        <p>Il consenso è di grande importanza a Elsewhere, dove si incontra un'ampia gamma di culture e contesti. Le interazioni ai Barrios di Elsewhere sono uno dei principali luoghi in cui il consenso entra in gioco.</p>
+        <p>Richiediamo che ogni Barrio nomini 1&ndash;2 Referenti per il Consenso a seconda delle dimensioni del Barrio, che:</p>
+        <ul>
+            <li>Si coordinino con l'Elsewhere Consent Education Lead per supporto sulla preparazione e l'orientamento al consenso all'interno del Barrio a consent@nobodies.team.</li>
+            <li>Si coordinino con l'Elsewhere Consent Response Lead per supporto relativo alla gestione di incidenti sul consenso che accadono sul sito a consent@nobodies.team.</li>
+            <li>Si assicurino che tutti nel camp conoscano e comprendano le questioni relative al consenso.</li>
+            <li>Partecipino alla sessione di orientamento del Barrio per dare il benvenuto a tutti.</li>
+            <li>Si assicurino che tutti sappiano che ci sono 2 Caselle per la Segnalazione di Violazioni del Consenso con moduli in 3 lingue (inglese, francese, spagnolo), una a Welfare Enough e un'altra in una tenda gialla installata nel Freecamp, in cui possono (anche anonimamente se preferiscono) segnalare un incidente, o chiedere di parlare in modo confidenziale con un volontario ascoltatore nello Safer Space, disponibile per chiunque abbia bisogno di supporto emotivo; informati allo Safer Space o al No Info per gli orari di apertura.</li>
+            <li>Lavorino con il coordinatore degli eventi del Barrio per assicurarsi che il consenso sia considerato in qualsiasi evento e attività ospitati al Barrio per la popolazione generale di Elsewhere.</li>
+        </ul>
+        <p><strong>Risorse aggiuntive sul consenso per i Barrios:</strong></p>
+        <ul>
+            <li>La Survival Guide ha informazioni generali sul consenso per tutti i partecipanti.</li>
+            <li>La Barrio Consent Guide è piena zeppa di maggiori dettagli sulla creazione di una cultura del consenso all'interno del Barrio, oltre a consigli e strumenti utili da usare durante la preparazione. È per tutti i referenti del Barrio, specialmente per i Referenti del Consenso del Barrio. La guida include consigli per selezionare i Referenti del Consenso del tuo Barrio.</li>
+            <li>Supporto Barrio per la risposta al consenso: durante l'evento, il Consent Response Lead è disponibile a offrire consulenza confidenziale. Trovaci alla Safer Space Welcome Zone, situata accanto a Welfare Enough.</li>
+        </ul>
+
+        <h3 class="bg-h3">Le Shit Ninja Forces</h3>
+        <p>Le Shit Ninja Forces si occupano delle strutture sanitarie di Nowhere. Ci sono tre squadre che affrontano i diversi compiti: gli Shit Ninjas si assicurano che i bagni siano in buone condizioni. Gli Urinal Unicorns si occupano dei vari orinatoi e i TAP Dancer si prendono cura delle si spera otto Total Access Pee/Period Stations (TAPS). Questi sono i bagni accessibili dotati di stazioni per lavarsi le mani che dovrebbero essere usati solo da chi ha particolari necessità di accessibilità o da persone che stanno mestruando. I volontari per gli Shit Ninjas sono reclutati tramite i Barrios, le altre squadre si possono raggiungere su Humans.</p>
+        <p>I Barrios possono supportare le Ninja Forces in molti modi:</p>
+        <ul>
+            <li>Ogni Barrio nomina uno Shit Ninja ogni 30 membri. Fornisci per favore il/i nome/i il prima possibile a shitninjas@nobodies.team se non li hai indicati nelle informazioni secondarie del barrio.</li>
+            <li>Le TAPS hanno bisogno di acqua per funzionare. Se i TAP Dancer chiedono acqua, aiutali!</li>
+            <li>Educa il tuo Barrio sulle diverse strutture, su come usarle correttamente e su quali non usare.</li>
+            <li>In particolare le TAPS (questi sono bagni accessibili riconvertiti) sono solo per persone che stanno mestruando, sono in sedia a rotelle o hanno una menomazione tale da doverle usare.</li>
+            <li>Tieni d'occhio i bagni, segnala qualsiasi danno o condizione inutilizzabile allo Shithead di turno.</li>
+            <li>Aiuta a reclutare volontari per i TAP Dancer e gli Urinal Unicorns.</li>
+        </ul>
+        <p>Il tuo Shit Ninja del Barrio fa squadra con gli Shit Ninjas del vicinato per prendersi cura di uno dei 15 blocchi di bagni nelle vicinanze. Quale sia e tutto sulle Shit Ninja Forces viene spiegato in anticipo tramite una riunione online o in una riunione di formazione obbligatoria sul posto. Cerchiamo di fornirti in anticipo un piano su chi sarà responsabile di quale blocco di bagni.</p>
+        <p>Gli Shit Ninjas controllano i bagni due volte al giorno e riforniscono la cassetta di legno delle scorte. La pulizia sarà fatta da un'azienda. Tutte le scorte necessarie sono fornite da NCA. Gli Shit Ninjas possono anche distribuire il lavoro e includere i loro compagni di camp se li istruiscono e si assicurano che il lavoro venga fatto.</p>
+        <p>Kermit è il nostro container verde vicino a La Cantina, Casa dell'LNT e delle Shit Ninja Forces. Gli Shit Ninjas prendono tutte le scorte qui, segnalano danni o parlano con uno Shithead. Uno degli Shithead è reperibile e può essere contattato via radio se non si trova a Kermit.</p>
+        <p>E un'ultima cosa: ci sono si spera otto TAPS, saranno chiuse con lucchetti a combinazione. È molto importante educare le persone sul fatto che questi bagni non possono essere usati da tutti, anche se il desiderio di lavarsi bene le mani è comprensibile. I Bagni Accessibili hanno solo un minuscolo serbatoio, si riempiono molto in fretta. Se il lucchetto viene scassinato o distrutto, diventano inutilizzabili per le persone che ne dipendono. Inoltre, probabilmente non vuoi una poop-sauna traboccante lì vicino.</p>
+        <p>Gli Shit Ninjas riceveranno presto un'email con tutte le ulteriori informazioni. Domande? Contatta gli Shithead a shitninjas@nobodies.team o nella sezione LNT sul Discord del Nobodies Collective.</p>
+
+        <h3 class="bg-h3">Cassetta di primo soccorso</h3>
+        <p>L'autosufficienza è uno dei principi chiave dell'evento. Incoraggiamo tutti nei loro camp a prendersi cura gli uni degli altri, a tenersi d'occhio a vicenda specialmente per quanto riguarda gli eccessi e la disidratazione. Vogliamo che i camp trattino polvere negli occhi, tagli ed ematomi al Camp e non a livello centrale. Potresti essere mandato via dai servizi centrali se l'infortunio è abbastanza piccolo da essere trattato al barrio.</p>
+        <p>Incoraggiamo anche ogni camp ad avere una cassetta di primo soccorso ben fornita avvitata a una parete o in un punto da cui non possa essere spostata, e una stazione di primo soccorso. Trova una checklist per le cassette di primo soccorso qui: https://www.tripsavvy.com/first-aid-checklist-for-camping-498450</p>
+
+        <h3 class="bg-h3">Welfare Enough e Malfare</h3>
+        <p>Se qualcuno non si sente molto bene, ci sono due livelli di servizio disponibili a Elsewhere:</p>
+        <ol>
+            <li>Welfare Enough</li>
+            <li>Malfare</li>
+        </ol>
+        <p><strong>Welfare Enough</strong> è un'area disponibile per le persone che non si sentono molto bene ma non richiedono cure mediche. Se il caldo e il rumore stanno diventando troppi, se hai bisogno di uno spazio per recuperare il tuo stato emotivo, o se hai esagerato e hai bisogno di un po' di spazio tranquillo dove sdraiarti, questo è il posto per te. (Nota: Welfare Enough non è un centro di accoglienza, quindi se qualcuno ha bisogno di andarci, non portarci il resto del tuo camp).</p>
+        <p>Se non sei sicuro di aver bisogno di cure mediche, vai comunque a Welfare Enough, e potrebbero decidere di indirizzarti a Malfare.</p>
+        <p><strong>Malfare</strong> è dove puoi ricevere aiuto medico. Se ci sono stati infortuni, se qualcuno ha mal di stomaco o è privo di sensi, questo è il posto dove portarlo. Hanno la Cruz Roja (Red Cross) in servizio, che è personale medico qualificato pagato sul posto.</p>
+        <p>La Red Cross ha chiesto alle persone di provare a prendersi cura di sé. L'anno scorso hanno visitato oltre 1000 persone per problemi come polvere negli occhi, piccoli tagli o ferite che avevano bisogno di punti.</p>
+        <p>Se parli spagnolo, Malfare cerca sempre traduttori, contatta malfare@nobodies.team.</p>
+        <div class="bg-note bg-note--warn"><h4>Avvertenza</h4>
+            <p>È fondamentale che chiunque non stia bene, specialmente per disturbi di stomaco inspiegabili, vada a cercare aiuto il più rapidamente possibile. Questo per assicurarsi che non trasmetta eventuali germi che potrebbe aver contratto.</p>
+        </div>
+
+        <a href="#contents" class="bg-back">Torna all'indice</a>
+    </div>
+</section>
+
+<section class="bg-chapter" id="ch13">
+    <div class="bg-wrap">
+        <p class="bg-chnum">Chapter 13</p>
+        <h2>Impatto ambientale.</h2>
+        <p>Mentre la playa di Elsewhere è un posto fantastico per celebrare la vita e tutte le sue benedizioni, il burn è anche una grande occasione per riflettere sul nostro posto sulla playa più grande &mdash; la Terra &mdash; e su come possiamo contribuire a rendere quella playa più grande un luogo sostenibile in cui vivere per noi e per i nostri figli, per i secoli a venire.</p>
+        <p>Elsewhere può finire ogni estate, e la spazzatura può essere portata via dal sito ogni giorno; ma noi Nobodies non possiamo sfuggire al nostro Pianeta (o almeno al nostro Sistema Solare), e nemmeno la nostra spazzatura, in tutte le sue forme, può farlo. In effetti, puoi vedere la società mondiale come un burn più grande &mdash; tranne che stavolta non puoi portare via la spazzatura. La Terra ricorderà tutto.</p>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-37.jpg" alt="Paesaggio della playa desertica a Elsewhere" loading="lazy"><figcaption>Riflettere sul nostro posto sulla playa più grande &mdash; la Terra.</figcaption></figure>
+
+        <h3 class="bg-h3">3 passi di azione ambientale</h3>
+        <p>Il nostro obiettivo come umanità dovrebbe essere risolvere le &ldquo;questioni ambientali&rdquo; legate alla nostra presenza sulla Terra, in un modo che consenta una vita sostenibile per secoli e persino millenni, non solo decenni. Come lo facciamo, e come si collega questo a Elsewhere? Proponiamo 3 risposte a queste due domande:</p>
+
+        <h3 class="bg-h3">1. Ispira</h3>
+        <p>Elsewhere riguarda la condivisione dei nostri valori, dei nostri sogni, della nostra energia. Ma sensibilizziamo anche. Questo può assumere qualsiasi forma, ma probabilmente una delle più efficaci è dare l'esempio:</p>
+        <ul>
+            <li>Riduci il tuo impatto di CO2, specialmente durante il trasporto di persone e cose da e verso il sito;</li>
+            <li>Riduci il tuo consumo di acqua, elettricità e/o carburante;</li>
+            <li>Riduci i rifiuti di ogni tipo che produci sul sito;</li>
+            <li>Riduci i rifiuti prodotti durante preparazione, costruzione, strike e stoccaggio;</li>
+            <li>Riduci i rifiuti associati alla roba che usi al tuo barrio, inclusi tutti i tipi di energia e rifiuti usati per fabbricare ciò che potresti usare solo durante i burn (i cosiddetti &ldquo;rifiuti di scope 3&rdquo;)</li>
+        </ul>
+        <p>Ogni volta che fai una delle cose qui sopra, dai l'esempio. Incoraggi la riflessione. Spingi chi ti circonda a meditare, a pensare e, alla fine, ad agire e a cambiare. Come hai fatto tu. Ma puoi anche ispirare in altri modi:</p>
+        <ul>
+            <li>Costruendo e mostrando installazioni artistiche che stimolano la consapevolezza sulle questioni della sostenibilità;</li>
+            <li>Ospitando workshop per condividere la tua visione e far diventare le persone attori di un cambiamento positivo;</li>
+            <li>Scegliendo, nei tuoi DJ set, brani che contengono testi che fanno pensare;</li>
+            <li>Incoraggiando i membri del tuo Barrio a fare una qualsiasi delle cose qui sopra.</li>
+        </ul>
+        <p>Anche se le persone non cambiano immediatamente, ti parleranno. Tramite i mezzi qui sopra, troverai persone con la stessa mentalità che &mdash; come te &mdash; tengono alla Terra e vogliono che le cose cambino. Poi, insieme, potete passare al passo successivo.</p>
+
+        <h3 class="bg-h3">2. Costruisci nel tempo</h3>
+        <p>Una delle cose più difficili nel fare qualsiasi cosa per il Pianeta è trovare altri a cui importa. Attraverso le azioni del passo 1, avrai trovato alcuni di quei Nobodies.</p>
+        <p>Puoi usare strumenti esistenti per coordinarti dopo Elsewhere con altri burner, come il forum ePlaya del Burning Man Project o i canali Elsewhere su Discord. Ora, insieme, potete pensare a progetti, durante e al di fuori dei burn, che conteranno davvero.</p>
+        <p>Costruire insieme su una scala temporale più lunga ti permette di:</p>
+        <ul>
+            <li>Acquisire competenza sui problemi che stai cercando di risolvere. Se gestire un Barrio sostenibile non è ovvio, gestire un intero Pianeta è oltre lo scoraggiante;</li>
+            <li>Applicare questa conoscenza per dare priorità a quali progetti avranno più senso per te, e perché;</li>
+            <li>Diventare bravo a eseguire questi progetti;</li>
+            <li>Iterare su tutto quanto sopra.</li>
+        </ul>
+        <p>Facendo quanto sopra, sarai in grado di alzare il livello e fare onestamente qualcosa per il Pianeta. Questo è un modo per portare i valori della Comunità al loro apice: prendendoti davvero cura della Terra, ti prendi cura di tutti, di tutte le forme di vita. E poi, puoi tornare a Elsewhere l'anno prossimo, con molto di più da condividere.</p>
+
+        <h3 class="bg-h3">3. Condividi ciò che hai costruito</h3>
+        <p>Con le iterazioni e il tempo per prepararsi, nel corso degli anni, il tuo Barrio sarà in grado di lasciare davvero a bocca aperta i Nobodies. La tua presenza a Elsewhere sarà attesa, e quei pochi giorni diventeranno un nexus di cambiamento, di diffusione della consapevolezza, di celebrazione dell'azione significativa.</p>
+        <p>Tutte le azioni del passo &ldquo;Ispira&rdquo; saranno tanto più significative ogni volta che metti lavoro ed energia nel renderle migliori e, soprattutto, più rilevanti. Elsewhere è ciò che ne facciamo, e può essere tantissimo! Il cielo è blu e infinito &mdash; aiutalo a restare così.</p>
+
+        <h3 class="bg-h3">Modi pratici per agire per il Pianeta a Elsewhere</h3>
+        <p>Ora, e se non avessi idea di da dove cominciare? Cosa puoi fare oggi che conterà? Ecco alcuni suggerimenti:</p>
+
+        <h3 class="bg-h3">1. Trasporto</h3>
+        <p>Il trasporto rappresenta 8 Gt di emissioni di CO2 ogni anno; è circa il 21% delle emissioni dirette di CO2 mondiali. Un evento come Elsewhere non fa eccezione: secondo l'organizzazione no-profit AGF, le emissioni dei viaggi del pubblico rappresentano dal 18 al 79% delle emissioni complessive di CO2 dei festival. Oltre all'ovvia raccomandazione di non prendere l'aereo per Elsewhere, ti consigliamo vivamente di incoraggiare i membri del tuo Barrio a venire in treno fino a Sari&ntilde;ena o Bare. Da lì, puoi:</p>
+        <ul>
+            <li>Far prendere ai membri del tuo Barrio il bus di Elsewhere da Barcellona</li>
+            <li>Andare a prendere i membri del tuo barrio a Sari&ntilde;ena usando i turni di guida del tuo Barrio</li>
+            <li>Chiedere ai tuoi membri di usare una dirt bike per coprire gli ultimi ~25 km da Sari&ntilde;ena al sito. Le dirt bike sono particolarmente comode a Elsewhere! :)</li>
+        </ul>
+        <p>Se non il treno, allora puoi far pianificare ai tuoi membri il carpooling il più possibile. Se organizzi il tuo barrio tramite un foglio Excel, puoi semplicemente aggiungere una scheda &lsquo;Car-pooling&rsquo; così che i membri possano organizzare i loro viaggi insieme più facilmente.</p>
+
+        <h3 class="bg-h3">2. Energia</h3>
+        <p>Come affermato nella sezione &ldquo;Generatori ed elettricità&rdquo;, puoi usare generatori convenzionali, oppure puoi usare pannelli solari e, facoltativamente, batterie o altri tipi di accumulo, per abbassare ulteriormente la tua impronta di carbonio. Potresti persino venire in e-bike da Sari&ntilde;ena e usare le batterie dell'e-bike come accumulo. Puoi trovare risorse e burner competenti su https://eplaya.burningman.org/viewforum.php?f=278 per aiutarti a costruire un sistema di alimentazione parzialmente rinnovabile, o persino senza carburante. Come sempre, attento alle questioni di sicurezza: oltre alle questioni di messa a terra trattate nelle parti precedenti, le batterie, specialmente quelle al litio esposte sia al sole sia a un carico, possono facilmente prendere fuoco o persino esplodere, e non possono essere spente facilmente. Costruisci per favore un sistema sicuro o non costruire nulla.</p>
+        <p>Tuttavia, se sai come costruirlo, allora il tuo barrio diventerà un'ispirazione per altri barrios su come decarbonizzare l'energia nei propri barrios, e possibilmente oltre Elsewhere. Ispirerai il cambiamento, e questo è altamente incoraggiato!</p>
+
+        <h3 class="bg-h3">3. Cibo</h3>
+        <p>Secondo uno studio sottoposto a revisione paritaria del 2020, passare da una tipica dieta onnivora a una dieta vegana può ridurre le emissioni di CO2 di più di 6 volte, da 2t/anno a 300 kg/anno. Se ogni essere umano producesse 2 tonnellate/anno, ciò farebbe 16 Gt/anno, o quasi la metà di tutte le emissioni di CO2. Non solo la natura del cibo ma anche la sua provenienza conta: il cibo fornito localmente ha emissioni di CO2 molto più basse dovute al trasporto. Pertanto, dopo trasporto ed energia, il prossimo grande emettitore di CO2 è il cibo. La sezione Cibo e bevande fornisce alcuni consigli utili su come preparare pasti sia vegani sia ricchi di proteine a Elsewhere. Anche qui, puoi dare un esempio che ispirerà gli altri attorno a te.</p>
+
+        <p>Prenditi il tuo tempo e migliora ciò che puoi, quando puoi.</p>
+
+        <a href="#contents" class="bg-back">Torna all'indice</a>
+    </div>
+</section>
+
+<section class="bg-chapter" id="ch14">
+    <div class="bg-wrap">
+        <p class="bg-chnum">Chapter 14</p>
+        <h2>Pagamento delle cose.</h2>
+        <p>Quest'anno, tutti i servizi relativi ai Barrios sono gestiti dal Barrio Support Team. Non accettiamo contanti! Il pagamento della maggior parte degli articoli deve essere effettuato prima dell'evento per garantire la consegna. Potrebbero esserci quantità limitate di certi articoli (bombole di GPL, pallet, estintori). Ti comunicheremo presto eventuali scadenze.</p>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-38.jpg" alt="Forniture per barrio come bombole e pallet" loading="lazy"><figcaption>Articoli disponibili all'acquisto tramite il Barrio Support Team.</figcaption></figure>
+
+        <p>Le seguenti cose possono essere acquistate:</p>
+        <ul>
+            <li>Solo stoccaggio del container (per i Barrios che non vengono)</li>
+            <li>Trasporto e stoccaggio del container</li>
+            <li>Bombole di propano e butano</li>
+            <li>Stoccaggio del water cube</li>
+            <li>Voucher per acqua e ghiaccio</li>
+            <li>Noleggio estintori</li>
+            <li>Cartelli di uscita e cartelli per estintori (richiesti dal permesso)</li>
+            <li>Noleggio pallet</li>
+            <li>Uso della trivella</li>
+            <li>Uso del cassone</li>
+            <li>Installazione e rimozione del picchetto di messa a terra</li>
+        </ul>
+        <div class="bg-note"><h4>Nota</h4>
+            <p>[MAGGIORI INFORMAZIONI SUGLI ORDINI IN ARRIVO]</p>
+        </div>
+
+        <a href="#contents" class="bg-back">Torna all'indice</a>
+    </div>
+</section>
+
+<section class="bg-chapter" id="ch15">
+    <div class="bg-wrap">
+        <p class="bg-chnum">Chapter 15</p>
+        <h2>Nel (improbabile) caso di un'emergenza.</h2>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-39.jpg" alt="Segnaletica di emergenza e primo soccorso" loading="lazy"><figcaption>Sii preparato: pianificazione della sicurezza e delle emergenze a Elsewhere.</figcaption></figure>
+
+        <h3 class="bg-h3">Piano di sicurezza ed emergenza</h3>
+        <p>Un elenco di tutti i partecipanti del Barrio e dei loro numeri di telefono deve essere reso disponibile, in caso di Emergenza, alle Autorità Locali. (Immagina il caso di un incendio boschivo e di una squadra che va in giro a cercare persone scomparse, le autorità ci chiederanno di fornire l'elenco delle persone sul sito, così da sapere chi starebbero cercando). Ci sarà un'esercitazione antincendio il giorno prima, quindi sii pronto!</p>
+
+        <h3 class="bg-h3">Sii preparato:</h3>
+        <ul>
+            <li>Prepara un kit di primo soccorso che includa colliri, antidiarroici e difenidramina (per le punture di mosca nera).</li>
+            <li>Fai una copia del tuo documento d'identità e della tua tessera sanitaria GHIC/EU (o altra), mettila in un sacchetto zip-lock e dalla a un referente del camp o tienila dentro la tua tenda &ndash; facile da trovare.</li>
+            <li>Comunica ai tuoi cari le informazioni qui sotto.</li>
+            <li>Illumina i percorsi naturali attraverso il tuo Barrio così che le persone sappiano dove camminare (e dove non camminare).</li>
+            <li>Illumina e/o segnala con bandierine adesive le corde delle tende!</li>
+        </ul>
+
+        <div class="bg-note bg-note--warn"><h4>Emergenza</h4>
+            <p><strong>Se succede qualcosa mentre sei sul sito:</strong></p>
+            <ul>
+                <li>Capisci se tu o un amico potete risolverla. In caso contrario&hellip;</li>
+                <li>Passa da Malfare e vediamo cosa possiamo fare! Abbiamo alcune scorte e anche la Red Cross può aiutare.</li>
+            </ul>
+            <p><strong>Hai bisogno di aiuto che non può essere dato sul sito?</strong></p>
+            <ul>
+                <li>Di' al tuo amico di prendere quel documento d'identità e la tessera EU dalla tua tenda</li>
+                <li>Abbiamo mappe per l'ospedale se il tuo amico può guidare</li>
+                <li>La Red Cross può anche trasportarti all'ospedale se necessario.</li>
+                <li>Quando sei rimesso a posto e pronto a tornare, chiamaci a Malfare, e troveremo un amico che ti venga a prendere dall'ospedale.</li>
+            </ul>
+        </div>
+
+        <h3 class="bg-h3">Informazioni da lasciare a una persona cara a casa</h3>
+        <p>Se succede qualcosa nel mondo di default e qualcuno deve trovarti, assicurati che conosca le informazioni qui sotto:</p>
+        <ul>
+            <li>Il tuo nome e cognome</li>
+            <li>Il tuo nome da playa (se ne hai uno)</li>
+            <li>Con chi sei venuto</li>
+            <li>In quale camp/Barrio sei</li>
+            <li>Una descrizione fisica</li>
+        </ul>
+        <p>Con queste informazioni possono chiamare Malfare, e/o inviare un'email a emergency@goingnowhere.org.</p>
+
+        <a href="#contents" class="bg-back">Torna all'indice</a>
+    </div>
+</section>
+
+<section class="bg-chapter" id="ch16">
+    <div class="bg-wrap">
+        <p class="bg-chnum">Chapter 16</p>
+        <h2>Come arrivare a Elsewhere.</h2>
+        <p>Circondato da montagne rocciose nella natura selvaggia e riarsa della Spagna, l'ambientazione è mozzafiato. Elsewhere si trova nel nord della Spagna, tra Zaragoza e Lleida. I villaggi più vicini sono Castej&oacute;n de Monegros (12km) e Sari&ntilde;ena (19km), e da entrambe le direzioni gli ultimi 10km sono su strade sterrate.</p>
+        <p>GPS: 41&deg;40&rsquo;45.4&Prime; North 0&deg;09&rsquo;04.3&Prime; West (oppure 41.679270, -0.151182 se preferisci)</p>
+
+        <figure class="bg-fig"><img src="images/barrio-guide/img-40.jpg" alt="Mappa che mostra il percorso verso il sito di Elsewhere nel nord della Spagna" loading="lazy"><figcaption>Arrivare a Elsewhere, tra Zaragoza e Lleida.</figcaption></figure>
+
+        <h3 class="bg-h3">Aereo</h3>
+        <p>Gli aeroporti più vicini sono: Zaragoza, Barcellona &amp; Reus. Può anche essere utile dare un'occhiata ai voli per: Girona, Bilbao, Madrid &amp; Valencia</p>
+
+        <h3 class="bg-h3">Treno</h3>
+        <p>La stazione più vicina a Elsewhere è Sari&ntilde;ena. Si trova sulla linea ferroviaria regionale tra Zaragoza e Lleida. Per arrivare a Zaragoza o Lleida c'è un'ampia gamma di treni, dal super veloce AVE ai treni regionali molto più lenti. Le tariffe vanno da &euro;25 a &euro;65 a seconda di quale treno prendi. Puoi trovare gli orari aggiornati dei treni sul sito web Renfe. Gli orari del treno locale per Sari&ntilde;ena cambiano la domenica, quindi controlla bene di avere l'orario corretto per il giorno in cui vuoi viaggiare.</p>
+        <div class="bg-note"><h4>Nota</h4>
+            <p>La stazione ferroviaria di Sari&ntilde;ena si trova a circa 3km dal centro del paese vero e proprio, può essere una camminata piuttosto estenuante con tutta l'attrezzatura addosso. Tieni anche presente che Sari&ntilde;ena non è la fine del tuo viaggio. Ci sono ancora 18km da Sari&ntilde;ena al sito di Elsewhere. Camminare fino al sito non è raccomandato a causa delle strade non sicure e del caldo. NON c'è un servizio taxi che possa portarti al sito dell'evento. Devi organizzare l'&ldquo;ultimo miglio&rdquo; da solo.</p>
+        </div>
+
+        <h3 class="bg-h3">Bus (Spagna)</h3>
+        <p>La Spagna ha una rete di bus molto buona che può portarti a Zaragoza. Puoi trovare gli orari aggiornati dei bus qui. Dalla nuova stazione dei bus di Zaragoza, situata al piano terra della stazione ferroviaria Delicias di Zaragoza, puoi prendere il bus locale per Sari&ntilde;ena.</p>
+        <p>L'azienda di bus locale si chiama Autocares Therpasa. Il costo è di circa &euro;9 a tratta, e il viaggio dura circa un'ora e un quarto a tratta.</p>
+        <p>Dai un'occhiata ai siti https://www.renfe.es e https://www.alsa.es per buone offerte sui bus.</p>
+        <div class="bg-note"><h4>Nota</h4>
+            <p>La stazione ferroviaria di Sari&ntilde;ena si trova a circa 3km dal centro del paese vero e proprio, può essere una camminata piuttosto estenuante con tutta l'attrezzatura addosso. Tieni anche presente che Sari&ntilde;ena non è la fine del tuo viaggio. Ci sono ancora 18km da Sari&ntilde;ena al sito di Elsewhere. Camminare fino al sito non è raccomandato a causa delle strade non sicure e del caldo. NON c'è un servizio taxi che possa portarti al sito dell'evento. Devi organizzare l'&ldquo;ultimo miglio&rdquo; da solo.</p>
+        </div>
+
+        <h3 class="bg-h3">Bus (Nowhere)</h3>
+        <p>Maggiori informazioni in arrivo!</p>
+
+        <h3 class="bg-h3">Auto</h3>
+        <p>Distanze dalle città più vicine con aeroporti:</p>
+        <ul>
+            <li>Reus è a 2:30 di guida da Sari&ntilde;ena (l'aeroporto di Reus ha molti voli da Regno Unito, Germania e Paesi Bassi).</li>
+            <li>Barcellona è a 3:30 di guida da Sari&ntilde;ena (con voli dalla maggior parte degli aeroporti internazionali).</li>
+            <li>Pamplona è a 3:30 di guida da Sari&ntilde;ena (con voli da molti aeroporti spagnoli).</li>
+            <li>Madrid è a 4:30 di guida da Sari&ntilde;ena.</li>
+            <li>Bilbao è a 4:30 di guida da Sari&ntilde;ena.</li>
+        </ul>
+
+        <h3 class="bg-h3">Guidare a Elsewhere</h3>
+        <p>Elsewhere è un ambiente pedonale; solo art car registrate, biciclette, veicoli di emergenza e amministrativi sono autorizzati a circolare. Per garantire la sicurezza di tutti, chiediamo che i veicoli a motore seguano queste regole quando guidano a Elsewhere:</p>
+        <ul>
+            <li>Guida sul sito solo dall'alba (7:00) al tramonto (20:00)</li>
+            <li>Guida sulle strade perimetrali (non attraverso il centro)</li>
+            <li>Abbi una scorta a terra (qualcuno che cammini davanti all'auto e cerchi potenziali pericoli)</li>
+            <li>Guida molto lentamente! Il limite di velocità è 10km/ora</li>
+        </ul>
+
+        <h3 class="bg-h3">Opzioni di parcheggio</h3>
+        <p>Nel tuo barrio o nelle aree di freecamping per veicoli designate. Se parcheggi il tuo veicolo in una di queste aree, il veicolo non potrà più essere spostato fino alla fine dell'evento. Questo significa che non puoi uscire per fare la spesa, per andare a prendere un amico o per andare al fiume a fare il bagno. Rispetta per favore le regole qui sopra quando guidi da e verso la posizione del veicolo durante l'evento.</p>
+        <p>Nell'Area di Parcheggio vicino al Gate. Se hai intenzione di guidare il veicolo fuori dal sito durante l'evento (come guidare in paese per fare la spesa), allora dovrai parcheggiare nell'Area di Parcheggio. Puoi lasciare il sito e tornare quando vuoi.</p>
+        <p>Se hai domande sui permessi per i veicoli a Elsewhere e sulla guida sul sito, contatta barrios@nobodies.team</p>
+
+        <h3 class="bg-h3">Taxi</h3>
+        <p>Una volta arrivato alla stazione ferroviaria di Sari&ntilde;ena, puoi prendere un taxi per il paese. Taxi Use-Sales: +34659696929</p>
+        <div class="bg-note"><h4>Nota</h4>
+            <p>Il taxista non ti porterà al sito dell'evento, solo in paese.</p>
+        </div>
+
+        <a href="#contents" class="bg-back">Torna all'indice</a>
+    </div>
+</section>
+
+<section class="bg-chapter" id="ch17">
+    <div class="bg-wrap">
+        <p class="bg-chnum">Chapter 17</p>
+        <h2>Partecipazione all'organizzazione generale.</h2>
+        <p>Oltre a costruire il tuo Barrio, incoraggiamo tutti a partecipare al resto di Elsewhere. Per i membri del camp che non possono aiutare granché durante l'allestimento o lo strike, li incoraggiamo a placare il loro senso di colpa visitando il Production Office o NoInfo e iscrivendosi a qualche lavoro di volontariato.</p>
+        <p>Puoi farlo creando un profilo sull'Humans App (https://humans.nobodies.team/Shifts) in anticipo, e iscrivendoti per fare volontariato, es. come Greeter, Nomads, Perimeter o al Gate, specialmente se parli spagnolo. Ricorda alla tua crew che questo è un evento partecipativo!</p>
+
+        <h3 class="bg-h3">NO-INFO</h3>
+        <p>Chiunque non si sia iscritto prima dell'evento può andare a NoInfo per il volontariato sul posto. Cerca di iscriverti prima dell'evento, perché aiuta MOLTO avere i turni coperti prima dell'evento.</p>
+        <p>Puoi anche controllare a NoInfo eventuali informazioni aggiuntive, es. la posizione delle buche del compost, i punti di smaltimento dei rifiuti ecc, e puoi anche venire a NoInfo per dare altre informazioni!</p>
+
+        <a href="#contents" class="bg-back">Torna all'indice</a>
+    </div>
+</section>
+
+
+        <!-- ============ CLOSING ============ -->
+        <section class="bg-section">
+            <div class="bg-wrap">
+                <div class="bg-note">
+                    <h4>Domande?</h4>
+                    <p>Contatta il Barrio Support Team a <a href="mailto:barrios@nobodies.team">barrios@nobodies.team</a>, su <a href="https://discord.gg/Xmj6YbFwSM" target="_blank" rel="noopener">Discord</a>, oppure registra il tuo barrio su <a href="https://humans.nobodies.team">humans.nobodies.team</a>. Ci vediamo sulla playa.</p>
+                </div>
+                <a href="barrios.html" class="bg-backhome">Torna alla pagina Barrios</a>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="shared-footer"></div>
+    <script src="footer.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
