@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Alert Plus | Elsewhere &mdash; by Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Status box */
+        .status-box {
+            background: #1a1a2e;
+            border: 2px solid #2a2a4a;
+            border-radius: var(--radius, 12px);
+            padding: 1.75rem 2rem;
+            margin-bottom: 3rem;
+            line-height: 1.7;
+        }
+        .status-box p {
+            margin: 0;
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+        .status-box .status-updated {
+            color: #888;
+            font-size: 0.85rem;
+            margin-bottom: 0.75rem;
+        }
+        .status-box .status-today,
+        .status-box .status-tomorrow {
+            margin-bottom: 0.25rem;
+        }
+        .status-box .status-main {
+            margin-top: 1rem;
+            color: #e0e0e0;
+            font-weight: 500;
+        }
+
+        /* Permitted / not permitted lists */
+        .rules-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 1.5rem 0 2rem;
+        }
+        @media (max-width: 640px) {
+            .rules-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+        .rules-block h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+        }
+        .rules-block.not-permitted h3 { color: #e74c3c; }
+        .rules-block.permitted h3 { color: #2ecc71; }
+        .rules-block ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .rules-block ul li {
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--color-text-muted, #aaa);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .rules-block.not-permitted ul li::before {
+            content: '\2717';
+            position: absolute;
+            left: 0;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .rules-block.permitted ul li::before {
+            content: '\2713';
+            position: absolute;
+            left: 0;
+            color: #2ecc71;
+            font-weight: bold;
+        }
+
+        /* FAQ accordion */
+        .faq-item {
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .faq-item:first-child {
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .faq-toggle {
+            width: 100%;
+            background: none;
+            border: none;
+            color: inherit;
+            font: inherit;
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: left;
+            padding: 1rem 2rem 1rem 0;
+            cursor: pointer;
+            position: relative;
+            line-height: 1.4;
+        }
+        .faq-toggle:hover {
+            color: var(--color-accent, #7c6ef0);
+        }
+        .faq-toggle::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.3rem;
+            font-weight: 300;
+            transition: transform 0.2s ease;
+        }
+        .faq-item.open .faq-toggle::after {
+            content: '\2212';
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 0;
+        }
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+            padding: 0 0 1rem;
+        }
+        .faq-answer p {
+            color: var(--color-text-muted, #aaa);
+            margin: 0;
+        }
+
+        /* Emergency callout */
+        .emergency-callout {
+            background: rgba(231, 76, 60, 0.1);
+            border: 1px solid rgba(231, 76, 60, 0.3);
+            border-radius: var(--radius, 12px);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        .emergency-callout p {
+            margin: 0;
+            font-weight: 600;
+        }
+        .emergency-callout a {
+            color: #e74c3c;
+        }
+
+        /* Closing */
+        .closing {
+            margin-top: 3rem;
+            text-align: center;
+            color: var(--color-text-muted, #aaa);
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div id="shared-header"></div>
+    <script src="header.js"></script>
+
+    <main class="doc-page">
+        <div class="container">
+            <a href="/" class="back-link">Back to Home</a>
+
+            <div class="doc-header">
+                <h1>Red Alert Plus &#x1F534;&#x2795;</h1>
+                <p class="doc-intro">Wildfire alerts and what they mean for Elsewhere</p>
+            </div>
+
+            <div class="doc-content">
+
+                <!-- Status Box -->
+                <div class="status-box">
+                    <p class="status-updated">Last updated: Monday 29 June 2026</p>
+                    <p class="status-today">Today: &#x1F7E0; Naranja &mdash; no restrictions in force</p>
+                    <p class="status-tomorrow">Tomorrow (30 June) forecast: &#x1F534; Roja (Muela de Alcubierre) / &#x1F7E0; Naranja (rest of comarca)</p>
+                    <p class="status-main">No Red Alert Plus is currently in effect. Normal operations apply.</p>
+                </div>
+
+                <section class="doc-section">
+                    <p>The Comarca de Los Monegros is one of the driest, most fire-prone regions in Spain. Every summer, the Gobierno de Arag&oacute;n monitors conditions closely and issues alerts when wildfire risk rises. This page explains what those alerts mean, what happened on site this weekend, and what you need to know before you arrive.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Understanding the alert system</h2>
+                    <p>The Gobierno de Arag&oacute;n issues four levels of wildfire alert:</p>
+                    <ul>
+                        <li>&#x1F7E1; <strong>Yellow</strong> &mdash; Moderate risk. Standard precautions apply.</li>
+                        <li>&#x1F7E0; <strong>Orange</strong> &mdash; Significant risk. Heightened awareness required.</li>
+                        <li>&#x1F534; <strong>Red</strong> &mdash; Extreme risk. High-danger conditions across the region.</li>
+                        <li>&#x1F534;&#x2795; <strong>Red Alert Plus</strong> &mdash; Exceptional emergency designation.</li>
+                    </ul>
+                    <p>The first three are standard meteorological and environmental warnings. They come with recommendations on how to take care of yourself and avoid contributing to fire risk. We work through all of them every year.</p>
+                    <p>Red Alert Plus is different. It&rsquo;s not just a weather warning &mdash; it&rsquo;s an administrative emergency declaration by the Gobierno de Arag&oacute;n, published in the Bolet&iacute;n Oficial de Arag&oacute;n (BOA). It&rsquo;s triggered when a specific combination of conditions creates extreme wildfire risk: temperature above 30&deg;C, wind above 30km/h, and humidity below 30%. When declared, it comes with a legally binding set of prohibitions and applies to the entire region.</p>
+                    <p>This year, the legislation governing Red Alert Plus was updated in March 2026 (Decreto 22/2026). We&rsquo;ve been working with local authorities since then to understand what it means for Elsewhere and to make sure we have the right measures in place.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>What happened this weekend</h2>
+                    <p>On Friday 26 June, the Gobierno de Arag&oacute;n declared a Red Alert Plus for all of Arag&oacute;n (Orden HAP/925/2026, published in the BOA Extraordinario N&uacute;m. 3), covering 26, 27 and 28 June. There were several active fires in the region, including one close to us.</p>
+                    <p>We activated our emergency protocol immediately. On site, we have:</p>
+                    <ul>
+                        <li>34,000 litres of dedicated firefighting water (split across two vehicles)</li>
+                        <li>Water hose equipment loaned by nearby municipalities</li>
+                        <li>Fire extinguishers throughout the site</li>
+                        <li>Designated safe areas and a full compliance protocol</li>
+                    </ul>
+                    <p>We&rsquo;ve been in close coordination with Protecci&oacute;n Civil, Guardia Civil, Red Cross, the Comarca de Los Monegros, and the mayors of the five nearby towns throughout. They checked in on us multiple times and found a community that takes these things seriously.</p>
+                    <p>The Red Alert Plus ended Sunday 28 June. On Monday 29 June, the Comarca de Los Monegros formally deactivated the Plan de Protecci&oacute;n Civil, returning to normal operations. The alert for 29 June is Orange &mdash; no restrictions apply.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Could it happen again during the event?</h2>
+                    <p>Possibly, yes. The conditions that trigger a Red Alert Plus &mdash; heat, wind, low humidity &mdash; are characteristic of this region in July. Based on current forecasts, the days most likely to see elevated risk during the event are around 5&ndash;7 July. We&rsquo;re monitoring the situation closely and will communicate any alert as soon as it is declared.</p>
+                    <p>A Red Alert Plus is declared at short notice &mdash; typically a few hours before it comes into effect, via an official Orden published in the BOA. When one is declared, we will communicate it immediately through:</p>
+                    <ul>
+                        <li>This page (status box above updated same day)</li>
+                        <li>WhatsApp channels</li>
+                        <li>Discord and Telegram</li>
+                        <li>On-site announcements</li>
+                    </ul>
+                </section>
+
+                <section class="doc-section">
+                    <h2>What a Red Alert Plus means on site</h2>
+                    <p>If a Red Alert Plus is declared during Elsewhere, the following apply immediately and for the duration of the alert:</p>
+
+                    <div class="rules-grid">
+                        <div class="rules-block not-permitted">
+                            <h3>Not permitted</h3>
+                            <ul>
+                                <li>No work and no movement on or off site between 12:00 and 18:00</li>
+                                <li>No gas cooking &mdash; cold food only for the duration of the alert</li>
+                                <li>No open flame of any kind outdoors (candles, lighters, etc.)</li>
+                                <li>No welding or any equipment that generates sparks (angle grinders, etc.)</li>
+                                <li>No charging of electric scooters, e-bikes, or non-essential battery devices</li>
+                                <li>Smoking only in designated areas equipped with fire extinguishers</li>
+                            </ul>
+                        </div>
+                        <div class="rules-block permitted">
+                            <h3>Fine to use</h3>
+                            <ul>
+                                <li>Electric tools</li>
+                                <li>Kettles, coffee machines, and other electric appliances</li>
+                                <li>Generators (managed according to the on-site safety protocol)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p>Vehicles arriving or departing during a Red Alert Plus will need to travel in escorted convoys via the emergency road. If the alert is active when you&rsquo;re on your way to site, contact us before you leave and we&rsquo;ll meet you at the bridge to escort you in.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>For barrio leads and kitchen teams</h2>
+                    <p>Changing a barrio kitchen plan at short notice is hard. We want to give you as much warning as possible.</p>
+                    <p><strong>Our ask:</strong> have a cold food backup plan ready before you arrive. Think salads, cold dishes, prepped snacks, no-cook alternatives. You don&rsquo;t need to scrap your menu &mdash; just have a plan B that doesn&rsquo;t require gas, so that if an alert is declared mid-event, you&rsquo;re not caught off guard. Arriving early and prepping some meals in advance is a good idea &mdash; that way you already have food ready if gas is restricted on a given day.</p>
+                    <p><strong>On power:</strong> we know barrios normally rely heavily on gas to reduce load on the grid. If a Red Alert Plus is declared and kitchens need to switch to electric, here&rsquo;s what your power leads need to know:</p>
+                    <p>The grid is robustly designed and can handle the load &mdash; even if all barrios use their full allocated power simultaneously, the system has been built with that in mind and includes generator overhead as a buffer. The risk isn&rsquo;t a brief spike; it&rsquo;s sustained overconsumption over time. In practice, barrios typically use between a quarter and half of their peak allocation, so there&rsquo;s real headroom.</p>
+                    <p><strong>What matters most:</strong> stay within your allocated power, and don&rsquo;t make a major change to your cooking setup (e.g. switching entirely to electric cooking) without letting your power lead know first. If you&rsquo;re planning to cook electrically during an alert, coordinate with your power lead so consumption can be staggered across the grid and managed safely.</p>
+                    <p>Talk to your power lead if you have questions about your barrio&rsquo;s allocation or setup.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>For campervan owners and free campers</h2>
+                    <p>The restrictions apply to everyone on site, including individual campers and campervans. During a Red Alert Plus:</p>
+                    <ul>
+                        <li>No cooking with gas inside or outside your van</li>
+                        <li>No open flame of any kind</li>
+                        <li>No movement on or off site between 12:00 and 18:00</li>
+                    </ul>
+                    <p>Plan ahead: bring food that doesn&rsquo;t require cooking, or that can be prepared with an electric appliance, for at least a couple of days. If you&rsquo;re travelling by van, make sure you arrive and depart outside of the 12:00&ndash;18:00 window whenever an alert is active.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>General safety measures (all alert levels)</h2>
+                    <p>These apply throughout the event regardless of alert level &mdash; they&rsquo;re standard recommendations for working and living in this environment in summer:</p>
+
+                    <h3>Fire prevention</h3>
+                    <ul>
+                        <li>No agricultural burning or burning of any vegetation</li>
+                        <li>No discarding cigarettes or any burning objects outdoors</li>
+                        <li>Avoid machinery that generates heat or sparks during peak hours (12:00&ndash;18:00)</li>
+                        <li>Keep firefighting equipment accessible and in good condition</li>
+                        <li>If you see smoke or fire, report it immediately to the on-site team</li>
+                    </ul>
+
+                    <h3>Heat and sun</h3>
+                    <ul>
+                        <li>Drink water regularly &mdash; don&rsquo;t wait until you&rsquo;re thirsty</li>
+                        <li>Avoid direct sun exposure during peak hours (12:00&ndash;18:00); use shade</li>
+                        <li>Wear light, loose clothing and use high-SPF sun protection</li>
+                        <li>Avoid heavy meals and alcohol during the hottest part of the day</li>
+                        <li>Check in on those around you, especially in the early days before people acclimatise</li>
+                        <li>Signs of heat stroke: cramps, exhaustion, skin burns or irritation, very high body temperature, headache, vomiting, or loss of consciousness. Seek help immediately.</li>
+                    </ul>
+
+                    <div class="emergency-callout">
+                        <p>In an emergency on site, call: <a href="tel:+34623796600">+34 623 796 600</a></p>
+                    </div>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Frequently asked questions</h2>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle">Is Elsewhere still happening?</button>
+                        <div class="faq-answer">
+                            <p>Yes. We&rsquo;re on site, operational, and the event is going ahead as planned. A Red Alert Plus changes how we operate during the alert window &mdash; it doesn&rsquo;t stop the event.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle">How will I know if a Red Alert Plus is declared?</button>
+                        <div class="faq-answer">
+                            <p>We&rsquo;ll update the status box at the top of this page and communicate through WhatsApp, Discord, Telegram, and on-site. Keep notifications on and check in with your barrio or camp lead.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle">Does the 12&ndash;18 restriction apply even if I just want to take a short walk?</button>
+                        <div class="faq-answer">
+                            <p>Yes. During a Red Alert Plus, no movement &mdash; including on foot &mdash; between 12:00 and 18:00. This is a legal requirement, not just a recommendation.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle">Can I use my gas stove in my campervan if the windows are closed?</button>
+                        <div class="faq-answer">
+                            <p>No. The gas ban applies to everyone on site, regardless of where or how you cook.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle">Does a Red Alert Plus affect Orange or Red alert days too?</button>
+                        <div class="faq-answer">
+                            <p>No. Only a declared Red Alert Plus (published in the BOA) triggers the legal restrictions listed above. On Orange or Red alert days, normal operations apply &mdash; take sensible precautions but there are no mandatory restrictions on movement or cooking.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle">What if I need to leave site urgently during a Red Alert Plus?</button>
+                        <div class="faq-answer">
+                            <p>Contact the on-site team at <a href="tel:+34623796600">+34 623 796 600</a>. Exceptions for genuine emergencies are handled case by case in coordination with the authorities.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle">What about the bus from Barcelona?</button>
+                        <div class="faq-answer">
+                            <p>[TBC &mdash; update pending, will be confirmed before the first bus departs.]</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="doc-section">
+                    <h2>The bigger picture</h2>
+                    <p>The region around Castej&oacute;n de Monegros is getting hotter. Conditions that used to peak in August are now arriving in late June and July. The local authorities, the Comarca, and the people who live and work in this landscape are dealing with this every year. We take that seriously.</p>
+                    <p>Everyone on site this weekend followed the protocol. The authorities checked in multiple times and saw a community that takes these things seriously. That&rsquo;s what makes it possible for Elsewhere to continue.</p>
+                    <p>We&rsquo;ll keep this page updated as the situation develops. If you have questions, reach out to your barrio or camp lead, or contact us at <a href="mailto:info@nobodies.team">info@nobodies.team</a>.</p>
+                    <p class="closing">See you in the dust. &#x1F3DC;</p>
+                    <p class="closing" style="font-style: normal; margin-top: 0.5rem;">&mdash; Elsewhere 2026</p>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.querySelectorAll('.faq-toggle').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var item = this.parentElement;
+                item.classList.toggle('open');
+            });
+        });
+    </script>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
