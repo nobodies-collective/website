@@ -1173,7 +1173,7 @@
     </main>
 
     <script>
-        // Daily alert tracker
+        // Daily alert tracker (multilingual)
         (function(){
         var days = [
           {date:'15 Jun',dow:'Mon',level:'naranja',fire:'Naranja',heat:'Amarillo (storms)',restrictions:false,tomorrow:'Naranja fire / Amarillo heat',note:''},
@@ -1193,41 +1193,96 @@
           {date:'29 Jun',dow:'Mon',level:'naranja',fire:'Naranja',heat:'\u2014',restrictions:false,tomorrow:'Roja (Muela de Alcubierre) / Naranja rest',note:'Roja Plus ended. Comarca deactivated Plan de Protecci\u00f3n Civil. Back to normal operations.'},
         ];
 
-        var levelLabel={amarillo:'Amarillo',naranja:'Naranja',roja:'Roja',rojaplus:'Roja Plus'};
         var levelEmoji={amarillo:'\ud83d\udfe1',naranja:'\ud83d\udfe0',roja:'\ud83d\udd34',rojaplus:'\ud83d\udd34\u2795'};
 
+        // Translations for tracker UI
+        var T = {
+          en: {
+            levelLabel:{amarillo:'Amarillo',naranja:'Naranja',roja:'Roja',rojaplus:'Roja Plus'},
+            dow:{Mon:'Mon',Tue:'Tue',Wed:'Wed',Thu:'Thu',Fri:'Fri',Sat:'Sat',Sun:'Sun'},
+            fire:'Fire alert', heat:'Heat / storms', restrictions:'Restrictions',
+            active:'Active \u2014 Roja Plus in force', none:'None', tomorrow:'Tomorrow forecast'
+          },
+          es: {
+            levelLabel:{amarillo:'Amarillo',naranja:'Naranja',roja:'Roja',rojaplus:'Roja Plus'},
+            dow:{Mon:'Lun',Tue:'Mar',Wed:'Mi\u00e9',Thu:'Jue',Fri:'Vie',Sat:'S\u00e1b',Sun:'Dom'},
+            fire:'Alerta de incendio', heat:'Calor / tormentas', restrictions:'Restricciones',
+            active:'Activa \u2014 Roja Plus en vigor', none:'Ninguna', tomorrow:'Previsi\u00f3n de ma\u00f1ana'
+          },
+          fr: {
+            levelLabel:{amarillo:'Amarillo',naranja:'Naranja',roja:'Roja',rojaplus:'Roja Plus'},
+            dow:{Mon:'Lun',Tue:'Mar',Wed:'Mer',Thu:'Jeu',Fri:'Ven',Sat:'Sam',Sun:'Dim'},
+            fire:'Alerte incendie', heat:'Chaleur / orages', restrictions:'Restrictions',
+            active:'Active \u2014 Roja Plus en vigueur', none:'Aucune', tomorrow:'Pr\u00e9vision demain'
+          },
+          it: {
+            levelLabel:{amarillo:'Amarillo',naranja:'Naranja',roja:'Roja',rojaplus:'Roja Plus'},
+            dow:{Mon:'Lun',Tue:'Mar',Wed:'Mer',Thu:'Gio',Fri:'Ven',Sat:'Sab',Sun:'Dom'},
+            fire:'Allerta incendio', heat:'Calore / temporali', restrictions:'Restrizioni',
+            active:'Attiva \u2014 Roja Plus in vigore', none:'Nessuna', tomorrow:'Previsione domani'
+          },
+          de: {
+            levelLabel:{amarillo:'Amarillo',naranja:'Naranja',roja:'Roja',rojaplus:'Roja Plus'},
+            dow:{Mon:'Mo',Tue:'Di',Wed:'Mi',Thu:'Do',Fri:'Fr',Sat:'Sa',Sun:'So'},
+            fire:'Feuerwarnung', heat:'Hitze / Gewitter', restrictions:'Einschr\u00e4nkungen',
+            active:'Aktiv \u2014 Roja Plus in Kraft', none:'Keine', tomorrow:'Vorhersage morgen'
+          },
+          ca: {
+            levelLabel:{amarillo:'Amarillo',naranja:'Naranja',roja:'Roja',rojaplus:'Roja Plus'},
+            dow:{Mon:'Dll',Tue:'Dm',Wed:'Dc',Thu:'Dj',Fri:'Dv',Sat:'Ds',Sun:'Dg'},
+            fire:"Alerta d'incendi", heat:'Calor / tempestes', restrictions:'Restriccions',
+            active:'Activa \u2014 Roja Plus en vigor', none:'Cap', tomorrow:"Previsi\u00f3 de dem\u00e0"
+          }
+        };
+
+        var currentLang = 'en';
         var row=document.getElementById('ewDaysRow');
         var detail=document.getElementById('ewDetail');
+        var activeDay = days[days.length-1];
 
-        days.forEach(function(d,i){
-          var chip=document.createElement('div');
-          chip.className='day-chip'+(i===days.length-1?' active':'');
-          chip.innerHTML='<span class="dow">'+d.dow+'</span><div class="dot dot-'+d.level+'"><span>'+levelEmoji[d.level]+'</span></div><span class="dom">'+d.date.split(' ')[0]+'</span>';
-          chip.addEventListener('click',function(){
-            document.querySelectorAll('.day-chip').forEach(function(c){c.classList.remove('active')});
-            chip.classList.add('active');
-            renderDetail(d);
+        function buildChips(){
+          row.innerHTML='';
+          var t=T[currentLang];
+          days.forEach(function(d,i){
+            var chip=document.createElement('div');
+            chip.className='day-chip'+(d===activeDay?' active':'');
+            chip.innerHTML='<span class="dow">'+t.dow[d.dow]+'</span><div class="dot dot-'+d.level+'"><span>'+levelEmoji[d.level]+'</span></div><span class="dom">'+d.date.split(' ')[0]+'</span>';
+            chip.addEventListener('click',function(){
+              document.querySelectorAll('.day-chip').forEach(function(c){c.classList.remove('active')});
+              chip.classList.add('active');
+              activeDay=d;
+              renderDetail(d);
+            });
+            row.appendChild(chip);
           });
-          row.appendChild(chip);
-        });
+          row.scrollLeft=row.scrollWidth;
+        }
 
         function renderDetail(d){
-          detail.innerHTML='<div class="detail-header"><span class="level-badge badge-'+d.level+'">'+levelEmoji[d.level]+' '+levelLabel[d.level]+'</span><span class="detail-date">'+d.date+'</span></div>'
-            +'<div class="detail-row"><span class="detail-label">Fire alert</span><span>'+d.fire+'</span></div>'
-            +(d.heat!=='\u2014'?'<div class="detail-row"><span class="detail-label">Heat / storms</span><span>'+d.heat+'</span></div>':'')
-            +'<div class="detail-row"><span class="detail-label">Restrictions</span><span>'+(d.restrictions?'<span class="restrictions-tag">Active \u2014 Roja Plus in force</span>':'<span class="ok-tag">None</span>')+'</span></div>'
+          var t=T[currentLang];
+          detail.innerHTML='<div class="detail-header"><span class="level-badge badge-'+d.level+'">'+levelEmoji[d.level]+' '+t.levelLabel[d.level]+'</span><span class="detail-date">'+d.date+'</span></div>'
+            +'<div class="detail-row"><span class="detail-label">'+t.fire+'</span><span>'+d.fire+'</span></div>'
+            +(d.heat!=='\u2014'?'<div class="detail-row"><span class="detail-label">'+t.heat+'</span><span>'+d.heat+'</span></div>':'')
+            +'<div class="detail-row"><span class="detail-label">'+t.restrictions+'</span><span>'+(d.restrictions?'<span class="restrictions-tag">'+t.active+'</span>':'<span class="ok-tag">'+t.none+'</span>')+'</span></div>'
             +'<div class="ew-divider"></div>'
-            +'<div class="tomorrow-row"><strong>Tomorrow forecast:</strong> '+d.tomorrow+'</div>'
+            +'<div class="tomorrow-row"><strong>'+t.tomorrow+':</strong> '+d.tomorrow+'</div>'
             +(d.note?'<div style="margin-top:8px;font-size:12px;color:#666;line-height:1.5">'+d.note+'</div>':'');
         }
 
-        renderDetail(days[days.length-1]);
-        row.scrollLeft=row.scrollWidth;
+        // Expose language switch for the toggle to call
+        window.ewTrackerSetLang = function(lang){
+          currentLang = T[lang] ? lang : 'en';
+          buildChips();
+          renderDetail(activeDay);
+        };
+
+        buildChips();
+        renderDetail(activeDay);
         })();
     </script>
 
     <script>
-        // Language toggle
+        // Language toggle (also updates tracker)
         document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
             btn.addEventListener('click', function() {
                 var lang = this.dataset.lang;
@@ -1236,6 +1291,8 @@
                 document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
                 var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
                 if (target) target.classList.add('active');
+                // Update tracker language
+                if (window.ewTrackerSetLang) window.ewTrackerSetLang(lang);
             });
         });
 
