@@ -10,34 +10,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Status box */
-        .status-box {
-            background: #1a1a2e;
-            border: 2px solid #2a2a4a;
-            border-radius: var(--radius, 12px);
-            padding: 1.75rem 2rem;
-            margin-bottom: 3rem;
-            line-height: 1.7;
-        }
-        .status-box p {
-            margin: 0;
-            color: #ccc;
-            font-size: 0.95rem;
-        }
-        .status-box .status-updated {
-            color: #888;
-            font-size: 0.85rem;
-            margin-bottom: 0.75rem;
-        }
-        .status-box .status-today,
-        .status-box .status-tomorrow {
-            margin-bottom: 0.25rem;
-        }
-        .status-box .status-main {
-            margin-top: 1rem;
-            color: #e0e0e0;
-            font-weight: 500;
-        }
+        /* Alert tracker widget */
+        .tracker{padding:1rem 0}
+        .days-row{display:flex;gap:6px;overflow-x:auto;padding-bottom:8px;scrollbar-width:none}
+        .days-row::-webkit-scrollbar{display:none}
+        .day-chip{flex:0 0 52px;display:flex;flex-direction:column;align-items:center;gap:4px;padding:8px 4px;border-radius:10px;cursor:pointer;border:1.5px solid transparent;transition:border-color 0.15s;background:var(--color-bg-alt, #f9f8f6)}
+        .day-chip:hover{border-color:#aaa}
+        .day-chip.active{border-color:var(--color-text, #333);background:var(--color-bg, #fff)}
+        .day-chip .dow{font-size:11px;color:var(--color-text-muted, #888);font-weight:500}
+        .day-chip .dom{font-size:13px;font-weight:500;color:var(--color-text, #1a1a1a)}
+        .day-chip .dot{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px}
+        .dot-amarillo{background:#fef3c7}
+        .dot-naranja{background:#fed7aa}
+        .dot-roja{background:#fecaca}
+        .dot-rojaplus{background:#dc2626}
+        .ew-detail{margin-top:12px;padding:14px 16px;border-radius:12px;border:0.5px solid var(--color-border, #e0ddd8);background:var(--color-bg, #fff)}
+        .detail-header{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+        .level-badge{padding:3px 10px;border-radius:20px;font-size:12px;font-weight:500}
+        .badge-amarillo{background:#fef3c7;color:#92400e}
+        .badge-naranja{background:#fed7aa;color:#9a3412}
+        .badge-roja{background:#fecaca;color:#991b1b}
+        .badge-rojaplus{background:#dc2626;color:#fff}
+        .detail-date{font-size:13px;color:var(--color-text-muted, #666)}
+        .detail-row{display:flex;gap:8px;align-items:flex-start;margin-bottom:6px;font-size:13px;color:var(--color-text, #1a1a1a)}
+        .detail-label{color:var(--color-text-muted, #888);min-width:90px;flex-shrink:0}
+        .restrictions-tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:500;background:#fecaca;color:#991b1b}
+        .ok-tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:500;background:#dcfce7;color:#166534}
+        .ew-divider{height:0.5px;background:var(--color-border, #e0ddd8);margin:10px 0}
+        .tomorrow-row{font-size:12px;color:var(--color-text-muted, #666)}
 
         /* Language toggle */
         .lang-toggle {
@@ -207,12 +207,10 @@
                 <h1>Red Alert Plus &#x1F534;&#x2795;</h1>
             </div>
 
-            <!-- Status Box (always visible, not translated — operational data) -->
-            <div class="status-box">
-                <p class="status-updated">Last updated: Monday 29 June 2026</p>
-                <p class="status-today">Today: &#x1F7E0; Naranja &mdash; no restrictions in force</p>
-                <p class="status-tomorrow">Tomorrow (30 June) forecast: &#x1F534; Roja (Muela de Alcubierre) / &#x1F7E0; Naranja (rest of comarca)</p>
-                <p class="status-main">No Red Alert Plus is currently in effect. Normal operations apply.</p>
+            <!-- Daily Alert Tracker (always visible, not translated — operational data) -->
+            <div class="tracker">
+                <div class="days-row" id="ewDaysRow"></div>
+                <div class="ew-detail" id="ewDetail"></div>
             </div>
 
             <div class="lang-toggle">
@@ -1173,6 +1171,60 @@
             </div>
         </div>
     </main>
+
+    <script>
+        // Daily alert tracker
+        (function(){
+        var days = [
+          {date:'15 Jun',dow:'Mon',level:'naranja',fire:'Naranja',heat:'Amarillo (storms)',restrictions:false,tomorrow:'Naranja fire / Amarillo heat',note:''},
+          {date:'16 Jun',dow:'Tue',level:'naranja',fire:'Naranja',heat:'Amarillo (max temps)',restrictions:false,tomorrow:'Roja fire (Pe\u00f1alba) / Naranja elsewhere',note:''},
+          {date:'17 Jun',dow:'Wed',level:'naranja',fire:'Naranja (Roja in Pe\u00f1alba)',heat:'Amarillo (max temps, up to 38\u00b0C)',restrictions:false,tomorrow:'Roja fire',note:''},
+          {date:'18 Jun',dow:'Thu',level:'roja',fire:'Roja',heat:'Amarillo (max temps)',restrictions:false,tomorrow:'Roja fire',note:''},
+          {date:'19 Jun',dow:'Fri',level:'roja',fire:'Roja',heat:'Amarillo (max temps)',restrictions:false,tomorrow:'Roja fire',note:''},
+          {date:'20 Jun',dow:'Sat',level:'roja',fire:'Roja',heat:'Naranja (Zaragoza) / Amarillo rest',restrictions:false,tomorrow:'Roja fire',note:'Up to 40\u00b0C'},
+          {date:'21 Jun',dow:'Sun',level:'roja',fire:'Roja',heat:'Naranja (max temps, up to 40\u00b0C)',restrictions:false,tomorrow:'Roja fire',note:''},
+          {date:'22 Jun',dow:'Mon',level:'roja',fire:'Roja',heat:'Naranja (max temps, 40\u00b0C+)',restrictions:false,tomorrow:'Roja fire',note:''},
+          {date:'23 Jun',dow:'Tue',level:'roja',fire:'Roja',heat:'Naranja (max temps, 40\u00b0C+)',restrictions:false,tomorrow:'Roja fire',note:''},
+          {date:'24 Jun',dow:'Wed',level:'roja',fire:'Roja',heat:'Naranja (max temps, 40\u00b0C)',restrictions:false,tomorrow:'Roja fire',note:''},
+          {date:'25 Jun',dow:'Thu',level:'roja',fire:'Roja',heat:'Amarillo (max temps)',restrictions:false,tomorrow:'Roja fire',note:''},
+          {date:'26 Jun',dow:'Fri',level:'rojaplus',fire:'Roja Plus',heat:'Amarillo (max temps)',restrictions:true,tomorrow:'Roja Plus fire',note:'BOA Orden HAP/925/2026 declared. Plan de Protecci\u00f3n Civil de la Comarca activated.'},
+          {date:'27 Jun',dow:'Sat',level:'rojaplus',fire:'Roja Plus',heat:'Amarillo (max temps) + Amarillo storms',restrictions:true,tomorrow:'Roja Plus fire',note:'Alcampell fire (Huesca) active. Multiple fires across Arag\u00f3n.'},
+          {date:'28 Jun',dow:'Sun',level:'rojaplus',fire:'Roja Plus',heat:'Amarillo storms + Naranja storms (Zaragoza)',restrictions:true,tomorrow:'Roja fire (11 zones)',note:'Storms arrived late afternoon. Guardia Civil and Protecci\u00f3n Civil checked compliance on site.'},
+          {date:'29 Jun',dow:'Mon',level:'naranja',fire:'Naranja',heat:'\u2014',restrictions:false,tomorrow:'Roja (Muela de Alcubierre) / Naranja rest',note:'Roja Plus ended. Comarca deactivated Plan de Protecci\u00f3n Civil. Back to normal operations.'},
+        ];
+
+        var levelLabel={amarillo:'Amarillo',naranja:'Naranja',roja:'Roja',rojaplus:'Roja Plus'};
+        var levelEmoji={amarillo:'\ud83d\udfe1',naranja:'\ud83d\udfe0',roja:'\ud83d\udd34',rojaplus:'\ud83d\udd34\u2795'};
+
+        var row=document.getElementById('ewDaysRow');
+        var detail=document.getElementById('ewDetail');
+
+        days.forEach(function(d,i){
+          var chip=document.createElement('div');
+          chip.className='day-chip'+(i===days.length-1?' active':'');
+          chip.innerHTML='<span class="dow">'+d.dow+'</span><div class="dot dot-'+d.level+'"><span>'+levelEmoji[d.level]+'</span></div><span class="dom">'+d.date.split(' ')[0]+'</span>';
+          chip.addEventListener('click',function(){
+            document.querySelectorAll('.day-chip').forEach(function(c){c.classList.remove('active')});
+            chip.classList.add('active');
+            renderDetail(d);
+          });
+          row.appendChild(chip);
+        });
+
+        function renderDetail(d){
+          detail.innerHTML='<div class="detail-header"><span class="level-badge badge-'+d.level+'">'+levelEmoji[d.level]+' '+levelLabel[d.level]+'</span><span class="detail-date">'+d.date+'</span></div>'
+            +'<div class="detail-row"><span class="detail-label">Fire alert</span><span>'+d.fire+'</span></div>'
+            +(d.heat!=='\u2014'?'<div class="detail-row"><span class="detail-label">Heat / storms</span><span>'+d.heat+'</span></div>':'')
+            +'<div class="detail-row"><span class="detail-label">Restrictions</span><span>'+(d.restrictions?'<span class="restrictions-tag">Active \u2014 Roja Plus in force</span>':'<span class="ok-tag">None</span>')+'</span></div>'
+            +'<div class="ew-divider"></div>'
+            +'<div class="tomorrow-row"><strong>Tomorrow forecast:</strong> '+d.tomorrow+'</div>'
+            +(d.note?'<div style="margin-top:8px;font-size:12px;color:#666;line-height:1.5">'+d.note+'</div>':'');
+        }
+
+        renderDetail(days[days.length-1]);
+        row.scrollLeft=row.scrollWidth;
+        })();
+    </script>
 
     <script>
         // Language toggle
