@@ -39,6 +39,35 @@
             font-weight: 500;
         }
 
+        /* Language toggle */
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        .lang-toggle button {
+            padding: 0.75rem 1.5rem;
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid var(--color-border);
+            background: var(--color-bg-alt);
+            color: var(--color-text-muted);
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .lang-toggle button.active,
+        .lang-toggle button:hover {
+            background: var(--color-accent);
+            border-color: var(--color-accent);
+            color: #fff;
+        }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+
         /* Permitted / not permitted lists */
         .rules-grid {
             display: grid;
@@ -176,18 +205,31 @@
 
             <div class="doc-header">
                 <h1>Red Alert Plus &#x1F534;&#x2795;</h1>
-                <p class="doc-intro">Wildfire alerts and what they mean for Elsewhere</p>
+            </div>
+
+            <!-- Status Box (always visible, not translated — operational data) -->
+            <div class="status-box">
+                <p class="status-updated">Last updated: Monday 29 June 2026</p>
+                <p class="status-today">Today: &#x1F7E0; Naranja &mdash; no restrictions in force</p>
+                <p class="status-tomorrow">Tomorrow (30 June) forecast: &#x1F534; Roja (Muela de Alcubierre) / &#x1F7E0; Naranja (rest of comarca)</p>
+                <p class="status-main">No Red Alert Plus is currently in effect. Normal operations apply.</p>
+            </div>
+
+            <div class="lang-toggle">
+                <button class="active" data-lang="en">English</button>
+                <button data-lang="es">Espa&ntilde;ol</button>
+                <button data-lang="fr">Fran&ccedil;ais</button>
+                <button data-lang="it">Italiano</button>
+                <button data-lang="de">Deutsch</button>
+                <button data-lang="ca">Catal&agrave;</button>
             </div>
 
             <div class="doc-content">
 
-                <!-- Status Box -->
-                <div class="status-box">
-                    <p class="status-updated">Last updated: Monday 29 June 2026</p>
-                    <p class="status-today">Today: &#x1F7E0; Naranja &mdash; no restrictions in force</p>
-                    <p class="status-tomorrow">Tomorrow (30 June) forecast: &#x1F534; Roja (Muela de Alcubierre) / &#x1F7E0; Naranja (rest of comarca)</p>
-                    <p class="status-main">No Red Alert Plus is currently in effect. Normal operations apply.</p>
-                </div>
+            <!-- ==================== ENGLISH ==================== -->
+            <div class="lang-content active" data-lang="en">
+
+                <p class="doc-intro">Wildfire alerts and what they mean for Elsewhere</p>
 
                 <section class="doc-section">
                     <p>The Comarca de Los Monegros is one of the driest, most fire-prone regions in Spain. Every summer, the Gobierno de Arag&oacute;n monitors conditions closely and issues alerts when wildfire risk rises. This page explains what those alerts mean, what happened on site this weekend, and what you need to know before you arrive.</p>
@@ -374,10 +416,773 @@
                 </section>
 
             </div>
+
+            <!-- ==================== SPANISH ==================== -->
+            <div class="lang-content" data-lang="es">
+
+                <p class="doc-intro">Alertas de incendios forestales y qu&eacute; significan para Elsewhere</p>
+
+                <section class="doc-section">
+                    <p>La Comarca de Los Monegros es una de las regiones m&aacute;s secas y con mayor riesgo de incendio de Espa&ntilde;a. Cada verano, el Gobierno de Arag&oacute;n vigila las condiciones de cerca y emite alertas cuando aumenta el riesgo de incendio forestal. Esta p&aacute;gina explica qu&eacute; significan esas alertas, qu&eacute; pas&oacute; en el terreno este fin de semana y lo que necesitas saber antes de llegar.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Entender el sistema de alertas</h2>
+                    <p>El Gobierno de Arag&oacute;n emite cuatro niveles de alerta por incendio forestal:</p>
+                    <ul>
+                        <li>&#x1F7E1; <strong>Amarilla</strong> &mdash; Riesgo moderado. Se aplican precauciones est&aacute;ndar.</li>
+                        <li>&#x1F7E0; <strong>Naranja</strong> &mdash; Riesgo significativo. Se requiere mayor concienciaci&oacute;n.</li>
+                        <li>&#x1F534; <strong>Roja</strong> &mdash; Riesgo extremo. Condiciones de alto peligro en toda la regi&oacute;n.</li>
+                        <li>&#x1F534;&#x2795; <strong>Alerta Roja Plus</strong> &mdash; Designaci&oacute;n de emergencia excepcional.</li>
+                    </ul>
+                    <p>Las tres primeras son avisos meteorol&oacute;gicos y ambientales est&aacute;ndar. Vienen con recomendaciones sobre c&oacute;mo cuidarte y evitar contribuir al riesgo de incendio. Las gestionamos todos los a&ntilde;os.</p>
+                    <p>La Alerta Roja Plus es diferente. No es solo un aviso meteorol&oacute;gico &mdash; es una declaraci&oacute;n administrativa de emergencia del Gobierno de Arag&oacute;n, publicada en el Bolet&iacute;n Oficial de Arag&oacute;n (BOA). Se activa cuando una combinaci&oacute;n espec&iacute;fica de condiciones crea un riesgo extremo de incendio: temperatura superior a 30&deg;C, viento superior a 30km/h y humedad inferior al 30%. Cuando se declara, conlleva un conjunto de prohibiciones legalmente vinculantes y se aplica a toda la regi&oacute;n.</p>
+                    <p>Este a&ntilde;o, la legislaci&oacute;n que regula la Alerta Roja Plus se actualiz&oacute; en marzo de 2026 (Decreto 22/2026). Desde entonces hemos estado trabajando con las autoridades locales para entender qu&eacute; significa para Elsewhere y asegurarnos de tener las medidas adecuadas.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Qu&eacute; pas&oacute; este fin de semana</h2>
+                    <p>El viernes 26 de junio, el Gobierno de Arag&oacute;n declar&oacute; una Alerta Roja Plus para todo Arag&oacute;n (Orden HAP/925/2026, publicada en el BOA Extraordinario N&uacute;m. 3), cubriendo los d&iacute;as 26, 27 y 28 de junio. Hab&iacute;a varios incendios activos en la regi&oacute;n, incluido uno cerca de nosotros.</p>
+                    <p>Activamos nuestro protocolo de emergencia inmediatamente. En el terreno contamos con:</p>
+                    <ul>
+                        <li>34.000 litros de agua dedicada a la lucha contra incendios (repartidos en dos veh&iacute;culos)</li>
+                        <li>Equipos de mangueras de agua prestados por municipios cercanos</li>
+                        <li>Extintores distribuidos por todo el terreno</li>
+                        <li>&Aacute;reas seguras designadas y un protocolo de cumplimiento completo</li>
+                    </ul>
+                    <p>Hemos estado en estrecha coordinaci&oacute;n con Protecci&oacute;n Civil, Guardia Civil, Cruz Roja, la Comarca de Los Monegros y los alcaldes de los cinco pueblos cercanos. Nos visitaron varias veces y encontraron una comunidad que se toma estas cosas en serio.</p>
+                    <p>La Alerta Roja Plus termin&oacute; el domingo 28 de junio. El lunes 29 de junio, la Comarca de Los Monegros desactiv&oacute; formalmente el Plan de Protecci&oacute;n Civil, volviendo a operaciones normales. La alerta para el 29 de junio es Naranja &mdash; no se aplican restricciones.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>&iquest;Podr&iacute;a volver a pasar durante el evento?</h2>
+                    <p>Posiblemente, s&iacute;. Las condiciones que desencadenan una Alerta Roja Plus &mdash; calor, viento, baja humedad &mdash; son caracter&iacute;sticas de esta regi&oacute;n en julio. Seg&uacute;n las previsiones actuales, los d&iacute;as con mayor probabilidad de riesgo elevado durante el evento son alrededor del 5 al 7 de julio. Estamos monitorizando la situaci&oacute;n de cerca y comunicaremos cualquier alerta en cuanto se declare.</p>
+                    <p>Una Alerta Roja Plus se declara con poco tiempo de antelaci&oacute;n &mdash; normalmente unas horas antes de entrar en vigor, mediante una Orden oficial publicada en el BOA. Cuando se declare una, la comunicaremos inmediatamente a trav&eacute;s de:</p>
+                    <ul>
+                        <li>Esta p&aacute;gina (el cuadro de estado se actualiza el mismo d&iacute;a)</li>
+                        <li>Canales de WhatsApp</li>
+                        <li>Discord y Telegram</li>
+                        <li>Anuncios en el terreno</li>
+                    </ul>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Qu&eacute; significa una Alerta Roja Plus en el terreno</h2>
+                    <p>Si se declara una Alerta Roja Plus durante Elsewhere, lo siguiente se aplica inmediatamente y durante toda la duraci&oacute;n de la alerta:</p>
+
+                    <div class="rules-grid">
+                        <div class="rules-block not-permitted">
+                            <h3>No permitido</h3>
+                            <ul>
+                                <li>No trabajar ni desplazarse dentro o fuera del terreno entre las 12:00 y las 18:00</li>
+                                <li>No cocinar con gas &mdash; solo comida fr&iacute;a durante la alerta</li>
+                                <li>Ninguna llama abierta en exteriores (velas, mecheros, etc.)</li>
+                                <li>No soldar ni usar equipos que generen chispas (amoladoras, etc.)</li>
+                                <li>No cargar patinetes el&eacute;ctricos, e-bikes ni dispositivos de bater&iacute;a no esenciales</li>
+                                <li>Fumar solo en &aacute;reas designadas equipadas con extintores</li>
+                            </ul>
+                        </div>
+                        <div class="rules-block permitted">
+                            <h3>Permitido</h3>
+                            <ul>
+                                <li>Herramientas el&eacute;ctricas</li>
+                                <li>Hervidores, cafeteras y otros electrodom&eacute;sticos</li>
+                                <li>Generadores (gestionados seg&uacute;n el protocolo de seguridad del terreno)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p>Los veh&iacute;culos que lleguen o salgan durante una Alerta Roja Plus deber&aacute;n circular en convoyes escoltados por la carretera de emergencia. Si la alerta est&aacute; activa cuando est&eacute;s de camino, cont&aacute;ctanos antes de salir y te recibiremos en el puente para escoltarte hasta el terreno.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Para l&iacute;deres de barrio y equipos de cocina</h2>
+                    <p>Cambiar el plan de cocina de un barrio con poco tiempo de aviso es dif&iacute;cil. Queremos avisaros con la mayor antelaci&oacute;n posible.</p>
+                    <p><strong>Nuestra petici&oacute;n:</strong> tened un plan de comida fr&iacute;a de respaldo antes de llegar. Pensad en ensaladas, platos fr&iacute;os, snacks preparados, alternativas sin cocci&oacute;n. No necesit&aacute;is eliminar vuestro men&uacute; &mdash; solo tener un plan B que no requiera gas, para que si se declara una alerta a mitad del evento, no os pille desprevenidos. Llegar pronto y preparar algunas comidas con antelaci&oacute;n es buena idea &mdash; as&iacute; ya ten&eacute;is comida lista si se restringe el gas un d&iacute;a.</p>
+                    <p><strong>Sobre la electricidad:</strong> sabemos que los barrios normalmente dependen mucho del gas para reducir la carga en la red el&eacute;ctrica. Si se declara una Alerta Roja Plus y las cocinas necesitan pasar a el&eacute;ctrico, esto es lo que vuestros responsables de energ&iacute;a necesitan saber:</p>
+                    <p>La red est&aacute; dise&ntilde;ada de forma robusta y puede soportar la carga &mdash; incluso si todos los barrios usan su potencia asignada simult&aacute;neamente, el sistema ha sido construido con eso en mente e incluye generadores como margen de seguridad. El riesgo no es un pico breve; es el sobreconsumo sostenido en el tiempo. En la pr&aacute;ctica, los barrios suelen usar entre un cuarto y la mitad de su asignaci&oacute;n m&aacute;xima, as&iacute; que hay margen real.</p>
+                    <p><strong>Lo m&aacute;s importante:</strong> mantente dentro de tu potencia asignada y no hagas un cambio importante en tu configuraci&oacute;n de cocina (por ejemplo, pasar completamente a cocina el&eacute;ctrica) sin avisar primero a tu responsable de energ&iacute;a. Si planeas cocinar con electricidad durante una alerta, coordina con tu responsable de energ&iacute;a para que el consumo pueda escalonarse en la red y gestionarse de forma segura.</p>
+                    <p>Habla con tu responsable de energ&iacute;a si tienes preguntas sobre la asignaci&oacute;n o configuraci&oacute;n de tu barrio.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Para propietarios de autocaravanas y campistas libres</h2>
+                    <p>Las restricciones se aplican a todos en el terreno, incluidos campistas individuales y autocaravanas. Durante una Alerta Roja Plus:</p>
+                    <ul>
+                        <li>No cocinar con gas dentro ni fuera de tu furgoneta</li>
+                        <li>Ninguna llama abierta de ning&uacute;n tipo</li>
+                        <li>No desplazarse dentro ni fuera del terreno entre las 12:00 y las 18:00</li>
+                    </ul>
+                    <p>Planifica con antelaci&oacute;n: trae comida que no requiera cocci&oacute;n, o que pueda prepararse con un electrodom&eacute;stico, para al menos un par de d&iacute;as. Si viajas en furgoneta, aseg&uacute;rate de llegar y salir fuera de la franja horaria de 12:00 a 18:00 cuando haya una alerta activa.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Medidas generales de seguridad (todos los niveles de alerta)</h2>
+                    <p>Estas se aplican durante todo el evento independientemente del nivel de alerta &mdash; son recomendaciones est&aacute;ndar para trabajar y vivir en este entorno en verano:</p>
+
+                    <h3>Prevenci&oacute;n de incendios</h3>
+                    <ul>
+                        <li>No quemar vegetaci&oacute;n ni realizar quemas agr&iacute;colas</li>
+                        <li>No tirar cigarrillos ni objetos encendidos al aire libre</li>
+                        <li>Evitar maquinaria que genere calor o chispas en horas punta (12:00&ndash;18:00)</li>
+                        <li>Mantener el equipo contra incendios accesible y en buen estado</li>
+                        <li>Si ves humo o fuego, inf&oacute;rmalo inmediatamente al equipo del terreno</li>
+                    </ul>
+
+                    <h3>Calor y sol</h3>
+                    <ul>
+                        <li>Bebe agua regularmente &mdash; no esperes a tener sed</li>
+                        <li>Evita la exposici&oacute;n directa al sol en horas punta (12:00&ndash;18:00); busca la sombra</li>
+                        <li>Usa ropa ligera y holgada y protecci&oacute;n solar de alto SPF</li>
+                        <li>Evita comidas copiosas y alcohol en las horas m&aacute;s calurosas</li>
+                        <li>Mira por quienes te rodean, especialmente los primeros d&iacute;as antes de que la gente se aclimate</li>
+                        <li>S&iacute;ntomas de golpe de calor: calambres, agotamiento, quemaduras o irritaci&oacute;n de la piel, temperatura corporal muy alta, dolor de cabeza, v&oacute;mitos o p&eacute;rdida de conocimiento. Busca ayuda inmediatamente.</li>
+                    </ul>
+
+                    <div class="emergency-callout">
+                        <p>En caso de emergencia en el terreno, llama al: <a href="tel:+34623796600">+34 623 796 600</a></p>
+                    </div>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Preguntas frecuentes</h2>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle">&iquest;Elsewhere sigue adelante?</button>
+                        <div class="faq-answer">
+                            <p>S&iacute;. Estamos en el terreno, operativos, y el evento contin&uacute;a seg&uacute;n lo planeado. Una Alerta Roja Plus cambia c&oacute;mo operamos durante la ventana de alerta &mdash; no detiene el evento.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle">&iquest;C&oacute;mo sabr&eacute; si se declara una Alerta Roja Plus?</button>
+                        <div class="faq-answer">
+                            <p>Actualizaremos el cuadro de estado en la parte superior de esta p&aacute;gina y comunicaremos a trav&eacute;s de WhatsApp, Discord, Telegram y en el terreno. Mantened las notificaciones activas y consultad con el l&iacute;der de vuestro barrio o campamento.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle">&iquest;La restricci&oacute;n de 12 a 18 se aplica aunque solo quiera dar un paseo corto?</button>
+                        <div class="faq-answer">
+                            <p>S&iacute;. Durante una Alerta Roja Plus, no se permite ning&uacute;n movimiento &mdash; incluyendo a pie &mdash; entre las 12:00 y las 18:00. Es un requisito legal, no solo una recomendaci&oacute;n.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle">&iquest;Puedo usar mi cocina de gas en mi autocaravana con las ventanas cerradas?</button>
+                        <div class="faq-answer">
+                            <p>No. La prohibici&oacute;n del gas se aplica a todos en el terreno, independientemente de d&oacute;nde o c&oacute;mo cocines.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle">&iquest;Una Alerta Roja Plus afecta tambi&eacute;n a los d&iacute;as de alerta Naranja o Roja?</button>
+                        <div class="faq-answer">
+                            <p>No. Solo una Alerta Roja Plus declarada (publicada en el BOA) activa las restricciones legales enumeradas arriba. En d&iacute;as de alerta Naranja o Roja, las operaciones son normales &mdash; tomad precauciones sensatas pero no hay restricciones obligatorias de movimiento ni cocina.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle">&iquest;Qu&eacute; pasa si necesito salir del terreno urgentemente durante una Alerta Roja Plus?</button>
+                        <div class="faq-answer">
+                            <p>Contacta al equipo del terreno al <a href="tel:+34623796600">+34 623 796 600</a>. Las excepciones para emergencias reales se gestionan caso por caso en coordinaci&oacute;n con las autoridades.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle">&iquest;Qu&eacute; pasa con el autob&uacute;s desde Barcelona?</button>
+                        <div class="faq-answer">
+                            <p>[Por confirmar &mdash; actualizaci&oacute;n pendiente, se confirmar&aacute; antes de la salida del primer autob&uacute;s.]</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="doc-section">
+                    <h2>La perspectiva general</h2>
+                    <p>La regi&oacute;n alrededor de Castej&oacute;n de Monegros se est&aacute; calentando. Condiciones que sol&iacute;an alcanzar su m&aacute;ximo en agosto ahora llegan a finales de junio y julio. Las autoridades locales, la Comarca y las personas que viven y trabajan en este paisaje lidian con esto cada a&ntilde;o. Nos lo tomamos en serio.</p>
+                    <p>Todos los que estuvieron en el terreno este fin de semana siguieron el protocolo. Las autoridades nos visitaron varias veces y encontraron una comunidad que se toma estas cosas en serio. Eso es lo que hace posible que Elsewhere contin&uacute;e.</p>
+                    <p>Mantendremos esta p&aacute;gina actualizada conforme evolucione la situaci&oacute;n. Si tienes preguntas, contacta con el l&iacute;der de tu barrio o campamento, o escr&iacute;benos a <a href="mailto:info@nobodies.team">info@nobodies.team</a>.</p>
+                    <p class="closing">Nos vemos en el polvo. &#x1F3DC;</p>
+                    <p class="closing" style="font-style: normal; margin-top: 0.5rem;">&mdash; Elsewhere 2026</p>
+                </section>
+
+            </div>
+
+            <!-- ==================== FRENCH ==================== -->
+            <div class="lang-content" data-lang="fr">
+
+                <p class="doc-intro">Alertes incendie et ce qu&rsquo;elles signifient pour Elsewhere</p>
+
+                <section class="doc-section">
+                    <p>La Comarca de Los Monegros est l&rsquo;une des r&eacute;gions les plus s&egrave;ches et les plus expos&eacute;es aux incendies en Espagne. Chaque &eacute;t&eacute;, le Gobierno de Arag&oacute;n surveille les conditions de pr&egrave;s et &eacute;met des alertes lorsque le risque d&rsquo;incendie de for&ecirc;t augmente. Cette page explique la signification de ces alertes, ce qui s&rsquo;est pass&eacute; sur le site ce week-end, et ce que vous devez savoir avant d&rsquo;arriver.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Comprendre le syst&egrave;me d&rsquo;alerte</h2>
+                    <p>Le Gobierno de Arag&oacute;n &eacute;met quatre niveaux d&rsquo;alerte incendie :</p>
+                    <ul>
+                        <li>&#x1F7E1; <strong>Jaune</strong> &mdash; Risque mod&eacute;r&eacute;. Pr&eacute;cautions standard.</li>
+                        <li>&#x1F7E0; <strong>Orange</strong> &mdash; Risque significatif. Vigilance accrue requise.</li>
+                        <li>&#x1F534; <strong>Rouge</strong> &mdash; Risque extr&ecirc;me. Conditions de grand danger dans toute la r&eacute;gion.</li>
+                        <li>&#x1F534;&#x2795; <strong>Alerte Rouge Plus</strong> &mdash; D&eacute;signation d&rsquo;urgence exceptionnelle.</li>
+                    </ul>
+                    <p>Les trois premi&egrave;res sont des avertissements m&eacute;t&eacute;orologiques standard. Elles s&rsquo;accompagnent de recommandations. Nous les g&eacute;rons chaque ann&eacute;e.</p>
+                    <p>L&rsquo;Alerte Rouge Plus est diff&eacute;rente. Ce n&rsquo;est pas un simple avertissement m&eacute;t&eacute;o &mdash; c&rsquo;est une d&eacute;claration administrative d&rsquo;urgence publi&eacute;e au BOA. Elle est d&eacute;clench&eacute;e quand une combinaison de conditions cr&eacute;e un risque extr&ecirc;me : temp&eacute;rature sup&eacute;rieure &agrave; 30&deg;C, vent sup&eacute;rieur &agrave; 30 km/h et humidit&eacute; inf&eacute;rieure &agrave; 30 %. Elle s&rsquo;accompagne d&rsquo;interdictions l&eacute;galement contraignantes.</p>
+                    <p>Cette ann&eacute;e, la l&eacute;gislation a &eacute;t&eacute; mise &agrave; jour en mars 2026 (Decreto 22/2026). Nous travaillons avec les autorit&eacute;s locales depuis pour comprendre ce que cela signifie pour Elsewhere.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Ce qui s&rsquo;est pass&eacute; ce week-end</h2>
+                    <p>Le vendredi 26 juin, le Gobierno de Arag&oacute;n a d&eacute;clar&eacute; une Alerte Rouge Plus pour tout l&rsquo;Arag&oacute;n (Orden HAP/925/2026), couvrant les 26, 27 et 28 juin. Plusieurs incendies &eacute;taient actifs dans la r&eacute;gion, dont un proche de nous.</p>
+                    <p>Nous avons activ&eacute; notre protocole d&rsquo;urgence imm&eacute;diatement. Sur le site, nous disposons de :</p>
+                    <ul>
+                        <li>34 000 litres d&rsquo;eau d&eacute;di&eacute;e &agrave; la lutte contre l&rsquo;incendie (r&eacute;partis sur deux v&eacute;hicules)</li>
+                        <li>&Eacute;quipement de tuyaux pr&ecirc;t&eacute; par les municipalit&eacute;s voisines</li>
+                        <li>Extincteurs sur tout le site</li>
+                        <li>Zones de s&eacute;curit&eacute; d&eacute;sign&eacute;es et protocole de conformit&eacute; complet</li>
+                    </ul>
+                    <p>Nous avons &eacute;t&eacute; en coordination &eacute;troite avec la Protecci&oacute;n Civil, la Guardia Civil, la Croix-Rouge, la Comarca et les maires des cinq villes voisines. Ils sont venus nous voir plusieurs fois et ont trouv&eacute; une communaut&eacute; qui prend ces choses au s&eacute;rieux.</p>
+                    <p>L&rsquo;Alerte Rouge Plus a pris fin le dimanche 28 juin. Le lundi 29 juin, la Comarca a formellement d&eacute;sactiv&eacute; le Plan de Protecci&oacute;n Civil. L&rsquo;alerte du 29 juin est Orange &mdash; aucune restriction ne s&rsquo;applique.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Cela pourrait-il se reproduire pendant l&rsquo;&eacute;v&eacute;nement ?</h2>
+                    <p>Possiblement, oui. Les conditions qui d&eacute;clenchent une Alerte Rouge Plus &mdash; chaleur, vent, faible humidit&eacute; &mdash; sont caract&eacute;ristiques de cette r&eacute;gion en juillet. Selon les pr&eacute;visions actuelles, les jours les plus susceptibles de voir un risque &eacute;lev&eacute; sont autour du 5 au 7 juillet. Nous suivons la situation de pr&egrave;s.</p>
+                    <p>Une Alerte Rouge Plus est d&eacute;clar&eacute;e &agrave; court pr&eacute;avis. Quand elle sera d&eacute;clar&eacute;e, nous communiquerons imm&eacute;diatement via :</p>
+                    <ul>
+                        <li>Cette page (statut mis &agrave; jour le jour m&ecirc;me)</li>
+                        <li>Canaux WhatsApp</li>
+                        <li>Discord et Telegram</li>
+                        <li>Annonces sur le site</li>
+                    </ul>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Ce que signifie une Alerte Rouge Plus sur le site</h2>
+                    <p>Si une Alerte Rouge Plus est d&eacute;clar&eacute;e pendant Elsewhere, les r&egrave;gles suivantes s&rsquo;appliquent imm&eacute;diatement :</p>
+
+                    <div class="rules-grid">
+                        <div class="rules-block not-permitted">
+                            <h3>Interdit</h3>
+                            <ul>
+                                <li>Aucun travail ni d&eacute;placement sur ou hors du site entre 12h00 et 18h00</li>
+                                <li>Pas de cuisson au gaz &mdash; nourriture froide uniquement pendant l&rsquo;alerte</li>
+                                <li>Aucune flamme nue en ext&eacute;rieur (bougies, briquets, etc.)</li>
+                                <li>Pas de soudure ni d&rsquo;&eacute;quipement g&eacute;n&eacute;rant des &eacute;tincelles</li>
+                                <li>Pas de recharge de trottinettes, v&eacute;los &eacute;lectriques ou appareils non essentiels</li>
+                                <li>Fumer uniquement dans les zones d&eacute;sign&eacute;es &eacute;quip&eacute;es d&rsquo;extincteurs</li>
+                            </ul>
+                        </div>
+                        <div class="rules-block permitted">
+                            <h3>Autoris&eacute;</h3>
+                            <ul>
+                                <li>Outils &eacute;lectriques</li>
+                                <li>Bouilloires, machines &agrave; caf&eacute; et autres appareils &eacute;lectriques</li>
+                                <li>G&eacute;n&eacute;rateurs (g&eacute;r&eacute;s selon le protocole de s&eacute;curit&eacute; du site)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p>Les v&eacute;hicules arrivant ou partant pendant une Alerte Rouge Plus devront circuler en convois escort&eacute;s. Si l&rsquo;alerte est active quand vous &ecirc;tes en route, contactez-nous avant de partir et nous viendrons vous chercher au pont.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Pour les responsables de barrio et les &eacute;quipes cuisine</h2>
+                    <p>Changer un plan de cuisine &agrave; court pr&eacute;avis est difficile. Nous voulons vous pr&eacute;venir le plus t&ocirc;t possible.</p>
+                    <p><strong>Notre demande :</strong> pr&eacute;parez un plan de repas froids avant d&rsquo;arriver. Salades, plats froids, snacks pr&eacute;par&eacute;s. Pas besoin d&rsquo;abandonner votre menu &mdash; ayez juste un plan B sans gaz.</p>
+                    <p><strong>Concernant l&rsquo;&eacute;lectricit&eacute; :</strong> le r&eacute;seau est con&ccedil;u de mani&egrave;re robuste et peut supporter la charge. Le risque n&rsquo;est pas un pic bref mais une surconsommation soutenue. En pratique, les barrios utilisent entre un quart et la moiti&eacute; de leur allocation maximale.</p>
+                    <p><strong>L&rsquo;essentiel :</strong> restez dans votre allocation et ne changez pas radicalement votre installation de cuisson sans pr&eacute;venir votre responsable &eacute;nergie. Coordonnez avec lui pour &eacute;chelonner la consommation.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Pour les propri&eacute;taires de camping-cars et campeurs libres</h2>
+                    <p>Les restrictions s&rsquo;appliquent &agrave; tous sur le site. Pendant une Alerte Rouge Plus :</p>
+                    <ul>
+                        <li>Pas de cuisson au gaz &agrave; l&rsquo;int&eacute;rieur ou &agrave; l&rsquo;ext&eacute;rieur du v&eacute;hicule</li>
+                        <li>Aucune flamme nue</li>
+                        <li>Aucun d&eacute;placement entre 12h00 et 18h00</li>
+                    </ul>
+                    <p>Pr&eacute;voyez de la nourriture ne n&eacute;cessitant pas de cuisson pour au moins deux jours. Si vous voyagez en van, assurez-vous d&rsquo;arriver et de partir en dehors de la plage 12h00&ndash;18h00.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Mesures de s&eacute;curit&eacute; g&eacute;n&eacute;rales (tous niveaux d&rsquo;alerte)</h2>
+
+                    <h3>Pr&eacute;vention incendie</h3>
+                    <ul>
+                        <li>Pas de br&ucirc;lage de v&eacute;g&eacute;tation</li>
+                        <li>Ne pas jeter de cigarettes ou objets enflamm&eacute;s dehors</li>
+                        <li>&Eacute;viter les machines g&eacute;n&eacute;rant chaleur ou &eacute;tincelles aux heures de pointe (12h00&ndash;18h00)</li>
+                        <li>Garder l&rsquo;&eacute;quipement anti-incendie accessible et en bon &eacute;tat</li>
+                        <li>Si vous voyez de la fum&eacute;e ou du feu, signalez-le imm&eacute;diatement &agrave; l&rsquo;&eacute;quipe sur site</li>
+                    </ul>
+
+                    <h3>Chaleur et soleil</h3>
+                    <ul>
+                        <li>Buvez de l&rsquo;eau r&eacute;guli&egrave;rement &mdash; n&rsquo;attendez pas d&rsquo;avoir soif</li>
+                        <li>&Eacute;vitez l&rsquo;exposition directe au soleil entre 12h00 et 18h00 ; restez &agrave; l&rsquo;ombre</li>
+                        <li>Portez des v&ecirc;tements l&eacute;gers et amples et une protection solaire SPF &eacute;lev&eacute;</li>
+                        <li>&Eacute;vitez les repas copieux et l&rsquo;alcool aux heures les plus chaudes</li>
+                        <li>Prenez soin de ceux qui vous entourent, surtout les premiers jours</li>
+                        <li>Signes de coup de chaleur : crampes, &eacute;puisement, br&ucirc;lures cutan&eacute;es, temp&eacute;rature corporelle tr&egrave;s &eacute;lev&eacute;e, maux de t&ecirc;te, vomissements ou perte de connaissance. Demandez de l&rsquo;aide imm&eacute;diatement.</li>
+                    </ul>
+
+                    <div class="emergency-callout">
+                        <p>En cas d&rsquo;urgence sur le site, appelez : <a href="tel:+34623796600">+34 623 796 600</a></p>
+                    </div>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Questions fr&eacute;quentes</h2>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle">Elsewhere a-t-il toujours lieu ?</button>
+                        <div class="faq-answer">
+                            <p>Oui. Nous sommes sur le site, op&eacute;rationnels, et l&rsquo;&eacute;v&eacute;nement se d&eacute;roule comme pr&eacute;vu. Une Alerte Rouge Plus modifie notre mode de fonctionnement pendant la fen&ecirc;tre d&rsquo;alerte &mdash; elle n&rsquo;arr&ecirc;te pas l&rsquo;&eacute;v&eacute;nement.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle">Comment saurai-je si une Alerte Rouge Plus est d&eacute;clar&eacute;e ?</button>
+                        <div class="faq-answer">
+                            <p>Nous mettrons &agrave; jour le statut en haut de cette page et communiquerons via WhatsApp, Discord, Telegram et sur le site.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle">La restriction 12h&ndash;18h s&rsquo;applique-t-elle m&ecirc;me pour une courte promenade ?</button>
+                        <div class="faq-answer">
+                            <p>Oui. Pendant une Alerte Rouge Plus, aucun d&eacute;placement &mdash; y compris &agrave; pied &mdash; entre 12h00 et 18h00. C&rsquo;est une obligation l&eacute;gale.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle">Puis-je utiliser ma cuisini&egrave;re &agrave; gaz dans mon camping-car fen&ecirc;tres ferm&eacute;es ?</button>
+                        <div class="faq-answer">
+                            <p>Non. L&rsquo;interdiction du gaz s&rsquo;applique &agrave; tous sur le site, quel que soit l&rsquo;endroit ou la mani&egrave;re dont vous cuisinez.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle">Que faire si je dois quitter le site en urgence ?</button>
+                        <div class="faq-answer">
+                            <p>Contactez l&rsquo;&eacute;quipe sur site au <a href="tel:+34623796600">+34 623 796 600</a>. Les exceptions pour urgences r&eacute;elles sont g&eacute;r&eacute;es au cas par cas.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="doc-section">
+                    <h2>La perspective g&eacute;n&eacute;rale</h2>
+                    <p>La r&eacute;gion autour de Castej&oacute;n de Monegros se r&eacute;chauffe. Les conditions qui atteignaient habituellement leur pic en ao&ucirc;t arrivent d&eacute;sormais fin juin et en juillet. Les autorit&eacute;s locales et les habitants g&egrave;rent cela chaque ann&eacute;e. Nous prenons cela au s&eacute;rieux.</p>
+                    <p>Nous maintiendrons cette page &agrave; jour. Pour toute question, contactez le responsable de votre barrio ou &eacute;crivez-nous &agrave; <a href="mailto:info@nobodies.team">info@nobodies.team</a>.</p>
+                    <p class="closing">Rendez-vous dans la poussi&egrave;re. &#x1F3DC;</p>
+                    <p class="closing" style="font-style: normal; margin-top: 0.5rem;">&mdash; Elsewhere 2026</p>
+                </section>
+
+            </div>
+
+            <!-- ==================== ITALIAN ==================== -->
+            <div class="lang-content" data-lang="it">
+
+                <p class="doc-intro">Allerte incendio e cosa significano per Elsewhere</p>
+
+                <section class="doc-section">
+                    <p>La Comarca de Los Monegros &egrave; una delle regioni pi&ugrave; secche e a maggior rischio di incendio in Spagna. Ogni estate, il Gobierno de Arag&oacute;n monitora le condizioni e emette allerte quando il rischio di incendi boschivi aumenta. Questa pagina spiega cosa significano queste allerte, cosa &egrave; successo sul sito questo fine settimana e cosa devi sapere prima di arrivare.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Capire il sistema di allerta</h2>
+                    <p>Il Gobierno de Arag&oacute;n emette quattro livelli di allerta incendio:</p>
+                    <ul>
+                        <li>&#x1F7E1; <strong>Giallo</strong> &mdash; Rischio moderato. Precauzioni standard.</li>
+                        <li>&#x1F7E0; <strong>Arancione</strong> &mdash; Rischio significativo. Maggiore attenzione richiesta.</li>
+                        <li>&#x1F534; <strong>Rosso</strong> &mdash; Rischio estremo. Condizioni di alto pericolo.</li>
+                        <li>&#x1F534;&#x2795; <strong>Allerta Rossa Plus</strong> &mdash; Designazione di emergenza eccezionale.</li>
+                    </ul>
+                    <p>Le prime tre sono avvisi meteorologici standard. L&rsquo;Allerta Rossa Plus &egrave; diversa: &egrave; una dichiarazione amministrativa d&rsquo;emergenza pubblicata nel BOA, attivata quando temperatura superiore a 30&deg;C, vento superiore a 30 km/h e umidit&agrave; inferiore al 30% creano un rischio estremo. Comporta divieti legalmente vincolanti.</p>
+                    <p>Quest&rsquo;anno la legislazione &egrave; stata aggiornata a marzo 2026 (Decreto 22/2026). Lavoriamo con le autorit&agrave; locali per capire cosa significa per Elsewhere.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Cosa &egrave; successo questo fine settimana</h2>
+                    <p>Venerd&igrave; 26 giugno, il Gobierno de Arag&oacute;n ha dichiarato un&rsquo;Allerta Rossa Plus per tutto l&rsquo;Aragona, coprendo il 26, 27 e 28 giugno. C&rsquo;erano diversi incendi attivi nella regione, incluso uno vicino a noi.</p>
+                    <p>Abbiamo attivato immediatamente il protocollo di emergenza. Sul sito abbiamo:</p>
+                    <ul>
+                        <li>34.000 litri di acqua dedicata antincendio (su due veicoli)</li>
+                        <li>Attrezzature per tubi dell&rsquo;acqua prestate dai comuni vicini</li>
+                        <li>Estintori in tutto il sito</li>
+                        <li>Aree sicure designate e protocollo di conformit&agrave; completo</li>
+                    </ul>
+                    <p>Siamo stati in stretto coordinamento con Protecci&oacute;n Civil, Guardia Civil, Croce Rossa, la Comarca e i sindaci dei cinque paesi vicini.</p>
+                    <p>L&rsquo;Allerta Rossa Plus &egrave; terminata domenica 28 giugno. L&rsquo;allerta per il 29 giugno &egrave; Arancione &mdash; nessuna restrizione.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Potrebbe ripetersi durante l&rsquo;evento?</h2>
+                    <p>Possibilmente s&igrave;. Le condizioni che attivano un&rsquo;Allerta Rossa Plus sono caratteristiche di questa regione a luglio. Secondo le previsioni attuali, i giorni pi&ugrave; probabili sono intorno al 5&ndash;7 luglio. Monitoreremo la situazione e comunicheremo immediatamente tramite:</p>
+                    <ul>
+                        <li>Questa pagina (stato aggiornato lo stesso giorno)</li>
+                        <li>Canali WhatsApp</li>
+                        <li>Discord e Telegram</li>
+                        <li>Annunci sul sito</li>
+                    </ul>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Cosa significa un&rsquo;Allerta Rossa Plus sul sito</h2>
+
+                    <div class="rules-grid">
+                        <div class="rules-block not-permitted">
+                            <h3>Non consentito</h3>
+                            <ul>
+                                <li>Nessun lavoro n&eacute; spostamento dentro o fuori dal sito tra le 12:00 e le 18:00</li>
+                                <li>Niente cottura a gas &mdash; solo cibo freddo durante l&rsquo;allerta</li>
+                                <li>Nessuna fiamma libera all&rsquo;aperto (candele, accendini, ecc.)</li>
+                                <li>Niente saldature o attrezzature che producono scintille</li>
+                                <li>Niente ricarica di monopattini elettrici, e-bike o dispositivi non essenziali</li>
+                                <li>Si pu&ograve; fumare solo nelle aree designate dotate di estintori</li>
+                            </ul>
+                        </div>
+                        <div class="rules-block permitted">
+                            <h3>Consentito</h3>
+                            <ul>
+                                <li>Attrezzi elettrici</li>
+                                <li>Bollitori, macchine del caff&egrave; e altri elettrodomestici</li>
+                                <li>Generatori (gestiti secondo il protocollo di sicurezza del sito)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p>I veicoli in arrivo o in partenza dovranno viaggiare in convogli scortati. Se l&rsquo;allerta &egrave; attiva mentre sei in viaggio, contattaci prima di partire.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Per responsabili di barrio e team cucina</h2>
+                    <p><strong>La nostra richiesta:</strong> preparate un piano di cibo freddo prima di arrivare. Insalate, piatti freddi, snack preparati. Non serve eliminare il vostro menu &mdash; basta avere un piano B senza gas.</p>
+                    <p><strong>Sull&rsquo;elettricit&agrave;:</strong> la rete &egrave; progettata in modo robusto e pu&ograve; gestire il carico. Restate nella vostra allocazione di potenza e coordinate con il vostro responsabile energia prima di cambiare configurazione di cottura.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Per proprietari di camper e campeggiatori liberi</h2>
+                    <ul>
+                        <li>Niente cottura a gas dentro o fuori dal veicolo</li>
+                        <li>Nessuna fiamma libera</li>
+                        <li>Nessuno spostamento tra le 12:00 e le 18:00</li>
+                    </ul>
+                    <p>Portate cibo che non richiede cottura per almeno un paio di giorni.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Misure di sicurezza generali (tutti i livelli di allerta)</h2>
+
+                    <h3>Prevenzione incendi</h3>
+                    <ul>
+                        <li>Niente bruciature di vegetazione</li>
+                        <li>Non gettare sigarette o oggetti accesi all&rsquo;aperto</li>
+                        <li>Evitare macchinari che generano calore o scintille nelle ore di punta (12:00&ndash;18:00)</li>
+                        <li>Mantenere l&rsquo;attrezzatura antincendio accessibile e in buone condizioni</li>
+                        <li>Se vedi fumo o fuoco, segnalalo immediatamente al team sul sito</li>
+                    </ul>
+
+                    <h3>Calore e sole</h3>
+                    <ul>
+                        <li>Bevi acqua regolarmente &mdash; non aspettare di avere sete</li>
+                        <li>Evita l&rsquo;esposizione diretta al sole nelle ore di punta; resta all&rsquo;ombra</li>
+                        <li>Indossa abiti leggeri e ampi e usa protezione solare ad alto SPF</li>
+                        <li>Evita pasti pesanti e alcol nelle ore pi&ugrave; calde</li>
+                        <li>Controlla chi ti sta intorno, specialmente nei primi giorni</li>
+                        <li>Segni di colpo di calore: crampi, spossatezza, ustioni cutanee, temperatura corporea molto alta, mal di testa, vomito o perdita di coscienza. Chiedi aiuto immediatamente.</li>
+                    </ul>
+
+                    <div class="emergency-callout">
+                        <p>In caso di emergenza sul sito, chiama: <a href="tel:+34623796600">+34 623 796 600</a></p>
+                    </div>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Il quadro generale</h2>
+                    <p>La regione intorno a Castej&oacute;n de Monegros si sta riscaldando. Le condizioni che raggiungevano il picco ad agosto ora arrivano a fine giugno e luglio. Lo prendiamo sul serio.</p>
+                    <p>Per domande, contatta il responsabile del tuo barrio o scrivici a <a href="mailto:info@nobodies.team">info@nobodies.team</a>.</p>
+                    <p class="closing">Ci vediamo nella polvere. &#x1F3DC;</p>
+                    <p class="closing" style="font-style: normal; margin-top: 0.5rem;">&mdash; Elsewhere 2026</p>
+                </section>
+
+            </div>
+
+            <!-- ==================== GERMAN ==================== -->
+            <div class="lang-content" data-lang="de">
+
+                <p class="doc-intro">Waldbrand-Warnungen und was sie f&uuml;r Elsewhere bedeuten</p>
+
+                <section class="doc-section">
+                    <p>Die Comarca de Los Monegros ist eine der trockensten und waldbrandgef&auml;hrdetsten Regionen Spaniens. Jeden Sommer &uuml;berwacht die Regierung von Arag&oacute;n die Bedingungen und gibt Warnungen heraus, wenn das Waldbrandrisiko steigt. Diese Seite erkl&auml;rt, was diese Warnungen bedeuten, was am Wochenende vor Ort passiert ist und was du wissen musst, bevor du ankommst.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Das Warnsystem verstehen</h2>
+                    <p>Die Regierung von Arag&oacute;n gibt vier Warnstufen heraus:</p>
+                    <ul>
+                        <li>&#x1F7E1; <strong>Gelb</strong> &mdash; M&auml;&szlig;iges Risiko. Standard-Vorsichtsma&szlig;nahmen.</li>
+                        <li>&#x1F7E0; <strong>Orange</strong> &mdash; Erhebliches Risiko. Erh&ouml;hte Aufmerksamkeit erforderlich.</li>
+                        <li>&#x1F534; <strong>Rot</strong> &mdash; Extremes Risiko. Hochgef&auml;hrliche Bedingungen.</li>
+                        <li>&#x1F534;&#x2795; <strong>Rot Plus</strong> &mdash; Au&szlig;ergew&ouml;hnliche Notfallbezeichnung.</li>
+                    </ul>
+                    <p>Die ersten drei sind Standard-Wetterwarnungen. Rot Plus ist anders: Es ist eine administrative Notfallerkl&auml;rung, die im BOA ver&ouml;ffentlicht wird, ausgel&ouml;st bei Temperatur &uuml;ber 30&deg;C, Wind &uuml;ber 30 km/h und Luftfeuchtigkeit unter 30%. Sie bringt rechtsverbindliche Verbote mit sich.</p>
+                    <p>Dieses Jahr wurde die Gesetzgebung im M&auml;rz 2026 aktualisiert (Decreto 22/2026). Wir arbeiten seitdem mit den lokalen Beh&ouml;rden zusammen.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Was am Wochenende passiert ist</h2>
+                    <p>Am Freitag, den 26. Juni, erkl&auml;rte die Regierung von Arag&oacute;n eine Rot-Plus-Warnung f&uuml;r ganz Arag&oacute;n (Orden HAP/925/2026), die den 26., 27. und 28. Juni abdeckte. Es gab mehrere aktive Br&auml;nde in der Region, darunter einer in unserer N&auml;he.</p>
+                    <p>Wir haben sofort unser Notfallprotokoll aktiviert. Vor Ort haben wir:</p>
+                    <ul>
+                        <li>34.000 Liter Feuerbek&auml;mpfungswasser (auf zwei Fahrzeuge verteilt)</li>
+                        <li>Schlauchausr&uuml;stung, geliehen von umliegenden Gemeinden</li>
+                        <li>Feuerl&ouml;scher auf dem gesamten Gel&auml;nde</li>
+                        <li>Ausgewiesene sichere Bereiche und vollst&auml;ndiges Compliance-Protokoll</li>
+                    </ul>
+                    <p>Wir waren in enger Abstimmung mit Protecci&oacute;n Civil, Guardia Civil, Rotem Kreuz, der Comarca und den B&uuml;rgermeistern der f&uuml;nf umliegenden St&auml;dte.</p>
+                    <p>Die Rot-Plus-Warnung endete am Sonntag, den 28. Juni. Die Warnung f&uuml;r den 29. Juni ist Orange &mdash; keine Einschr&auml;nkungen.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>K&ouml;nnte es w&auml;hrend des Events wieder passieren?</h2>
+                    <p>M&ouml;glicherweise ja. Die Bedingungen, die eine Rot-Plus-Warnung ausl&ouml;sen, sind typisch f&uuml;r diese Region im Juli. Die wahrscheinlichsten Tage sind um den 5.&ndash;7. Juli. Wir beobachten die Lage genau und kommunizieren sofort &uuml;ber:</p>
+                    <ul>
+                        <li>Diese Seite (Status wird am selben Tag aktualisiert)</li>
+                        <li>WhatsApp-Kan&auml;le</li>
+                        <li>Discord und Telegram</li>
+                        <li>Durchsagen vor Ort</li>
+                    </ul>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Was eine Rot-Plus-Warnung vor Ort bedeutet</h2>
+
+                    <div class="rules-grid">
+                        <div class="rules-block not-permitted">
+                            <h3>Nicht erlaubt</h3>
+                            <ul>
+                                <li>Keine Arbeit und keine Bewegung auf oder vom Gel&auml;nde zwischen 12:00 und 18:00</li>
+                                <li>Kein Kochen mit Gas &mdash; nur kaltes Essen w&auml;hrend der Warnung</li>
+                                <li>Keine offene Flamme im Freien (Kerzen, Feuerzeuge usw.)</li>
+                                <li>Kein Schwei&szlig;en oder funkenerzeugende Ger&auml;te</li>
+                                <li>Kein Laden von E-Scootern, E-Bikes oder nicht wesentlichen Ger&auml;ten</li>
+                                <li>Rauchen nur in ausgewiesenen Bereichen mit Feuerl&ouml;schern</li>
+                            </ul>
+                        </div>
+                        <div class="rules-block permitted">
+                            <h3>Erlaubt</h3>
+                            <ul>
+                                <li>Elektrowerkzeuge</li>
+                                <li>Wasserkocher, Kaffeemaschinen und andere Elektroger&auml;te</li>
+                                <li>Generatoren (gem&auml;&szlig; dem Sicherheitsprotokoll vor Ort)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p>Fahrzeuge, die w&auml;hrend einer Rot-Plus-Warnung ankommen oder abreisen, m&uuml;ssen in begleiteten Konvois fahren. Kontaktiere uns, bevor du losfährst, und wir treffen dich an der Br&uuml;cke.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>F&uuml;r Barrio-Leads und K&uuml;chenteams</h2>
+                    <p><strong>Unsere Bitte:</strong> Bereitet einen Kalt-Essen-Plan vor, bevor ihr ankommt. Salate, kalte Gerichte, vorbereitete Snacks. Ihr m&uuml;sst euer Men&uuml; nicht &auml;ndern &mdash; nur einen Plan B ohne Gas haben.</p>
+                    <p><strong>Zum Strom:</strong> Das Netz ist robust ausgelegt und kann die Last tragen. Bleibt innerhalb eurer zugeteilten Leistung und stimmt euch mit eurem Energie-Verantwortlichen ab, bevor ihr eure Kocheinrichtung wesentlich &auml;ndert.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>F&uuml;r Wohnmobilbesitzer und freie Camper</h2>
+                    <ul>
+                        <li>Kein Kochen mit Gas innerhalb oder au&szlig;erhalb des Fahrzeugs</li>
+                        <li>Keine offene Flamme</li>
+                        <li>Keine Bewegung zwischen 12:00 und 18:00</li>
+                    </ul>
+                    <p>Bringt Essen mit, das keine Zubereitung erfordert, f&uuml;r mindestens zwei Tage.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Allgemeine Sicherheitsma&szlig;nahmen (alle Warnstufen)</h2>
+
+                    <h3>Brandschutz</h3>
+                    <ul>
+                        <li>Kein Verbrennen von Vegetation</li>
+                        <li>Keine Zigaretten oder brennende Gegenst&auml;nde im Freien wegwerfen</li>
+                        <li>W&auml;rme- oder funkenerzeugende Maschinen in Spitzenzeiten (12:00&ndash;18:00) vermeiden</li>
+                        <li>Feuerbek&auml;mpfungsausr&uuml;stung zug&auml;nglich und funktionsbereit halten</li>
+                        <li>Rauch oder Feuer sofort dem Team vor Ort melden</li>
+                    </ul>
+
+                    <h3>Hitze und Sonne</h3>
+                    <ul>
+                        <li>Regelm&auml;&szlig;ig Wasser trinken &mdash; nicht warten, bis du Durst hast</li>
+                        <li>Direkte Sonneneinstrahlung zwischen 12:00 und 18:00 vermeiden; Schatten nutzen</li>
+                        <li>Leichte, lockere Kleidung und hohen Sonnenschutzfaktor verwenden</li>
+                        <li>Schwere Mahlzeiten und Alkohol in den hei&szlig;esten Stunden vermeiden</li>
+                        <li>Auf die Menschen um dich herum achten, besonders in den ersten Tagen</li>
+                        <li>Anzeichen von Hitzschlag: Kr&auml;mpfe, Ersch&ouml;pfung, Hautverbrennungen, sehr hohe K&ouml;rpertemperatur, Kopfschmerzen, Erbrechen oder Bewusstlosigkeit. Sofort Hilfe suchen.</li>
+                    </ul>
+
+                    <div class="emergency-callout">
+                        <p>Im Notfall vor Ort anrufen: <a href="tel:+34623796600">+34 623 796 600</a></p>
+                    </div>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Das gro&szlig;e Bild</h2>
+                    <p>Die Region um Castej&oacute;n de Monegros wird hei&szlig;er. Bedingungen, die fr&uuml;her ihren H&ouml;hepunkt im August erreichten, kommen jetzt Ende Juni und Juli. Wir nehmen das ernst.</p>
+                    <p>Bei Fragen wende dich an deinen Barrio-Lead oder schreib uns an <a href="mailto:info@nobodies.team">info@nobodies.team</a>.</p>
+                    <p class="closing">Wir sehen uns im Staub. &#x1F3DC;</p>
+                    <p class="closing" style="font-style: normal; margin-top: 0.5rem;">&mdash; Elsewhere 2026</p>
+                </section>
+
+            </div>
+
+            <!-- ==================== CATALAN ==================== -->
+            <div class="lang-content" data-lang="ca">
+
+                <p class="doc-intro">Alertes d&rsquo;incendis forestals i qu&egrave; signifiquen per a Elsewhere</p>
+
+                <section class="doc-section">
+                    <p>La Comarca de Los Monegros &eacute;s una de les regions m&eacute;s seques i amb m&eacute;s risc d&rsquo;incendi d&rsquo;Espanya. Cada estiu, el Gobierno de Arag&oacute;n vigila les condicions de prop i emet alertes quan augmenta el risc d&rsquo;incendi forestal. Aquesta p&agrave;gina explica qu&egrave; signifiquen aquestes alertes, qu&egrave; va passar al terreny aquest cap de setmana i qu&egrave; necessites saber abans d&rsquo;arribar.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Entendre el sistema d&rsquo;alertes</h2>
+                    <p>El Gobierno de Arag&oacute;n emet quatre nivells d&rsquo;alerta per incendi forestal:</p>
+                    <ul>
+                        <li>&#x1F7E1; <strong>Groga</strong> &mdash; Risc moderat. Precaucions est&agrave;ndard.</li>
+                        <li>&#x1F7E0; <strong>Taronja</strong> &mdash; Risc significatiu. Cal m&eacute;s atenci&oacute;.</li>
+                        <li>&#x1F534; <strong>Vermella</strong> &mdash; Risc extrem. Condicions d&rsquo;alt perill a tota la regi&oacute;.</li>
+                        <li>&#x1F534;&#x2795; <strong>Alerta Vermella Plus</strong> &mdash; Designaci&oacute; d&rsquo;emerg&egrave;ncia excepcional.</li>
+                    </ul>
+                    <p>Les tres primeres s&oacute;n avisos meteorol&ograve;gics est&agrave;ndard. L&rsquo;Alerta Vermella Plus &eacute;s diferent: &eacute;s una declaraci&oacute; administrativa d&rsquo;emerg&egrave;ncia publicada al BOA, activada quan temperatura superior a 30&deg;C, vent superior a 30 km/h i humitat inferior al 30% creen un risc extrem. Comporta prohibicions legalment vinculants.</p>
+                    <p>Enguany, la legislaci&oacute; es va actualitzar el mar&ccedil; de 2026 (Decreto 22/2026). Treballem amb les autoritats locals des de llavors.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Qu&egrave; va passar aquest cap de setmana</h2>
+                    <p>El divendres 26 de juny, el Gobierno de Arag&oacute;n va declarar una Alerta Vermella Plus per a tot Arag&oacute; (Orden HAP/925/2026), cobrint els dies 26, 27 i 28 de juny. Hi havia diversos incendis actius a la regi&oacute;, incl&ograve;s un a prop nostre.</p>
+                    <p>Vam activar el protocol d&rsquo;emerg&egrave;ncia immediatament. Al terreny tenim:</p>
+                    <ul>
+                        <li>34.000 litres d&rsquo;aigua dedicada a la lluita contra incendis (repartits en dos vehicles)</li>
+                        <li>Equipament de mànegues prestat per municipis propers</li>
+                        <li>Extintors per tot el terreny</li>
+                        <li>&Agrave;rees segures designades i protocol de compliment complet</li>
+                    </ul>
+                    <p>Hem estat en estreta coordinaci&oacute; amb Protecci&oacute; Civil, Gu&agrave;rdia Civil, Creu Roja, la Comarca i els alcaldes dels cinc pobles propers.</p>
+                    <p>L&rsquo;Alerta Vermella Plus va acabar el diumenge 28 de juny. L&rsquo;alerta per al 29 de juny &eacute;s Taronja &mdash; no s&rsquo;apliquen restriccions.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Podria tornar a passar durant l&rsquo;event?</h2>
+                    <p>Possiblement, s&iacute;. Les condicions que desencadenen una Alerta Vermella Plus s&oacute;n caracter&iacute;stiques d&rsquo;aquesta regi&oacute; al juliol. Segons les previsions actuals, els dies amb m&eacute;s probabilitat s&oacute;n al voltant del 5 al 7 de juliol. Comunicarem immediatament a trav&eacute;s de:</p>
+                    <ul>
+                        <li>Aquesta p&agrave;gina (estat actualitzat el mateix dia)</li>
+                        <li>Canals de WhatsApp</li>
+                        <li>Discord i Telegram</li>
+                        <li>Anuncis al terreny</li>
+                    </ul>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Qu&egrave; significa una Alerta Vermella Plus al terreny</h2>
+
+                    <div class="rules-grid">
+                        <div class="rules-block not-permitted">
+                            <h3>No perm&egrave;s</h3>
+                            <ul>
+                                <li>No treballar ni despla&ccedil;ar-se dins o fora del terreny entre les 12:00 i les 18:00</li>
+                                <li>No cuinar amb gas &mdash; nom&eacute;s menjar fred durant l&rsquo;alerta</li>
+                                <li>Cap flama oberta a l&rsquo;exterior (espelmes, encenedors, etc.)</li>
+                                <li>No soldar ni usar equips que generin espurnes</li>
+                                <li>No carregar patinets el&egrave;ctrics, e-bikes ni dispositius no essencials</li>
+                                <li>Fumar nom&eacute;s a les &agrave;rees designades equipades amb extintors</li>
+                            </ul>
+                        </div>
+                        <div class="rules-block permitted">
+                            <h3>Perm&egrave;s</h3>
+                            <ul>
+                                <li>Eines el&egrave;ctriques</li>
+                                <li>Bullidors, cafeteres i altres electrodom&egrave;stics</li>
+                                <li>Generadors (gestionats segons el protocol de seguretat del terreny)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p>Els vehicles que arribin o surtin durant una Alerta Vermella Plus hauran de circular en combois escortats. Si l&rsquo;alerta &eacute;s activa quan ets de cam&iacute;, contacta&rsquo;ns abans de sortir i et rebrem al pont.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Per a l&iacute;ders de barri i equips de cuina</h2>
+                    <p><strong>La nostra petici&oacute;:</strong> tingueu un pla de menjar fred abans d&rsquo;arribar. Amanides, plats freds, snacks preparats. No cal eliminar el vostre men&uacute; &mdash; nom&eacute;s tenir un pla B sense gas.</p>
+                    <p><strong>Sobre l&rsquo;electricitat:</strong> la xarxa est&agrave; dissenyada de forma robusta i pot suportar la c&agrave;rrega. Resteu dins la vostra assignaci&oacute; de pot&egrave;ncia i coordineu amb el vostre responsable d&rsquo;energia abans de canviar la configuraci&oacute; de cuina.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Per a propietaris d&rsquo;autocaravanes i campistes lliures</h2>
+                    <ul>
+                        <li>No cuinar amb gas dins ni fora del vehicle</li>
+                        <li>Cap flama oberta</li>
+                        <li>Cap despla&ccedil;ament entre les 12:00 i les 18:00</li>
+                    </ul>
+                    <p>Porteu menjar que no requereixi cocci&oacute; per almenys un parell de dies.</p>
+                </section>
+
+                <section class="doc-section">
+                    <h2>Mesures generals de seguretat (tots els nivells d&rsquo;alerta)</h2>
+
+                    <h3>Prevenci&oacute; d&rsquo;incendis</h3>
+                    <ul>
+                        <li>No cremar vegetaci&oacute;</li>
+                        <li>No llen&ccedil;ar cigarretes ni objectes encesos a l&rsquo;aire lliure</li>
+                        <li>Evitar maquin&agrave;ria que generi calor o espurnes en hores punta (12:00&ndash;18:00)</li>
+                        <li>Mantenir l&rsquo;equip contra incendis accessible i en bon estat</li>
+                        <li>Si veus fum o foc, informa&rsquo;n immediatament l&rsquo;equip del terreny</li>
+                    </ul>
+
+                    <h3>Calor i sol</h3>
+                    <ul>
+                        <li>Beu aigua regularment &mdash; no esperis a tenir set</li>
+                        <li>Evita l&rsquo;exposici&oacute; directa al sol entre les 12:00 i les 18:00; busca l&rsquo;ombra</li>
+                        <li>Porta roba lleugera i folgada i protecci&oacute; solar d&rsquo;alt SPF</li>
+                        <li>Evita &agrave;pats copiosos i alcohol a les hores m&eacute;s caloroses</li>
+                        <li>Mira pels qui t&rsquo;envolten, especialment els primers dies</li>
+                        <li>Signes de cop de calor: rampes, esgotament, cremades cut&agrave;nies, temperatura corporal molt alta, mal de cap, v&ograve;mits o p&egrave;rdua de consci&egrave;ncia. Demana ajuda immediatament.</li>
+                    </ul>
+
+                    <div class="emergency-callout">
+                        <p>En cas d&rsquo;emerg&egrave;ncia al terreny, truca al: <a href="tel:+34623796600">+34 623 796 600</a></p>
+                    </div>
+                </section>
+
+                <section class="doc-section">
+                    <h2>La perspectiva general</h2>
+                    <p>La regi&oacute; al voltant de Castej&oacute;n de Monegros s&rsquo;est&agrave; escalfant. Condicions que solien arribar a l&rsquo;agost ara apareixen a finals de juny i juliol. Ens ho prenem seriosament.</p>
+                    <p>Per a preguntes, contacta amb el responsable del teu barri o escriu-nos a <a href="mailto:info@nobodies.team">info@nobodies.team</a>.</p>
+                    <p class="closing">Ens veiem a la pols. &#x1F3DC;</p>
+                    <p class="closing" style="font-style: normal; margin-top: 0.5rem;">&mdash; Elsewhere 2026</p>
+                </section>
+
+            </div>
+
+            </div>
         </div>
     </main>
 
     <script>
+        // Language toggle
+        document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var lang = this.dataset.lang;
+                document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+                this.classList.add('active');
+                document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+                var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+                if (target) target.classList.add('active');
+            });
+        });
+
+        // FAQ toggles
         document.querySelectorAll('.faq-toggle').forEach(function(btn) {
             btn.addEventListener('click', function() {
                 var item = this.parentElement;
