@@ -227,7 +227,7 @@
             <!-- ==================== ENGLISH ==================== -->
             <div class="lang-content active" data-lang="en">
 
-                <p class="doc-intro">Wildfire alerts and what they mean for Elsewhere</p>
+                <h2 style="text-align:center;margin-bottom:1.5rem;">Wildfire alerts and what they mean for Elsewhere</h2>
 
                 <section class="doc-section">
                     <p>The Comarca de Los Monegros is one of the driest, most fire-prone regions in Spain. Every summer, the Gobierno de Arag&oacute;n monitors conditions closely and issues alerts when wildfire risk rises. This page explains what those alerts mean, what happened on site this weekend, and what you need to know before you arrive.</p>
@@ -417,7 +417,7 @@
             <!-- ==================== SPANISH ==================== -->
             <div class="lang-content" data-lang="es">
 
-                <p class="doc-intro">Alertas de incendios forestales y qu&eacute; significan para Elsewhere</p>
+                <h2 style="text-align:center;margin-bottom:1.5rem;">Alertas de incendios forestales y qu&eacute; significan para Elsewhere</h2>
 
                 <section class="doc-section">
                     <p>La Comarca de Los Monegros es una de las regiones m&aacute;s secas y con mayor riesgo de incendio de Espa&ntilde;a. Cada verano, el Gobierno de Arag&oacute;n vigila las condiciones de cerca y emite alertas cuando aumenta el riesgo de incendio forestal. Esta p&aacute;gina explica qu&eacute; significan esas alertas, qu&eacute; pas&oacute; en el terreno este fin de semana y lo que necesitas saber antes de llegar.</p>
@@ -607,7 +607,7 @@
             <!-- ==================== FRENCH ==================== -->
             <div class="lang-content" data-lang="fr">
 
-                <p class="doc-intro">Alertes incendie et ce qu&rsquo;elles signifient pour Elsewhere</p>
+                <h2 style="text-align:center;margin-bottom:1.5rem;">Alertes incendie et ce qu&rsquo;elles signifient pour Elsewhere</h2>
 
                 <section class="doc-section">
                     <p>La Comarca de Los Monegros est l&rsquo;une des r&eacute;gions les plus s&egrave;ches et les plus expos&eacute;es aux incendies en Espagne. Chaque &eacute;t&eacute;, le Gobierno de Arag&oacute;n surveille les conditions de pr&egrave;s et &eacute;met des alertes lorsque le risque d&rsquo;incendie de for&ecirc;t augmente. Cette page explique la signification de ces alertes, ce qui s&rsquo;est pass&eacute; sur le site ce week-end, et ce que vous devez savoir avant d&rsquo;arriver.</p>
@@ -781,7 +781,7 @@
             <!-- ==================== ITALIAN ==================== -->
             <div class="lang-content" data-lang="it">
 
-                <p class="doc-intro">Allerte incendio e cosa significano per Elsewhere</p>
+                <h2 style="text-align:center;margin-bottom:1.5rem;">Allerte incendio e cosa significano per Elsewhere</h2>
 
                 <section class="doc-section">
                     <p>La Comarca de Los Monegros &egrave; una delle regioni pi&ugrave; secche e a maggior rischio di incendio in Spagna. Ogni estate, il Gobierno de Arag&oacute;n monitora le condizioni e emette allerte quando il rischio di incendi boschivi aumenta. Questa pagina spiega cosa significano queste allerte, cosa &egrave; successo sul sito questo fine settimana e cosa devi sapere prima di arrivare.</p>
@@ -911,7 +911,7 @@
             <!-- ==================== GERMAN ==================== -->
             <div class="lang-content" data-lang="de">
 
-                <p class="doc-intro">Waldbrand-Warnungen und was sie f&uuml;r Elsewhere bedeuten</p>
+                <h2 style="text-align:center;margin-bottom:1.5rem;">Waldbrand-Warnungen und was sie f&uuml;r Elsewhere bedeuten</h2>
 
                 <section class="doc-section">
                     <p>Die Comarca de Los Monegros ist eine der trockensten und waldbrandgef&auml;hrdetsten Regionen Spaniens. Jeden Sommer &uuml;berwacht die Regierung von Arag&oacute;n die Bedingungen und gibt Warnungen heraus, wenn das Waldbrandrisiko steigt. Diese Seite erkl&auml;rt, was diese Warnungen bedeuten, was am Wochenende vor Ort passiert ist und was du wissen musst, bevor du ankommst.</p>
@@ -1041,7 +1041,7 @@
             <!-- ==================== CATALAN ==================== -->
             <div class="lang-content" data-lang="ca">
 
-                <p class="doc-intro">Alertes d&rsquo;incendis forestals i qu&egrave; signifiquen per a Elsewhere</p>
+                <h2 style="text-align:center;margin-bottom:1.5rem;">Alertes d&rsquo;incendis forestals i qu&egrave; signifiquen per a Elsewhere</h2>
 
                 <section class="doc-section">
                     <p>La Comarca de Los Monegros &eacute;s una de les regions m&eacute;s seques i amb m&eacute;s risc d&rsquo;incendi d&rsquo;Espanya. Cada estiu, el Gobierno de Arag&oacute;n vigila les condicions de prop i emet alertes quan augmenta el risc d&rsquo;incendi forestal. Aquesta p&agrave;gina explica qu&egrave; signifiquen aquestes alertes, qu&egrave; va passar al terreny aquest cap de setmana i qu&egrave; necessites saber abans d&rsquo;arribar.</p>
@@ -1198,42 +1198,56 @@
         // Translations for tracker UI
         var T = {
           en: {
-            levelLabel:{amarillo:'Amarillo',naranja:'Naranja',roja:'Roja',rojaplus:'Roja Plus'},
+            levelLabel:{amarillo:'Yellow',naranja:'Orange',roja:'Red',rojaplus:'Red Plus'},
             dow:{Mon:'Mon',Tue:'Tue',Wed:'Wed',Thu:'Thu',Fri:'Fri',Sat:'Sat',Sun:'Sun'},
             fire:'Fire alert', heat:'Heat / storms', restrictions:'Restrictions',
-            active:'Active \u2014 Roja Plus in force', none:'None', tomorrow:'Tomorrow forecast'
+            active:'Active \u2014 Red Plus in force', none:'None', tomorrow:'Tomorrow forecast',
+            sub:[['Roja Plus','Red Plus'],['Naranja','Orange'],['Roja','Red'],['Amarillo','Yellow'],['fire','fire'],['heat','heat'],['storms','storms'],['max temps','max temps'],['rest','rest'],['elsewhere','elsewhere']]
           },
           es: {
             levelLabel:{amarillo:'Amarillo',naranja:'Naranja',roja:'Roja',rojaplus:'Roja Plus'},
             dow:{Mon:'Lun',Tue:'Mar',Wed:'Mi\u00e9',Thu:'Jue',Fri:'Vie',Sat:'S\u00e1b',Sun:'Dom'},
             fire:'Alerta de incendio', heat:'Calor / tormentas', restrictions:'Restricciones',
-            active:'Activa \u2014 Roja Plus en vigor', none:'Ninguna', tomorrow:'Previsi\u00f3n de ma\u00f1ana'
+            active:'Activa \u2014 Roja Plus en vigor', none:'Ninguna', tomorrow:'Previsi\u00f3n de ma\u00f1ana',
+            sub:[['Roja Plus','Roja Plus'],['Naranja','Naranja'],['Roja','Roja'],['Amarillo','Amarillo'],['fire','incendio'],['heat','calor'],['storms','tormentas'],['max temps','temp. m\u00e1x.'],['rest','resto'],['elsewhere','resto']]
           },
           fr: {
-            levelLabel:{amarillo:'Amarillo',naranja:'Naranja',roja:'Roja',rojaplus:'Roja Plus'},
+            levelLabel:{amarillo:'Jaune',naranja:'Orange',roja:'Rouge',rojaplus:'Rouge Plus'},
             dow:{Mon:'Lun',Tue:'Mar',Wed:'Mer',Thu:'Jeu',Fri:'Ven',Sat:'Sam',Sun:'Dim'},
             fire:'Alerte incendie', heat:'Chaleur / orages', restrictions:'Restrictions',
-            active:'Active \u2014 Roja Plus en vigueur', none:'Aucune', tomorrow:'Pr\u00e9vision demain'
+            active:'Active \u2014 Rouge Plus en vigueur', none:'Aucune', tomorrow:'Pr\u00e9vision demain',
+            sub:[['Roja Plus','Rouge Plus'],['Naranja','Orange'],['Roja','Rouge'],['Amarillo','Jaune'],['fire','incendie'],['heat','chaleur'],['storms','orages'],['max temps','temp. max.'],['rest','reste'],['elsewhere','ailleurs']]
           },
           it: {
-            levelLabel:{amarillo:'Amarillo',naranja:'Naranja',roja:'Roja',rojaplus:'Roja Plus'},
+            levelLabel:{amarillo:'Giallo',naranja:'Arancione',roja:'Rosso',rojaplus:'Rosso Plus'},
             dow:{Mon:'Lun',Tue:'Mar',Wed:'Mer',Thu:'Gio',Fri:'Ven',Sat:'Sab',Sun:'Dom'},
             fire:'Allerta incendio', heat:'Calore / temporali', restrictions:'Restrizioni',
-            active:'Attiva \u2014 Roja Plus in vigore', none:'Nessuna', tomorrow:'Previsione domani'
+            active:'Attiva \u2014 Rosso Plus in vigore', none:'Nessuna', tomorrow:'Previsione domani',
+            sub:[['Roja Plus','Rosso Plus'],['Naranja','Arancione'],['Roja','Rosso'],['Amarillo','Giallo'],['fire','incendio'],['heat','calore'],['storms','temporali'],['max temps','temp. max.'],['rest','resto'],['elsewhere','altrove']]
           },
           de: {
-            levelLabel:{amarillo:'Amarillo',naranja:'Naranja',roja:'Roja',rojaplus:'Roja Plus'},
+            levelLabel:{amarillo:'Gelb',naranja:'Orange',roja:'Rot',rojaplus:'Rot Plus'},
             dow:{Mon:'Mo',Tue:'Di',Wed:'Mi',Thu:'Do',Fri:'Fr',Sat:'Sa',Sun:'So'},
             fire:'Feuerwarnung', heat:'Hitze / Gewitter', restrictions:'Einschr\u00e4nkungen',
-            active:'Aktiv \u2014 Roja Plus in Kraft', none:'Keine', tomorrow:'Vorhersage morgen'
+            active:'Aktiv \u2014 Rot Plus in Kraft', none:'Keine', tomorrow:'Vorhersage morgen',
+            sub:[['Roja Plus','Rot Plus'],['Naranja','Orange'],['Roja','Rot'],['Amarillo','Gelb'],['fire','Feuer'],['heat','Hitze'],['storms','Gewitter'],['max temps','H\u00f6chsttemp.'],['rest','Rest'],['elsewhere','anderswo']]
           },
           ca: {
-            levelLabel:{amarillo:'Amarillo',naranja:'Naranja',roja:'Roja',rojaplus:'Roja Plus'},
+            levelLabel:{amarillo:'Groc',naranja:'Taronja',roja:'Vermella',rojaplus:'Vermella Plus'},
             dow:{Mon:'Dll',Tue:'Dm',Wed:'Dc',Thu:'Dj',Fri:'Dv',Sat:'Ds',Sun:'Dg'},
             fire:"Alerta d'incendi", heat:'Calor / tempestes', restrictions:'Restriccions',
-            active:'Activa \u2014 Roja Plus en vigor', none:'Cap', tomorrow:"Previsi\u00f3 de dem\u00e0"
+            active:'Activa \u2014 Vermella Plus en vigor', none:'Cap', tomorrow:"Previsi\u00f3 de dem\u00e0",
+            sub:[['Roja Plus','Vermella Plus'],['Naranja','Taronja'],['Roja','Vermella'],['Amarillo','Groc'],['fire','incendi'],['heat','calor'],['storms','tempestes'],['max temps','temp. m\u00e0x.'],['rest','resta'],['elsewhere','resta']]
           }
         };
+
+        function tr(s){
+          if(!s||s==='\u2014')return s;
+          var subs=T[currentLang].sub;
+          if(!subs)return s;
+          for(var i=0;i<subs.length;i++)s=s.split(subs[i][0]).join(subs[i][1]);
+          return s;
+        }
 
         var currentLang = 'en';
         var row=document.getElementById('ewDaysRow');
@@ -1261,11 +1275,11 @@
         function renderDetail(d){
           var t=T[currentLang];
           detail.innerHTML='<div class="detail-header"><span class="level-badge badge-'+d.level+'">'+levelEmoji[d.level]+' '+t.levelLabel[d.level]+'</span><span class="detail-date">'+d.date+'</span></div>'
-            +'<div class="detail-row"><span class="detail-label">'+t.fire+'</span><span>'+d.fire+'</span></div>'
-            +(d.heat!=='\u2014'?'<div class="detail-row"><span class="detail-label">'+t.heat+'</span><span>'+d.heat+'</span></div>':'')
+            +'<div class="detail-row"><span class="detail-label">'+t.fire+'</span><span>'+tr(d.fire)+'</span></div>'
+            +(d.heat!=='\u2014'?'<div class="detail-row"><span class="detail-label">'+t.heat+'</span><span>'+tr(d.heat)+'</span></div>':'')
             +'<div class="detail-row"><span class="detail-label">'+t.restrictions+'</span><span>'+(d.restrictions?'<span class="restrictions-tag">'+t.active+'</span>':'<span class="ok-tag">'+t.none+'</span>')+'</span></div>'
             +'<div class="ew-divider"></div>'
-            +'<div class="tomorrow-row"><strong>'+t.tomorrow+':</strong> '+d.tomorrow+'</div>'
+            +'<div class="tomorrow-row"><strong>'+t.tomorrow+':</strong> '+tr(d.tomorrow)+'</div>'
             +(d.note?'<div style="margin-top:8px;font-size:12px;color:#666;line-height:1.5">'+d.note+'</div>':'');
         }
 
