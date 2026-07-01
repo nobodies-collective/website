@@ -1364,7 +1364,7 @@
             fire:'Fire alert', heat:'Heat / wind', restrictions:'Restrictions',
             active:'Active \u2014 Red Plus in force', none:'None', tomorrow:'Tomorrow forecast',
             noon:'Alert levels are officially updated each day around noon.',
-            sub:[['Roja Plus','Red Plus'],['Naranja','Orange'],['Roja','Red'],['Amarillo','Yellow'],['fire','fire'],['heat','heat'],['storms','storms'],['max temps','max temps'],['rest','rest'],['elsewhere','elsewhere']]
+            sub:[['Roja Plus','Red Plus'],['Naranja','Orange'],['Roja','Red'],['Amarillo','Yellow'],['fire','fire'],['heat','heat'],['storms','storms'],['max temps','max temps'],['rest','rest'],['elsewhere','elsewhere'],['toda la comarca','entire comarca'],['viento','wind'],['Zaragoza province municipalities','Zaragoza province municipalities'],['zones','zones'],['up to','up to']]
           },
           es: {
             levelLabel:{amarillo:'Amarillo',naranja:'Naranja',roja:'Roja',rojaplus:'Roja Plus'},
@@ -1372,7 +1372,7 @@
             fire:'Alerta de incendio', heat:'Calor / viento', restrictions:'Restricciones',
             active:'Activa \u2014 Roja Plus en vigor', none:'Ninguna', tomorrow:'Previsi\u00f3n de ma\u00f1ana',
             noon:'Los niveles de alerta se actualizan oficialmente cada d\u00eda alrededor del mediod\u00eda.',
-            sub:[['Roja Plus','Roja Plus'],['Naranja','Naranja'],['Roja','Roja'],['Amarillo','Amarillo'],['fire','incendio'],['heat','calor'],['storms','tormentas'],['max temps','temp. m\u00e1x.'],['rest','resto'],['elsewhere','resto']]
+            sub:[['Roja Plus','Roja Plus'],['Naranja','Naranja'],['Roja','Roja'],['Amarillo','Amarillo'],['fire','incendio'],['heat','calor'],['storms','tormentas'],['max temps','temp. m\u00e1x.'],['rest','resto'],['elsewhere','resto'],['toda la comarca','toda la comarca'],['viento','viento'],['Zaragoza province municipalities','municipios de la provincia de Zaragoza'],['zones','zonas'],['up to','hasta']]
           },
           fr: {
             levelLabel:{amarillo:'Jaune',naranja:'Orange',roja:'Rouge',rojaplus:'Rouge Plus'},
@@ -1380,7 +1380,7 @@
             fire:'Alerte incendie', heat:'Chaleur / vent', restrictions:'Restrictions',
             active:'Active \u2014 Rouge Plus en vigueur', none:'Aucune', tomorrow:'Pr\u00e9vision demain',
             noon:'Les niveaux d\u2019alerte sont officiellement mis \u00e0 jour chaque jour vers midi.',
-            sub:[['Roja Plus','Rouge Plus'],['Naranja','Orange'],['Roja','Rouge'],['Amarillo','Jaune'],['fire','incendie'],['heat','chaleur'],['storms','orages'],['max temps','temp. max.'],['rest','reste'],['elsewhere','ailleurs']]
+            sub:[['Roja Plus','Rouge Plus'],['Naranja','Orange'],['Roja','Rouge'],['Amarillo','Jaune'],['fire','incendie'],['heat','chaleur'],['storms','orages'],['max temps','temp. max.'],['rest','reste'],['elsewhere','ailleurs'],['toda la comarca','toute la comarca'],['viento','vent'],['Zaragoza province municipalities','municipalit\u00e9s de la province de Saragosse'],['zones','zones'],['up to','jusqu\u2019\u00e0']]
           },
           it: {
             levelLabel:{amarillo:'Giallo',naranja:'Arancione',roja:'Rosso',rojaplus:'Rosso Plus'},
@@ -1388,7 +1388,7 @@
             fire:'Allerta incendio', heat:'Calore / vento', restrictions:'Restrizioni',
             active:'Attiva \u2014 Rosso Plus in vigore', none:'Nessuna', tomorrow:'Previsione domani',
             noon:'I livelli di allerta vengono aggiornati ufficialmente ogni giorno intorno a mezzogiorno.',
-            sub:[['Roja Plus','Rosso Plus'],['Naranja','Arancione'],['Roja','Rosso'],['Amarillo','Giallo'],['fire','incendio'],['heat','calore'],['storms','temporali'],['max temps','temp. max.'],['rest','resto'],['elsewhere','altrove']]
+            sub:[['Roja Plus','Rosso Plus'],['Naranja','Arancione'],['Roja','Rosso'],['Amarillo','Giallo'],['fire','incendio'],['heat','calore'],['storms','temporali'],['max temps','temp. max.'],['rest','resto'],['elsewhere','altrove'],['toda la comarca','tutta la comarca'],['viento','vento'],['Zaragoza province municipalities','comuni della provincia di Saragozza'],['zones','zone'],['up to','fino a']]
           },
           de: {
             levelLabel:{amarillo:'Gelb',naranja:'Orange',roja:'Rot',rojaplus:'Rot Plus'},
@@ -1396,7 +1396,7 @@
             fire:'Feuerwarnung', heat:'Hitze / Wind', restrictions:'Einschr\u00e4nkungen',
             active:'Aktiv \u2014 Rot Plus in Kraft', none:'Keine', tomorrow:'Vorhersage morgen',
             noon:'Die Warnstufen werden jeden Tag gegen Mittag offiziell aktualisiert.',
-            sub:[['Roja Plus','Rot Plus'],['Naranja','Orange'],['Roja','Rot'],['Amarillo','Gelb'],['fire','Feuer'],['heat','Hitze'],['storms','Gewitter'],['max temps','H\u00f6chsttemp.'],['rest','Rest'],['elsewhere','anderswo']]
+            sub:[['Roja Plus','Rot Plus'],['Naranja','Orange'],['Roja','Rot'],['Amarillo','Gelb'],['fire','Feuer'],['heat','Hitze'],['storms','Gewitter'],['max temps','H\u00f6chsttemp.'],['rest','Rest'],['elsewhere','anderswo'],['toda la comarca','gesamte Comarca'],['viento','Wind'],['Zaragoza province municipalities','Gemeinden der Provinz Saragossa'],['zones','Zonen'],['up to','bis zu']]
           },
           ca: {
             levelLabel:{amarillo:'Groc',naranja:'Taronja',roja:'Vermella',rojaplus:'Vermella Plus'},
@@ -1404,7 +1404,62 @@
             fire:"Alerta d'incendi", heat:'Calor / vent', restrictions:'Restriccions',
             active:'Activa \u2014 Vermella Plus en vigor', none:'Cap', tomorrow:"Previsi\u00f3 de dem\u00e0",
             noon:'Els nivells d\u2019alerta s\u2019actualitzen oficialment cada dia cap al migdia.',
-            sub:[['Roja Plus','Vermella Plus'],['Naranja','Taronja'],['Roja','Vermella'],['Amarillo','Groc'],['fire','incendi'],['heat','calor'],['storms','tempestes'],['max temps','temp. m\u00e0x.'],['rest','resta'],['elsewhere','resta']]
+            sub:[['Roja Plus','Vermella Plus'],['Naranja','Taronja'],['Roja','Vermella'],['Amarillo','Groc'],['fire','incendi'],['heat','calor'],['storms','tempestes'],['max temps','temp. m\u00e0x.'],['rest','resta'],['elsewhere','resta'],['toda la comarca','tota la comarca'],['viento','vent'],['Zaragoza province municipalities','municipis de la prov\u00edncia de Saragossa'],['zones','zones'],['up to','fins a']]
+          }
+        };
+
+        // Per-language note translations (keyed by date)
+        var notesTr = {
+          '20 Jun':{
+            en:'Up to 40\u00b0C',es:'Hasta 40\u00b0C',fr:'Jusqu\u2019\u00e0 40\u00b0C',it:'Fino a 40\u00b0C',de:'Bis zu 40\u00b0C',ca:'Fins a 40\u00b0C'
+          },
+          '26 Jun':{
+            en:'BOA Orden HAP/925/2026 declared. Roja Plus activated.',
+            es:'BOA Orden HAP/925/2026 declarada. Roja Plus activada.',
+            fr:'BOA Orden HAP/925/2026 d\u00e9clar\u00e9e. Rouge Plus activ\u00e9e.',
+            it:'BOA Orden HAP/925/2026 dichiarata. Rosso Plus attivato.',
+            de:'BOA Orden HAP/925/2026 erkl\u00e4rt. Rot Plus aktiviert.',
+            ca:'BOA Orden HAP/925/2026 declarada. Vermella Plus activada.'
+          },
+          '27 Jun':{
+            en:'Alcampell fire (Huesca) active. Multiple fires across Arag\u00f3n.',
+            es:'Incendio en Alcampell (Huesca) activo. M\u00faltiples incendios en Arag\u00f3n.',
+            fr:'Incendie d\u2019Alcampell (Huesca) actif. Plusieurs incendies en Arag\u00f3n.',
+            it:'Incendio di Alcampell (Huesca) attivo. Diversi incendi in Aragona.',
+            de:'Brand bei Alcampell (Huesca) aktiv. Mehrere Br\u00e4nde in Aragonien.',
+            ca:'Incendi a Alcampell (Osca) actiu. M\u00faltiples incendis a l\u2019Arag\u00f3.'
+          },
+          '28 Jun':{
+            en:'Storms arrived late afternoon. Protecci\u00f3n Civil and Guardia Civil checked compliance on site.',
+            es:'Tormentas por la tarde. Protecci\u00f3n Civil y Guardia Civil verificaron el cumplimiento en el terreno.',
+            fr:'Orages en fin d\u2019apr\u00e8s-midi. La Protecci\u00f3n Civil et la Guardia Civil ont v\u00e9rifi\u00e9 la conformit\u00e9 sur le site.',
+            it:'Temporali nel tardo pomeriggio. Protecci\u00f3n Civil e Guardia Civil hanno verificato la conformit\u00e0 sul sito.',
+            de:'Gewitter am sp\u00e4ten Nachmittag. Protecci\u00f3n Civil und Guardia Civil \u00fcberpr\u00fcften die Einhaltung vor Ort.',
+            ca:'Tempestes a la tarda. Protecci\u00f3 Civil i Gu\u00e0rdia Civil van verificar el compliment al terreny.'
+          },
+          '29 Jun':{
+            en:'Roja Plus ended. Alert level Orange \u2014 no restrictions.',
+            es:'Roja Plus finalizada. Nivel de alerta Naranja \u2014 sin restricciones.',
+            fr:'Rouge Plus termin\u00e9e. Niveau d\u2019alerte Orange \u2014 aucune restriction.',
+            it:'Rosso Plus terminato. Livello di allerta Arancione \u2014 nessuna restrizione.',
+            de:'Rot Plus beendet. Warnstufe Orange \u2014 keine Einschr\u00e4nkungen.',
+            ca:'Vermella Plus finalitzada. Nivell d\u2019alerta Taronja \u2014 sense restriccions.'
+          },
+          '30 Jun':{
+            en:'Evening: fire declared in Sierra de Alcubierre (Leci\u00f1ena\u2013Robres area). Smoke briefly reached parts of comarca. Civil Protection Plan of the Comarca activated in Emergency Phase. No new arrivals to site while situation was assessed. Smoke dissipated within the hour, situation resolved.',
+            es:'Noche: incendio declarado en la Sierra de Alcubierre (zona Leci\u00f1ena\u2013Robres). El humo lleg\u00f3 brevemente a partes de la comarca. Plan de Protecci\u00f3n Civil de la Comarca activado en Fase de Emergencia. No se permitieron nuevas llegadas al terreno mientras se evaluaba la situaci\u00f3n. El humo se disip\u00f3 en una hora, situaci\u00f3n resuelta.',
+            fr:'Soir\u00e9e\u00a0: incendie d\u00e9clar\u00e9 dans la Sierra de Alcubierre (zone Leci\u00f1ena\u2013Robres). La fum\u00e9e a bri\u00e8vement atteint des parties de la comarca. Plan de Protection Civile de la Comarca activ\u00e9 en Phase d\u2019Urgence. Aucune nouvelle arriv\u00e9e sur le site pendant l\u2019\u00e9valuation. La fum\u00e9e s\u2019est dissip\u00e9e en une heure, situation r\u00e9solue.',
+            it:'Sera: incendio dichiarato nella Sierra de Alcubierre (zona Leci\u00f1ena\u2013Robres). Il fumo ha raggiunto brevemente parti della comarca. Piano di Protezione Civile della Comarca attivato in Fase di Emergenza. Nessun nuovo arrivo al sito durante la valutazione. Il fumo si \u00e8 dissipato entro un\u2019ora, situazione risolta.',
+            de:'Abend: Brand in der Sierra de Alcubierre (Gebiet Leci\u00f1ena\u2013Robres) gemeldet. Rauch erreichte kurzzeitig Teile der Comarca. Zivilschutzplan der Comarca in Notfallphase aktiviert. Keine neuen Ank\u00fcnfte am Gel\u00e4nde w\u00e4hrend der Lagebeurteilung. Rauch l\u00f6ste sich innerhalb einer Stunde auf, Situation gel\u00f6st.',
+            ca:'Vespre: incendi declarat a la Sierra de Alcubierre (zona Leci\u00f1ena\u2013Robres). El fum va arribar breument a parts de la comarca. Pla de Protecci\u00f3 Civil de la Comarca activat en Fase d\u2019Emerg\u00e8ncia. No es van permetre noves arribades al terreny mentre s\u2019avaluava la situaci\u00f3. El fum es va dissipar en una hora, situaci\u00f3 resolta.'
+          },
+          '1 Jul':{
+            en:'Leci\u00f1ena fire (Sierra de Alcubierre) still active from 30 Jun.',
+            es:'Incendio de Leci\u00f1ena (Sierra de Alcubierre) a\u00fan activo desde el 30 jun.',
+            fr:'Incendie de Leci\u00f1ena (Sierra de Alcubierre) toujours actif depuis le 30 juin.',
+            it:'Incendio di Leci\u00f1ena (Sierra de Alcubierre) ancora attivo dal 30 giu.',
+            de:'Brand bei Leci\u00f1ena (Sierra de Alcubierre) seit 30. Juni noch aktiv.',
+            ca:'Incendi de Leci\u00f1ena (Sierra de Alcubierre) encara actiu des del 30 jun.'
           }
         };
 
@@ -1447,7 +1502,7 @@
             +'<div class="detail-row"><span class="detail-label">'+t.restrictions+'</span><span>'+(d.restrictions?'<span class="restrictions-tag">'+t.active+'</span>':'<span class="ok-tag">'+t.none+'</span>')+'</span></div>'
             +'<div class="ew-divider"></div>'
             +'<div class="tomorrow-row"><strong>'+t.tomorrow+':</strong> '+tr(d.tomorrow)+'</div>'
-            +(d.note?'<div style="margin-top:8px;font-size:12px;color:#666;line-height:1.5">'+d.note+'</div>':'')
+            +(d.note?'<div style="margin-top:8px;font-size:12px;color:#666;line-height:1.5">'+((notesTr[d.date]&&notesTr[d.date][currentLang])?notesTr[d.date][currentLang]:d.note)+'</div>':'')
             +'<div style="margin-top:8px;font-size:11px;color:#999;line-height:1.4">'+t.noon+'</div>';
         }
 
