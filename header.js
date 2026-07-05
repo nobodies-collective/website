@@ -24,7 +24,7 @@
                             '<li><a href="' + prefix + '/werkhaus.html">Werkhaus</a></li>' +
                             '<li><a href="' + prefix + '/travel-reimbursement.html">Travel Reimbursement</a></li>' +
                             '<li><a href="' + prefix + '/speaking-about-elsewhere.html">Speaking About Elsewhere</a></li>' +
-                            '<li><a href="' + prefix + '/red-alert-plus.html">Red Alert Plus</a></li>' +
+                            '<li><a href="' + prefix + '/red-alert-plus.html">Weather Alerts</a></li>' +
                         '</ul>' +
                     '</li>' +
                     '<li class="nav-dropdown">' +
