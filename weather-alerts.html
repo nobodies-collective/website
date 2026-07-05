@@ -20,6 +20,7 @@
         .day-chip .dow{font-size:11px;color:var(--color-text-muted, #888);font-weight:500}
         .day-chip .dom{font-size:13px;font-weight:500;color:var(--color-text, #1a1a1a)}
         .day-chip .dot{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px}
+        .dot-pendiente{background:#e5e7eb}
         .dot-amarillo{background:#fef3c7}
         .dot-naranja{background:#fed7aa}
         .dot-roja{background:#fecaca}
@@ -27,6 +28,7 @@
         .ew-detail{margin-top:12px;padding:14px 16px;border-radius:12px;border:0.5px solid var(--color-border, #e0ddd8);background:var(--color-bg, #fff)}
         .detail-header{display:flex;align-items:center;gap:10px;margin-bottom:10px}
         .level-badge{padding:3px 10px;border-radius:20px;font-size:12px;font-weight:500}
+        .badge-pendiente{background:#e5e7eb;color:#4b5563}
         .badge-amarillo{background:#fef3c7;color:#92400e}
         .badge-naranja{background:#fed7aa;color:#9a3412}
         .badge-roja{background:#fecaca;color:#991b1b}
@@ -1358,12 +1360,13 @@
           {date:'5 Jul',dow:'Sun',level:'roja',fire:'Red (toda la comarca)',heat:'Orange max temps (provincia de Zaragoza) / Yellow rest',restrictions:false,tomorrow:'Red (toda la comarca) + Orange max temps (toda la comarca)',note:'New fire at Loporzano (Huesca), active.'},
         ];
 
-        var levelEmoji={amarillo:'\ud83d\udfe1',naranja:'\ud83d\udfe0',roja:'\ud83d\udd34',rojaplus:'\ud83d\udd34\u2795'};
+        var levelEmoji={pendiente:'\u26aa',amarillo:'\ud83d\udfe1',naranja:'\ud83d\udfe0',roja:'\ud83d\udd34',rojaplus:'\ud83d\udd34\u2795'};
 
         // Translations for tracker UI
         var T = {
           en: {
-            levelLabel:{amarillo:'Yellow',naranja:'Orange',roja:'Red',rojaplus:'Red Plus'},
+            levelLabel:{pendiente:'To be confirmed',amarillo:'Yellow',naranja:'Orange',roja:'Red',rojaplus:'Red Plus'},
+            autoNote:'Weather warnings auto-updated from AEMET. Fire-risk level is confirmed manually by the team each day.',
             dow:{Mon:'Mon',Tue:'Tue',Wed:'Wed',Thu:'Thu',Fri:'Fri',Sat:'Sat',Sun:'Sun'},
             fire:'Fire alert', heat:'Heat / wind', restrictions:'Restrictions',
             active:'Active \u2014 Red Plus in force', none:'None', tomorrow:'Tomorrow forecast',
@@ -1371,7 +1374,8 @@
             sub:[['Roja Plus','Red Plus'],['Naranja','Orange'],['Roja','Red'],['Amarillo','Yellow'],['fire','fire'],['heat','heat'],['storms','storms'],['max temps','max temps'],['rest','rest'],['elsewhere','elsewhere'],['toda la comarca','entire comarca'],['viento','wind'],['Zaragoza province municipalities','Zaragoza province municipalities'],['zones','zones'],['up to','up to']]
           },
           es: {
-            levelLabel:{amarillo:'Amarillo',naranja:'Naranja',roja:'Roja',rojaplus:'Roja Plus'},
+            levelLabel:{pendiente:'Por confirmar',amarillo:'Amarillo',naranja:'Naranja',roja:'Roja',rojaplus:'Roja Plus'},
+            autoNote:'Avisos meteorol\u00f3gicos actualizados autom\u00e1ticamente desde AEMET. El nivel de riesgo de incendio lo confirma el equipo manualmente cada d\u00eda.',
             dow:{Mon:'Lun',Tue:'Mar',Wed:'Mi\u00e9',Thu:'Jue',Fri:'Vie',Sat:'S\u00e1b',Sun:'Dom'},
             fire:'Alerta de incendio', heat:'Calor / viento', restrictions:'Restricciones',
             active:'Activa \u2014 Roja Plus en vigor', none:'Ninguna', tomorrow:'Previsi\u00f3n de ma\u00f1ana',
@@ -1379,7 +1383,8 @@
             sub:[['Roja Plus','Roja Plus'],['Naranja','Naranja'],['Roja','Roja'],['Amarillo','Amarillo'],['fire','incendio'],['heat','calor'],['storms','tormentas'],['max temps','temp. m\u00e1x.'],['rest','resto'],['elsewhere','resto'],['toda la comarca','toda la comarca'],['viento','viento'],['Zaragoza province municipalities','municipios de la provincia de Zaragoza'],['zones','zonas'],['up to','hasta']]
           },
           fr: {
-            levelLabel:{amarillo:'Jaune',naranja:'Orange',roja:'Rouge',rojaplus:'Rouge Plus'},
+            levelLabel:{pendiente:'\u00c0 confirmer',amarillo:'Jaune',naranja:'Orange',roja:'Rouge',rojaplus:'Rouge Plus'},
+            autoNote:'Avertissements m\u00e9t\u00e9o mis \u00e0 jour automatiquement depuis AEMET. Le niveau de risque d\u2019incendie est confirm\u00e9 manuellement par l\u2019\u00e9quipe chaque jour.',
             dow:{Mon:'Lun',Tue:'Mar',Wed:'Mer',Thu:'Jeu',Fri:'Ven',Sat:'Sam',Sun:'Dim'},
             fire:'Alerte incendie', heat:'Chaleur / vent', restrictions:'Restrictions',
             active:'Active \u2014 Rouge Plus en vigueur', none:'Aucune', tomorrow:'Pr\u00e9vision demain',
@@ -1387,7 +1392,8 @@
             sub:[['Roja Plus','Rouge Plus'],['Naranja','Orange'],['Roja','Rouge'],['Amarillo','Jaune'],['fire','incendie'],['heat','chaleur'],['storms','orages'],['max temps','temp. max.'],['rest','reste'],['elsewhere','ailleurs'],['toda la comarca','toute la comarca'],['viento','vent'],['Zaragoza province municipalities','municipalit\u00e9s de la province de Saragosse'],['zones','zones'],['up to','jusqu\u2019\u00e0']]
           },
           it: {
-            levelLabel:{amarillo:'Giallo',naranja:'Arancione',roja:'Rosso',rojaplus:'Rosso Plus'},
+            levelLabel:{pendiente:'Da confermare',amarillo:'Giallo',naranja:'Arancione',roja:'Rosso',rojaplus:'Rosso Plus'},
+            autoNote:'Allerte meteo aggiornate automaticamente da AEMET. Il livello di rischio incendio viene confermato manualmente dal team ogni giorno.',
             dow:{Mon:'Lun',Tue:'Mar',Wed:'Mer',Thu:'Gio',Fri:'Ven',Sat:'Sab',Sun:'Dom'},
             fire:'Allerta incendio', heat:'Calore / vento', restrictions:'Restrizioni',
             active:'Attiva \u2014 Rosso Plus in vigore', none:'Nessuna', tomorrow:'Previsione domani',
@@ -1395,7 +1401,8 @@
             sub:[['Roja Plus','Rosso Plus'],['Naranja','Arancione'],['Roja','Rosso'],['Amarillo','Giallo'],['fire','incendio'],['heat','calore'],['storms','temporali'],['max temps','temp. max.'],['rest','resto'],['elsewhere','altrove'],['toda la comarca','tutta la comarca'],['viento','vento'],['Zaragoza province municipalities','comuni della provincia di Saragozza'],['zones','zone'],['up to','fino a']]
           },
           de: {
-            levelLabel:{amarillo:'Gelb',naranja:'Orange',roja:'Rot',rojaplus:'Rot Plus'},
+            levelLabel:{pendiente:'Wird best\u00e4tigt',amarillo:'Gelb',naranja:'Orange',roja:'Rot',rojaplus:'Rot Plus'},
+            autoNote:'Wetterwarnungen automatisch von AEMET aktualisiert. Die Waldbrand-Warnstufe wird t\u00e4glich manuell vom Team best\u00e4tigt.',
             dow:{Mon:'Mo',Tue:'Di',Wed:'Mi',Thu:'Do',Fri:'Fr',Sat:'Sa',Sun:'So'},
             fire:'Feuerwarnung', heat:'Hitze / Wind', restrictions:'Einschr\u00e4nkungen',
             active:'Aktiv \u2014 Rot Plus in Kraft', none:'Keine', tomorrow:'Vorhersage morgen',
@@ -1403,7 +1410,8 @@
             sub:[['Roja Plus','Rot Plus'],['Naranja','Orange'],['Roja','Rot'],['Amarillo','Gelb'],['fire','Feuer'],['heat','Hitze'],['storms','Gewitter'],['max temps','H\u00f6chsttemp.'],['rest','Rest'],['elsewhere','anderswo'],['toda la comarca','gesamte Comarca'],['viento','Wind'],['Zaragoza province municipalities','Gemeinden der Provinz Saragossa'],['zones','Zonen'],['up to','bis zu']]
           },
           ca: {
-            levelLabel:{amarillo:'Groc',naranja:'Taronja',roja:'Vermella',rojaplus:'Vermella Plus'},
+            levelLabel:{pendiente:'Per confirmar',amarillo:'Groc',naranja:'Taronja',roja:'Vermella',rojaplus:'Vermella Plus'},
+            autoNote:'Avisos meteorol\u00f2gics actualitzats autom\u00e0ticament des d\u2019AEMET. El nivell de risc d\u2019incendi el confirma l\u2019equip manualment cada dia.',
             dow:{Mon:'Dll',Tue:'Dm',Wed:'Dc',Thu:'Dj',Fri:'Dv',Sat:'Ds',Sun:'Dg'},
             fire:"Alerta d'incendi", heat:'Calor / vent', restrictions:'Restriccions',
             active:'Activa \u2014 Vermella Plus en vigor', none:'Cap', tomorrow:"Previsi\u00f3 de dem\u00e0",
@@ -1507,6 +1515,7 @@
             +'<div class="ew-divider"></div>'
             +'<div class="tomorrow-row"><strong>'+t.tomorrow+':</strong> '+tr(d.tomorrow)+'</div>'
             +(d.note?'<div style="margin-top:8px;font-size:12px;color:#666;line-height:1.5">'+((notesTr[d.date]&&notesTr[d.date][currentLang])?notesTr[d.date][currentLang]:d.note)+'</div>':'')
+            +(d.auto?'<div style="margin-top:8px;font-size:12px;color:#666;line-height:1.5">'+t.autoNote+'</div>':'')
             +'<div style="margin-top:8px;font-size:11px;color:#999;line-height:1.4">'+t.noon+'</div>';
         }
 
@@ -1517,8 +1526,29 @@
           renderDetail(activeDay);
         };
 
-        buildChips();
-        renderDetail(activeDay);
+        // Merge auto-updated AEMET entries (weather-auto.json, generated daily
+        // by GitHub Actions). Manual entries above always take precedence.
+        function dateKey(ds){
+          var m=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+          var p=ds.split(' ');
+          return m.indexOf(p[1])*100 + parseInt(p[0],10);
+        }
+        function mergeAuto(auto){
+          if(!auto||!auto.length)return;
+          var manual={};
+          days.forEach(function(d){manual[d.date]=true;});
+          var lastKey=dateKey(days[days.length-1].date);
+          auto.forEach(function(a){
+            if(!manual[a.date] && dateKey(a.date)>lastKey && levelEmoji[a.level]) days.push(a);
+          });
+          days.sort(function(x,y){return dateKey(x.date)-dateKey(y.date);});
+          activeDay=days[days.length-1];
+        }
+        function init(){buildChips();renderDetail(activeDay);}
+        fetch('weather-auto.json',{cache:'no-store'})
+          .then(function(r){return r.ok?r.json():null;})
+          .then(function(a){try{mergeAuto(a);}catch(e){}init();})
+          .catch(function(){init();});
         })();
     </script>
 
