@@ -34,5 +34,17 @@
     "note": "",
     "auto": true,
     "updated": "2026-07-07T14:42+02:00"
+  },
+  {
+    "date": "8 Jul",
+    "dow": "Wed",
+    "level": "pendiente",
+    "fire": "—",
+    "heat": "Naranja max temps (41 ºC)",
+    "restrictions": false,
+    "tomorrow": "Naranja max temps (41 ºC)",
+    "note": "",
+    "auto": true,
+    "updated": "2026-07-08T08:44+02:00"
   }
 ]
