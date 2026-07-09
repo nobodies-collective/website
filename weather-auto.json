@@ -50,13 +50,13 @@
   {
     "date": "9 Jul",
     "dow": "Thu",
-    "level": "pendiente",
-    "fire": "—",
-    "heat": "Naranja max temps (41 ºC)",
+    "level": "roja",
+    "fire": "Red (toda la comarca)",
+    "heat": "Orange max temps (toda la comarca), >40°C",
     "restrictions": false,
-    "tomorrow": "Naranja max temps (39 ºC)",
-    "note": "",
+    "tomorrow": "Orange heat forecast (toda la comarca); fire level for 10 Jul not provided",
+    "note": "No fire forecast issued for 10 Jul. Heat Orange continues.",
     "auto": true,
-    "updated": "2026-07-09T15:26+02:00"
+    "updated": "2026-07-09T17:00+02:00"
   }
 ]
