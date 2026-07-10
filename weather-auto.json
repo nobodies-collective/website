@@ -54,9 +54,21 @@
     "fire": "Red (toda la comarca)",
     "heat": "Orange max temps (toda la comarca), >40°C",
     "restrictions": false,
-    "tomorrow": "Orange heat forecast (toda la comarca); fire level for 10 Jul not provided",
-    "note": "No fire forecast issued for 10 Jul. Heat Orange continues.",
+    "tomorrow": "Red Alert Plus (toda la comarca)",
+    "note": "Red Alert Plus officially declared by Gobierno de Aragón for 10 Jul. Affects Los Monegros, Hoya de Huesca, Somontano de Barbastro, Cinca Medio, La Litera, Bajo Cinca.",
     "auto": true,
-    "updated": "2026-07-09T17:00+02:00"
+    "updated": "2026-07-09T18:28+02:00"
+  },
+  {
+    "date": "10 Jul",
+    "dow": "Fri",
+    "level": "rojaplus",
+    "fire": "Red Alert Plus (toda la comarca)",
+    "heat": "Yellow max temps (toda la comarca)",
+    "restrictions": true,
+    "tomorrow": "Yellow heat forecast (toda la comarca); fire level for 11 Jul not provided",
+    "note": "Red Alert Plus confirmed in BOA (Orden HAP/1013/2026, 9 Jul). Comarca Protección Civil Plan activated in Fase de Alerta. Legally binding restrictions in force all day.",
+    "auto": true,
+    "updated": "2026-07-10T10:00+02:00"
   }
 ]
