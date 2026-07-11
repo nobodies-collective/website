@@ -70,5 +70,17 @@
     "note": "",
     "auto": true,
     "updated": "2026-07-10T14:39+02:00"
+  },
+  {
+    "date": "11 Jul",
+    "dow": "Sat",
+    "level": "pendiente",
+    "fire": "—",
+    "heat": "Amarillo max temps (38 ºC)",
+    "restrictions": false,
+    "tomorrow": "Amarillo max temps (38 ºC)",
+    "note": "",
+    "auto": true,
+    "updated": "2026-07-11T13:28+02:00"
   }
 ]
