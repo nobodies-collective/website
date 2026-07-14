@@ -94,5 +94,17 @@
     "note": "",
     "auto": true,
     "updated": "2026-07-13T14:43+02:00"
+  },
+  {
+    "date": "14 Jul",
+    "dow": "Tue",
+    "level": "pendiente",
+    "fire": "—",
+    "heat": "Naranja max temps (39 ºC)",
+    "restrictions": false,
+    "tomorrow": "Naranja max temps (40 ºC)",
+    "note": "",
+    "auto": true,
+    "updated": "2026-07-14T08:33+02:00"
   }
 ]
