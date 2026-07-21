@@ -178,5 +178,17 @@
     "note": "",
     "auto": true,
     "updated": "2026-07-20T14:29+02:00"
+  },
+  {
+    "date": "21 Jul",
+    "dow": "Tue",
+    "level": "pendiente",
+    "fire": "—",
+    "heat": "Naranja max temps (39 ºC)",
+    "restrictions": false,
+    "tomorrow": "Amarillo max temps (38 ºC)",
+    "note": "",
+    "auto": true,
+    "updated": "2026-07-21T09:04+02:00"
   }
 ]
