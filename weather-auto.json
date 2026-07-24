@@ -214,5 +214,17 @@
     "note": "",
     "auto": true,
     "updated": "2026-07-23T14:08+02:00"
+  },
+  {
+    "date": "24 Jul",
+    "dow": "Fri",
+    "level": "pendiente",
+    "fire": "—",
+    "heat": "Amarillo max temps (38 ºC) + Amarillo storms",
+    "restrictions": false,
+    "tomorrow": "—",
+    "note": "",
+    "auto": true,
+    "updated": "2026-07-24T09:03+02:00"
   }
 ]
