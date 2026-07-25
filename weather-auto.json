@@ -226,5 +226,17 @@
     "note": "",
     "auto": true,
     "updated": "2026-07-24T13:59+02:00"
+  },
+  {
+    "date": "25 Jul",
+    "dow": "Sat",
+    "level": "pendiente",
+    "fire": "—",
+    "heat": "—",
+    "restrictions": false,
+    "tomorrow": "—",
+    "note": "",
+    "auto": true,
+    "updated": "2026-07-25T08:36+02:00"
   }
 ]
