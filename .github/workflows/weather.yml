@@ -1,9 +1,11 @@
 name: Update weather tracker
 
 on:
-  schedule:
-    # 06:30 and 12:30 Europe/Madrid (CEST) — morning entry + post-noon refresh
-    - cron: '30 4,10 * * *'
+  # Schedule disabled 29 Jul 2026 — event over, tracker retired for the season.
+  # Last on-site day was Fri 24 Jul; Luis Carlos's last alert was 25 Jul.
+  # Re-enable next season by restoring:
+  #   schedule:
+  #     - cron: '30 4,10 * * *'
   workflow_dispatch:
 
 jobs:

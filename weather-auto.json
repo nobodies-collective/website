@@ -238,53 +238,5 @@
     "note": "",
     "auto": true,
     "updated": "2026-07-25T13:40+02:00"
-  },
-  {
-    "date": "26 Jul",
-    "dow": "Sun",
-    "level": "pendiente",
-    "fire": "—",
-    "heat": "—",
-    "restrictions": false,
-    "tomorrow": "—",
-    "note": "",
-    "auto": true,
-    "updated": "2026-07-26T13:42+02:00"
-  },
-  {
-    "date": "27 Jul",
-    "dow": "Mon",
-    "level": "pendiente",
-    "fire": "—",
-    "heat": "—",
-    "restrictions": false,
-    "tomorrow": "Amarillo max temps (36 ºC)",
-    "note": "",
-    "auto": true,
-    "updated": "2026-07-27T15:23+02:00"
-  },
-  {
-    "date": "28 Jul",
-    "dow": "Tue",
-    "level": "pendiente",
-    "fire": "—",
-    "heat": "Amarillo max temps (36 ºC)",
-    "restrictions": false,
-    "tomorrow": "Naranja max temps (39 ºC)",
-    "note": "",
-    "auto": true,
-    "updated": "2026-07-28T14:19+02:00"
-  },
-  {
-    "date": "29 Jul",
-    "dow": "Wed",
-    "level": "pendiente",
-    "fire": "—",
-    "heat": "Naranja max temps (39 ºC)",
-    "restrictions": false,
-    "tomorrow": "Naranja max temps (39 ºC)",
-    "note": "",
-    "auto": true,
-    "updated": "2026-07-29T14:27+02:00"
   }
 ]
