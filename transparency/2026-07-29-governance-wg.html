@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+
+    <title>Informal Governance Working Group - First Meeting - July 29, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .resource-links { background: var(--color-bg-secondary); padding: 1.25rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .resource-links h3 { margin: 0 0 0.75rem 0; font-size: 1rem; }
+        .resource-links ul { list-style: none; padding: 0; margin: 0; }
+        .resource-links li { margin-bottom: 0.5rem; }
+        .resource-links a { color: var(--color-accent); font-weight: 500; }
+        .resource-links a:hover { text-decoration: underline; }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>Informal Governance Working Group &mdash; First Meeting</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Wednesday 29 July 2026, video call (in two parts)</span>
+                    </div>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>Present (video call):</strong> Kate B (facilitator), Daniel T, Celine V, Julian, Ben D
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Full Records</h3>
+                        <ul>
+                            <li><a href="2026-07-29-governance-wg-transcript.html">Full transcript (English only)</a> &mdash; published with the consent of all participants</li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>The first meeting of a potential Governance Working Group, convened to begin designing the association&rsquo;s distributed decision-making structures. The call was recorded in two parts because the video-call time limit cut the first session short. This is an interim group bootstrapped with board authority; no binding decisions were taken, and the group agreed that its own composition should be opened to the community as quickly as possible.</p>
+
+                        <h2>1. Purpose and Check-In</h2>
+                        <p>Each participant shared their understanding of the group&rsquo;s mission. Common threads: an association genuinely owned and controlled by its members &mdash; not just theoretically, and as the statutes require; decisions taken where the information is, supported by well-prepared information packets (inspired by the Swiss voting-booklet model); realism about the capacity needed to prepare that information; a segmentation of decision types so that not everything lands on everyone; and members who feel empowered and informed, so that they stay engaged even when a decision goes against them. Risks named openly: decision fatigue, information overload, and &ldquo;decentralised theatre&rdquo; &mdash; structures that look participatory while nothing really changes.</p>
+
+                        <h2>2. Mandate and Legitimacy</h2>
+                        <p>The group named its own chicken-and-egg problem candidly: the only democratic authority in the association so far is the elected board, so a democratic process for constituting working groups has to be bootstrapped with board authority &mdash; authority that was described as &ldquo;on loan&rdquo; from the members. The group was explicit that an unannounced small group designing governance could itself create division, and committed to opening the process up fast: announcing the group at the next community call, publishing minutes of its meetings, and becoming the first democratically constituted working group as soon as practicable.</p>
+
+                        <h2>3. Selecting the Working Group</h2>
+                        <p>Direction agreed (details to be worked out): a short, light application process &mdash; much lighter than the board election &mdash; open to anyone; a proposed composition presented to the members with a way to give feedback that influences the process without halting it (for example, objecting by applying); personal communication with applicants who are not selected; and a practical size cap of roughly six to seven people so the group can actually work. Several participants stated they would willingly step aside if better-suited people came forward. The group noted that this process doubles as a test case for how all future working groups get constituted &mdash; a possible shape being submission, filtering by a governance group, board approval, and eventual ratification by the General Assembly &mdash; to be developed in later meetings.</p>
+
+                        <h2>4. Draft Principles</h2>
+                        <p>Kate B presented draft principles for discussion:</p>
+                        <ul>
+                            <li>The working group proposes, with reasoning; the community decides.</li>
+                            <li>Governance is durable enough that even a bad-faith board can only do limited, recoverable damage &mdash; and light enough that people actually show up to use it.</li>
+                            <li>Votes bind policy and budget, not operational execution.</li>
+                            <li>If a decision can be made by a coordinator or working group, it should be.</li>
+                            <li>Governance is decentralised and lean: it exists to make better community-driven decisions, not as an end in itself.</li>
+                            <li>Accountable, open, transparent, and participatory &mdash; decisions visible and open to challenge by the wider community.</li>
+                        </ul>
+                        <p>Daniel T proposed adding a further founding principle: <strong>trust the community&rsquo;s wisdom</strong> &mdash; governance design that treats members as incapable becomes a self-fulfilling prophecy. The principles remain a draft to be refined.</p>
+
+                        <h2>5. Open vs Private Working Channels</h2>
+                        <p>A genuine disagreement, aired candidly. Kate B and others favoured working in a private interim channel &mdash; lean, high-context, fast &mdash; while publishing everything publishable to the open governance channel; concerns included efficiency and half-formed proposals being misread. Daniel T argued from experience for working fully in the open &mdash; early feedback prevents wasted work and builds trust &mdash; and registered his disagreement with private channels generally. Interim outcome: the group continues in a private channel for now, the choice will be presented to the community call with its reasons for feedback, and the question will be revisited properly once the group is formally constituted.</p>
+
+                        <h2>6. Roles and Capacity</h2>
+                        <p>The group needs a few more people. Julian brings experience with financial processes in general assemblies and was asked to take on the finance/budget-approval thread. A decision-steward or administrator role was identified &mdash; managing proposals, information packs, organising votes, and GA logistics. Kate B has drafted a decision-tier matrix (GA-only / high / medium / low impact, each with an appropriate decision format) to circulate asynchronously for feedback. Voting would most likely live in the community&rsquo;s existing membership app.</p>
+
+                        <h2>7. Next Steps</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Action</th><th>Due</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Draft the statement announcing the working group for the community call, including the private-channel question; circulate to the group for review; prepare and publish minutes</td><td>Before the community call</td></tr>
+                                <tr><td>Celine V</td><td>Frame out the selection-process proposal; set up the next call</td><td>This week</td></tr>
+                                <tr><td>Kate B</td><td>Draft the reasons for the interim private channel; share the draft decision-tier matrix; add Ben D and Julian to the interim coordination group</td><td>Before next meeting</td></tr>
+                                <tr><td>All</td><td>Give asynchronous feedback on drafts</td><td>Ongoing</td></tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Next meeting:</strong> Tuesday 4 August 2026, 19:00 CEST, to debrief the community call and define roles and the application process.</p>
+
+                        <p><em>Minutes prepared from a recording. The full verbatim transcript is published alongside these minutes with the consent of all participants.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Presentes (videollamada):</strong> Kate B (facilitadora), Daniel T, Celine V, Julian, Ben D
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Registros Completos</h3>
+                        <ul>
+                            <li><a href="2026-07-29-governance-wg-transcript.html">Transcripci&oacute;n completa (solo en ingl&eacute;s)</a> &mdash; publicada con el consentimiento de todas las personas participantes</li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Primera reuni&oacute;n de un posible grupo de trabajo de gobernanza, convocada para empezar a dise&ntilde;ar las estructuras de toma de decisiones distribuida de la asociaci&oacute;n. La llamada se grab&oacute; en dos partes porque el l&iacute;mite de tiempo de la videollamada cort&oacute; la primera sesi&oacute;n. Se trata de un grupo interino puesto en marcha con la autoridad de la junta; no se tomaron decisiones vinculantes, y el grupo acord&oacute; que su propia composici&oacute;n debe abrirse a la comunidad lo antes posible.</p>
+
+                        <h2>1. Prop&oacute;sito y Ronda Inicial</h2>
+                        <p>Cada participante comparti&oacute; su visi&oacute;n de la misi&oacute;n del grupo. Hilos comunes: una asociaci&oacute;n genuinamente propiedad de sus miembros y controlada por ellos &mdash; no solo en teor&iacute;a, y como exigen los estatutos; decisiones tomadas all&iacute; donde est&aacute; la informaci&oacute;n, apoyadas en dosieres informativos bien preparados (inspirados en el modelo suizo del folleto de votaciones); realismo sobre la capacidad necesaria para preparar esa informaci&oacute;n; una segmentaci&oacute;n de los tipos de decisi&oacute;n para que no todo recaiga sobre todo el mundo; y miembros que se sientan empoderados e informados, de modo que sigan implicados incluso cuando una decisi&oacute;n no les d&eacute; la raz&oacute;n. Riesgos nombrados abiertamente: la fatiga de decisi&oacute;n, la sobrecarga de informaci&oacute;n y el &laquo;teatro descentralizado&raquo; &mdash; estructuras que parecen participativas mientras nada cambia realmente.</p>
+
+                        <h2>2. Mandato y Legitimidad</h2>
+                        <p>El grupo nombr&oacute; con franqueza su propio problema del huevo y la gallina: la &uacute;nica autoridad democr&aacute;tica de la asociaci&oacute;n hasta ahora es la junta electa, as&iacute; que un proceso democr&aacute;tico para constituir grupos de trabajo tiene que arrancar con autoridad de la junta &mdash; una autoridad que se describi&oacute; como &laquo;prestada&raquo; por los miembros. El grupo fue expl&iacute;cito en que un grupo peque&ntilde;o y no anunciado dise&ntilde;ando la gobernanza podr&iacute;a por s&iacute; mismo crear divisi&oacute;n, y se comprometi&oacute; a abrir el proceso r&aacute;pidamente: anunciar el grupo en la pr&oacute;xima llamada comunitaria, publicar actas de sus reuniones y convertirse en el primer grupo de trabajo constituido democr&aacute;ticamente en cuanto sea factible.</p>
+
+                        <h2>3. Selecci&oacute;n del Grupo de Trabajo</h2>
+                        <p>Direcci&oacute;n acordada (detalles por definir): un proceso de solicitud breve y ligero &mdash; mucho m&aacute;s ligero que la elecci&oacute;n de la junta &mdash; abierto a cualquiera; una composici&oacute;n propuesta que se presenta a los miembros con una v&iacute;a de respuesta que influya en el proceso sin detenerlo (por ejemplo, objetar presentando la propia candidatura); comunicaci&oacute;n personal con quienes no resulten seleccionados; y un l&iacute;mite pr&aacute;ctico de unas seis o siete personas para que el grupo pueda trabajar de verdad. Varias personas participantes afirmaron que ceder&iacute;an su puesto de buen grado si se presentaran personas m&aacute;s id&oacute;neas. El grupo se&ntilde;al&oacute; que este proceso sirve a la vez como caso de prueba para la constituci&oacute;n de todos los futuros grupos de trabajo &mdash; una posible forma ser&iacute;a: propuesta, filtrado por un grupo de gobernanza, aprobaci&oacute;n de la junta y ratificaci&oacute;n final por la Asamblea General &mdash; a desarrollar en pr&oacute;ximas reuniones.</p>
+
+                        <h2>4. Borrador de Principios</h2>
+                        <p>Kate B present&oacute; un borrador de principios para el debate:</p>
+                        <ul>
+                            <li>El grupo de trabajo propone, con razonamiento; la comunidad decide.</li>
+                            <li>La gobernanza es lo bastante s&oacute;lida como para que incluso una junta de mala fe solo pueda causar un da&ntilde;o limitado y reversible &mdash; y lo bastante ligera como para que la gente realmente la use.</li>
+                            <li>Los votos vinculan pol&iacute;tica y presupuesto, no la ejecuci&oacute;n operativa.</li>
+                            <li>Si una decisi&oacute;n puede tomarla una persona coordinadora o un grupo de trabajo, deber&iacute;a tomarla.</li>
+                            <li>La gobernanza es descentralizada y ligera: existe para tomar mejores decisiones impulsadas por la comunidad, no como un fin en s&iacute; misma.</li>
+                            <li>Responsable, abierta, transparente y participativa &mdash; decisiones visibles y abiertas a la impugnaci&oacute;n por la comunidad amplia.</li>
+                        </ul>
+                        <p>Daniel T propuso a&ntilde;adir un principio fundacional m&aacute;s: <strong>confiar en la sabidur&iacute;a de la comunidad</strong> &mdash; un dise&ntilde;o de gobernanza que trata a los miembros como incapaces se convierte en profec&iacute;a autocumplida. Los principios siguen siendo un borrador por refinar.</p>
+
+                        <h2>5. Canales de Trabajo Abiertos o Privados</h2>
+                        <p>Un desacuerdo genuino, expresado con franqueza. Kate B y otras personas prefer&iacute;an trabajar en un canal privado interino &mdash; ligero, con mucho contexto, r&aacute;pido &mdash; publicando en el canal abierto de gobernanza todo lo publicable; entre las preocupaciones: la eficiencia y el riesgo de que propuestas a medio hacer se malinterpreten. Daniel T defendi&oacute; desde su experiencia trabajar totalmente en abierto &mdash; el feedback temprano evita trabajo in&uacute;til y genera confianza &mdash; y dej&oacute; constancia de su desacuerdo con los canales privados en general. Resultado interino: el grupo contin&uacute;a por ahora en un canal privado, la elecci&oacute;n se presentar&aacute; con sus razones en la llamada comunitaria para recibir feedback, y la cuesti&oacute;n se revisar&aacute; en condiciones cuando el grupo est&eacute; formalmente constituido.</p>
+
+                        <h2>6. Roles y Capacidad</h2>
+                        <p>El grupo necesita algunas personas m&aacute;s. Julian aporta experiencia en procesos financieros de asambleas generales y se le pidi&oacute; asumir el hilo de finanzas y aprobaci&oacute;n de presupuestos. Se identific&oacute; un rol de administraci&oacute;n o custodia de decisiones &mdash; gestionar propuestas, dosieres informativos, organizar votaciones y la log&iacute;stica de la AG. Kate B ha redactado una matriz de niveles de decisi&oacute;n (solo-AG / impacto alto / medio / bajo, cada uno con un formato de decisi&oacute;n apropiado) que circular&aacute; de forma as&iacute;ncrona para recibir comentarios. Las votaciones vivir&iacute;an probablemente en la app de miembros ya existente de la comunidad.</p>
+
+                        <h2>7. Pr&oacute;ximos Pasos</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Acci&oacute;n</th><th>Plazo</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Redactar la declaraci&oacute;n que anuncia el grupo de trabajo para la llamada comunitaria, incluida la cuesti&oacute;n del canal privado; circularla al grupo para revisi&oacute;n; preparar y publicar las actas</td><td>Antes de la llamada comunitaria</td></tr>
+                                <tr><td>Celine V</td><td>Esbozar la propuesta del proceso de selecci&oacute;n; convocar la pr&oacute;xima llamada</td><td>Esta semana</td></tr>
+                                <tr><td>Kate B</td><td>Redactar las razones del canal privado interino; compartir el borrador de la matriz de niveles de decisi&oacute;n; a&ntilde;adir a Ben D y Julian al grupo de coordinaci&oacute;n interino</td><td>Antes de la pr&oacute;xima reuni&oacute;n</td></tr>
+                                <tr><td>Todas las personas</td><td>Dar feedback as&iacute;ncrono sobre los borradores</td><td>En curso</td></tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Pr&oacute;xima reuni&oacute;n:</strong> martes 4 de agosto de 2026, 19:00 CEST, para hacer balance de la llamada comunitaria y definir los roles y el proceso de solicitud.</p>
+
+                        <p><em>Actas elaboradas a partir de una grabaci&oacute;n. La transcripci&oacute;n literal completa se publica junto a estas actas con el consentimiento de todas las personas participantes.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Pr&eacute;sents (visioconf&eacute;rence) :</strong> Kate B (facilitatrice), Daniel T, Celine V, Julian, Ben D
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Documents Complets</h3>
+                        <ul>
+                            <li><a href="2026-07-29-governance-wg-transcript.html">Transcription compl&egrave;te (en anglais uniquement)</a> &mdash; publi&eacute;e avec le consentement de tous les participants</li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Premi&egrave;re r&eacute;union d&rsquo;un &eacute;ventuel groupe de travail sur la gouvernance, convoqu&eacute;e pour commencer &agrave; concevoir les structures de d&eacute;cision distribu&eacute;es de l&rsquo;association. L&rsquo;appel a &eacute;t&eacute; enregistr&eacute; en deux parties, la limite de temps de la visioconf&eacute;rence ayant interrompu la premi&egrave;re session. Il s&rsquo;agit d&rsquo;un groupe int&eacute;rimaire amorc&eacute; avec l&rsquo;autorit&eacute; du conseil ; aucune d&eacute;cision contraignante n&rsquo;a &eacute;t&eacute; prise, et le groupe a convenu que sa propre composition devait &ecirc;tre ouverte &agrave; la communaut&eacute; aussi vite que possible.</p>
+
+                        <h2>1. Objectif et Tour de Table</h2>
+                        <p>Chaque participant a partag&eacute; sa compr&eacute;hension de la mission du groupe. Fils communs : une association v&eacute;ritablement d&eacute;tenue et contr&ocirc;l&eacute;e par ses membres &mdash; pas seulement en th&eacute;orie, et comme l&rsquo;exigent les statuts ; des d&eacute;cisions prises l&agrave; o&ugrave; se trouve l&rsquo;information, appuy&eacute;es par des dossiers d&rsquo;information bien pr&eacute;par&eacute;s (inspir&eacute;s du mod&egrave;le suisse du livret de votation) ; du r&eacute;alisme quant &agrave; la capacit&eacute; n&eacute;cessaire pour pr&eacute;parer cette information ; une segmentation des types de d&eacute;cisions pour que tout ne retombe pas sur tout le monde ; et des membres qui se sentent inform&eacute;s et l&eacute;gitimes, afin de rester engag&eacute;s m&ecirc;me quand une d&eacute;cision ne va pas dans leur sens. Risques nomm&eacute;s ouvertement : la fatigue d&eacute;cisionnelle, la surcharge d&rsquo;information et le &laquo; th&eacute;&acirc;tre d&eacute;centralis&eacute; &raquo; &mdash; des structures d&rsquo;apparence participative o&ugrave; rien ne change vraiment.</p>
+
+                        <h2>2. Mandat et L&eacute;gitimit&eacute;</h2>
+                        <p>Le groupe a nomm&eacute; franchement son propre probl&egrave;me de l&rsquo;&oelig;uf et de la poule : la seule autorit&eacute; d&eacute;mocratique de l&rsquo;association &agrave; ce jour est le conseil &eacute;lu, donc un processus d&eacute;mocratique pour constituer des groupes de travail doit &ecirc;tre amorc&eacute; avec l&rsquo;autorit&eacute; du conseil &mdash; une autorit&eacute; d&eacute;crite comme &laquo; pr&ecirc;t&eacute;e &raquo; par les membres. Le groupe a &eacute;t&eacute; explicite sur le fait qu&rsquo;un petit groupe non annonc&eacute; concevant la gouvernance pourrait lui-m&ecirc;me cr&eacute;er de la division, et s&rsquo;est engag&eacute; &agrave; ouvrir le processus rapidement : annoncer le groupe au prochain appel communautaire, publier les comptes rendus de ses r&eacute;unions et devenir le premier groupe de travail constitu&eacute; d&eacute;mocratiquement d&egrave;s que possible.</p>
+
+                        <h2>3. S&eacute;lection du Groupe de Travail</h2>
+                        <p>Direction convenue (d&eacute;tails &agrave; pr&eacute;ciser) : un processus de candidature court et l&eacute;ger &mdash; bien plus l&eacute;ger que l&rsquo;&eacute;lection du conseil &mdash; ouvert &agrave; tous ; une composition propos&eacute;e pr&eacute;sent&eacute;e aux membres avec un moyen de donner un retour qui influence le processus sans l&rsquo;arr&ecirc;ter (par exemple, objecter en candidatant) ; une communication personnelle avec les candidats non retenus ; et une taille plafonn&eacute;e en pratique &agrave; six ou sept personnes pour que le groupe puisse r&eacute;ellement travailler. Plusieurs participants ont d&eacute;clar&eacute; qu&rsquo;ils c&eacute;deraient volontiers leur place si des personnes plus qualifi&eacute;es se pr&eacute;sentaient. Le groupe a not&eacute; que ce processus sert aussi de cas d&rsquo;&eacute;cole pour la constitution de tous les futurs groupes de travail &mdash; une forme possible &eacute;tant : soumission, filtrage par un groupe de gouvernance, approbation du conseil et ratification &eacute;ventuelle par l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale &mdash; &agrave; d&eacute;velopper lors de prochaines r&eacute;unions.</p>
+
+                        <h2>4. Projet de Principes</h2>
+                        <p>Kate B a pr&eacute;sent&eacute; un projet de principes pour discussion :</p>
+                        <ul>
+                            <li>Le groupe de travail propose, avec un raisonnement ; la communaut&eacute; d&eacute;cide.</li>
+                            <li>La gouvernance est assez solide pour qu&rsquo;un conseil m&ecirc;me de mauvaise foi ne puisse causer que des dommages limit&eacute;s et r&eacute;versibles &mdash; et assez l&eacute;g&egrave;re pour que les gens s&rsquo;en servent r&eacute;ellement.</li>
+                            <li>Les votes engagent la politique et le budget, pas l&rsquo;ex&eacute;cution op&eacute;rationnelle.</li>
+                            <li>Si une d&eacute;cision peut &ecirc;tre prise par un coordinateur ou un groupe de travail, elle devrait l&rsquo;&ecirc;tre.</li>
+                            <li>La gouvernance est d&eacute;centralis&eacute;e et sobre : elle existe pour prendre de meilleures d&eacute;cisions port&eacute;es par la communaut&eacute;, pas comme une fin en soi.</li>
+                            <li>Responsable, ouverte, transparente et participative &mdash; des d&eacute;cisions visibles et contestables par la communaut&eacute; au sens large.</li>
+                        </ul>
+                        <p>Daniel T a propos&eacute; d&rsquo;ajouter un principe fondateur suppl&eacute;mentaire : <strong>faire confiance &agrave; la sagesse de la communaut&eacute;</strong> &mdash; une conception de la gouvernance qui traite les membres comme incapables devient une proph&eacute;tie autor&eacute;alisatrice. Les principes restent un projet &agrave; affiner.</p>
+
+                        <h2>5. Canaux de Travail Ouverts ou Priv&eacute;s</h2>
+                        <p>Un d&eacute;saccord r&eacute;el, exprim&eacute; franchement. Kate B et d&rsquo;autres pr&eacute;f&eacute;raient travailler dans un canal priv&eacute; int&eacute;rimaire &mdash; sobre, riche en contexte, rapide &mdash; tout en publiant dans le canal ouvert de gouvernance tout ce qui peut l&rsquo;&ecirc;tre ; parmi les pr&eacute;occupations : l&rsquo;efficacit&eacute; et le risque que des propositions inachev&eacute;es soient mal interpr&eacute;t&eacute;es. Daniel T a plaid&eacute;, fort de son exp&eacute;rience, pour un travail enti&egrave;rement ouvert &mdash; les retours pr&eacute;coces &eacute;vitent du travail inutile et construisent la confiance &mdash; et a fait consigner son d&eacute;saccord avec les canaux priv&eacute;s en g&eacute;n&eacute;ral. R&eacute;sultat int&eacute;rimaire : le groupe continue pour l&rsquo;instant dans un canal priv&eacute;, ce choix sera pr&eacute;sent&eacute; avec ses raisons lors de l&rsquo;appel communautaire pour recueillir des retours, et la question sera r&eacute;examin&eacute;e s&eacute;rieusement une fois le groupe formellement constitu&eacute;.</p>
+
+                        <h2>6. R&ocirc;les et Capacit&eacute;</h2>
+                        <p>Le groupe a besoin de quelques personnes de plus. Julian apporte une exp&eacute;rience des processus financiers en assembl&eacute;e g&eacute;n&eacute;rale et a &eacute;t&eacute; invit&eacute; &agrave; prendre en charge le fil finances et approbation du budget. Un r&ocirc;le d&rsquo;administration ou d&rsquo;intendance des d&eacute;cisions a &eacute;t&eacute; identifi&eacute; &mdash; g&eacute;rer les propositions, les dossiers d&rsquo;information, organiser les votes et la logistique des AG. Kate B a r&eacute;dig&eacute; une matrice de niveaux de d&eacute;cision (AG uniquement / impact fort / moyen / faible, chacun avec un format de d&eacute;cision appropri&eacute;) qui circulera de mani&egrave;re asynchrone pour retours. Les votes seraient vraisemblablement h&eacute;berg&eacute;s dans l&rsquo;application des membres d&eacute;j&agrave; existante.</p>
+
+                        <h2>7. Prochaines &Eacute;tapes</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Personne</th><th>Action</th><th>&Eacute;ch&eacute;ance</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>R&eacute;diger la d&eacute;claration annon&ccedil;ant le groupe de travail pour l&rsquo;appel communautaire, y compris la question du canal priv&eacute; ; la faire relire par le groupe ; pr&eacute;parer et publier les comptes rendus</td><td>Avant l&rsquo;appel communautaire</td></tr>
+                                <tr><td>Celine V</td><td>Esquisser la proposition de processus de s&eacute;lection ; organiser le prochain appel</td><td>Cette semaine</td></tr>
+                                <tr><td>Kate B</td><td>R&eacute;diger les raisons du canal priv&eacute; int&eacute;rimaire ; partager le projet de matrice des niveaux de d&eacute;cision ; ajouter Ben D et Julian au groupe de coordination int&eacute;rimaire</td><td>Avant la prochaine r&eacute;union</td></tr>
+                                <tr><td>Tous</td><td>Donner un retour asynchrone sur les projets de documents</td><td>En continu</td></tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Prochaine r&eacute;union :</strong> mardi 4 ao&ucirc;t 2026, 19h00 CEST, pour d&eacute;briefer l&rsquo;appel communautaire et d&eacute;finir les r&ocirc;les et le processus de candidature.</p>
+
+                        <p><em>Compte rendu &eacute;tabli &agrave; partir d&rsquo;un enregistrement. La transcription int&eacute;grale est publi&eacute;e aux c&ocirc;t&eacute;s de ce compte rendu avec le consentement de tous les participants.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanze tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Presenti (videochiamata):</strong> Kate B (facilitatrice), Daniel T, Celine V, Julian, Ben D
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Documenti Completi</h3>
+                        <ul>
+                            <li><a href="2026-07-29-governance-wg-transcript.html">Trascrizione completa (solo in inglese)</a> &mdash; pubblicata con il consenso di tutte le persone partecipanti</li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Prima riunione di un potenziale gruppo di lavoro sulla governance, convocata per iniziare a progettare le strutture decisionali distribuite dell&rsquo;associazione. La chiamata &egrave; stata registrata in due parti perch&eacute; il limite di tempo della videochiamata ha interrotto la prima sessione. Si tratta di un gruppo interinale avviato con l&rsquo;autorit&agrave; del consiglio; non sono state prese decisioni vincolanti, e il gruppo ha concordato che la propria composizione debba essere aperta alla comunit&agrave; il prima possibile.</p>
+
+                        <h2>1. Scopo e Giro di Apertura</h2>
+                        <p>Ogni partecipante ha condiviso la propria comprensione della missione del gruppo. Fili comuni: un&rsquo;associazione genuinamente posseduta e controllata dai propri membri &mdash; non solo in teoria, e come richiedono gli statuti; decisioni prese l&agrave; dove si trova l&rsquo;informazione, sostenute da dossier informativi ben preparati (ispirati al modello svizzero del libretto di votazione); realismo sulla capacit&agrave; necessaria per preparare quelle informazioni; una segmentazione dei tipi di decisione perch&eacute; non tutto ricada su tutti; e membri che si sentano informati e nelle condizioni di incidere, cos&igrave; da restare coinvolti anche quando una decisione va contro di loro. Rischi nominati apertamente: la fatica decisionale, il sovraccarico informativo e il &laquo;teatro decentralizzato&raquo; &mdash; strutture che sembrano partecipative mentre nulla cambia davvero.</p>
+
+                        <h2>2. Mandato e Legittimit&agrave;</h2>
+                        <p>Il gruppo ha nominato con franchezza il proprio problema dell&rsquo;uovo e della gallina: l&rsquo;unica autorit&agrave; democratica dell&rsquo;associazione finora &egrave; il consiglio eletto, quindi un processo democratico per costituire gruppi di lavoro deve essere avviato con l&rsquo;autorit&agrave; del consiglio &mdash; un&rsquo;autorit&agrave; descritta come &laquo;in prestito&raquo; dai membri. Il gruppo &egrave; stato esplicito sul fatto che un piccolo gruppo non annunciato che progetta la governance potrebbe esso stesso creare divisione, e si &egrave; impegnato ad aprire il processo rapidamente: annunciare il gruppo alla prossima chiamata comunitaria, pubblicare i verbali delle proprie riunioni e diventare il primo gruppo di lavoro costituito democraticamente non appena possibile.</p>
+
+                        <h2>3. Selezione del Gruppo di Lavoro</h2>
+                        <p>Direzione concordata (dettagli da definire): un processo di candidatura breve e leggero &mdash; molto pi&ugrave; leggero dell&rsquo;elezione del consiglio &mdash; aperto a chiunque; una composizione proposta presentata ai membri con un modo di dare riscontri che influenzi il processo senza fermarlo (per esempio, obiettare candidandosi); comunicazione personale con chi non viene selezionato; e un tetto pratico di circa sei-sette persone perch&eacute; il gruppo possa davvero lavorare. Diverse persone partecipanti hanno dichiarato che cederebbero volentieri il posto se si presentassero persone pi&ugrave; adatte. Il gruppo ha notato che questo processo funge anche da caso pilota per la costituzione di tutti i futuri gruppi di lavoro &mdash; una forma possibile: proposta, filtro da parte di un gruppo di governance, approvazione del consiglio ed eventuale ratifica dell&rsquo;Assemblea Generale &mdash; da sviluppare nelle prossime riunioni.</p>
+
+                        <h2>4. Bozza di Principi</h2>
+                        <p>Kate B ha presentato una bozza di principi per la discussione:</p>
+                        <ul>
+                            <li>Il gruppo di lavoro propone, con motivazioni; la comunit&agrave; decide.</li>
+                            <li>La governance &egrave; abbastanza solida che persino un consiglio in malafede possa causare solo danni limitati e recuperabili &mdash; e abbastanza leggera che le persone la usino davvero.</li>
+                            <li>I voti vincolano politiche e bilancio, non l&rsquo;esecuzione operativa.</li>
+                            <li>Se una decisione pu&ograve; essere presa da una persona coordinatrice o da un gruppo di lavoro, dovrebbe esserlo.</li>
+                            <li>La governance &egrave; decentralizzata e snella: esiste per prendere decisioni migliori guidate dalla comunit&agrave;, non come fine a s&eacute; stessa.</li>
+                            <li>Responsabile, aperta, trasparente e partecipativa &mdash; decisioni visibili e contestabili dalla comunit&agrave; pi&ugrave; ampia.</li>
+                        </ul>
+                        <p>Daniel T ha proposto di aggiungere un ulteriore principio fondante: <strong>fidarsi della saggezza della comunit&agrave;</strong> &mdash; una governance progettata trattando i membri come incapaci diventa una profezia che si autoavvera. I principi restano una bozza da affinare.</p>
+
+                        <h2>5. Canali di Lavoro Aperti o Privati</h2>
+                        <p>Un disaccordo genuino, espresso con franchezza. Kate B e altre persone preferivano lavorare in un canale privato interinale &mdash; snello, ad alto contesto, veloce &mdash; pubblicando nel canale aperto di governance tutto il pubblicabile; tra le preoccupazioni: l&rsquo;efficienza e il rischio che proposte a met&agrave; vengano fraintese. Daniel T ha sostenuto, in base alla propria esperienza, il lavoro completamente in aperto &mdash; i riscontri precoci evitano lavoro sprecato e costruiscono fiducia &mdash; e ha messo a verbale il proprio disaccordo con i canali privati in generale. Esito interinale: il gruppo continua per ora in un canale privato, la scelta sar&agrave; presentata con le sue ragioni alla chiamata comunitaria per raccogliere riscontri, e la questione sar&agrave; riesaminata seriamente una volta che il gruppo sar&agrave; formalmente costituito.</p>
+
+                        <h2>6. Ruoli e Capacit&agrave;</h2>
+                        <p>Il gruppo ha bisogno di alcune persone in pi&ugrave;. Julian porta esperienza nei processi finanziari delle assemblee generali e gli &egrave; stato chiesto di occuparsi del filone finanze e approvazione del bilancio. &Egrave; stato individuato un ruolo di amministrazione o custodia delle decisioni &mdash; gestire le proposte, i dossier informativi, organizzare le votazioni e la logistica delle AG. Kate B ha redatto una matrice dei livelli di decisione (solo-AG / impatto alto / medio / basso, ciascuno con un formato decisionale appropriato) che circoler&agrave; in modo asincrono per riscontri. Le votazioni vivrebbero probabilmente nell&rsquo;app dei membri gi&agrave; esistente della comunit&agrave;.</p>
+
+                        <h2>7. Prossimi Passi</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Azione</th><th>Scadenza</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Redigere la dichiarazione che annuncia il gruppo di lavoro per la chiamata comunitaria, inclusa la questione del canale privato; farla rivedere al gruppo; preparare e pubblicare i verbali</td><td>Prima della chiamata comunitaria</td></tr>
+                                <tr><td>Celine V</td><td>Delineare la proposta del processo di selezione; organizzare la prossima chiamata</td><td>Questa settimana</td></tr>
+                                <tr><td>Kate B</td><td>Redigere le ragioni del canale privato interinale; condividere la bozza della matrice dei livelli di decisione; aggiungere Ben D e Julian al gruppo di coordinamento interinale</td><td>Prima della prossima riunione</td></tr>
+                                <tr><td>Tutti</td><td>Dare riscontri asincroni sulle bozze</td><td>In corso</td></tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Prossima riunione:</strong> marted&igrave; 4 agosto 2026, ore 19:00 CEST, per fare il punto sulla chiamata comunitaria e definire ruoli e processo di candidatura.</p>
+
+                        <p><em>Verbale redatto a partire da una registrazione. La trascrizione integrale &egrave; pubblicata accanto a questo verbale con il consenso di tutte le persone partecipanti.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Bei Diskrepanzen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesend (Videokonferenz):</strong> Kate B (Moderation), Daniel T, Celine V, Julian, Ben D
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Vollst&auml;ndige Aufzeichnungen</h3>
+                        <ul>
+                            <li><a href="2026-07-29-governance-wg-transcript.html">Vollst&auml;ndiges Transkript (nur auf Englisch)</a> &mdash; ver&ouml;ffentlicht mit Zustimmung aller Teilnehmenden</li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Die erste Sitzung einer m&ouml;glichen Governance-Arbeitsgruppe, einberufen, um mit dem Entwurf der verteilten Entscheidungsstrukturen des Vereins zu beginnen. Der Anruf wurde in zwei Teilen aufgezeichnet, weil das Zeitlimit der Videokonferenz die erste Sitzung unterbrach. Es handelt sich um eine &Uuml;bergangsgruppe, die mit Vorstandsautorit&auml;t angesto&szlig;en wurde; es wurden keine verbindlichen Beschl&uuml;sse gefasst, und die Gruppe war sich einig, dass ihre eigene Zusammensetzung so schnell wie m&ouml;glich f&uuml;r die Community ge&ouml;ffnet werden soll.</p>
+
+                        <h2>1. Zweck und Check-in</h2>
+                        <p>Alle Teilnehmenden teilten ihr Verst&auml;ndnis der Mission der Gruppe. Gemeinsame F&auml;den: ein Verein, der seinen Mitgliedern wirklich geh&ouml;rt und von ihnen kontrolliert wird &mdash; nicht nur theoretisch, und wie es die Statuten verlangen; Entscheidungen dort, wo die Information liegt, gest&uuml;tzt auf gut aufbereitete Informationspakete (inspiriert vom Schweizer Abstimmungsb&uuml;chlein); Realismus bez&uuml;glich der Kapazit&auml;t, die die Aufbereitung dieser Informationen erfordert; eine Segmentierung der Entscheidungstypen, damit nicht alles bei allen landet; und Mitglieder, die sich informiert und handlungsf&auml;hig f&uuml;hlen, sodass sie engagiert bleiben, auch wenn eine Entscheidung gegen sie ausf&auml;llt. Offen benannte Risiken: Entscheidungsm&uuml;digkeit, Informations&uuml;berflutung und &bdquo;dezentrales Theater&ldquo; &mdash; Strukturen, die partizipativ aussehen, w&auml;hrend sich nichts wirklich &auml;ndert.</p>
+
+                        <h2>2. Mandat und Legitimit&auml;t</h2>
+                        <p>Die Gruppe benannte ihr eigenes Henne-Ei-Problem offen: Die einzige demokratische Autorit&auml;t im Verein ist bislang der gew&auml;hlte Vorstand, also muss ein demokratischer Prozess zur Bildung von Arbeitsgruppen mit Vorstandsautorit&auml;t angesto&szlig;en werden &mdash; einer Autorit&auml;t, die als von den Mitgliedern &bdquo;geliehen&ldquo; beschrieben wurde. Die Gruppe war ausdr&uuml;cklich der Ansicht, dass eine unangek&uuml;ndigte kleine Gruppe, die Governance entwirft, selbst Spaltung erzeugen k&ouml;nnte, und verpflichtete sich, den Prozess schnell zu &ouml;ffnen: die Gruppe beim n&auml;chsten Community-Call anzuk&uuml;ndigen, Protokolle ihrer Sitzungen zu ver&ouml;ffentlichen und so bald wie praktikabel die erste demokratisch konstituierte Arbeitsgruppe zu werden.</p>
+
+                        <h2>3. Auswahl der Arbeitsgruppe</h2>
+                        <p>Vereinbarte Richtung (Details noch auszuarbeiten): ein kurzer, leichter Bewerbungsprozess &mdash; deutlich leichter als die Vorstandswahl &mdash; offen f&uuml;r alle; eine vorgeschlagene Zusammensetzung, die den Mitgliedern mit einer R&uuml;ckmeldem&ouml;glichkeit vorgestellt wird, die den Prozess beeinflusst, ohne ihn anzuhalten (zum Beispiel Einspruch durch eigene Bewerbung); pers&ouml;nliche Kommunikation mit nicht ber&uuml;cksichtigten Bewerbenden; und eine praktische Obergrenze von etwa sechs bis sieben Personen, damit die Gruppe tats&auml;chlich arbeiten kann. Mehrere Teilnehmende erkl&auml;rten, sie w&uuml;rden ihren Platz gern r&auml;umen, wenn sich besser geeignete Personen melden. Die Gruppe hielt fest, dass dieser Prozess zugleich als Testfall daf&uuml;r dient, wie k&uuml;nftig alle Arbeitsgruppen konstituiert werden &mdash; eine m&ouml;gliche Form: Einreichung, Filterung durch eine Governance-Gruppe, Zustimmung des Vorstands und sp&auml;tere Ratifizierung durch die Generalversammlung &mdash; auszuarbeiten in sp&auml;teren Sitzungen.</p>
+
+                        <h2>4. Entwurf von Grunds&auml;tzen</h2>
+                        <p>Kate B stellte einen Entwurf von Grunds&auml;tzen zur Diskussion:</p>
+                        <ul>
+                            <li>Die Arbeitsgruppe schl&auml;gt vor, mit Begr&uuml;ndung; die Community entscheidet.</li>
+                            <li>Governance ist robust genug, dass selbst ein b&ouml;swilliger Vorstand nur begrenzten, behebbaren Schaden anrichten kann &mdash; und leicht genug, dass Menschen sie tats&auml;chlich nutzen.</li>
+                            <li>Abstimmungen binden Politik und Budget, nicht die operative Umsetzung.</li>
+                            <li>Wenn eine Entscheidung von einer koordinierenden Person oder einer Arbeitsgruppe getroffen werden kann, sollte sie es.</li>
+                            <li>Governance ist dezentral und schlank: Sie existiert, um bessere, von der Community getragene Entscheidungen zu erm&ouml;glichen, nicht als Selbstzweck.</li>
+                            <li>Rechenschaftspflichtig, offen, transparent und partizipativ &mdash; Entscheidungen sind sichtbar und durch die breitere Community anfechtbar.</li>
+                        </ul>
+                        <p>Daniel T schlug einen weiteren Grundsatz vor: <strong>der Weisheit der Community vertrauen</strong> &mdash; Governance-Design, das Mitglieder wie Unm&uuml;ndige behandelt, wird zur selbsterf&uuml;llenden Prophezeiung. Die Grunds&auml;tze bleiben ein Entwurf zur Verfeinerung.</p>
+
+                        <h2>5. Offene oder Private Arbeitskan&auml;le</h2>
+                        <p>Eine echte Meinungsverschiedenheit, offen ausgetragen. Kate B und andere bevorzugten einen privaten &Uuml;bergangskanal &mdash; schlank, kontextreich, schnell &mdash; bei gleichzeitiger Ver&ouml;ffentlichung alles Ver&ouml;ffentlichbaren im offenen Governance-Kanal; zu den Bedenken geh&ouml;rten Effizienz und das Risiko, dass halbfertige Vorschl&auml;ge missverstanden werden. Daniel T argumentierte aus Erfahrung f&uuml;r vollst&auml;ndig offenes Arbeiten &mdash; fr&uuml;hes Feedback verhindert vergebliche Arbeit und schafft Vertrauen &mdash; und lie&szlig; seinen Widerspruch gegen private Kan&auml;le generell festhalten. Zwischenergebnis: Die Gruppe arbeitet vorerst in einem privaten Kanal weiter, die Entscheidung wird mit ihren Gr&uuml;nden beim Community-Call zur R&uuml;ckmeldung vorgestellt, und die Frage wird ernsthaft neu verhandelt, sobald die Gruppe formell konstituiert ist.</p>
+
+                        <h2>6. Rollen und Kapazit&auml;t</h2>
+                        <p>Die Gruppe braucht einige weitere Personen. Julian bringt Erfahrung mit Finanzprozessen in Generalversammlungen mit und wurde gebeten, den Strang Finanzen und Budgetgenehmigung zu &uuml;bernehmen. Eine Rolle als Entscheidungs-Steward bzw. Administration wurde identifiziert &mdash; Vorschl&auml;ge verwalten, Informationspakete, Abstimmungen organisieren und GV-Logistik. Kate B hat eine Matrix der Entscheidungsstufen entworfen (nur-GV / hohe / mittlere / geringe Auswirkung, jeweils mit passendem Entscheidungsformat), die asynchron zur R&uuml;ckmeldung zirkulieren wird. Abstimmungen w&uuml;rden voraussichtlich in der bestehenden Mitglieder-App der Community stattfinden.</p>
+
+                        <h2>7. N&auml;chste Schritte</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Aktion</th><th>F&auml;lligkeit</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Die Erkl&auml;rung zur Ank&uuml;ndigung der Arbeitsgruppe f&uuml;r den Community-Call entwerfen, einschlie&szlig;lich der Frage des privaten Kanals; der Gruppe zur Durchsicht geben; Protokolle erstellen und ver&ouml;ffentlichen</td><td>Vor dem Community-Call</td></tr>
+                                <tr><td>Celine V</td><td>Den Vorschlag f&uuml;r den Auswahlprozess ausarbeiten; den n&auml;chsten Call organisieren</td><td>Diese Woche</td></tr>
+                                <tr><td>Kate B</td><td>Die Gr&uuml;nde f&uuml;r den privaten &Uuml;bergangskanal formulieren; den Entwurf der Entscheidungsstufen-Matrix teilen; Ben D und Julian zur &uuml;bergangsweisen Koordinationsgruppe hinzuf&uuml;gen</td><td>Vor der n&auml;chsten Sitzung</td></tr>
+                                <tr><td>Alle</td><td>Asynchrones Feedback zu den Entw&uuml;rfen geben</td><td>Laufend</td></tr>
+                            </tbody>
+                        </table>
+                        <p><strong>N&auml;chste Sitzung:</strong> Dienstag, 4. August 2026, 19:00 Uhr CEST, zur Nachbesprechung des Community-Calls und zur Definition der Rollen und des Bewerbungsprozesses.</p>
+
+                        <p><em>Protokoll auf Grundlage einer Aufzeichnung erstellt. Das vollst&auml;ndige w&ouml;rtliche Transkript wird mit Zustimmung aller Teilnehmenden neben diesem Protokoll ver&ouml;ffentlicht.</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>
