@@ -46,7 +46,7 @@
                         '</ul>' +
                     '</li>' +
                     '<li><a href="' + prefix + '/#useful-links">Links</a></li>' +
-                    '<li><a href="https://tickets.nobodies.team/events/nobodiescollective/2089167" class="btn btn-primary btn-nav" target="_blank" rel="noopener noreferrer">Tickets</a></li>' +
+                    /* Hidden: tickets link (not relevant between events) '<li><a href="https://tickets.nobodies.team/events/nobodiescollective/2089167" class="btn btn-primary btn-nav" target="_blank" rel="noopener noreferrer">Tickets</a></li>' + */
                 '</ul>' +
             '</nav>' +
         '</header>';
