@@ -37,14 +37,8 @@
                         '</ul>' +
                     '</li>' +
                     '<li><a href="' + prefix + '/faq.html">FAQ</a></li>' +
-                    '<li class="nav-dropdown">' +
-                        '<a role="button" tabindex="0" aria-haspopup="true">Transparency <svg class="nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>' +
-                        '<ul class="nav-dropdown-menu">' +
-                            '<li><a href="' + prefix + '/transparency.html">Transparency</a></li>' +
-                            '<li><a href="' + prefix + '/transparency.html">Meetings</a></li>' +
-                            /* Hidden: updates link (stale) '<li><a href="' + prefix + '/updates.html">Updates</a></li>' + */
-                        '</ul>' +
-                    '</li>' +
+                    '<li><a href="' + prefix + '/transparency.html">Transparency</a></li>' +
+                    /* Hidden: updates link (stale) — was in a Transparency dropdown, removed when the activity feed went; restore as a dropdown if updates.html comes back: '<li><a href="' + prefix + '/updates.html">Updates</a></li>' */
                     '<li><a href="' + prefix + '/#useful-links">Links</a></li>' +
                     /* Hidden: tickets link (not relevant between events) '<li><a href="https://tickets.nobodies.team/events/nobodiescollective/2089167" class="btn btn-primary btn-nav" target="_blank" rel="noopener noreferrer">Tickets</a></li>' + */
                 '</ul>' +
