@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+
+    <title>Board Meeting - July 30, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>Board Meeting</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Thursday 30 July 2026, 19:00 CEST</span>
+                    </div>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>Board present: Daniel T (chair), Pablo V, Ben D (limited participation), Ward D (joined ~19:12), Victor P (joined ~19:20, completing quorum) &middot; Also present: Daniela M S (Production) &middot; Not present: Peter D, Chris O</strong>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>The first board meeting after the event &mdash; the regular Monday slot had been deliberately skipped to give everyone a chance to rest, and this session was extended to a full hour ahead of the community call. The headline outcome: the board formally called the association&rsquo;s first <strong>General Assembly for Thursday 3 September 2026, 20:00 CEST</strong>.</p>
+
+                        <h2>1. Check-in</h2>
+                        <ul>
+                            <li>Members shared brief personal updates. Post-event tiredness was acknowledged, alongside real excitement about the new chapter &mdash; the event went well, and energy is already turning toward the new site and next year.</li>
+                        </ul>
+
+                        <h2>2. Finance Wrap-up Status</h2>
+                        <ul>
+                            <li>Daniela M S has been reviewing invoices line by line, rejecting incorrect charges (e.g. labour billed for days not worked) and requesting corrected invoices.</li>
+                            <li>No final figures are available yet. The year is not expected to close at a loss, but the surplus is likely to be smaller than earlier estimates; exact numbers depend on completing the invoice review and on expense claims still to come in from departments.</li>
+                            <li>The budget overview currently shown in the Humans app (visible to coordinators) is not accurate and should not be relied on until updated.</li>
+                            <li>The board decided <strong>against</strong> recruiting new finance volunteers mid-process &mdash; onboarding someone into the current state would cost more time than it saves. A dedicated finance support person remains desirable for the future, and Peter D will be asked how he sees the tooling and support needs evolving.</li>
+                            <li>Priorities for August: Peter D to have Humans ready (aiming Monday) so people can file expense reports and reimbursement requests; then expense claims and art grants. A full financial picture follows from there.</li>
+                            <li>Agreed message for the community call: exact figures next week; the team is wrapping up this week.</li>
+                        </ul>
+
+                        <h2>3. General Assembly &mdash; Formally Called for 3 September</h2>
+                        <ul>
+                            <li>Daniel T proposed convening the association&rsquo;s first General Assembly. The statutes provide the process: the governing body convenes it; agenda items must be fixed 15 days before the assembly; members representing 20% of the membership can add items; the board can also add items collectively.</li>
+                            <li>The most urgent decision is <strong>next year&rsquo;s event dates</strong>. There is a strong case for examining a date change given fire season: a fire was heading toward the site during this year&rsquo;s build (ash fell on the build site), the event came close to evacuation conditions, and the authorities have urged rethinking the dates. Restrictions are also getting stricter year on year. This decision gates all other planning, so it must be made as early as possible.</li>
+                            <li>Discussion of quorum: calling a General Assembly is a board act requiring quorum. Once Victor P joined, quorum was reached and the board <strong>voted unanimously to call a General Assembly for Thursday 3 September 2026 at 20:00 CEST</strong> (the usual community-call slot).</li>
+                            <li>Agenda philosophy for this first assembly: keep it thin and focused on genuinely urgent items (the dates, above all). Non-urgent proposals can wait for a later assembly, once the first round of governance improvements has bedded in. A second assembly can always be called.</li>
+                            <li>A community-wide survey/poll can be run beforehand to inform the members&rsquo; vote; the vote itself is taken by the members (asociados) per the statutes. Voting mechanics (e.g. ranked-choice between candidate weeks) and a clear information pack for each option will be worked on, likely with the governance working group.</li>
+                            <li>The invitation/announcement should communicate clearly <em>why</em> the date question matters &mdash; the fire-risk reality this year illustrates it.</li>
+                            <li><strong>Membership register:</strong> the associates list in Humans currently shows far fewer members than expected. Ben D to reconcile the records with Peter D so the register is accurate &mdash; needed both for sending the assembly announcement and for computing the 20% agenda-item threshold.</li>
+                            <li>Daniel T to send the formal proposal to the board and prepare the announcement for distribution to all members once the register is updated.</li>
+                        </ul>
+
+                        <h2>4. Tooling</h2>
+                        <ul>
+                            <li>The Notion agenda workspace hit its free block limit, blocking agenda edits; Ben D to reset it.</li>
+                        </ul>
+
+                        <h2>5. Production &amp; Financial Transparency</h2>
+                        <ul>
+                            <li>Production coordination for Elsewhere 2026 involved a small number of paid roles alongside the volunteer team. Two of these roles were filled by a board member, contracted for non-board operational work following a vote in two separate board meetings (25 May and 18 June), with formal abstention recorded, and in line with written legal and accounting advice from Accountax. The first contract covered site preparation (flagging and ground survey); the second covered on-site coordination during the event and strike weeks, after the originally hired coordinator dropped out at short notice.</li>
+                            <li>The board discussed financial transparency as a general principle for the association&rsquo;s reporting. The community benefits from clear, accessible information about how financial decisions are made.</li>
+                            <li><strong>Agreed approach:</strong> Daniela M S will produce a production and finance report covering this year&rsquo;s financial decisions &mdash; what was paid, why, how decisions were made, and lessons learned (including payment-platform holdbacks and early personal outlays by board members and how these are repaid). The report should be general and policy-focused rather than centred on individuals.</li>
+                            <li>A future conversation on compensation policy &mdash; how the association wants to handle paid roles, overlapping hats, and conflicts going forward &mdash; to be developed as a working group or General Assembly item. Daniela M S also floated evolving the model toward paying modest fees to a larger group doing hard labour (first crew and strike) rather than concentrating payment in a few roles.</li>
+                        </ul>
+
+                        <h2>6. New-Site Working Group &mdash; Participation</h2>
+                        <ul>
+                            <li>The emerging new-site initiative is currently informal &mdash; calls and conversations rather than a formalised working group. The board agreed to keep it that way for now: interested community members who reach out can simply join the conversations, and the question of formal membership will be revisited if and when the initiative formalises.</li>
+                        </ul>
+
+                        <h2>7. Strike Volunteer Discounts</h2>
+                        <ul>
+                            <li>The promised follow-up communication has not yet gone out; people were briefed in person on site.</li>
+                        </ul>
+
+                        <h2>8. Meeting Cadence</h2>
+                        <ul>
+                            <li>The standing Monday and Thursday slots remain in the calendar until cancelled; many will likely be dropped as more people return.</li>
+                            <li>Tentatively: a shorter meeting focused on finances once Peter D is available (possibly Monday); Pablo V to check with Peter D. The aim over time is roughly monthly full board meetings, with finance updates gating several upcoming decisions (site, dates).</li>
+                        </ul>
+
+                        <h2>9. Community Call Preparation</h2>
+                        <ul>
+                            <li>Agreed agenda for the evening&rsquo;s community call: Elsewhere 26 retro (Daniela M S + open floor for coordinators), Elsewhere 27 and the new site (Pablo V), governance update (Kate B), the General Assembly and the dates question (Daniel T), and the temple proposal (Tancredi T). Daniel T to MC.</li>
+                            <li>A fuller coordinators&rsquo; feedback round will be arranged separately once more coordinators are back.</li>
+                        </ul>
+
+                        <h2>Action Items</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Action</th><th>Due</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Send the formal General Assembly proposal to the board; prepare the announcement for members</td><td>This week</td></tr>
+                                <tr><td>Daniel T</td><td>Present the dates/fire-risk context at the community call and in the announcement</td><td>Tonight / this week</td></tr>
+                                <tr><td>Daniel T</td><td>Circulate these minutes to Pablo V, Daniela M S and Ward D for approval before publication</td><td>This week</td></tr>
+                                <tr><td>Ben D</td><td>Reset the Notion agenda workspace</td><td>When recovered</td></tr>
+                                <tr><td>Ben D</td><td>Reconcile the Humans associates list with the official member register (with Peter D)</td><td>This week</td></tr>
+                                <tr><td>Peter D</td><td>Update Humans so expense reports / reimbursement requests can be filed</td><td>Monday</td></tr>
+                                <tr><td>Pablo V</td><td>Check with Peter D on availability for a finance-focused board meeting</td><td>This week</td></tr>
+                                <tr><td>Daniela M S</td><td>Finalise invoice review; clearer financial picture</td><td>Next week</td></tr>
+                                <tr><td>Daniela M S</td><td>Produce the production/finance report (with transparency of pay roles and decisions)</td><td>August</td></tr>
+                                <tr><td>Daniela M S</td><td>Contact coordinators for a proper feedback round; report to a future call</td><td>Next weeks</td></tr>
+                                <tr><td>Victor P / board</td><td>Draft info on board roles, workload and how to apply (follow-up from community call)</td><td>Next weeks</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Next Meetings</h2>
+                        <ul>
+                            <li>Possible short finance meeting Monday (pending Peter D&rsquo;s availability).</li>
+                            <li><strong>General Assembly: Thursday 3 September 2026, 20:00 CEST.</strong></li>
+                        </ul>
+
+                        <p><em>Minutes prepared from the meeting recording and transcript.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Junta presente: Daniel T (preside), Pablo V, Ben D (participaci&oacute;n limitada), Ward D (se incorpor&oacute; ~19:12), Victor P (se incorpor&oacute; ~19:20, completando el qu&oacute;rum) &middot; Tambi&eacute;n presente: Daniela M S (Producci&oacute;n) &middot; No presentes: Peter D, Chris O</strong>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>La primera reuni&oacute;n de la junta tras el evento &mdash; se omiti&oacute; deliberadamente la franja habitual del lunes para dar a todo el mundo la oportunidad de descansar, y esta sesi&oacute;n se ampli&oacute; a una hora completa antes de la llamada comunitaria. El resultado principal: la junta convoc&oacute; formalmente la primera <strong>Asamblea General de la asociaci&oacute;n para el jueves 3 de septiembre de 2026, 20:00 CEST</strong>.</p>
+
+                        <h2>1. Saludo Inicial</h2>
+                        <ul>
+                            <li>Las personas miembros compartieron breves actualizaciones personales. Se reconoci&oacute; el cansancio posterior al evento, junto con una ilusi&oacute;n real por el nuevo cap&iacute;tulo &mdash; el evento sali&oacute; bien, y la energ&iacute;a ya se dirige hacia el nuevo emplazamiento y el a&ntilde;o que viene.</li>
+                        </ul>
+
+                        <h2>2. Estado del Cierre Financiero</h2>
+                        <ul>
+                            <li>Daniela M S ha estado revisando las facturas l&iacute;nea por l&iacute;nea, rechazando cargos incorrectos (p.&nbsp;ej. mano de obra facturada por d&iacute;as no trabajados) y solicitando facturas corregidas.</li>
+                            <li>Todav&iacute;a no hay cifras definitivas. No se espera que el a&ntilde;o cierre en p&eacute;rdidas, pero es probable que el excedente sea menor que las estimaciones anteriores; las cifras exactas dependen de completar la revisi&oacute;n de facturas y de las reclamaciones de gastos que a&uacute;n deben llegar desde los departamentos.</li>
+                            <li>La visi&oacute;n general del presupuesto que se muestra actualmente en la app Humans (visible para las personas coordinadoras) no es exacta y no debe tomarse como referencia hasta que se actualice.</li>
+                            <li>La junta decidi&oacute; <strong>no</strong> reclutar nuevas personas voluntarias de finanzas a mitad del proceso &mdash; incorporar a alguien al estado actual costar&iacute;a m&aacute;s tiempo del que ahorrar&iacute;a. Sigue siendo deseable contar con una persona dedicada al apoyo financiero en el futuro, y se preguntar&aacute; a Peter D c&oacute;mo ve la evoluci&oacute;n de las herramientas y las necesidades de apoyo.</li>
+                            <li>Prioridades para agosto: Peter D debe tener Humans listo (con la vista puesta en el lunes) para que la gente pueda presentar informes de gastos y solicitudes de reembolso; despu&eacute;s, las reclamaciones de gastos y las becas de arte. A partir de ah&iacute; se obtiene una imagen financiera completa.</li>
+                            <li>Mensaje acordado para la llamada comunitaria: cifras exactas la semana que viene; el equipo est&aacute; cerrando el proceso esta semana.</li>
+                        </ul>
+
+                        <h2>3. Asamblea General &mdash; Convocada Formalmente para el 3 de Septiembre</h2>
+                        <ul>
+                            <li>Daniel T propuso convocar la primera Asamblea General de la asociaci&oacute;n. Los estatutos establecen el procedimiento: el &oacute;rgano de gobierno la convoca; los puntos del orden del d&iacute;a deben fijarse 15 d&iacute;as antes de la asamblea; los asociados que representen el 20% de la membres&iacute;a pueden a&ntilde;adir puntos; la junta tambi&eacute;n puede a&ntilde;adir puntos de forma colectiva.</li>
+                            <li>La decisi&oacute;n m&aacute;s urgente son <strong>las fechas del evento del a&ntilde;o que viene</strong>. Hay argumentos s&oacute;lidos para examinar un cambio de fechas dada la temporada de incendios: un incendio avanzaba hacia el emplazamiento durante el montaje de este a&ntilde;o (cay&oacute; ceniza sobre la zona de construcci&oacute;n), el evento estuvo cerca de condiciones de evacuaci&oacute;n, y las autoridades han instado a replantear las fechas. Adem&aacute;s, las restricciones son cada a&ntilde;o m&aacute;s estrictas. Esta decisi&oacute;n condiciona toda la dem&aacute;s planificaci&oacute;n, por lo que debe tomarse lo antes posible.</li>
+                            <li>Discusi&oacute;n sobre el qu&oacute;rum: convocar una Asamblea General es un acto de la junta que requiere qu&oacute;rum. Una vez se incorpor&oacute; Victor P, se alcanz&oacute; el qu&oacute;rum y la junta <strong>vot&oacute; por unanimidad convocar una Asamblea General para el jueves 3 de septiembre de 2026 a las 20:00 CEST</strong> (la franja habitual de la llamada comunitaria).</li>
+                            <li>Filosof&iacute;a del orden del d&iacute;a para esta primera asamblea: mantenerlo ligero y centrado en asuntos genuinamente urgentes (las fechas, ante todo). Las propuestas no urgentes pueden esperar a una asamblea posterior, una vez asentada la primera ronda de mejoras de gobernanza. Siempre se puede convocar una segunda asamblea.</li>
+                            <li>Se puede realizar previamente una encuesta comunitaria para informar el voto de los asociados; el voto en s&iacute; lo emiten los asociados seg&uacute;n los estatutos. Se trabajar&aacute; en la mec&aacute;nica de votaci&oacute;n (p.&nbsp;ej. voto por orden de preferencia entre semanas candidatas) y en un dossier informativo claro para cada opci&oacute;n, probablemente con el grupo de trabajo de gobernanza.</li>
+                            <li>La invitaci&oacute;n/anuncio debe comunicar con claridad <em>por qu&eacute;</em> importa la cuesti&oacute;n de las fechas &mdash; la realidad del riesgo de incendio de este a&ntilde;o lo ilustra.</li>
+                            <li><strong>Registro de socios:</strong> la lista de asociados en Humans muestra actualmente muchos menos miembros de los esperados. Ben D conciliar&aacute; los registros con Peter D para que el registro sea exacto &mdash; necesario tanto para enviar el anuncio de la asamblea como para calcular el umbral del 20% para a&ntilde;adir puntos al orden del d&iacute;a.</li>
+                            <li>Daniel T enviar&aacute; la propuesta formal a la junta y preparar&aacute; el anuncio para su distribuci&oacute;n a todos los miembros una vez actualizado el registro.</li>
+                        </ul>
+
+                        <h2>4. Herramientas</h2>
+                        <ul>
+                            <li>El espacio de trabajo de la agenda en Notion alcanz&oacute; su l&iacute;mite de bloques gratuitos, bloqueando la edici&oacute;n de la agenda; Ben D lo reiniciar&aacute;.</li>
+                        </ul>
+
+                        <h2>5. Producci&oacute;n y Transparencia Financiera</h2>
+                        <ul>
+                            <li>La coordinaci&oacute;n de producci&oacute;n de Elsewhere 2026 incluy&oacute; un peque&ntilde;o n&uacute;mero de roles remunerados junto al equipo voluntario. Dos de estos roles fueron desempe&ntilde;ados por un miembro de la junta, contratado para trabajo operativo no relacionado con sus funciones de junta tras una votaci&oacute;n en dos reuniones de junta separadas (25 de mayo y 18 de junio), con abstenci&oacute;n formal registrada, y conforme al asesoramiento legal y contable por escrito de Accountax. El primer contrato cubr&iacute;a la preparaci&oacute;n del terreno (marcaje y estudio del terreno); el segundo, la coordinaci&oacute;n sobre el terreno durante las semanas del evento y de strike, despu&eacute;s de que la persona coordinadora contratada originalmente se retirara con poca antelaci&oacute;n.</li>
+                            <li>La junta trat&oacute; la transparencia financiera como principio general de los informes de la asociaci&oacute;n. La comunidad se beneficia de informaci&oacute;n clara y accesible sobre c&oacute;mo se toman las decisiones financieras.</li>
+                            <li><strong>Enfoque acordado:</strong> Daniela M S elaborar&aacute; un informe de producci&oacute;n y finanzas que cubra las decisiones financieras de este a&ntilde;o &mdash; qu&eacute; se pag&oacute;, por qu&eacute;, c&oacute;mo se tomaron las decisiones y las lecciones aprendidas (incluidas las retenciones de la plataforma de pagos y los desembolsos personales iniciales de miembros de la junta y c&oacute;mo se reembolsan). El informe debe ser general y centrado en pol&iacute;ticas, no en personas.</li>
+                            <li>Una conversaci&oacute;n futura sobre pol&iacute;tica de remuneraci&oacute;n &mdash; c&oacute;mo quiere la asociaci&oacute;n gestionar los roles remunerados, los m&uacute;ltiples sombreros y los conflictos en adelante &mdash; a desarrollar como grupo de trabajo o punto de la Asamblea General. Daniela M S tambi&eacute;n plante&oacute; evolucionar el modelo hacia el pago de honorarios modestos a un grupo m&aacute;s amplio que realiza trabajo duro (primer equipo y strike) en lugar de concentrar el pago en unos pocos roles.</li>
+                        </ul>
+
+                        <h2>6. Grupo de Trabajo del Nuevo Emplazamiento &mdash; Participaci&oacute;n</h2>
+                        <ul>
+                            <li>La iniciativa emergente del nuevo emplazamiento es actualmente informal &mdash; llamadas y conversaciones m&aacute;s que un grupo de trabajo formalizado. La junta acord&oacute; mantenerlo as&iacute; por ahora: las personas de la comunidad interesadas que se pongan en contacto pueden simplemente unirse a las conversaciones, y la cuesti&oacute;n de la pertenencia formal se retomar&aacute; si la iniciativa se formaliza y cuando lo haga.</li>
+                        </ul>
+
+                        <h2>7. Descuentos para el Voluntariado de Strike</h2>
+                        <ul>
+                            <li>La comunicaci&oacute;n de seguimiento prometida a&uacute;n no ha salido; se inform&oacute; a la gente en persona en el sitio.</li>
+                        </ul>
+
+                        <h2>8. Cadencia de Reuniones</h2>
+                        <ul>
+                            <li>Las franjas fijas de lunes y jueves permanecen en el calendario hasta que se cancelen; probablemente se eliminar&aacute;n muchas a medida que vuelva m&aacute;s gente.</li>
+                            <li>Provisionalmente: una reuni&oacute;n m&aacute;s corta centrada en las finanzas cuando Peter D est&eacute; disponible (posiblemente el lunes); Pablo V lo comprobar&aacute; con Peter D. El objetivo con el tiempo son reuniones plenas de junta aproximadamente mensuales, con las actualizaciones financieras condicionando varias decisiones pr&oacute;ximas (emplazamiento, fechas).</li>
+                        </ul>
+
+                        <h2>9. Preparaci&oacute;n de la Llamada Comunitaria</h2>
+                        <ul>
+                            <li>Agenda acordada para la llamada comunitaria de la tarde: retrospectiva de Elsewhere 26 (Daniela M S + turno abierto para las personas coordinadoras), Elsewhere 27 y el nuevo emplazamiento (Pablo V), actualizaci&oacute;n de gobernanza (Kate B), la Asamblea General y la cuesti&oacute;n de las fechas (Daniel T), y la propuesta del templo (Tancredi T). Daniel T presentar&aacute;.</li>
+                            <li>Se organizar&aacute; por separado una ronda m&aacute;s completa de feedback de las personas coordinadoras cuando vuelvan m&aacute;s.</li>
+                        </ul>
+
+                        <h2>Puntos de Acci&oacute;n</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Acci&oacute;n</th><th>Plazo</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Enviar la propuesta formal de Asamblea General a la junta; preparar el anuncio para los miembros</td><td>Esta semana</td></tr>
+                                <tr><td>Daniel T</td><td>Presentar el contexto de fechas/riesgo de incendio en la llamada comunitaria y en el anuncio</td><td>Esta noche / esta semana</td></tr>
+                                <tr><td>Daniel T</td><td>Circular estas actas a Pablo V, Daniela M S y Ward D para su aprobaci&oacute;n antes de la publicaci&oacute;n</td><td>Esta semana</td></tr>
+                                <tr><td>Ben D</td><td>Reiniciar el espacio de trabajo de la agenda en Notion</td><td>Cuando se recupere</td></tr>
+                                <tr><td>Ben D</td><td>Conciliar la lista de asociados de Humans con el registro oficial de socios (con Peter D)</td><td>Esta semana</td></tr>
+                                <tr><td>Peter D</td><td>Actualizar Humans para que se puedan presentar informes de gastos y solicitudes de reembolso</td><td>Lunes</td></tr>
+                                <tr><td>Pablo V</td><td>Consultar con Peter D su disponibilidad para una reuni&oacute;n de junta centrada en finanzas</td><td>Esta semana</td></tr>
+                                <tr><td>Daniela M S</td><td>Finalizar la revisi&oacute;n de facturas; imagen financiera m&aacute;s clara</td><td>La semana que viene</td></tr>
+                                <tr><td>Daniela M S</td><td>Elaborar el informe de producci&oacute;n/finanzas (con transparencia sobre roles remunerados y decisiones)</td><td>Agosto</td></tr>
+                                <tr><td>Daniela M S</td><td>Contactar a las personas coordinadoras para una ronda de feedback en condiciones; informar en una llamada futura</td><td>Pr&oacute;ximas semanas</td></tr>
+                                <tr><td>Victor P / junta</td><td>Redactar informaci&oacute;n sobre los roles de la junta, la carga de trabajo y c&oacute;mo presentarse (seguimiento de la llamada comunitaria)</td><td>Pr&oacute;ximas semanas</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Pr&oacute;ximas Reuniones</h2>
+                        <ul>
+                            <li>Posible reuni&oacute;n corta de finanzas el lunes (pendiente de la disponibilidad de Peter D).</li>
+                            <li><strong>Asamblea General: jueves 3 de septiembre de 2026, 20:00 CEST.</strong></li>
+                        </ul>
+
+                        <p><em>Actas elaboradas a partir de la grabaci&oacute;n y la transcripci&oacute;n de la reuni&oacute;n.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Conseil pr&eacute;sent : Daniel T (pr&eacute;side), Pablo V, Ben D (participation limit&eacute;e), Ward D (a rejoint ~19:12), Victor P (a rejoint ~19:20, compl&eacute;tant le quorum) &middot; &Eacute;galement pr&eacute;sente : Daniela M S (Production) &middot; Absents : Peter D, Chris O</strong>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>La premi&egrave;re r&eacute;union du conseil apr&egrave;s l&rsquo;&eacute;v&eacute;nement &mdash; le cr&eacute;neau habituel du lundi avait &eacute;t&eacute; d&eacute;lib&eacute;r&eacute;ment saut&eacute; pour laisser &agrave; chacun la possibilit&eacute; de se reposer, et cette session a &eacute;t&eacute; &eacute;tendue &agrave; une heure compl&egrave;te avant l&rsquo;appel communautaire. R&eacute;sultat principal : le conseil a formellement convoqu&eacute; la premi&egrave;re <strong>Assembl&eacute;e G&eacute;n&eacute;rale de l&rsquo;association pour le jeudi 3 septembre 2026, 20h00 CEST</strong>.</p>
+
+                        <h2>1. Tour de Table</h2>
+                        <ul>
+                            <li>Les membres ont partag&eacute; de br&egrave;ves mises &agrave; jour personnelles. La fatigue post-&eacute;v&eacute;nement a &eacute;t&eacute; reconnue, aux c&ocirc;t&eacute;s d&rsquo;un enthousiasme r&eacute;el pour le nouveau chapitre &mdash; l&rsquo;&eacute;v&eacute;nement s&rsquo;est bien pass&eacute;, et l&rsquo;&eacute;nergie se tourne d&eacute;j&agrave; vers le nouveau site et l&rsquo;ann&eacute;e prochaine.</li>
+                        </ul>
+
+                        <h2>2. &Eacute;tat de la Cl&ocirc;ture Financi&egrave;re</h2>
+                        <ul>
+                            <li>Daniela M S a examin&eacute; les factures ligne par ligne, rejetant les frais incorrects (p.&nbsp;ex. de la main-d&rsquo;&oelig;uvre factur&eacute;e pour des jours non travaill&eacute;s) et demandant des factures corrig&eacute;es.</li>
+                            <li>Aucun chiffre d&eacute;finitif n&rsquo;est encore disponible. L&rsquo;ann&eacute;e ne devrait pas se cl&ocirc;turer &agrave; perte, mais l&rsquo;exc&eacute;dent sera vraisemblablement plus faible que les estimations pr&eacute;c&eacute;dentes ; les chiffres exacts d&eacute;pendent de l&rsquo;ach&egrave;vement de la revue des factures et des notes de frais encore &agrave; remonter des d&eacute;partements.</li>
+                            <li>L&rsquo;aper&ccedil;u budg&eacute;taire actuellement affich&eacute; dans l&rsquo;application Humans (visible par les personnes coordinatrices) n&rsquo;est pas exact et ne doit pas servir de r&eacute;f&eacute;rence tant qu&rsquo;il n&rsquo;est pas mis &agrave; jour.</li>
+                            <li>Le conseil a d&eacute;cid&eacute; de <strong>ne pas</strong> recruter de nouvelles personnes b&eacute;n&eacute;voles aux finances en cours de processus &mdash; int&eacute;grer quelqu&rsquo;un dans l&rsquo;&eacute;tat actuel co&ucirc;terait plus de temps que cela n&rsquo;en ferait gagner. Une personne d&eacute;di&eacute;e au soutien financier reste souhaitable pour l&rsquo;avenir, et il sera demand&eacute; &agrave; Peter D comment il voit &eacute;voluer les outils et les besoins de soutien.</li>
+                            <li>Priorit&eacute;s pour ao&ucirc;t : Peter D doit rendre Humans op&eacute;rationnel (objectif lundi) afin que les gens puissent d&eacute;poser leurs notes de frais et demandes de remboursement ; ensuite les notes de frais et les bourses artistiques. Une image financi&egrave;re compl&egrave;te en d&eacute;coulera.</li>
+                            <li>Message convenu pour l&rsquo;appel communautaire : chiffres exacts la semaine prochaine ; l&rsquo;&eacute;quipe termine cette semaine.</li>
+                        </ul>
+
+                        <h2>3. Assembl&eacute;e G&eacute;n&eacute;rale &mdash; Formellement Convoqu&eacute;e pour le 3 Septembre</h2>
+                        <ul>
+                            <li>Daniel T a propos&eacute; de convoquer la premi&egrave;re Assembl&eacute;e G&eacute;n&eacute;rale de l&rsquo;association. Les statuts pr&eacute;voient la proc&eacute;dure : l&rsquo;organe dirigeant la convoque ; les points de l&rsquo;ordre du jour doivent &ecirc;tre fix&eacute;s 15 jours avant l&rsquo;assembl&eacute;e ; les asociados repr&eacute;sentant 20% des membres peuvent ajouter des points ; le conseil peut &eacute;galement en ajouter collectivement.</li>
+                            <li>La d&eacute;cision la plus urgente concerne <strong>les dates de l&rsquo;&eacute;v&eacute;nement de l&rsquo;ann&eacute;e prochaine</strong>. Il existe de solides raisons d&rsquo;examiner un changement de dates compte tenu de la saison des incendies : un incendie se dirigeait vers le site pendant le montage de cette ann&eacute;e (des cendres sont tomb&eacute;es sur la zone de construction), l&rsquo;&eacute;v&eacute;nement a fr&ocirc;l&eacute; des conditions d&rsquo;&eacute;vacuation, et les autorit&eacute;s ont invit&eacute; &agrave; repenser les dates. Les restrictions se durcissent aussi d&rsquo;ann&eacute;e en ann&eacute;e. Cette d&eacute;cision conditionne toute la planification restante, elle doit donc &ecirc;tre prise le plus t&ocirc;t possible.</li>
+                            <li>Discussion sur le quorum : convoquer une Assembl&eacute;e G&eacute;n&eacute;rale est un acte du conseil qui requiert le quorum. Une fois Victor P arriv&eacute;, le quorum &eacute;tait atteint et le conseil <strong>a vot&eacute; &agrave; l&rsquo;unanimit&eacute; la convocation d&rsquo;une Assembl&eacute;e G&eacute;n&eacute;rale pour le jeudi 3 septembre 2026 &agrave; 20h00 CEST</strong> (le cr&eacute;neau habituel de l&rsquo;appel communautaire).</li>
+                            <li>Philosophie de l&rsquo;ordre du jour pour cette premi&egrave;re assembl&eacute;e : le garder l&eacute;ger et centr&eacute; sur les points v&eacute;ritablement urgents (les dates avant tout). Les propositions non urgentes peuvent attendre une assembl&eacute;e ult&eacute;rieure, une fois la premi&egrave;re s&eacute;rie d&rsquo;am&eacute;liorations de gouvernance install&eacute;e. Une seconde assembl&eacute;e peut toujours &ecirc;tre convoqu&eacute;e.</li>
+                            <li>Un sondage communautaire peut &ecirc;tre men&eacute; au pr&eacute;alable pour &eacute;clairer le vote des membres ; le vote lui-m&ecirc;me est exprim&eacute; par les asociados conform&eacute;ment aux statuts. Les modalit&eacute;s de vote (p.&nbsp;ex. vote par ordre de pr&eacute;f&eacute;rence entre semaines candidates) et un dossier d&rsquo;information clair pour chaque option seront travaill&eacute;s, probablement avec le groupe de travail gouvernance.</li>
+                            <li>L&rsquo;invitation/annonce doit communiquer clairement <em>pourquoi</em> la question des dates importe &mdash; la r&eacute;alit&eacute; du risque d&rsquo;incendie de cette ann&eacute;e l&rsquo;illustre.</li>
+                            <li><strong>Registre des membres :</strong> la liste des asociados dans Humans affiche actuellement bien moins de membres que pr&eacute;vu. Ben D r&eacute;conciliera les enregistrements avec Peter D afin que le registre soit exact &mdash; n&eacute;cessaire &agrave; la fois pour envoyer l&rsquo;annonce de l&rsquo;assembl&eacute;e et pour calculer le seuil de 20% permettant d&rsquo;ajouter des points.</li>
+                            <li>Daniel T enverra la proposition formelle au conseil et pr&eacute;parera l&rsquo;annonce pour diffusion &agrave; tous les membres une fois le registre mis &agrave; jour.</li>
+                        </ul>
+
+                        <h2>4. Outils</h2>
+                        <ul>
+                            <li>L&rsquo;espace de travail Notion de l&rsquo;ordre du jour a atteint sa limite de blocs gratuits, bloquant les modifications ; Ben D le r&eacute;initialisera.</li>
+                        </ul>
+
+                        <h2>5. Production et Transparence Financi&egrave;re</h2>
+                        <ul>
+                            <li>La coordination de production d&rsquo;Elsewhere 2026 comportait un petit nombre de r&ocirc;les r&eacute;mun&eacute;r&eacute;s aux c&ocirc;t&eacute;s de l&rsquo;&eacute;quipe b&eacute;n&eacute;vole. Deux de ces r&ocirc;les ont &eacute;t&eacute; occup&eacute;s par un membre du conseil, engag&eacute; pour un travail op&eacute;rationnel distinct de ses fonctions au conseil, &agrave; la suite d&rsquo;un vote lors de deux r&eacute;unions distinctes du conseil (25 mai et 18 juin), avec abstention formelle enregistr&eacute;e, et conform&eacute;ment &agrave; l&rsquo;avis juridique et comptable &eacute;crit d&rsquo;Accountax. Le premier contrat couvrait la pr&eacute;paration du site (marquage et relev&eacute; de terrain) ; le second, la coordination sur site pendant les semaines de l&rsquo;&eacute;v&eacute;nement et de strike, apr&egrave;s le d&eacute;sistement de derni&egrave;re minute de la personne initialement engag&eacute;e.</li>
+                            <li>Le conseil a discut&eacute; de la transparence financi&egrave;re comme principe g&eacute;n&eacute;ral pour les rapports de l&rsquo;association. La communaut&eacute; b&eacute;n&eacute;ficie d&rsquo;informations claires et accessibles sur la mani&egrave;re dont les d&eacute;cisions financi&egrave;res sont prises.</li>
+                            <li><strong>Approche convenue :</strong> Daniela M S produira un rapport de production et de finances couvrant les d&eacute;cisions financi&egrave;res de l&rsquo;ann&eacute;e &mdash; ce qui a &eacute;t&eacute; pay&eacute;, pourquoi, comment les d&eacute;cisions ont &eacute;t&eacute; prises, et les le&ccedil;ons apprises (y compris les retenues de la plateforme de paiement et les avances personnelles de membres du conseil et leur remboursement). Le rapport doit rester g&eacute;n&eacute;ral et centr&eacute; sur les politiques plut&ocirc;t que sur les personnes.</li>
+                            <li>Une conversation future sur la politique de r&eacute;mun&eacute;ration &mdash; comment l&rsquo;association souhaite g&eacute;rer les r&ocirc;les r&eacute;mun&eacute;r&eacute;s, les casquettes multiples et les conflits &agrave; l&rsquo;avenir &mdash; &agrave; d&eacute;velopper en groupe de travail ou en point d&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale. Daniela M S a aussi &eacute;voqu&eacute; de faire &eacute;voluer le mod&egrave;le vers le versement d&rsquo;indemnit&eacute;s modestes &agrave; un groupe plus large effectuant un travail p&eacute;nible (premi&egrave;re &eacute;quipe et strike) plut&ocirc;t que de concentrer la r&eacute;mun&eacute;ration sur quelques r&ocirc;les.</li>
+                        </ul>
+
+                        <h2>6. Groupe de Travail Nouveau Site &mdash; Participation</h2>
+                        <ul>
+                            <li>L&rsquo;initiative &eacute;mergente du nouveau site est actuellement informelle &mdash; des appels et des conversations plut&ocirc;t qu&rsquo;un groupe de travail formalis&eacute;. Le conseil a convenu de la laisser ainsi pour l&rsquo;instant : les membres de la communaut&eacute; int&eacute;ress&eacute;s qui se manifestent peuvent simplement rejoindre les conversations, et la question de l&rsquo;adh&eacute;sion formelle sera r&eacute;examin&eacute;e si et quand l&rsquo;initiative se formalise.</li>
+                        </ul>
+
+                        <h2>7. R&eacute;ductions pour les B&eacute;n&eacute;voles de Strike</h2>
+                        <ul>
+                            <li>La communication de suivi promise n&rsquo;est pas encore partie ; les personnes ont &eacute;t&eacute; inform&eacute;es en personne sur site.</li>
+                        </ul>
+
+                        <h2>8. Rythme des R&eacute;unions</h2>
+                        <ul>
+                            <li>Les cr&eacute;neaux permanents du lundi et du jeudi restent au calendrier jusqu&rsquo;&agrave; annulation ; beaucoup seront vraisemblablement supprim&eacute;s &agrave; mesure que davantage de personnes reviennent.</li>
+                            <li>&Agrave; titre provisoire : une r&eacute;union plus courte centr&eacute;e sur les finances d&egrave;s que Peter D sera disponible (possiblement lundi) ; Pablo V v&eacute;rifiera avec Peter D. L&rsquo;objectif &agrave; terme est d&rsquo;avoir des r&eacute;unions pl&eacute;ni&egrave;res du conseil environ mensuelles, les mises &agrave; jour financi&egrave;res conditionnant plusieurs d&eacute;cisions &agrave; venir (site, dates).</li>
+                        </ul>
+
+                        <h2>9. Pr&eacute;paration de l&rsquo;Appel Communautaire</h2>
+                        <ul>
+                            <li>Ordre du jour convenu pour l&rsquo;appel communautaire du soir : r&eacute;tro Elsewhere 26 (Daniela M S + parole ouverte aux personnes coordinatrices), Elsewhere 27 et le nouveau site (Pablo V), point gouvernance (Kate B), l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale et la question des dates (Daniel T), et la proposition de temple (Tancredi T). Daniel T animera.</li>
+                            <li>Un tour de retours plus complet avec les personnes coordinatrices sera organis&eacute; s&eacute;par&eacute;ment lorsque davantage seront de retour.</li>
+                        </ul>
+
+                        <h2>Points d&rsquo;Action</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Personne</th><th>Action</th><th>&Eacute;ch&eacute;ance</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Envoyer la proposition formelle d&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale au conseil ; pr&eacute;parer l&rsquo;annonce aux membres</td><td>Cette semaine</td></tr>
+                                <tr><td>Daniel T</td><td>Pr&eacute;senter le contexte dates/risque incendie lors de l&rsquo;appel communautaire et dans l&rsquo;annonce</td><td>Ce soir / cette semaine</td></tr>
+                                <tr><td>Daniel T</td><td>Faire circuler ce proc&egrave;s-verbal &agrave; Pablo V, Daniela M S et Ward D pour approbation avant publication</td><td>Cette semaine</td></tr>
+                                <tr><td>Ben D</td><td>R&eacute;initialiser l&rsquo;espace de travail Notion de l&rsquo;ordre du jour</td><td>D&egrave;s r&eacute;cup&eacute;ration</td></tr>
+                                <tr><td>Ben D</td><td>R&eacute;concilier la liste des asociados dans Humans avec le registre officiel des membres (avec Peter D)</td><td>Cette semaine</td></tr>
+                                <tr><td>Peter D</td><td>Mettre &agrave; jour Humans pour permettre le d&eacute;p&ocirc;t des notes de frais et demandes de remboursement</td><td>Lundi</td></tr>
+                                <tr><td>Pablo V</td><td>V&eacute;rifier aupr&egrave;s de Peter D sa disponibilit&eacute; pour une r&eacute;union du conseil ax&eacute;e finances</td><td>Cette semaine</td></tr>
+                                <tr><td>Daniela M S</td><td>Finaliser la revue des factures ; image financi&egrave;re plus claire</td><td>La semaine prochaine</td></tr>
+                                <tr><td>Daniela M S</td><td>Produire le rapport production/finances (avec transparence sur les r&ocirc;les r&eacute;mun&eacute;r&eacute;s et les d&eacute;cisions)</td><td>Ao&ucirc;t</td></tr>
+                                <tr><td>Daniela M S</td><td>Contacter les personnes coordinatrices pour un vrai tour de retours ; rapporter lors d&rsquo;un prochain appel</td><td>Prochaines semaines</td></tr>
+                                <tr><td>Victor P / conseil</td><td>R&eacute;diger une information sur les r&ocirc;les au conseil, la charge de travail et comment candidater (suite de l&rsquo;appel communautaire)</td><td>Prochaines semaines</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Prochaines R&eacute;unions</h2>
+                        <ul>
+                            <li>Possible courte r&eacute;union finances lundi (sous r&eacute;serve de la disponibilit&eacute; de Peter D).</li>
+                            <li><strong>Assembl&eacute;e G&eacute;n&eacute;rale : jeudi 3 septembre 2026, 20h00 CEST.</strong></li>
+                        </ul>
+
+                        <p><em>Proc&egrave;s-verbal &eacute;tabli &agrave; partir de l&rsquo;enregistrement et de la transcription de la r&eacute;union.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanze tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Consiglio presente: Daniel T (presiede), Pablo V, Ben D (partecipazione limitata), Ward D (si &egrave; unito ~19:12), Victor P (si &egrave; unito ~19:20, completando il quorum) &middot; Anche presente: Daniela M S (Produzione) &middot; Non presenti: Peter D, Chris O</strong>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>La prima riunione del consiglio dopo l&rsquo;evento &mdash; la consueta finestra del luned&igrave; era stata deliberatamente saltata per dare a tutti la possibilit&agrave; di riposare, e questa sessione &egrave; stata estesa a un&rsquo;ora piena prima della chiamata comunitaria. L&rsquo;esito principale: il consiglio ha convocato formalmente la prima <strong>Assemblea Generale dell&rsquo;associazione per gioved&igrave; 3 settembre 2026, ore 20:00 CEST</strong>.</p>
+
+                        <h2>1. Apertura</h2>
+                        <ul>
+                            <li>I membri hanno condiviso brevi aggiornamenti personali. &Egrave; stata riconosciuta la stanchezza post-evento, insieme a un entusiasmo reale per il nuovo capitolo &mdash; l&rsquo;evento &egrave; andato bene, e l&rsquo;energia si sta gi&agrave; spostando verso il nuovo sito e l&rsquo;anno prossimo.</li>
+                        </ul>
+
+                        <h2>2. Stato della Chiusura Finanziaria</h2>
+                        <ul>
+                            <li>Daniela M S ha esaminato le fatture riga per riga, respingendo addebiti errati (ad es. manodopera fatturata per giorni non lavorati) e richiedendo fatture corrette.</li>
+                            <li>Non sono ancora disponibili cifre definitive. Non si prevede che l&rsquo;anno chiuda in perdita, ma l&rsquo;avanzo sar&agrave; probabilmente inferiore alle stime precedenti; i numeri esatti dipendono dal completamento della revisione delle fatture e dalle richieste di rimborso spese ancora attese dai dipartimenti.</li>
+                            <li>La panoramica di bilancio attualmente mostrata nell&rsquo;app Humans (visibile alle persone di coordinamento) non &egrave; accurata e non va usata come riferimento finch&eacute; non sar&agrave; aggiornata.</li>
+                            <li>Il consiglio ha deciso di <strong>non</strong> reclutare nuove persone volontarie per le finanze a processo in corso &mdash; inserire qualcuno nella situazione attuale costerebbe pi&ugrave; tempo di quanto ne farebbe risparmiare. Una persona dedicata al supporto finanziario resta auspicabile per il futuro, e verr&agrave; chiesto a Peter D come vede evolvere gli strumenti e le esigenze di supporto.</li>
+                            <li>Priorit&agrave; per agosto: Peter D deve rendere Humans pronto (obiettivo luned&igrave;) affinch&eacute; le persone possano presentare note spese e richieste di rimborso; poi le richieste di rimborso e i contributi per l&rsquo;arte. Da l&igrave; segue un quadro finanziario completo.</li>
+                            <li>Messaggio concordato per la chiamata comunitaria: cifre esatte la prossima settimana; il team sta chiudendo questa settimana.</li>
+                        </ul>
+
+                        <h2>3. Assemblea Generale &mdash; Convocata Formalmente per il 3 Settembre</h2>
+                        <ul>
+                            <li>Daniel T ha proposto di convocare la prima Assemblea Generale dell&rsquo;associazione. Lo statuto stabilisce la procedura: l&rsquo;organo direttivo la convoca; i punti all&rsquo;ordine del giorno devono essere fissati 15 giorni prima dell&rsquo;assemblea; gli asociados che rappresentano il 20% dei soci possono aggiungere punti; anche il consiglio pu&ograve; aggiungerne collettivamente.</li>
+                            <li>La decisione pi&ugrave; urgente riguarda <strong>le date dell&rsquo;evento del prossimo anno</strong>. Ci sono forti ragioni per valutare un cambio di date vista la stagione degli incendi: quest&rsquo;anno un incendio si stava dirigendo verso il sito durante il montaggio (&egrave; caduta cenere sull&rsquo;area di costruzione), l&rsquo;evento &egrave; arrivato vicino a condizioni di evacuazione, e le autorit&agrave; hanno sollecitato un ripensamento delle date. Le restrizioni diventano inoltre pi&ugrave; severe di anno in anno. Questa decisione condiziona tutta la restante pianificazione, quindi va presa il prima possibile.</li>
+                            <li>Discussione sul quorum: convocare un&rsquo;Assemblea Generale &egrave; un atto del consiglio che richiede il quorum. Una volta unitosi Victor P, il quorum &egrave; stato raggiunto e il consiglio <strong>ha votato all&rsquo;unanimit&agrave; la convocazione di un&rsquo;Assemblea Generale per gioved&igrave; 3 settembre 2026 alle 20:00 CEST</strong> (la consueta finestra della chiamata comunitaria).</li>
+                            <li>Filosofia dell&rsquo;ordine del giorno per questa prima assemblea: mantenerlo essenziale e concentrato su punti realmente urgenti (le date, soprattutto). Le proposte non urgenti possono attendere un&rsquo;assemblea successiva, una volta assestata la prima tornata di miglioramenti di governance. Una seconda assemblea pu&ograve; sempre essere convocata.</li>
+                            <li>Un sondaggio rivolto a tutta la comunit&agrave; pu&ograve; essere svolto in anticipo per informare il voto dei soci; il voto stesso &egrave; espresso dagli asociados secondo lo statuto. Le modalit&agrave; di voto (ad es. voto per ordine di preferenza tra settimane candidate) e un pacchetto informativo chiaro per ciascuna opzione verranno elaborati, probabilmente con il gruppo di lavoro sulla governance.</li>
+                            <li>L&rsquo;invito/annuncio deve comunicare chiaramente <em>perch&eacute;</em> la questione delle date sia importante &mdash; la realt&agrave; del rischio incendi di quest&rsquo;anno lo illustra.</li>
+                            <li><strong>Registro dei soci:</strong> l&rsquo;elenco degli asociados in Humans mostra attualmente molti meno soci del previsto. Ben D riconcilier&agrave; i dati con Peter D affinch&eacute; il registro sia accurato &mdash; necessario sia per inviare l&rsquo;annuncio dell&rsquo;assemblea sia per calcolare la soglia del 20% per l&rsquo;aggiunta di punti.</li>
+                            <li>Daniel T invier&agrave; la proposta formale al consiglio e preparer&agrave; l&rsquo;annuncio per la distribuzione a tutti i soci una volta aggiornato il registro.</li>
+                        </ul>
+
+                        <h2>4. Strumenti</h2>
+                        <ul>
+                            <li>Lo spazio di lavoro Notion dell&rsquo;ordine del giorno ha raggiunto il limite di blocchi gratuiti, bloccando le modifiche; Ben D lo reimposter&agrave;.</li>
+                        </ul>
+
+                        <h2>5. Produzione e Trasparenza Finanziaria</h2>
+                        <ul>
+                            <li>Il coordinamento di produzione di Elsewhere 2026 ha incluso un piccolo numero di ruoli retribuiti accanto al team di volontari. Due di questi ruoli sono stati ricoperti da un membro del consiglio, ingaggiato per lavoro operativo distinto dalle funzioni di consiglio a seguito di un voto in due riunioni separate del consiglio (25 maggio e 18 giugno), con astensione formale registrata, e in linea con il parere legale e contabile scritto di Accountax. Il primo contratto copriva la preparazione del sito (marcatura e rilievo del terreno); il secondo, il coordinamento in loco durante le settimane dell&rsquo;evento e dello strike, dopo il ritiro all&rsquo;ultimo minuto della persona originariamente ingaggiata.</li>
+                            <li>Il consiglio ha discusso la trasparenza finanziaria come principio generale per i report dell&rsquo;associazione. La comunit&agrave; beneficia di informazioni chiare e accessibili su come vengono prese le decisioni finanziarie.</li>
+                            <li><strong>Approccio concordato:</strong> Daniela M S produrr&agrave; un report di produzione e finanza che copra le decisioni finanziarie di quest&rsquo;anno &mdash; cosa &egrave; stato pagato, perch&eacute;, come sono state prese le decisioni e le lezioni apprese (comprese le trattenute della piattaforma di pagamento e gli esborsi personali iniziali di membri del consiglio e il loro rimborso). Il report dovr&agrave; essere generale e incentrato sulle policy piuttosto che sulle persone.</li>
+                            <li>Una conversazione futura sulla politica dei compensi &mdash; come l&rsquo;associazione vuole gestire i ruoli retribuiti, i molteplici cappelli e i conflitti in futuro &mdash; da sviluppare come gruppo di lavoro o punto dell&rsquo;Assemblea Generale. Daniela M S ha inoltre proposto di evolvere il modello verso il pagamento di compensi modesti a un gruppo pi&ugrave; ampio che svolge lavoro pesante (prima squadra e strike) invece di concentrare i pagamenti in pochi ruoli.</li>
+                        </ul>
+
+                        <h2>6. Gruppo di Lavoro Nuovo Sito &mdash; Partecipazione</h2>
+                        <ul>
+                            <li>L&rsquo;iniziativa emergente sul nuovo sito &egrave; attualmente informale &mdash; chiamate e conversazioni pi&ugrave; che un gruppo di lavoro formalizzato. Il consiglio ha concordato di mantenerla cos&igrave; per ora: le persone della comunit&agrave; interessate che si fanno avanti possono semplicemente unirsi alle conversazioni, e la questione dell&rsquo;appartenenza formale sar&agrave; riesaminata se e quando l&rsquo;iniziativa si formalizzer&agrave;.</li>
+                        </ul>
+
+                        <h2>7. Sconti per il Volontariato di Strike</h2>
+                        <ul>
+                            <li>La comunicazione di follow-up promessa non &egrave; ancora uscita; le persone sono state informate di persona sul sito.</li>
+                        </ul>
+
+                        <h2>8. Cadenza delle Riunioni</h2>
+                        <ul>
+                            <li>Le finestre fisse del luned&igrave; e del gioved&igrave; restano in calendario fino a cancellazione; molte verranno probabilmente eliminate man mano che rientrano pi&ugrave; persone.</li>
+                            <li>In via provvisoria: una riunione pi&ugrave; breve incentrata sulle finanze non appena Peter D sar&agrave; disponibile (possibilmente luned&igrave;); Pablo V verificher&agrave; con Peter D. L&rsquo;obiettivo nel tempo &egrave; avere riunioni plenarie del consiglio all&rsquo;incirca mensili, con gli aggiornamenti finanziari che condizionano diverse decisioni imminenti (sito, date).</li>
+                        </ul>
+
+                        <h2>9. Preparazione della Chiamata Comunitaria</h2>
+                        <ul>
+                            <li>Ordine del giorno concordato per la chiamata comunitaria della sera: retrospettiva di Elsewhere 26 (Daniela M S + spazio aperto per le persone di coordinamento), Elsewhere 27 e il nuovo sito (Pablo V), aggiornamento sulla governance (Kate B), l&rsquo;Assemblea Generale e la questione delle date (Daniel T), e la proposta del tempio (Tancredi T). Daniel T condurr&agrave;.</li>
+                            <li>Un giro di feedback pi&ugrave; ampio con le persone di coordinamento sar&agrave; organizzato separatamente quando ne saranno rientrate di pi&ugrave;.</li>
+                        </ul>
+
+                        <h2>Punti d&rsquo;Azione</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Azione</th><th>Scadenza</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Inviare al consiglio la proposta formale di Assemblea Generale; preparare l&rsquo;annuncio per i soci</td><td>Questa settimana</td></tr>
+                                <tr><td>Daniel T</td><td>Presentare il contesto date/rischio incendi alla chiamata comunitaria e nell&rsquo;annuncio</td><td>Stasera / questa settimana</td></tr>
+                                <tr><td>Daniel T</td><td>Far circolare questi verbali a Pablo V, Daniela M S e Ward D per approvazione prima della pubblicazione</td><td>Questa settimana</td></tr>
+                                <tr><td>Ben D</td><td>Reimpostare lo spazio di lavoro Notion dell&rsquo;ordine del giorno</td><td>Appena recuperato</td></tr>
+                                <tr><td>Ben D</td><td>Riconciliare l&rsquo;elenco degli asociados in Humans con il registro ufficiale dei soci (con Peter D)</td><td>Questa settimana</td></tr>
+                                <tr><td>Peter D</td><td>Aggiornare Humans in modo che si possano presentare note spese e richieste di rimborso</td><td>Luned&igrave;</td></tr>
+                                <tr><td>Pablo V</td><td>Verificare con Peter D la disponibilit&agrave; per una riunione del consiglio dedicata alle finanze</td><td>Questa settimana</td></tr>
+                                <tr><td>Daniela M S</td><td>Completare la revisione delle fatture; quadro finanziario pi&ugrave; chiaro</td><td>La prossima settimana</td></tr>
+                                <tr><td>Daniela M S</td><td>Produrre il rapporto produzione/finanze (con trasparenza su ruoli retribuiti e decisioni)</td><td>Agosto</td></tr>
+                                <tr><td>Daniela M S</td><td>Contattare le persone di coordinamento per un vero giro di feedback; riferire in una chiamata futura</td><td>Prossime settimane</td></tr>
+                                <tr><td>Victor P / consiglio</td><td>Redigere informazioni sui ruoli nel consiglio, il carico di lavoro e come candidarsi (seguito della chiamata comunitaria)</td><td>Prossime settimane</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Prossime Riunioni</h2>
+                        <ul>
+                            <li>Possibile breve riunione sulle finanze luned&igrave; (in attesa della disponibilit&agrave; di Peter D).</li>
+                            <li><strong>Assemblea Generale: gioved&igrave; 3 settembre 2026, ore 20:00 CEST.</strong></li>
+                        </ul>
+
+                        <p><em>Verbali redatti a partire dalla registrazione e dalla trascrizione della riunione.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Bei Diskrepanzen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Vorstand anwesend: Daniel T (Vorsitz), Pablo V, Ben D (eingeschr&auml;nkte Teilnahme), Ward D (kam ~19:12 dazu), Victor P (kam ~19:20 dazu, Beschlussf&auml;higkeit hergestellt) &middot; Ebenfalls anwesend: Daniela M S (Produktion) &middot; Nicht anwesend: Peter D, Chris O</strong>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Die erste Vorstandssitzung nach der Veranstaltung &mdash; der regul&auml;re Montagstermin war bewusst ausgelassen worden, um allen eine Gelegenheit zum Ausruhen zu geben, und diese Sitzung wurde vor dem Community-Call auf eine volle Stunde verl&auml;ngert. Das zentrale Ergebnis: Der Vorstand berief formell die erste <strong>Generalversammlung des Vereins f&uuml;r Donnerstag, 3. September 2026, 20:00 Uhr CEST</strong> ein.</p>
+
+                        <h2>1. Eingangsrunde</h2>
+                        <ul>
+                            <li>Die Mitglieder gaben kurze pers&ouml;nliche Updates. Die M&uuml;digkeit nach der Veranstaltung wurde anerkannt, zugleich echte Vorfreude auf das neue Kapitel &mdash; die Veranstaltung lief gut, und die Energie richtet sich bereits auf das neue Gel&auml;nde und das kommende Jahr.</li>
+                        </ul>
+
+                        <h2>2. Stand des Finanzabschlusses</h2>
+                        <ul>
+                            <li>Daniela M S pr&uuml;ft die Rechnungen Position f&uuml;r Position, weist fehlerhafte Posten zur&uuml;ck (z.&nbsp;B. Arbeitsleistung, die f&uuml;r nicht gearbeitete Tage berechnet wurde) und fordert korrigierte Rechnungen an.</li>
+                            <li>Endg&uuml;ltige Zahlen liegen noch nicht vor. Es wird nicht erwartet, dass das Jahr mit Verlust abschlie&szlig;t, aber der &Uuml;berschuss wird voraussichtlich geringer ausfallen als fr&uuml;here Sch&auml;tzungen; die genauen Zahlen h&auml;ngen vom Abschluss der Rechnungspr&uuml;fung und von noch ausstehenden Auslagenerstattungen aus den Departments ab.</li>
+                            <li>Die derzeit in der Humans-App angezeigte Budget&uuml;bersicht (f&uuml;r Koordinierende sichtbar) ist nicht korrekt und sollte bis zur Aktualisierung nicht als Grundlage dienen.</li>
+                            <li>Der Vorstand entschied sich <strong>gegen</strong> die Anwerbung neuer Finanz-Freiwilliger mitten im Prozess &mdash; jemanden in den aktuellen Stand einzuarbeiten w&uuml;rde mehr Zeit kosten als sparen. Eine dedizierte Person f&uuml;r Finanzunterst&uuml;tzung bleibt f&uuml;r die Zukunft w&uuml;nschenswert, und Peter D wird gefragt, wie er die Entwicklung der Werkzeuge und des Unterst&uuml;tzungsbedarfs sieht.</li>
+                            <li>Priorit&auml;ten f&uuml;r August: Peter D soll Humans bereitstellen (Ziel Montag), damit Auslagen- und Erstattungsantr&auml;ge eingereicht werden k&ouml;nnen; danach Auslagenerstattungen und Kunstf&ouml;rderungen. Daraus ergibt sich anschlie&szlig;end ein vollst&auml;ndiges Finanzbild.</li>
+                            <li>Vereinbarte Botschaft f&uuml;r den Community-Call: genaue Zahlen n&auml;chste Woche; das Team schlie&szlig;t diese Woche ab.</li>
+                        </ul>
+
+                        <h2>3. Generalversammlung &mdash; Formell f&uuml;r den 3. September Einberufen</h2>
+                        <ul>
+                            <li>Daniel T schlug vor, die erste Generalversammlung des Vereins einzuberufen. Die Satzung regelt das Verfahren: Das Leitungsorgan beruft sie ein; Tagesordnungspunkte m&uuml;ssen 15 Tage vor der Versammlung feststehen; asociados, die 20% der Mitgliedschaft repr&auml;sentieren, k&ouml;nnen Punkte hinzuf&uuml;gen; auch der Vorstand kann gemeinsam Punkte erg&auml;nzen.</li>
+                            <li>Die dringendste Entscheidung betrifft <strong>die Termine der Veranstaltung im n&auml;chsten Jahr</strong>. Angesichts der Waldbrandsaison sprechen starke Gr&uuml;nde daf&uuml;r, eine Terminverschiebung zu pr&uuml;fen: W&auml;hrend des diesj&auml;hrigen Aufbaus zog ein Feuer auf das Gel&auml;nde zu (Asche fiel auf die Baustelle), die Veranstaltung kam Evakuierungsbedingungen nahe, und die Beh&ouml;rden haben ein &Uuml;berdenken der Termine nahegelegt. Zudem werden die Auflagen von Jahr zu Jahr strenger. Diese Entscheidung bedingt die gesamte weitere Planung und muss daher so fr&uuml;h wie m&ouml;glich fallen.</li>
+                            <li>Diskussion zur Beschlussf&auml;higkeit: Die Einberufung einer Generalversammlung ist ein Vorstandsakt, der Beschlussf&auml;higkeit erfordert. Nachdem Victor P dazugekommen war, war die Beschlussf&auml;higkeit gegeben, und der Vorstand <strong>beschloss einstimmig, eine Generalversammlung f&uuml;r Donnerstag, 3. September 2026, 20:00 Uhr CEST einzuberufen</strong> (der &uuml;bliche Community-Call-Termin).</li>
+                            <li>Tagesordnungsphilosophie f&uuml;r diese erste Versammlung: schlank halten und auf wirklich dringende Punkte konzentrieren (vor allem die Termine). Nicht dringende Vorschl&auml;ge k&ouml;nnen auf eine sp&auml;tere Versammlung warten, sobald die erste Runde von Governance-Verbesserungen sich gesetzt hat. Eine zweite Versammlung kann jederzeit einberufen werden.</li>
+                            <li>Vorab kann eine gemeinschaftsweite Umfrage durchgef&uuml;hrt werden, um die Abstimmung der Mitglieder zu informieren; die Abstimmung selbst erfolgt satzungsgem&auml;&szlig; durch die asociados. An den Abstimmungsmodalit&auml;ten (z.&nbsp;B. Pr&auml;ferenzwahl zwischen in Frage kommenden Wochen) und an einem klaren Informationspaket zu jeder Option wird gearbeitet, voraussichtlich mit der Governance-Arbeitsgruppe.</li>
+                            <li>Die Einladung/Ank&uuml;ndigung sollte klar vermitteln, <em>warum</em> die Terminfrage wichtig ist &mdash; die Brandrisiko-Realit&auml;t dieses Jahres veranschaulicht es.</li>
+                            <li><strong>Mitgliederregister:</strong> Die asociados-Liste in Humans zeigt derzeit weit weniger Mitglieder als erwartet. Ben D gleicht die Datens&auml;tze mit Peter D ab, damit das Register korrekt ist &mdash; erforderlich sowohl f&uuml;r den Versand der Versammlungsank&uuml;ndigung als auch f&uuml;r die Berechnung der 20%-Schwelle f&uuml;r Tagesordnungspunkte.</li>
+                            <li>Daniel T sendet den formellen Vorschlag an den Vorstand und bereitet die Ank&uuml;ndigung zur Verteilung an alle Mitglieder vor, sobald das Register aktualisiert ist.</li>
+                        </ul>
+
+                        <h2>4. Werkzeuge</h2>
+                        <ul>
+                            <li>Der Notion-Workspace f&uuml;r die Tagesordnung hat sein kostenloses Block-Limit erreicht und blockiert damit Bearbeitungen; Ben D setzt ihn zur&uuml;ck.</li>
+                        </ul>
+
+                        <h2>5. Produktion und Finanzielle Transparenz</h2>
+                        <ul>
+                            <li>Die Produktionskoordination von Elsewhere 2026 umfasste eine kleine Zahl bezahlter Rollen neben dem Freiwilligenteam. Zwei dieser Rollen wurden von einem Vorstandsmitglied &uuml;bernommen, das f&uuml;r operative, nicht vorstandsbezogene Arbeit beauftragt wurde &mdash; nach Abstimmung in zwei separaten Vorstandssitzungen (25. Mai und 18. Juni), mit formell protokollierter Enthaltung und im Einklang mit schriftlicher rechtlicher und buchhalterischer Beratung von Accountax. Der erste Vertrag umfasste die Gel&auml;ndevorbereitung (Markierung und Gel&auml;ndevermessung); der zweite die Koordination vor Ort w&auml;hrend der Event- und Strike-Wochen, nachdem die urspr&uuml;nglich engagierte Koordinationsperson kurzfristig abgesagt hatte.</li>
+                            <li>Der Vorstand diskutierte finanzielle Transparenz als allgemeines Prinzip f&uuml;r die Berichterstattung des Vereins. Die Community profitiert von klaren, zug&auml;nglichen Informationen dar&uuml;ber, wie finanzielle Entscheidungen getroffen werden.</li>
+                            <li><strong>Vereinbartes Vorgehen:</strong> Daniela M S erstellt einen Produktions- und Finanzbericht &uuml;ber die finanziellen Entscheidungen dieses Jahres &mdash; was bezahlt wurde, warum, wie die Entscheidungen getroffen wurden und welche Lehren gezogen wurden (einschlie&szlig;lich der Einbehalte der Zahlungsplattform sowie fr&uuml;her pers&ouml;nlicher Auslagen von Vorstandsmitgliedern und deren R&uuml;ckzahlung). Der Bericht soll allgemein und auf Richtlinien ausgerichtet sein, nicht auf einzelne Personen.</li>
+                            <li>Ein k&uuml;nftiges Gespr&auml;ch &uuml;ber eine Verg&uuml;tungsrichtlinie &mdash; wie der Verein bezahlte Rollen, Mehrfachrollen und Interessenkonflikte k&uuml;nftig handhaben will &mdash; soll als Arbeitsgruppe oder als Punkt der Generalversammlung entwickelt werden. Daniela M S regte zudem an, das Modell dahin weiterzuentwickeln, einer gr&ouml;&szlig;eren Gruppe, die harte Arbeit leistet (erste Crew und Strike), bescheidene Verg&uuml;tungen zu zahlen, statt Zahlungen auf wenige Rollen zu konzentrieren.</li>
+                        </ul>
+
+                        <h2>6. Arbeitsgruppe Neues Gel&auml;nde &mdash; Beteiligung</h2>
+                        <ul>
+                            <li>Die entstehende Initiative zum neuen Gel&auml;nde ist derzeit informell &mdash; Calls und Gespr&auml;che statt einer formalisierten Arbeitsgruppe. Der Vorstand vereinbarte, das vorerst so zu belassen: Interessierte Community-Mitglieder, die sich melden, k&ouml;nnen einfach an den Gespr&auml;chen teilnehmen, und die Frage einer formellen Mitgliedschaft wird wieder aufgegriffen, falls und sobald sich die Initiative formalisiert.</li>
+                        </ul>
+
+                        <h2>7. Erm&auml;&szlig;igungen f&uuml;r Strike-Freiwillige</h2>
+                        <ul>
+                            <li>Die zugesagte Folgekommunikation ist noch nicht herausgegangen; die Menschen wurden vor Ort pers&ouml;nlich informiert.</li>
+                        </ul>
+
+                        <h2>8. Sitzungsrhythmus</h2>
+                        <ul>
+                            <li>Die feststehenden Montags- und Donnerstagstermine bleiben bis auf Widerruf im Kalender; viele werden voraussichtlich entfallen, sobald mehr Leute zur&uuml;ck sind.</li>
+                            <li>Vorl&auml;ufig: eine k&uuml;rzere, auf Finanzen fokussierte Sitzung, sobald Peter D verf&uuml;gbar ist (m&ouml;glicherweise Montag); Pablo V kl&auml;rt das mit Peter D. Ziel ist mittelfristig etwa monatliche vollst&auml;ndige Vorstandssitzungen, wobei die Finanzupdates mehrere anstehende Entscheidungen bedingen (Gel&auml;nde, Termine).</li>
+                        </ul>
+
+                        <h2>9. Vorbereitung des Community-Calls</h2>
+                        <ul>
+                            <li>Vereinbarte Tagesordnung f&uuml;r den abendlichen Community-Call: Elsewhere-26-Retro (Daniela M S + offene Runde f&uuml;r Koordinierende), Elsewhere 27 und das neue Gel&auml;nde (Pablo V), Governance-Update (Kate B), die Generalversammlung und die Terminfrage (Daniel T) sowie der Tempel-Vorschlag (Tancredi T). Daniel T moderiert.</li>
+                            <li>Eine ausf&uuml;hrlichere Feedbackrunde mit den Koordinierenden wird separat angesetzt, sobald mehr von ihnen zur&uuml;ck sind.</li>
+                        </ul>
+
+                        <h2>Aktionspunkte</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Aktion</th><th>F&auml;lligkeit</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Den formellen Generalversammlungs-Vorschlag an den Vorstand senden; die Ank&uuml;ndigung f&uuml;r die Mitglieder vorbereiten</td><td>Diese Woche</td></tr>
+                                <tr><td>Daniel T</td><td>Den Kontext zu Terminen/Brandrisiko im Community-Call und in der Ank&uuml;ndigung darstellen</td><td>Heute Abend / diese Woche</td></tr>
+                                <tr><td>Daniel T</td><td>Dieses Protokoll vor der Ver&ouml;ffentlichung an Pablo V, Daniela M S und Ward D zur Freigabe zirkulieren</td><td>Diese Woche</td></tr>
+                                <tr><td>Ben D</td><td>Den Notion-Workspace der Tagesordnung zur&uuml;cksetzen</td><td>Sobald erholt</td></tr>
+                                <tr><td>Ben D</td><td>Die asociados-Liste in Humans mit dem offiziellen Mitgliederregister abgleichen (mit Peter D)</td><td>Diese Woche</td></tr>
+                                <tr><td>Peter D</td><td>Humans aktualisieren, damit Auslagen- und Erstattungsantr&auml;ge eingereicht werden k&ouml;nnen</td><td>Montag</td></tr>
+                                <tr><td>Pablo V</td><td>Mit Peter D die Verf&uuml;gbarkeit f&uuml;r eine finanzfokussierte Vorstandssitzung kl&auml;ren</td><td>Diese Woche</td></tr>
+                                <tr><td>Daniela M S</td><td>Rechnungspr&uuml;fung abschlie&szlig;en; klareres Finanzbild</td><td>N&auml;chste Woche</td></tr>
+                                <tr><td>Daniela M S</td><td>Den Produktions-/Finanzbericht erstellen (mit Transparenz zu bezahlten Rollen und Entscheidungen)</td><td>August</td></tr>
+                                <tr><td>Daniela M S</td><td>Koordinierende f&uuml;r eine richtige Feedbackrunde kontaktieren; in einem k&uuml;nftigen Call berichten</td><td>N&auml;chste Wochen</td></tr>
+                                <tr><td>Victor P / Vorstand</td><td>Informationen zu Vorstandsrollen, Arbeitsaufwand und Bewerbungsweg entwerfen (Folgepunkt aus dem Community-Call)</td><td>N&auml;chste Wochen</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h2>N&auml;chste Sitzungen</h2>
+                        <ul>
+                            <li>M&ouml;gliche kurze Finanzsitzung am Montag (abh&auml;ngig von Peter Ds Verf&uuml;gbarkeit).</li>
+                            <li><strong>Generalversammlung: Donnerstag, 3. September 2026, 20:00 Uhr CEST.</strong></li>
+                        </ul>
+
+                        <p><em>Protokoll erstellt auf Grundlage der Aufzeichnung und Transkription der Sitzung.</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>

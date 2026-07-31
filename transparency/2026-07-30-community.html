@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+
+    <title>Community Meeting - July 30, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .resource-links { background: var(--color-bg-secondary); padding: 1.25rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .resource-links h3 { margin: 0 0 0.75rem 0; font-size: 1rem; }
+        .resource-links ul { list-style: none; padding: 0; margin: 0; }
+        .resource-links li { margin-bottom: 0.5rem; }
+        .resource-links a { color: var(--color-accent); font-weight: 500; }
+        .resource-links a:hover { text-decoration: underline; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 2rem; border-radius: 8px; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px; }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>Community Meeting</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Thursday 30 July 2026, 20:00 CEST</span>
+                    </div>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>With Daniel T (MC), Daniela S (production), Ant H (early build), Ellen / Dr Plantes (admin), Shitshow (LNT), Scientist (Safer Space), Pierre K, Pablo V, Kate B (governance), Tancredi T, Michael M (nurse), Victor P, Benoit F, and many community members &mdash; ~50 within the first ten minutes, peaking around 80</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Full Records</h3>
+                        <ul>
+                            <li><a href="2026-07-30-community-transcript.html">Full transcript (English only)</a></li>
+                            <li><a href="2026-07-30-community-chat.html">Full chat log</a></li>
+                            <li><a href="https://youtu.be/kKIkdmevQIk">Video recording (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/kKIkdmevQIk" title="Community Meeting - July 30, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>A big, energetic call &mdash; a remarkable turnout for the same month as the event: a first look back at Elsewhere 26, the announcement of the association&rsquo;s first <strong>General Assembly (3 September)</strong>, the governance working group reforming, a proposal for a permanent temple, and a public presentation of the new-site initiative.</p>
+
+                        <h2>1. Elsewhere 26 &mdash; First Retro</h2>
+                        <p>The event happened, the permit held, nobody was hurt, and there was no evacuation &mdash; though with fires active in the region, it was close. Coordinators shared first impressions:</p>
+                        <ul>
+                            <li><strong>Production (Daniela S):</strong> a massive collective effort and a success &mdash; &ldquo;good enough is good enough.&rdquo; A full feedback round with all coordinators is planned. Invoices are being processed now; <strong>expense reports should be held until next week</strong>, when the system will be ready. Exact financial figures are expected to firm up over the coming week.</li>
+                            <li><strong>Early build (Ant H):</strong> despite justified stress beforehand about volunteer numbers, late containers and broken equipment, the team was amazing, stress stayed low, and many first-time volunteers had a good time and want to come back.</li>
+                            <li><strong>Admin (Ellen / Dr Plantes):</strong> refunds for Ice tokens, water vouchers and rented equipment are being processed &mdash; barrios will be contacted; the aim is to finish admin in August.</li>
+                            <li><strong>Toilets &amp; recycling (Shitshow / LNT):</strong> the squatting urinals were a hit (&ldquo;10/10 would poo again&rdquo; &mdash; the chat); a feedback survey was shared on the call. Recycling worked well overall.</li>
+                            <li><strong>Census:</strong> please fill in the event census &mdash; it genuinely shapes planning. Deadline to be shared in the channels.</li>
+                        </ul>
+
+                        <h2>2. Next Event Dates &amp; Fire Risk &mdash; General Assembly Called</h2>
+                        <ul>
+                            <li>The board voted (just before the call) to <strong>call a General Assembly for Thursday 3 September 2026 at 20:00 CEST</strong>. The first and most urgent item: <strong>next year&rsquo;s event dates</strong>.</li>
+                            <li>Why: fire season is a real and growing risk. During this year&rsquo;s build there was a fire about an hour away blowing toward the site, with ash falling on the build. The authorities have also strongly recommended scheduling outside the high-fire-risk period, as operational restrictions grow stricter every year (Daniela S, who handled the many meetings with local and regional institutions, underlined this).</li>
+                            <li><strong>Who votes:</strong> formally, the association&rsquo;s members (asociados), per the statutes (available on the website). Broader community polls can and will inform the vote &mdash; &ldquo;it&rsquo;s not going to be a Brexit vote&rdquo;: options will be researched and documented (possible clashes, pros and cons of each week) so the vote is informed.</li>
+                            <li><strong>Coordination with other burns (Pierre K):</strong> with ~40 European events and limited good months, some overlap is unavoidable &mdash; don&rsquo;t let that constrain your vote; the organisation will coordinate with other events, and cultural exchange/embassies could even be fun.</li>
+                            <li>A dedicated <strong>Discord channel for the dates discussion</strong> will be created so non-members can participate in the conversation too.</li>
+                            <li>Before the assembly, an email will go out clarifying membership status, the voting process, and how the first General Assembly will work (Pablo V). Membership criteria are in the website FAQ; applications go through the Humans app.</li>
+                        </ul>
+
+                        <h2>3. Governance Working Group (Kate B)</h2>
+                        <ul>
+                            <li>The working group that formed around the go/no-go process earlier in the year has re-assembled now the burn is over.</li>
+                            <li>Its job is <strong>not</strong> to decide how governance is done, but to gather community input and propose a clear, accessible framework: how do we decide how we decide; which decisions belong in a General Assembly versus with decentralised teams closest to the action; how to avoid bureaucracy while genuinely hearing the community.</li>
+                            <li><strong>Wanted:</strong> a few more members with experience in volunteer-led organisations, decentralised governance, or Spanish law &mdash; put your name forward in the governance channel on Discord. The group will stay deliberately small to remain effective.</li>
+                        </ul>
+
+                        <h2>4. Temple Mound &mdash; A Proposal (Tancredi T)</h2>
+                        <ul>
+                            <li>Tancredi proposed creating a <strong>temple</strong> for the event &mdash; the quiet, reflective counterpart to the party: a pilgrimage space for mourning, memory and collective ritual.</li>
+                            <li>The twist: no fire needed, no big build. Inspired by neolithic burial mounds, the idea is a <strong>permanent earthen mound on the new site</strong>, built collectively: during the week, people write messages on biodegradable paper at simple shaded kiosks in a quieter corner of the site; at a closing ceremony, water dissolves the messages, and everyone moves earth &mdash; one shovelful each &mdash; to grow the mound. A fixed landmark that grows year on year, with art free to evolve around it. Lowest-budget temple in the history of burns, by design.</li>
+                            <li>The chat lit up (&ldquo;Burying Man&rdquo;). Discussion continues in the temple channel on Discord.</li>
+                        </ul>
+
+                        <h2>5. Reclaiming Sunday (Michael M)</h2>
+                        <ul>
+                            <li>Michael M supported the temple idea and raised a broader shift: in recent years barrios have pushed harder to strike camps on Sunday morning, and the event has lost its slow, warm wind-down &mdash; the closing ceremonies, the goodbye dinners, the reflective last day.</li>
+                            <li>Proposal in spirit: keep Sunday as a day of closure and decompression &mdash; people can still leave if they need to, but the event shouldn&rsquo;t feel abruptly over. Strong support in the chat (&ldquo;Sunday slowday, Monday strike&rdquo;); a closing ceremony Saturday night was also suggested. A temple ceremony on Sunday could anchor exactly this.</li>
+                        </ul>
+
+                        <h2>6. New Site &mdash; Public Presentation (Pablo V)</h2>
+                        <p><em>Presenting work that has been going on for some time.</em></p>
+                        <ul>
+                            <li><strong>The proposal:</strong> form a working group &mdash; provisionally &ldquo;Elsite&rdquo; / &ldquo;LCTO&rdquo; &mdash; <strong>independent from NCA</strong>, whose goal is not for NCA to buy land, but to make long-term land available <strong>for NCA to rent</strong>. A specific candidate site has been found and feels feasible; risks are being worked through.</li>
+                            <li><strong>Structure:</strong> on current tax/legal advice, a Spanish SL (limited company) is the likely holding vehicle, because it ring-fences risk and allows flexibility. Several legal mechanisms exist to bind the entity to the association so that nobody profits: participants would either be operationally involved (and unable to profit) or lenders (repaid over time, bearing some risk) &mdash; there will be no &ldquo;investor&rdquo; role. A memo covering the legal and tax structure is being prepared.</li>
+                            <li><strong>Care required (Pierre K):</strong> Spanish authorities scrutinise volunteer-run activity inside commercial entities, so the land-owning entity must be strictly separated from event operations &mdash; this will be structured carefully.</li>
+                            <li><strong>Continuity concern (Benoit F):</strong> what if there&rsquo;s a dispute someday between the two entities? Answer: a long-term (10&ndash;20 year) rental contract designed like a mortgage &mdash; clear payment schedule, protections that trigger only on missed payments, as predictable and dispute-proof as possible.</li>
+                            <li><strong>Indicative timeline:</strong> August&ndash;September: feasibility work (sound, rain/flood behaviour, access roads), locking plot prices, permit work &mdash; much of the permitting and physical site assessment is <strong>already advanced</strong> (site visits with the permitting authorities have happened). Then a community <strong>vote</strong> on whether to proceed; fundraise around November&ndash;December (community loans, repaid over ~5&ndash;10 years, likely from ticket revenue); potential purchase in January; site preparation March&ndash;June. The option to use this year&rsquo;s site is kept open in the meantime.</li>
+                            <li><strong>Micro-burn / &ldquo;hype-raiser&rdquo;:</strong> a small test event (anything from a party to ~500 people), possibly mid-to-late October (to be surveyed), to test sound, access and rain behaviour &mdash; and get excited. Several sound camps have already expressed interest.</li>
+                            <li><strong>Design it right first (Pierre K):</strong> once we own land, do the landscaping properly before rushing to build &mdash; shape the sound zone with earthworks, manage water flow, bring in solar and wind power, gray-water recycling, compost toilets. The community has the talent. Highest-impact, least-controversial candidates so far: compost toilets and on-site storage (rough order of &euro;50&ndash;70K each, to be refined).</li>
+                            <li><strong>Long-term thinking (Michael M):</strong> with ticket sales down from a peak of ~3,500 some years ago, be open-minded about what next year&rsquo;s event looks like rather than assuming a full-scale repeat &mdash; a slower setup year followed by a relaunch on our own land could bring back the thousands who&rsquo;ve stopped coming. &ldquo;We could have land for decades &mdash; that&rsquo;s a pretty powerful, amazing thing.&rdquo;</li>
+                            <li><strong>Economics question (Ellen):</strong> how many participants make the new land feasible? Financial modelling will follow once this year&rsquo;s reports are finalised (August), including how much of the fundraise remains available to invest.</li>
+                            <li>Next steps will be shared in the #new-site channel on Discord; a call for participation will follow once the current blockers (this year&rsquo;s finances) are cleared &mdash; expect a couple of weeks.</li>
+                            <li>On the name (from the chat): <strong>the intention is to use the &ldquo;Nowhere&rdquo; name when we&rsquo;re able to</strong>.</li>
+                        </ul>
+
+                        <h2>7. Board Recruitment, Diversity &amp; Workload</h2>
+                        <p>A rich Q&amp;A, largely driven by the chat:</p>
+                        <ul>
+                            <li><strong>Elections:</strong> the board has wanted more diverse representation since early on and will happily hold an election as soon as there are candidates &mdash; none have applied yet. Elections are in any case required by the statutes on a regular cycle, and there are term limits. Extraordinary elections are possible.</li>
+                            <li><strong>Diversity:</strong> the chat pushed hard on the need for more women and non-binary people on the board. Ideas: an encouragement/pre-selection group that actively approaches people who wouldn&rsquo;t otherwise apply (now worth prioritising), and reducing the workload so the role is accessible to people with less flexible lives.</li>
+                            <li><strong>Workload honestly described:</strong> twice-weekly meetings during the intense bootstrap phase, reduced to ~weekly closer to the event; expected to be significantly lighter next year as the board withdraws from operational matters and departments hold them instead. &ldquo;Usually the solution is quite clear&hellip; what it usually needs is somebody to own a topic&rdquo; (Pablo V).</li>
+                            <li><strong>Liability:</strong> the association is the legally responsible entity and carries insurance, including for directors. Directors are personally liable only for fraud/malevolence, clear negligence, or breaching the statutes &mdash; not &ldquo;suddenly liable for a million euros.&rdquo;</li>
+                            <li><strong>Childcare/babysitting costs:</strong> could these be covered for board members? To be checked with the lawyers (the statutes bar remuneration for board duties; whether expense-type coverage is possible needs legal clarification).</li>
+                            <li><strong>Roles explained:</strong> four named roles (president, vice-president, treasurer, secretary) carry specific responsibilities; <strong>vocales</strong> are full board members without a specific portfolio &mdash; in practice the board operates flat. A written role description and application info will be drafted (<strong>Victor P</strong> volunteered).</li>
+                            <li><strong>Membership:</strong> you don&rsquo;t need to be an asociado before applying; the membership criteria and FAQ are on the website.</li>
+                        </ul>
+
+                        <h2>8. Coordinators vs Meta-Leads (Structure Reflection)</h2>
+                        <ul>
+                            <li>Following chat questions: &ldquo;coordinator&rdquo; is this year&rsquo;s name for the function of coordinating a department. Daniela S flagged this as a good moment to rethink structure: several roles centralise too much, and she would like to move toward <strong>project-based roles</strong> distributing load across more people &mdash; fewer single points of failure, more voices, roles that are actually manageable on a volunteer basis. Feeds into the governance/structure conversations.</li>
+                        </ul>
+
+                        <h2>9. Communication Channels &amp; Website</h2>
+                        <ul>
+                            <li>Discord remains the <strong>source of truth</strong>, with important information replicated to WhatsApp/Telegram broadcast channels; changing that is open to the community via governance processes or by joining the comms team.</li>
+                            <li>Useful distinction offered: <strong>governance decisions</strong> (General Assembly votes) vs <strong>operational decisions</strong> (the remit of whoever does the work) vs <strong>personal decisions</strong> (&ldquo;the General Assembly should not vote on how Daniela takes her coffee&rdquo;).</li>
+                            <li>The website is static HTML, updated easily by volunteers; anyone wanting to convert it to a CMS is welcome to step up.</li>
+                        </ul>
+
+                        <h2>10. Close &amp; Appreciation</h2>
+                        <ul>
+                            <li>Warm thanks all round &mdash; to the coordinators who did incredible amounts of work, and (from the chat) to everyone who made it happen. The General Assembly announcement will arrive in inboxes in the coming days. Meanwhile: jump in on Discord &mdash; &ldquo;your energy is really welcome.&rdquo;</li>
+                        </ul>
+
+                        <h2>Decisions</h2>
+                        <ul>
+                            <li><strong>General Assembly: Thursday 3 September 2026, 20:00 CEST</strong> (board vote, announced on this call). First agenda item: next year&rsquo;s event dates.</li>
+                            <li>No other decisions taken on the call &mdash; the temple and new-site proposals are open for community input; the new-site working group forms independently pending the community vote on how it connects to the association.</li>
+                        </ul>
+
+                        <h2>Action Items</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Action</th><th>Owner</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Fill in the event census (deadline to be posted in channels)</td><td>Everyone</td></tr>
+                                <tr><td>Hold expense reports until next week; then file via Humans</td><td>Coordinators / spenders</td></tr>
+                                <tr><td>Fill in the toilet survey (link in chat/channels)</td><td>Everyone who used them</td></tr>
+                                <tr><td>Send General Assembly announcement + membership/voting clarification email</td><td>Daniel T / board, Pablo V</td></tr>
+                                <tr><td>Create Discord channel for the dates discussion</td><td>Board / comms</td></tr>
+                                <tr><td>Prepare legal+tax memo on the land-holding structure</td><td>Pablo V / working group</td></tr>
+                                <tr><td>Submit remaining permit documents for the new site</td><td>Daniela S</td></tr>
+                                <tr><td>Ask lawyers about childcare-cost coverage for board members</td><td>Board</td></tr>
+                                <tr><td>Draft board-role description &amp; application info</td><td>Victor P</td></tr>
+                                <tr><td>Join: governance WG (governance channel), temple (temple channel), new site (#new-site)</td><td>Interested community members</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Next call: rhythm being confirmed &mdash; watch the channels. General Assembly: 3 September, 20:00 CEST.</em></p>
+                        <p><em>Minutes prepared from the audio recording, cross-referenced with the meeting transcript and chat.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
+
+                    <div class="attendees">
+                        <strong>Con Daniel T (presentador), Daniela S (producci&oacute;n), Ant H (early build), Ellen / Dr Plantes (administraci&oacute;n), Shitshow (LNT), Scientist (Safer Space), Pierre K, Pablo V, Kate B (gobernanza), Tancredi T, Michael M (nurse), Victor P, Benoit F y muchos miembros de la comunidad &mdash; ~50 en los primeros diez minutos, con un pico de alrededor de 80</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Registros de la Reuni&oacute;n</h3>
+                        <ul>
+                            <li><a href="2026-07-30-community-transcript.html">Transcripci&oacute;n completa (solo en ingl&eacute;s)</a></li>
+                            <li><a href="2026-07-30-community-chat.html">Registro completo del chat</a></li>
+                            <li><a href="https://youtu.be/kKIkdmevQIk">Grabaci&oacute;n en v&iacute;deo (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/kKIkdmevQIk" title="Community Meeting - July 30, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Una llamada grande y llena de energ&iacute;a &mdash; una participaci&oacute;n notable para el mismo mes del evento: una primera mirada retrospectiva a Elsewhere 26, el anuncio de la primera <strong>Asamblea General (3 de septiembre)</strong> de la asociaci&oacute;n, la reconstituci&oacute;n del grupo de trabajo de gobernanza, una propuesta para un templo permanente y una presentaci&oacute;n p&uacute;blica de la iniciativa del nuevo emplazamiento.</p>
+
+                        <h2>1. Elsewhere 26 &mdash; Primera Retrospectiva</h2>
+                        <p>El evento se celebr&oacute;, el permiso se mantuvo, nadie result&oacute; herido y no hubo evacuaci&oacute;n &mdash; aunque con incendios activos en la regi&oacute;n, estuvo cerca. Los coordinadores compartieron sus primeras impresiones:</p>
+                        <ul>
+                            <li><strong>Producci&oacute;n (Daniela S):</strong> un esfuerzo colectivo enorme y un &eacute;xito &mdash; &laquo;lo suficientemente bueno es suficiente&raquo;. Est&aacute; prevista una ronda completa de feedback con todos los coordinadores. Las facturas se est&aacute;n procesando ahora; <strong>los informes de gastos deben esperar hasta la semana que viene</strong>, cuando el sistema est&eacute; listo. Se espera que las cifras financieras exactas se concreten a lo largo de la pr&oacute;xima semana.</li>
+                            <li><strong>Early build (Ant H):</strong> a pesar del estr&eacute;s justificado previo por el n&uacute;mero de voluntarios, los contenedores que llegaron tarde y el equipo averiado, el equipo humano fue incre&iacute;ble, el estr&eacute;s se mantuvo bajo, y muchos voluntarios primerizos lo pasaron bien y quieren volver.</li>
+                            <li><strong>Administraci&oacute;n (Ellen / Dr Plantes):</strong> se est&aacute;n procesando las devoluciones de los tokens de hielo, los vales de agua y el equipo alquilado &mdash; se contactar&aacute; con los barrios; el objetivo es terminar la administraci&oacute;n en agosto.</li>
+                            <li><strong>Ba&ntilde;os y reciclaje (Shitshow / LNT):</strong> los urinarios en cuclillas fueron un &eacute;xito (&laquo;10/10 volver&iacute;a a cagar&raquo; &mdash; el chat); se comparti&oacute; una encuesta de feedback en la llamada. El reciclaje funcion&oacute; bien en general.</li>
+                            <li><strong>Censo:</strong> por favor rellenad el censo del evento &mdash; realmente da forma a la planificaci&oacute;n. El plazo se compartir&aacute; en los canales.</li>
+                        </ul>
+
+                        <h2>2. Fechas del Pr&oacute;ximo Evento y Riesgo de Incendio &mdash; Convocatoria de Asamblea General</h2>
+                        <ul>
+                            <li>La junta vot&oacute; (justo antes de la llamada) <strong>convocar una Asamblea General para el jueves 3 de septiembre de 2026 a las 20:00 CEST</strong>. El primer punto y el m&aacute;s urgente: <strong>las fechas del evento del a&ntilde;o que viene</strong>.</li>
+                            <li>Por qu&eacute;: la temporada de incendios es un riesgo real y creciente. Durante el montaje de este a&ntilde;o hubo un incendio a aproximadamente una hora que avanzaba hacia el emplazamiento, con ceniza cayendo sobre la construcci&oacute;n. Las autoridades tambi&eacute;n han recomendado encarecidamente programar el evento fuera del periodo de alto riesgo de incendio, ya que las restricciones operativas son m&aacute;s estrictas cada a&ntilde;o (Daniela S, que gestion&oacute; las numerosas reuniones con instituciones locales y regionales, lo subray&oacute;).</li>
+                            <li><strong>Qui&eacute;n vota:</strong> formalmente, los asociados de la asociaci&oacute;n, seg&uacute;n los estatutos (disponibles en la web). Las consultas m&aacute;s amplias a la comunidad pueden informar e informar&aacute;n el voto &mdash; &laquo;no va a ser un voto tipo Brexit&raquo;: se investigar&aacute;n y documentar&aacute;n las opciones (posibles solapamientos, pros y contras de cada semana) para que el voto sea informado.</li>
+                            <li><strong>Coordinaci&oacute;n con otros burns (Pierre K):</strong> con ~40 eventos europeos y pocos meses buenos, cierto solapamiento es inevitable &mdash; que eso no condicione vuestro voto; la organizaci&oacute;n se coordinar&aacute; con otros eventos, e incluso el intercambio cultural y las embajadas podr&iacute;an ser divertidos.</li>
+                            <li>Se crear&aacute; un <strong>canal de Discord dedicado a la discusi&oacute;n de las fechas</strong> para que tambi&eacute;n quienes no son asociados puedan participar en la conversaci&oacute;n.</li>
+                            <li>Antes de la asamblea se enviar&aacute; un correo aclarando el estatus de socio, el proceso de votaci&oacute;n y c&oacute;mo funcionar&aacute; la primera Asamblea General (Pablo V). Los criterios de membres&iacute;a est&aacute;n en las FAQ de la web; las solicitudes se hacen a trav&eacute;s de la app Humans.</li>
+                        </ul>
+
+                        <h2>3. Grupo de Trabajo de Gobernanza (Kate B)</h2>
+                        <ul>
+                            <li>El grupo de trabajo que se form&oacute; en torno al proceso go/no-go a principios de a&ntilde;o se ha vuelto a reunir ahora que el burn ha terminado.</li>
+                            <li>Su tarea <strong>no</strong> es decidir c&oacute;mo se hace la gobernanza, sino recoger las aportaciones de la comunidad y proponer un marco claro y accesible: c&oacute;mo decidimos c&oacute;mo decidimos; qu&eacute; decisiones corresponden a una Asamblea General y cu&aacute;les a los equipos descentralizados m&aacute;s cercanos a la acci&oacute;n; c&oacute;mo evitar la burocracia escuchando de verdad a la comunidad.</li>
+                            <li><strong>Se buscan:</strong> unas cuantas personas m&aacute;s con experiencia en organizaciones dirigidas por voluntarios, gobernanza descentralizada o derecho espa&ntilde;ol &mdash; presentad vuestro nombre en el canal de gobernanza de Discord. El grupo se mantendr&aacute; deliberadamente peque&ntilde;o para seguir siendo eficaz.</li>
+                        </ul>
+
+                        <h2>4. T&uacute;mulo del Templo &mdash; Una Propuesta (Tancredi T)</h2>
+                        <ul>
+                            <li>Tancredi propuso crear un <strong>templo</strong> para el evento &mdash; la contraparte tranquila y reflexiva de la fiesta: un espacio de peregrinaci&oacute;n para el duelo, la memoria y el ritual colectivo.</li>
+                            <li>El giro: no hace falta fuego ni una gran construcci&oacute;n. Inspirada en los t&uacute;mulos funerarios neol&iacute;ticos, la idea es un <strong>mont&iacute;culo de tierra permanente en el nuevo emplazamiento</strong>, construido colectivamente: durante la semana, la gente escribe mensajes en papel biodegradable en sencillos quioscos con sombra en un rinc&oacute;n tranquilo del sitio; en una ceremonia de clausura, el agua disuelve los mensajes y todo el mundo mueve tierra &mdash; una palada cada uno &mdash; para hacer crecer el mont&iacute;culo. Un hito fijo que crece a&ntilde;o tras a&ntilde;o, con el arte libre de evolucionar a su alrededor. El templo de menor presupuesto en la historia de los burns, por dise&ntilde;o.</li>
+                            <li>El chat se encendi&oacute; (&laquo;Burying Man&raquo;). La discusi&oacute;n contin&uacute;a en el canal del templo en Discord.</li>
+                        </ul>
+
+                        <h2>5. Recuperar el Domingo (Michael M)</h2>
+                        <ul>
+                            <li>Michael M apoy&oacute; la idea del templo y plante&oacute; un cambio m&aacute;s amplio: en los &uacute;ltimos a&ntilde;os los barrios han presionado m&aacute;s para desmontar los campamentos el domingo por la ma&ntilde;ana, y el evento ha perdido su cierre lento y c&aacute;lido &mdash; las ceremonias de clausura, las cenas de despedida, el &uacute;ltimo d&iacute;a reflexivo.</li>
+                            <li>Propuesta en esp&iacute;ritu: mantener el domingo como d&iacute;a de cierre y descompresi&oacute;n &mdash; quien necesite irse puede hacerlo, pero el evento no deber&iacute;a sentirse terminado de golpe. Mucho apoyo en el chat (&laquo;domingo de calma, lunes de strike&raquo;); tambi&eacute;n se sugiri&oacute; una ceremonia de clausura el s&aacute;bado por la noche. Una ceremonia del templo el domingo podr&iacute;a anclar exactamente esto.</li>
+                        </ul>
+
+                        <h2>6. Nuevo Emplazamiento &mdash; Presentaci&oacute;n P&uacute;blica (Pablo V)</h2>
+                        <p><em>Una presentaci&oacute;n de un trabajo que lleva tiempo en marcha.</em></p>
+                        <ul>
+                            <li><strong>La propuesta:</strong> formar un grupo de trabajo &mdash; provisionalmente &laquo;Elsite&raquo; / &laquo;LCTO&raquo; &mdash; <strong>independiente de NCA</strong>, cuyo objetivo no es que NCA compre terreno, sino poner terreno disponible a largo plazo <strong>para que NCA lo alquile</strong>. Se ha encontrado un emplazamiento candidato concreto que parece viable; se est&aacute;n trabajando los riesgos.</li>
+                            <li><strong>Estructura:</strong> seg&uacute;n el asesoramiento fiscal y legal actual, una SL espa&ntilde;ola es el veh&iacute;culo de tenencia probable, porque a&iacute;sla el riesgo y permite flexibilidad. Existen varios mecanismos legales para vincular la entidad a la asociaci&oacute;n de modo que nadie obtenga beneficio: los participantes estar&iacute;an implicados operativamente (sin poder lucrarse) o ser&iacute;an prestamistas (con devoluci&oacute;n en el tiempo, asumiendo cierto riesgo) &mdash; no habr&aacute; un rol de &laquo;inversor&raquo;. Se est&aacute; preparando un memorando sobre la estructura legal y fiscal.</li>
+                            <li><strong>Cuidado necesario (Pierre K):</strong> las autoridades espa&ntilde;olas examinan con lupa la actividad voluntaria dentro de entidades comerciales, as&iacute; que la entidad propietaria del terreno debe estar estrictamente separada de las operaciones del evento &mdash; esto se estructurar&aacute; con cuidado.</li>
+                            <li><strong>Preocupaci&oacute;n por la continuidad (Benoit F):</strong> &iquest;y si alg&uacute;n d&iacute;a hay un conflicto entre las dos entidades? Respuesta: un contrato de alquiler a largo plazo (10&ndash;20 a&ntilde;os) dise&ntilde;ado como una hipoteca &mdash; calendario de pagos claro, protecciones que solo se activan ante impagos, tan previsible y a prueba de disputas como sea posible.</li>
+                            <li><strong>Calendario indicativo:</strong> agosto&ndash;septiembre: trabajo de viabilidad (sonido, comportamiento ante lluvia e inundaciones, caminos de acceso), fijar los precios de las parcelas, trabajo de permisos &mdash; buena parte de los permisos y de la evaluaci&oacute;n f&iacute;sica del emplazamiento est&aacute; <strong>ya avanzada</strong> (se han hecho visitas al sitio con las autoridades de permisos). Despu&eacute;s, un <strong>voto</strong> de la comunidad sobre si seguir adelante; recaudaci&oacute;n en torno a noviembre&ndash;diciembre (pr&eacute;stamos de la comunidad, devueltos en ~5&ndash;10 a&ntilde;os, probablemente con los ingresos de entradas); posible compra en enero; preparaci&oacute;n del terreno de marzo a junio. Mientras tanto se mantiene abierta la opci&oacute;n de usar el emplazamiento de este a&ntilde;o.</li>
+                            <li><strong>Micro-burn / &laquo;hype-raiser&raquo;:</strong> un peque&ntilde;o evento de prueba (desde una fiesta hasta ~500 personas), posiblemente a mediados o finales de octubre (por consultar), para probar el sonido, los accesos y el comportamiento con lluvia &mdash; y generar ilusi&oacute;n. Varios sound camps ya han mostrado inter&eacute;s.</li>
+                            <li><strong>Dise&ntilde;arlo bien primero (Pierre K):</strong> una vez que tengamos terreno propio, hacer el paisajismo como es debido antes de correr a construir &mdash; modelar la zona de sonido con movimientos de tierra, gestionar el flujo del agua, incorporar energ&iacute;a solar y e&oacute;lica, reciclaje de aguas grises, ba&ntilde;os de compostaje. La comunidad tiene el talento. Los candidatos de mayor impacto y menos controvertidos hasta ahora: ba&ntilde;os de compostaje y almacenamiento en el sitio (del orden de &euro;50&ndash;70K cada uno, por afinar).</li>
+                            <li><strong>Pensar a largo plazo (Michael M):</strong> con las ventas de entradas por debajo del pico de ~3.500 de hace unos a&ntilde;os, conviene tener la mente abierta sobre c&oacute;mo ser&aacute; el evento del a&ntilde;o que viene en lugar de dar por hecho una repetici&oacute;n a plena escala &mdash; un a&ntilde;o de montaje m&aacute;s pausado seguido de un relanzamiento en terreno propio podr&iacute;a recuperar a los miles que dejaron de venir. &laquo;Podr&iacute;amos tener terreno durante d&eacute;cadas &mdash; eso es algo bastante potente y maravilloso&raquo;.</li>
+                            <li><strong>Pregunta econ&oacute;mica (Ellen):</strong> &iquest;cu&aacute;ntos participantes hacen viable el nuevo terreno? El modelo financiero llegar&aacute; una vez cerrados los informes de este a&ntilde;o (agosto), incluyendo cu&aacute;nto de la recaudaci&oacute;n queda disponible para invertir.</li>
+                            <li>Los siguientes pasos se compartir&aacute;n en el canal #new-site de Discord; una convocatoria de participaci&oacute;n llegar&aacute; una vez resueltos los bloqueos actuales (las finanzas de este a&ntilde;o) &mdash; cuesti&oacute;n de un par de semanas.</li>
+                            <li>Sobre el nombre (desde el chat): <strong>la intenci&oacute;n es usar el nombre &laquo;Nowhere&raquo; cuando sea posible</strong>.</li>
+                        </ul>
+
+                        <h2>7. Reclutamiento para la Junta, Diversidad y Carga de Trabajo</h2>
+                        <p>Un turno de preguntas rico, impulsado en gran parte por el chat:</p>
+                        <ul>
+                            <li><strong>Elecciones:</strong> la junta ha querido una representaci&oacute;n m&aacute;s diversa desde el principio y celebrar&aacute; con gusto unas elecciones en cuanto haya candidaturas &mdash; todav&iacute;a no se ha presentado ninguna. En cualquier caso los estatutos exigen elecciones con un ciclo regular, y hay l&iacute;mites de mandato. Son posibles elecciones extraordinarias.</li>
+                            <li><strong>Diversidad:</strong> el chat insisti&oacute; con fuerza en la necesidad de m&aacute;s mujeres y personas no binarias en la junta. Ideas: un grupo de animaci&oacute;n y preselecci&oacute;n que se dirija activamente a personas que de otro modo no se presentar&iacute;an (ahora vale la pena priorizarlo), y reducir la carga de trabajo para que el rol sea accesible a personas con vidas menos flexibles.</li>
+                            <li><strong>Carga de trabajo descrita con honestidad:</strong> reuniones dos veces por semana durante la fase intensa de arranque, reducidas a ~una semanal cerca del evento; se espera que sea bastante m&aacute;s ligera el a&ntilde;o que viene, a medida que la junta se retira de los asuntos operativos y los asumen los departamentos. &laquo;Normalmente la soluci&oacute;n est&aacute; bastante clara&hellip; lo que suele hacer falta es que alguien se haga cargo de un tema&raquo; (Pablo V).</li>
+                            <li><strong>Responsabilidad:</strong> la asociaci&oacute;n es la entidad legalmente responsable y tiene seguro, incluido para los miembros de la junta. Los miembros de la junta responden personalmente solo por fraude o mala fe, negligencia clara o incumplimiento de los estatutos &mdash; no se es &laquo;de repente responsable de un mill&oacute;n de euros&raquo;.</li>
+                            <li><strong>Gastos de cuidado de menores:</strong> &iquest;podr&iacute;an cubrirse para los miembros de la junta? A consultar con los abogados (los estatutos proh&iacute;ben la remuneraci&oacute;n por las funciones de la junta; si es posible una cobertura tipo gasto necesita aclaraci&oacute;n legal).</li>
+                            <li><strong>Roles explicados:</strong> cuatro cargos nombrados (presidencia, vicepresidencia, tesorer&iacute;a, secretar&iacute;a) llevan responsabilidades espec&iacute;ficas; los <strong>vocales</strong> son miembros de pleno derecho de la junta sin cartera espec&iacute;fica &mdash; en la pr&aacute;ctica la junta funciona de forma horizontal. Se redactar&aacute; una descripci&oacute;n escrita de los roles e informaci&oacute;n para presentarse (<strong>Victor P</strong> se ofreci&oacute;).</li>
+                            <li><strong>Membres&iacute;a:</strong> no hace falta ser asociado antes de presentarse; los criterios de membres&iacute;a y las FAQ est&aacute;n en la web.</li>
+                        </ul>
+
+                        <h2>8. Coordinadores frente a Meta-Leads (Reflexi&oacute;n sobre la Estructura)</h2>
+                        <ul>
+                            <li>A ra&iacute;z de preguntas del chat: &laquo;coordinador&raquo; es el nombre de este a&ntilde;o para la funci&oacute;n de coordinar un departamento. Daniela S se&ntilde;al&oacute; que es un buen momento para repensar la estructura: varios roles centralizan demasiado, y le gustar&iacute;a avanzar hacia <strong>roles basados en proyectos</strong> que distribuyan la carga entre m&aacute;s personas &mdash; menos puntos &uacute;nicos de fallo, m&aacute;s voces, roles realmente manejables de forma voluntaria. Alimenta las conversaciones de gobernanza y estructura.</li>
+                        </ul>
+
+                        <h2>9. Canales de Comunicaci&oacute;n y Web</h2>
+                        <ul>
+                            <li>Discord sigue siendo la <strong>fuente de verdad</strong>, con la informaci&oacute;n importante replicada en los canales de difusi&oacute;n de WhatsApp y Telegram; cambiar eso est&aacute; abierto a la comunidad a trav&eacute;s de los procesos de gobernanza o uni&eacute;ndose al equipo de comms.</li>
+                            <li>Distinci&oacute;n &uacute;til planteada: <strong>decisiones de gobernanza</strong> (votos de la Asamblea General) frente a <strong>decisiones operativas</strong> (competencia de quien hace el trabajo) frente a <strong>decisiones personales</strong> (&laquo;la Asamblea General no deber&iacute;a votar c&oacute;mo toma Daniela su caf&eacute;&raquo;).</li>
+                            <li>La web es HTML est&aacute;tico, f&aacute;cil de actualizar por voluntarios; quien quiera convertirla a un CMS es bienvenido a dar un paso al frente.</li>
+                        </ul>
+
+                        <h2>10. Cierre y Agradecimientos</h2>
+                        <ul>
+                            <li>Agradecimiento caluroso a todo el mundo &mdash; a los coordinadores que hicieron cantidades incre&iacute;bles de trabajo y (desde el chat) a todas las personas que lo hicieron posible. El anuncio de la Asamblea General llegar&aacute; a los buzones en los pr&oacute;ximos d&iacute;as. Mientras tanto: entrad en Discord &mdash; &laquo;vuestra energ&iacute;a es muy bienvenida&raquo;.</li>
+                        </ul>
+
+                        <h2>Decisiones</h2>
+                        <ul>
+                            <li><strong>Asamblea General: jueves 3 de septiembre de 2026, 20:00 CEST</strong> (voto de la junta, anunciado en esta llamada). Primer punto del orden del d&iacute;a: las fechas del evento del a&ntilde;o que viene.</li>
+                            <li>No se tomaron otras decisiones en la llamada &mdash; las propuestas del templo y del nuevo emplazamiento est&aacute;n abiertas a las aportaciones de la comunidad; el grupo de trabajo del nuevo emplazamiento se constituye de forma independiente a la espera del voto de la comunidad sobre c&oacute;mo se conecta con la asociaci&oacute;n.</li>
+                        </ul>
+
+                        <h2>Acciones a Realizar</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Acci&oacute;n</th><th>Responsable</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Rellenar el censo del evento (plazo por publicar en los canales)</td><td>Todo el mundo</td></tr>
+                                <tr><td>Esperar a la semana que viene para los informes de gastos; luego presentarlos v&iacute;a Humans</td><td>Coordinadores / quienes hayan gastado</td></tr>
+                                <tr><td>Rellenar la encuesta de ba&ntilde;os (enlace en el chat y los canales)</td><td>Todo el que los haya usado</td></tr>
+                                <tr><td>Enviar el anuncio de la Asamblea General y el correo aclaratorio sobre membres&iacute;a y votaci&oacute;n</td><td>Daniel T / junta, Pablo V</td></tr>
+                                <tr><td>Crear el canal de Discord para la discusi&oacute;n de fechas</td><td>Junta / comms</td></tr>
+                                <tr><td>Preparar el memorando legal y fiscal sobre la estructura de tenencia del terreno</td><td>Pablo V / grupo de trabajo</td></tr>
+                                <tr><td>Presentar la documentaci&oacute;n de permisos pendiente para el nuevo emplazamiento</td><td>Daniela S</td></tr>
+                                <tr><td>Consultar a los abogados sobre la cobertura de gastos de cuidado de menores para la junta</td><td>Junta</td></tr>
+                                <tr><td>Redactar la descripci&oacute;n de los roles de la junta e informaci&oacute;n para presentarse</td><td>Victor P</td></tr>
+                                <tr><td>Apuntarse: GT de gobernanza (canal governance), templo (canal temple), nuevo emplazamiento (#new-site)</td><td>Miembros de la comunidad interesados</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Pr&oacute;xima llamada: ritmo por confirmar &mdash; atentos a los canales. Asamblea General: 3 de septiembre, 20:00 CEST.</em></p>
+                        <p><em>Actas preparadas a partir de la grabaci&oacute;n de audio, contrastadas con la transcripci&oacute;n de la reuni&oacute;n y el chat.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Avec Daniel T (animateur), Daniela S (production), Ant H (early build), Ellen / Dr Plantes (administration), Shitshow (LNT), Scientist (Safer Space), Pierre K, Pablo V, Kate B (gouvernance), Tancredi T, Michael M (nurse), Victor P, Benoit F, et de nombreux membres de la communaut&eacute; &mdash; ~50 dans les dix premi&egrave;res minutes, avec un pic autour de 80</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Archives de la R&eacute;union</h3>
+                        <ul>
+                            <li><a href="2026-07-30-community-transcript.html">Transcription compl&egrave;te (en anglais uniquement)</a></li>
+                            <li><a href="2026-07-30-community-chat.html">Journal complet du chat</a></li>
+                            <li><a href="https://youtu.be/kKIkdmevQIk">Enregistrement vid&eacute;o (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/kKIkdmevQIk" title="Community Meeting - July 30, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Un appel important et plein d&rsquo;&eacute;nergie &mdash; une participation remarquable pour le mois m&ecirc;me de l&rsquo;&eacute;v&eacute;nement : un premier retour sur Elsewhere 26, l&rsquo;annonce de la premi&egrave;re <strong>Assembl&eacute;e G&eacute;n&eacute;rale (3 septembre)</strong> de l&rsquo;association, la reconstitution du groupe de travail sur la gouvernance, une proposition de temple permanent, et une pr&eacute;sentation publique de l&rsquo;initiative du nouveau site.</p>
+
+                        <h2>1. Elsewhere 26 &mdash; Premier Retour</h2>
+                        <p>L&rsquo;&eacute;v&eacute;nement a eu lieu, le permis a tenu, personne n&rsquo;a &eacute;t&eacute; bless&eacute; et il n&rsquo;y a pas eu d&rsquo;&eacute;vacuation &mdash; m&ecirc;me si, avec des incendies actifs dans la r&eacute;gion, cela s&rsquo;est jou&eacute; de peu. Les coordinateurs ont partag&eacute; leurs premi&egrave;res impressions :</p>
+                        <ul>
+                            <li><strong>Production (Daniela S) :</strong> un effort collectif massif et une r&eacute;ussite &mdash; &laquo;&nbsp;assez bien, c&rsquo;est assez bien&nbsp;&raquo;. Une ronde de feedback compl&egrave;te avec tous les coordinateurs est pr&eacute;vue. Les factures sont en cours de traitement ; <strong>les notes de frais doivent attendre la semaine prochaine</strong>, lorsque le syst&egrave;me sera pr&ecirc;t. Les chiffres financiers exacts devraient se pr&eacute;ciser au cours de la semaine &agrave; venir.</li>
+                            <li><strong>Early build (Ant H) :</strong> malgr&eacute; un stress justifi&eacute; en amont sur le nombre de b&eacute;n&eacute;voles, des conteneurs en retard et du mat&eacute;riel cass&eacute;, l&rsquo;&eacute;quipe a &eacute;t&eacute; formidable, le stress est rest&eacute; bas, et de nombreux b&eacute;n&eacute;voles venus pour la premi&egrave;re fois ont pass&eacute; un bon moment et veulent revenir.</li>
+                            <li><strong>Administration (Ellen / Dr Plantes) :</strong> les remboursements des jetons de glace, des bons d&rsquo;eau et du mat&eacute;riel lou&eacute; sont en cours &mdash; les barrios seront contact&eacute;s ; l&rsquo;objectif est de terminer l&rsquo;administration en ao&ucirc;t.</li>
+                            <li><strong>Toilettes &amp; recyclage (Shitshow / LNT) :</strong> les urinoirs accroupis ont fait un carton (&laquo;&nbsp;10/10, je referais caca&nbsp;&raquo; &mdash; le chat) ; un questionnaire de retour a &eacute;t&eacute; partag&eacute; pendant l&rsquo;appel. Le recyclage a globalement bien fonctionn&eacute;.</li>
+                            <li><strong>Recensement :</strong> merci de remplir le recensement de l&rsquo;&eacute;v&eacute;nement &mdash; il fa&ccedil;onne r&eacute;ellement la planification. La date limite sera communiqu&eacute;e dans les canaux.</li>
+                        </ul>
+
+                        <h2>2. Dates du Prochain &Eacute;v&eacute;nement &amp; Risque d&rsquo;Incendie &mdash; Assembl&eacute;e G&eacute;n&eacute;rale Convoqu&eacute;e</h2>
+                        <ul>
+                            <li>Le conseil a vot&eacute; (juste avant l&rsquo;appel) la <strong>convocation d&rsquo;une Assembl&eacute;e G&eacute;n&eacute;rale le jeudi 3 septembre 2026 &agrave; 20h00 CEST</strong>. Le premier point et le plus urgent : <strong>les dates de l&rsquo;&eacute;v&eacute;nement de l&rsquo;an prochain</strong>.</li>
+                            <li>Pourquoi : la saison des incendies est un risque r&eacute;el et croissant. Pendant le montage de cette ann&eacute;e, un incendie situ&eacute; &agrave; environ une heure soufflait vers le site, avec des cendres tombant sur le chantier. Les autorit&eacute;s ont &eacute;galement fortement recommand&eacute; de programmer l&rsquo;&eacute;v&eacute;nement en dehors de la p&eacute;riode &agrave; haut risque d&rsquo;incendie, les restrictions op&eacute;rationnelles devenant plus strictes chaque ann&eacute;e (Daniela S, qui a men&eacute; les nombreuses r&eacute;unions avec les institutions locales et r&eacute;gionales, l&rsquo;a soulign&eacute;).</li>
+                            <li><strong>Qui vote :</strong> formellement, les membres de l&rsquo;association (asociados), conform&eacute;ment aux statuts (disponibles sur le site). Des consultations plus larges de la communaut&eacute; peuvent et vont &eacute;clairer le vote &mdash; &laquo;&nbsp;ce ne sera pas un vote &agrave; la Brexit&nbsp;&raquo; : les options seront &eacute;tudi&eacute;es et document&eacute;es (conflits possibles, avantages et inconv&eacute;nients de chaque semaine) pour que le vote soit &eacute;clair&eacute;.</li>
+                            <li><strong>Coordination avec les autres burns (Pierre K) :</strong> avec ~40 &eacute;v&eacute;nements europ&eacute;ens et peu de bons mois, un certain chevauchement est in&eacute;vitable &mdash; ne laissez pas cela contraindre votre vote ; l&rsquo;organisation se coordonnera avec les autres &eacute;v&eacute;nements, et les &eacute;changes culturels et ambassades pourraient m&ecirc;me &ecirc;tre amusants.</li>
+                            <li>Un <strong>canal Discord d&eacute;di&eacute; &agrave; la discussion sur les dates</strong> sera cr&eacute;&eacute; afin que les non-membres puissent aussi participer &agrave; la conversation.</li>
+                            <li>Avant l&rsquo;assembl&eacute;e, un e-mail sera envoy&eacute; pour clarifier le statut de membre, le processus de vote et le fonctionnement de la premi&egrave;re Assembl&eacute;e G&eacute;n&eacute;rale (Pablo V). Les crit&egrave;res d&rsquo;adh&eacute;sion sont dans la FAQ du site ; les candidatures passent par l&rsquo;application Humans.</li>
+                        </ul>
+
+                        <h2>3. Groupe de Travail sur la Gouvernance (Kate B)</h2>
+                        <ul>
+                            <li>Le groupe de travail qui s&rsquo;&eacute;tait form&eacute; autour du processus go/no-go en d&eacute;but d&rsquo;ann&eacute;e s&rsquo;est reconstitu&eacute; maintenant que le burn est termin&eacute;.</li>
+                            <li>Son r&ocirc;le n&rsquo;est <strong>pas</strong> de d&eacute;cider comment la gouvernance se fait, mais de recueillir les contributions de la communaut&eacute; et de proposer un cadre clair et accessible : comment d&eacute;cidons-nous comment nous d&eacute;cidons ; quelles d&eacute;cisions rel&egrave;vent d&rsquo;une Assembl&eacute;e G&eacute;n&eacute;rale et lesquelles des &eacute;quipes d&eacute;centralis&eacute;es les plus proches du terrain ; comment &eacute;viter la bureaucratie tout en &eacute;coutant r&eacute;ellement la communaut&eacute;.</li>
+                            <li><strong>Recherch&eacute; :</strong> quelques membres suppl&eacute;mentaires ayant de l&rsquo;exp&eacute;rience dans les organisations b&eacute;n&eacute;voles, la gouvernance d&eacute;centralis&eacute;e ou le droit espagnol &mdash; proposez votre nom dans le canal gouvernance sur Discord. Le groupe restera d&eacute;lib&eacute;r&eacute;ment petit pour rester efficace.</li>
+                        </ul>
+
+                        <h2>4. Tumulus du Temple &mdash; Une Proposition (Tancredi T)</h2>
+                        <ul>
+                            <li>Tancredi a propos&eacute; de cr&eacute;er un <strong>temple</strong> pour l&rsquo;&eacute;v&eacute;nement &mdash; le pendant calme et r&eacute;flexif de la f&ecirc;te : un espace de p&egrave;lerinage pour le deuil, la m&eacute;moire et le rituel collectif.</li>
+                            <li>La trouvaille : pas besoin de feu, pas de grande construction. Inspir&eacute;e des tumulus fun&eacute;raires n&eacute;olithiques, l&rsquo;id&eacute;e est un <strong>tumulus de terre permanent sur le nouveau site</strong>, construit collectivement : pendant la semaine, les gens &eacute;crivent des messages sur du papier biod&eacute;gradable dans de simples kiosques ombrag&eacute;s, dans un coin plus calme du site ; lors d&rsquo;une c&eacute;r&eacute;monie de cl&ocirc;ture, l&rsquo;eau dissout les messages, et tout le monde d&eacute;place de la terre &mdash; une pellet&eacute;e chacun &mdash; pour faire grandir le tumulus. Un rep&egrave;re fixe qui grandit d&rsquo;ann&eacute;e en ann&eacute;e, avec un art libre d&rsquo;&eacute;voluer autour. Le temple au plus petit budget de l&rsquo;histoire des burns, par conception.</li>
+                            <li>Le chat s&rsquo;est enflamm&eacute; (&laquo;&nbsp;Burying Man&nbsp;&raquo;). La discussion continue dans le canal temple sur Discord.</li>
+                        </ul>
+
+                        <h2>5. Reconqu&eacute;rir le Dimanche (Michael M)</h2>
+                        <ul>
+                            <li>Michael M a soutenu l&rsquo;id&eacute;e du temple et a soulev&eacute; un glissement plus large : ces derni&egrave;res ann&eacute;es, les barrios ont pouss&eacute; davantage pour d&eacute;monter les camps le dimanche matin, et l&rsquo;&eacute;v&eacute;nement a perdu sa descente lente et chaleureuse &mdash; les c&eacute;r&eacute;monies de cl&ocirc;ture, les d&icirc;ners d&rsquo;adieu, le dernier jour r&eacute;flexif.</li>
+                            <li>Proposition dans l&rsquo;esprit : garder le dimanche comme journ&eacute;e de cl&ocirc;ture et de d&eacute;compression &mdash; ceux qui doivent partir le peuvent, mais l&rsquo;&eacute;v&eacute;nement ne devrait pas se terminer brutalement. Fort soutien dans le chat (&laquo;&nbsp;dimanche lent, lundi strike&nbsp;&raquo;) ; une c&eacute;r&eacute;monie de cl&ocirc;ture le samedi soir a aussi &eacute;t&eacute; sugg&eacute;r&eacute;e. Une c&eacute;r&eacute;monie du temple le dimanche pourrait ancrer exactement cela.</li>
+                        </ul>
+
+                        <h2>6. Nouveau Site &mdash; Pr&eacute;sentation Publique (Pablo V)</h2>
+                        <p><em>Une pr&eacute;sentation d&rsquo;un travail en cours depuis un certain temps.</em></p>
+                        <ul>
+                            <li><strong>La proposition :</strong> former un groupe de travail &mdash; provisoirement &laquo;&nbsp;Elsite&nbsp;&raquo; / &laquo;&nbsp;LCTO&nbsp;&raquo; &mdash; <strong>ind&eacute;pendant de NCA</strong>, dont l&rsquo;objectif n&rsquo;est pas que NCA ach&egrave;te du terrain, mais de rendre un terrain disponible &agrave; long terme <strong>pour que NCA le loue</strong>. Un site candidat pr&eacute;cis a &eacute;t&eacute; trouv&eacute; et para&icirc;t faisable ; les risques sont en cours d&rsquo;examen.</li>
+                            <li><strong>Structure :</strong> selon les conseils fiscaux et juridiques actuels, une SL espagnole (soci&eacute;t&eacute; &agrave; responsabilit&eacute; limit&eacute;e) est le v&eacute;hicule de d&eacute;tention probable, car elle cloisonne le risque et permet de la flexibilit&eacute;. Plusieurs m&eacute;canismes juridiques existent pour lier l&rsquo;entit&eacute; &agrave; l&rsquo;association afin que personne n&rsquo;en tire profit : les participants seraient soit impliqu&eacute;s op&eacute;rationnellement (et dans l&rsquo;impossibilit&eacute; de faire du profit), soit pr&ecirc;teurs (rembours&eacute;s dans le temps, en portant une part de risque) &mdash; il n&rsquo;y aura pas de r&ocirc;le d&rsquo;&laquo;&nbsp;investisseur&nbsp;&raquo;. Une note couvrant la structure juridique et fiscale est en pr&eacute;paration.</li>
+                            <li><strong>Prudence requise (Pierre K) :</strong> les autorit&eacute;s espagnoles scrutent l&rsquo;activit&eacute; b&eacute;n&eacute;vole au sein d&rsquo;entit&eacute;s commerciales, donc l&rsquo;entit&eacute; propri&eacute;taire du terrain doit &ecirc;tre strictement s&eacute;par&eacute;e des op&eacute;rations de l&rsquo;&eacute;v&eacute;nement &mdash; cela sera structur&eacute; avec soin.</li>
+                            <li><strong>Question de continuit&eacute; (Benoit F) :</strong> et s&rsquo;il y avait un jour un litige entre les deux entit&eacute;s ? R&eacute;ponse : un contrat de location &agrave; long terme (10&ndash;20 ans) con&ccedil;u comme un pr&ecirc;t hypoth&eacute;caire &mdash; &eacute;ch&eacute;ancier de paiement clair, protections qui ne se d&eacute;clenchent qu&rsquo;en cas d&rsquo;impay&eacute;s, aussi pr&eacute;visible et &agrave; l&rsquo;&eacute;preuve des litiges que possible.</li>
+                            <li><strong>Calendrier indicatif :</strong> ao&ucirc;t&ndash;septembre : travail de faisabilit&eacute; (son, comportement en cas de pluie et d&rsquo;inondation, routes d&rsquo;acc&egrave;s), verrouillage des prix des parcelles, travail sur les permis &mdash; une grande partie des permis et de l&rsquo;&eacute;valuation physique du site est <strong>d&eacute;j&agrave; avanc&eacute;e</strong> (des visites du site avec les autorit&eacute;s comp&eacute;tentes ont eu lieu). Ensuite un <strong>vote</strong> de la communaut&eacute; sur la poursuite ; lev&eacute;e de fonds vers novembre&ndash;d&eacute;cembre (pr&ecirc;ts communautaires, rembours&eacute;s sur ~5&ndash;10 ans, probablement sur les recettes de billetterie) ; achat potentiel en janvier ; pr&eacute;paration du site de mars &agrave; juin. L&rsquo;option d&rsquo;utiliser le site de cette ann&eacute;e reste ouverte entre-temps.</li>
+                            <li><strong>Micro-burn / &laquo;&nbsp;hype-raiser&nbsp;&raquo; :</strong> un petit &eacute;v&eacute;nement test (d&rsquo;une simple f&ecirc;te jusqu&rsquo;&agrave; ~500 personnes), possiblement mi ou fin octobre (&agrave; sonder), pour tester le son, les acc&egrave;s et le comportement sous la pluie &mdash; et cr&eacute;er de l&rsquo;enthousiasme. Plusieurs sound camps ont d&eacute;j&agrave; manifest&eacute; leur int&eacute;r&ecirc;t.</li>
+                            <li><strong>Bien le concevoir d&rsquo;abord (Pierre K) :</strong> une fois le terrain &agrave; nous, faire l&rsquo;am&eacute;nagement paysager correctement avant de se pr&eacute;cipiter &agrave; construire &mdash; modeler la zone son par des terrassements, g&eacute;rer l&rsquo;&eacute;coulement de l&rsquo;eau, amener le solaire et l&rsquo;&eacute;olien, le recyclage des eaux grises, des toilettes s&egrave;ches. La communaut&eacute; a le talent. Candidats &agrave; plus fort impact et les moins controvers&eacute;s &agrave; ce jour : toilettes s&egrave;ches et stockage sur site (de l&rsquo;ordre de &euro;50&ndash;70K chacun, &agrave; affiner).</li>
+                            <li><strong>R&eacute;flexion &agrave; long terme (Michael M) :</strong> les ventes de billets ayant baiss&eacute; depuis un pic de ~3 500 il y a quelques ann&eacute;es, il faut rester ouvert sur ce &agrave; quoi ressemblera l&rsquo;&eacute;v&eacute;nement de l&rsquo;an prochain plut&ocirc;t que de pr&eacute;sumer une r&eacute;p&eacute;tition &agrave; pleine &eacute;chelle &mdash; une ann&eacute;e de montage plus lente suivie d&rsquo;un relancement sur notre propre terrain pourrait ramener les milliers de personnes qui ont cess&eacute; de venir. &laquo;&nbsp;Nous pourrions avoir un terrain pour des d&eacute;cennies &mdash; c&rsquo;est une chose assez puissante et formidable.&nbsp;&raquo;</li>
+                            <li><strong>Question &eacute;conomique (Ellen) :</strong> combien de participants rendent le nouveau terrain viable ? La mod&eacute;lisation financi&egrave;re suivra une fois les rapports de cette ann&eacute;e finalis&eacute;s (ao&ucirc;t), y compris la part de la lev&eacute;e de fonds qui reste disponible &agrave; investir.</li>
+                            <li>Les prochaines &eacute;tapes seront partag&eacute;es dans le canal #new-site sur Discord ; un appel &agrave; participation suivra une fois les blocages actuels (les finances de cette ann&eacute;e) lev&eacute;s &mdash; comptez quelques semaines.</li>
+                            <li>Sur le nom (depuis le chat) : <strong>l&rsquo;intention est d&rsquo;utiliser le nom &laquo;&nbsp;Nowhere&nbsp;&raquo; d&egrave;s que possible</strong>.</li>
+                        </ul>
+
+                        <h2>7. Recrutement au Conseil, Diversit&eacute; &amp; Charge de Travail</h2>
+                        <p>Un riche &eacute;change de questions-r&eacute;ponses, largement port&eacute; par le chat :</p>
+                        <ul>
+                            <li><strong>&Eacute;lections :</strong> le conseil souhaite depuis le d&eacute;but une repr&eacute;sentation plus diverse et organisera volontiers une &eacute;lection d&egrave;s qu&rsquo;il y aura des candidatures &mdash; aucune n&rsquo;a encore &eacute;t&eacute; d&eacute;pos&eacute;e. Les &eacute;lections sont de toute fa&ccedil;on exig&eacute;es par les statuts selon un cycle r&eacute;gulier, et il existe des limites de mandat. Des &eacute;lections extraordinaires sont possibles.</li>
+                            <li><strong>Diversit&eacute; :</strong> le chat a fortement insist&eacute; sur le besoin de plus de femmes et de personnes non binaires au conseil. Id&eacute;es : un groupe d&rsquo;encouragement et de pr&eacute;s&eacute;lection qui va activement vers des personnes qui ne se porteraient pas candidates autrement (&agrave; prioriser d&eacute;sormais), et r&eacute;duire la charge de travail pour que le r&ocirc;le soit accessible &agrave; des personnes aux vies moins flexibles.</li>
+                            <li><strong>Charge de travail d&eacute;crite honn&ecirc;tement :</strong> des r&eacute;unions deux fois par semaine pendant la phase intense de d&eacute;marrage, r&eacute;duites &agrave; ~une par semaine &agrave; l&rsquo;approche de l&rsquo;&eacute;v&eacute;nement ; attendue nettement plus l&eacute;g&egrave;re l&rsquo;an prochain, le conseil se retirant des questions op&eacute;rationnelles au profit des d&eacute;partements. &laquo;&nbsp;D&rsquo;habitude la solution est assez claire&hellip; ce qu&rsquo;il faut g&eacute;n&eacute;ralement, c&rsquo;est que quelqu&rsquo;un prenne un sujet en charge&nbsp;&raquo; (Pablo V).</li>
+                            <li><strong>Responsabilit&eacute; :</strong> l&rsquo;association est l&rsquo;entit&eacute; juridiquement responsable et dispose d&rsquo;une assurance, y compris pour les administrateurs. Les administrateurs ne sont personnellement responsables qu&rsquo;en cas de fraude ou de malveillance, de n&eacute;gligence manifeste ou de violation des statuts &mdash; pas &laquo;&nbsp;soudainement responsables d&rsquo;un million d&rsquo;euros&nbsp;&raquo;.</li>
+                            <li><strong>Frais de garde d&rsquo;enfants :</strong> pourraient-ils &ecirc;tre couverts pour les membres du conseil ? &Agrave; v&eacute;rifier avec les avocats (les statuts interdisent la r&eacute;mun&eacute;ration des fonctions au conseil ; savoir si une prise en charge de type frais est possible n&eacute;cessite une clarification juridique).</li>
+                            <li><strong>R&ocirc;les expliqu&eacute;s :</strong> quatre r&ocirc;les nomm&eacute;s (pr&eacute;sident, vice-pr&eacute;sident, tr&eacute;sorier, secr&eacute;taire) portent des responsabilit&eacute;s sp&eacute;cifiques ; les <strong>vocales</strong> sont des membres &agrave; part enti&egrave;re du conseil sans portefeuille sp&eacute;cifique &mdash; en pratique le conseil fonctionne &agrave; plat. Une description &eacute;crite des r&ocirc;les et des informations pour candidater seront r&eacute;dig&eacute;es (<strong>Victor P</strong> s&rsquo;est port&eacute; volontaire).</li>
+                            <li><strong>Adh&eacute;sion :</strong> il n&rsquo;est pas n&eacute;cessaire d&rsquo;&ecirc;tre asociado avant de candidater ; les crit&egrave;res d&rsquo;adh&eacute;sion et la FAQ sont sur le site.</li>
+                        </ul>
+
+                        <h2>8. Coordinateurs vs Meta-Leads (R&eacute;flexion sur la Structure)</h2>
+                        <ul>
+                            <li>Suite aux questions du chat : &laquo;&nbsp;coordinateur&nbsp;&raquo; est le nom de cette ann&eacute;e pour la fonction de coordination d&rsquo;un d&eacute;partement. Daniela S a signal&eacute; que c&rsquo;est un bon moment pour repenser la structure : plusieurs r&ocirc;les centralisent trop, et elle aimerait aller vers des <strong>r&ocirc;les par projet</strong> r&eacute;partissant la charge sur davantage de personnes &mdash; moins de points de d&eacute;faillance uniques, plus de voix, des r&ocirc;les r&eacute;ellement g&eacute;rables sur une base b&eacute;n&eacute;vole. Cela alimente les conversations gouvernance et structure.</li>
+                        </ul>
+
+                        <h2>9. Canaux de Communication &amp; Site Web</h2>
+                        <ul>
+                            <li>Discord reste la <strong>source de v&eacute;rit&eacute;</strong>, avec l&rsquo;information importante r&eacute;pliqu&eacute;e sur les canaux de diffusion WhatsApp et Telegram ; changer cela est ouvert &agrave; la communaut&eacute; via les processus de gouvernance ou en rejoignant l&rsquo;&eacute;quipe comms.</li>
+                            <li>Distinction utile propos&eacute;e : <strong>d&eacute;cisions de gouvernance</strong> (votes de l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale) vs <strong>d&eacute;cisions op&eacute;rationnelles</strong> (du ressort de qui fait le travail) vs <strong>d&eacute;cisions personnelles</strong> (&laquo;&nbsp;l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale ne devrait pas voter sur la fa&ccedil;on dont Daniela prend son caf&eacute;&nbsp;&raquo;).</li>
+                            <li>Le site est en HTML statique, facilement mis &agrave; jour par des b&eacute;n&eacute;voles ; quiconque souhaite le convertir en CMS est invit&eacute; &agrave; se manifester.</li>
+                        </ul>
+
+                        <h2>10. Cl&ocirc;ture &amp; Remerciements</h2>
+                        <ul>
+                            <li>Des remerciements chaleureux &agrave; tous &mdash; aux coordinateurs qui ont abattu un travail incroyable, et (depuis le chat) &agrave; tous ceux qui ont rendu cela possible. L&rsquo;annonce de l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale arrivera dans les bo&icirc;tes mail dans les prochains jours. En attendant : venez sur Discord &mdash; &laquo;&nbsp;votre &eacute;nergie est vraiment la bienvenue&nbsp;&raquo;.</li>
+                        </ul>
+
+                        <h2>D&eacute;cisions</h2>
+                        <ul>
+                            <li><strong>Assembl&eacute;e G&eacute;n&eacute;rale : jeudi 3 septembre 2026, 20h00 CEST</strong> (vote du conseil, annonc&eacute; lors de cet appel). Premier point &agrave; l&rsquo;ordre du jour : les dates de l&rsquo;&eacute;v&eacute;nement de l&rsquo;an prochain.</li>
+                            <li>Aucune autre d&eacute;cision prise pendant l&rsquo;appel &mdash; les propositions du temple et du nouveau site sont ouvertes aux contributions de la communaut&eacute; ; le groupe de travail du nouveau site se constitue de fa&ccedil;on ind&eacute;pendante, dans l&rsquo;attente du vote de la communaut&eacute; sur son lien avec l&rsquo;association.</li>
+                        </ul>
+
+                        <h2>Actions &agrave; R&eacute;aliser</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Action</th><th>Responsable</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Remplir le recensement de l&rsquo;&eacute;v&eacute;nement (date limite &agrave; publier dans les canaux)</td><td>Tout le monde</td></tr>
+                                <tr><td>Attendre la semaine prochaine pour les notes de frais ; puis les d&eacute;poser via Humans</td><td>Coordinateurs / personnes ayant engag&eacute; des d&eacute;penses</td></tr>
+                                <tr><td>Remplir le questionnaire sur les toilettes (lien dans le chat et les canaux)</td><td>Tous ceux qui les ont utilis&eacute;es</td></tr>
+                                <tr><td>Envoyer l&rsquo;annonce de l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale et l&rsquo;e-mail de clarification adh&eacute;sion/vote</td><td>Daniel T / conseil, Pablo V</td></tr>
+                                <tr><td>Cr&eacute;er un canal Discord pour la discussion sur les dates</td><td>Conseil / comms</td></tr>
+                                <tr><td>Pr&eacute;parer une note juridique et fiscale sur la structure de d&eacute;tention du terrain</td><td>Pablo V / groupe de travail</td></tr>
+                                <tr><td>D&eacute;poser les documents de permis restants pour le nouveau site</td><td>Daniela S</td></tr>
+                                <tr><td>Demander aux avocats la prise en charge des frais de garde d&rsquo;enfants pour les membres du conseil</td><td>Conseil</td></tr>
+                                <tr><td>R&eacute;diger la description des r&ocirc;les au conseil et les informations de candidature</td><td>Victor P</td></tr>
+                                <tr><td>Rejoindre : GT gouvernance (canal gouvernance), temple (canal temple), nouveau site (#new-site)</td><td>Membres de la communaut&eacute; int&eacute;ress&eacute;s</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Prochain appel : rythme en cours de confirmation &mdash; surveillez les canaux. Assembl&eacute;e G&eacute;n&eacute;rale : 3 septembre, 20h00 CEST.</em></p>
+                        <p><em>Proc&egrave;s-verbal pr&eacute;par&eacute; &agrave; partir de l&rsquo;enregistrement audio, recoup&eacute; avec la transcription de la r&eacute;union et le chat.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Con Daniel T (moderatore), Daniela S (produzione), Ant H (early build), Ellen / Dr Plantes (amministrazione), Shitshow (LNT), Scientist (Safer Space), Pierre K, Pablo V, Kate B (governance), Tancredi T, Michael M (nurse), Victor P, Benoit F e molti membri della comunit&agrave; &mdash; ~50 nei primi dieci minuti, con un picco intorno a 80</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Archivi della Riunione</h3>
+                        <ul>
+                            <li><a href="2026-07-30-community-transcript.html">Trascrizione completa (solo in inglese)</a></li>
+                            <li><a href="2026-07-30-community-chat.html">Registro completo della chat</a></li>
+                            <li><a href="https://youtu.be/kKIkdmevQIk">Registrazione video (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/kKIkdmevQIk" title="Community Meeting - July 30, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Una chiamata grande e piena di energia &mdash; una partecipazione notevole per lo stesso mese dell&rsquo;evento: un primo sguardo retrospettivo a Elsewhere 26, l&rsquo;annuncio della prima <strong>Assemblea Generale (3 settembre)</strong> dell&rsquo;associazione, la ricostituzione del gruppo di lavoro sulla governance, una proposta per un tempio permanente e una presentazione pubblica dell&rsquo;iniziativa del nuovo sito.</p>
+
+                        <h2>1. Elsewhere 26 &mdash; Primo Bilancio</h2>
+                        <p>L&rsquo;evento si &egrave; svolto, il permesso ha retto, nessuno si &egrave; fatto male e non c&rsquo;&egrave; stata evacuazione &mdash; anche se, con incendi attivi nella regione, ci &egrave; mancato poco. I coordinatori hanno condiviso le prime impressioni:</p>
+                        <ul>
+                            <li><strong>Produzione (Daniela S):</strong> uno sforzo collettivo enorme e un successo &mdash; &laquo;abbastanza buono &egrave; abbastanza buono&raquo;. &Egrave; previsto un giro completo di feedback con tutti i coordinatori. Le fatture sono in lavorazione; <strong>le note spese vanno trattenute fino alla prossima settimana</strong>, quando il sistema sar&agrave; pronto. Le cifre finanziarie esatte dovrebbero consolidarsi nel corso della prossima settimana.</li>
+                            <li><strong>Early build (Ant H):</strong> nonostante lo stress giustificato in anticipo per il numero di volontari, i container in ritardo e le attrezzature rotte, la squadra &egrave; stata fantastica, lo stress &egrave; rimasto basso e molti volontari alla prima esperienza si sono divertiti e vogliono tornare.</li>
+                            <li><strong>Amministrazione (Ellen / Dr Plantes):</strong> sono in corso i rimborsi per i token del ghiaccio, i buoni acqua e le attrezzature noleggiate &mdash; i barrios verranno contattati; l&rsquo;obiettivo &egrave; chiudere l&rsquo;amministrazione ad agosto.</li>
+                            <li><strong>Bagni e riciclo (Shitshow / LNT):</strong> gli orinatoi alla turca sono stati un successo (&laquo;10/10, lo rifarei&raquo; &mdash; la chat); durante la chiamata &egrave; stato condiviso un sondaggio di feedback. Il riciclo ha funzionato bene nel complesso.</li>
+                            <li><strong>Censimento:</strong> per favore compilate il censimento dell&rsquo;evento &mdash; d&agrave; davvero forma alla pianificazione. La scadenza verr&agrave; comunicata nei canali.</li>
+                        </ul>
+
+                        <h2>2. Date del Prossimo Evento e Rischio Incendi &mdash; Convocata l&rsquo;Assemblea Generale</h2>
+                        <ul>
+                            <li>Il consiglio ha votato (poco prima della chiamata) di <strong>convocare un&rsquo;Assemblea Generale per gioved&igrave; 3 settembre 2026 alle 20:00 CEST</strong>. Il primo punto e il pi&ugrave; urgente: <strong>le date dell&rsquo;evento del prossimo anno</strong>.</li>
+                            <li>Perch&eacute;: la stagione degli incendi &egrave; un rischio reale e crescente. Durante il montaggio di quest&rsquo;anno c&rsquo;&egrave; stato un incendio a circa un&rsquo;ora di distanza che soffiava verso il sito, con cenere che cadeva sul cantiere. Le autorit&agrave; hanno inoltre raccomandato con forza di programmare l&rsquo;evento fuori dal periodo ad alto rischio incendi, dato che le restrizioni operative diventano pi&ugrave; severe ogni anno (Daniela S, che ha gestito le numerose riunioni con le istituzioni locali e regionali, lo ha sottolineato).</li>
+                            <li><strong>Chi vota:</strong> formalmente, i soci dell&rsquo;associazione (asociados), secondo lo statuto (disponibile sul sito). Sondaggi pi&ugrave; ampi nella comunit&agrave; possono informare e informeranno il voto &mdash; &laquo;non sar&agrave; un voto tipo Brexit&raquo;: le opzioni verranno studiate e documentate (possibili sovrapposizioni, pro e contro di ogni settimana) affinch&eacute; il voto sia informato.</li>
+                            <li><strong>Coordinamento con altri burn (Pierre K):</strong> con ~40 eventi europei e pochi mesi buoni, qualche sovrapposizione &egrave; inevitabile &mdash; non lasciate che questo condizioni il vostro voto; l&rsquo;organizzazione si coordiner&agrave; con gli altri eventi, e lo scambio culturale e le ambasciate potrebbero perfino essere divertenti.</li>
+                            <li>Verr&agrave; creato un <strong>canale Discord dedicato alla discussione sulle date</strong> cos&igrave; che anche i non soci possano partecipare alla conversazione.</li>
+                            <li>Prima dell&rsquo;assemblea verr&agrave; inviata un&rsquo;email che chiarisce lo status di socio, il processo di voto e come funzioner&agrave; la prima Assemblea Generale (Pablo V). I criteri di adesione sono nelle FAQ del sito; le domande passano dall&rsquo;app Humans.</li>
+                        </ul>
+
+                        <h2>3. Gruppo di Lavoro sulla Governance (Kate B)</h2>
+                        <ul>
+                            <li>Il gruppo di lavoro formatosi attorno al processo go/no-go a inizio anno si &egrave; riunito di nuovo ora che il burn &egrave; finito.</li>
+                            <li>Il suo compito <strong>non</strong> &egrave; decidere come si fa la governance, ma raccogliere i contributi della comunit&agrave; e proporre un quadro chiaro e accessibile: come decidiamo come decidiamo; quali decisioni spettano a un&rsquo;Assemblea Generale e quali ai team decentralizzati pi&ugrave; vicini all&rsquo;azione; come evitare la burocrazia ascoltando davvero la comunit&agrave;.</li>
+                            <li><strong>Si cercano:</strong> alcuni membri in pi&ugrave; con esperienza in organizzazioni guidate da volontari, governance decentralizzata o diritto spagnolo &mdash; proponete il vostro nome nel canale governance su Discord. Il gruppo rester&agrave; volutamente piccolo per rimanere efficace.</li>
+                        </ul>
+
+                        <h2>4. Tumulo del Tempio &mdash; Una Proposta (Tancredi T)</h2>
+                        <ul>
+                            <li>Tancredi ha proposto di creare un <strong>tempio</strong> per l&rsquo;evento &mdash; la controparte quieta e riflessiva della festa: uno spazio di pellegrinaggio per il lutto, la memoria e il rito collettivo.</li>
+                            <li>La trovata: niente fuoco, nessuna grande costruzione. Ispirata ai tumuli funerari neolitici, l&rsquo;idea &egrave; un <strong>tumulo di terra permanente sul nuovo sito</strong>, costruito collettivamente: durante la settimana le persone scrivono messaggi su carta biodegradabile in semplici chioschi ombreggiati, in un angolo pi&ugrave; tranquillo del sito; in una cerimonia di chiusura l&rsquo;acqua dissolve i messaggi e tutti spostano terra &mdash; una palata a testa &mdash; per far crescere il tumulo. Un punto di riferimento fisso che cresce anno dopo anno, con l&rsquo;arte libera di evolvere intorno. Il tempio con il budget pi&ugrave; basso nella storia dei burn, per scelta.</li>
+                            <li>La chat si &egrave; accesa (&laquo;Burying Man&raquo;). La discussione continua nel canale temple su Discord.</li>
+                        </ul>
+
+                        <h2>5. Riprendersi la Domenica (Michael M)</h2>
+                        <ul>
+                            <li>Michael M ha sostenuto l&rsquo;idea del tempio e ha sollevato uno spostamento pi&ugrave; ampio: negli ultimi anni i barrios hanno spinto di pi&ugrave; per smontare i campi la domenica mattina, e l&rsquo;evento ha perso la sua chiusura lenta e calorosa &mdash; le cerimonie di chiusura, le cene di addio, l&rsquo;ultimo giorno riflessivo.</li>
+                            <li>Proposta nello spirito: mantenere la domenica come giorno di chiusura e decompressione &mdash; chi deve andare pu&ograve; comunque andare, ma l&rsquo;evento non dovrebbe sembrare finito di colpo. Forte sostegno nella chat (&laquo;domenica lenta, luned&igrave; strike&raquo;); &egrave; stata suggerita anche una cerimonia di chiusura il sabato sera. Una cerimonia del tempio la domenica potrebbe ancorare esattamente questo.</li>
+                        </ul>
+
+                        <h2>6. Nuovo Sito &mdash; Presentazione Pubblica (Pablo V)</h2>
+                        <p><em>Una presentazione di un lavoro che va avanti da tempo.</em></p>
+                        <ul>
+                            <li><strong>La proposta:</strong> formare un gruppo di lavoro &mdash; provvisoriamente &laquo;Elsite&raquo; / &laquo;LCTO&raquo; &mdash; <strong>indipendente da NCA</strong>, il cui obiettivo non &egrave; che NCA compri terreno, ma rendere disponibile un terreno a lungo termine <strong>perch&eacute; NCA lo affitti</strong>. &Egrave; stato individuato un sito candidato specifico che sembra fattibile; i rischi sono in fase di valutazione.</li>
+                            <li><strong>Struttura:</strong> secondo l&rsquo;attuale consulenza fiscale e legale, una SL spagnola (societ&agrave; a responsabilit&agrave; limitata) &egrave; il probabile veicolo di detenzione, perch&eacute; isola il rischio e consente flessibilit&agrave;. Esistono diversi meccanismi legali per vincolare l&rsquo;entit&agrave; all&rsquo;associazione cos&igrave; che nessuno tragga profitto: i partecipanti sarebbero coinvolti operativamente (senza poter guadagnare) oppure prestatori (rimborsati nel tempo, assumendosi un certo rischio) &mdash; non ci sar&agrave; un ruolo di &laquo;investitore&raquo;. &Egrave; in preparazione un memorandum sulla struttura legale e fiscale.</li>
+                            <li><strong>Attenzione necessaria (Pierre K):</strong> le autorit&agrave; spagnole esaminano con attenzione l&rsquo;attivit&agrave; volontaria all&rsquo;interno di entit&agrave; commerciali, quindi l&rsquo;entit&agrave; proprietaria del terreno deve essere rigorosamente separata dalle operazioni dell&rsquo;evento &mdash; sar&agrave; strutturato con cura.</li>
+                            <li><strong>Preoccupazione sulla continuit&agrave; (Benoit F):</strong> e se un giorno sorgesse una controversia tra le due entit&agrave;? Risposta: un contratto di affitto a lungo termine (10&ndash;20 anni) progettato come un mutuo &mdash; calendario dei pagamenti chiaro, tutele che scattano solo in caso di mancati pagamenti, il pi&ugrave; prevedibile e a prova di controversia possibile.</li>
+                            <li><strong>Calendario indicativo:</strong> agosto&ndash;settembre: lavoro di fattibilit&agrave; (suono, comportamento con pioggia e allagamenti, strade di accesso), bloccare i prezzi dei lotti, lavoro sui permessi &mdash; buona parte dei permessi e della valutazione fisica del sito &egrave; <strong>gi&agrave; avanzata</strong> (ci sono state visite al sito con le autorit&agrave; competenti). Poi un <strong>voto</strong> della comunit&agrave; sul procedere; raccolta fondi verso novembre&ndash;dicembre (prestiti dalla comunit&agrave;, rimborsati in ~5&ndash;10 anni, probabilmente con i ricavi dei biglietti); possibile acquisto a gennaio; preparazione del sito da marzo a giugno. Nel frattempo resta aperta l&rsquo;opzione di usare il sito di quest&rsquo;anno.</li>
+                            <li><strong>Micro-burn / &laquo;hype-raiser&raquo;:</strong> un piccolo evento di prova (da una festa fino a ~500 persone), forse tra met&agrave; e fine ottobre (da sondare), per testare suono, accessi e comportamento con la pioggia &mdash; e creare entusiasmo. Diversi sound camp hanno gi&agrave; manifestato interesse.</li>
+                            <li><strong>Progettarlo bene prima (Pierre K):</strong> una volta che il terreno &egrave; nostro, fare la sistemazione del paesaggio per bene prima di correre a costruire &mdash; modellare la zona del suono con movimenti di terra, gestire il deflusso dell&rsquo;acqua, portare energia solare ed eolica, riciclo delle acque grigie, bagni a compostaggio. La comunit&agrave; ha il talento. I candidati a maggiore impatto e meno controversi finora: bagni a compostaggio e stoccaggio in loco (nell&rsquo;ordine di &euro;50&ndash;70K ciascuno, da affinare).</li>
+                            <li><strong>Pensare a lungo termine (Michael M):</strong> con le vendite di biglietti scese dal picco di ~3.500 di alcuni anni fa, conviene avere mente aperta su come sar&agrave; l&rsquo;evento del prossimo anno invece di dare per scontata una replica in piena scala &mdash; un anno di allestimento pi&ugrave; lento seguito da un rilancio su terreno nostro potrebbe riportare le migliaia di persone che hanno smesso di venire. &laquo;Potremmo avere un terreno per decenni &mdash; &egrave; una cosa piuttosto potente e straordinaria&raquo;.</li>
+                            <li><strong>Domanda economica (Ellen):</strong> quanti partecipanti rendono sostenibile il nuovo terreno? La modellazione finanziaria seguir&agrave; una volta finalizzati i rendiconti di quest&rsquo;anno (agosto), inclusa la quota della raccolta fondi che resta disponibile da investire.</li>
+                            <li>I prossimi passi verranno condivisi nel canale #new-site su Discord; una chiamata alla partecipazione seguir&agrave; una volta rimossi i blocchi attuali (le finanze di quest&rsquo;anno) &mdash; questione di un paio di settimane.</li>
+                            <li>Sul nome (dalla chat): <strong>l&rsquo;intenzione &egrave; usare il nome &laquo;Nowhere&raquo; quando sar&agrave; possibile</strong>.</li>
+                        </ul>
+
+                        <h2>7. Reclutamento del Consiglio, Diversit&agrave; e Carico di Lavoro</h2>
+                        <p>Un ricco Q&amp;A, guidato in gran parte dalla chat:</p>
+                        <ul>
+                            <li><strong>Elezioni:</strong> il consiglio desidera da tempo una rappresentanza pi&ugrave; diversa e terr&agrave; volentieri elezioni appena ci saranno candidature &mdash; finora nessuna. Le elezioni sono comunque richieste dallo statuto con cadenza regolare, e ci sono limiti di mandato. Sono possibili elezioni straordinarie.</li>
+                            <li><strong>Diversit&agrave;:</strong> la chat ha insistito con forza sulla necessit&agrave; di pi&ugrave; donne e persone non binarie nel consiglio. Idee: un gruppo di incoraggiamento e preselezione che si rivolga attivamente a persone che altrimenti non si candiderebbero (ora vale la pena dargli priorit&agrave;), e ridurre il carico di lavoro perch&eacute; il ruolo sia accessibile a chi ha vite meno flessibili.</li>
+                            <li><strong>Carico di lavoro descritto onestamente:</strong> riunioni due volte a settimana nella fase intensa di avvio, ridotte a ~una settimanale avvicinandosi all&rsquo;evento; ci si aspetta che sia molto pi&ugrave; leggero il prossimo anno, man mano che il consiglio si ritira dalle questioni operative e se ne fanno carico i dipartimenti. &laquo;Di solito la soluzione &egrave; piuttosto chiara&hellip; quello che di solito serve &egrave; che qualcuno si prenda in carico un tema&raquo; (Pablo V).</li>
+                            <li><strong>Responsabilit&agrave;:</strong> l&rsquo;associazione &egrave; l&rsquo;entit&agrave; legalmente responsabile ed &egrave; assicurata, anche per i membri del consiglio. I membri del consiglio rispondono personalmente solo per frode o malafede, negligenza evidente o violazione dello statuto &mdash; non si diventa &laquo;all&rsquo;improvviso responsabili per un milione di euro&raquo;.</li>
+                            <li><strong>Costi di babysitting:</strong> potrebbero essere coperti per i membri del consiglio? Da verificare con gli avvocati (lo statuto vieta la remunerazione per gli incarichi nel consiglio; se sia possibile una copertura di tipo spesa richiede un chiarimento legale).</li>
+                            <li><strong>Ruoli spiegati:</strong> quattro ruoli nominati (presidente, vicepresidente, tesoriere, segretario) comportano responsabilit&agrave; specifiche; i <strong>vocales</strong> sono membri a pieno titolo del consiglio senza una delega specifica &mdash; in pratica il consiglio funziona in modo orizzontale. Verranno redatte una descrizione scritta dei ruoli e le informazioni per candidarsi (<strong>Victor P</strong> si &egrave; offerto).</li>
+                            <li><strong>Adesione:</strong> non serve essere asociado prima di candidarsi; i criteri di adesione e le FAQ sono sul sito.</li>
+                        </ul>
+
+                        <h2>8. Coordinatori vs Meta-Lead (Riflessione sulla Struttura)</h2>
+                        <ul>
+                            <li>A seguito di domande dalla chat: &laquo;coordinatore&raquo; &egrave; il nome di quest&rsquo;anno per la funzione di coordinare un dipartimento. Daniela S ha segnalato che &egrave; un buon momento per ripensare la struttura: diversi ruoli centralizzano troppo, e vorrebbe muoversi verso <strong>ruoli basati sui progetti</strong> che distribuiscano il carico su pi&ugrave; persone &mdash; meno punti singoli di rottura, pi&ugrave; voci, ruoli davvero gestibili su base volontaria. Alimenta le conversazioni su governance e struttura.</li>
+                        </ul>
+
+                        <h2>9. Canali di Comunicazione e Sito Web</h2>
+                        <ul>
+                            <li>Discord resta la <strong>fonte di verit&agrave;</strong>, con le informazioni importanti replicate sui canali broadcast WhatsApp e Telegram; cambiarlo &egrave; aperto alla comunit&agrave; tramite i processi di governance o entrando nel team comms.</li>
+                            <li>Distinzione utile proposta: <strong>decisioni di governance</strong> (voti dell&rsquo;Assemblea Generale) vs <strong>decisioni operative</strong> (competenza di chi fa il lavoro) vs <strong>decisioni personali</strong> (&laquo;l&rsquo;Assemblea Generale non dovrebbe votare su come Daniela prende il caff&egrave;&raquo;).</li>
+                            <li>Il sito &egrave; HTML statico, facilmente aggiornabile dai volontari; chi volesse convertirlo in un CMS &egrave; benvenuto a farsi avanti.</li>
+                        </ul>
+
+                        <h2>10. Chiusura e Ringraziamenti</h2>
+                        <ul>
+                            <li>Ringraziamenti calorosi a tutti &mdash; ai coordinatori che hanno fatto una quantit&agrave; incredibile di lavoro e (dalla chat) a tutti quelli che l&rsquo;hanno reso possibile. L&rsquo;annuncio dell&rsquo;Assemblea Generale arriver&agrave; nelle caselle di posta nei prossimi giorni. Nel frattempo: fatevi vivi su Discord &mdash; &laquo;la vostra energia &egrave; davvero benvenuta&raquo;.</li>
+                        </ul>
+
+                        <h2>Decisioni</h2>
+                        <ul>
+                            <li><strong>Assemblea Generale: gioved&igrave; 3 settembre 2026, 20:00 CEST</strong> (voto del consiglio, annunciato in questa chiamata). Primo punto all&rsquo;ordine del giorno: le date dell&rsquo;evento del prossimo anno.</li>
+                            <li>Nessun&rsquo;altra decisione presa durante la chiamata &mdash; le proposte del tempio e del nuovo sito sono aperte ai contributi della comunit&agrave;; il gruppo di lavoro sul nuovo sito si costituisce in modo indipendente, in attesa del voto della comunit&agrave; su come si collega all&rsquo;associazione.</li>
+                        </ul>
+
+                        <h2>Azioni da Intraprendere</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Azione</th><th>Responsabile</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Compilare il censimento dell&rsquo;evento (scadenza da pubblicare nei canali)</td><td>Tutti</td></tr>
+                                <tr><td>Trattenere le note spese fino alla prossima settimana; poi presentarle via Humans</td><td>Coordinatori / chi ha sostenuto spese</td></tr>
+                                <tr><td>Compilare il sondaggio sui bagni (link in chat e nei canali)</td><td>Tutti quelli che li hanno usati</td></tr>
+                                <tr><td>Inviare l&rsquo;annuncio dell&rsquo;Assemblea Generale e l&rsquo;email di chiarimento su adesione e voto</td><td>Daniel T / consiglio, Pablo V</td></tr>
+                                <tr><td>Creare il canale Discord per la discussione sulle date</td><td>Consiglio / comms</td></tr>
+                                <tr><td>Preparare il memorandum legale e fiscale sulla struttura di detenzione del terreno</td><td>Pablo V / gruppo di lavoro</td></tr>
+                                <tr><td>Presentare i documenti di permesso rimanenti per il nuovo sito</td><td>Daniela S</td></tr>
+                                <tr><td>Chiedere agli avvocati della copertura dei costi di babysitting per i membri del consiglio</td><td>Consiglio</td></tr>
+                                <tr><td>Redigere la descrizione dei ruoli del consiglio e le info per candidarsi</td><td>Victor P</td></tr>
+                                <tr><td>Unirsi: GdL governance (canale governance), tempio (canale temple), nuovo sito (#new-site)</td><td>Membri della comunit&agrave; interessati</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Prossima chiamata: ritmo in via di conferma &mdash; seguite i canali. Assemblea Generale: 3 settembre, 20:00 CEST.</em></p>
+                        <p><em>Verbale preparato dalla registrazione audio, confrontato con la trascrizione della riunione e la chat.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Mit Daniel T (Moderator), Daniela S (Produktion), Ant H (early build), Ellen / Dr Plantes (Verwaltung), Shitshow (LNT), Scientist (Safer Space), Pierre K, Pablo V, Kate B (Governance), Tancredi T, Michael M (nurse), Victor P, Benoit F und vielen Community-Mitgliedern &mdash; ~50 in den ersten zehn Minuten, mit einem H&ouml;chststand um die 80</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Sitzungsunterlagen</h3>
+                        <ul>
+                            <li><a href="2026-07-30-community-transcript.html">Vollst&auml;ndiges Transkript (nur auf Englisch)</a></li>
+                            <li><a href="2026-07-30-community-chat.html">Vollst&auml;ndiges Chat-Protokoll</a></li>
+                            <li><a href="https://youtu.be/kKIkdmevQIk">Videoaufzeichnung (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/kKIkdmevQIk" title="Community Meeting - July 30, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Ein gro&szlig;er, energiegeladener Call &mdash; eine bemerkenswerte Beteiligung im selben Monat wie das Event: ein erster R&uuml;ckblick auf Elsewhere 26, die Ank&uuml;ndigung der ersten <strong>Generalversammlung (3. September)</strong> des Vereins, die Neuformierung der Governance-Arbeitsgruppe, ein Vorschlag f&uuml;r einen dauerhaften Tempel und eine &ouml;ffentliche Pr&auml;sentation der Neues-Gel&auml;nde-Initiative.</p>
+
+                        <h2>1. Elsewhere 26 &mdash; Erster R&uuml;ckblick</h2>
+                        <p>Das Event hat stattgefunden, die Genehmigung hielt, niemand wurde verletzt und es gab keine Evakuierung &mdash; wobei es bei aktiven Br&auml;nden in der Region knapp war. Die Koordinator:innen teilten erste Eindr&uuml;cke:</p>
+                        <ul>
+                            <li><strong>Produktion (Daniela S):</strong> eine gewaltige kollektive Anstrengung und ein Erfolg &mdash; &laquo;gut genug ist gut genug&raquo;. Eine vollst&auml;ndige Feedbackrunde mit allen Koordinator:innen ist geplant. Rechnungen werden gerade bearbeitet; <strong>Spesenabrechnungen sollen bis n&auml;chste Woche zur&uuml;ckgehalten werden</strong>, wenn das System bereit ist. Genaue Finanzzahlen d&uuml;rften sich im Lauf der kommenden Woche verfestigen.</li>
+                            <li><strong>Early build (Ant H):</strong> trotz des berechtigten Stresses im Vorfeld wegen der Freiwilligenzahlen, versp&auml;teter Container und defekter Ausr&uuml;stung war das Team gro&szlig;artig, der Stress blieb gering, und viele zum ersten Mal dabei gewesene Freiwillige hatten eine gute Zeit und wollen wiederkommen.</li>
+                            <li><strong>Verwaltung (Ellen / Dr Plantes):</strong> R&uuml;ckerstattungen f&uuml;r Eis-Tokens, Wasser-Gutscheine und gemietete Ausr&uuml;stung werden bearbeitet &mdash; die Barrios werden kontaktiert; Ziel ist, die Verwaltung im August abzuschlie&szlig;en.</li>
+                            <li><strong>Toiletten &amp; Recycling (Shitshow / LNT):</strong> die Hock-Urinale waren ein Hit (&laquo;10/10, w&uuml;rde wieder kacken&raquo; &mdash; der Chat); eine Feedback-Umfrage wurde im Call geteilt. Recycling hat insgesamt gut funktioniert.</li>
+                            <li><strong>Zensus:</strong> bitte f&uuml;llt den Event-Zensus aus &mdash; er pr&auml;gt die Planung wirklich. Die Frist wird in den Kan&auml;len bekanntgegeben.</li>
+                        </ul>
+
+                        <h2>2. Termine des N&auml;chsten Events &amp; Brandrisiko &mdash; Generalversammlung Einberufen</h2>
+                        <ul>
+                            <li>Der Vorstand hat (kurz vor dem Call) beschlossen, <strong>eine Generalversammlung f&uuml;r Donnerstag, den 3. September 2026 um 20:00 CEST einzuberufen</strong>. Der erste und dringendste Punkt: <strong>die Event-Termine des n&auml;chsten Jahres</strong>.</li>
+                            <li>Warum: die Brandsaison ist ein reales und wachsendes Risiko. W&auml;hrend des Aufbaus in diesem Jahr gab es etwa eine Stunde entfernt ein Feuer, das in Richtung Gel&auml;nde zog, mit Asche, die auf den Aufbau fiel. Die Beh&ouml;rden haben zudem dringend empfohlen, au&szlig;erhalb der Hochrisikozeit f&uuml;r Br&auml;nde zu planen, da die betrieblichen Auflagen jedes Jahr strenger werden (Daniela S, die die vielen Treffen mit lokalen und regionalen Institutionen f&uuml;hrte, unterstrich dies).</li>
+                            <li><strong>Wer stimmt ab:</strong> formal die Mitglieder des Vereins (asociados), gem&auml;&szlig; der Satzung (auf der Website verf&uuml;gbar). Breitere Community-Umfragen k&ouml;nnen und werden die Abstimmung informieren &mdash; &laquo;es wird keine Brexit-Abstimmung&raquo;: die Optionen werden recherchiert und dokumentiert (m&ouml;gliche &Uuml;berschneidungen, Vor- und Nachteile jeder Woche), damit die Abstimmung informiert ist.</li>
+                            <li><strong>Abstimmung mit anderen Burns (Pierre K):</strong> bei ~40 europ&auml;ischen Events und wenigen guten Monaten sind einige &Uuml;berschneidungen unvermeidlich &mdash; lasst euch davon bei eurer Stimme nicht einschr&auml;nken; die Organisation wird sich mit anderen Events abstimmen, und kultureller Austausch und Botschaften k&ouml;nnten sogar Spa&szlig; machen.</li>
+                            <li>Ein eigener <strong>Discord-Kanal f&uuml;r die Termindiskussion</strong> wird eingerichtet, damit auch Nicht-Mitglieder am Gespr&auml;ch teilnehmen k&ouml;nnen.</li>
+                            <li>Vor der Versammlung wird eine E-Mail verschickt, die den Mitgliedsstatus, den Abstimmungsprozess und den Ablauf der ersten Generalversammlung kl&auml;rt (Pablo V). Die Mitgliedschaftskriterien stehen in der FAQ auf der Website; Antr&auml;ge laufen &uuml;ber die Humans-App.</li>
+                        </ul>
+
+                        <h2>3. Governance-Arbeitsgruppe (Kate B)</h2>
+                        <ul>
+                            <li>Die Arbeitsgruppe, die sich Anfang des Jahres rund um den Go/No-go-Prozess gebildet hatte, hat sich nun, da der Burn vorbei ist, wieder zusammengefunden.</li>
+                            <li>Ihre Aufgabe ist <strong>nicht</strong>, zu entscheiden, wie Governance gemacht wird, sondern Community-Input zu sammeln und einen klaren, zug&auml;nglichen Rahmen vorzuschlagen: wie entscheiden wir, wie wir entscheiden; welche Entscheidungen geh&ouml;ren in eine Generalversammlung und welche zu den dezentralen Teams, die am n&auml;chsten am Geschehen sind; wie vermeidet man B&uuml;rokratie und h&ouml;rt der Community trotzdem wirklich zu.</li>
+                            <li><strong>Gesucht:</strong> einige weitere Mitglieder mit Erfahrung in ehrenamtlich gef&uuml;hrten Organisationen, dezentraler Governance oder spanischem Recht &mdash; meldet euch im Governance-Kanal auf Discord. Die Gruppe bleibt bewusst klein, um wirksam zu bleiben.</li>
+                        </ul>
+
+                        <h2>4. Tempelh&uuml;gel &mdash; Ein Vorschlag (Tancredi T)</h2>
+                        <ul>
+                            <li>Tancredi schlug vor, einen <strong>Tempel</strong> f&uuml;r das Event zu schaffen &mdash; das stille, nachdenkliche Gegenst&uuml;ck zur Party: ein Pilgerort f&uuml;r Trauer, Erinnerung und kollektives Ritual.</li>
+                            <li>Der Clou: kein Feuer n&ouml;tig, kein gro&szlig;er Aufbau. Inspiriert von neolithischen Grabh&uuml;geln ist die Idee ein <strong>dauerhafter Erdh&uuml;gel auf dem neuen Gel&auml;nde</strong>, gemeinsam gebaut: w&auml;hrend der Woche schreiben Menschen Botschaften auf biologisch abbaubares Papier an einfachen schattigen Kiosken in einer ruhigeren Ecke des Gel&auml;ndes; bei einer Abschlusszeremonie l&ouml;st Wasser die Botschaften auf, und alle bewegen Erde &mdash; je eine Schaufel &mdash; um den H&uuml;gel wachsen zu lassen. Ein fester Orientierungspunkt, der Jahr f&uuml;r Jahr w&auml;chst, mit Kunst, die sich frei darum herum entwickeln kann. Der Tempel mit dem kleinsten Budget in der Geschichte der Burns, ganz bewusst.</li>
+                            <li>Der Chat ging ab (&laquo;Burying Man&raquo;). Die Diskussion l&auml;uft im Tempel-Kanal auf Discord weiter.</li>
+                        </ul>
+
+                        <h2>5. Den Sonntag Zur&uuml;ckholen (Michael M)</h2>
+                        <ul>
+                            <li>Michael M unterst&uuml;tzte die Tempel-Idee und sprach eine gr&ouml;&szlig;ere Verschiebung an: in den letzten Jahren haben die Barrios st&auml;rker darauf gedr&auml;ngt, die Camps am Sonntagmorgen abzubauen, und das Event hat sein langsames, warmes Ausklingen verloren &mdash; die Abschlusszeremonien, die Abschiedsessen, den nachdenklichen letzten Tag.</li>
+                            <li>Vorschlag dem Geist nach: den Sonntag als Tag des Abschlusses und der Dekompression bewahren &mdash; wer gehen muss, kann weiterhin gehen, aber das Event sollte sich nicht abrupt beendet anf&uuml;hlen. Starke Zustimmung im Chat (&laquo;Sonntag langsam, Montag Strike&raquo;); auch eine Abschlusszeremonie am Samstagabend wurde vorgeschlagen. Eine Tempelzeremonie am Sonntag k&ouml;nnte genau das verankern.</li>
+                        </ul>
+
+                        <h2>6. Neues Gel&auml;nde &mdash; &Ouml;ffentliche Pr&auml;sentation (Pablo V)</h2>
+                        <p><em>Eine Vorstellung einer Arbeit, die schon eine Weile l&auml;uft.</em></p>
+                        <ul>
+                            <li><strong>Der Vorschlag:</strong> eine Arbeitsgruppe bilden &mdash; vorl&auml;ufig &laquo;Elsite&raquo; / &laquo;LCTO&raquo; &mdash; <strong>unabh&auml;ngig von NCA</strong>, deren Ziel nicht ist, dass NCA Land kauft, sondern langfristig Land verf&uuml;gbar zu machen, <strong>das NCA mieten kann</strong>. Ein konkretes Kandidatengel&auml;nde wurde gefunden und wirkt machbar; die Risiken werden gerade durchgearbeitet.</li>
+                            <li><strong>Struktur:</strong> nach aktueller steuerlicher und rechtlicher Beratung ist eine spanische SL (GmbH) das wahrscheinliche Haltevehikel, weil sie Risiken abschottet und Flexibilit&auml;t erlaubt. Es gibt mehrere rechtliche Mechanismen, die Entit&auml;t so an den Verein zu binden, dass niemand Gewinn macht: Beteiligte w&auml;ren entweder operativ eingebunden (und k&ouml;nnten keinen Gewinn erzielen) oder Darlehensgeber (mit R&uuml;ckzahlung &uuml;ber die Zeit und einem gewissen Risiko) &mdash; eine &laquo;Investoren&raquo;-Rolle wird es nicht geben. Ein Memo zur rechtlichen und steuerlichen Struktur wird vorbereitet.</li>
+                            <li><strong>Vorsicht geboten (Pierre K):</strong> spanische Beh&ouml;rden pr&uuml;fen ehrenamtliche T&auml;tigkeit innerhalb kommerzieller Entit&auml;ten genau, daher muss die landbesitzende Entit&auml;t strikt vom Eventbetrieb getrennt sein &mdash; das wird sorgf&auml;ltig strukturiert.</li>
+                            <li><strong>Kontinuit&auml;tsbedenken (Benoit F):</strong> was, wenn es eines Tages einen Streit zwischen den beiden Entit&auml;ten gibt? Antwort: ein langfristiger Mietvertrag (10&ndash;20 Jahre), gestaltet wie eine Hypothek &mdash; klarer Zahlungsplan, Schutzmechanismen, die nur bei ausbleibenden Zahlungen greifen, so vorhersehbar und streitsicher wie m&ouml;glich.</li>
+                            <li><strong>Indikativer Zeitplan:</strong> August&ndash;September: Machbarkeitsarbeit (Schall, Verhalten bei Regen und &Uuml;berflutung, Zufahrtswege), Festschreiben der Grundst&uuml;ckspreise, Genehmigungsarbeit &mdash; ein Gro&szlig;teil der Genehmigungen und der physischen Gel&auml;ndebewertung ist <strong>bereits fortgeschritten</strong> (Ortstermine mit den Genehmigungsbeh&ouml;rden haben stattgefunden). Dann eine <strong>Abstimmung</strong> der Community &uuml;ber das Weitermachen; Fundraising um November&ndash;Dezember (Community-Darlehen, R&uuml;ckzahlung &uuml;ber ~5&ndash;10 Jahre, wahrscheinlich aus Ticketeinnahmen); m&ouml;glicher Kauf im Januar; Gel&auml;ndevorbereitung M&auml;rz bis Juni. Die Option, das diesj&auml;hrige Gel&auml;nde zu nutzen, bleibt in der Zwischenzeit offen.</li>
+                            <li><strong>Micro-Burn / &laquo;Hype-Raiser&raquo;:</strong> ein kleines Testevent (von einer Party bis zu ~500 Personen), m&ouml;glicherweise Mitte bis Ende Oktober (wird abgefragt), um Schall, Zufahrt und Regenverhalten zu testen &mdash; und Vorfreude zu wecken. Mehrere Sound Camps haben bereits Interesse bekundet.</li>
+                            <li><strong>Erst richtig planen (Pierre K):</strong> sobald uns Land geh&ouml;rt, die Landschaftsgestaltung ordentlich machen, bevor gebaut wird &mdash; die Schallzone mit Erdarbeiten formen, den Wasserfluss steuern, Solar- und Windenergie holen, Grauwasser-Recycling, Komposttoiletten. Die Community hat das Talent. Bisher die wirkungsvollsten und unstrittigsten Kandidaten: Komposttoiletten und Lagerung vor Ort (grob in der Gr&ouml;&szlig;enordnung von je &euro;50&ndash;70K, noch zu pr&auml;zisieren).</li>
+                            <li><strong>Langfristiges Denken (Michael M):</strong> da die Ticketverk&auml;ufe von einem H&ouml;chststand von ~3.500 vor einigen Jahren gefallen sind, sollte man offen daf&uuml;r sein, wie das Event im n&auml;chsten Jahr aussieht, statt eine Wiederholung in voller Gr&ouml;&szlig;e anzunehmen &mdash; ein ruhigeres Aufbaujahr, gefolgt von einem Neustart auf eigenem Land, k&ouml;nnte die Tausenden zur&uuml;ckbringen, die nicht mehr kommen. &laquo;Wir k&ouml;nnten Land f&uuml;r Jahrzehnte haben &mdash; das ist eine ziemlich kraftvolle, gro&szlig;artige Sache&raquo;.</li>
+                            <li><strong>Wirtschaftlichkeitsfrage (Ellen):</strong> wie viele Teilnehmende machen das neue Land tragf&auml;hig? Die Finanzmodellierung folgt, sobald die diesj&auml;hrigen Abschl&uuml;sse finalisiert sind (August), einschlie&szlig;lich der Frage, wie viel des Fundraisings noch zum Investieren verf&uuml;gbar bleibt.</li>
+                            <li>Die n&auml;chsten Schritte werden im #new-site-Kanal auf Discord geteilt; ein Aufruf zur Beteiligung folgt, sobald die aktuellen Blocker (die diesj&auml;hrigen Finanzen) gekl&auml;rt sind &mdash; rechnet mit ein paar Wochen.</li>
+                            <li>Zum Namen (aus dem Chat): <strong>die Absicht ist, den Namen &laquo;Nowhere&raquo; zu verwenden, sobald es m&ouml;glich ist</strong>.</li>
+                        </ul>
+
+                        <h2>7. Vorstandsrekrutierung, Diversit&auml;t &amp; Arbeitsbelastung</h2>
+                        <p>Ein reichhaltiges Q&amp;A, weitgehend vom Chat getrieben:</p>
+                        <ul>
+                            <li><strong>Wahlen:</strong> der Vorstand w&uuml;nscht sich von Anfang an eine vielf&auml;ltigere Vertretung und h&auml;lt gerne eine Wahl ab, sobald es Kandidaturen gibt &mdash; bisher gab es keine. Wahlen sind ohnehin laut Satzung in einem regelm&auml;&szlig;igen Zyklus vorgeschrieben, und es gibt Amtszeitbegrenzungen. Au&szlig;erordentliche Wahlen sind m&ouml;glich.</li>
+                            <li><strong>Diversit&auml;t:</strong> der Chat dr&auml;ngte stark auf mehr Frauen und nicht-bin&auml;re Personen im Vorstand. Ideen: eine Ermutigungs- und Vorauswahlgruppe, die aktiv auf Menschen zugeht, die sich sonst nicht bewerben w&uuml;rden (das lohnt sich jetzt zu priorisieren), und die Arbeitsbelastung zu senken, damit die Rolle auch f&uuml;r Menschen mit weniger flexiblem Leben zug&auml;nglich ist.</li>
+                            <li><strong>Arbeitsbelastung ehrlich beschrieben:</strong> zweimal w&ouml;chentliche Treffen in der intensiven Aufbauphase, n&auml;her am Event auf ~w&ouml;chentlich reduziert; im n&auml;chsten Jahr deutlich leichter erwartet, da sich der Vorstand aus operativen Fragen zur&uuml;ckzieht und stattdessen die Abteilungen sie halten. &laquo;Meist ist die L&ouml;sung ziemlich klar&hellip; was es meist braucht, ist jemanden, der ein Thema &uuml;bernimmt&raquo; (Pablo V).</li>
+                            <li><strong>Haftung:</strong> der Verein ist die rechtlich verantwortliche Entit&auml;t und ist versichert, auch f&uuml;r die Vorstandsmitglieder. Vorstandsmitglieder haften pers&ouml;nlich nur bei Betrug oder B&ouml;swilligkeit, klarer Fahrl&auml;ssigkeit oder Satzungsverst&ouml;&szlig;en &mdash; nicht &laquo;pl&ouml;tzlich haftbar f&uuml;r eine Million Euro&raquo;.</li>
+                            <li><strong>Kinderbetreuungskosten:</strong> k&ouml;nnten diese f&uuml;r Vorstandsmitglieder &uuml;bernommen werden? Mit den Anw&auml;lt:innen zu kl&auml;ren (die Satzung verbietet eine Verg&uuml;tung f&uuml;r Vorstandsaufgaben; ob eine Kostenerstattung m&ouml;glich ist, braucht rechtliche Kl&auml;rung).</li>
+                            <li><strong>Rollen erkl&auml;rt:</strong> vier benannte Rollen (Pr&auml;sident:in, Vizepr&auml;sident:in, Schatzmeister:in, Schriftf&uuml;hrer:in) tragen spezifische Verantwortlichkeiten; <strong>vocales</strong> sind vollwertige Vorstandsmitglieder ohne spezifisches Ressort &mdash; in der Praxis arbeitet der Vorstand flach. Eine schriftliche Rollenbeschreibung und Bewerbungsinfos werden erstellt (<strong>Victor P</strong> hat sich gemeldet).</li>
+                            <li><strong>Mitgliedschaft:</strong> man muss vor der Bewerbung kein asociado sein; die Mitgliedschaftskriterien und die FAQ stehen auf der Website.</li>
+                        </ul>
+
+                        <h2>8. Koordinator:innen vs. Meta-Leads (Struktur-Reflexion)</h2>
+                        <ul>
+                            <li>Nach Fragen aus dem Chat: &laquo;Koordinator:in&raquo; ist der diesj&auml;hrige Name f&uuml;r die Funktion, eine Abteilung zu koordinieren. Daniela S merkte an, dass dies ein guter Moment ist, die Struktur zu &uuml;berdenken: mehrere Rollen zentralisieren zu viel, und sie m&ouml;chte sich in Richtung <strong>projektbasierter Rollen</strong> bewegen, die die Last auf mehr Personen verteilen &mdash; weniger Single Points of Failure, mehr Stimmen, Rollen, die ehrenamtlich tats&auml;chlich zu bew&auml;ltigen sind. Flie&szlig;t in die Governance- und Strukturgespr&auml;che ein.</li>
+                        </ul>
+
+                        <h2>9. Kommunikationskan&auml;le &amp; Website</h2>
+                        <ul>
+                            <li>Discord bleibt die <strong>Quelle der Wahrheit</strong>, wichtige Informationen werden in die WhatsApp- und Telegram-Broadcast-Kan&auml;le gespiegelt; das zu &auml;ndern steht der Community &uuml;ber Governance-Prozesse oder durch Mitarbeit im Comms-Team offen.</li>
+                            <li>N&uuml;tzliche Unterscheidung: <strong>Governance-Entscheidungen</strong> (Abstimmungen der Generalversammlung) vs. <strong>operative Entscheidungen</strong> (Zust&auml;ndigkeit derer, die die Arbeit machen) vs. <strong>pers&ouml;nliche Entscheidungen</strong> (&laquo;die Generalversammlung sollte nicht dar&uuml;ber abstimmen, wie Daniela ihren Kaffee trinkt&raquo;).</li>
+                            <li>Die Website ist statisches HTML und wird leicht von Freiwilligen aktualisiert; wer sie in ein CMS &uuml;berf&uuml;hren m&ouml;chte, ist eingeladen, sich zu melden.</li>
+                        </ul>
+
+                        <h2>10. Abschluss &amp; Anerkennung</h2>
+                        <ul>
+                            <li>Herzlicher Dank an alle &mdash; an die Koordinator:innen, die unglaublich viel Arbeit geleistet haben, und (aus dem Chat) an alle, die es m&ouml;glich gemacht haben. Die Ank&uuml;ndigung der Generalversammlung landet in den kommenden Tagen in den Postf&auml;chern. Bis dahin: kommt auf Discord vorbei &mdash; &laquo;eure Energie ist wirklich willkommen&raquo;.</li>
+                        </ul>
+
+                        <h2>Entscheidungen</h2>
+                        <ul>
+                            <li><strong>Generalversammlung: Donnerstag, 3. September 2026, 20:00 CEST</strong> (Vorstandsbeschluss, in diesem Call angek&uuml;ndigt). Erster Tagesordnungspunkt: die Event-Termine des n&auml;chsten Jahres.</li>
+                            <li>Keine weiteren Entscheidungen im Call getroffen &mdash; die Vorschl&auml;ge zu Tempel und neuem Gel&auml;nde sind offen f&uuml;r Community-Input; die Neues-Gel&auml;nde-Arbeitsgruppe bildet sich unabh&auml;ngig, vorbehaltlich der Community-Abstimmung dar&uuml;ber, wie sie an den Verein angebunden wird.</li>
+                        </ul>
+
+                        <h2>Ma&szlig;nahmen</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Ma&szlig;nahme</th><th>Verantwortlich</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Den Event-Zensus ausf&uuml;llen (Frist wird in den Kan&auml;len ver&ouml;ffentlicht)</td><td>Alle</td></tr>
+                                <tr><td>Spesenabrechnungen bis n&auml;chste Woche zur&uuml;ckhalten; dann &uuml;ber Humans einreichen</td><td>Koordinator:innen / wer Ausgaben hatte</td></tr>
+                                <tr><td>Die Toiletten-Umfrage ausf&uuml;llen (Link im Chat und in den Kan&auml;len)</td><td>Alle, die sie benutzt haben</td></tr>
+                                <tr><td>Ank&uuml;ndigung der Generalversammlung und Kl&auml;rungs-E-Mail zu Mitgliedschaft und Abstimmung versenden</td><td>Daniel T / Vorstand, Pablo V</td></tr>
+                                <tr><td>Discord-Kanal f&uuml;r die Termindiskussion einrichten</td><td>Vorstand / Comms</td></tr>
+                                <tr><td>Rechts- und Steuer-Memo zur Landhaltestruktur vorbereiten</td><td>Pablo V / Arbeitsgruppe</td></tr>
+                                <tr><td>Die restlichen Genehmigungsunterlagen f&uuml;r das neue Gel&auml;nde einreichen</td><td>Daniela S</td></tr>
+                                <tr><td>Anw&auml;lt:innen zur &Uuml;bernahme von Kinderbetreuungskosten f&uuml;r Vorstandsmitglieder fragen</td><td>Vorstand</td></tr>
+                                <tr><td>Rollenbeschreibung f&uuml;r den Vorstand und Bewerbungsinfos entwerfen</td><td>Victor P</td></tr>
+                                <tr><td>Mitmachen: Governance-AG (Governance-Kanal), Tempel (Tempel-Kanal), neues Gel&auml;nde (#new-site)</td><td>Interessierte Community-Mitglieder</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>N&auml;chster Call: Rhythmus wird noch best&auml;tigt &mdash; beobachtet die Kan&auml;le. Generalversammlung: 3. September, 20:00 CEST.</em></p>
+                        <p><em>Protokoll erstellt aus der Audioaufzeichnung, abgeglichen mit dem Sitzungstranskript und dem Chat.</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>
