@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+
+    <title>Board Meeting - August 3, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>Board Meeting</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Monday 3 August 2026, 19:00 CEST</span>
+                    </div>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>Board present: Daniel T (chair), Pablo V, Chris O (left 20:00), Peter D, Ward D (connection dropped briefly; left ~19:55), Ben D (joined ~19:30), Victor P (joined ~19:30) &middot; Also present: Daniela M S (Production)</strong>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>A dense working meeting. The headline outcome: the board <strong>moved the General Assembly from 3 September to Thursday 17 September 2026, 20:00 CEST</strong>, to allow more time to prepare solid information for the event-dates decision.</p>
+
+                        <h2>1. Check-in</h2>
+                        <ul>
+                            <li>Members shared brief personal updates. The post-event wrap-up load was acknowledged &mdash; several people are still working through large backlogs &mdash; alongside good energy about the new-site conversations.</li>
+                        </ul>
+
+                        <h2>2. Production</h2>
+                        <ul>
+                            <li>The production wrap-up meeting will happen next week (moved at participants&rsquo; request). Wrap-up work is ongoing.</li>
+                        </ul>
+
+                        <h2>3. Budget Update</h2>
+                        <ul>
+                            <li>No final figures yet. Peter D&rsquo;s current priority is getting expense submissions in for everyone still owed money, including all artists; after that, a review to confirm everything landed in the right departments, then reconciliation.</li>
+                            <li>The expectation is that the year closes comfortably in the green, but no numbers will be shared until the wrap-up completes &mdash; both because large payments are still outstanding and because any remaining surplus is first and foremost the association&rsquo;s buffer for next year.</li>
+                            <li>Longer-term policy note: potential surplus should ultimately go toward lowering ticket prices and growing attendance, which requires holding a buffer first.</li>
+                        </ul>
+
+                        <h2>4. New Site &mdash; Feasibility Update</h2>
+                        <ul>
+                            <li>No formal working group has been formed yet; the current phase is feasibility, carried by Pablo V with a small set of collaborators.</li>
+                            <li>Conversations with the landowners are ongoing to lock in plot prices; permit-related information is being gathered. Structuring options for a possible purchase (including staged payments and walk-away points to contain risk) are being explored with legal counsel.</li>
+                            <li>Hard dependency: the 2026 finances must be wrapped up before any meaningful modelling &mdash; the goal is to understand what a typical year costs, not to spend the surplus. Known costs from this year (rent, taxes, toilets and similar) can be specced out quickly for the projects under consideration, ahead of the full budget picture.</li>
+                            <li>Proposed sequence (Pablo V): rent the site for a small community event first, fundraise in November&ndash;December when people are home, purchase in January, then run the first full event on the new land. Paperwork lead times mean preparatory steps need to start soon for this timeline to stay open.</li>
+                            <li>A small &ldquo;hype raiser&rdquo; event (possibly October) is under discussion but is not a decision yet &mdash; it is gated on the finance wrap-up and may warrant a vote.</li>
+                            <li>Peter D urged caution against financing the purchase from anticipated future savings, and suggested working toward a term sheet with the landowners &mdash; site spec plus purchase price &mdash; which can proceed independently of NCA&rsquo;s own finance work.</li>
+                        </ul>
+
+                        <h2>5. Interface Between NCA and the New-Site Initiative</h2>
+                        <ul>
+                            <li>Daniel T proposed (as a starting point for discussion, not a vote) a clean separation between NCA and the new-site initiative, which will ultimately be a separate legal entity: two streams with clear mutual expectations. Draft starting point: NCA provides nothing to the new-site initiative unless explicitly requested; NCA requests a go/no-go decision on the new site by <strong>1 December</strong> so next year&rsquo;s event can be planned.</li>
+                            <li>Pablo V clarified the intended model: the new-site vehicle is an independent working group (volunteers cannot work under it), it would purchase the land, and NCA would rent it long-term on fixed conditions &mdash; ring-fencing the financial risk away from NCA.</li>
+                            <li>Open questions raised by Daniela M S: who organises the smaller community event and under whose paperwork (currently everything has been requested as NCA), and the fact that production preparation cannot wait until January regardless of which site is used.</li>
+                            <li>Peter D questioned the economics of a very small event given fixed infrastructure costs; Ward D clarified the concept is deliberately minimal &mdash; tents only, no heavy infrastructure, paid for by the event itself.</li>
+                            <li>Agreed this is a bigger topic than one agenda slot: <strong>main topic for next week&rsquo;s board meeting.</strong></li>
+                        </ul>
+
+                        <h2>6. Permits and Date Options</h2>
+                        <ul>
+                            <li>Daniela M S reported on the regulatory framework for smaller events: under 80 people needs only a light permit; for 200&ndash;500 people the requirements scale down significantly (smaller self-protection plan, fewer facilities, no legal requirement for dedicated security or Red Cross presence &mdash; though security is recommended &mdash; plus an emergency-management plan and notification of surrounding emergency services). Costing of the minimum viable setup is in progress; the aim is for a small event to pay for itself. Items that also serve the main event (e.g. the self-protection plan) can reasonably be NCA expenses.</li>
+                            <li><strong>Urgent:</strong> the document with candidate date options must go to the regional authority by <strong>Wednesday 5 August</strong> (the relevant contact is then away); a response is expected around late September/October. The current dates document has too many options &mdash; it needs narrowing to about three windows, since wider brackets take longer to assess.</li>
+                            <li>On nesting and other environmental constraints: there is no report available to work from. Date options are submitted and checked by the authority across several institutions (protected birds, rains, storms); the answer comes back as yes/no per option.</li>
+                        </ul>
+
+                        <h2>7. Membership Register</h2>
+                        <ul>
+                            <li>Ben D reported the register reconciliation work is essentially done and ready.</li>
+                            <li>The General Assembly can be announced broadly (not only to current members): applications approved after the assembly is called can still participate, so the announcement doubles as a membership recruitment call.</li>
+                            <li>Membership criteria should be more visible: Ben D has filed a request for Peter D to add the criteria text to the application screen in Humans; the criteria are also in the website FAQ.</li>
+                        </ul>
+
+                        <h2>8. Vocal Election</h2>
+                        <ul>
+                            <li>Victor P reported the vocal (board-member) election spec is ready after review by Daniel T and Ben D &mdash; see the <a href="https://docs.google.com/document/d/1VKIRHpNplBOnx5o4Sc4CNwJsElrC36fIw-MDEY-2JN4/edit?tab=t.0" target="_blank" rel="noopener">job description for the Vocale role</a>. Distribution channels discussed: Discord (governance channel), WhatsApp, Telegram and the updates channel, to maximise the candidate pool.</li>
+                        </ul>
+
+                        <h2>9. General Assembly &mdash; Date Moved to 17 September</h2>
+                        <ul>
+                            <li>Chris O presented his reservations about the 3 September date in a <a href="https://docs.google.com/document/d/1iJ8FKiT-LXMHMrzURqXL5f3ntiRvvz3U9NOtMUQTaj4/edit?tab=t.0" target="_blank" rel="noopener">written document</a>: the dates decision should not be rushed given its magnitude &mdash; a date change could mean some members can never attend again; the commercial risk is real (a badly chosen date could shrink attendance below viability); gathering solid input from other European burns takes longer than two weeks; and headline pressure from the current wildfire news is not a good decision-making driver. He clarified he is <em>not</em> arguing against changing the event dates &mdash; keeping them is looking too risky &mdash; only against deciding at excessive speed.</li>
+                            <li>Daniel T described the workstream already in motion: a comparison spreadsheet of other burns and candidate windows (preliminary desk research, to be verified), direct outreach to other burns, untangling the confusion about why a date change is on the table, and a session with the governance working group to staff the information pack. Time pressure is real in the other direction too: people block holidays far ahead and need certainty to plan for next year&rsquo;s event.</li>
+                            <li>Daniela M S underlined the risk of <em>not</em> moving: the fire legislation changed in March this year, three months before the event, and the amount of invisible work needed to avoid being moved off-site this year was enormous &mdash; evacuation plans were genuinely in place; the threat was not empty. Work on a plan B (making this year&rsquo;s arrangements a standard procedure) is ongoing but not guaranteed.</li>
+                            <li>Data points noted: the regional authority and the mayor have indicated that the fire risk that used to characterise July now applies to June; early-summer fire frequency is much more manageable than peak-season frequency.</li>
+                            <li>Pablo V argued for holding the vote rather than deciding by inaction: prepare the best information possible, and if the information isn&rsquo;t sufficient, the members can vote not to change the dates. Other European events have moved dates repeatedly without collapse.</li>
+                            <li><strong>Vote:</strong> the board voted to move the General Assembly from 3 September to <strong>Thursday 17 September 2026, 20:00 CEST</strong>. Unanimous among votes collected &mdash; Daniel T, Peter D, Ben D, Victor P, Pablo V, and Ward D (whose vote was collected after a connection drop). The agenda will be fixed on <strong>2 September</strong> and will include the event-dates question.</li>
+                            <li>A possible merge with the all-members meeting (mid-October, name and format under discussion) was raised; whether that meeting moves or merges is for the coordinators to decide &mdash; the 17 September date stands regardless. The board&rsquo;s view: what the community calls its gatherings is not a board decision; the statutes&rsquo; term for this one is General Assembly.</li>
+                        </ul>
+
+                        <h2>10. Any Other Business</h2>
+                        <ul>
+                            <li><strong>Asociado approvals:</strong> with membership applications expected to increase ahead of the General Assembly, board members should regularly check the Humans dashboard and vote &mdash; 50% of the board is needed to action each application. Ben D will keep posting reminders on Discord.</li>
+                            <li><strong>Board topic tracking:</strong> Pablo V has cleaned up and reopened the board&rsquo;s tracked follow-up threads (administrative and legal follow-ups, recruitment, liability topics) so they don&rsquo;t get lost in general discussion; updates asynchronously, with context brought to board meetings.</li>
+                            <li><strong>Meeting cadence:</strong> no board meeting this Thursday unless someone calls for it; whether to hold this week&rsquo;s community call will be decided on Discord (probably not, with the coordinators&rsquo; meeting happening next week). Communication plan for announcing the new General Assembly date to be agreed.</li>
+                        </ul>
+
+                        <h2>Action Items</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Action</th><th>Due</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Process the outstanding payments</td><td>Immediately</td></tr>
+                                <tr><td>Daniel T</td><td>Continue the dates workstream: other-burns outreach, verified data, governance working group session; recruit helpers</td><td>This week</td></tr>
+                                <tr><td>Daniel T (with Daniela M S)</td><td>Narrow the candidate date windows to ~3 for the authority submission</td><td>By Wednesday 5 Aug</td></tr>
+                                <tr><td>Daniela M S</td><td>Send the date-options document to the regional authority</td><td>Wednesday 5 Aug</td></tr>
+                                <tr><td>Daniela M S</td><td>Cost the minimum viable small-event setup</td><td>Next weeks</td></tr>
+                                <tr><td>Peter D</td><td>Chase expense submissions (incl. artists), then department review and reconciliation</td><td>Ongoing, priority</td></tr>
+                                <tr><td>Peter D</td><td>Add membership criteria to the Humans application screen</td><td>When possible</td></tr>
+                                <tr><td>Peter D / Pablo V</td><td>Spec major site cost items (rent, taxes, toilets) for new-site modelling</td><td>Ahead of full budget</td></tr>
+                                <tr><td>Pablo V</td><td>Continue feasibility: plot prices, permits, purchase structuring with legal counsel</td><td>Ongoing</td></tr>
+                                <tr><td>Ben D</td><td>Follow-up email on membership criteria; keep posting approval reminders</td><td>This week</td></tr>
+                                <tr><td>Victor P</td><td>Publish the vocal-election call via the agreed channels</td><td>This week</td></tr>
+                                <tr><td>Board</td><td>Vote on asociado applications regularly in Humans</td><td>Ongoing</td></tr>
+                                <tr><td>Board</td><td>Decide community-call cadence on Discord</td><td>This week</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Next Meetings</h2>
+                        <ul>
+                            <li>Board meeting next Monday &mdash; main topic: the interface between NCA and the new-site initiative, and the small-event question.</li>
+                            <li>Coordinators&rsquo; meeting next week.</li>
+                            <li><strong>General Assembly: Thursday 17 September 2026, 20:00 CEST</strong> (agenda fixed 2 September).</li>
+                        </ul>
+
+                        <p><em>Minutes prepared from the meeting recording and transcript. Sanitised for publication.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Junta presente: Daniel T (preside), Pablo V, Chris O (sali&oacute; a las 20:00), Peter D, Ward D (breve ca&iacute;da de conexi&oacute;n; sali&oacute; ~19:55), Ben D (se incorpor&oacute; ~19:30), Victor P (se incorpor&oacute; ~19:30) &middot; Tambi&eacute;n presente: Daniela M S (Producci&oacute;n)</strong>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Una reuni&oacute;n de trabajo densa. El resultado principal: la junta <strong>traslad&oacute; la Asamblea General del 3 de septiembre al jueves 17 de septiembre de 2026, 20:00 CEST</strong>, para dar m&aacute;s tiempo a preparar informaci&oacute;n s&oacute;lida de cara a la decisi&oacute;n sobre las fechas del evento.</p>
+
+                        <h2>1. Ronda inicial</h2>
+                        <ul>
+                            <li>Los miembros compartieron breves novedades personales. Se reconoci&oacute; la carga del cierre posterior al evento &mdash; varias personas siguen sacando adelante grandes cantidades de trabajo acumulado &mdash; junto con buena energ&iacute;a en torno a las conversaciones sobre el nuevo terreno.</li>
+                        </ul>
+
+                        <h2>2. Producci&oacute;n</h2>
+                        <ul>
+                            <li>La reuni&oacute;n de cierre de producci&oacute;n tendr&aacute; lugar la semana que viene (trasladada a petici&oacute;n de los participantes). El trabajo de cierre contin&uacute;a.</li>
+                        </ul>
+
+                        <h2>3. Actualizaci&oacute;n del presupuesto</h2>
+                        <ul>
+                            <li>Todav&iacute;a no hay cifras finales. La prioridad actual de Peter D es conseguir que presenten sus gastos todas las personas a las que a&uacute;n se les debe dinero, incluidos todos los artistas; despu&eacute;s, una revisi&oacute;n para confirmar que todo ha quedado en los departamentos correctos, y a continuaci&oacute;n la conciliaci&oacute;n.</li>
+                            <li>La expectativa es que el a&ntilde;o cierre c&oacute;modamente en positivo, pero no se compartir&aacute;n cifras hasta que termine el cierre &mdash; tanto porque a&uacute;n quedan pagos importantes pendientes como porque cualquier excedente restante es, ante todo, el colch&oacute;n de la asociaci&oacute;n para el a&ntilde;o que viene.</li>
+                            <li>Nota de pol&iacute;tica a largo plazo: el posible excedente deber&iacute;a destinarse en &uacute;ltima instancia a bajar el precio de las entradas y aumentar la asistencia, lo que exige mantener primero un colch&oacute;n.</li>
+                        </ul>
+
+                        <h2>4. Nuevo terreno &mdash; actualizaci&oacute;n de viabilidad</h2>
+                        <ul>
+                            <li>A&uacute;n no se ha formado ning&uacute;n grupo de trabajo formal; la fase actual es de viabilidad, llevada por Pablo V con un peque&ntilde;o grupo de colaboradores.</li>
+                            <li>Contin&uacute;an las conversaciones con los propietarios para fijar los precios de las parcelas; se est&aacute; recopilando informaci&oacute;n sobre permisos. Se est&aacute;n explorando con asesor&iacute;a legal las opciones de estructuraci&oacute;n de una posible compra (incluidos pagos escalonados y puntos de salida para contener el riesgo).</li>
+                            <li>Dependencia firme: hay que cerrar las cuentas de 2026 antes de hacer cualquier modelizaci&oacute;n seria &mdash; el objetivo es entender cu&aacute;nto cuesta un a&ntilde;o t&iacute;pico, no gastar el excedente. Los costes conocidos de este a&ntilde;o (alquiler, impuestos, ba&ntilde;os y similares) pueden presupuestarse r&aacute;pidamente para los proyectos en consideraci&oacute;n, antes de tener la imagen presupuestaria completa.</li>
+                            <li>Secuencia propuesta (Pablo V): alquilar primero el terreno para un peque&ntilde;o evento comunitario, recaudar fondos en noviembre&ndash;diciembre, cuando la gente est&aacute; en casa, comprar en enero y celebrar despu&eacute;s el primer evento completo en el nuevo terreno. Los plazos de tramitaci&oacute;n implican que los pasos preparatorios deben empezar pronto para que este calendario siga siendo posible.</li>
+                            <li>Se est&aacute; debatiendo un peque&ntilde;o evento &ldquo;hype raiser&rdquo; (posiblemente en octubre), pero a&uacute;n no es una decisi&oacute;n &mdash; depende del cierre financiero y puede merecer una votaci&oacute;n.</li>
+                            <li>Peter D pidi&oacute; cautela frente a financiar la compra con ahorros futuros previstos, y sugiri&oacute; trabajar hacia un acuerdo de condiciones (term sheet) con los propietarios &mdash; especificaci&oacute;n del terreno m&aacute;s precio de compra &mdash; que puede avanzar con independencia del trabajo financiero de la propia NCA.</li>
+                        </ul>
+
+                        <h2>5. Relaci&oacute;n entre la NCA y la iniciativa del nuevo terreno</h2>
+                        <ul>
+                            <li>Daniel T propuso (como punto de partida para el debate, no como votaci&oacute;n) una separaci&oacute;n limpia entre la NCA y la iniciativa del nuevo terreno, que en &uacute;ltima instancia ser&aacute; una entidad legal separada: dos l&iacute;neas de trabajo con expectativas mutuas claras. Borrador de punto de partida: la NCA no aporta nada a la iniciativa del nuevo terreno salvo petici&oacute;n expl&iacute;cita; la NCA solicita una decisi&oacute;n de seguir/no seguir sobre el nuevo terreno antes del <strong>1 de diciembre</strong> para poder planificar el evento del a&ntilde;o que viene.</li>
+                            <li>Pablo V aclar&oacute; el modelo previsto: el veh&iacute;culo del nuevo terreno es un grupo de trabajo independiente (los voluntarios no pueden trabajar bajo &eacute;l), comprar&iacute;a el terreno y la NCA lo alquilar&iacute;a a largo plazo en condiciones fijas &mdash; aislando as&iacute; el riesgo financiero fuera de la NCA.</li>
+                            <li>Preguntas abiertas planteadas por Daniela M S: qui&eacute;n organiza el evento comunitario peque&ntilde;o y bajo qu&eacute; papeleo (actualmente todo se ha solicitado como NCA), y el hecho de que la preparaci&oacute;n de producci&oacute;n no puede esperar hasta enero, sea cual sea el terreno que se use.</li>
+                            <li>Peter D cuestion&oacute; la viabilidad econ&oacute;mica de un evento muy peque&ntilde;o dados los costes fijos de infraestructura; Ward D aclar&oacute; que el concepto es deliberadamente m&iacute;nimo &mdash; solo tiendas, sin infraestructura pesada, pagado por el propio evento.</li>
+                            <li>Se acord&oacute; que es un tema demasiado grande para un solo punto del orden del d&iacute;a: <strong>tema principal de la reuni&oacute;n de la junta de la semana que viene.</strong></li>
+                        </ul>
+
+                        <h2>6. Permisos y opciones de fechas</h2>
+                        <ul>
+                            <li>Daniela M S inform&oacute; sobre el marco regulatorio para eventos m&aacute;s peque&ntilde;os: por debajo de 80 personas solo hace falta un permiso ligero; para 200&ndash;500 personas los requisitos se reducen considerablemente (plan de autoprotecci&oacute;n m&aacute;s peque&ntilde;o, menos instalaciones, sin obligaci&oacute;n legal de seguridad dedicada ni de presencia de la Cruz Roja &mdash; aunque la seguridad es recomendable &mdash; adem&aacute;s de un plan de gesti&oacute;n de emergencias y la notificaci&oacute;n a los servicios de emergencia del entorno). El c&aacute;lculo de costes del montaje m&iacute;nimo viable est&aacute; en marcha; el objetivo es que un evento peque&ntilde;o se pague a s&iacute; mismo. Los elementos que tambi&eacute;n sirven para el evento principal (p. ej. el plan de autoprotecci&oacute;n) pueden razonablemente ser gastos de la NCA.</li>
+                            <li><strong>Urgente:</strong> el documento con las opciones de fechas candidatas debe llegar a la autoridad regional antes del <strong>mi&eacute;rcoles 5 de agosto</strong> (la persona de contacto se ausenta despu&eacute;s); se espera respuesta hacia finales de septiembre/octubre. El documento de fechas actual tiene demasiadas opciones &mdash; hay que reducirlo a unas tres ventanas, ya que los rangos m&aacute;s amplios tardan m&aacute;s en evaluarse.</li>
+                            <li>Sobre la nidificaci&oacute;n y otras restricciones ambientales: no hay ning&uacute;n informe disponible del que partir. Las opciones de fechas se presentan y la autoridad las verifica con varias instituciones (aves protegidas, lluvias, tormentas); la respuesta llega como s&iacute;/no por cada opci&oacute;n.</li>
+                        </ul>
+
+                        <h2>7. Registro de asociados</h2>
+                        <ul>
+                            <li>Ben D inform&oacute; de que el trabajo de conciliaci&oacute;n del registro est&aacute; pr&aacute;cticamente terminado y listo.</li>
+                            <li>La Asamblea General puede anunciarse ampliamente (no solo a los asociados actuales): las solicitudes aprobadas despu&eacute;s de la convocatoria de la asamblea a&uacute;n pueden participar, as&iacute; que el anuncio sirve tambi&eacute;n como llamada a nuevas altas de asociados.</li>
+                            <li>Los criterios de admisi&oacute;n deber&iacute;an ser m&aacute;s visibles: Ben D ha registrado una petici&oacute;n para que Peter D a&ntilde;ada el texto de los criterios a la pantalla de solicitud en Humans; los criterios est&aacute;n tambi&eacute;n en las preguntas frecuentes de la web.</li>
+                        </ul>
+
+                        <h2>8. Elecci&oacute;n de Vocal</h2>
+                        <ul>
+                            <li>Victor P inform&oacute; de que la especificaci&oacute;n de la elecci&oacute;n de Vocal (miembro de la junta) est&aacute; lista tras la revisi&oacute;n de Daniel T y Ben D &mdash; v&eacute;ase la <a href="https://docs.google.com/document/d/1VKIRHpNplBOnx5o4Sc4CNwJsElrC36fIw-MDEY-2JN4/edit?tab=t.0" target="_blank" rel="noopener">descripci&oacute;n del puesto de Vocal</a>. Canales de difusi&oacute;n comentados: Discord (canal de gobernanza), WhatsApp, Telegram y el canal de novedades, para maximizar el n&uacute;mero de candidaturas.</li>
+                        </ul>
+
+                        <h2>9. Asamblea General &mdash; fecha trasladada al 17 de septiembre</h2>
+                        <ul>
+                            <li>Chris O present&oacute; sus reservas sobre la fecha del 3 de septiembre en un <a href="https://docs.google.com/document/d/1iJ8FKiT-LXMHMrzURqXL5f3ntiRvvz3U9NOtMUQTaj4/edit?tab=t.0" target="_blank" rel="noopener">documento escrito</a>: la decisi&oacute;n sobre las fechas no debe precipitarse dada su magnitud &mdash; un cambio de fechas podr&iacute;a significar que algunos asociados no puedan volver a asistir nunca; el riesgo comercial es real (una fecha mal elegida podr&iacute;a reducir la asistencia por debajo de la viabilidad); recopilar informaci&oacute;n s&oacute;lida de otros burns europeos lleva m&aacute;s de dos semanas; y la presi&oacute;n de los titulares por las noticias actuales de incendios no es un buen motor de decisi&oacute;n. Aclar&oacute; que <em>no</em> est&aacute; argumentando contra el cambio de fechas del evento &mdash; mantenerlas est&aacute; resultando demasiado arriesgado &mdash; sino solo contra decidir a una velocidad excesiva.</li>
+                            <li>Daniel T describi&oacute; el trabajo ya en marcha: una hoja de c&aacute;lculo comparativa de otros burns y ventanas candidatas (investigaci&oacute;n preliminar de escritorio, pendiente de verificar), contacto directo con otros burns, aclarar la confusi&oacute;n sobre por qu&eacute; est&aacute; sobre la mesa un cambio de fechas, y una sesi&oacute;n con el grupo de trabajo de gobernanza para dotar de personas el paquete de informaci&oacute;n. La presi&oacute;n de tiempo tambi&eacute;n es real en el sentido contrario: la gente bloquea sus vacaciones con mucha antelaci&oacute;n y necesita certeza para planificar el evento del a&ntilde;o que viene.</li>
+                            <li>Daniela M S subray&oacute; el riesgo de <em>no</em> mover las fechas: la legislaci&oacute;n de incendios cambi&oacute; en marzo de este a&ntilde;o, tres meses antes del evento, y la cantidad de trabajo invisible necesaria para evitar que este a&ntilde;o nos trasladaran de emplazamiento fue enorme &mdash; los planes de evacuaci&oacute;n estaban realmente preparados; la amenaza no era vac&iacute;a. El trabajo en un plan B (convertir los arreglos de este a&ntilde;o en un procedimiento est&aacute;ndar) contin&uacute;a, pero no est&aacute; garantizado.</li>
+                            <li>Datos apuntados: la autoridad regional y el alcalde han indicado que el riesgo de incendio que antes caracterizaba a julio se aplica ahora a junio; la frecuencia de incendios a principios de verano es mucho m&aacute;s manejable que la de plena temporada.</li>
+                            <li>Pablo V defendi&oacute; celebrar la votaci&oacute;n en lugar de decidir por inacci&oacute;n: preparar la mejor informaci&oacute;n posible y, si la informaci&oacute;n no es suficiente, los asociados pueden votar no cambiar las fechas. Otros eventos europeos han cambiado de fechas repetidamente sin hundirse.</li>
+                            <li><strong>Votaci&oacute;n:</strong> la junta vot&oacute; trasladar la Asamblea General del 3 de septiembre al <strong>jueves 17 de septiembre de 2026, 20:00 CEST</strong>. Unanimidad entre los votos recogidos &mdash; Daniel T, Peter D, Ben D, Victor P, Pablo V y Ward D (cuyo voto se recogi&oacute; tras una ca&iacute;da de conexi&oacute;n). El orden del d&iacute;a se fijar&aacute; el <strong>2 de septiembre</strong> e incluir&aacute; la cuesti&oacute;n de las fechas del evento.</li>
+                            <li>Se plante&oacute; una posible fusi&oacute;n con la reuni&oacute;n de todos los miembros (mediados de octubre, nombre y formato en debate); si esa reuni&oacute;n se mueve o se fusiona es decisi&oacute;n de los coordinadores &mdash; la fecha del 17 de septiembre se mantiene en cualquier caso. La posici&oacute;n de la junta: c&oacute;mo llama la comunidad a sus encuentros no es una decisi&oacute;n de la junta; el t&eacute;rmino de los estatutos para este es Asamblea General.</li>
+                        </ul>
+
+                        <h2>10. Ruegos y preguntas</h2>
+                        <ul>
+                            <li><strong>Aprobaci&oacute;n de asociados:</strong> con un aumento previsto de solicitudes de alta antes de la Asamblea General, los miembros de la junta deben revisar regularmente el panel de Humans y votar &mdash; hace falta el 50% de la junta para tramitar cada solicitud. Ben D seguir&aacute; publicando recordatorios en Discord.</li>
+                            <li><strong>Seguimiento de temas de la junta:</strong> Pablo V ha limpiado y reabierto los hilos de seguimiento de la junta (seguimientos administrativos y legales, reclutamiento, temas de responsabilidad) para que no se pierdan en la discusi&oacute;n general; se actualizan de forma as&iacute;ncrona, y el contexto se lleva a las reuniones de la junta.</li>
+                            <li><strong>Cadencia de reuniones:</strong> no habr&aacute; reuni&oacute;n de la junta este jueves salvo que alguien la convoque; si se celebra la llamada comunitaria de esta semana se decidir&aacute; en Discord (probablemente no, dado que la reuni&oacute;n de coordinadores es la semana que viene). Queda por acordar el plan de comunicaci&oacute;n para anunciar la nueva fecha de la Asamblea General.</li>
+                        </ul>
+
+                        <h2>Acciones acordadas</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Acci&oacute;n</th><th>Plazo</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Tramitar los pagos pendientes</td><td>Inmediatamente</td></tr>
+                                <tr><td>Daniel T</td><td>Continuar el trabajo sobre fechas: contacto con otros burns, datos verificados, sesi&oacute;n del grupo de trabajo de gobernanza; reclutar ayuda</td><td>Esta semana</td></tr>
+                                <tr><td>Daniel T (con Daniela M S)</td><td>Reducir las ventanas de fechas candidatas a ~3 para el env&iacute;o a la autoridad</td><td>Antes del mi&eacute;rcoles 5 de agosto</td></tr>
+                                <tr><td>Daniela M S</td><td>Enviar el documento de opciones de fechas a la autoridad regional</td><td>Mi&eacute;rcoles 5 de agosto</td></tr>
+                                <tr><td>Daniela M S</td><td>Calcular el coste del montaje m&iacute;nimo viable para el evento peque&ntilde;o</td><td>Pr&oacute;ximas semanas</td></tr>
+                                <tr><td>Peter D</td><td>Reclamar la presentaci&oacute;n de gastos (incl. artistas); despu&eacute;s, revisi&oacute;n por departamentos y conciliaci&oacute;n</td><td>En curso, prioritario</td></tr>
+                                <tr><td>Peter D</td><td>A&ntilde;adir los criterios de admisi&oacute;n a la pantalla de solicitud de Humans</td><td>Cuando sea posible</td></tr>
+                                <tr><td>Peter D / Pablo V</td><td>Presupuestar las grandes partidas del terreno (alquiler, impuestos, ba&ntilde;os) para la modelizaci&oacute;n del nuevo terreno</td><td>Antes del presupuesto completo</td></tr>
+                                <tr><td>Pablo V</td><td>Continuar la viabilidad: precios de parcelas, permisos, estructuraci&oacute;n de la compra con asesor&iacute;a legal</td><td>En curso</td></tr>
+                                <tr><td>Ben D</td><td>Correo de seguimiento sobre los criterios de admisi&oacute;n; seguir publicando recordatorios de aprobaci&oacute;n</td><td>Esta semana</td></tr>
+                                <tr><td>Victor P</td><td>Publicar la convocatoria de la elecci&oacute;n de Vocal por los canales acordados</td><td>Esta semana</td></tr>
+                                <tr><td>Junta</td><td>Votar regularmente las solicitudes de asociado en Humans</td><td>En curso</td></tr>
+                                <tr><td>Junta</td><td>Decidir en Discord la cadencia de las llamadas comunitarias</td><td>Esta semana</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Pr&oacute;ximas reuniones</h2>
+                        <ul>
+                            <li>Reuni&oacute;n de la junta el pr&oacute;ximo lunes &mdash; tema principal: la relaci&oacute;n entre la NCA y la iniciativa del nuevo terreno, y la cuesti&oacute;n del evento peque&ntilde;o.</li>
+                            <li>Reuni&oacute;n de coordinadores la semana que viene.</li>
+                            <li><strong>Asamblea General: jueves 17 de septiembre de 2026, 20:00 CEST</strong> (orden del d&iacute;a fijado el 2 de septiembre).</li>
+                        </ul>
+
+                        <p><em>Acta elaborada a partir de la grabaci&oacute;n y la transcripci&oacute;n de la reuni&oacute;n. Depurada para su publicaci&oacute;n.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Conseil pr&eacute;sent&nbsp;: Daniel T (pr&eacute;sident), Pablo V, Chris O (parti &agrave; 20:00), Peter D, Ward D (connexion bri&egrave;vement interrompue&nbsp;; parti vers 19:55), Ben D (arriv&eacute; vers 19:30), Victor P (arriv&eacute; vers 19:30) &middot; &Eacute;galement pr&eacute;sente&nbsp;: Daniela M S (Production)</strong>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Une r&eacute;union de travail dense. R&eacute;sultat principal&nbsp;: le conseil a <strong>report&eacute; l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale du 3 septembre au jeudi 17 septembre 2026, 20:00 CEST</strong>, afin de laisser plus de temps pour pr&eacute;parer des informations solides en vue de la d&eacute;cision sur les dates de l&rsquo;&eacute;v&eacute;nement.</p>
+
+                        <h2>1. Tour de table</h2>
+                        <ul>
+                            <li>Les membres ont partag&eacute; de br&egrave;ves nouvelles personnelles. La charge de travail de cl&ocirc;ture post-&eacute;v&eacute;nement a &eacute;t&eacute; reconnue &mdash; plusieurs personnes ont encore d&rsquo;importants retards &agrave; rattraper &mdash; aux c&ocirc;t&eacute;s d&rsquo;une bonne &eacute;nergie autour des discussions sur le nouveau site.</li>
+                        </ul>
+
+                        <h2>2. Production</h2>
+                        <ul>
+                            <li>La r&eacute;union de cl&ocirc;ture de la production aura lieu la semaine prochaine (d&eacute;plac&eacute;e &agrave; la demande des participants). Le travail de cl&ocirc;ture se poursuit.</li>
+                        </ul>
+
+                        <h2>3. Point budget</h2>
+                        <ul>
+                            <li>Pas encore de chiffres d&eacute;finitifs. La priorit&eacute; actuelle de Peter D est d&rsquo;obtenir les notes de frais de toutes les personnes &agrave; qui de l&rsquo;argent est encore d&ucirc;, y compris tous les artistes&nbsp;; ensuite, une v&eacute;rification pour confirmer que tout est bien affect&eacute; aux bons d&eacute;partements, puis le rapprochement des comptes.</li>
+                            <li>L&rsquo;ann&eacute;e devrait se cl&ocirc;turer confortablement dans le vert, mais aucun chiffre ne sera communiqu&eacute; avant la fin de la cl&ocirc;ture &mdash; d&rsquo;une part parce que des paiements importants restent en attente, d&rsquo;autre part parce que tout exc&eacute;dent restant constitue avant tout la r&eacute;serve de l&rsquo;association pour l&rsquo;ann&eacute;e prochaine.</li>
+                            <li>Note de politique &agrave; plus long terme&nbsp;: l&rsquo;&eacute;ventuel exc&eacute;dent devrait &agrave; terme servir &agrave; baisser le prix des billets et &agrave; augmenter la fr&eacute;quentation, ce qui suppose de constituer d&rsquo;abord une r&eacute;serve.</li>
+                        </ul>
+
+                        <h2>4. Nouveau site &mdash; point sur la faisabilit&eacute;</h2>
+                        <ul>
+                            <li>Aucun groupe de travail formel n&rsquo;a encore &eacute;t&eacute; constitu&eacute;&nbsp;; la phase actuelle est celle de la faisabilit&eacute;, port&eacute;e par Pablo V avec un petit groupe de collaborateurs.</li>
+                            <li>Les discussions avec les propri&eacute;taires des terrains se poursuivent pour fixer les prix des parcelles&nbsp;; les informations relatives aux permis sont en cours de collecte. Les options de structuration d&rsquo;un &eacute;ventuel achat (y compris des paiements &eacute;chelonn&eacute;s et des points de sortie pour limiter le risque) sont &eacute;tudi&eacute;es avec un conseil juridique.</li>
+                            <li>D&eacute;pendance forte&nbsp;: les finances 2026 doivent &ecirc;tre cl&ocirc;tur&eacute;es avant toute mod&eacute;lisation s&eacute;rieuse &mdash; l&rsquo;objectif est de comprendre ce que co&ucirc;te une ann&eacute;e type, pas de d&eacute;penser l&rsquo;exc&eacute;dent. Les co&ucirc;ts connus de cette ann&eacute;e (loyer, taxes, toilettes et postes similaires) peuvent &ecirc;tre chiffr&eacute;s rapidement pour les projets &agrave; l&rsquo;&eacute;tude, avant d&rsquo;avoir le tableau budg&eacute;taire complet.</li>
+                            <li>S&eacute;quence propos&eacute;e (Pablo V)&nbsp;: louer d&rsquo;abord le site pour un petit &eacute;v&eacute;nement communautaire, lever des fonds en novembre&ndash;d&eacute;cembre quand les gens sont chez eux, acheter en janvier, puis organiser le premier &eacute;v&eacute;nement complet sur le nouveau terrain. Les d&eacute;lais administratifs imposent de lancer les d&eacute;marches pr&eacute;paratoires rapidement pour que ce calendrier reste possible.</li>
+                            <li>Un petit &eacute;v&eacute;nement &laquo;&nbsp;hype raiser&nbsp;&raquo; (peut-&ecirc;tre en octobre) est en discussion mais n&rsquo;est pas encore une d&eacute;cision &mdash; il est conditionn&eacute; &agrave; la cl&ocirc;ture financi&egrave;re et pourrait justifier un vote.</li>
+                            <li>Peter D a appel&eacute; &agrave; la prudence contre un financement de l&rsquo;achat par des &eacute;conomies futures anticip&eacute;es, et a sugg&eacute;r&eacute; de travailler &agrave; une lettre d&rsquo;intention (term sheet) avec les propri&eacute;taires &mdash; sp&eacute;cifications du site plus prix d&rsquo;achat &mdash; qui peut avancer ind&eacute;pendamment du travail financier propre &agrave; NCA.</li>
+                        </ul>
+
+                        <h2>5. Interface entre NCA et l&rsquo;initiative du nouveau site</h2>
+                        <ul>
+                            <li>Daniel T a propos&eacute; (comme point de d&eacute;part de discussion, pas comme vote) une s&eacute;paration nette entre NCA et l&rsquo;initiative du nouveau site, qui sera &agrave; terme une entit&eacute; juridique distincte&nbsp;: deux fili&egrave;res avec des attentes mutuelles claires. Point de d&eacute;part propos&eacute;&nbsp;: NCA ne fournit rien &agrave; l&rsquo;initiative du nouveau site sauf demande explicite&nbsp;; NCA demande une d&eacute;cision go/no-go sur le nouveau site avant le <strong>1er d&eacute;cembre</strong> afin de pouvoir planifier l&rsquo;&eacute;v&eacute;nement de l&rsquo;an prochain.</li>
+                            <li>Pablo V a clarifi&eacute; le mod&egrave;le envisag&eacute;&nbsp;: le v&eacute;hicule du nouveau site est un groupe de travail ind&eacute;pendant (les b&eacute;n&eacute;voles ne peuvent pas travailler sous son &eacute;gide), il ach&egrave;terait le terrain, et NCA le louerait &agrave; long terme &agrave; des conditions fixes &mdash; ce qui cantonne le risque financier hors de NCA.</li>
+                            <li>Questions ouvertes soulev&eacute;es par Daniela M S&nbsp;: qui organise le petit &eacute;v&eacute;nement communautaire et sous quels documents administratifs (actuellement, tout a &eacute;t&eacute; demand&eacute; au nom de NCA), et le fait que la pr&eacute;paration de la production ne peut pas attendre janvier, quel que soit le site utilis&eacute;.</li>
+                            <li>Peter D a mis en question l&rsquo;&eacute;quilibre &eacute;conomique d&rsquo;un tr&egrave;s petit &eacute;v&eacute;nement compte tenu des co&ucirc;ts fixes d&rsquo;infrastructure&nbsp;; Ward D a pr&eacute;cis&eacute; que le concept est volontairement minimal &mdash; uniquement des tentes, pas d&rsquo;infrastructure lourde, financ&eacute; par l&rsquo;&eacute;v&eacute;nement lui-m&ecirc;me.</li>
+                            <li>Il a &eacute;t&eacute; convenu que le sujet d&eacute;passe un simple point d&rsquo;ordre du jour&nbsp;: <strong>sujet principal de la r&eacute;union du conseil de la semaine prochaine.</strong></li>
+                        </ul>
+
+                        <h2>6. Permis et options de dates</h2>
+                        <ul>
+                            <li>Daniela M S a fait le point sur le cadre r&eacute;glementaire des &eacute;v&eacute;nements plus petits&nbsp;: en dessous de 80 personnes, seul un permis all&eacute;g&eacute; est n&eacute;cessaire&nbsp;; pour 200&ndash;500 personnes, les exigences diminuent nettement (plan d&rsquo;autoprotection r&eacute;duit, moins d&rsquo;installations, pas d&rsquo;obligation l&eacute;gale de s&eacute;curit&eacute; d&eacute;di&eacute;e ni de pr&eacute;sence de la Croix-Rouge &mdash; la s&eacute;curit&eacute; reste toutefois recommand&eacute;e &mdash; plus un plan de gestion des urgences et la notification des services d&rsquo;urgence environnants). Le chiffrage du dispositif minimal viable est en cours&nbsp;; l&rsquo;objectif est qu&rsquo;un petit &eacute;v&eacute;nement s&rsquo;autofinance. Les &eacute;l&eacute;ments qui servent aussi &agrave; l&rsquo;&eacute;v&eacute;nement principal (par exemple le plan d&rsquo;autoprotection) peuvent raisonnablement &ecirc;tre des d&eacute;penses de NCA.</li>
+                            <li><strong>Urgent&nbsp;:</strong> le document avec les options de dates candidates doit parvenir &agrave; l&rsquo;autorit&eacute; r&eacute;gionale au plus tard le <strong>mercredi 5 ao&ucirc;t</strong> (le contact concern&eacute; est ensuite absent)&nbsp;; une r&eacute;ponse est attendue vers fin septembre/octobre. Le document de dates actuel contient trop d&rsquo;options &mdash; il faut le resserrer &agrave; environ trois fen&ecirc;tres, car des plages plus larges sont plus longues &agrave; &eacute;valuer.</li>
+                            <li>Sur la nidification et les autres contraintes environnementales&nbsp;: aucun rapport n&rsquo;est disponible comme base de travail. Les options de dates sont soumises puis v&eacute;rifi&eacute;es par l&rsquo;autorit&eacute; aupr&egrave;s de plusieurs institutions (oiseaux prot&eacute;g&eacute;s, pluies, temp&ecirc;tes)&nbsp;; la r&eacute;ponse revient sous forme de oui/non pour chaque option.</li>
+                        </ul>
+
+                        <h2>7. Registre des membres</h2>
+                        <ul>
+                            <li>Ben D a indiqu&eacute; que le travail de rapprochement du registre est pratiquement termin&eacute; et pr&ecirc;t.</li>
+                            <li>L&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale peut &ecirc;tre annonc&eacute;e largement (pas seulement aux membres actuels)&nbsp;: les candidatures approuv&eacute;es apr&egrave;s la convocation de l&rsquo;assembl&eacute;e peuvent encore participer, si bien que l&rsquo;annonce sert aussi d&rsquo;appel au recrutement de nouveaux membres.</li>
+                            <li>Les crit&egrave;res d&rsquo;adh&eacute;sion devraient &ecirc;tre plus visibles&nbsp;: Ben D a d&eacute;pos&eacute; une demande pour que Peter D ajoute le texte des crit&egrave;res &agrave; l&rsquo;&eacute;cran de candidature dans Humans&nbsp;; les crit&egrave;res figurent aussi dans la FAQ du site web.</li>
+                        </ul>
+
+                        <h2>8. &Eacute;lection du Vocal</h2>
+                        <ul>
+                            <li>Victor P a indiqu&eacute; que le cahier des charges de l&rsquo;&eacute;lection du Vocal (membre du conseil) est pr&ecirc;t apr&egrave;s relecture par Daniel T et Ben D &mdash; voir la <a href="https://docs.google.com/document/d/1VKIRHpNplBOnx5o4Sc4CNwJsElrC36fIw-MDEY-2JN4/edit?tab=t.0" target="_blank" rel="noopener">description du poste de Vocal</a>. Canaux de diffusion discut&eacute;s&nbsp;: Discord (canal gouvernance), WhatsApp, Telegram et le canal des annonces, afin de maximiser le vivier de candidats.</li>
+                        </ul>
+
+                        <h2>9. Assembl&eacute;e G&eacute;n&eacute;rale &mdash; date report&eacute;e au 17 septembre</h2>
+                        <ul>
+                            <li>Chris O a pr&eacute;sent&eacute; ses r&eacute;serves sur la date du 3 septembre dans un <a href="https://docs.google.com/document/d/1iJ8FKiT-LXMHMrzURqXL5f3ntiRvvz3U9NOtMUQTaj4/edit?tab=t.0" target="_blank" rel="noopener">document &eacute;crit</a>&nbsp;: la d&eacute;cision sur les dates ne doit pas &ecirc;tre pr&eacute;cipit&eacute;e compte tenu de son ampleur &mdash; un changement de dates pourrait signifier que certains membres ne pourront plus jamais participer&nbsp;; le risque commercial est r&eacute;el (une date mal choisie pourrait faire tomber la fr&eacute;quentation sous le seuil de viabilit&eacute;)&nbsp;; recueillir des retours solides aupr&egrave;s des autres burns europ&eacute;ens prend plus de deux semaines&nbsp;; et la pression m&eacute;diatique li&eacute;e &agrave; l&rsquo;actualit&eacute; des incendies n&rsquo;est pas un bon moteur de d&eacute;cision. Il a pr&eacute;cis&eacute; qu&rsquo;il ne s&rsquo;oppose <em>pas</em> au changement des dates de l&rsquo;&eacute;v&eacute;nement &mdash; les conserver para&icirc;t trop risqu&eacute; &mdash; mais seulement &agrave; une d&eacute;cision prise &agrave; une vitesse excessive.</li>
+                            <li>Daniel T a d&eacute;crit le chantier d&eacute;j&agrave; en cours&nbsp;: un tableau comparatif des autres burns et des fen&ecirc;tres candidates (recherche documentaire pr&eacute;liminaire, &agrave; v&eacute;rifier), une prise de contact directe avec d&rsquo;autres burns, la clarification de la confusion sur les raisons pour lesquelles un changement de dates est envisag&eacute;, et une session avec le groupe de travail gouvernance pour constituer le dossier d&rsquo;information. La pression temporelle est r&eacute;elle dans l&rsquo;autre sens aussi&nbsp;: les gens bloquent leurs vacances longtemps &agrave; l&rsquo;avance et ont besoin de certitude pour planifier l&rsquo;&eacute;v&eacute;nement de l&rsquo;an prochain.</li>
+                            <li>Daniela M S a soulign&eacute; le risque de <em>ne pas</em> d&eacute;placer les dates&nbsp;: la l&eacute;gislation sur les incendies a chang&eacute; en mars de cette ann&eacute;e, trois mois avant l&rsquo;&eacute;v&eacute;nement, et la quantit&eacute; de travail invisible n&eacute;cessaire pour &eacute;viter d&rsquo;&ecirc;tre d&eacute;plac&eacute;s hors du site cette ann&eacute;e a &eacute;t&eacute; &eacute;norme &mdash; des plans d&rsquo;&eacute;vacuation &eacute;taient r&eacute;ellement en place&nbsp;; la menace n&rsquo;&eacute;tait pas vaine. Le travail sur un plan B (faire des dispositions de cette ann&eacute;e une proc&eacute;dure standard) se poursuit mais n&rsquo;est pas garanti.</li>
+                            <li>Points de donn&eacute;es not&eacute;s&nbsp;: l&rsquo;autorit&eacute; r&eacute;gionale et le maire ont indiqu&eacute; que le risque d&rsquo;incendie qui caract&eacute;risait autrefois juillet s&rsquo;applique d&eacute;sormais &agrave; juin&nbsp;; la fr&eacute;quence des incendies en d&eacute;but d&rsquo;&eacute;t&eacute; est bien plus g&eacute;rable que celle du pic de saison.</li>
+                            <li>Pablo V a plaid&eacute; pour la tenue du vote plut&ocirc;t qu&rsquo;une d&eacute;cision par inaction&nbsp;: pr&eacute;parer la meilleure information possible et, si l&rsquo;information n&rsquo;est pas suffisante, les membres peuvent voter contre le changement de dates. D&rsquo;autres &eacute;v&eacute;nements europ&eacute;ens ont d&eacute;plac&eacute; leurs dates &agrave; plusieurs reprises sans s&rsquo;effondrer.</li>
+                            <li><strong>Vote&nbsp;:</strong> le conseil a vot&eacute; le report de l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale du 3 septembre au <strong>jeudi 17 septembre 2026, 20:00 CEST</strong>. Unanimit&eacute; des voix recueillies &mdash; Daniel T, Peter D, Ben D, Victor P, Pablo V et Ward D (dont la voix a &eacute;t&eacute; recueillie apr&egrave;s une coupure de connexion). L&rsquo;ordre du jour sera arr&ecirc;t&eacute; le <strong>2 septembre</strong> et inclura la question des dates de l&rsquo;&eacute;v&eacute;nement.</li>
+                            <li>Une possible fusion avec la r&eacute;union de tous les membres (mi-octobre, nom et format en discussion) a &eacute;t&eacute; &eacute;voqu&eacute;e&nbsp;; d&eacute;placer ou fusionner cette r&eacute;union rel&egrave;ve des coordinateurs &mdash; la date du 17 septembre est maintenue quoi qu&rsquo;il en soit. Position du conseil&nbsp;: le nom que la communaut&eacute; donne &agrave; ses rassemblements n&rsquo;est pas une d&eacute;cision du conseil&nbsp;; le terme employ&eacute; par les statuts pour celui-ci est Assembl&eacute;e G&eacute;n&eacute;rale.</li>
+                        </ul>
+
+                        <h2>10. Questions diverses</h2>
+                        <ul>
+                            <li><strong>Approbation des asociados&nbsp;:</strong> les candidatures d&rsquo;adh&eacute;sion devant augmenter &agrave; l&rsquo;approche de l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale, les membres du conseil doivent consulter r&eacute;guli&egrave;rement le tableau de bord Humans et voter &mdash; 50&nbsp;% du conseil est n&eacute;cessaire pour traiter chaque candidature. Ben D continuera de publier des rappels sur Discord.</li>
+                            <li><strong>Suivi des sujets du conseil&nbsp;:</strong> Pablo V a remis en ordre et rouvert les fils de suivi du conseil (suivis administratifs et juridiques, recrutement, questions de responsabilit&eacute;) pour qu&rsquo;ils ne se perdent pas dans la discussion g&eacute;n&eacute;rale&nbsp;; mises &agrave; jour en asynchrone, avec le contexte apport&eacute; aux r&eacute;unions du conseil.</li>
+                            <li><strong>Rythme des r&eacute;unions&nbsp;:</strong> pas de r&eacute;union du conseil ce jeudi, sauf si quelqu&rsquo;un la demande&nbsp;; la tenue de l&rsquo;appel communautaire de cette semaine sera d&eacute;cid&eacute;e sur Discord (probablement pas, la r&eacute;union des coordinateurs ayant lieu la semaine prochaine). Le plan de communication pour annoncer la nouvelle date de l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale reste &agrave; convenir.</li>
+                        </ul>
+
+                        <h2>Actions &agrave; mener</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Personne</th><th>Action</th><th>&Eacute;ch&eacute;ance</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Traiter les paiements en attente</td><td>Imm&eacute;diatement</td></tr>
+                                <tr><td>Daniel T</td><td>Poursuivre le chantier des dates&nbsp;: contacts avec les autres burns, donn&eacute;es v&eacute;rifi&eacute;es, session du groupe de travail gouvernance&nbsp;; recruter des personnes pour aider</td><td>Cette semaine</td></tr>
+                                <tr><td>Daniel T (avec Daniela M S)</td><td>Resserrer les fen&ecirc;tres de dates candidates &agrave; ~3 pour la soumission &agrave; l&rsquo;autorit&eacute;</td><td>D&rsquo;ici mercredi 5 ao&ucirc;t</td></tr>
+                                <tr><td>Daniela M S</td><td>Envoyer le document des options de dates &agrave; l&rsquo;autorit&eacute; r&eacute;gionale</td><td>Mercredi 5 ao&ucirc;t</td></tr>
+                                <tr><td>Daniela M S</td><td>Chiffrer le dispositif minimal viable pour un petit &eacute;v&eacute;nement</td><td>Prochaines semaines</td></tr>
+                                <tr><td>Peter D</td><td>Relancer les notes de frais (y compris les artistes), puis v&eacute;rification par d&eacute;partement et rapprochement des comptes</td><td>En cours, prioritaire</td></tr>
+                                <tr><td>Peter D</td><td>Ajouter les crit&egrave;res d&rsquo;adh&eacute;sion &agrave; l&rsquo;&eacute;cran de candidature dans Humans</td><td>D&egrave;s que possible</td></tr>
+                                <tr><td>Peter D / Pablo V</td><td>Chiffrer les grands postes de co&ucirc;t du site (loyer, taxes, toilettes) pour la mod&eacute;lisation du nouveau site</td><td>Avant le budget complet</td></tr>
+                                <tr><td>Pablo V</td><td>Poursuivre la faisabilit&eacute;&nbsp;: prix des parcelles, permis, structuration de l&rsquo;achat avec le conseil juridique</td><td>En cours</td></tr>
+                                <tr><td>Ben D</td><td>Email de relance sur les crit&egrave;res d&rsquo;adh&eacute;sion&nbsp;; continuer &agrave; publier les rappels d&rsquo;approbation</td><td>Cette semaine</td></tr>
+                                <tr><td>Victor P</td><td>Publier l&rsquo;appel &agrave; candidatures pour l&rsquo;&eacute;lection du Vocal via les canaux convenus</td><td>Cette semaine</td></tr>
+                                <tr><td>Conseil</td><td>Voter r&eacute;guli&egrave;rement sur les candidatures d&rsquo;asociados dans Humans</td><td>En continu</td></tr>
+                                <tr><td>Conseil</td><td>D&eacute;cider du rythme des appels communautaires sur Discord</td><td>Cette semaine</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Prochaines r&eacute;unions</h2>
+                        <ul>
+                            <li>R&eacute;union du conseil lundi prochain &mdash; sujet principal&nbsp;: l&rsquo;interface entre NCA et l&rsquo;initiative du nouveau site, et la question du petit &eacute;v&eacute;nement.</li>
+                            <li>R&eacute;union des coordinateurs la semaine prochaine.</li>
+                            <li><strong>Assembl&eacute;e G&eacute;n&eacute;rale&nbsp;: jeudi 17 septembre 2026, 20:00 CEST</strong> (ordre du jour arr&ecirc;t&eacute; le 2 septembre).</li>
+                        </ul>
+
+                        <p><em>Proc&egrave;s-verbal pr&eacute;par&eacute; &agrave; partir de l&rsquo;enregistrement et de la transcription de la r&eacute;union. &Eacute;pur&eacute; pour publication.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanze tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Consiglio presente: Daniel T (presidente), Pablo V, Chris O (uscito alle 20:00), Peter D, Ward D (connessione interrotta brevemente; uscito ~19:55), Ben D (entrato ~19:30), Victor P (entrato ~19:30) &middot; Presente anche: Daniela M S (Produzione)</strong>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Una riunione di lavoro densa. Il risultato principale: il consiglio <strong>ha spostato l&rsquo;Assemblea Generale dal 3 settembre a gioved&igrave; 17 settembre 2026, 20:00 CEST</strong>, per concedere pi&ugrave; tempo alla preparazione di informazioni solide in vista della decisione sulle date dell&rsquo;evento.</p>
+
+                        <h2>1. Check-in</h2>
+                        <ul>
+                            <li>I membri hanno condiviso brevi aggiornamenti personali. &Egrave; stato riconosciuto il carico di lavoro della chiusura post-evento &mdash; diverse persone stanno ancora smaltendo grandi arretrati &mdash; insieme a una buona energia intorno alle conversazioni sul nuovo sito.</li>
+                        </ul>
+
+                        <h2>2. Produzione</h2>
+                        <ul>
+                            <li>La riunione di chiusura della produzione si terr&agrave; la prossima settimana (spostata su richiesta dei partecipanti). Il lavoro di chiusura &egrave; in corso.</li>
+                        </ul>
+
+                        <h2>3. Aggiornamento sul bilancio</h2>
+                        <ul>
+                            <li>Non ci sono ancora cifre definitive. La priorit&agrave; attuale di Peter D &egrave; far arrivare le note spese di tutti coloro a cui sono ancora dovuti dei rimborsi, inclusi tutti gli artisti; seguir&agrave; una revisione per confermare che tutto sia finito nei reparti giusti, e poi la riconciliazione.</li>
+                            <li>L&rsquo;aspettativa &egrave; che l&rsquo;anno si chiuda comodamente in attivo, ma nessuna cifra sar&agrave; condivisa finch&eacute; la chiusura non sar&agrave; completata &mdash; sia perch&eacute; restano da effettuare pagamenti consistenti, sia perch&eacute; qualunque avanzo residuo &egrave; prima di tutto la riserva dell&rsquo;associazione per il prossimo anno.</li>
+                            <li>Nota di indirizzo a lungo termine: l&rsquo;eventuale avanzo dovrebbe in ultima analisi servire ad abbassare i prezzi dei biglietti e ad aumentare la partecipazione, il che richiede prima di tutto la costituzione di una riserva.</li>
+                        </ul>
+
+                        <h2>4. Nuovo sito &mdash; Aggiornamento sulla fattibilit&agrave;</h2>
+                        <ul>
+                            <li>Non &egrave; ancora stato costituito alcun gruppo di lavoro formale; la fase attuale &egrave; quella di fattibilit&agrave;, portata avanti da Pablo V con un piccolo gruppo di collaboratori.</li>
+                            <li>Le conversazioni con i proprietari dei terreni proseguono per fissare i prezzi dei lotti; si stanno raccogliendo le informazioni relative ai permessi. Insieme ai consulenti legali si stanno esplorando le opzioni per strutturare un eventuale acquisto (inclusi pagamenti scaglionati e punti di uscita per contenere il rischio).</li>
+                            <li>Dipendenza vincolante: i conti del 2026 devono essere chiusi prima di qualsiasi modellazione significativa &mdash; l&rsquo;obiettivo &egrave; capire quanto costa un anno tipico, non spendere l&rsquo;avanzo. I costi noti di quest&rsquo;anno (affitto, tasse, servizi igienici e simili) possono essere quantificati rapidamente per i progetti in esame, in anticipo rispetto al quadro completo di bilancio.</li>
+                            <li>Sequenza proposta (Pablo V): prima affittare il sito per un piccolo evento comunitario, raccogliere fondi a novembre&ndash;dicembre quando le persone sono a casa, acquistare a gennaio, e poi organizzare il primo evento completo sul nuovo terreno. I tempi burocratici implicano che i passi preparatori devono iniziare presto perch&eacute; questa tempistica resti percorribile.</li>
+                            <li>Un piccolo evento &ldquo;hype raiser&rdquo; (forse in ottobre) &egrave; in discussione ma non &egrave; ancora una decisione &mdash; dipende dalla chiusura dei conti e potrebbe richiedere una votazione.</li>
+                            <li>Peter D ha invitato alla cautela rispetto al finanziare l&rsquo;acquisto con risparmi futuri previsti, e ha suggerito di lavorare verso un term sheet con i proprietari dei terreni &mdash; specifiche del sito pi&ugrave; prezzo di acquisto &mdash; che pu&ograve; procedere indipendentemente dal lavoro finanziario di NCA.</li>
+                        </ul>
+
+                        <h2>5. Interfaccia tra NCA e l&rsquo;iniziativa del nuovo sito</h2>
+                        <ul>
+                            <li>Daniel T ha proposto (come punto di partenza per la discussione, non come votazione) una separazione netta tra NCA e l&rsquo;iniziativa del nuovo sito, che alla fine sar&agrave; un&rsquo;entit&agrave; giuridica separata: due flussi con chiare aspettative reciproche. Bozza di partenza: NCA non fornisce nulla all&rsquo;iniziativa del nuovo sito se non su richiesta esplicita; NCA richiede una decisione go/no-go sul nuovo sito entro il <strong>1&ordm; dicembre</strong>, cos&igrave; da poter pianificare l&rsquo;evento del prossimo anno.</li>
+                            <li>Pablo V ha chiarito il modello previsto: il veicolo del nuovo sito &egrave; un gruppo di lavoro indipendente (i volontari non possono lavorare sotto di esso), acquisterebbe il terreno, e NCA lo affitterebbe a lungo termine a condizioni fisse &mdash; isolando il rischio finanziario da NCA.</li>
+                            <li>Questioni aperte sollevate da Daniela M S: chi organizza il piccolo evento comunitario e sotto quale documentazione (attualmente tutto &egrave; stato richiesto a nome di NCA), e il fatto che la preparazione della produzione non pu&ograve; aspettare fino a gennaio, indipendentemente da quale sito verr&agrave; utilizzato.</li>
+                            <li>Peter D ha messo in dubbio la sostenibilit&agrave; economica di un evento molto piccolo, dati i costi fissi di infrastruttura; Ward D ha chiarito che il concetto &egrave; deliberatamente minimale &mdash; solo tende, nessuna infrastruttura pesante, pagato dall&rsquo;evento stesso.</li>
+                            <li>&Egrave; stato concordato che si tratta di un tema troppo grande per un solo punto all&rsquo;ordine del giorno: <strong>tema principale della riunione del consiglio della prossima settimana.</strong></li>
+                        </ul>
+
+                        <h2>6. Permessi e opzioni di date</h2>
+                        <ul>
+                            <li>Daniela M S ha riferito sul quadro normativo per gli eventi pi&ugrave; piccoli: sotto le 80 persone serve solo un permesso leggero; per 200&ndash;500 persone i requisiti si riducono in modo significativo (piano di autoprotezione pi&ugrave; piccolo, meno strutture, nessun obbligo di legge di sicurezza dedicata o di presenza della Croce Rossa &mdash; anche se la sicurezza &egrave; raccomandata &mdash; oltre a un piano di gestione delle emergenze e alla notifica ai servizi di emergenza circostanti). La stima dei costi della configurazione minima praticabile &egrave; in corso; l&rsquo;obiettivo &egrave; che un piccolo evento si ripaghi da solo. Le voci che servono anche all&rsquo;evento principale (ad es. il piano di autoprotezione) possono ragionevolmente essere spese di NCA.</li>
+                            <li><strong>Urgente:</strong> il documento con le opzioni di date candidate deve arrivare all&rsquo;autorit&agrave; regionale entro <strong>mercoled&igrave; 5 agosto</strong> (il referente competente sar&agrave; poi assente); una risposta &egrave; attesa verso fine settembre/ottobre. L&rsquo;attuale documento delle date contiene troppe opzioni &mdash; va ristretto a circa tre finestre, poich&eacute; intervalli pi&ugrave; ampi richiedono pi&ugrave; tempo per essere valutati.</li>
+                            <li>Su nidificazione e altri vincoli ambientali: non esiste un rapporto disponibile su cui basarsi. Le opzioni di date vengono presentate e verificate dall&rsquo;autorit&agrave; presso diverse istituzioni (uccelli protetti, piogge, tempeste); la risposta arriva come s&igrave;/no per ciascuna opzione.</li>
+                        </ul>
+
+                        <h2>7. Registro dei soci</h2>
+                        <ul>
+                            <li>Ben D ha riferito che il lavoro di riconciliazione del registro &egrave; sostanzialmente concluso e pronto.</li>
+                            <li>L&rsquo;Assemblea Generale pu&ograve; essere annunciata in modo ampio (non solo ai soci attuali): chi viene approvato dopo la convocazione dell&rsquo;assemblea pu&ograve; comunque partecipare, quindi l&rsquo;annuncio funge anche da appello al reclutamento di nuovi soci.</li>
+                            <li>I criteri di ammissione dovrebbero essere pi&ugrave; visibili: Ben D ha presentato una richiesta affinch&eacute; Peter D aggiunga il testo dei criteri alla schermata di domanda in Humans; i criteri sono presenti anche nelle FAQ del sito web.</li>
+                        </ul>
+
+                        <h2>8. Elezione del Vocal</h2>
+                        <ul>
+                            <li>Victor P ha riferito che le specifiche dell&rsquo;elezione del Vocal (membro del consiglio) sono pronte dopo la revisione di Daniel T e Ben D &mdash; si veda la <a href="https://docs.google.com/document/d/1VKIRHpNplBOnx5o4Sc4CNwJsElrC36fIw-MDEY-2JN4/edit?tab=t.0" target="_blank" rel="noopener">descrizione del ruolo di Vocal</a>. Canali di distribuzione discussi: Discord (canale governance), WhatsApp, Telegram e il canale degli aggiornamenti, per massimizzare il bacino di candidati.</li>
+                        </ul>
+
+                        <h2>9. Assemblea Generale &mdash; data spostata al 17 settembre</h2>
+                        <ul>
+                            <li>Chris O ha presentato le sue riserve sulla data del 3 settembre in un <a href="https://docs.google.com/document/d/1iJ8FKiT-LXMHMrzURqXL5f3ntiRvvz3U9NOtMUQTaj4/edit?tab=t.0" target="_blank" rel="noopener">documento scritto</a>: la decisione sulle date non dovrebbe essere presa in fretta, data la sua portata &mdash; un cambio di date potrebbe significare che alcuni soci non potranno mai pi&ugrave; partecipare; il rischio commerciale &egrave; reale (una data scelta male potrebbe ridurre la partecipazione sotto la soglia di sostenibilit&agrave;); raccogliere input solidi dagli altri burns europei richiede pi&ugrave; di due settimane; e la pressione dei titoli delle attuali notizie sugli incendi non &egrave; un buon motore decisionale. Ha chiarito che <em>non</em> sta argomentando contro il cambio delle date dell&rsquo;evento &mdash; mantenerle appare troppo rischioso &mdash; ma solo contro il decidere a velocit&agrave; eccessiva.</li>
+                            <li>Daniel T ha descritto il flusso di lavoro gi&agrave; in moto: un foglio di confronto tra altri burns e finestre candidate (ricerca preliminare a tavolino, da verificare), contatti diretti con altri burns, il chiarimento della confusione sul perch&eacute; un cambio di date sia sul tavolo, e una sessione con il gruppo di lavoro sulla governance per preparare il pacchetto informativo. La pressione temporale &egrave; reale anche nell&rsquo;altra direzione: le persone bloccano le ferie con largo anticipo e hanno bisogno di certezze per pianificare l&rsquo;evento del prossimo anno.</li>
+                            <li>Daniela M S ha sottolineato il rischio di <em>non</em> spostare le date: la legislazione antincendio &egrave; cambiata a marzo di quest&rsquo;anno, tre mesi prima dell&rsquo;evento, e la quantit&agrave; di lavoro invisibile necessaria per evitare di essere trasferiti altrove quest&rsquo;anno &egrave; stata enorme &mdash; i piani di evacuazione erano davvero pronti; la minaccia non era vuota. Il lavoro su un piano B (trasformare le soluzioni di quest&rsquo;anno in una procedura standard) &egrave; in corso ma non garantito.</li>
+                            <li>Dati rilevati: l&rsquo;autorit&agrave; regionale e il sindaco hanno indicato che il rischio di incendi che un tempo caratterizzava luglio ora riguarda giugno; la frequenza degli incendi a inizio estate &egrave; molto pi&ugrave; gestibile rispetto a quella dell&rsquo;alta stagione.</li>
+                            <li>Pablo V ha sostenuto che si debba tenere la votazione invece di decidere per inerzia: preparare le migliori informazioni possibili e, se le informazioni non fossero sufficienti, i soci possono votare di non cambiare le date. Altri eventi europei hanno spostato le date pi&ugrave; volte senza crollare.</li>
+                            <li><strong>Votazione:</strong> il consiglio ha votato per spostare l&rsquo;Assemblea Generale dal 3 settembre a <strong>gioved&igrave; 17 settembre 2026, 20:00 CEST</strong>. Unanime tra i voti raccolti &mdash; Daniel T, Peter D, Ben D, Victor P, Pablo V e Ward D (il cui voto &egrave; stato raccolto dopo una caduta di connessione). L&rsquo;ordine del giorno sar&agrave; fissato il <strong>2 settembre</strong> e includer&agrave; la questione delle date dell&rsquo;evento.</li>
+                            <li>&Egrave; stata sollevata una possibile fusione con la riunione di tutti i membri (met&agrave; ottobre, nome e formato in discussione); se quella riunione si sposti o si fonda spetta ai coordinatori deciderlo &mdash; la data del 17 settembre resta in ogni caso. La posizione del consiglio: come la comunit&agrave; chiama i propri raduni non &egrave; una decisione del consiglio; il termine usato dallo statuto per questa riunione &egrave; Assemblea Generale.</li>
+                        </ul>
+
+                        <h2>10. Varie ed eventuali</h2>
+                        <ul>
+                            <li><strong>Approvazione degli asociados:</strong> con un aumento previsto delle domande di adesione in vista dell&rsquo;Assemblea Generale, i membri del consiglio dovrebbero controllare regolarmente la dashboard di Humans e votare &mdash; serve il 50% del consiglio per dare seguito a ciascuna domanda. Ben D continuer&agrave; a pubblicare promemoria su Discord.</li>
+                            <li><strong>Tracciamento dei temi del consiglio:</strong> Pablo V ha riordinato e riaperto i thread di follow-up tracciati dal consiglio (follow-up amministrativi e legali, reclutamento, temi di responsabilit&agrave;) perch&eacute; non si perdano nella discussione generale; aggiornamenti in modalit&agrave; asincrona, con il contesto portato alle riunioni del consiglio.</li>
+                            <li><strong>Cadenza delle riunioni:</strong> nessuna riunione del consiglio questo gioved&igrave;, a meno che qualcuno non la richieda; se tenere la call comunitaria di questa settimana sar&agrave; deciso su Discord (probabilmente no, dato che la riunione dei coordinatori si terr&agrave; la prossima settimana). Da concordare il piano di comunicazione per annunciare la nuova data dell&rsquo;Assemblea Generale.</li>
+                        </ul>
+
+                        <h2>Azioni da intraprendere</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Azione</th><th>Scadenza</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Elaborare i pagamenti in sospeso</td><td>Immediatamente</td></tr>
+                                <tr><td>Daniel T</td><td>Proseguire il flusso di lavoro sulle date: contatti con altri burns, dati verificati, sessione del gruppo di lavoro sulla governance; reclutare aiutanti</td><td>Questa settimana</td></tr>
+                                <tr><td>Daniel T (con Daniela M S)</td><td>Restringere le finestre di date candidate a ~3 per l&rsquo;invio all&rsquo;autorit&agrave;</td><td>Entro mercoled&igrave; 5 ago</td></tr>
+                                <tr><td>Daniela M S</td><td>Inviare il documento delle opzioni di date all&rsquo;autorit&agrave; regionale</td><td>Mercoled&igrave; 5 ago</td></tr>
+                                <tr><td>Daniela M S</td><td>Stimare i costi della configurazione minima praticabile per il piccolo evento</td><td>Prossime settimane</td></tr>
+                                <tr><td>Peter D</td><td>Sollecitare le note spese (inclusi gli artisti), poi revisione per reparti e riconciliazione</td><td>In corso, priorit&agrave;</td></tr>
+                                <tr><td>Peter D</td><td>Aggiungere i criteri di ammissione alla schermata di domanda in Humans</td><td>Appena possibile</td></tr>
+                                <tr><td>Peter D / Pablo V</td><td>Quantificare le principali voci di costo del sito (affitto, tasse, servizi igienici) per la modellazione del nuovo sito</td><td>Prima del bilancio completo</td></tr>
+                                <tr><td>Pablo V</td><td>Proseguire la fattibilit&agrave;: prezzi dei lotti, permessi, strutturazione dell&rsquo;acquisto con i consulenti legali</td><td>In corso</td></tr>
+                                <tr><td>Ben D</td><td>Email di follow-up sui criteri di ammissione; continuare a pubblicare promemoria sulle approvazioni</td><td>Questa settimana</td></tr>
+                                <tr><td>Victor P</td><td>Pubblicare la convocazione dell&rsquo;elezione del Vocal sui canali concordati</td><td>Questa settimana</td></tr>
+                                <tr><td>Consiglio</td><td>Votare regolarmente le domande degli asociados in Humans</td><td>In corso</td></tr>
+                                <tr><td>Consiglio</td><td>Decidere la cadenza delle call comunitarie su Discord</td><td>Questa settimana</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Prossime riunioni</h2>
+                        <ul>
+                            <li>Riunione del consiglio luned&igrave; prossimo &mdash; tema principale: l&rsquo;interfaccia tra NCA e l&rsquo;iniziativa del nuovo sito, e la questione del piccolo evento.</li>
+                            <li>Riunione dei coordinatori la prossima settimana.</li>
+                            <li><strong>Assemblea Generale: gioved&igrave; 17 settembre 2026, 20:00 CEST</strong> (ordine del giorno fissato il 2 settembre).</li>
+                        </ul>
+
+                        <p><em>Verbale redatto a partire dalla registrazione e dalla trascrizione della riunione. Ripulito per la pubblicazione.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Bei Diskrepanzen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesender Vorstand: Daniel T (Vorsitz), Pablo V, Chris O (ging um 20:00), Peter D, Ward D (Verbindung kurz unterbrochen; ging ca. 19:55), Ben D (dazugekommen ca. 19:30), Victor P (dazugekommen ca. 19:30) &middot; Ebenfalls anwesend: Daniela M S (Produktion)</strong>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Eine dichte Arbeitssitzung. Das wichtigste Ergebnis: Der Vorstand <strong>verlegte die Generalversammlung vom 3. September auf Donnerstag, 17. September 2026, 20:00 CEST</strong>, um mehr Zeit zu haben, solide Informationen f&uuml;r die Entscheidung &uuml;ber die Event-Termine vorzubereiten.</p>
+
+                        <h2>1. Check-in</h2>
+                        <ul>
+                            <li>Die Mitglieder teilten kurze pers&ouml;nliche Updates. Die Belastung durch die Nachbereitung des Events wurde anerkannt &mdash; mehrere Personen arbeiten noch gro&szlig;e R&uuml;ckst&auml;nde ab &mdash; zugleich gab es gute Energie rund um die Gespr&auml;che zum neuen Gel&auml;nde.</li>
+                        </ul>
+
+                        <h2>2. Produktion</h2>
+                        <ul>
+                            <li>Das Abschlusstreffen der Produktion findet n&auml;chste Woche statt (auf Wunsch der Teilnehmenden verschoben). Die Nachbereitungsarbeiten laufen.</li>
+                        </ul>
+
+                        <h2>3. Budget-Update</h2>
+                        <ul>
+                            <li>Noch keine endg&uuml;ltigen Zahlen. Die aktuelle Priorit&auml;t von Peter D ist, die Spesenabrechnungen aller Personen einzuholen, denen noch Geld zusteht, einschlie&szlig;lich aller K&uuml;nstler; danach eine Pr&uuml;fung, ob alles in den richtigen Abteilungen gelandet ist, anschlie&szlig;end der Abgleich.</li>
+                            <li>Es wird erwartet, dass das Jahr komfortabel im Plus abschlie&szlig;t, aber es werden keine Zahlen geteilt, bevor die Nachbereitung abgeschlossen ist &mdash; sowohl weil noch gro&szlig;e Zahlungen ausstehen, als auch weil ein etwaiger &Uuml;berschuss zuallererst der Puffer des Vereins f&uuml;r das n&auml;chste Jahr ist.</li>
+                            <li>L&auml;ngerfristige Grundsatznotiz: Ein m&ouml;glicher &Uuml;berschuss soll letztlich in niedrigere Ticketpreise und wachsende Teilnehmerzahlen flie&szlig;en, was zun&auml;chst das Halten eines Puffers voraussetzt.</li>
+                        </ul>
+
+                        <h2>4. Neues Gel&auml;nde &mdash; Update zur Machbarkeit</h2>
+                        <ul>
+                            <li>Es wurde noch keine formelle Arbeitsgruppe gebildet; die aktuelle Phase ist die Machbarkeitspr&uuml;fung, getragen von Pablo V mit einer kleinen Gruppe von Mitwirkenden.</li>
+                            <li>Gespr&auml;che mit den Grundeigent&uuml;mern laufen, um die Grundst&uuml;ckspreise festzuschreiben; genehmigungsbezogene Informationen werden gesammelt. Strukturierungsoptionen f&uuml;r einen m&ouml;glichen Kauf (einschlie&szlig;lich gestaffelter Zahlungen und Ausstiegspunkten zur Risikobegrenzung) werden mit Rechtsbeistand gepr&uuml;ft.</li>
+                            <li>Harte Abh&auml;ngigkeit: Die Finanzen 2026 m&uuml;ssen abgeschlossen sein, bevor sinnvoll modelliert werden kann &mdash; das Ziel ist zu verstehen, was ein typisches Jahr kostet, nicht, den &Uuml;berschuss auszugeben. Bekannte Kosten aus diesem Jahr (Miete, Steuern, Toiletten und &Auml;hnliches) k&ouml;nnen f&uuml;r die in Betracht gezogenen Projekte schnell beziffert werden, noch vor dem vollst&auml;ndigen Budget&uuml;berblick.</li>
+                            <li>Vorgeschlagene Abfolge (Pablo V): das Gel&auml;nde zun&auml;chst f&uuml;r ein kleines Community-Event mieten, Fundraising im November&ndash;Dezember, wenn die Leute zu Hause sind, Kauf im Januar, dann das erste volle Event auf dem neuen Land. Wegen der Vorlaufzeiten f&uuml;r Beh&ouml;rdenunterlagen m&uuml;ssen die vorbereitenden Schritte bald beginnen, damit dieser Zeitplan offen bleibt.</li>
+                            <li>Ein kleines &bdquo;hype raiser&ldquo;-Event (m&ouml;glicherweise im Oktober) wird diskutiert, ist aber noch keine Entscheidung &mdash; es h&auml;ngt vom Abschluss der Finanzen ab und k&ouml;nnte eine Abstimmung erfordern.</li>
+                            <li>Peter D mahnte zur Vorsicht, den Kauf nicht aus erwarteten k&uuml;nftigen Einsparungen zu finanzieren, und schlug vor, auf ein Term Sheet mit den Grundeigent&uuml;mern hinzuarbeiten &mdash; Gel&auml;ndespezifikation plus Kaufpreis &mdash;, das unabh&auml;ngig von der eigenen Finanzarbeit der NCA vorangehen kann.</li>
+                        </ul>
+
+                        <h2>5. Schnittstelle zwischen NCA und der Initiative f&uuml;r das neue Gel&auml;nde</h2>
+                        <ul>
+                            <li>Daniel T schlug (als Ausgangspunkt f&uuml;r die Diskussion, nicht als Abstimmung) eine saubere Trennung zwischen der NCA und der Initiative f&uuml;r das neue Gel&auml;nde vor, die letztlich eine eigene juristische Person sein wird: zwei Str&auml;nge mit klaren gegenseitigen Erwartungen. Entwurf als Ausgangspunkt: Die NCA stellt der Initiative nichts zur Verf&uuml;gung, sofern nicht ausdr&uuml;cklich darum gebeten wird; die NCA erbittet eine Go/No-Go-Entscheidung zum neuen Gel&auml;nde bis zum <strong>1. Dezember</strong>, damit das Event des n&auml;chsten Jahres geplant werden kann.</li>
+                            <li>Pablo V stellte das angedachte Modell klar: Das Tr&auml;gervehikel f&uuml;r das neue Gel&auml;nde ist eine unabh&auml;ngige Arbeitsgruppe (Freiwillige k&ouml;nnen nicht unter ihr arbeiten), es w&uuml;rde das Land kaufen, und die NCA w&uuml;rde es langfristig zu festen Bedingungen mieten &mdash; womit das finanzielle Risiko von der NCA ferngehalten wird.</li>
+                            <li>Offene Fragen von Daniela M S: Wer organisiert das kleinere Community-Event und unter wessen Unterlagen (derzeit ist alles im Namen der NCA beantragt), und die Tatsache, dass die Produktionsvorbereitung nicht bis Januar warten kann, unabh&auml;ngig davon, welches Gel&auml;nde genutzt wird.</li>
+                            <li>Peter D stellte die Wirtschaftlichkeit eines sehr kleinen Events angesichts fixer Infrastrukturkosten infrage; Ward D stellte klar, dass das Konzept bewusst minimal ist &mdash; nur Zelte, keine schwere Infrastruktur, finanziert durch das Event selbst.</li>
+                            <li>Einigkeit, dass dieses Thema gr&ouml;&szlig;er ist als ein Tagesordnungspunkt: <strong>Hauptthema der Vorstandssitzung n&auml;chste Woche.</strong></li>
+                        </ul>
+
+                        <h2>6. Genehmigungen und Terminoptionen</h2>
+                        <ul>
+                            <li>Daniela M S berichtete &uuml;ber den rechtlichen Rahmen f&uuml;r kleinere Events: Unter 80 Personen ist nur eine einfache Genehmigung n&ouml;tig; bei 200&ndash;500 Personen sinken die Anforderungen deutlich (kleinerer Selbstschutzplan, weniger Einrichtungen, keine gesetzliche Pflicht zu eigenem Sicherheitsdienst oder Rotkreuz-Pr&auml;senz &mdash; Sicherheitsdienst wird jedoch empfohlen &mdash; dazu ein Notfallmanagementplan und die Benachrichtigung der umliegenden Rettungsdienste). Die Kostensch&auml;tzung f&uuml;r die minimal tragf&auml;hige Ausstattung l&auml;uft; Ziel ist, dass ein kleines Event sich selbst tr&auml;gt. Posten, die auch dem Haupt-Event dienen (z. B. der Selbstschutzplan), k&ouml;nnen sinnvollerweise Ausgaben der NCA sein.</li>
+                            <li><strong>Dringend:</strong> Das Dokument mit den m&ouml;glichen Terminoptionen muss bis <strong>Mittwoch, 5. August</strong> an die Regionalbeh&ouml;rde gehen (die zust&auml;ndige Kontaktperson ist danach abwesend); eine Antwort wird etwa Ende September/Oktober erwartet. Das aktuelle Termindokument enth&auml;lt zu viele Optionen &mdash; es muss auf etwa drei Zeitfenster eingegrenzt werden, da breitere Zeitr&auml;ume l&auml;nger zu pr&uuml;fen sind.</li>
+                            <li>Zu Brutzeiten und anderen Umweltauflagen: Es liegt kein Bericht vor, mit dem gearbeitet werden k&ouml;nnte. Terminoptionen werden eingereicht und von der Beh&ouml;rde &uuml;ber mehrere Institutionen hinweg gepr&uuml;ft (gesch&uuml;tzte V&ouml;gel, Regen, St&uuml;rme); die Antwort kommt als Ja/Nein pro Option zur&uuml;ck.</li>
+                        </ul>
+
+                        <h2>7. Mitgliederregister</h2>
+                        <ul>
+                            <li>Ben D berichtete, dass der Abgleich des Registers im Wesentlichen abgeschlossen und bereit ist.</li>
+                            <li>Die Generalversammlung kann breit angek&uuml;ndigt werden (nicht nur an aktuelle Mitglieder): Personen, deren Antr&auml;ge nach der Einberufung der Versammlung genehmigt werden, k&ouml;nnen trotzdem teilnehmen, sodass die Ank&uuml;ndigung zugleich als Aufruf zur Mitgliedschaft dient.</li>
+                            <li>Die Mitgliedschaftskriterien sollten sichtbarer sein: Ben D hat eine Anfrage an Peter D gestellt, den Kriterientext in die Antragsmaske in Humans aufzunehmen; die Kriterien stehen auch in den FAQ der Website.</li>
+                        </ul>
+
+                        <h2>8. Wahl des Vocal</h2>
+                        <ul>
+                            <li>Victor P berichtete, dass die Spezifikation f&uuml;r die Wahl des Vocal (Vorstandsmitglied) nach Durchsicht durch Daniel T und Ben D fertig ist &mdash; siehe die <a href="https://docs.google.com/document/d/1VKIRHpNplBOnx5o4Sc4CNwJsElrC36fIw-MDEY-2JN4/edit?tab=t.0" target="_blank" rel="noopener">Stellenbeschreibung f&uuml;r die Vocal-Rolle</a>. Besprochene Verbreitungskan&auml;le: Discord (Governance-Kanal), WhatsApp, Telegram und der Updates-Kanal, um den Kandidatenpool zu maximieren.</li>
+                        </ul>
+
+                        <h2>9. Generalversammlung &mdash; Termin auf den 17. September verlegt</h2>
+                        <ul>
+                            <li>Chris O legte seine Vorbehalte gegen den Termin am 3. September in einem <a href="https://docs.google.com/document/d/1iJ8FKiT-LXMHMrzURqXL5f3ntiRvvz3U9NOtMUQTaj4/edit?tab=t.0" target="_blank" rel="noopener">schriftlichen Dokument</a> dar: Die Terminentscheidung sollte angesichts ihrer Tragweite nicht &uuml;berst&uuml;rzt werden &mdash; eine Terminverschiebung k&ouml;nnte bedeuten, dass manche Mitglieder nie wieder teilnehmen k&ouml;nnen; das kommerzielle Risiko ist real (ein schlecht gew&auml;hlter Termin k&ouml;nnte die Teilnehmerzahl unter die Tragf&auml;higkeitsgrenze dr&uuml;cken); solide R&uuml;ckmeldungen von anderen europ&auml;ischen Burns einzuholen dauert l&auml;nger als zwei Wochen; und der Druck der aktuellen Waldbrand-Schlagzeilen ist kein guter Entscheidungstreiber. Er stellte klar, dass er <em>nicht</em> gegen eine &Auml;nderung der Event-Termine argumentiert &mdash; sie beizubehalten erscheint zu riskant &mdash; sondern nur gegen eine Entscheidung mit &uuml;berm&auml;&szlig;iger Geschwindigkeit.</li>
+                            <li>Daniel T beschrieb den bereits laufenden Arbeitsstrang: eine Vergleichstabelle anderer Burns und m&ouml;glicher Zeitfenster (vorl&auml;ufige Schreibtischrecherche, noch zu verifizieren), direkte Kontaktaufnahme mit anderen Burns, das Aufl&ouml;sen der Verwirrung dar&uuml;ber, warum eine Terminverschiebung &uuml;berhaupt zur Debatte steht, und eine Sitzung mit der Governance-Arbeitsgruppe, um das Informationspaket personell zu besetzen. Zeitdruck besteht auch in der anderen Richtung: Menschen blocken ihren Urlaub weit im Voraus und brauchen Sicherheit, um f&uuml;r das Event des n&auml;chsten Jahres zu planen.</li>
+                            <li>Daniela M S unterstrich das Risiko des <em>Nicht</em>-Verschiebens: Die Brandschutzgesetzgebung &auml;nderte sich im M&auml;rz dieses Jahres, drei Monate vor dem Event, und der Umfang der unsichtbaren Arbeit, die n&ouml;tig war, um dieses Jahr nicht vom Gel&auml;nde verwiesen zu werden, war enorm &mdash; Evakuierungspl&auml;ne lagen tats&auml;chlich bereit; die Drohung war nicht leer. Die Arbeit an einem Plan B (die diesj&auml;hrigen Vorkehrungen zu einem Standardverfahren zu machen) l&auml;uft, ist aber nicht garantiert.</li>
+                            <li>Festgehaltene Datenpunkte: Die Regionalbeh&ouml;rde und der B&uuml;rgermeister haben signalisiert, dass das Brandrisiko, das fr&uuml;her den Juli kennzeichnete, inzwischen f&uuml;r den Juni gilt; die Brandh&auml;ufigkeit im Fr&uuml;hsommer ist deutlich beherrschbarer als in der Hochsaison.</li>
+                            <li>Pablo V argumentierte daf&uuml;r, die Abstimmung abzuhalten, statt durch Nichtstun zu entscheiden: die bestm&ouml;glichen Informationen vorbereiten &mdash; und wenn die Informationen nicht ausreichen, k&ouml;nnen die Mitglieder dagegen stimmen, die Termine zu &auml;ndern. Andere europ&auml;ische Events haben ihre Termine mehrfach verschoben, ohne zusammenzubrechen.</li>
+                            <li><strong>Abstimmung:</strong> Der Vorstand stimmte daf&uuml;r, die Generalversammlung vom 3. September auf <strong>Donnerstag, 17. September 2026, 20:00 CEST</strong> zu verlegen. Einstimmig unter den eingeholten Stimmen &mdash; Daniel T, Peter D, Ben D, Victor P, Pablo V und Ward D (dessen Stimme nach einem Verbindungsabbruch eingeholt wurde). Die Tagesordnung wird am <strong>2. September</strong> festgelegt und wird die Frage der Event-Termine enthalten.</li>
+                            <li>Eine m&ouml;gliche Zusammenlegung mit dem Treffen aller Mitglieder (Mitte Oktober, Name und Format in Diskussion) wurde angesprochen; ob dieses Treffen verschoben oder zusammengelegt wird, entscheiden die Koordinatorinnen und Koordinatoren &mdash; der Termin am 17. September steht in jedem Fall. Die Sicht des Vorstands: Wie die Community ihre Zusammenk&uuml;nfte nennt, ist keine Vorstandsentscheidung; der Begriff der Satzung f&uuml;r diese Versammlung ist Generalversammlung.</li>
+                        </ul>
+
+                        <h2>10. Sonstiges</h2>
+                        <ul>
+                            <li><strong>Genehmigung von asociados:</strong> Da vor der Generalversammlung mit mehr Mitgliedsantr&auml;gen zu rechnen ist, sollten Vorstandsmitglieder regelm&auml;&szlig;ig das Humans-Dashboard pr&uuml;fen und abstimmen &mdash; f&uuml;r die Bearbeitung jedes Antrags sind 50 % des Vorstands n&ouml;tig. Ben D wird weiterhin Erinnerungen auf Discord posten.</li>
+                            <li><strong>Themenverfolgung des Vorstands:</strong> Pablo V hat die nachverfolgten Follow-up-Threads des Vorstands (administrative und rechtliche Nachverfolgungen, Rekrutierung, Haftungsthemen) aufger&auml;umt und wieder ge&ouml;ffnet, damit sie nicht in der allgemeinen Diskussion verloren gehen; Updates asynchron, mit Kontext f&uuml;r die Vorstandssitzungen.</li>
+                            <li><strong>Sitzungsrhythmus:</strong> Keine Vorstandssitzung an diesem Donnerstag, sofern niemand eine einberuft; ob der Community-Call dieser Woche stattfindet, wird auf Discord entschieden (wahrscheinlich nicht, da das Treffen der Koordinatorinnen und Koordinatoren n&auml;chste Woche stattfindet). Der Kommunikationsplan zur Ank&uuml;ndigung des neuen Termins der Generalversammlung ist noch abzustimmen.</li>
+                        </ul>
+
+                        <h2>Aufgaben</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Aufgabe</th><th>F&auml;llig</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Die ausstehenden Zahlungen abwickeln</td><td>Sofort</td></tr>
+                                <tr><td>Daniel T</td><td>Arbeitsstrang zu den Terminen fortf&uuml;hren: Kontaktaufnahme mit anderen Burns, verifizierte Daten, Sitzung der Governance-Arbeitsgruppe; Helfer rekrutieren</td><td>Diese Woche</td></tr>
+                                <tr><td>Daniel T (mit Daniela M S)</td><td>Die m&ouml;glichen Terminfenster f&uuml;r die Einreichung bei der Beh&ouml;rde auf ca. 3 eingrenzen</td><td>Bis Mittwoch, 5. Aug.</td></tr>
+                                <tr><td>Daniela M S</td><td>Das Dokument mit den Terminoptionen an die Regionalbeh&ouml;rde senden</td><td>Mittwoch, 5. Aug.</td></tr>
+                                <tr><td>Daniela M S</td><td>Die minimal tragf&auml;hige Ausstattung f&uuml;r ein kleines Event kalkulieren</td><td>N&auml;chste Wochen</td></tr>
+                                <tr><td>Peter D</td><td>Spesenabrechnungen einfordern (inkl. K&uuml;nstler), danach Abteilungspr&uuml;fung und Abgleich</td><td>Laufend, Priorit&auml;t</td></tr>
+                                <tr><td>Peter D</td><td>Mitgliedschaftskriterien in die Antragsmaske in Humans aufnehmen</td><td>Sobald m&ouml;glich</td></tr>
+                                <tr><td>Peter D / Pablo V</td><td>Gro&szlig;e Gel&auml;nde-Kostenposten (Miete, Steuern, Toiletten) f&uuml;r die Modellierung des neuen Gel&auml;ndes beziffern</td><td>Vor dem vollst&auml;ndigen Budget</td></tr>
+                                <tr><td>Pablo V</td><td>Machbarkeitspr&uuml;fung fortf&uuml;hren: Grundst&uuml;ckspreise, Genehmigungen, Kaufstrukturierung mit Rechtsbeistand</td><td>Laufend</td></tr>
+                                <tr><td>Ben D</td><td>Follow-up-E-Mail zu den Mitgliedschaftskriterien; weiterhin Erinnerungen zu Genehmigungen posten</td><td>Diese Woche</td></tr>
+                                <tr><td>Victor P</td><td>Den Aufruf zur Wahl des Vocal &uuml;ber die vereinbarten Kan&auml;le ver&ouml;ffentlichen</td><td>Diese Woche</td></tr>
+                                <tr><td>Vorstand</td><td>Regelm&auml;&szlig;ig in Humans &uuml;ber asociado-Antr&auml;ge abstimmen</td><td>Laufend</td></tr>
+                                <tr><td>Vorstand</td><td>Rhythmus der Community-Calls auf Discord entscheiden</td><td>Diese Woche</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h2>N&auml;chste Treffen</h2>
+                        <ul>
+                            <li>Vorstandssitzung n&auml;chsten Montag &mdash; Hauptthema: die Schnittstelle zwischen NCA und der Initiative f&uuml;r das neue Gel&auml;nde sowie die Frage des kleinen Events.</li>
+                            <li>Treffen der Koordinatorinnen und Koordinatoren n&auml;chste Woche.</li>
+                            <li><strong>Generalversammlung: Donnerstag, 17. September 2026, 20:00 CEST</strong> (Tagesordnung wird am 2. September festgelegt).</li>
+                        </ul>
+
+                        <p><em>Protokoll erstellt auf Grundlage der Sitzungsaufzeichnung und des Transkripts. F&uuml;r die Ver&ouml;ffentlichung bereinigt.</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>
