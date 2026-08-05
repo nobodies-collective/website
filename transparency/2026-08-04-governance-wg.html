@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+
+    <title>Governance Working Group - Second Meeting - August 4, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .resource-links { background: var(--color-bg-secondary); padding: 1.25rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .resource-links h3 { margin: 0 0 0.75rem 0; font-size: 1rem; }
+        .resource-links ul { list-style: none; padding: 0; margin: 0; }
+        .resource-links li { margin-bottom: 0.5rem; }
+        .resource-links a { color: var(--color-accent); font-weight: 500; }
+        .resource-links a:hover { text-decoration: underline; }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>Governance Working Group &mdash; Second Meeting</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Tuesday 4 August 2026, video call</span>
+                    </div>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>Present (video call):</strong> Celine V (facilitator), Daniel T, Kate B, Anna T, Chris O, Ben D, Peter K, Julian (joined towards the end)
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Full Records</h3>
+                        <ul>
+                            <li><a href="2026-08-04-governance-wg-transcript.html">Full transcript (English only)</a> &mdash; published with the consent of the participants, as agreed at the end of the meeting</li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>The second meeting of the informal Governance Working Group, with three new participants joining the five from the first meeting. The group remains informal &mdash; no binding decisions were taken &mdash; but the central outcome of the evening was a concrete path to change that: a proposal will be drafted asking the board to formally establish the working group.</p>
+
+                        <h2>1. Mandate and Legitimacy, Revisited</h2>
+                        <p>Anna T reopened the question of what this group actually is. Daniel T summarised his reading, shared in writing beforehand: this is simply a working group that anyone may form &mdash; the statutes already provide baseline governance (members can call a General Assembly if defined criteria are met, the board must then schedule it within thirty days, and members can add agenda items), so a group needs no special mandate merely to meet, discuss, and propose. Kate B offered a different reading of the statutes &mdash; the board appears to have discretion to establish groups, appoint their members, and disband them &mdash; and volunteered to double-check. Peter K, a director of the community&rsquo;s former structures, urged the group not to over-worry about legitimacy, and described his motivation for joining: many long-standing community members, including leads, are not yet aware of how the new association works or that they hold a vote, and he wants to be an ambassador for the new structure.</p>
+
+                        <h2>2. Formalising the Group: a Proposal to the Board</h2>
+                        <p>The discussion converged on formalisation. Ben D argued the delegation of power is clear &mdash; the board exercises executive power on behalf of the General Assembly that elected it &mdash; and pushed for doing it &ldquo;simple and fast&rdquo;: a motion at a board meeting to formally establish the governance working group, stating its purposes and a mechanism for membership. Chris O, initially of the view that the group is &ldquo;just members having a chat&rdquo;, came to support formalisation on legitimacy grounds: apart from a petition of twenty percent of members, only the board can put items on the General Assembly&rsquo;s agenda, and proposals carry more weight coming from a board-mandated group than from &ldquo;a random group of people&rdquo;. <strong>Agreed:</strong> Kate B and Anna T &mdash; deliberately not board members, after Daniel T flagged the conflict in a board member drafting a proposal for the board &mdash; will draft it, with input from Julian, who contributed to the group&rsquo;s early work.</p>
+
+                        <h2>3. Open vs Private Channels, Continued</h2>
+                        <p>The first meeting&rsquo;s disagreement about working in the open resurfaced &mdash; &ldquo;governance of the governance working group&rdquo;, as Daniel T put it, &ldquo;turtles all the way down&rdquo;. Kate B argued that demanding all communication happen in public channels would stop work getting done, and proposed separating principles from regulation: commit to transparency at the level of principles &mdash; including publishing minutes and transcripts of all meetings &mdash; without policing where people talk while working. The group agreed the communication and transparency approach will be stated openly as part of the proposal to the board, where the board can push back on it.</p>
+
+                        <h2>4. General Assembly Planning</h2>
+                        <p>Daniel T reported that the board had passed a motion the previous day moving the first General Assembly from 3 to 17 September. The group discussed scope: Chris O argued the first, virtual GA should stay focused &mdash; &ldquo;it&rsquo;s not the kitchen sink&rdquo; &mdash; centred on the event-dates decision, which also serves as a test of the machinery; bigger questions can wait for a later in-person assembly. Kate B raised the wider cadence question: GAs are costly for volunteers to prepare and attend, so what belongs in a GA by law, what is high-stakes enough to be added, and what could be decided by other mechanisms the association could give itself in its internal regulations? Daniel T argued, from the Swiss model, that frequent voting is healthy when materials are well prepared &mdash; a body that has no opportunity to make decisions is not actually in control. Anna T noted the right frequency depends heavily on how large the membership becomes. No decision was needed; these threads feed the governance framework work.</p>
+
+                        <h2>5. The Information Pack</h2>
+                        <p>For the September GA, the group discussed preparing a Swiss-style voting booklet: a clear, digestible handout per decision &mdash; what is being voted on, the case for, the case against &mdash; so that members can make an informed decision without spending hours in the conversation. Celine V and Daniel T will co-lead. Daniel T asked for help with the time-consuming parts: contacting other burn events about how a date change would affect them (also an opportunity to build visibility for the event), replacing the current rough fire-risk assessment with more rigorous data, and formatting the booklet itself. The board sets the GA agenda roughly fifteen days before it takes place.</p>
+
+                        <h2>6. Voting Mechanism</h2>
+                        <p>For the dates vote, ranked voting with the option to reject all choices &mdash; the mechanism used for the board election &mdash; was seen by Daniel T as the obvious fit, since no single date may win a majority outright. Chris O proposed the longer-term shape: the working group, through the board, proposes a &ldquo;run book&rdquo; of defined voting mechanisms and when each applies, which the General Assembly ratifies &mdash; ideally becoming routine culture rather than a per-meeting debate. To be developed with input via the open governance channel.</p>
+
+                        <h2>7. Meeting Cadence, Openness, and Membership</h2>
+                        <p>The group agreed to meet every two weeks, with scheduling by poll in the open governance channel &mdash; not only the group&rsquo;s WhatsApp chat &mdash; so the community can see meetings are happening. Anna T pushed for a clearer public announcement and invitation: the group&rsquo;s formation was announced at the community call, but this meeting itself was only findable by inference, and an explicit &ldquo;this is happening, here&rsquo;s when we meet&rdquo; post would build trust. Daniel T argued that announced, joinable meetings create legitimacy even in disagreement &mdash; a decision made in a meeting anyone could have joined is defensible in a way a closed-door decision is not. Kate B raised the tension between an open update meeting and a working meeting &mdash; constant onboarding has a cost &mdash; and the related question of who is actually accountable for the group&rsquo;s work; Celine V will frame the invitation accordingly: contributors welcome, with an expectation of taking on work.</p>
+
+                        <h2>8. Roles and Skills</h2>
+                        <p>Chris O suggested light, dynamic roles &mdash; facilitation, research, community communication, finance &mdash; so the group knows who is accountable for what and what is missing as it grows; Julian brings experience with financial processes in general assemblies. Daniel T and Julian favoured a reactive approach: start working, identify real gaps, then make specific calls to the community for missing skills rather than creating formal roles up front. Celine V will compile an inventory of members&rsquo; names, interests, and skills as a starting point, to be reflected on next time. Daniel T also clarified the legal-support situation: the association has a retained Spanish law firm and volunteer counsel, with realistic expectations about response times &mdash; quick answers come AI-assisted and verified by counsel, formally important matters go to the firm.</p>
+
+                        <h2>9. Next Steps</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Action</th><th>Due</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Kate B, Anna T (with Julian)</td><td>Draft the proposal to the board to formally establish the working group &mdash; purposes, membership mechanism, communication and transparency principles; Kate double-checks the statutes</td><td>Next meeting</td></tr>
+                                <tr><td>Daniel T</td><td>Raise alignment on the working group at the next board meeting; share Peter&rsquo;s contact details with the group</td><td>This week</td></tr>
+                                <tr><td>Celine V &amp; Daniel T</td><td>Co-lead the GA information pack; put out calls for help: contacting other burns, rigorous fire-risk data, booklet preparation</td><td>Before the agenda is set (&sim;3 September)</td></tr>
+                                <tr><td>Celine V</td><td>Post the scheduling poll and invitation in the open governance channel; compile the skills inventory; complete the WhatsApp group</td><td>This week</td></tr>
+                                <tr><td>All</td><td>Bi-weekly meetings agreed; asynchronous feedback on drafts</td><td>Ongoing</td></tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Next meeting:</strong> in two weeks, date to be set by poll in the governance channel.</p>
+
+                        <p><em>Minutes prepared from a recording. The full transcript, lightly edited for readability (filler words and false starts removed, wording unchanged), is published alongside these minutes with the consent of the participants, as agreed at the end of the meeting.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Presentes (videollamada):</strong> Celine V (facilitadora), Daniel T, Kate B, Anna T, Chris O, Ben D, Peter K, Julian (se uni&oacute; hacia el final)
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Registros Completos</h3>
+                        <ul>
+                            <li><a href="2026-08-04-governance-wg-transcript.html">Transcripci&oacute;n completa (solo en ingl&eacute;s)</a> &mdash; publicada con el consentimiento de las personas participantes, acordado al final de la reuni&oacute;n</li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Segunda reuni&oacute;n del grupo de trabajo informal de gobernanza, con tres nuevas personas participantes junto a las cinco de la primera reuni&oacute;n. El grupo sigue siendo informal &mdash; no se tomaron decisiones vinculantes &mdash; pero el resultado central de la noche fue un camino concreto para cambiar eso: se redactar&aacute; una propuesta pidiendo a la junta que establezca formalmente el grupo de trabajo.</p>
+
+                        <h2>1. Mandato y Legitimidad, Revisitados</h2>
+                        <p>Anna T reabri&oacute; la pregunta de qu&eacute; es realmente este grupo. Daniel T resumi&oacute; su lectura, compartida antes por escrito: se trata simplemente de un grupo de trabajo que cualquiera puede formar &mdash; los estatutos ya proporcionan una gobernanza de base (los miembros pueden convocar una Asamblea General si se cumplen los criterios definidos, la junta debe programarla en un plazo de treinta d&iacute;as, y los miembros pueden a&ntilde;adir puntos al orden del d&iacute;a), as&iacute; que un grupo no necesita ning&uacute;n mandato especial para reunirse, debatir y proponer. Kate B ofreci&oacute; una lectura distinta de los estatutos &mdash; la junta parece tener discrecionalidad para establecer grupos, nombrar a sus miembros y disolverlos &mdash; y se ofreci&oacute; a verificarlo. Peter K, director de las estructuras anteriores de la comunidad, anim&oacute; al grupo a no preocuparse en exceso por la legitimidad, y describi&oacute; su motivaci&oacute;n para unirse: muchos miembros veteranos de la comunidad, incluidos leads, a&uacute;n no saben c&oacute;mo funciona la nueva asociaci&oacute;n ni que tienen voto, y &eacute;l quiere ser embajador de la nueva estructura.</p>
+
+                        <h2>2. Formalizar el Grupo: una Propuesta a la Junta</h2>
+                        <p>La discusi&oacute;n convergi&oacute; en la formalizaci&oacute;n. Ben D argument&oacute; que la delegaci&oacute;n de poder es clara &mdash; la junta ejerce el poder ejecutivo en nombre de la Asamblea General que la eligi&oacute; &mdash; y abog&oacute; por hacerlo &laquo;simple y r&aacute;pido&raquo;: una moci&oacute;n en una reuni&oacute;n de la junta para establecer formalmente el grupo de trabajo de gobernanza, indicando sus prop&oacute;sitos y un mecanismo de pertenencia. Chris O, que inicialmente ve&iacute;a al grupo como &laquo;simples miembros charlando&raquo;, pas&oacute; a apoyar la formalizaci&oacute;n por razones de legitimidad: aparte de una petici&oacute;n del veinte por ciento de los miembros, solo la junta puede poner puntos en el orden del d&iacute;a de la Asamblea General, y las propuestas tienen m&aacute;s peso viniendo de un grupo con mandato de la junta que de &laquo;un grupo aleatorio de personas&raquo;. <strong>Acordado:</strong> Kate B y Anna T &mdash; deliberadamente no miembros de la junta, despu&eacute;s de que Daniel T se&ntilde;alara el conflicto de que un miembro de la junta redacte una propuesta para la junta &mdash; la redactar&aacute;n, con aportaciones de Julian, que contribuy&oacute; al trabajo inicial del grupo.</p>
+
+                        <h2>3. Canales Abiertos o Privados, Continuaci&oacute;n</h2>
+                        <p>Reapareci&oacute; el desacuerdo de la primera reuni&oacute;n sobre trabajar en abierto &mdash; &laquo;la gobernanza del grupo de trabajo de gobernanza&raquo;, como dijo Daniel T, &laquo;tortugas hasta el fondo&raquo;. Kate B argument&oacute; que exigir que toda la comunicaci&oacute;n ocurra en canales p&uacute;blicos impedir&iacute;a trabajar, y propuso separar principios de regulaci&oacute;n: comprometerse con la transparencia al nivel de los principios &mdash; incluida la publicaci&oacute;n de actas y transcripciones de todas las reuniones &mdash; sin vigilar d&oacute;nde habla la gente mientras trabaja. El grupo acord&oacute; que el enfoque de comunicaci&oacute;n y transparencia se declarar&aacute; abiertamente como parte de la propuesta a la junta, donde la junta podr&aacute; objetarlo.</p>
+
+                        <h2>4. Planificaci&oacute;n de la Asamblea General</h2>
+                        <p>Daniel T inform&oacute; de que la junta hab&iacute;a aprobado el d&iacute;a anterior una moci&oacute;n trasladando la primera Asamblea General del 3 al 17 de septiembre. El grupo debati&oacute; el alcance: Chris O defendi&oacute; que la primera AG, virtual, se mantenga enfocada &mdash; &laquo;no es el caj&oacute;n de sastre&raquo; &mdash; centrada en la decisi&oacute;n sobre las fechas del evento, que sirve adem&aacute;s como prueba de la maquinaria; las cuestiones mayores pueden esperar a una asamblea presencial posterior. Kate B plante&oacute; la cuesti&oacute;n m&aacute;s amplia de la cadencia: las AG son costosas de preparar y atender para personas voluntarias, as&iacute; que &iquest;qu&eacute; corresponde por ley a una AG, qu&eacute; es lo bastante importante como para a&ntilde;adirse, y qu&eacute; podr&iacute;a decidirse mediante otros mecanismos que la asociaci&oacute;n podr&iacute;a darse en su reglamento interno? Daniel T argument&oacute;, desde el modelo suizo, que votar con frecuencia es sano cuando los materiales est&aacute;n bien preparados &mdash; un &oacute;rgano que no tiene la oportunidad de decidir no est&aacute; realmente en control. Anna T se&ntilde;al&oacute; que la frecuencia adecuada depende mucho de cu&aacute;n grande llegue a ser la membres&iacute;a. No hac&iacute;a falta decidir; estos hilos alimentan el trabajo del marco de gobernanza.</p>
+
+                        <h2>5. El Dosier Informativo</h2>
+                        <p>Para la AG de septiembre, el grupo habl&oacute; de preparar un folleto de votaci&oacute;n al estilo suizo: un documento claro y digerible por decisi&oacute;n &mdash; qu&eacute; se vota, los argumentos a favor, los argumentos en contra &mdash; para que los miembros puedan decidir informados sin pasar horas en la conversaci&oacute;n. Celine V y Daniel T lo co-liderar&aacute;n. Daniel T pidi&oacute; ayuda con las partes que consumen m&aacute;s tiempo: contactar con otros eventos burn sobre c&oacute;mo les afectar&iacute;a un cambio de fechas (tambi&eacute;n una oportunidad para dar visibilidad al evento), sustituir la actual evaluaci&oacute;n aproximada del riesgo de incendios por datos m&aacute;s rigurosos, y dar formato al propio folleto. La junta fija el orden del d&iacute;a de la AG unos quince d&iacute;as antes de su celebraci&oacute;n.</p>
+
+                        <h2>6. Mecanismo de Votaci&oacute;n</h2>
+                        <p>Para la votaci&oacute;n de fechas, la votaci&oacute;n por orden de preferencia con opci&oacute;n de rechazar todas las opciones &mdash; el mecanismo usado para la elecci&oacute;n de la junta &mdash; le pareci&oacute; a Daniel T la opci&oacute;n obvia, ya que puede que ninguna fecha gane la mayor&iacute;a directamente. Chris O propuso la forma a largo plazo: el grupo de trabajo, a trav&eacute;s de la junta, propone un &laquo;manual&raquo; de mecanismos de votaci&oacute;n definidos y cu&aacute;ndo se aplica cada uno, que la Asamblea General ratifica &mdash; idealmente convirti&eacute;ndose en cultura rutinaria en lugar de un debate por reuni&oacute;n. A desarrollar con aportaciones a trav&eacute;s del canal abierto de gobernanza.</p>
+
+                        <h2>7. Cadencia, Apertura y Pertenencia</h2>
+                        <p>El grupo acord&oacute; reunirse cada dos semanas, con programaci&oacute;n por encuesta en el canal abierto de gobernanza &mdash; no solo en el chat de WhatsApp del grupo &mdash; para que la comunidad vea que las reuniones ocurren. Anna T reclam&oacute; un anuncio e invitaci&oacute;n p&uacute;blicos m&aacute;s claros: la formaci&oacute;n del grupo se anunci&oacute; en la llamada comunitaria, pero esta reuni&oacute;n solo pod&iacute;a encontrarse por inferencia, y una publicaci&oacute;n expl&iacute;cita de &laquo;esto est&aacute; pasando, aqu&iacute; nos reunimos&raquo; generar&iacute;a confianza. Daniel T argument&oacute; que las reuniones anunciadas y abiertas crean legitimidad incluso en el desacuerdo &mdash; una decisi&oacute;n tomada en una reuni&oacute;n a la que cualquiera pod&iacute;a unirse es defendible de un modo en que una decisi&oacute;n a puerta cerrada no lo es. Kate B se&ntilde;al&oacute; la tensi&oacute;n entre una reuni&oacute;n abierta de actualizaci&oacute;n y una reuni&oacute;n de trabajo &mdash; el onboarding constante tiene un coste &mdash; y la pregunta relacionada de qui&eacute;n es realmente responsable del trabajo del grupo; Celine V formular&aacute; la invitaci&oacute;n en consecuencia: personas contribuidoras bienvenidas, con la expectativa de asumir trabajo.</p>
+
+                        <h2>8. Roles y Capacidades</h2>
+                        <p>Chris O sugiri&oacute; roles ligeros y din&aacute;micos &mdash; facilitaci&oacute;n, investigaci&oacute;n, comunicaci&oacute;n con la comunidad, finanzas &mdash; para que el grupo sepa qui&eacute;n responde de qu&eacute; y qu&eacute; falta a medida que crece; Julian aporta experiencia en procesos financieros de asambleas generales. Daniel T y Julian prefirieron un enfoque reactivo: empezar a trabajar, identificar las carencias reales, y entonces hacer llamamientos espec&iacute;ficos a la comunidad para las capacidades que falten, en lugar de crear roles formales de entrada. Celine V compilar&aacute; un inventario de nombres, intereses y capacidades de los miembros como punto de partida, para reflexionar la pr&oacute;xima vez. Daniel T aclar&oacute; adem&aacute;s la situaci&oacute;n del apoyo legal: la asociaci&oacute;n cuenta con un despacho espa&ntilde;ol contratado y con asesor&iacute;a voluntaria, con expectativas realistas sobre los tiempos de respuesta &mdash; las respuestas r&aacute;pidas llegan asistidas por IA y verificadas por asesores, y los asuntos formalmente importantes van al despacho.</p>
+
+                        <h2>9. Pr&oacute;ximos Pasos</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Acci&oacute;n</th><th>Plazo</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Kate B, Anna T (con Julian)</td><td>Redactar la propuesta a la junta para establecer formalmente el grupo de trabajo &mdash; prop&oacute;sitos, mecanismo de pertenencia, principios de comunicaci&oacute;n y transparencia; Kate verifica los estatutos</td><td>Pr&oacute;xima reuni&oacute;n</td></tr>
+                                <tr><td>Daniel T</td><td>Plantear la alineaci&oacute;n sobre el grupo de trabajo en la pr&oacute;xima reuni&oacute;n de la junta; compartir el contacto de Peter con el grupo</td><td>Esta semana</td></tr>
+                                <tr><td>Celine V y Daniel T</td><td>Co-liderar el dosier informativo de la AG; lanzar llamamientos de ayuda: contactar con otros burns, datos rigurosos de riesgo de incendios, preparaci&oacute;n del folleto</td><td>Antes de fijarse el orden del d&iacute;a (&sim;3 de septiembre)</td></tr>
+                                <tr><td>Celine V</td><td>Publicar la encuesta de programaci&oacute;n y la invitaci&oacute;n en el canal abierto de gobernanza; compilar el inventario de capacidades; completar el grupo de WhatsApp</td><td>Esta semana</td></tr>
+                                <tr><td>Todas las personas</td><td>Reuniones quincenales acordadas; feedback as&iacute;ncrono sobre los borradores</td><td>En curso</td></tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Pr&oacute;xima reuni&oacute;n:</strong> en dos semanas, fecha por determinar mediante encuesta en el canal de gobernanza.</p>
+
+                        <p><em>Actas elaboradas a partir de una grabaci&oacute;n. La transcripci&oacute;n completa, ligeramente editada para facilitar su lectura (se han eliminado muletillas y falsos comienzos, sin cambiar el contenido), se publica junto a estas actas con el consentimiento de las personas participantes, acordado al final de la reuni&oacute;n.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Pr&eacute;sents (visioconf&eacute;rence) :</strong> Celine V (facilitatrice), Daniel T, Kate B, Anna T, Chris O, Ben D, Peter K, Julian (arriv&eacute; vers la fin)
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Documents Complets</h3>
+                        <ul>
+                            <li><a href="2026-08-04-governance-wg-transcript.html">Transcription compl&egrave;te (en anglais uniquement)</a> &mdash; publi&eacute;e avec le consentement des participants, convenu &agrave; la fin de la r&eacute;union</li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Deuxi&egrave;me r&eacute;union du groupe de travail informel sur la gouvernance, avec trois nouveaux participants rejoignant les cinq de la premi&egrave;re r&eacute;union. Le groupe reste informel &mdash; aucune d&eacute;cision contraignante n&rsquo;a &eacute;t&eacute; prise &mdash; mais le r&eacute;sultat central de la soir&eacute;e a &eacute;t&eacute; un chemin concret pour changer cela : une proposition sera r&eacute;dig&eacute;e demandant au conseil d&rsquo;&eacute;tablir formellement le groupe de travail.</p>
+
+                        <h2>1. Mandat et L&eacute;gitimit&eacute;, Retour sur la Question</h2>
+                        <p>Anna T a rouvert la question de ce qu&rsquo;est r&eacute;ellement ce groupe. Daniel T a r&eacute;sum&eacute; sa lecture, partag&eacute;e par &eacute;crit au pr&eacute;alable : il s&rsquo;agit simplement d&rsquo;un groupe de travail que quiconque peut former &mdash; les statuts fournissent d&eacute;j&agrave; une gouvernance de base (les membres peuvent convoquer une Assembl&eacute;e G&eacute;n&eacute;rale si des crit&egrave;res d&eacute;finis sont remplis, le conseil doit alors la programmer sous trente jours, et les membres peuvent ajouter des points &agrave; l&rsquo;ordre du jour), donc un groupe n&rsquo;a besoin d&rsquo;aucun mandat particulier pour se r&eacute;unir, discuter et proposer. Kate B a propos&eacute; une lecture diff&eacute;rente des statuts &mdash; le conseil semble avoir le pouvoir discr&eacute;tionnaire d&rsquo;&eacute;tablir des groupes, d&rsquo;en nommer les membres et de les dissoudre &mdash; et s&rsquo;est port&eacute;e volontaire pour v&eacute;rifier. Peter K, directeur des anciennes structures de la communaut&eacute;, a encourag&eacute; le groupe &agrave; ne pas trop s&rsquo;inqui&eacute;ter de la l&eacute;gitimit&eacute;, et a d&eacute;crit sa motivation : de nombreux membres de longue date, y compris des leads, ne savent pas encore comment fonctionne la nouvelle association ni qu&rsquo;ils disposent d&rsquo;un vote, et il veut &ecirc;tre un ambassadeur de la nouvelle structure.</p>
+
+                        <h2>2. Formaliser le Groupe : une Proposition au Conseil</h2>
+                        <p>La discussion a converg&eacute; vers la formalisation. Ben D a soutenu que la d&eacute;l&eacute;gation de pouvoir est claire &mdash; le conseil exerce le pouvoir ex&eacute;cutif au nom de l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale qui l&rsquo;a &eacute;lu &mdash; et a plaid&eacute; pour faire &laquo; simple et rapide &raquo; : une motion lors d&rsquo;une r&eacute;union du conseil pour &eacute;tablir formellement le groupe de travail gouvernance, avec ses objectifs et un m&eacute;canisme d&rsquo;adh&eacute;sion. Chris O, d&rsquo;abord d&rsquo;avis que le groupe n&rsquo;&eacute;tait &laquo; que des membres en train de discuter &raquo;, a fini par soutenir la formalisation pour des raisons de l&eacute;gitimit&eacute; : hormis une p&eacute;tition de vingt pour cent des membres, seul le conseil peut inscrire des points &agrave; l&rsquo;ordre du jour de l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale, et des propositions ont plus de poids venant d&rsquo;un groupe mandat&eacute; par le conseil que d&rsquo;&laquo; un groupe de personnes au hasard &raquo;. <strong>Convenu :</strong> Kate B et Anna T &mdash; d&eacute;lib&eacute;r&eacute;ment non membres du conseil, apr&egrave;s que Daniel T a signal&eacute; le conflit qu&rsquo;il y aurait &agrave; ce qu&rsquo;un membre du conseil r&eacute;dige une proposition destin&eacute;e au conseil &mdash; la r&eacute;digeront, avec la contribution de Julian, qui a particip&eacute; aux premiers travaux du groupe.</p>
+
+                        <h2>3. Canaux Ouverts ou Priv&eacute;s, Suite</h2>
+                        <p>Le d&eacute;saccord de la premi&egrave;re r&eacute;union sur le travail en transparence est revenu &mdash; &laquo; la gouvernance du groupe de travail sur la gouvernance &raquo;, comme l&rsquo;a dit Daniel T, &laquo; des tortues jusqu&rsquo;en bas &raquo;. Kate B a soutenu qu&rsquo;exiger que toute communication passe par des canaux publics emp&ecirc;cherait le travail d&rsquo;avancer, et a propos&eacute; de s&eacute;parer principes et r&eacute;glementation : s&rsquo;engager &agrave; la transparence au niveau des principes &mdash; y compris la publication des comptes rendus et transcriptions de toutes les r&eacute;unions &mdash; sans surveiller o&ugrave; les gens parlent pendant qu&rsquo;ils travaillent. Le groupe a convenu que l&rsquo;approche de communication et de transparence sera &eacute;nonc&eacute;e ouvertement dans la proposition au conseil, o&ugrave; le conseil pourra y opposer des objections.</p>
+
+                        <h2>4. Planification de l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale</h2>
+                        <p>Daniel T a rapport&eacute; que le conseil avait adopt&eacute; la veille une motion d&eacute;pla&ccedil;ant la premi&egrave;re Assembl&eacute;e G&eacute;n&eacute;rale du 3 au 17 septembre. Le groupe a discut&eacute; du p&eacute;rim&egrave;tre : Chris O a soutenu que la premi&egrave;re AG, virtuelle, devait rester cibl&eacute;e &mdash; &laquo; ce n&rsquo;est pas le fourre-tout &raquo; &mdash; centr&eacute;e sur la d&eacute;cision des dates de l&rsquo;&eacute;v&eacute;nement, qui sert aussi de test du m&eacute;canisme ; les questions plus larges peuvent attendre une assembl&eacute;e ult&eacute;rieure en personne. Kate B a soulev&eacute; la question plus large de la cadence : les AG co&ucirc;tent cher en pr&eacute;paration et en pr&eacute;sence pour des b&eacute;n&eacute;voles &mdash; que doit-on par la loi d&eacute;cider en AG, qu&rsquo;est-ce qui est assez important pour y &ecirc;tre ajout&eacute;, et que pourrait-on d&eacute;cider par d&rsquo;autres m&eacute;canismes que l&rsquo;association pourrait se donner dans son r&egrave;glement int&eacute;rieur ? Daniel T a soutenu, en s&rsquo;appuyant sur le mod&egrave;le suisse, que voter fr&eacute;quemment est sain quand les documents sont bien pr&eacute;par&eacute;s &mdash; un organe qui n&rsquo;a pas l&rsquo;occasion de d&eacute;cider n&rsquo;est pas r&eacute;ellement aux commandes. Anna T a not&eacute; que la bonne fr&eacute;quence d&eacute;pend beaucoup de la taille que prendra la base de membres. Aucune d&eacute;cision n&rsquo;&eacute;tait n&eacute;cessaire ; ces fils alimentent le travail sur le cadre de gouvernance.</p>
+
+                        <h2>5. Le Dossier d&rsquo;Information</h2>
+                        <p>Pour l&rsquo;AG de septembre, le groupe a discut&eacute; de la pr&eacute;paration d&rsquo;un livret de vote &agrave; la suisse : un document clair et digeste par d&eacute;cision &mdash; ce qui est vot&eacute;, les arguments pour, les arguments contre &mdash; afin que les membres puissent d&eacute;cider en connaissance de cause sans passer des heures dans la conversation. Celine V et Daniel T co-piloteront. Daniel T a demand&eacute; de l&rsquo;aide pour les parties chronophages : contacter d&rsquo;autres burns sur l&rsquo;impact d&rsquo;un changement de dates (aussi une occasion de donner de la visibilit&eacute; &agrave; l&rsquo;&eacute;v&eacute;nement), remplacer l&rsquo;&eacute;valuation actuelle et approximative du risque d&rsquo;incendie par des donn&eacute;es plus rigoureuses, et mettre en forme le livret lui-m&ecirc;me. Le conseil fixe l&rsquo;ordre du jour de l&rsquo;AG environ quinze jours avant sa tenue.</p>
+
+                        <h2>6. M&eacute;canisme de Vote</h2>
+                        <p>Pour le vote des dates, le vote pr&eacute;f&eacute;rentiel avec option de rejeter tous les choix &mdash; le m&eacute;canisme utilis&eacute; pour l&rsquo;&eacute;lection du conseil &mdash; a sembl&eacute; &agrave; Daniel T le choix &eacute;vident, car aucune date ne remportera peut-&ecirc;tre la majorit&eacute; d&rsquo;embl&eacute;e. Chris O a propos&eacute; la forme &agrave; long terme : le groupe de travail, via le conseil, propose un &laquo; manuel &raquo; de m&eacute;canismes de vote d&eacute;finis et de leurs cas d&rsquo;application, que l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale ratifie &mdash; l&rsquo;id&eacute;al &eacute;tant que cela devienne une culture routini&egrave;re plut&ocirc;t qu&rsquo;un d&eacute;bat &agrave; chaque r&eacute;union. &Agrave; d&eacute;velopper avec les contributions du canal ouvert de gouvernance.</p>
+
+                        <h2>7. Cadence, Ouverture et Adh&eacute;sion</h2>
+                        <p>Le groupe a convenu de se r&eacute;unir toutes les deux semaines, la planification se faisant par sondage dans le canal ouvert de gouvernance &mdash; pas seulement dans le chat WhatsApp du groupe &mdash; pour que la communaut&eacute; voie que les r&eacute;unions ont lieu. Anna T a plaid&eacute; pour une annonce et une invitation publiques plus claires : la formation du groupe a &eacute;t&eacute; annonc&eacute;e lors de l&rsquo;appel communautaire, mais cette r&eacute;union-ci n&rsquo;&eacute;tait trouvable que par d&eacute;duction, et un message explicite &laquo; cela a lieu, voici quand nous nous r&eacute;unissons &raquo; construirait la confiance. Daniel T a soutenu que des r&eacute;unions annonc&eacute;es et ouvertes cr&eacute;ent de la l&eacute;gitimit&eacute; m&ecirc;me en cas de d&eacute;saccord &mdash; une d&eacute;cision prise dans une r&eacute;union que chacun aurait pu rejoindre est d&eacute;fendable d&rsquo;une mani&egrave;re qu&rsquo;une d&eacute;cision &agrave; huis clos ne l&rsquo;est pas. Kate B a soulev&eacute; la tension entre r&eacute;union d&rsquo;information ouverte et r&eacute;union de travail &mdash; l&rsquo;int&eacute;gration permanente de nouveaux venus a un co&ucirc;t &mdash; et la question connexe de qui est r&eacute;ellement responsable du travail du groupe ; Celine V formulera l&rsquo;invitation en cons&eacute;quence : contributeurs bienvenus, avec l&rsquo;attente de prendre en charge du travail.</p>
+
+                        <h2>8. R&ocirc;les et Comp&eacute;tences</h2>
+                        <p>Chris O a sugg&eacute;r&eacute; des r&ocirc;les l&eacute;gers et dynamiques &mdash; facilitation, recherche, communication communautaire, finances &mdash; pour que le groupe sache qui r&eacute;pond de quoi et ce qui manque &agrave; mesure qu&rsquo;il grandit ; Julian apporte une exp&eacute;rience des processus financiers en assembl&eacute;e g&eacute;n&eacute;rale. Daniel T et Julian ont pr&eacute;f&eacute;r&eacute; une approche r&eacute;active : commencer &agrave; travailler, identifier les vrais manques, puis lancer des appels sp&eacute;cifiques &agrave; la communaut&eacute; pour les comp&eacute;tences manquantes, plut&ocirc;t que de cr&eacute;er des r&ocirc;les formels d&rsquo;embl&eacute;e. Celine V compilera un inventaire des noms, int&eacute;r&ecirc;ts et comp&eacute;tences des membres comme point de d&eacute;part, &agrave; examiner la prochaine fois. Daniel T a aussi clarifi&eacute; la situation du soutien juridique : l&rsquo;association dispose d&rsquo;un cabinet espagnol sous contrat et d&rsquo;un conseil b&eacute;n&eacute;vole, avec des attentes r&eacute;alistes sur les d&eacute;lais de r&eacute;ponse &mdash; les r&eacute;ponses rapides sont assist&eacute;es par IA puis v&eacute;rifi&eacute;es par le conseil, les questions formellement importantes vont au cabinet.</p>
+
+                        <h2>9. Prochaines &Eacute;tapes</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Personne</th><th>Action</th><th>&Eacute;ch&eacute;ance</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Kate B, Anna T (avec Julian)</td><td>R&eacute;diger la proposition au conseil pour &eacute;tablir formellement le groupe de travail &mdash; objectifs, m&eacute;canisme d&rsquo;adh&eacute;sion, principes de communication et de transparence ; Kate v&eacute;rifie les statuts</td><td>Prochaine r&eacute;union</td></tr>
+                                <tr><td>Daniel T</td><td>Aborder l&rsquo;alignement sur le groupe de travail &agrave; la prochaine r&eacute;union du conseil ; partager les coordonn&eacute;es de Peter avec le groupe</td><td>Cette semaine</td></tr>
+                                <tr><td>Celine V &amp; Daniel T</td><td>Co-piloter le dossier d&rsquo;information de l&rsquo;AG ; lancer des appels &agrave; l&rsquo;aide : contacter les autres burns, donn&eacute;es rigoureuses sur le risque d&rsquo;incendie, pr&eacute;paration du livret</td><td>Avant la fixation de l&rsquo;ordre du jour (&sim;3 septembre)</td></tr>
+                                <tr><td>Celine V</td><td>Publier le sondage de planification et l&rsquo;invitation dans le canal ouvert de gouvernance ; compiler l&rsquo;inventaire des comp&eacute;tences ; compl&eacute;ter le groupe WhatsApp</td><td>Cette semaine</td></tr>
+                                <tr><td>Tous</td><td>R&eacute;unions bimensuelles convenues ; retours asynchrones sur les projets de documents</td><td>En continu</td></tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Prochaine r&eacute;union :</strong> dans deux semaines, date &agrave; fixer par sondage dans le canal gouvernance.</p>
+
+                        <p><em>Compte rendu &eacute;tabli &agrave; partir d&rsquo;un enregistrement. La transcription int&eacute;grale, l&eacute;g&egrave;rement &eacute;dit&eacute;e pour en faciliter la lecture (tics de langage et faux d&eacute;parts supprim&eacute;s, sans modification du contenu), est publi&eacute;e aux c&ocirc;t&eacute;s de ce compte rendu avec le consentement des participants, convenu &agrave; la fin de la r&eacute;union.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanze tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Presenti (videochiamata):</strong> Celine V (facilitatrice), Daniel T, Kate B, Anna T, Chris O, Ben D, Peter K, Julian (unitosi verso la fine)
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Documenti Completi</h3>
+                        <ul>
+                            <li><a href="2026-08-04-governance-wg-transcript.html">Trascrizione completa (solo in inglese)</a> &mdash; pubblicata con il consenso delle persone partecipanti, concordato alla fine della riunione</li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Seconda riunione del gruppo di lavoro informale sulla governance, con tre nuove persone partecipanti accanto alle cinque della prima riunione. Il gruppo resta informale &mdash; non sono state prese decisioni vincolanti &mdash; ma il risultato centrale della serata &egrave; stato un percorso concreto per cambiare questo stato di cose: verr&agrave; redatta una proposta che chiede al consiglio di istituire formalmente il gruppo di lavoro.</p>
+
+                        <h2>1. Mandato e Legittimit&agrave;, di Nuovo</h2>
+                        <p>Anna T ha riaperto la domanda su cosa sia davvero questo gruppo. Daniel T ha riassunto la propria lettura, condivisa prima per iscritto: si tratta semplicemente di un gruppo di lavoro che chiunque pu&ograve; formare &mdash; gli statuti forniscono gi&agrave; una governance di base (i membri possono convocare un&rsquo;Assemblea Generale se si soddisfano criteri definiti, il consiglio deve poi programmarla entro trenta giorni, e i membri possono aggiungere punti all&rsquo;ordine del giorno), quindi un gruppo non ha bisogno di alcun mandato speciale per riunirsi, discutere e proporre. Kate B ha offerto una lettura diversa degli statuti &mdash; il consiglio sembra avere la discrezionalit&agrave; di istituire gruppi, nominarne i membri e scioglierli &mdash; e si &egrave; offerta di verificare. Peter K, direttore delle strutture precedenti della comunit&agrave;, ha invitato il gruppo a non preoccuparsi troppo della legittimit&agrave;, e ha descritto la propria motivazione: molti membri di lunga data, inclusi dei lead, non sanno ancora come funziona la nuova associazione n&eacute; di avere un voto, e lui vuole fare da ambasciatore della nuova struttura.</p>
+
+                        <h2>2. Formalizzare il Gruppo: una Proposta al Consiglio</h2>
+                        <p>La discussione &egrave; convergita sulla formalizzazione. Ben D ha sostenuto che la delega di potere &egrave; chiara &mdash; il consiglio esercita il potere esecutivo per conto dell&rsquo;Assemblea Generale che lo ha eletto &mdash; e ha spinto per farlo &laquo;in modo semplice e veloce&raquo;: una mozione in una riunione del consiglio per istituire formalmente il gruppo di lavoro sulla governance, con i suoi scopi e un meccanismo di adesione. Chris O, inizialmente dell&rsquo;idea che il gruppo fosse &laquo;solo membri che chiacchierano&raquo;, &egrave; arrivato a sostenere la formalizzazione per ragioni di legittimit&agrave;: a parte una petizione del venti per cento dei membri, solo il consiglio pu&ograve; mettere punti all&rsquo;ordine del giorno dell&rsquo;Assemblea Generale, e le proposte hanno pi&ugrave; peso se vengono da un gruppo con mandato del consiglio che da &laquo;un gruppo casuale di persone&raquo;. <strong>Concordato:</strong> Kate B e Anna T &mdash; deliberatamente non membri del consiglio, dopo che Daniel T ha segnalato il conflitto nel far redigere a un membro del consiglio una proposta destinata al consiglio &mdash; la scriveranno, con il contributo di Julian, che ha partecipato ai primi lavori del gruppo.</p>
+
+                        <h2>3. Canali Aperti o Privati, Continua</h2>
+                        <p>&Egrave; riemerso il disaccordo della prima riunione sul lavorare in trasparenza &mdash; &laquo;la governance del gruppo di lavoro sulla governance&raquo;, come ha detto Daniel T, &laquo;tartarughe fino in fondo&raquo;. Kate B ha sostenuto che esigere che tutta la comunicazione avvenga in canali pubblici impedirebbe di lavorare, e ha proposto di separare i principi dalla regolamentazione: impegnarsi alla trasparenza a livello di principi &mdash; inclusa la pubblicazione di verbali e trascrizioni di tutte le riunioni &mdash; senza sorvegliare dove le persone parlano mentre lavorano. Il gruppo ha concordato che l&rsquo;approccio a comunicazione e trasparenza sar&agrave; dichiarato apertamente nella proposta al consiglio, dove il consiglio potr&agrave; obiettare.</p>
+
+                        <h2>4. Pianificazione dell&rsquo;Assemblea Generale</h2>
+                        <p>Daniel T ha riferito che il consiglio aveva approvato il giorno precedente una mozione che sposta la prima Assemblea Generale dal 3 al 17 settembre. Il gruppo ha discusso il perimetro: Chris O ha sostenuto che la prima AG, virtuale, resti focalizzata &mdash; &laquo;non &egrave; il calderone&raquo; &mdash; centrata sulla decisione delle date dell&rsquo;evento, che serve anche da test del meccanismo; le questioni pi&ugrave; grandi possono aspettare una successiva assemblea in presenza. Kate B ha posto la questione pi&ugrave; ampia della cadenza: le AG costano molto a volontarie e volontari in preparazione e presenza &mdash; cosa spetta per legge a un&rsquo;AG, cosa &egrave; abbastanza importante da aggiungervi, e cosa si potrebbe decidere con altri meccanismi che l&rsquo;associazione potrebbe darsi nel regolamento interno? Daniel T ha sostenuto, rifacendosi al modello svizzero, che votare spesso &egrave; sano quando i materiali sono ben preparati &mdash; un organo che non ha l&rsquo;opportunit&agrave; di decidere non &egrave; davvero al comando. Anna T ha osservato che la frequenza giusta dipende molto da quanto grande diventer&agrave; la base dei membri. Non serviva decidere; questi fili alimentano il lavoro sul quadro di governance.</p>
+
+                        <h2>5. Il Dossier Informativo</h2>
+                        <p>Per l&rsquo;AG di settembre, il gruppo ha discusso la preparazione di un libretto di voto in stile svizzero: un documento chiaro e digeribile per ogni decisione &mdash; cosa si vota, le ragioni a favore, le ragioni contro &mdash; cos&igrave; che i membri possano decidere informati senza passare ore nella conversazione. Celine V e Daniel T lo co-guideranno. Daniel T ha chiesto aiuto per le parti pi&ugrave; onerose: contattare altri eventi burn su come un cambio di date li impatterebbe (anche un&rsquo;occasione per dare visibilit&agrave; all&rsquo;evento), sostituire l&rsquo;attuale valutazione approssimativa del rischio incendi con dati pi&ugrave; rigorosi, e impaginare il libretto stesso. Il consiglio fissa l&rsquo;ordine del giorno dell&rsquo;AG circa quindici giorni prima del suo svolgimento.</p>
+
+                        <h2>6. Meccanismo di Voto</h2>
+                        <p>Per il voto sulle date, il voto per graduatoria con l&rsquo;opzione di respingere tutte le scelte &mdash; il meccanismo usato per l&rsquo;elezione del consiglio &mdash; &egrave; parso a Daniel T la scelta ovvia, dato che nessuna singola data potrebbe vincere subito la maggioranza. Chris O ha proposto la forma di lungo periodo: il gruppo di lavoro, tramite il consiglio, propone un &laquo;manuale operativo&raquo; di meccanismi di voto definiti e dei loro casi d&rsquo;uso, che l&rsquo;Assemblea Generale ratifica &mdash; l&rsquo;ideale &egrave; che diventi cultura di routine invece che un dibattito a ogni riunione. Da sviluppare con i contributi del canale aperto di governance.</p>
+
+                        <h2>7. Cadenza, Apertura e Adesione</h2>
+                        <p>Il gruppo ha concordato di riunirsi ogni due settimane, con la programmazione tramite sondaggio nel canale aperto di governance &mdash; non solo nella chat WhatsApp del gruppo &mdash; perch&eacute; la comunit&agrave; veda che le riunioni avvengono. Anna T ha chiesto un annuncio e un invito pubblici pi&ugrave; chiari: la formazione del gruppo &egrave; stata annunciata alla chiamata comunitaria, ma questa riunione era trovabile solo per deduzione, e un messaggio esplicito &laquo;sta succedendo, ecco quando ci riuniamo&raquo; costruirebbe fiducia. Daniel T ha sostenuto che riunioni annunciate e aperte creano legittimit&agrave; anche nel disaccordo &mdash; una decisione presa in una riunione a cui chiunque poteva unirsi &egrave; difendibile in un modo in cui una decisione a porte chiuse non lo &egrave;. Kate B ha sollevato la tensione tra riunione aperta di aggiornamento e riunione di lavoro &mdash; l&rsquo;onboarding continuo ha un costo &mdash; e la domanda collegata su chi sia davvero responsabile del lavoro del gruppo; Celine V formuler&agrave; l&rsquo;invito di conseguenza: benvenute le persone che contribuiscono, con l&rsquo;aspettativa di farsi carico di lavoro.</p>
+
+                        <h2>8. Ruoli e Competenze</h2>
+                        <p>Chris O ha suggerito ruoli leggeri e dinamici &mdash; facilitazione, ricerca, comunicazione con la comunit&agrave;, finanze &mdash; perch&eacute; il gruppo sappia chi risponde di cosa e cosa manca man mano che cresce; Julian porta esperienza nei processi finanziari delle assemblee generali. Daniel T e Julian hanno preferito un approccio reattivo: iniziare a lavorare, individuare le lacune reali, e poi fare appelli specifici alla comunit&agrave; per le competenze mancanti, invece di creare ruoli formali da subito. Celine V compiler&agrave; un inventario di nomi, interessi e competenze dei membri come punto di partenza, su cui riflettere la prossima volta. Daniel T ha inoltre chiarito la situazione del supporto legale: l&rsquo;associazione ha uno studio spagnolo incaricato e consulenza volontaria, con aspettative realistiche sui tempi di risposta &mdash; le risposte rapide arrivano assistite dall&rsquo;IA e verificate dai consulenti, le questioni formalmente importanti vanno allo studio.</p>
+
+                        <h2>9. Prossimi Passi</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Azione</th><th>Scadenza</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Kate B, Anna T (con Julian)</td><td>Redigere la proposta al consiglio per istituire formalmente il gruppo di lavoro &mdash; scopi, meccanismo di adesione, principi di comunicazione e trasparenza; Kate verifica gli statuti</td><td>Prossima riunione</td></tr>
+                                <tr><td>Daniel T</td><td>Portare l&rsquo;allineamento sul gruppo di lavoro alla prossima riunione del consiglio; condividere il contatto di Peter con il gruppo</td><td>Questa settimana</td></tr>
+                                <tr><td>Celine V &amp; Daniel T</td><td>Co-guidare il dossier informativo dell&rsquo;AG; lanciare richieste di aiuto: contattare altri burn, dati rigorosi sul rischio incendi, preparazione del libretto</td><td>Prima della definizione dell&rsquo;ordine del giorno (&sim;3 settembre)</td></tr>
+                                <tr><td>Celine V</td><td>Pubblicare il sondaggio di programmazione e l&rsquo;invito nel canale aperto di governance; compilare l&rsquo;inventario delle competenze; completare il gruppo WhatsApp</td><td>Questa settimana</td></tr>
+                                <tr><td>Tutti</td><td>Riunioni quindicinali concordate; riscontri asincroni sulle bozze</td><td>In corso</td></tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Prossima riunione:</strong> tra due settimane, data da definire tramite sondaggio nel canale governance.</p>
+
+                        <p><em>Verbale redatto a partire da una registrazione. La trascrizione integrale, leggermente rivista per facilitarne la lettura (intercalari e false partenze rimossi, senza modificare i contenuti), &egrave; pubblicata accanto a questo verbale con il consenso delle persone partecipanti, concordato alla fine della riunione.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Bei Diskrepanzen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesend (Videokonferenz):</strong> Celine V (Moderation), Daniel T, Kate B, Anna T, Chris O, Ben D, Peter K, Julian (kam gegen Ende dazu)
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Vollst&auml;ndige Aufzeichnungen</h3>
+                        <ul>
+                            <li><a href="2026-08-04-governance-wg-transcript.html">Vollst&auml;ndiges Transkript (nur auf Englisch)</a> &mdash; ver&ouml;ffentlicht mit Zustimmung der Teilnehmenden, wie am Ende der Sitzung vereinbart</li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Die zweite Sitzung der informellen Governance-Arbeitsgruppe, mit drei neuen Teilnehmenden zus&auml;tzlich zu den f&uuml;nf der ersten Sitzung. Die Gruppe bleibt informell &mdash; es wurden keine verbindlichen Beschl&uuml;sse gefasst &mdash; aber das zentrale Ergebnis des Abends war ein konkreter Weg, das zu &auml;ndern: Es wird ein Vorschlag ausgearbeitet, der den Vorstand bittet, die Arbeitsgruppe formell einzusetzen.</p>
+
+                        <h2>1. Mandat und Legitimit&auml;t, erneut betrachtet</h2>
+                        <p>Anna T stellte erneut die Frage, was diese Gruppe eigentlich ist. Daniel T fasste seine vorab schriftlich geteilte Lesart zusammen: Es handelt sich schlicht um eine Arbeitsgruppe, die jede und jeder bilden kann &mdash; die Statuten bieten bereits eine Basis-Governance (Mitglieder k&ouml;nnen eine Generalversammlung einberufen, wenn definierte Kriterien erf&uuml;llt sind, der Vorstand muss sie dann innerhalb von drei&szlig;ig Tagen ansetzen, und Mitglieder k&ouml;nnen Tagesordnungspunkte hinzuf&uuml;gen), also braucht eine Gruppe kein besonderes Mandat, um sich zu treffen, zu diskutieren und Vorschl&auml;ge zu machen. Kate B bot eine andere Lesart der Statuten an &mdash; der Vorstand scheint den Ermessensspielraum zu haben, Gruppen einzusetzen, ihre Mitglieder zu ernennen und sie aufzul&ouml;sen &mdash; und bot an, das zu pr&uuml;fen. Peter K, Direktor der fr&uuml;heren Strukturen der Community, riet der Gruppe, sich nicht zu sehr um Legitimit&auml;t zu sorgen, und beschrieb seine Motivation: Viele langj&auml;hrige Community-Mitglieder, auch Leads, wissen noch nicht, wie der neue Verein funktioniert oder dass sie eine Stimme haben, und er m&ouml;chte Botschafter der neuen Struktur sein.</p>
+
+                        <h2>2. Formalisierung der Gruppe: ein Vorschlag an den Vorstand</h2>
+                        <p>Die Diskussion lief auf die Formalisierung zu. Ben D argumentierte, die Delegation von Macht sei klar &mdash; der Vorstand &uuml;bt die Exekutivgewalt im Namen der Generalversammlung aus, die ihn gew&auml;hlt hat &mdash; und dr&auml;ngte auf &bdquo;einfach und schnell&ldquo;: einen Antrag in einer Vorstandssitzung, die Governance-Arbeitsgruppe formell einzusetzen, mit ihren Zwecken und einem Mechanismus f&uuml;r die Mitgliedschaft. Chris O, zun&auml;chst der Ansicht, die Gruppe sei &bdquo;nur Mitglieder, die sich unterhalten&ldquo;, unterst&uuml;tzte die Formalisierung schlie&szlig;lich aus Legitimit&auml;tsgr&uuml;nden: Abgesehen von einer Petition von zwanzig Prozent der Mitglieder kann nur der Vorstand Punkte auf die Tagesordnung der Generalversammlung setzen, und Vorschl&auml;ge haben mehr Gewicht, wenn sie von einer vom Vorstand mandatierten Gruppe kommen statt von &bdquo;einer zuf&auml;lligen Gruppe von Leuten&ldquo;. <strong>Vereinbart:</strong> Kate B und Anna T &mdash; bewusst keine Vorstandsmitglieder, nachdem Daniel T den Konflikt benannt hatte, wenn ein Vorstandsmitglied einen Vorschlag f&uuml;r den Vorstand entwirft &mdash; werden ihn ausarbeiten, mit Beitr&auml;gen von Julian, der an der fr&uuml;hen Arbeit der Gruppe mitgewirkt hat.</p>
+
+                        <h2>3. Offene oder private Kan&auml;le, Fortsetzung</h2>
+                        <p>Die Meinungsverschiedenheit der ersten Sitzung &uuml;ber offenes Arbeiten tauchte wieder auf &mdash; &bdquo;Governance der Governance-Arbeitsgruppe&ldquo;, wie Daniel T es nannte, &bdquo;Schildkr&ouml;ten bis ganz nach unten&ldquo;. Kate B argumentierte, die Forderung, s&auml;mtliche Kommunikation m&uuml;sse in &ouml;ffentlichen Kan&auml;len stattfinden, w&uuml;rde die Arbeit lahmlegen, und schlug vor, Prinzipien von Regulierung zu trennen: Verpflichtung zur Transparenz auf Prinzipien-Ebene &mdash; einschlie&szlig;lich der Ver&ouml;ffentlichung von Protokollen und Transkripten aller Sitzungen &mdash; ohne zu kontrollieren, wo Menschen sprechen, w&auml;hrend sie arbeiten. Die Gruppe vereinbarte, dass der Ansatz zu Kommunikation und Transparenz offen im Vorschlag an den Vorstand dargelegt wird, wo der Vorstand widersprechen kann.</p>
+
+                        <h2>4. Planung der Generalversammlung</h2>
+                        <p>Daniel T berichtete, dass der Vorstand am Vortag einen Antrag verabschiedet hatte, die erste Generalversammlung vom 3. auf den 17. September zu verschieben. Die Gruppe diskutierte den Umfang: Chris O argumentierte, die erste, virtuelle GV solle fokussiert bleiben &mdash; &bdquo;nicht alles auf einmal&ldquo; &mdash; zentriert auf die Entscheidung &uuml;ber die Veranstaltungsdaten, die zugleich als Test der Maschinerie dient; gr&ouml;&szlig;ere Fragen k&ouml;nnen auf eine sp&auml;tere Pr&auml;senzversammlung warten. Kate B stellte die breitere Frage der Kadenz: GVs sind f&uuml;r Freiwillige teuer in Vorbereitung und Teilnahme &mdash; was geh&ouml;rt per Gesetz in eine GV, was ist wichtig genug, um hinzugef&uuml;gt zu werden, und was k&ouml;nnte &uuml;ber andere Mechanismen entschieden werden, die sich der Verein in seiner internen Gesch&auml;ftsordnung geben k&ouml;nnte? Daniel T argumentierte nach dem Schweizer Modell, dass h&auml;ufiges Abstimmen gesund ist, wenn die Unterlagen gut aufbereitet sind &mdash; ein Organ, das keine Gelegenheit hat zu entscheiden, hat nicht wirklich die Kontrolle. Anna T merkte an, die richtige Frequenz h&auml;nge stark davon ab, wie gro&szlig; die Mitgliedschaft wird. Eine Entscheidung war nicht n&ouml;tig; diese F&auml;den flie&szlig;en in die Arbeit am Governance-Rahmen ein.</p>
+
+                        <h2>5. Das Informationspaket</h2>
+                        <p>F&uuml;r die September-GV diskutierte die Gruppe ein Abstimmungsb&uuml;chlein nach Schweizer Vorbild: ein klares, verdauliches Handout pro Entscheidung &mdash; was zur Abstimmung steht, die Argumente daf&uuml;r, die Argumente dagegen &mdash; damit Mitglieder informiert entscheiden k&ouml;nnen, ohne Stunden in der Diskussion zu verbringen. Celine V und Daniel T &uuml;bernehmen gemeinsam die Leitung. Daniel T bat um Hilfe bei den zeitaufwendigen Teilen: andere Burn-Events kontaktieren, wie eine Datums&auml;nderung sie betreffen w&uuml;rde (zugleich eine Gelegenheit, die Sichtbarkeit der Veranstaltung zu erh&ouml;hen), die derzeit grobe Brandrisiko-Einsch&auml;tzung durch belastbarere Daten ersetzen, und das B&uuml;chlein selbst gestalten. Der Vorstand legt die GV-Tagesordnung etwa f&uuml;nfzehn Tage vor dem Termin fest.</p>
+
+                        <h2>6. Abstimmungsmechanismus</h2>
+                        <p>F&uuml;r die Datumsabstimmung erschien Daniel T die Rangfolgen-Abstimmung mit der Option, alle Auswahlm&ouml;glichkeiten abzulehnen &mdash; der Mechanismus der Vorstandswahl &mdash; als naheliegend, da m&ouml;glicherweise kein einzelnes Datum auf Anhieb eine Mehrheit gewinnt. Chris O schlug die langfristige Form vor: Die Arbeitsgruppe schl&auml;gt &uuml;ber den Vorstand ein &bdquo;Runbook&ldquo; definierter Abstimmungsmechanismen und ihrer Anwendungsf&auml;lle vor, das die Generalversammlung ratifiziert &mdash; idealerweise wird das zur Routinekultur statt zur Debatte in jeder Sitzung. Weiterzuentwickeln mit Beitr&auml;gen &uuml;ber den offenen Governance-Kanal.</p>
+
+                        <h2>7. Rhythmus, Offenheit und Mitgliedschaft</h2>
+                        <p>Die Gruppe vereinbarte, sich alle zwei Wochen zu treffen, mit Terminfindung per Umfrage im offenen Governance-Kanal &mdash; nicht nur im WhatsApp-Chat der Gruppe &mdash; damit die Community sieht, dass die Treffen stattfinden. Anna T dr&auml;ngte auf eine klarere &ouml;ffentliche Ank&uuml;ndigung und Einladung: Die Gr&uuml;ndung der Gruppe wurde beim Community-Call angek&uuml;ndigt, aber dieses Treffen selbst war nur durch R&uuml;ckschl&uuml;sse auffindbar, und ein explizites &bdquo;das findet statt, hier treffen wir uns&ldquo; w&uuml;rde Vertrauen aufbauen. Daniel T argumentierte, dass angek&uuml;ndigte, offene Treffen selbst im Streitfall Legitimit&auml;t schaffen &mdash; eine Entscheidung aus einem Treffen, dem jede und jeder h&auml;tte beitreten k&ouml;nnen, ist auf eine Weise vertretbar, wie es eine Entscheidung hinter verschlossenen T&uuml;ren nicht ist. Kate B benannte die Spannung zwischen offenem Update-Treffen und Arbeitstreffen &mdash; st&auml;ndiges Onboarding hat Kosten &mdash; und die verwandte Frage, wer eigentlich f&uuml;r die Arbeit der Gruppe rechenschaftspflichtig ist; Celine V wird die Einladung entsprechend formulieren: Mitwirkende willkommen, mit der Erwartung, Arbeit zu &uuml;bernehmen.</p>
+
+                        <h2>8. Rollen und F&auml;higkeiten</h2>
+                        <p>Chris O schlug leichte, dynamische Rollen vor &mdash; Moderation, Recherche, Community-Kommunikation, Finanzen &mdash; damit die Gruppe wei&szlig;, wer wof&uuml;r verantwortlich ist und was fehlt, w&auml;hrend sie w&auml;chst; Julian bringt Erfahrung mit Finanzprozessen in Generalversammlungen mit. Daniel T und Julian bevorzugten einen reaktiven Ansatz: mit der Arbeit beginnen, echte L&uuml;cken identifizieren und dann gezielte Aufrufe an die Community f&uuml;r fehlende F&auml;higkeiten richten, statt vorab formale Rollen zu schaffen. Celine V erstellt als Ausgangspunkt ein Inventar der Namen, Interessen und F&auml;higkeiten der Mitglieder, das beim n&auml;chsten Mal reflektiert wird. Daniel T stellte au&szlig;erdem die Lage der Rechtsberatung klar: Der Verein hat eine beauftragte spanische Kanzlei und ehrenamtliche Rechtsberatung, mit realistischen Erwartungen an Antwortzeiten &mdash; schnelle Antworten entstehen KI-gest&uuml;tzt und werden von Beratenden gepr&uuml;ft, formell wichtige Fragen gehen an die Kanzlei.</p>
+
+                        <h2>9. N&auml;chste Schritte</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Aktion</th><th>F&auml;lligkeit</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Kate B, Anna T (mit Julian)</td><td>Den Vorschlag an den Vorstand zur formellen Einsetzung der Arbeitsgruppe entwerfen &mdash; Zwecke, Mitgliedschaftsmechanismus, Kommunikations- und Transparenzprinzipien; Kate pr&uuml;ft die Statuten</td><td>N&auml;chste Sitzung</td></tr>
+                                <tr><td>Daniel T</td><td>Die Abstimmung zur Arbeitsgruppe in der n&auml;chsten Vorstandssitzung ansprechen; Peters Kontaktdaten mit der Gruppe teilen</td><td>Diese Woche</td></tr>
+                                <tr><td>Celine V &amp; Daniel T</td><td>Das GV-Informationspaket gemeinsam leiten; Hilfsaufrufe starten: andere Burns kontaktieren, belastbare Brandrisikodaten, Aufbereitung des B&uuml;chleins</td><td>Vor Festlegung der Tagesordnung (&sim;3. September)</td></tr>
+                                <tr><td>Celine V</td><td>Terminumfrage und Einladung im offenen Governance-Kanal ver&ouml;ffentlichen; das F&auml;higkeiten-Inventar erstellen; die WhatsApp-Gruppe vervollst&auml;ndigen</td><td>Diese Woche</td></tr>
+                                <tr><td>Alle</td><td>Zweiw&ouml;chentliche Treffen vereinbart; asynchrones Feedback zu Entw&uuml;rfen</td><td>Laufend</td></tr>
+                            </tbody>
+                        </table>
+                        <p><strong>N&auml;chste Sitzung:</strong> in zwei Wochen, Termin wird per Umfrage im Governance-Kanal festgelegt.</p>
+
+                        <p><em>Protokoll auf Grundlage einer Aufzeichnung erstellt. Das vollst&auml;ndige Transkript, zur besseren Lesbarkeit leicht &uuml;berarbeitet (F&uuml;llw&ouml;rter und Satzabbr&uuml;che entfernt, Inhalt unver&auml;ndert), wird mit Zustimmung der Teilnehmenden, wie am Ende der Sitzung vereinbart, neben diesem Protokoll ver&ouml;ffentlicht.</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>
