@@ -15,6 +15,7 @@
                     '<li class="nav-dropdown">' +
                         '<a role="button" tabindex="0" aria-haspopup="true">Event <svg class="nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>' +
                         '<ul class="nav-dropdown-menu">' +
+                            '<li><a href="' + prefix + '/event-dates-2027.html">2027 Dates<span class="nav-badge">In progress</span></a></li>' +
                             '<li><a href="' + prefix + '/art-grants.html">Art Grants</a></li>' +
                             '<li><a href="' + prefix + '/barrios.html">Join a Barrio / Camp</a></li>' +
                             '<li><a href="' + prefix + '/survival-guide.html">Survival Guide</a></li>' +

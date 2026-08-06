@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Preliminary research into INAGA, bird-nesting periods and possible festival dates in Monegros.">
+
+    <title>INAGA and Bird-Nesting Periods in Monegros | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .research-hero {
+            padding: 10rem 0 5rem;
+            color: #fff;
+            background:
+                linear-gradient(135deg, rgba(44, 36, 24, 0.96), rgba(95, 112, 80, 0.9)),
+                radial-gradient(circle at 80% 20%, rgba(201, 146, 42, 0.35), transparent 42%);
+        }
+
+        .research-hero-inner {
+            max-width: 900px;
+        }
+
+        .research-kicker {
+            display: inline-block;
+            margin-bottom: 1.25rem;
+            padding: 0.45rem 0.85rem;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 999px;
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .research-hero h1 {
+            max-width: 850px;
+            margin-bottom: 1.5rem;
+            font-size: clamp(2.8rem, 7vw, 5.4rem);
+        }
+
+        .research-deck {
+            max-width: 780px;
+            color: rgba(255, 255, 255, 0.84);
+            font-size: clamp(1.05rem, 2vw, 1.3rem);
+            line-height: 1.7;
+        }
+
+        .research-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem 1.75rem;
+            margin-top: 2rem;
+            color: rgba(255, 255, 255, 0.68);
+            font-size: 0.88rem;
+        }
+
+        .research-page {
+            padding: 4rem 0 6rem;
+        }
+
+        .research-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 260px;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .research-content {
+            min-width: 0;
+            max-width: 820px;
+        }
+
+        .research-toc {
+            position: sticky;
+            top: 7rem;
+            padding: 1.35rem;
+            background: var(--color-bg-alt);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+        }
+
+        .research-toc h2 {
+            margin-bottom: 0.9rem;
+            font-size: 0.82rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .research-toc ol {
+            padding-left: 1.15rem;
+            color: var(--color-text-muted);
+            font-size: 0.82rem;
+        }
+
+        .research-toc li {
+            margin-bottom: 0.55rem;
+            line-height: 1.35;
+        }
+
+        .research-toc a {
+            color: var(--color-text-muted);
+        }
+
+        .research-toc a:hover {
+            color: var(--color-accent);
+        }
+
+        .notice {
+            margin-bottom: 2.5rem;
+            padding: 1.35rem 1.5rem;
+            background: rgba(201, 146, 42, 0.1);
+            border-left: 4px solid var(--color-yellow);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            color: var(--color-text-muted);
+            line-height: 1.7;
+        }
+
+        .notice strong {
+            color: var(--color-text);
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0 2.5rem;
+        }
+
+        .summary-card {
+            padding: 1.35rem;
+            background: var(--color-bg-alt);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+        }
+
+        .summary-card .label {
+            display: block;
+            margin-bottom: 0.4rem;
+            color: var(--color-accent);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+        }
+
+        .summary-card p {
+            margin: 0;
+            color: var(--color-text);
+            font-size: 0.96rem;
+            line-height: 1.55;
+        }
+
+        .research-content section {
+            padding-top: 1rem;
+            margin-bottom: 3.75rem;
+            scroll-margin-top: 6rem;
+        }
+
+        .research-content h2 {
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.65rem;
+            border-bottom: 1px solid var(--color-border);
+            font-size: clamp(1.7rem, 4vw, 2.4rem);
+        }
+
+        .research-content h3 {
+            margin: 2rem 0 0.8rem;
+            font-size: 1.25rem;
+        }
+
+        .research-content h4 {
+            margin: 1.5rem 0 0.65rem;
+            color: var(--color-purple-dark);
+            font-size: 1rem;
+        }
+
+        .research-content p {
+            margin-bottom: 1rem;
+            color: var(--color-text-muted);
+            line-height: 1.78;
+        }
+
+        .research-content strong {
+            color: var(--color-text);
+        }
+
+        .research-content ul,
+        .research-content ol {
+            margin: 0 0 1.25rem 1.4rem;
+            color: var(--color-text-muted);
+        }
+
+        .research-content li {
+            margin-bottom: 0.5rem;
+            line-height: 1.65;
+        }
+
+        .research-content blockquote {
+            margin: 1.5rem 0;
+            padding: 1.25rem 1.5rem;
+            background: var(--color-bg-alt);
+            border-left: 4px solid var(--color-purple);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            color: var(--color-text);
+            font-size: 1.05rem;
+            font-weight: 500;
+            line-height: 1.65;
+        }
+
+        .table-wrap {
+            width: 100%;
+            margin: 1.25rem 0 1.75rem;
+            overflow-x: auto;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+        }
+
+        .research-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.2);
+            font-size: 0.91rem;
+        }
+
+        .research-table th,
+        .research-table td {
+            padding: 0.85rem 1rem;
+            border-bottom: 1px solid var(--color-border);
+            text-align: left;
+            vertical-align: top;
+            line-height: 1.5;
+        }
+
+        .research-table th {
+            background: var(--color-bg-alt);
+            color: var(--color-text);
+            font-size: 0.78rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .research-table td {
+            color: var(--color-text-muted);
+        }
+
+        .research-table tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .assessment-panel {
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+        }
+
+        .assessment-panel.initial {
+            background: rgba(194, 112, 62, 0.08);
+            border-color: rgba(194, 112, 62, 0.3);
+        }
+
+        .assessment-panel.revised {
+            background: rgba(122, 139, 106, 0.12);
+            border-color: rgba(122, 139, 106, 0.4);
+        }
+
+        .assessment-panel h3 {
+            margin-top: 0;
+        }
+
+        .status-pill {
+            display: inline-block;
+            margin-bottom: 0.8rem;
+            padding: 0.35rem 0.7rem;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+        }
+
+        .initial .status-pill {
+            color: var(--color-accent-hover);
+            background: rgba(194, 112, 62, 0.16);
+        }
+
+        .revised .status-pill {
+            color: var(--color-purple-dark);
+            background: rgba(122, 139, 106, 0.2);
+        }
+
+        .coordinates {
+            display: inline-block;
+            padding: 0.12rem 0.45rem;
+            background: var(--color-bg-alt);
+            border: 1px solid var(--color-border);
+            border-radius: 5px;
+            color: var(--color-text);
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.9em;
+        }
+
+        .source-list {
+            list-style: none;
+            margin-left: 0 !important;
+        }
+
+        .source-list li {
+            margin-bottom: 0.65rem;
+            padding-left: 1.1rem;
+            position: relative;
+        }
+
+        .source-list li::before {
+            content: '↗';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+        }
+
+        .source-list a {
+            font-weight: 500;
+        }
+
+        .bottom-line {
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--color-bg-alt), rgba(122, 139, 106, 0.14));
+            border: 1px solid var(--color-border);
+            border-radius: calc(var(--radius) * 1.2);
+        }
+
+        .bottom-line h2 {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .bottom-line p:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 980px) {
+            .research-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .research-toc {
+                position: static;
+                order: -1;
+            }
+
+            .research-toc ol {
+                columns: 2;
+                column-gap: 2rem;
+            }
+        }
+
+        @media (max-width: 680px) {
+            .research-hero {
+                padding: 8rem 0 3.5rem;
+            }
+
+            .research-page {
+                padding-top: 2.5rem;
+            }
+
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .research-toc ol {
+                columns: 1;
+            }
+
+            .research-table th,
+            .research-table td {
+                padding: 0.7rem 0.75rem;
+            }
+
+            .bottom-line {
+                padding: 1.4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="shared-header"></div>
+    <script src="header.js"></script>
+
+    <main>
+        <header class="research-hero">
+            <div class="container">
+                <div class="research-hero-inner">
+                    <span class="research-kicker">Preliminary research · Not yet verified</span>
+                    <h1>INAGA and Bird-Nesting Periods in Monegros</h1>
+                    <p class="research-deck">An assessment of how protected birds, nesting periods and the site&rsquo;s permitting history may affect possible festival weeks between May and July.</p>
+                    <div class="research-meta">
+                        <span><strong>Prepared:</strong> 5 August 2026</span>
+                        <span><strong>Event:</strong> 2,000&ndash;3,000 people</span>
+                        <span><strong>Status:</strong> Research for review</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="research-page">
+            <div class="container research-layout">
+                <article class="research-content">
+                    <div class="notice">
+                        <strong>Important:</strong> this page balances the constraints visible in public environmental data against the strong practical precedent of a comparable festival having already been authorised and held at the site in early July. It is not legal advice or a substitute for a written INAGA response.
+                    </div>
+
+                    <section id="summary">
+                        <h2>Executive summary</h2>
+                        <p>The public environmental layers show that the general area is ecologically sensitive: it is close to Red Natura 2000 sites and mapped protected-species areas. Published INAGA decisions elsewhere in Arag&oacute;n commonly restrict noisy work during bird breeding periods, sometimes until 15 August.</p>
+                        <p>Taken alone, those facts might suggest that every week from May through July should be treated as high-risk until INAGA confirms compatibility.</p>
+                        <p>However, the most probative fact is the site&rsquo;s actual permitting history: a festival of comparable size and disturbance has operated in the Sierra de Jubierre in early July for many years and has previously received authorisation. That makes an outright nesting-related refusal for the same or nearby early-July dates substantially less likely than an environmental-layer analysis alone might suggest.</p>
+                        <p>That practical precedent is strongest for the <strong>established site</strong>. The new proposed site must be assessed separately: the confirmed point lies inside the mapped lesser-kestrel protection-plan scope and approximately 849 m from a mapped lesser-kestrel critical area. A prior authorisation at the established site therefore cannot simply be carried across to the new location.</p>
+
+                        <div class="summary-grid">
+                            <div class="summary-card">
+                                <span class="label">Early July</span>
+                                <p>Another comparable authorisation is probably likely.</p>
+                            </div>
+                            <div class="summary-card">
+                                <span class="label">Late June</span>
+                                <p>Probably manageable, especially if earlier editions were already building then.</p>
+                            </div>
+                            <div class="summary-card">
+                                <span class="label">May</span>
+                                <p>Meaningfully riskier because it moves the disturbance into earlier breeding stages.</p>
+                            </div>
+                            <div class="summary-card">
+                                <span class="label">Late July</span>
+                                <p>Not necessarily worse for birds, but fire, heat and evacuation risks may rise.</p>
+                            </div>
+                        </div>
+
+                        <p>The single most valuable document is the previous authorisation and its underlying environmental reports. It will show whether INAGA participated, which dates it assessed, and whether bird-related conditions were imposed.</p>
+                    </section>
+
+                    <section id="information">
+                        <h2>1. Information supplied</h2>
+
+                        <h3>Proposed activity</h3>
+                        <p>The disturbance is not ordinary construction or agricultural work. It includes:</p>
+                        <ul>
+                            <li>approximately 2,000&ndash;3,000 attendees;</li>
+                            <li>amplified sound systems operating throughout the night;</li>
+                            <li>artificial lighting;</li>
+                            <li>camping and continuous occupation;</li>
+                            <li>extensive pedestrian movement;</li>
+                            <li>private, service and emergency vehicles;</li>
+                            <li>generators and other temporary infrastructure;</li>
+                            <li>setup and dismantling outside the advertised event dates;</li>
+                            <li>possible works or crossings associated with bordering barrancos.</li>
+                        </ul>
+                        <p>INAGA would be expected to assess the complete operational envelope, not merely the dates when tickets are valid.</p>
+
+                        <h3>Confirmed locations</h3>
+                        <p>Two precise site coordinates have been supplied:</p>
+                        <ul>
+                            <li><strong>Established site:</strong> <span class="coordinates">41.7005615, -0.1363139</span></li>
+                            <li><strong>New proposed site:</strong> <span class="coordinates">41.6916330, 0.0099090</span></li>
+                        </ul>
+                        <p>For the established site, a Spanish Catastro coordinate lookup returned:</p>
+                        <ul>
+                            <li><strong>Pol&iacute;gono 19, Parcela 78</strong></li>
+                            <li><strong>M.U.P. H0331 &ldquo;Jubierre&rdquo;</strong></li>
+                            <li><strong>Castej&oacute;n de Monegros, Huesca</strong></li>
+                        </ul>
+                        <p>The established site is confirmed to be within a <strong>Monte de Utilidad P&uacute;blica</strong>. A separate Arag&oacute;n authorisation is therefore required for special communal use and the holding of an event in a publicly managed forest. The corresponding cadastral and public-forest status of the new proposed site should be confirmed independently.</p>
+
+                        <h3>Site footprints still required</h3>
+                        <p>There is no remaining uncertainty about the two supplied reference coordinates. However, a precise centre point is not the same as the complete footprint of a festival of this scale. The final assessment for each site needs a polygon covering every stage, sound-system orientation, camping, parking, generators, lighting, roads, sanitation, setup areas and any barranco crossing.</p>
+                    </section>
+
+                    <section id="environmental-constraints">
+                        <h2>2. Environmental constraints shown by public data</h2>
+
+                        <div class="assessment-panel initial">
+                            <span class="status-pill">Environmental-layer view</span>
+                            <h3>What the environmental data indicate on their own</h3>
+                            <p>The public-data evidence consists principally of nearby protected areas, potentially relevant species-protection plans, recurring INAGA breeding-period conditions in other projects, and the unusually intensive disturbance caused by an all-night festival.</p>
+                            <blockquote>Viewed without site-specific permitting precedent, no proposed week between May and July should be treated as environmentally cleared. All should be considered potentially high-risk, with late July the least sensitive part of the period but not presumptively compatible.</blockquote>
+                            <p>This is the appropriately precautionary interpretation of the environmental layers considered alone. The event&rsquo;s established authorisation history provides important additional evidence and materially lowers the practical risk for dates close to early July.</p>
+                        </div>
+
+                        <h3>Official spatial overlay at the established site</h3>
+                        <p>Current Arag&oacute;n threatened-species layers and national Red Natura 2000 data were downloaded and spatially compared with the confirmed established-site coordinate, <span class="coordinates">41.7005615, -0.1363139</span>.</p>
+                        <div class="table-wrap">
+                            <table class="research-table">
+                                <thead>
+                                    <tr><th>Environmental feature</th><th>Approximate distance</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>ZEC ES2410073 <strong>R&iacute;os Cinca y Alcanadre</strong></td><td><strong>453 m</strong></td></tr>
+                                    <tr><td>Bonelli&rsquo;s eagle protection-plan scope</td><td><strong>2.45 km</strong></td></tr>
+                                    <tr><td>Lesser-kestrel critical area</td><td><strong>2.91 km</strong></td></tr>
+                                    <tr><td>ZEPA ES0000295 <strong>Sierra de Alcubierre</strong></td><td><strong>3.10 km</strong></td></tr>
+                                    <tr><td>ZEC ES2410076 <strong>Sierras de Alcubierre y Sigena</strong></td><td><strong>3.10 km</strong></td></tr>
+                                    <tr><td>Lesser-kestrel protection-plan scope</td><td><strong>7.19 km</strong></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The established-site point itself did <strong>not</strong> fall inside a formally designated species critical area or protection-plan scope in the downloaded data. Nevertheless, proximity to a ZEC and ZEPA is relevant where noise, light and traffic can extend beyond the event boundary.</p>
+
+                        <h3>New proposed site</h3>
+                        <p>The same official layers were compared with the confirmed new-site coordinate, <span class="coordinates">41.6916330, 0.0099090</span>.</p>
+                        <div class="table-wrap">
+                            <table class="research-table">
+                                <thead>
+                                    <tr><th>Environmental feature</th><th>Approximate distance</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Lesser-kestrel protection-plan scope</td><td><strong>Inside the mapped area</strong></td></tr>
+                                    <tr><td>Lesser-kestrel critical area</td><td><strong>849 m</strong></td></tr>
+                                    <tr><td>ZEC ES2410073 <strong>R&iacute;os Cinca y Alcanadre</strong></td><td><strong>1.05 km</strong></td></tr>
+                                    <tr><td>ZEPA ES0000295 <strong>Sierra de Alcubierre</strong></td><td><strong>3.54 km</strong></td></tr>
+                                    <tr><td>ZEC ES2410076 <strong>Sierras de Alcubierre y Sigena</strong></td><td><strong>3.54 km</strong></td></tr>
+                                    <tr><td>Bonelli&rsquo;s eagle protection-plan scope</td><td><strong>3.66 km</strong></td></tr>
+                                    <tr><td>ZEPA ES0000183 <strong>El Basal, Las Menorcas y Llanos de Cardiel</strong></td><td><strong>8.88 km</strong></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The point is not inside a mapped lesser-kestrel critical area, but it <strong>is inside the species&rsquo; wider protection-plan scope</strong> and is considerably closer to a critical area than the established site. This does not by itself mean that a May&ndash;July festival will be refused, but it makes current bird records, field evidence and INAGA&rsquo;s site-specific view materially more important. The new site also requires a separate cadastral and land-status check.</p>
+
+                        <h3>Birds recorded for the nearby ZEPA</h3>
+                        <p>The official Natura 2000 Standard Data Form for Sierra de Alcubierre lists breeding, resident or regularly occurring birds including:</p>
+                        <ul>
+                            <li>golden eagle and eagle owl;</li>
+                            <li>short-toed eagle, black kite and red kite;</li>
+                            <li>Egyptian vulture and peregrine;</li>
+                            <li>stone-curlew;</li>
+                            <li>calandra lark and greater short-toed lark;</li>
+                            <li>black-bellied sandgrouse;</li>
+                            <li>turtle dove;</li>
+                            <li>several other steppe, scrubland and migratory birds.</li>
+                        </ul>
+                        <p>This does not prove that any of these species nests within the festival footprint. It does explain why INAGA could reasonably ask for current field evidence.</p>
+                    </section>
+
+                    <section id="framework">
+                        <h2>3. Legal and regulatory framework</h2>
+
+                        <h3>General wildlife protection</h3>
+                        <p>Spain&rsquo;s Law 42/2007 prohibits conduct including intentionally disturbing protected wildlife and damaging or destroying nests, breeding sites, resting sites, eggs and young. This is not a fixed calendar prohibition: it applies according to the actual species and circumstances, including the presence of an active nest.</p>
+
+                        <h3>Red Natura 2000</h3>
+                        <p>Projects capable of appreciably affecting a Red Natura 2000 site must be assessed against that site&rsquo;s conservation objectives. A project does not necessarily have to be physically inside the protected boundary if noise, light, traffic, pollution or other effects can reach it.</p>
+
+                        <h3>Arag&oacute;n environmentally sensitive areas</h3>
+                        <p>Arag&oacute;n&rsquo;s environmental law provides for project-specific assessment in environmentally sensitive areas, including Red Natura 2000, threatened-species plan areas, designated critical areas and other protected environmental zones. The environmental authority may impose conditions, require further evaluation or determine that an activity is incompatible.</p>
+
+                        <h3>Protected-species plans</h3>
+                        <p>Relevant Arag&oacute;n instruments include the Bonelli&rsquo;s eagle recovery plan, the lesser-kestrel conservation plan and designated critical areas for threatened species. The Bonelli&rsquo;s eagle plan recognises nesting, feeding, resting and breeding-pair territories as potentially important. The lesser-kestrel plan and subsequent INAGA decisions are particularly relevant to timing.</p>
+
+                        <h3>Public-forest event authorisation</h3>
+                        <p>Because the established site is within MUP H0331 Jubierre, an event there also needs authorisation for special communal use and holding an event in a forest managed by Arag&oacute;n. That process can include environmental and fire-prevention measures, limits on vehicles and generators, waste and restoration duties, and consultation with environmental technicians or Agentes para la Protecci&oacute;n de la Naturaleza. The new site&rsquo;s land classification must be checked separately.</p>
+
+                        <h3>Municipal and other permissions</h3>
+                        <p>An INAGA or forest authorisation does not replace municipal activity and event licensing, noise compliance, emergency approval, health and sanitation requirements, camping permissions, traffic management or CHE authorisation for works affecting barrancos or the public hydraulic domain.</p>
+                    </section>
+
+                    <section id="breeding-period">
+                        <h2>4. Breeding-period evidence and the May&ndash;July concern</h2>
+                        <p>INAGA does not use one universal nesting calendar for every project. Conditions are species-, site- and activity-specific.</p>
+                        <p>Nevertheless, published Arag&oacute;n decisions involving lesser kestrel repeatedly use windows such as:</p>
+                        <ul>
+                            <li>noisy activity permitted only between <strong>15 August and 15 February</strong>;</li>
+                            <li>work permitted between <strong>15 August and 1 April</strong>;</li>
+                            <li>restrictions between approximately <strong>15 April and 15 August</strong>;</li>
+                            <li>prior inspection of potential colonies, followed by restrictions if occupation is confirmed.</li>
+                        </ul>
+                        <p>These decisions principally concern construction, extraction or infrastructure and are not automatically binding on a festival. They demonstrate that INAGA sometimes treats all of May, June and July as part of the relevant breeding window.</p>
+
+                        <h3>Potential festival disturbance</h3>
+                        <ul>
+                            <li>low-frequency sound travelling beyond the site;</li>
+                            <li>continuous night-time noise and disturbance at dusk and dawn;</li>
+                            <li>artificial light in otherwise dark habitat;</li>
+                            <li>people leaving defined public areas;</li>
+                            <li>traffic on rural tracks;</li>
+                            <li>setup and dismantling noise;</li>
+                            <li>displacement from feeding or resting areas;</li>
+                            <li>nocturnal disturbance to eagle owl and stone-curlew;</li>
+                            <li>ground disturbance affecting steppe birds.</li>
+                        </ul>
+
+                        <h3>Conservative ranking from calendar evidence alone</h3>
+                        <div class="table-wrap">
+                            <table class="research-table">
+                                <thead>
+                                    <tr><th>Period</th><th>Conservative nesting assessment without site-specific precedent</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>1&ndash;31 May</td><td>Very high risk</td></tr>
+                                    <tr><td>1&ndash;30 June</td><td>Very high risk, potentially the most sensitive period</td></tr>
+                                    <tr><td>1&ndash;15 July</td><td>Very high risk because chicks, fledging and parental dependence can continue</td></tr>
+                                    <tr><td>16&ndash;31 July</td><td>High risk; lower for some birds, but not reliably outside the lesser-kestrel period</td></tr>
+                                    <tr><td>After 15 August</td><td>Generally lower nesting risk, although not automatically acceptable</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>This evidence means July cannot be assumed safe merely because it falls later in the season. The site&rsquo;s established July authorisations must then be weighed alongside that general biological evidence.</p>
+                    </section>
+
+                    <section id="authorisation-precedent">
+                        <h2>5. Effect of the prior authorisation</h2>
+
+                        <div class="assessment-panel revised">
+                            <span class="status-pill">Permitting precedent</span>
+                            <h3>Why prior authorisation carries substantial weight</h3>
+                            <p>The strongest available evidence is not a generic species calendar. It is the demonstrated treatment of this actual activity by the competent authorities.</p>
+                            <p>A festival has operated in the Sierra de Jubierre in early July for many years, at approximately the same scale and with comparable all-night music, camping and temporary occupation.</p>
+                            <p>If those events were lawfully authorised for the same site and model, early July has not been considered inherently incompatible, the authorities are familiar with the disturbance profile, and there is a strong practical precedent for another comparable application.</p>
+                        </div>
+
+                        <h3>What remains unknown</h3>
+                        <ol>
+                            <li><strong>An authorisation containing a favourable INAGA report</strong> would be the strongest precedent.</li>
+                            <li><strong>A public-forest authorisation incorporating biodiversity conditions</strong> would also be strong evidence.</li>
+                            <li><strong>A municipal event or activity licence only</strong> would prove local acceptance but might not prove that INAGA examined nesting birds.</li>
+                            <li><strong>An authorisation for a materially different footprint, capacity, schedule or sound arrangement</strong> would be relevant but less conclusive.</li>
+                        </ol>
+                        <p>The prior file should therefore be reviewed before assigning high confidence.</p>
+                    </section>
+
+                    <section id="likelihood">
+                        <h2>6. Estimated likelihood of nesting-related refusal</h2>
+                        <p>The estimates below apply principally to the <strong>established site</strong>. They assume substantially the same site and event model, no serious previous compliance problem, no newly identified nest or breeding territory, and a process broadly comparable to previous years. They are reasoned ranges, not INAGA statistics.</p>
+                        <p>The new proposed site can still be given a provisional planning estimate, but only with wider ranges and an explicit warning that current field evidence could move the assessment sharply. Its location inside the lesser-kestrel protection-plan scope and approximately 849 m from a critical area creates a materially different site-specific question for INAGA.</p>
+
+                        <div class="table-wrap">
+                            <table class="research-table">
+                                <thead>
+                                    <tr><th>Proposed period</th><th>Estimated probability of refusal specifically on bird-nesting grounds</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Same early-July week</td><td><strong>Low: approximately 5&ndash;15%</strong></td></tr>
+                                    <tr><td>Mid-July</td><td><strong>Low: approximately 5&ndash;20%</strong></td></tr>
+                                    <tr><td>Late July</td><td><strong>Low&ndash;moderate: approximately 10&ndash;25%</strong></td></tr>
+                                    <tr><td>Last two weeks of June</td><td><strong>Low&ndash;moderate: approximately 10&ndash;25%</strong></td></tr>
+                                    <tr><td>First two weeks of June</td><td><strong>Moderate: approximately 15&ndash;35%</strong></td></tr>
+                                    <tr><td>May</td><td><strong>Moderate: approximately 25&ndash;45%</strong></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3>Provisional planning estimate for the new site before field evidence</h3>
+                        <p>These ranges are intended for comparative planning. They are not published INAGA statistics and should not be treated as a prediction of the final decision.</p>
+                        <div class="table-wrap">
+                            <table class="research-table">
+                                <thead>
+                                    <tr><th>Proposed period</th><th>Estimated probability of refusal specifically on bird-nesting grounds</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>May</td><td><strong>Moderate&ndash;high: approximately 35&ndash;60%</strong></td></tr>
+                                    <tr><td>Early June</td><td><strong>Moderate: approximately 30&ndash;55%</strong></td></tr>
+                                    <tr><td>Late June</td><td><strong>Moderate: approximately 25&ndash;50%</strong></td></tr>
+                                    <tr><td>Early July</td><td><strong>Moderate: approximately 25&ndash;45%</strong></td></tr>
+                                    <tr><td>Mid-July</td><td><strong>Low&ndash;moderate: approximately 20&ndash;40%</strong></td></tr>
+                                    <tr><td>Late July</td><td><strong>Low&ndash;moderate: approximately 15&ndash;35%</strong></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3>How field evidence could change the new-site estimate</h3>
+                        <p>For an early-July event, the more useful model is conditional:</p>
+                        <div class="table-wrap">
+                            <table class="research-table">
+                                <thead>
+                                    <tr><th>Evidence obtained</th><th>Indicative early-July refusal estimate</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>No field survey or current breeding information</td><td><strong>25&ndash;45%</strong></td></tr>
+                                    <tr><td>A competent survey finds no occupied colony or relevant flight or feeding concentration near the footprint</td><td><strong>10&ndash;25%</strong></td></tr>
+                                    <tr><td>Lesser kestrels are present nearby, but sound orientation and strict mitigation satisfy INAGA</td><td><strong>20&ndash;40%</strong></td></tr>
+                                    <tr><td>An active colony or breeding use is found within the likely disturbance zone</td><td><strong>50&ndash;75%</strong></td></tr>
+                                    <tr><td>Active breeding would receive substantial unavoidable all-night disturbance</td><td><strong>70% or higher</strong></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The value of this scenario table is not numerical precision. It identifies the evidence most capable of changing the practical answer: occupied colonies, feeding and flight use, acoustic exposure, sound-system orientation and mitigation acceptable to INAGA.</p>
+
+                        <h3>Relative date ranking for bird nesting</h3>
+                        <ol>
+                            <li>early or mid-July;</li>
+                            <li>late July;</li>
+                            <li>late June;</li>
+                            <li>early June;</li>
+                            <li>May.</li>
+                        </ol>
+
+                        <h3>Overall permission risk may rank differently</h3>
+                        <p>Nesting is not the only issue. Late July can carry greater wildfire danger, heat risk, water demand, evacuation difficulty, machinery restrictions and pressure on emergency services. The environmentally easiest nesting date may not therefore be the easiest date for the complete authorisation.</p>
+                    </section>
+
+                    <section id="date-comparison">
+                        <h2>7. How alternative dates compare with the established July precedent</h2>
+
+                        <h3>Another early-July week</h3>
+                        <p>This is the strongest application because it closely matches actual precedent. Refusal becomes more likely if the venue moves, stages point towards protected habitat, capacity or sound increases, setup begins much earlier, new protected-species information arises, or previous conditions were not followed.</p>
+
+                        <h3>Late June</h3>
+                        <p>Late June may be close enough to the precedent to remain manageable, particularly if past early-July editions already involved setup, staff and vehicle activity then. The comparison must use the previous <strong>first build day</strong>, not only the public opening date.</p>
+
+                        <h3>May or early June</h3>
+                        <p>This is a more significant change because it advances sound testing, construction, camping, traffic, lighting and dismantling. A previous July approval does not necessarily establish that the same disturbance is acceptable during May incubation or early chick-rearing. May is therefore not obviously impossible, but it presents a genuine additional question for INAGA.</p>
+
+                        <h3>Late July</h3>
+                        <p>For birds, late July may be no worse and could be better for some species. However, lesser-kestrel restrictions elsewhere commonly continue until 15 August, fledged young can remain dependent, second broods may still be present, and wildfire and heat risks increase.</p>
+                    </section>
+
+                    <section id="comparison">
+                        <h2>8. Recent festival comparison</h2>
+                        <p>On <strong>21 July 2026</strong>, INAGA recorded a negative decision for the proposed Festival Sizigia Eclipse 2026 at La Sotonera reservoir in Huesca. The public INAREIA listing confirms the result; the full ecological reasoning was not available in the public material retrieved during this research.</p>
+                        <p>This should not be treated as a direct precedent. La Sotonera is a different environment, associated with significant wetland and bird interests, and the project details may have differed substantially. It does show that INAGA will scrutinise large temporary festivals in environmentally sensitive rural locations rather than treating them as automatically permissible.</p>
+                    </section>
+
+                    <section id="next-evidence">
+                        <h2>9. Documents and data that would most improve confidence</h2>
+
+                        <h3>Previous authorisation</h3>
+                        <p>This is the highest-priority item. Search within it for:</p>
+                        <ul>
+                            <li><code>INAGA</code>, <code>informe favorable</code>, <code>avifauna</code> and <code>nidificaci&oacute;n</code>;</li>
+                            <li><code>periodo reproductor</code>, <code>Red Natura</code> and <code>condicionado ambiental</code>;</li>
+                            <li><code>Agente para la Protecci&oacute;n de la Naturaleza</code> or <code>APN</code>;</li>
+                            <li><code>Monte de Utilidad P&uacute;blica</code>, <code>Jubierre</code> and <code>expediente</code>;</li>
+                            <li><code>montaje</code>, <code>desmontaje</code>, <code>ruido</code> and <code>iluminaci&oacute;n</code>.</li>
+                        </ul>
+                        <p>The review should establish who authorised the event, the exact geographic footprint, the first setup and final dismantling dates, whether bird surveys or annual nest checks were required, whether July was identified as the permitted window, and whether there were post-event monitoring reports.</p>
+
+                        <h3>Official Arag&oacute;n SIBA information request</h3>
+                        <p>The public SIBA viewer contains more than two million biodiversity citations, but sensitive nest locations may be generalised or withheld.</p>
+                        <blockquote>Request all available records of protected birds, breeding territories, nests, colonies, roosts, feeding areas and critical habitats within at least 5 km of the complete event footprint, with particular attention to records between February and August and to Falco naumanni, Aquila fasciata, Neophron percnopterus, Milvus milvus, Circus pygargus, Pterocles species, Burhinus oedicnemus and other steppe or nocturnal birds.</blockquote>
+                        <p>The request should also seek previous INAGA reports concerning festivals held at the site or within MUP H0331 Jubierre, ornithological surveys submitted by organisers, APN reports, previous conditions and post-event monitoring.</p>
+
+                        <h3>Supplementary data</h3>
+                        <p>The eBird Basic Dataset requires a free Cornell/eBird account and a data request. Ornitho Arag&oacute;n registration may provide additional regional observations and local observer knowledge. Both are supplementary and should not replace SIBA or professional field surveys.</p>
+
+                        <h3>Field ornithology</h3>
+                        <p>Depending on INAGA&rsquo;s response, useful work could include dawn breeding-bird surveys, dusk and nocturnal surveys, targeted lesser-kestrel colony checks, raptor-territory searches, steppe-bird transects, pre-event nest inspection and acoustic propagation assessment towards sensitive habitat.</p>
+                    </section>
+
+                    <section id="questions">
+                        <h2>10. Questions for INAGA</h2>
+                        <ol>
+                            <li>Does the complete footprint intersect or appreciably affect a species plan, critical area or Red Natura 2000 site?</li>
+                            <li>What previous INAGA reports exist for festivals or other events on these parcels?</li>
+                            <li>Are any weeks in May&ndash;July presumptively incompatible?</li>
+                            <li>Does INAGA distinguish between public event dates and setup or dismantling?</li>
+                            <li>Would approval require an ornithological survey for the relevant year?</li>
+                            <li>Is an active-nest survey immediately before setup required?</li>
+                            <li>What buffer distances would apply to a confirmed nest or colony?</li>
+                            <li>Would amplified music throughout the night be accepted?</li>
+                            <li>Are sound orientation or ecological-receptor limits required?</li>
+                            <li>Are lighting restrictions or dark corridors required?</li>
+                            <li>Would ecological supervision be required?</li>
+                            <li>What stop-work or stop-event protocol applies if an active nest is discovered?</li>
+                            <li>Does the prior early-July authorisation establish a usable precedent for nearby weeks?</li>
+                            <li>Is May materially less compatible than late June or July?</li>
+                        </ol>
+                    </section>
+
+                    <section id="sources">
+                        <h2>11. Sources reviewed</h2>
+
+                        <h3>Official legislation and procedures</h3>
+                        <ul class="source-list">
+                            <li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2007-21490" target="_blank" rel="noopener noreferrer">Spanish Law 42/2007 on Natural Heritage and Biodiversity</a></li>
+                            <li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2015-186" target="_blank" rel="noopener noreferrer">Arag&oacute;n Law 11/2014 on Environmental Prevention and Protection</a></li>
+                            <li><a href="https://www.aragon.es/tramitador/-/tramite/autorizacion-administrativa-comun-especial-celebracion-eventos-montes-utilizacion-publica" target="_blank" rel="noopener noreferrer">Authorisation for events in publicly managed forests</a></li>
+                            <li><a href="https://www.aragon.es/tramitador/-/tramite/usos-y-actividades-en-zonas-con-planes-de-ordenacion-de-recursos-naturales-de-recuperacion-de-especies-con-planes-de-conservacion-y-red-natura-2000/autorizacion-en-zonas-de-proteccion-de-especies" target="_blank" rel="noopener noreferrer">Uses and activities in protected-species plan areas</a></li>
+                            <li><a href="https://www.aragon.es/tramitador/-/tramite/solicitud-informacion-ambiental" target="_blank" rel="noopener noreferrer">Arag&oacute;n environmental-information request</a></li>
+                            <li><a href="https://www.boa.aragon.es/cgi-bin/EBOA/BRSCGI?BASE=BOLE&amp;CMD=VERDOC&amp;DOCN=000163097&amp;SEC=BUSQUEDA_AVANZADA&amp;SEPARADOR=" target="_blank" rel="noopener noreferrer">Decree 326/2011: Bonelli&rsquo;s eagle recovery plan</a></li>
+                            <li><a href="https://www.boa.aragon.es/cgi-bin/EBOA/BRSCGI?BASE=BOLE&amp;CMD=VERDOC&amp;DOCN=000156038&amp;SEC=BUSQUEDA_AVANZADA&amp;SEPARADOR=" target="_blank" rel="noopener noreferrer">Decree 233/2010: lesser-kestrel conservation plan</a></li>
+                        </ul>
+
+                        <h3>Official mapping and biodiversity information</h3>
+                        <ul class="source-list">
+                            <li><a href="https://opendata.aragon.es/datos/catalogo/dataset/areas-criticas-designadas-para-la-proteccion-de-especies-amenazadas-en-aragon_rednat_areascriticas" target="_blank" rel="noopener noreferrer">Arag&oacute;n Open Data: designated critical areas</a></li>
+                            <li><a href="https://opendata.aragon.es/datos/catalogo/dataset/ambitos-de-proteccion-de-especies-amenazadas-en-aragon_rednat_appe" target="_blank" rel="noopener noreferrer">Arag&oacute;n Open Data: protected-species plan scopes</a></li>
+                            <li><a href="https://www.miteco.gob.es/en/biodiversidad/servicios/banco-datos-naturaleza/informacion-disponible/rednatura_2000_desc.html" target="_blank" rel="noopener noreferrer">MITECO: Red Natura 2000 downloadable data</a></li>
+                            <li><a href="https://presiba.aragon.es/atlas-especies" target="_blank" rel="noopener noreferrer">Arag&oacute;n SIBA species atlas</a></li>
+                            <li><a href="https://presiba.aragon.es/citas/visor" target="_blank" rel="noopener noreferrer">Arag&oacute;n SIBA biodiversity-record viewer</a></li>
+                        </ul>
+
+                        <h3>Festival and supplementary sources</h3>
+                        <ul class="source-list">
+                            <li><a href="https://aplicaciones.aragon.es/inareia/" target="_blank" rel="noopener noreferrer">INAREIA public environmental-resolution database</a></li>
+                            <li><a href="https://www.diariodelaltoaragon.es/noticias/cultura/2023/07/07/nowhere-la-ciudad-efimera-de-monegros-cumple-17-anos-1663615-daa.html" target="_blank" rel="noopener noreferrer">Diario del Alto Arag&oacute;n: Nowhere&rsquo;s history in Monegros</a></li>
+                            <li><a href="https://www.ornitho-aragon.es/" target="_blank" rel="noopener noreferrer">Ornitho Arag&oacute;n</a></li>
+                            <li><a href="https://www.birds.cornell.edu/landtrust/download-ebird-data/" target="_blank" rel="noopener noreferrer">Cornell/eBird data access</a></li>
+                        </ul>
+                    </section>
+
+                    <section id="bottom-line" class="bottom-line">
+                        <h2>12. Current bottom line</h2>
+                        <p>The spatial and legal evidence shows that the location is environmentally non-trivial and that May&ndash;July overlaps recognised nesting periods. Considered by itself, however, it does <strong>not</strong> justify treating July refusal as likely.</p>
+                        <ul>
+                            <li><strong>Early July:</strong> probably low nesting-related refusal risk.</li>
+                            <li><strong>Late June or mid-July:</strong> probably still reasonably favourable.</li>
+                            <li><strong>May or early June:</strong> greater uncertainty and a more meaningful possibility of additional conditions or refusal.</li>
+                            <li><strong>New proposed site:</strong> do not carry the established-site probability estimates across; the lesser-kestrel overlap requires a separate INAGA assessment.</li>
+                            <li><strong>Any date or site:</strong> the answer depends heavily on the previous permission, exact footprint and current breeding records.</li>
+                        </ul>
+                        <p>The next step is not more generic calendar research. It is to inspect the prior authorisation, establish the exact event polygon and full activity dates, and obtain the relevant SIBA and INAGA records.</p>
+                    </section>
+                </article>
+
+                <aside class="research-toc" aria-label="Page contents">
+                    <h2>On this page</h2>
+                    <ol>
+                        <li><a href="#summary">Executive summary</a></li>
+                        <li><a href="#information">Information supplied</a></li>
+                        <li><a href="#environmental-constraints">Environmental constraints</a></li>
+                        <li><a href="#framework">Legal framework</a></li>
+                        <li><a href="#breeding-period">Breeding-period evidence</a></li>
+                        <li><a href="#authorisation-precedent">Prior authorisation</a></li>
+                        <li><a href="#likelihood">Estimated likelihood</a></li>
+                        <li><a href="#date-comparison">Date comparison</a></li>
+                        <li><a href="#comparison">Recent festival comparison</a></li>
+                        <li><a href="#next-evidence">Evidence still needed</a></li>
+                        <li><a href="#questions">Questions for INAGA</a></li>
+                        <li><a href="#sources">Sources</a></li>
+                        <li><a href="#bottom-line">Current bottom line</a></li>
+                    </ol>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <div id="shared-footer"></div>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Working page: what we know so far about the possible change of dates for the 2027 event, ahead of the General Assembly vote on 17 September 2026.">
+
+    <title>Event Dates 2027 — What We Know So Far | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .research-hero {
+            padding: 10rem 0 5rem;
+            color: #fff;
+            background:
+                linear-gradient(135deg, rgba(44, 36, 24, 0.96), rgba(95, 112, 80, 0.9)),
+                radial-gradient(circle at 80% 20%, rgba(201, 146, 42, 0.35), transparent 42%);
+        }
+
+        .research-hero-inner { max-width: 900px; }
+
+        .research-kicker {
+            display: inline-block;
+            margin-bottom: 1.25rem;
+            padding: 0.45rem 0.85rem;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 999px;
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .research-hero h1 {
+            max-width: 850px;
+            margin-bottom: 1.5rem;
+            font-size: clamp(2.8rem, 7vw, 5.4rem);
+        }
+
+        .research-deck {
+            max-width: 780px;
+            color: rgba(255, 255, 255, 0.84);
+            font-size: clamp(1.05rem, 2vw, 1.3rem);
+            line-height: 1.7;
+        }
+
+        .research-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem 1.75rem;
+            margin-top: 2rem;
+            color: rgba(255, 255, 255, 0.68);
+            font-size: 0.88rem;
+        }
+
+        .research-page { padding: 4rem 0 6rem; }
+
+        .research-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 260px;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .research-content { min-width: 0; max-width: 820px; }
+
+        .research-toc {
+            position: sticky;
+            top: 7rem;
+            padding: 1.35rem;
+            background: var(--color-bg-alt);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+        }
+
+        .research-toc h2 {
+            margin-bottom: 0.9rem;
+            font-size: 0.82rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .research-toc ol {
+            padding-left: 1.15rem;
+            color: var(--color-text-muted);
+            font-size: 0.82rem;
+        }
+
+        .research-toc li { margin-bottom: 0.55rem; line-height: 1.35; }
+        .research-toc a { color: var(--color-text-muted); }
+        .research-toc a:hover { color: var(--color-accent); }
+
+        .notice {
+            margin-bottom: 1.5rem;
+            padding: 1.35rem 1.5rem;
+            background: rgba(201, 146, 42, 0.1);
+            border-left: 4px solid var(--color-yellow);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            color: var(--color-text-muted);
+            line-height: 1.7;
+        }
+
+        .notice strong { color: var(--color-text); }
+        .notice p { margin-bottom: 0.85rem; }
+        .notice p:last-child { margin-bottom: 0; }
+
+        .notice.pack {
+            background: rgba(122, 139, 106, 0.13);
+            border-left-color: var(--color-purple);
+            margin-bottom: 2.75rem;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0 2.5rem;
+        }
+
+        .summary-card {
+            padding: 1.35rem;
+            background: var(--color-bg-alt);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+        }
+
+        .summary-card .label {
+            display: block;
+            margin-bottom: 0.4rem;
+            color: var(--color-accent);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+        }
+
+        .summary-card p {
+            margin: 0;
+            color: var(--color-text);
+            font-size: 0.96rem;
+            line-height: 1.55;
+        }
+
+        .research-content section {
+            padding-top: 1rem;
+            margin-bottom: 3.75rem;
+            scroll-margin-top: 6rem;
+        }
+
+        .research-content h2 {
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.65rem;
+            border-bottom: 1px solid var(--color-border);
+            font-size: clamp(1.7rem, 4vw, 2.4rem);
+        }
+
+        .research-content h3 { margin: 2rem 0 0.8rem; font-size: 1.25rem; }
+
+        .research-content h4 {
+            margin: 1.5rem 0 0.65rem;
+            color: var(--color-purple-dark);
+            font-size: 1rem;
+        }
+
+        .research-content p {
+            margin-bottom: 1rem;
+            color: var(--color-text-muted);
+            line-height: 1.78;
+        }
+
+        .research-content strong { color: var(--color-text); }
+
+        .research-content code {
+            padding: 0.1rem 0.4rem;
+            background: var(--color-bg-alt);
+            border: 1px solid var(--color-border);
+            border-radius: 5px;
+            color: var(--color-text);
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.88em;
+        }
+
+        .research-content ul,
+        .research-content ol {
+            margin: 0 0 1.25rem 1.4rem;
+            color: var(--color-text-muted);
+        }
+
+        .research-content li { margin-bottom: 0.5rem; line-height: 1.65; }
+
+        .research-content blockquote {
+            margin: 1.5rem 0;
+            padding: 1.25rem 1.5rem;
+            background: var(--color-bg-alt);
+            border-left: 4px solid var(--color-purple);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            color: var(--color-text);
+            font-size: 1.05rem;
+            font-weight: 500;
+            line-height: 1.65;
+        }
+
+        .table-wrap {
+            width: 100%;
+            margin: 1.25rem 0 1.75rem;
+            overflow-x: auto;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+        }
+
+        .research-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.2);
+            font-size: 0.91rem;
+        }
+
+        .research-table th,
+        .research-table td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid var(--color-border);
+            text-align: left;
+            vertical-align: top;
+            line-height: 1.5;
+            white-space: nowrap;
+        }
+
+        .research-table td.wrap,
+        .research-table th.wrap { white-space: normal; min-width: 190px; }
+
+        .research-table th {
+            background: var(--color-bg-alt);
+            color: var(--color-text);
+            font-size: 0.74rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .research-table td { color: var(--color-text-muted); }
+        .research-table tr:last-child td { border-bottom: 0; }
+
+        .research-table tr.is-current td {
+            background: rgba(194, 112, 62, 0.12);
+            color: var(--color-text);
+            font-weight: 500;
+        }
+
+        .risk-pill {
+            display: inline-block;
+            min-width: 2.1rem;
+            padding: 0.12rem 0.45rem;
+            border-radius: 999px;
+            text-align: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .risk-low { background: #dcfce7; color: #166534; }
+        .risk-mid { background: #fef3c7; color: #92400e; }
+        .risk-high { background: #fed7aa; color: #9a3412; }
+        .risk-max { background: #fecaca; color: #991b1b; }
+
+        .timeline {
+            list-style: none;
+            margin: 1.5rem 0 0 0 !important;
+            padding: 0;
+        }
+
+        .timeline li {
+            position: relative;
+            padding: 0 0 1.35rem 1.6rem;
+            border-left: 2px solid var(--color-border);
+            margin-bottom: 0;
+        }
+
+        .timeline li:last-child { border-left-color: transparent; padding-bottom: 0; }
+
+        .timeline li::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 0.4rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--color-accent);
+        }
+
+        .timeline .when {
+            display: block;
+            color: var(--color-text);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .source-list { list-style: none; margin-left: 0 !important; }
+
+        .source-list li {
+            margin-bottom: 0.65rem;
+            padding-left: 1.1rem;
+            position: relative;
+        }
+
+        .source-list li::before {
+            content: '↗';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+        }
+
+        .source-list a { font-weight: 500; }
+
+        .bottom-line {
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--color-bg-alt), rgba(122, 139, 106, 0.14));
+            border: 1px solid var(--color-border);
+            border-radius: calc(var(--radius) * 1.2);
+        }
+
+        .bottom-line h2 { border-bottom: 0; padding-bottom: 0; }
+        .bottom-line p:last-child { margin-bottom: 0; }
+
+        @media (max-width: 980px) {
+            .research-layout { grid-template-columns: 1fr; }
+            .research-toc { position: static; order: -1; }
+            .research-toc ol { columns: 2; column-gap: 2rem; }
+        }
+
+        @media (max-width: 680px) {
+            .research-hero { padding: 8rem 0 3.5rem; }
+            .research-page { padding-top: 2.5rem; }
+            .summary-grid { grid-template-columns: 1fr; }
+            .research-toc ol { columns: 1; }
+            .research-table th,
+            .research-table td { padding: 0.65rem 0.7rem; }
+            .bottom-line { padding: 1.4rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="shared-header"></div>
+    <script src="header.js"></script>
+
+    <main>
+        <header class="research-hero">
+            <div class="container">
+                <div class="research-hero-inner">
+                    <span class="research-kicker">Working page · Information still being gathered</span>
+                    <h1>Event Dates 2027: what we know so far</h1>
+                    <p class="research-deck">The General Assembly will be asked on 17 September 2026 whether to move the event out of its established early-July slot. This page collects the material that exists today, while it is still incomplete.</p>
+                    <div class="research-meta">
+                        <span><strong>Last updated:</strong> 6 August 2026</span>
+                        <span><strong>Decision:</strong> General Assembly, 17 September 2026</span>
+                        <span><strong>Status:</strong> Work in progress</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="research-page">
+            <div class="container research-layout">
+                <article class="research-content">
+
+                    <div class="notice">
+                        <p><strong>This is not an information pack.</strong> It is a snapshot of what has been gathered so far, published early for people who would rather see the raw state of the work than wait for it to be finished. Parts of it are preliminary desk research that has not yet been verified. Parts of it will change. Some of it may turn out to be wrong.</p>
+                        <p>Nothing on this page should be read as a settled position of the board, of the association, or of anyone in it.</p>
+                    </div>
+
+                    <div class="notice pack">
+                        <p><strong>A proper information pack is being prepared.</strong> Ahead of the vote we aim to produce a short, readable booklet &mdash; one clear handout for the decision, setting out the benefits and drawbacks of each candidate date, in plain language and without needing hours of background reading.</p>
+                        <p>It is intended to include <strong>feedback from other burns across Europe</strong> on how a move would affect them and their attendees, <strong>polling of the people who actually come to the event</strong>, and a more rigorous version of the fire-risk and environmental material summarised below.</p>
+                        <p>That booklet will be circulated <strong>with enough time before the 17 September vote</strong> for members to read it and decide. If you would rather wait for it, that is entirely reasonable &mdash; this page exists for those who want to dig deeper before it is ready.</p>
+                    </div>
+
+                    <section id="decision">
+                        <h2>1. What is actually being decided</h2>
+                        <p>The 2026 event ran <strong>7&ndash;12 July</strong>. Without a decision to the contrary, 2027 would sit in the equivalent early-July window &mdash; the working assumption in the planning material is <strong>5&ndash;11 July 2027</strong>.</p>
+                        <p>The question going to the General Assembly is whether to keep that slot or move to a different window. It is a members&rsquo; decision, not a board decision. The board&rsquo;s job here is to put a well-prepared question in front of the membership, with the best information it can assemble in the time available.</p>
+
+                        <div class="summary-grid">
+                            <div class="summary-card">
+                                <span class="label">Who decides</span>
+                                <p>The General Assembly &mdash; the members of the association, each with one vote.</p>
+                            </div>
+                            <div class="summary-card">
+                                <span class="label">When</span>
+                                <p>Thursday 17 September 2026, 20:00 CEST, online. Moved from 3 September to allow more preparation time.</p>
+                            </div>
+                            <div class="summary-card">
+                                <span class="label">Agenda fixed</span>
+                                <p>2 September 2026. The event-dates question is on it.</p>
+                            </div>
+                            <div class="summary-card">
+                                <span class="label">Likely mechanism</span>
+                                <p>Ranked voting with an option to reject all choices &mdash; under discussion, since no single window may win outright.</p>
+                            </div>
+                        </div>
+
+                        <p>&ldquo;No change&rdquo; is a real option on the ballot. The board resolved to hold the vote rather than let the date be settled by inaction; if the information turns out not to be good enough, members can vote not to move.</p>
+                        <p><strong>The board has taken no position on which dates to choose.</strong> Views among board members genuinely differ &mdash; on whether to move at all, and on whether September is too soon to decide well. Those exchanges are in the <a href="/transparency.html">published minutes</a> rather than summarised here, so you can read them first-hand.</p>
+                        <p>Advance voting is expected to open a few days before the assembly, so members who cannot attend on the night can still vote. Only members of the association vote; applications approved after the assembly is called still count. Wider community polls will inform the vote without being the vote.</p>
+                    </section>
+
+                    <section id="timeline">
+                        <h2>2. Timeline</h2>
+                        <ul class="timeline">
+                            <li><span class="when">11 March 2026</span> Decreto 22/2026 approved in Aragón; published in the BOA (no. 53) on 18 March, three and a half months before the 2026 event.</li>
+                            <li><span class="when">17 June 2026</span> Meeting with the Comarca de Los Monegros. The comarca reads the new automatic-suspension clause aloud and sets out its evacuation planning.</li>
+                            <li><span class="when">Mid-June 2026</span> Build begins. A fire roughly an hour away burns toward the site; ash falls on the build. It is brought under control. Evacuation plans &mdash; buses, receiving villages, Guardia Civil, Cruz Roja &mdash; were by this point genuinely in place, not hypothetical.</li>
+                            <li><span class="when">26&ndash;28 June 2026</span> <em>Roja Plus</em> declared &mdash; three days, during build.</li>
+                            <li><span class="when">7&ndash;12 July 2026</span> The event runs. The permit holds, nobody is hurt, there is no evacuation. <em>Roja Plus</em> is declared again during the event itself, bringing a legally binding lockdown on movement, gas cooking and open flame for part of one day. Region-wide red alert follows on 24 and 30 July.</li>
+                            <li><span class="when">30 July 2026</span> Community call. The dates question is announced publicly, alongside the note that &ldquo;the authorities have also strongly recommended scheduling outside the high-fire-risk period, as operational restrictions grow stricter every year.&rdquo; <a href="/transparency/2026-07-30-community.html">Minutes</a>.</li>
+                            <li><span class="when">3 August 2026</span> Board votes to move the General Assembly from 3 to 17 September, specifically to allow more time to prepare the dates decision. <a href="/transparency/2026-08-03-board.html">Minutes</a>.</li>
+                            <li><span class="when">4 August 2026</span> Governance working group agrees to prepare a Swiss-style voting booklet for the decision. <a href="/transparency/2026-08-04-governance-wg.html">Minutes</a>.</li>
+                            <li><span class="when">5 August 2026</span> The candidate-window document goes to the regional authority for assessment. A response is expected around late September or October &mdash; i.e. <em>after</em> the vote.</li>
+                            <li><span class="when">2 September 2026</span> GA agenda fixed.</li>
+                            <li><span class="when">17 September 2026</span> General Assembly. Members vote.</li>
+                        </ul>
+                        <p>One consequence of that sequence is worth stating plainly: the authority&rsquo;s formal yes/no on each candidate window will most likely <strong>not be back in time</strong>. Whatever members vote on in September will be a decision made under real uncertainty, and the pack should say so rather than pretend otherwise.</p>
+                    </section>
+
+                    <section id="why">
+                        <h2>3. Why a change of dates is on the table</h2>
+                        <p>The reason is not that July is uncomfortable. It is that a specific legal mechanism now exists which can void an authorisation the association already holds, and that mechanism is live for most of the year. What follows is the formal and regulatory picture as we currently understand it.</p>
+
+                        <h3>3.1 An automatic suspension written into law</h3>
+                        <p><strong>Decreto 22/2026, de 11 de marzo</strong> (BOA no. 53, 18 March 2026). Article 4(h) provides that under a Roja Plus alert, public events in a forest environment are suspended, along with any event that could generate conditions favouring the start of a forest fire &mdash; <em>and that authorisations already granted are suspended</em> (&ldquo;<em>quedando suspendidas las autorizaciones concedidas</em>&rdquo;).</p>
+                        <p>This is not a negotiation on the day. On the reading given to us by the comarca, the permit for the camping area ceases to be valid by operation of law the moment Roja Plus is declared. The clause is new in 2026.</p>
+                        <p>A second clause is easy to overlook and matters just as much: <strong>Article 4(i)</strong> restricts motor-vehicle access to <em>montes</em> to the landowner and emergency or agricultural traffic. That alone would strand build, ingress and egress, independently of whether the event itself remained permitted.</p>
+                        <h3>3.2 The trigger is the alert level, not conditions on site</h3>
+                        <p>The regime applies because the site is <em>monte de utilidad pública</em> &mdash; public-utility forest land &mdash; within 400 m of forest mass. Nothing in it turns on measured air quality, on wind on the day, or on how well-run the event is. It fires on the published alert level for the area.</p>
+                        <p>This is why operational excellence does not solve the problem. The event can be, and has been, held up locally as an example of good practice, and still be caught by a trigger that does not look at any of that.</p>
+
+                        <h3>3.3 The mechanism has already been used, on short notice</h3>
+                        <p><em>Roja Plus</em> was declared for the first time on 16&ndash;18 August 2025. A festival at La Gabarda park was in progress. In the comarca&rsquo;s words: &ldquo;<em>Tuvo que evacuar y punto</em>&rdquo; &mdash; it had to evacuate, full stop.</p>
+                        <p>The warning window was roughly <strong>8.5 hours</strong>: declared mid-afternoon, effective 23:59 the same day. A crowd of 2,000&ndash;2,400 people cannot be moved off a desert site in that time. That is why, for Elsewhere 2026, the authorities pre-planned an evacuation: buses, Guardia Civil involvement at senior rank, Cruz Roja, and villages designated to receive people. That work was done in advance of an event that then ran without needing it &mdash; which is the point. It is contingency planning only carried out by people who expect to have to use it.</p>
+
+                        <h3>3.4 Shelter-in-place has been proposed and refused</h3>
+                        <p>The argument that confinement is objectively safer than evacuation &mdash; 2,000 people in private vehicles crossing bone-dry terrain at 40°C creates more fire risk than staying put &mdash; was made to the authorities at length. The comarca agreed with it, and said so explicitly.</p>
+                        <p>But the comarca&rsquo;s position is not the binding one. The decision sits with the Gobierno de Aragón / Medio Natural, and the provincial director&rsquo;s reported answer was &ldquo;<em>muy clara: que no</em>&rdquo; &mdash; if Roja Plus comes, you evacuate, &ldquo;<em>con la ley en la mano</em>&rdquo;, citing generators, fuel on site, kitchens, lighting and 2,000 people.</p>
+                        <p>The significant part was the direction the warning came from: the local authorities most sympathetic to the event were the ones telling us they expected to be overruled.</p>
+
+                        <h3>3.5 The exposure window is six and a half months, not one</h3>
+                        <p>Aragón&rsquo;s <em>época de peligro</em> &mdash; the fire-danger season during which Roja Plus can be declared at all &mdash; runs <strong>1 April to 15 October</strong> (Orden of 20 February 2015, extended by Orden AGM/112/2021). Daily alert levels are published from 1 June to 15 October.</p>
+                        <p>Declarations on record: 16&ndash;18 August 2025; 26&ndash;28 June 2026; and again during the 2026 event week in July &mdash; plus region-wide red alert on 24 and 30 July 2026.</p>
+                        <p>So any date from April to mid-October carries the same structural exposure &mdash; September at lower probability than July, but identical in kind. This is the single most consequential point for anyone weighing options, and it cuts against several intuitive alternatives.</p>
+
+                        <h3>3.6 Frequency is rising, and the authorities say so explicitly</h3>
+                        <p>Figures given by the comarca in June 2026: an average of two fires a day over the preceding twenty days in Los Monegros alone; six fires in Huesca province on a single Sunday. Their summary was that conditions in mid-June are now what 15 July used to look like, and that measures will keep tightening year on year.</p>
+
+                        <h3>3.7 Permitting lead times force the decision now</h3>
+                        <p>Three permissions are needed, in sequence, and only the last of them is the event permit itself:</p>
+                        <ol>
+                            <li><strong>INAGA</strong> &mdash; Aragón&rsquo;s environmental permitting body. Assesses protected species, nesting periods and whether proposed dates are compatible with the site. A three-month statutory clock, but in practice anywhere from three months to a year; an unfavourable report is binding.</li>
+                            <li><strong>CHE</strong> &mdash; the Ebro water authority. Watercourses, crossings, flood risk. A six-month clock, so if it is filed second it becomes the critical path.</li>
+                            <li><strong>Comarca de Los Monegros</strong> &mdash; the event permit, which can only be applied for once the first two are in hand.</li>
+                        </ol>
+                        <p>This is why the decision cannot be deferred until circumstances force a reaction: by the time you need to react, the paperwork window has already closed. It is also why the answers are unlikely to be back before 17 September.</p>
+                        <p>A cautionary precedent from the same body: a 19,000-person festival at the embalse de La Sotonera was declared <em>no procedente</em> by INAGA in April 2026 &mdash; not on a substantive refusal, but because a full assessment could not be concluded before the proposed August dates. The calendar stopped the event, not the merits.</p>
+
+                        <h3>3.8 What we are not claiming</h3>
+                        <p>For the sake of a fair record, three things this material does <em>not</em> establish:</p>
+                        <ul>
+                            <li>No authority has issued a formal order to move the dates. What exists is a legal mechanism, a demonstrated willingness to use it, and a strong recommendation.</li>
+                            <li>There is no published prohibition on holding events in any particular month, for fire or for wildlife reasons.</li>
+                            <li>The event was not shut down in 2026. It ran, through two Roja Plus periods, on the strength of a very large amount of largely invisible contingency work.</li>
+                        </ul>
+                        <p>The honest framing is therefore not &ldquo;we have been told to move&rdquo;. It is: an instrument exists that can void an authorisation at a few hours&rsquo; notice, it has been used, it is live for six and a half months of the year, and the probability of it firing is rising. Members are being asked whether to keep accepting that exposure, and if not, what to move to.</p>
+
+                        <h3>3.9 Separately from the law: heat</h3>
+                        <p>There is a second, quite different argument for moving, which should not be confused with the regulatory one because it stands or falls on its own evidence: that mid-July in Monegros has become hot enough to change who comes. Families and older participants in particular are reported to have stopped attending for that reason. Whether that effect is real and how large it is are exactly the sort of questions a poll of attendees can answer, and the regulatory case does not depend on the answer either way.</p>
+                    </section>
+
+                    <section id="windows">
+                        <h2>4. Candidate windows</h2>
+                        <p>The table below is reproduced from the working spreadsheet, <a href="https://docs.google.com/spreadsheets/d/1SgxJVOCgbr7i8lwuTUquFRArCk77lFQiV8oBXaPKsVg/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer">Elsewhere 2027 &mdash; date options</a>. <strong>It is preliminary desk research and has not yet been verified.</strong> Replacing the rough fire-risk figures with something more rigorous is one of the named tasks for the information pack.</p>
+                        <p>The &ldquo;risk&rdquo; column is a rough score for the chance of the event being cancelled or evacuated in a given year; the scale is set out underneath. Temperatures are typical/extreme values for the week, not forecasts.</p>
+
+                        <div class="table-wrap">
+                            <table class="research-table">
+                                <thead>
+                                    <tr>
+                                        <th>Week</th>
+                                        <th>Typical day</th>
+                                        <th>Max day</th>
+                                        <th>Typical night</th>
+                                        <th>Lowest night</th>
+                                        <th>Daily rain</th>
+                                        <th>Week rain</th>
+                                        <th>Precip.</th>
+                                        <th>Risk</th>
+                                        <th class="wrap">Clashes with</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>3&ndash;9 May 2027</td><td>22&ndash;25°C</td><td>≈31°C</td><td>14&ndash;17°C</td><td>8&ndash;11°C</td><td>27%</td><td>89%</td><td>32.5 mm</td><td><span class="risk-pill risk-low">1.5</span></td><td class="wrap">AfrikaBurn (26 Apr&ndash;2 May)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10&ndash;16 May 2027</td><td>23&ndash;26°C</td><td>≈33°C</td><td>15&ndash;18°C</td><td>9&ndash;12°C</td><td>25%</td><td>87%</td><td>32.5 mm</td><td><span class="risk-pill risk-low">2</span></td><td class="wrap">&mdash;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17&ndash;23 May 2027</td><td>24&ndash;27°C</td><td>≈35°C</td><td>16&ndash;19°C</td><td>10&ndash;13°C</td><td>24%</td><td>85%</td><td>32.5 mm</td><td><span class="risk-pill risk-low">2.5</span></td><td class="wrap">&mdash;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>24&ndash;30 May 2027</td><td>26&ndash;29°C</td><td>≈36°C</td><td>17&ndash;21°C</td><td>12&ndash;15°C</td><td>22%</td><td>82%</td><td>32.5 mm</td><td><span class="risk-pill risk-mid">3</span></td><td class="wrap">Burning Nest (24&ndash;31), Crème Brûlée (late May), Flamingalo (24&ndash;30 May)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>31 May&ndash;6 Jun 2027</td><td>27&ndash;30°C</td><td>≈37°C</td><td>18&ndash;22°C</td><td>13&ndash;16°C</td><td>21%</td><td>81%</td><td>25.7 mm</td><td><span class="risk-pill risk-mid">3.5</span></td><td class="wrap">Somewhere (no dates confirmed; last event 2024)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7&ndash;13 Jun 2027</td><td>28&ndash;31°C</td><td>38.5°C</td><td>19&ndash;23°C</td><td>14&ndash;17°C</td><td>19%</td><td>77%</td><td>25.7 mm</td><td><span class="risk-pill risk-mid">4.5</span></td><td class="wrap">Burning Bär (10&ndash;13 Jun)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14&ndash;20 Jun 2027</td><td>29&ndash;32°C</td><td>≈40°C</td><td>20&ndash;24°C</td><td>15&ndash;18°C</td><td>17%</td><td>73%</td><td>25.7 mm</td><td><span class="risk-pill risk-high">5.5</span></td><td class="wrap">Aarhus Burns (mid-Jun), Where the Sheep Sleep (17&ndash;21), Bivrost (17&ndash;20), Degošie Jāņi (18&ndash;22)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>21&ndash;27 Jun 2027</td><td>31&ndash;34°C</td><td>≈41°C</td><td>22&ndash;25°C</td><td>17&ndash;20°C</td><td>15%</td><td>68%</td><td>25.7 mm</td><td><span class="risk-pill risk-high">6.5</span></td><td class="wrap">Kiez Burn (22&ndash;28 Jun)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>28 Jun&ndash;4 Jul 2027</td><td>32&ndash;35°C</td><td>≈42°C</td><td>23&ndash;26°C</td><td>18&ndash;21°C</td><td>12%</td><td>59%</td><td>21.3 mm</td><td><span class="risk-pill risk-max">7.5</span></td><td class="wrap">&mdash;</td>
+                                    </tr>
+                                    <tr class="is-current">
+                                        <td>5&ndash;11 Jul 2027 <strong>(current slot)</strong></td><td>33&ndash;36°C</td><td>≈42°C</td><td>24&ndash;27°C</td><td>19&ndash;22°C</td><td>10%</td><td>52%</td><td>21.3 mm</td><td><span class="risk-pill risk-max">8</span></td><td class="wrap">&mdash;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12&ndash;31 Jul 2027</td><td>33&ndash;36°C</td><td>≈43°C</td><td>24&ndash;28°C</td><td>19&ndash;23°C</td><td>8%</td><td>44%</td><td>21.3 mm</td><td><span class="risk-pill risk-max">9</span></td><td class="wrap">Borderlands (26 Jul&ndash;1 Aug), Celtic Burn (late Jul), RoBurn (end Jul&ndash;Aug)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>August 2027</td><td>32&ndash;35°C</td><td>≈42°C</td><td>23&ndash;27°C</td><td>18&ndash;22°C</td><td>10%</td><td>52%</td><td>15 mm</td><td><span class="risk-pill risk-max">9</span></td><td class="wrap">Schönburn (4&ndash;8 Aug)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1&ndash;19 Sep 2027</td><td>28&ndash;32°C</td><td>≈39°C</td><td>20&ndash;24°C</td><td>15&ndash;19°C</td><td>16%</td><td>70%</td><td>25.4 mm</td><td><span class="risk-pill risk-max">7.5</span></td><td class="wrap">Burning Man (29 Aug&ndash;6 Sep), Arctic Burn (early Sep), Pyraegea (12&ndash;22 Sep)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20&ndash;26 Sep 2027</td><td>25&ndash;28°C</td><td>≈35°C</td><td>18&ndash;21°C</td><td>12&ndash;15°C</td><td>22%</td><td>82%</td><td>25.4 mm</td><td><span class="risk-pill risk-high">5</span></td><td class="wrap">Microburn (9&ndash;13 Sep)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>27 Sep&ndash;3 Oct 2027</td><td>23&ndash;27°C</td><td>≈34°C</td><td>16&ndash;20°C</td><td>10&ndash;14°C</td><td>24%</td><td>85%</td><td>42.4 mm</td><td><span class="risk-pill risk-mid">4</span></td><td class="wrap">&mdash;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4&ndash;10 Oct 2027</td><td>21&ndash;25°C</td><td>≈31°C</td><td>14&ndash;18°C</td><td>8&ndash;12°C</td><td>25%</td><td>87%</td><td>42.4 mm</td><td><span class="risk-pill risk-mid">3</span></td><td class="wrap">&mdash;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11&ndash;17 Oct 2027</td><td>19&ndash;23°C</td><td>≈29°C</td><td>12&ndash;16°C</td><td>7&ndash;11°C</td><td>27%</td><td>89%</td><td>42.4 mm</td><td><span class="risk-pill risk-low">2</span></td><td class="wrap">&mdash;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h4>How to read the risk score</h4>
+                        <div class="table-wrap">
+                            <table class="research-table">
+                                <thead>
+                                    <tr><th>Score</th><th>Rough annual cancellation probability</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>2</td><td>About 3&ndash;5%</td></tr>
+                                    <tr><td>3</td><td>About 5&ndash;10%</td></tr>
+                                    <tr><td>4</td><td>About 10&ndash;15%</td></tr>
+                                    <tr><td>5</td><td>About 15&ndash;25%</td></tr>
+                                    <tr><td>6</td><td>About 25&ndash;35%</td></tr>
+                                    <tr><td>7</td><td>About 35&ndash;45%</td></tr>
+                                    <tr><td>8</td><td>About 50%</td></tr>
+                                    <tr><td>9</td><td>About 60&ndash;70%</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>These figures are a first-pass estimate, not a modelled result, and they are the numbers most in need of replacement before the vote. Treat them as an indication of shape &mdash; risk falling steeply either side of high summer &mdash; rather than as reliable percentages.</p>
+                        <p>Note also that the table&rsquo;s low-risk spring weeks sit inside the most sensitive part of the wildlife calendar (see section 6), and the low-risk October weeks bring rainfall roughly double the July figure onto a site with no hard standing. No window is clean on every axis.</p>
+
+                        <h4>Constraints the table does not capture</h4>
+                        <ul>
+                            <li><strong>May and early June:</strong> local advice is that May is historically the wettest month in Monegros &mdash; over 100 litres recorded &mdash; and that it is peak harvest season, with tractors and harvesters on the same access roads. These windows have deliberately been kept in the list submitted for assessment, so that information comes back on every option rather than only the pre-selected ones.</li>
+                            <li><strong>Late September and October:</strong> this is the peak <em>DANA</em> / <em>gota fría</em> window in the Ebro basin. At a site defined by converging <em>barrancos</em>, that is a different kind of risk rather than an absence of risk, and it is the water authority&rsquo;s domain rather than the fire regime&rsquo;s.</li>
+                            <li><strong>School and academic calendars:</strong> moving further into the academic year has been raised as a constraint for participants with children, and for teachers and students. This has not been quantified.</li>
+                            <li><strong>Build and strike:</strong> the event week is not the whole footprint. Build begins roughly three weeks before and strike ends roughly ten days after, so any window drags a five-to-six week envelope behind it &mdash; which is what the authorities assess, and what a June event would push into May.</li>
+                        </ul>
+                    </section>
+
+                    <section id="burns">
+                        <h2>5. Other European burns</h2>
+                        <p>Part of the work in progress is contacting other events directly &mdash; both to understand how a move would affect their communities and ours, and because several of them have moved their own dates in the past and can say what happened. The responses will go into the information pack; this table is only the calendar as currently mapped.</p>
+
+                        <div class="table-wrap">
+                            <table class="research-table">
+                                <thead>
+                                    <tr><th>Event</th><th class="wrap">Where</th><th>2026 dates</th><th>Likely 2027</th><th class="wrap">Notes</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Burning Nest</td><td class="wrap">Devon, UK</td><td>18&ndash;25 May</td><td>~24&ndash;31 May</td><td class="wrap">Ends on the UK late-May bank holiday</td></tr>
+                                    <tr><td>Crème Brûlée</td><td class="wrap">France</td><td>~27&ndash;31 May</td><td>~late May</td><td class="wrap">No official site found</td></tr>
+                                    <tr><td>Flamingalo</td><td class="wrap">Alentejo, Portugal</td><td>27&ndash;31 May</td><td>~late May</td><td class="wrap">&mdash;</td></tr>
+                                    <tr><td>Somewhere</td><td class="wrap">Deão (Porto), Portugal</td><td>TBA</td><td>Unknown</td><td class="wrap">2024 ran 30 May&ndash;5 Jun; dates unstable</td></tr>
+                                    <tr><td>Art Bär</td><td class="wrap">Auerstedt, Germany</td><td>11&ndash;14 Jun</td><td>~mid-June</td><td class="wrap">~50&ndash;100 people</td></tr>
+                                    <tr><td>Aarhus Burns</td><td class="wrap">Aarhus, Denmark</td><td>14&ndash;21 Jun</td><td>~mid-June</td><td class="wrap">No official site found</td></tr>
+                                    <tr><td>Where the Sheep Sleep</td><td class="wrap">Zeewolde, Netherlands</td><td>18&ndash;22 Jun</td><td>~17&ndash;21 Jun</td><td class="wrap">Official Burning Man Netherlands event</td></tr>
+                                    <tr><td>Bivrost</td><td class="wrap">Snartemo, Norway</td><td>18&ndash;21 Jun</td><td>~mid-June</td><td class="wrap">Aka Nordic Burn</td></tr>
+                                    <tr><td>Degošie Jāņi</td><td class="wrap">Latvia</td><td>19&ndash;22 Jun</td><td>~18&ndash;22 Jun</td><td class="wrap">Pinned to midsummer &mdash; will not move</td></tr>
+                                    <tr><td>Kiez Burn</td><td class="wrap">near Berlin, Germany</td><td>23&ndash;29 Jun</td><td>~22&ndash;28 Jun</td><td class="wrap">&mdash;</td></tr>
+                                    <tr><td>Celtic Burn</td><td class="wrap">Lake District, UK</td><td>20&ndash;27 Jul</td><td>~19&ndash;26 Jul</td><td class="wrap">Small; sells out</td></tr>
+                                    <tr><td>The Borderland</td><td class="wrap">Boesdal, Denmark</td><td>20&ndash;26 Jul</td><td>26 Jul&ndash;1 Aug</td><td class="wrap">Largest European burn</td></tr>
+                                    <tr><td>RoBurn</td><td class="wrap">Dolj County, Romania</td><td>27 Jul&ndash;3 Aug</td><td>~late Jul&ndash;early Aug</td><td class="wrap">Official Burning Man regional</td></tr>
+                                    <tr><td>Schönburn</td><td class="wrap">Böllerbauer, Austria</td><td>5&ndash;9 Aug</td><td>~early Aug</td><td class="wrap">Austrian regional</td></tr>
+                                    <tr><td>Arctic Burn</td><td class="wrap">Kola Peninsula, Russia</td><td>9&ndash;12 Sep</td><td>~early Sep</td><td class="wrap">Tiny and remote</td></tr>
+                                    <tr><td>Microburn</td><td class="wrap">Powys, Wales</td><td>~10&ndash;14 Sep</td><td>~mid-Sep</td><td class="wrap">&mdash;</td></tr>
+                                    <tr><td>Pyraegea</td><td class="wrap">Greece</td><td>12&ndash;22 Sep</td><td>~mid-Sep</td><td class="wrap">&ldquo;The Greek Water Burn&rdquo;</td></tr>
+                                    <tr><td>Midburn</td><td class="wrap">Negev, Israel</td><td>late Nov (TBA)</td><td>Likely late Nov</td><td class="wrap">Outside the window, but large community overlap</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Two things this table cannot tell you, and which the outreach is meant to: how much attendance actually overlaps between events, and how the communities that have moved dates before were affected when they did.</p>
+                    </section>
+
+                    <section id="birds">
+                        <h2>6. Bird nesting and environmental constraints</h2>
+                        <p>Fire is not the only regulated axis. The area holds protected species &mdash; notably the lesser kestrel (<em>cernícalo primilla</em>) and Dupont&rsquo;s lark (<em>alondra ricotí</em>) &mdash; whose breeding seasons fall across spring and early summer, and the permitting authority holds a discretionary power to condition or restrict organised events in designated critical areas where they could affect reproduction.</p>
+                        <p>The practical consequence is that <strong>moving earlier does not simply trade heat for safety</strong>: April to June is the most sensitive part of the wildlife calendar as well as being inside the fire season. We are currently working through the nesting schedules and the mapped protected-area overlaps <strong>for both the established site and the proposed new site</strong>, which have different exposures and cannot be assumed to behave the same way.</p>
+                        <p>This work is preliminary and unverified. It will form part of the information pack once it is firmer.</p>
+                        <ul class="source-list">
+                            <li><a href="/inaga-monegros-bird-nesting.html">INAGA and bird-nesting periods in Monegros</a> &mdash; the current draft research note, with the mapped distances to protected areas for both sites</li>
+                        </ul>
+                    </section>
+
+                    <section id="unknowns">
+                        <h2>7. What we do not know yet</h2>
+                        <p>An honest list of the gaps, since this page exists to show the work rather than the conclusion:</p>
+                        <ul>
+                            <li><strong>The authority&rsquo;s answer.</strong> Candidate windows went in on 5 August; a yes/no per window is expected late September or October, most likely after the vote.</li>
+                            <li><strong>Verified fire-risk figures.</strong> The risk column above is desk research. Replacing it with something defensible is an open task.</li>
+                            <li><strong>What attendees would actually do.</strong> Polling has not yet been run. A window that is legally and environmentally ideal but which most people cannot attend is not a solution.</li>
+                            <li><strong>What other burns say.</strong> Outreach is under way; no responses are reflected here yet.</li>
+                            <li><strong>Which site.</strong> Feasibility work on a possible new site is a separate workstream at an early stage, with a go/no-go requested by 1 December. It interacts with the dates question &mdash; the two sites have different environmental exposures and would need separate assessments &mdash; but it does not settle it, and the fire regime is not more favourable at the new site.</li>
+                            <li><strong>Costs of moving.</strong> Supplier availability, staff availability, and the commercial effect of a move on ticket sales have not been quantified.</li>
+                        </ul>
+                    </section>
+
+                    <section id="sources">
+                        <h2>8. Where this material comes from</h2>
+                        <p>So that the reliability of each part can be judged separately:</p>
+                        <ul>
+                            <li><strong>Sections 1, 2 and the governance detail</strong> &mdash; published board, community-call and governance working-group minutes, all available on the <a href="/transparency.html">transparency page</a>.</li>
+                            <li><strong>Section 3.1&ndash;3.6</strong> &mdash; the meeting with the Comarca de Los Monegros on 17 June 2026 (Spanish transcript), plus the published decree and alert records. The decree and its substance are confirmed against the official gazette; the specific article letters are not, so verify them before relying on the exact citation. Quoted remarks are translations from the June meeting.</li>
+                            <li><strong>Section 3.7 and section 6</strong> &mdash; published regulatory sources (Aragón species catalogues, INAGA resolutions, water-authority rules), researched at the start of August 2026 and not yet reviewed by anyone with formal legal standing.</li>
+                            <li><strong>Section 4</strong> &mdash; a working spreadsheet built from preliminary desk research. The fire-risk column in particular is a first-pass estimate and is explicitly queued for replacement.</li>
+                            <li><strong>Section 5</strong> &mdash; publicly listed dates for other events, compiled by hand and not yet confirmed with the organisers.</li>
+                        </ul>
+                        <p>None of it has been through legal review. Where a claim matters to how you would vote, follow it to its source and check it &mdash; and if you find something wrong, please say so, because it is much cheaper to fix now than after the pack is printed.</p>
+                    </section>
+
+                    <section id="taking-part">
+                        <h2>9. Taking part</h2>
+                        <p>The dates conversation lives in <strong><a href="https://discord.gg/kNC3JnRvYB" target="_blank" rel="noopener noreferrer">#&#128198;-event-dates</a></strong> on Discord. That is the place to ask a question, challenge something on this page, or say which windows would and would not work for you.</p>
+                        <p>The information pack also needs hands. The named gaps &mdash; contacting other events, firming up the fire-risk data, formatting the booklet, running the attendee poll &mdash; are all work that can be shared.</p>
+                        <ul>
+                            <li><strong>Contacting other burns</strong> &mdash; <strong>Peter K</strong> (<code>peter_k_nowhere</code> on Discord) is coordinating this. There are a lot of events to reach and it is the single biggest job; talk to him before starting, so two people don&rsquo;t write to the same organisers.</li>
+                            <li><strong>Anything else on the pack</strong> &mdash; <strong>Daniel</strong> (<code>@swombat</code> on Discord) or <strong>Celine Valerie</strong> (<code>celini.valerie</code> on Discord).</li>
+                        </ul>
+                        <p><strong>If you want to vote, check now that you actually can.</strong> Only <em>asociados</em> &mdash; members of the association &mdash; have a vote at the General Assembly. Log in to <a href="https://humans.nobodies.team" target="_blank" rel="noopener noreferrer">humans.nobodies.team</a> and confirm your status shows as <em>asociado</em>. Being on a mailing list, holding a ticket, or having volunteered does not make you one.</p>
+                        <p>If you are not an <em>asociado</em> and you think you <a href="/faq.html#en-roles">qualify</a>, apply &mdash; it is what gives you the vote. Applications approved after the assembly is formally called still count for it, so there is time, but the board has to approve each one and that is not instant. Doing it early is better than doing it on 16 September.</p>
+                        <ul class="source-list">
+                            <li><a href="https://discord.gg/kNC3JnRvYB" target="_blank" rel="noopener noreferrer">Discord &mdash; #&#128198;-event-dates</a></li>
+                            <li><a href="/transparency.html">Transparency &mdash; all board, community and working-group minutes</a></li>
+                            <li><a href="https://humans.nobodies.team" target="_blank" rel="noopener noreferrer">Humans &mdash; membership</a></li>
+                            <li><a href="https://docs.google.com/spreadsheets/d/1SgxJVOCgbr7i8lwuTUquFRArCk77lFQiV8oBXaPKsVg/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer">Working spreadsheet &mdash; date options, other burns, reasons</a></li>
+                        </ul>
+                    </section>
+
+                    <section id="bottom-line">
+                        <div class="bottom-line">
+                            <h2>In one paragraph</h2>
+                            <p>A change in Aragonese law in March 2026 means a Roja Plus fire alert now automatically suspends the authorisations the event depends on, at a few hours&rsquo; notice, with evacuation rather than shelter-in-place as the authorities&rsquo; stated expectation. That alert can be declared at any point between 1 April and 15 October, it has been declared three times in the last two summers &mdash; twice around this year&rsquo;s event &mdash; and its frequency is rising. The General Assembly will be asked on 17 September whether to keep the early-July slot regardless, or move &mdash; and every alternative window carries its own costs, on wildlife, on weather, on clashes with other events, and on who can actually come. This page is the working state of that assessment. The readable version, with the case for and against each option, will follow in good time before the vote.</p>
+                        </div>
+                    </section>
+
+                </article>
+
+                <aside class="research-toc">
+                    <h2>On this page</h2>
+                    <ol>
+                        <li><a href="#decision">What is being decided</a></li>
+                        <li><a href="#timeline">Timeline</a></li>
+                        <li><a href="#why">Why a change is on the table</a></li>
+                        <li><a href="#windows">Candidate windows</a></li>
+                        <li><a href="#burns">Other European burns</a></li>
+                        <li><a href="#birds">Bird nesting</a></li>
+                        <li><a href="#unknowns">What we do not know yet</a></li>
+                        <li><a href="#sources">Where this comes from</a></li>
+                        <li><a href="#taking-part">Taking part</a></li>
+                    </ol>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <div id="shared-footer"></div>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
