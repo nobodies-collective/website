@@ -311,42 +311,34 @@
             + "</svg>";
     }
 
-    function weeklyCumulative(rows) {
+    function weeklyAlertCounts(rows) {
         const years = [2023, 2024, 2025, 2026];
         const selected = rows.filter((row) => (
             row.week_start_2027 >= "2027-05-31"
             && row.week_start_2027 <= "2027-08-16"
         ));
-        const running = Object.fromEntries(years.map((year) => [
-            year,
-            { red: 0, red_plus: 0 },
-        ]));
-        const cumulative = selected.map((row) => ({
+        const weekly = selected.map((row) => ({
             row,
             values: Object.fromEntries(years.map((year) => {
                 const available = Number(row[`${year}_days_available`]);
-                if (available) {
-                    running[year].red += Number(row[`${year}_red`]);
-                    running[year].red_plus += Number(row[`${year}_red_plus`]);
-                }
                 return [year, {
                     available,
-                    red: running[year].red,
-                    red_plus: running[year].red_plus,
+                    red: Number(row[`${year}_red`]),
+                    red_plus: Number(row[`${year}_red_plus`]),
                 }];
             })),
         }));
-        return { years, cumulative };
+        return { years, weekly };
     }
 
-    function renderWeeklyMobile(target, years, cumulative, ceiling, ticks) {
+    function renderWeeklyMobile(target, years, weekly, ceiling, ticks) {
         const width = Math.max(280, Math.round(target.clientWidth || 360));
         const margin = { top: 28, right: 12, bottom: 45, left: 42 };
         const labelWidth = 48;
         const groupHeight = 104;
         const plotLeft = margin.left + labelWidth;
         const plotWidth = width - plotLeft - margin.right;
-        const plotHeight = cumulative.length * groupHeight;
+        const plotHeight = weekly.length * groupHeight;
         const height = margin.top + plotHeight + margin.bottom;
 
         const verticalGrid = ticks.map((value) => {
@@ -355,7 +347,7 @@
                 + `<text x="${x}" y="16" text-anchor="middle">${value}</text>`;
         }).join("");
 
-        const groups = cumulative.map(({ row, values }, weekIndex) => {
+        const groups = weekly.map(({ row, values }, weekIndex) => {
             const top = margin.top + weekIndex * groupHeight;
             const start = dateFromIso(row.week_start_2027);
             const week = `${start.getUTCDate()} ${month.format(start)}`;
@@ -380,12 +372,14 @@
                 const totalLabel = total
                     ? `<text class="value-label" x="${Math.min(plotLeft + redWidth + redPlusWidth + 5, width - 10)}" y="${y + 10}">${total}</text>`
                     : "";
+                const redDayLabel = value.red === 1 ? "day" : "days";
+                const redPlusDayLabel = value.red_plus === 1 ? "day" : "days";
                 return `<g${partialClass}>`
                     + `<text x="${margin.left}" y="${y + 10}" text-anchor="start">${String(year).slice(2)}</text>`
                     + `<rect x="${plotLeft}" y="${y}" width="${redWidth}" height="11" fill="${chartColors.red}">`
-                    + `<title>${year}: ${value.red} cumulative Red days${note}</title></rect>`
+                    + `<title>${year}: ${value.red} Red ${redDayLabel} in this week${note}</title></rect>`
                     + `<rect x="${plotLeft + redWidth}" y="${y}" width="${redPlusWidth}" height="11" fill="${chartColors.red_plus}">`
-                    + `<title>${year}: ${value.red_plus} cumulative Red Plus days${note}</title></rect>`
+                    + `<title>${year}: ${value.red_plus} Red Plus ${redPlusDayLabel} in this week${note}</title></rect>`
                     + totalLabel
                     + "</g>";
             }).join("");
@@ -395,26 +389,26 @@
         }).join("");
 
         target.innerHTML = `<svg class="evidence-chart" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="napif-week-title napif-week-desc">`
-            + '<title id="napif-week-title">Cumulative Red and Red Plus alert days by week and year</title>'
-            + '<desc id="napif-week-desc">Horizontal grouped stacked bars show the running total of Red and Red Plus days from 1 June through each candidate week, for 2023 through 2026.</desc>'
+            + '<title id="napif-week-title">Red and Red Plus alert days in each week, by year</title>'
+            + '<desc id="napif-week-desc">Horizontal grouped stacked bars show the number of Red and Red Plus days within each candidate week, for 2023 through 2026.</desc>'
             + verticalGrid
             + groups
             + `<text x="${margin.left}" y="${height - 12}">Years shown as 23 / 24 / 25 / 26</text>`
             + "</svg>";
     }
 
-    function renderWeeklyDesktop(target, years, cumulative, ceiling, ticks) {
+    function renderWeeklyDesktop(target, years, weekly, ceiling, ticks) {
         const width = Math.max(700, Math.round(target.clientWidth || 1100));
         const height = Math.max(390, Math.min(480, Math.round(width * 0.42)));
         const margin = { top: 20, right: 20, bottom: 105, left: 52 };
         const plotWidth = width - margin.left - margin.right;
         const plotHeight = height - margin.top - margin.bottom;
-        const groupWidth = plotWidth / cumulative.length;
+        const groupWidth = plotWidth / weekly.length;
         const gap = 3;
         const barWidth = Math.max(6, Math.min(17, (groupWidth - 8 - gap * 3) / 4));
         const barsWidth = barWidth * 4 + gap * 3;
 
-        const groups = cumulative.map(({ row, values }, weekIndex) => {
+        const groups = weekly.map(({ row, values }, weekIndex) => {
             const groupLeft = margin.left + weekIndex * groupWidth + (groupWidth - barsWidth) / 2;
             const columns = years.map((year, yearIndex) => {
                 const value = values[year];
@@ -435,11 +429,13 @@
                 const valueLabel = total
                     ? `<text class="value-label" x="${x + barWidth / 2}" y="${Math.max(baseY - redHeight - redPlusHeight - 5, 12)}" text-anchor="middle">${total}</text>`
                     : "";
+                const redDayLabel = value.red === 1 ? "day" : "days";
+                const redPlusDayLabel = value.red_plus === 1 ? "day" : "days";
                 return `<g${partialClass}>`
                     + `<rect x="${x}" y="${baseY - redHeight}" width="${barWidth}" height="${redHeight}" fill="${chartColors.red}">`
-                    + `<title>${year}: ${value.red} cumulative Red days${note}</title></rect>`
+                    + `<title>${year}: ${value.red} Red ${redDayLabel} in this week${note}</title></rect>`
                     + `<rect x="${x}" y="${baseY - redHeight - redPlusHeight}" width="${barWidth}" height="${redPlusHeight}" fill="${chartColors.red_plus}">`
-                    + `<title>${year}: ${value.red_plus} cumulative Red Plus days${note}</title></rect>`
+                    + `<title>${year}: ${value.red_plus} Red Plus ${redPlusDayLabel} in this week${note}</title></rect>`
                     + valueLabel
                     + "</g>";
             }).join("");
@@ -454,11 +450,11 @@
         }).join("");
 
         target.innerHTML = `<svg class="evidence-chart wide" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="napif-week-title napif-week-desc">`
-            + '<title id="napif-week-title">Cumulative Red and Red Plus alert days by week and year</title>'
-            + '<desc id="napif-week-desc">Grouped stacked columns show the running total of Red and Red Plus days from 1 June through each candidate week, for 2023 through 2026.</desc>'
+            + '<title id="napif-week-title">Red and Red Plus alert days in each week, by year</title>'
+            + '<desc id="napif-week-desc">Grouped stacked columns show the number of Red and Red Plus days within each candidate week, for 2023 through 2026.</desc>'
             + gridMarkup(ticks, ceiling, margin.left, margin.top, plotWidth, plotHeight)
             + `<line class="axis-line" x1="${margin.left}" y1="${margin.top + plotHeight}" x2="${margin.left + plotWidth}" y2="${margin.top + plotHeight}"></line>`
-            + `<text class="axis-label" x="15" y="${margin.top + plotHeight / 2}" text-anchor="middle" transform="rotate(-90 15 ${margin.top + plotHeight / 2})">Cumulative alert days</text>`
+            + `<text class="axis-label" x="15" y="${margin.top + plotHeight / 2}" text-anchor="middle" transform="rotate(-90 15 ${margin.top + plotHeight / 2})">Alert days in week</text>`
             + groups
             + `<text x="${margin.left}" y="${height - 10}">Small labels identify year: 23 / 24 / 25 / 26</text>`
             + "</svg>";
@@ -467,15 +463,15 @@
     function renderWeeklyChart(rows) {
         const target = document.querySelector("#napif-week-chart");
         if (!target) return;
-        const { years, cumulative } = weeklyCumulative(rows);
-        const largest = Math.max(...cumulative.flatMap(({ values }) => years.map(
+        const { years, weekly } = weeklyAlertCounts(rows);
+        const largest = Math.max(...weekly.flatMap(({ values }) => years.map(
             (year) => values[year].available ? values[year].red + values[year].red_plus : 0
         )));
         const { ceiling, ticks } = chartTicks(largest);
         if (target.clientWidth < 700) {
-            renderWeeklyMobile(target, years, cumulative, ceiling, ticks);
+            renderWeeklyMobile(target, years, weekly, ceiling, ticks);
         } else {
-            renderWeeklyDesktop(target, years, cumulative, ceiling, ticks);
+            renderWeeklyDesktop(target, years, weekly, ceiling, ticks);
         }
     }
 
