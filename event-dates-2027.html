@@ -228,11 +228,12 @@
             text-align: left;
             vertical-align: top;
             line-height: 1.5;
-            white-space: nowrap;
+            white-space: normal;
+            overflow-wrap: anywhere;
         }
 
         .research-table td.wrap,
-        .research-table th.wrap { white-space: normal; min-width: 190px; }
+        .research-table th.wrap { white-space: normal; }
 
         .research-table th {
             background: var(--color-bg-alt);
@@ -251,20 +252,182 @@
             font-weight: 500;
         }
 
-        .risk-pill {
-            display: inline-block;
-            min-width: 2.1rem;
-            padding: 0.12rem 0.45rem;
-            border-radius: 999px;
-            text-align: center;
-            font-size: 0.8rem;
+        .research-table tr.total-row td {
+            background: var(--color-bg-alt);
+            border-top: 2px solid var(--color-border);
+            color: var(--color-text);
             font-weight: 600;
         }
 
-        .risk-low { background: #dcfce7; color: #166534; }
-        .risk-mid { background: #fef3c7; color: #92400e; }
-        .risk-high { background: #fed7aa; color: #9a3412; }
-        .risk-max { background: #fecaca; color: #991b1b; }
+        .chart-grid {
+            display: grid;
+            gap: 1.25rem;
+            margin: 1.25rem 0 2rem;
+        }
+
+        .chart-card {
+            margin: 0;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.24);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+        }
+
+        .chart-card h4 {
+            margin: 0 0 0.7rem;
+            color: var(--color-text);
+            font-size: 1rem;
+        }
+
+        .chart-scroll {
+            width: 100%;
+            overflow: hidden;
+            padding-bottom: 0.35rem;
+        }
+
+        .evidence-chart {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .evidence-chart text {
+            fill: var(--color-text-muted);
+            font-family: Inter, sans-serif;
+            font-size: 12px;
+        }
+
+        .evidence-chart .axis-label {
+            fill: var(--color-text);
+            font-weight: 600;
+        }
+
+        .evidence-chart .grid-line {
+            stroke: var(--color-border);
+            stroke-width: 1;
+        }
+
+        .evidence-chart .axis-line {
+            stroke: var(--color-text-muted);
+            stroke-width: 1;
+        }
+
+        .evidence-chart .value-label {
+            fill: var(--color-text);
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .evidence-chart .is-partial { opacity: 0.55; }
+
+        .chart-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem 1rem;
+            margin: 0 0 0.75rem;
+            color: var(--color-text-muted);
+            font-size: 0.8rem;
+        }
+
+        .chart-key {
+            display: inline-flex;
+            gap: 0.4rem;
+            align-items: center;
+        }
+
+        .chart-swatch {
+            width: 0.8rem;
+            height: 0.8rem;
+            border-radius: 2px;
+        }
+
+        .chart-card figcaption {
+            margin-top: 0.65rem;
+            color: var(--color-text-muted);
+            font-size: 0.82rem;
+            line-height: 1.55;
+        }
+
+        .evidence-note {
+            margin: 1.1rem 0 1.5rem;
+            padding: 1rem 1.15rem;
+            background: rgba(122, 139, 106, 0.1);
+            border: 1px solid rgba(122, 139, 106, 0.25);
+            border-radius: var(--radius);
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+            line-height: 1.65;
+        }
+
+        .evidence-note p { margin-bottom: 0.55rem; }
+        .evidence-note p:last-child { margin-bottom: 0; }
+
+        .source-chip {
+            display: inline-block;
+            margin: 0.15rem 0.2rem 0.15rem 0;
+            padding: 0.22rem 0.55rem;
+            background: var(--color-bg-alt);
+            border: 1px solid var(--color-border);
+            border-radius: 999px;
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+
+        .level-key {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem 0.9rem;
+            margin: 0.75rem 0;
+            color: var(--color-text-muted);
+            font-size: 0.82rem;
+        }
+
+        .alert-counts {
+            font-variant-numeric: tabular-nums;
+            font-weight: 600;
+        }
+
+        .data-na { color: var(--color-text-muted); font-style: italic; }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted currentColor;
+            cursor: help;
+        }
+
+        .tooltip-panel {
+            position: absolute;
+            z-index: 20;
+            left: 50%;
+            bottom: calc(100% + 0.55rem);
+            width: max-content;
+            max-width: min(320px, 75vw);
+            padding: 0.65rem 0.75rem;
+            transform: translateX(-50%);
+            background: #2c2418;
+            border-radius: 7px;
+            color: #fff;
+            font-size: 0.76rem;
+            font-weight: 400;
+            line-height: 1.45;
+            white-space: normal;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.15s ease;
+        }
+
+        .tooltip:hover .tooltip-panel,
+        .tooltip:focus .tooltip-panel {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .research-table small {
+            color: var(--color-text-muted);
+            font-size: 0.72rem;
+        }
 
         .timeline {
             list-style: none;
@@ -337,8 +500,68 @@
             .research-page { padding-top: 2.5rem; }
             .summary-grid { grid-template-columns: 1fr; }
             .research-toc ol { columns: 1; }
-            .research-table th,
-            .research-table td { padding: 0.65rem 0.7rem; }
+            .chart-card { padding: 0.8rem; }
+            .chart-legend { gap: 0.35rem 0.7rem; }
+            .evidence-chart text { font-size: 10px; }
+            .evidence-chart .value-label { font-size: 9px; }
+
+            .table-wrap {
+                overflow: visible;
+                border: 0;
+                border-radius: 0;
+            }
+
+            .research-table,
+            .research-table tbody,
+            .research-table tr,
+            .research-table td {
+                display: block;
+                width: 100%;
+            }
+
+            .research-table thead {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                white-space: nowrap;
+                border: 0;
+            }
+
+            .research-table tr {
+                margin-bottom: 0.85rem;
+                overflow: hidden;
+                background: rgba(255, 255, 255, 0.2);
+                border: 1px solid var(--color-border);
+                border-radius: var(--radius);
+            }
+
+            .research-table td,
+            .research-table td.wrap {
+                display: grid;
+                grid-template-columns: minmax(7.5rem, 40%) minmax(0, 1fr);
+                gap: 0.7rem;
+                min-width: 0;
+                padding: 0.65rem 0.7rem;
+                white-space: normal;
+                overflow-wrap: anywhere;
+            }
+
+            .research-table td::before {
+                content: attr(data-label);
+                color: var(--color-text);
+                font-size: 0.68rem;
+                font-weight: 700;
+                letter-spacing: 0.035em;
+                line-height: 1.4;
+                text-transform: uppercase;
+            }
+
+            .research-table td:empty { display: none; }
+            .research-table tr.total-row td { border-top: 0; }
             .bottom-line { padding: 1.4rem; }
         }
     </style>
@@ -356,7 +579,7 @@
                     <h1>Event Dates 2027: what we know so far</h1>
                     <p class="research-deck">The General Assembly will be asked on 17 September 2026 whether to move the event out of its established early-July slot. This page collects the material that exists today, while it is still incomplete.</p>
                     <div class="research-meta">
-                        <span><strong>Last updated:</strong> 6 August 2026</span>
+                        <span><strong>Last updated:</strong> 10 August 2026</span>
                         <span><strong>Decision:</strong> General Assembly, 17 September 2026</span>
                         <span><strong>Status:</strong> Work in progress</span>
                     </div>
@@ -408,14 +631,125 @@
                         <p>Advance voting is expected to open a few days before the assembly, so members who cannot attend on the night can still vote. Only members of the association vote; applications approved after the assembly is called still count. Wider community polls will inform the vote without being the vote.</p>
                     </section>
 
+                    <section id="fire-evidence">
+                        <h2>2. Wildfire evidence: what has actually happened</h2>
+                        <p>This is the main operational reason a date change is being considered. The table below shows the official daily <em>Nivel de Alerta de Peligro de Incendios Forestales</em> (NAPIF) for the site&rsquo;s alert zone, week by week.</p>
+                        <p>The established site is in <strong>Castej&oacute;n de Monegros</strong>, assigned by the Gobierno de Arag&oacute;n to the <strong>Muelas del Ebro&ndash;Alcubierre</strong> meteoalerta zone. When Roja Plus was issued by comarca in July 2026, the relevant area was <strong>Los Monegros</strong>.</p>
+
+                        <div class="notice">
+                            <p><strong>The verified Roja Plus record comprises four declaration episodes.</strong> There was one declaration in 2025, covering <strong>16&ndash;18 August</strong>. In 2026 there were <strong>three separate declarations covering five days</strong>: <strong>26&ndash;28 June</strong> during build, then <strong>10 July</strong> and <strong>12 July</strong> during the event.</p>
+                            <p><strong>Ordinary Red also caused real disruption before Roja Plus was first used.</strong> The site zone was Red from <strong>29 June to 3 July 2025</strong>, immediately before and during the opening of Nowhere 2025. The event activated its Red Alert protocol, including temporary movement restrictions. That was Red, not Red Plus, but it belongs in the operational history.</p>
+                            <p>
+                                <a class="source-chip" href="https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2025-06-29" target="_blank" rel="noopener noreferrer">Official report: 29 Jun 2025</a>
+                                <a class="source-chip" href="https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2025-08-16" target="_blank" rel="noopener noreferrer">Official report: 16&ndash;18 Aug 2025</a>
+                                <a class="source-chip" href="https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2026-06-26" target="_blank" rel="noopener noreferrer">Official report: 26&ndash;28 Jun 2026</a>
+                                <a class="source-chip" href="https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2026-07-10" target="_blank" rel="noopener noreferrer">Official report: 10 Jul 2026</a>
+                                <a class="source-chip" href="https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2026-07-12" target="_blank" rel="noopener noreferrer">Official report: 12 Jul 2026</a>
+                            </p>
+                        </div>
+
+                        <h3>2.1 Daily alert levels in each candidate week</h3>
+                        <p>Each year cell is <strong>Yellow / Orange / Red / Red Plus</strong>. Hover or focus a cell containing Red or Red Plus to see the exact dates. The 2026 column stops on <strong>10 August 2026</strong>; future dates are not filled with assumptions.</p>
+                        <div class="level-key">
+                            <span><strong>Y</strong> = Yellow</span>
+                            <span><strong>O</strong> = Orange</span>
+                            <span><strong>R</strong> = Red</span>
+                            <span><strong>R+</strong> = Red Plus</span>
+                        </div>
+                        <div class="evidence-note">
+                            <p><strong>Coverage limitation:</strong> the archive does not provide a complete, consistently daily series before 1 June across all four years. May is therefore marked <strong>n/a</strong>, not zero-risk; some extraordinary reports were published before June. Future 2026 dates are also <strong>n/a</strong> because their reports do not exist yet. Hover or focus either abbreviation to see which reason applies.</p>
+                            <p><strong>What the final column means:</strong> each candidate week is mapped onto the same calendar dates in 2026. The column then counts Red and Red Plus days from 21 days before that week through 10 days after it &mdash; a 38-day window representing build, the event, and strike. Where part of that window falls after 10 August, <strong>Est</strong> fills the missing days with the alerts recorded on the same calendar dates in 2025. Hover or focus a value to see the exact date range and how the estimate was made. This is a historical stress test, not a forecast for 2027.</p>
+                            <p>
+                                <a class="source-chip" href="https://infoar.aragon.es/flamabk/indicesMeteo/descarga-informe?indice=NAPIF" target="_blank" rel="noopener noreferrer">Gobierno de Arag&oacute;n NAPIF archive</a>
+                                <a class="source-chip" href="/data/event-dates-2027/napif-daily-2023-2026.csv">Download daily site series (CSV)</a>
+                                <a class="source-chip" href="/data/event-dates-2027/napif-weekly.csv">Download weekly counts (CSV)</a>
+                                <a class="source-chip" href="https://www.aragon.es/documents/20127/674325/ZONA_METEOALERTA_V2.pdf/3326ee50-06f1-4d22-c1bd-0339cdb4dbcb" target="_blank" rel="noopener noreferrer">Official municipality-to-zone assignment</a>
+                            </p>
+                        </div>
+                        <div class="table-wrap">
+                            <table class="research-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Candidate week</th>
+                                        <th scope="col">2023<br><small>Y/O/R/R+</small></th>
+                                        <th scope="col">2024<br><small>Y/O/R/R+</small></th>
+                                        <th scope="col">2025<br><small>Y/O/R/R+</small></th>
+                                        <th scope="col">2026 to 10 Aug<br><small>Y/O/R/R+</small></th>
+                                        <th scope="col" class="wrap">2026 Red/R+ days<br><small>full 38-day operating window</small></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="napif-weekly-body">
+                                    <tr><td colspan="6">Loading the cited daily alert series&hellip;</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3>2.2 Alert history charts</h3>
+                        <div class="chart-grid">
+                            <figure class="chart-card">
+                                <h4>Alert-day totals by year</h4>
+                                <div class="chart-legend" aria-hidden="true">
+                                    <span class="chart-key"><span class="chart-swatch" style="background:#d4a72c"></span>Yellow</span>
+                                    <span class="chart-key"><span class="chart-swatch" style="background:#dd6b20"></span>Orange</span>
+                                    <span class="chart-key"><span class="chart-swatch" style="background:#c53030"></span>Red</span>
+                                    <span class="chart-key"><span class="chart-swatch" style="background:#701a1a"></span>Red Plus</span>
+                                </div>
+                                <div class="chart-scroll" id="napif-total-chart">
+                                    <p>Loading annual alert totals&hellip;</p>
+                                </div>
+                                <figcaption>Published NAPIF days by alert level. The 2023&ndash;2025 series covers 1 June&ndash;15 October; 2026 covers 1 June&ndash;10 August.</figcaption>
+                            </figure>
+
+                            <figure class="chart-card">
+                                <h4>Cumulative Red and Red Plus days by week</h4>
+                                <div class="chart-legend" aria-hidden="true">
+                                    <span class="chart-key"><span class="chart-swatch" style="background:#c53030"></span>Red</span>
+                                    <span class="chart-key"><span class="chart-swatch" style="background:#701a1a"></span>Red Plus</span>
+                                    <span class="chart-key"><span class="chart-swatch" style="background:#cbd5e1"></span>Partial / unavailable 2026 week</span>
+                                </div>
+                                <div class="chart-scroll" id="napif-week-chart">
+                                    <p>Loading weekly Red and Red Plus history&hellip;</p>
+                                </div>
+                                <figcaption>Running total from 1 June, shown at the end of each candidate week from 31 May through 16 August. Each weekly group contains one stacked Red + Red Plus bar for each year. The 9 August 2026 week is partial through 10 August; the 16 August 2026 week is unavailable and is not counted as zero.</figcaption>
+                            </figure>
+                        </div>
+
+                        <p>The shift is visible without converting four seasons into a false probability. In the complete 1 June&ndash;15 October archive there were <strong>eight Red days in 2023</strong>, <strong>20 in 2024</strong>, and <strong>16 Red plus three Red Plus days in 2025</strong>. By 10 August 2026 there had already been <strong>32 Red and five Red Plus days</strong>. For 28 June&ndash;4 July, the site went from no Red days in 2023 or 2024, to five in 2025, to five Red and one Red Plus day in 2026. The following 5&ndash;11 July week went from Yellow throughout in 2023 and 2024, to five Orange days in 2025, to six Red days and one Red Plus day in 2026.</p>
+                        <p>This does not prove a particular cancellation probability for 2027. It does substantiate why the authorities&rsquo; concern is no longer hypothetical, and why build and strike cannot be excluded from the comparison.</p>
+
+                        <h3>2.3 Recorded fires and area burned</h3>
+                        <p>The official IAEST series gives annual fire counts and forest area affected. It is useful context, but it must not be confused with the alert table: ignition count, hectares burned and legal suspension risk are different measures.</p>
+                        <div class="table-wrap">
+                            <table class="research-table">
+                                <thead>
+                                    <tr><th scope="col">Year</th><th scope="col">Arag&oacute;n</th><th scope="col">Huesca province</th><th scope="col">Los Monegros</th><th scope="col">Castej&oacute;n de Monegros</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>2023</td><td>352 fires / 1,549.13 ha</td><td>102 / 32.77 ha</td><td>13 / 6.99 ha</td><td>0 / 0 ha</td></tr>
+                                    <tr><td>2024 <small>(provisional)</small></td><td>276 / 1,441.76 ha</td><td>67 / 247.67 ha</td><td>11 / 3.27 ha</td><td>0 / 0 ha</td></tr>
+                                    <tr><td>2025 <small>(provisional)</small></td><td>269 / 353.26 ha</td><td>97 / 186.70 ha</td><td>13 / 21.40 ha</td><td>0 / 0 ha</td></tr>
+                                    <tr><td>2026 <small>(partial to 14 June)</small></td><td>193 / 238.22 ha</td><td>72 / 87.72 ha</td><td colspan="2" class="wrap">The latest official 2026 statistical bulletin found stops on 14 June and does not publish comparable Los Monegros or Castej&oacute;n subtotals. It predates the later June and July alert episodes.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="evidence-note">
+                            <p>
+                                <a class="source-chip" href="https://servicios3.aragon.es/iaeaxi/tabla.do?L=0&amp;file=141201A03.px&amp;path=%2F14%2F12%2F01%2F&amp;type=pcaxis" target="_blank" rel="noopener noreferrer">IAEST: fires and forest area by municipality, comarca and province</a>
+                                <a class="source-chip" href="https://www.aragon.es/documents/d/guest/estadistica_20260614-pdf" target="_blank" rel="noopener noreferrer">Official 2026 statistics through 14 June</a>
+                                <a class="source-chip" href="https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2026-06-12" target="_blank" rel="noopener noreferrer">Official 12 Jun 2026 incident report</a>
+                            </p>
+                            <p><strong>Why there is no candidate-week fire-count table:</strong> the daily NAPIF reports label their incident list provisional, can repeat an incident across several days as its status or area changes, and do not replace the final IAEST statistical series. Counting those lines as independent fires would manufacture precision. The daily alert table above is complete enough for a week-by-week comparison; final fire counts are presented only at the annual geographic levels for which the official statistical source supports them.</p>
+                        </div>
+                    </section>
+
                     <section id="timeline">
-                        <h2>2. Timeline</h2>
+                        <h2>3. Timeline</h2>
                         <ul class="timeline">
                             <li><span class="when">11 March 2026</span> Decreto 22/2026 approved in Aragón; published in the BOA (no. 53) on 18 March, three and a half months before the 2026 event.</li>
                             <li><span class="when">17 June 2026</span> Meeting with the Comarca de Los Monegros. The comarca reads the new automatic-suspension clause aloud and sets out its evacuation planning.</li>
                             <li><span class="when">Mid-June 2026</span> Build begins. A fire roughly an hour away burns toward the site; ash falls on the build. It is brought under control. Evacuation plans &mdash; buses, receiving villages, Guardia Civil, Cruz Roja &mdash; were by this point genuinely in place, not hypothetical.</li>
                             <li><span class="when">26&ndash;28 June 2026</span> <em>Roja Plus</em> declared &mdash; three days, during build.</li>
-                            <li><span class="when">7&ndash;12 July 2026</span> The event runs. The permit holds, nobody is hurt, there is no evacuation. <em>Roja Plus</em> is declared again during the event itself, bringing a legally binding lockdown on movement, gas cooking and open flame for part of one day. Region-wide red alert follows on 24 and 30 July.</li>
+                            <li><span class="when">7&ndash;12 July 2026</span> The event runs. The permit holds, nobody is hurt, and there is no full evacuation. Separate <em>Roja Plus</em> declarations apply on 10 and 12 July, bringing legally binding restrictions on movement, gas cooking and open flame. Ordinary Red alerts continue on many surrounding days.</li>
                             <li><span class="when">30 July 2026</span> Community call. The dates question is announced publicly, alongside the note that &ldquo;the authorities have also strongly recommended scheduling outside the high-fire-risk period, as operational restrictions grow stricter every year.&rdquo; <a href="/transparency/2026-07-30-community.html">Minutes</a>.</li>
                             <li><span class="when">3 August 2026</span> Board votes to move the General Assembly from 3 to 17 September, specifically to allow more time to prepare the dates decision. <a href="/transparency/2026-08-03-board.html">Minutes</a>.</li>
                             <li><span class="when">4 August 2026</span> Governance working group agrees to prepare a Swiss-style voting booklet for the decision. <a href="/transparency/2026-08-04-governance-wg.html">Minutes</a>.</li>
@@ -427,35 +761,35 @@
                     </section>
 
                     <section id="why">
-                        <h2>3. Why a change of dates is on the table</h2>
+                        <h2>4. Why a change of dates is on the table</h2>
                         <p>The reason is not that July is uncomfortable. It is that a specific legal mechanism now exists which can void an authorisation the association already holds, and that mechanism is live for most of the year. What follows is the formal and regulatory picture as we currently understand it.</p>
 
-                        <h3>3.1 An automatic suspension written into law</h3>
-                        <p><strong>Decreto 22/2026, de 11 de marzo</strong> (BOA no. 53, 18 March 2026). Article 4(h) provides that under a Roja Plus alert, public events in a forest environment are suspended, along with any event that could generate conditions favouring the start of a forest fire &mdash; <em>and that authorisations already granted are suspended</em> (&ldquo;<em>quedando suspendidas las autorizaciones concedidas</em>&rdquo;).</p>
+                        <h3>4.1 An automatic suspension written into law</h3>
+                        <p><strong><a href="https://www.boa.aragon.es/cgi-bin/EBOA/BRSCGI?CMD=VEROBJ&amp;MLKOB=1440281250303" target="_blank" rel="noopener noreferrer">Decreto 22/2026, de 11 de marzo</a></strong> (BOA no. 53, 18 March 2026). Article 4(h) provides that under a Roja Plus alert, public events in a forest environment are suspended, along with any event that could generate conditions favouring the start of a forest fire &mdash; <em>and that authorisations already granted are suspended</em> (&ldquo;<em>quedando suspendidas las autorizaciones concedidas</em>&rdquo;).</p>
                         <p>This is not a negotiation on the day. On the reading given to us by the comarca, the permit for the camping area ceases to be valid by operation of law the moment Roja Plus is declared. The clause is new in 2026.</p>
                         <p>A second clause is easy to overlook and matters just as much: <strong>Article 4(i)</strong> restricts motor-vehicle access to <em>montes</em> to the landowner and emergency or agricultural traffic. That alone would strand build, ingress and egress, independently of whether the event itself remained permitted.</p>
-                        <h3>3.2 The trigger is the alert level, not conditions on site</h3>
+                        <h3>4.2 The trigger is the alert level, not conditions on site</h3>
                         <p>The regime applies because the site is <em>monte de utilidad pública</em> &mdash; public-utility forest land &mdash; within 400 m of forest mass. Nothing in it turns on measured air quality, on wind on the day, or on how well-run the event is. It fires on the published alert level for the area.</p>
                         <p>This is why operational excellence does not solve the problem. The event can be, and has been, held up locally as an example of good practice, and still be caught by a trigger that does not look at any of that.</p>
 
-                        <h3>3.3 The mechanism has already been used, on short notice</h3>
+                        <h3>4.3 The mechanism has already been used, on short notice</h3>
                         <p><em>Roja Plus</em> was declared for the first time on 16&ndash;18 August 2025. A festival at La Gabarda park was in progress. In the comarca&rsquo;s words: &ldquo;<em>Tuvo que evacuar y punto</em>&rdquo; &mdash; it had to evacuate, full stop.</p>
                         <p>The warning window was roughly <strong>8.5 hours</strong>: declared mid-afternoon, effective 23:59 the same day. A crowd of 2,000&ndash;2,400 people cannot be moved off a desert site in that time. That is why, for Elsewhere 2026, the authorities pre-planned an evacuation: buses, Guardia Civil involvement at senior rank, Cruz Roja, and villages designated to receive people. That work was done in advance of an event that then ran without needing it &mdash; which is the point. It is contingency planning only carried out by people who expect to have to use it.</p>
 
-                        <h3>3.4 Shelter-in-place has been proposed and refused</h3>
+                        <h3>4.4 Shelter-in-place has been proposed and refused</h3>
                         <p>The argument that confinement is objectively safer than evacuation &mdash; 2,000 people in private vehicles crossing bone-dry terrain at 40°C creates more fire risk than staying put &mdash; was made to the authorities at length. The comarca agreed with it, and said so explicitly.</p>
                         <p>But the comarca&rsquo;s position is not the binding one. The decision sits with the Gobierno de Aragón / Medio Natural, and the provincial director&rsquo;s reported answer was &ldquo;<em>muy clara: que no</em>&rdquo; &mdash; if Roja Plus comes, you evacuate, &ldquo;<em>con la ley en la mano</em>&rdquo;, citing generators, fuel on site, kitchens, lighting and 2,000 people.</p>
                         <p>The significant part was the direction the warning came from: the local authorities most sympathetic to the event were the ones telling us they expected to be overruled.</p>
 
-                        <h3>3.5 The exposure window is six and a half months, not one</h3>
+                        <h3>4.5 The exposure window is six and a half months, not one</h3>
                         <p>Aragón&rsquo;s <em>época de peligro</em> &mdash; the fire-danger season during which Roja Plus can be declared at all &mdash; runs <strong>1 April to 15 October</strong> (Orden of 20 February 2015, extended by Orden AGM/112/2021). Daily alert levels are published from 1 June to 15 October.</p>
-                        <p>Declarations on record: 16&ndash;18 August 2025; 26&ndash;28 June 2026; and again during the 2026 event week in July &mdash; plus region-wide red alert on 24 and 30 July 2026.</p>
+                        <p>Declarations affecting the site on record: <strong>16&ndash;18 August 2025</strong>; <strong>26&ndash;28 June 2026</strong>; <strong>10 July 2026</strong>; and <strong>12 July 2026</strong>. The first 2026 declaration covered build; the latter two were separate event-day declarations. Ordinary Red alerts affected the site on many additional days, as the daily table in section 2 shows.</p>
                         <p>So any date from April to mid-October carries the same structural exposure &mdash; September at lower probability than July, but identical in kind. This is the single most consequential point for anyone weighing options, and it cuts against several intuitive alternatives.</p>
 
-                        <h3>3.6 Frequency is rising, and the authorities say so explicitly</h3>
+                        <h3>4.6 Frequency is rising, and the authorities say so explicitly</h3>
                         <p>Figures given by the comarca in June 2026: an average of two fires a day over the preceding twenty days in Los Monegros alone; six fires in Huesca province on a single Sunday. Their summary was that conditions in mid-June are now what 15 July used to look like, and that measures will keep tightening year on year.</p>
 
-                        <h3>3.7 Permitting lead times force the decision now</h3>
+                        <h3>4.7 Permitting lead times force the decision now</h3>
                         <p>Three permissions are needed, in sequence, and only the last of them is the event permit itself:</p>
                         <ol>
                             <li><strong>INAGA</strong> &mdash; Aragón&rsquo;s environmental permitting body. Assesses protected species, nesting periods and whether proposed dates are compatible with the site. A three-month statutory clock, but in practice anywhere from three months to a year; an unfavourable report is binding.</li>
@@ -465,128 +799,82 @@
                         <p>This is why the decision cannot be deferred until circumstances force a reaction: by the time you need to react, the paperwork window has already closed. It is also why the answers are unlikely to be back before 17 September.</p>
                         <p>A cautionary precedent from the same body: a 19,000-person festival at the embalse de La Sotonera was declared <em>no procedente</em> by INAGA in April 2026 &mdash; not on a substantive refusal, but because a full assessment could not be concluded before the proposed August dates. The calendar stopped the event, not the merits.</p>
 
-                        <h3>3.8 What we are not claiming</h3>
+                        <h3>4.8 What we are not claiming</h3>
                         <p>For the sake of a fair record, three things this material does <em>not</em> establish:</p>
                         <ul>
                             <li>No authority has issued a formal order to move the dates. What exists is a legal mechanism, a demonstrated willingness to use it, and a strong recommendation.</li>
                             <li>There is no published prohibition on holding events in any particular month, for fire or for wildlife reasons.</li>
-                            <li>The event was not shut down in 2026. It ran, through two Roja Plus periods, on the strength of a very large amount of largely invisible contingency work.</li>
+                            <li>The event was not shut down in 2026. It ran through two separate event-day Roja Plus declarations, after a three-day declaration during build, on the strength of a very large amount of largely invisible contingency work.</li>
                         </ul>
                         <p>The honest framing is therefore not &ldquo;we have been told to move&rdquo;. It is: an instrument exists that can void an authorisation at a few hours&rsquo; notice, it has been used, it is live for six and a half months of the year, and the probability of it firing is rising. Members are being asked whether to keep accepting that exposure, and if not, what to move to.</p>
 
-                        <h3>3.9 Separately from the law: heat</h3>
+                        <h3>4.9 Separately from the law: heat</h3>
                         <p>There is a second, quite different argument for moving, which should not be confused with the regulatory one because it stands or falls on its own evidence: that mid-July in Monegros has become hot enough to change who comes. Families and older participants in particular are reported to have stopped attending for that reason. Whether that effect is real and how large it is are exactly the sort of questions a poll of attendees can answer, and the regulatory case does not depend on the answer either way.</p>
                     </section>
 
                     <section id="windows">
-                        <h2>4. Candidate windows</h2>
-                        <p>The table below is reproduced from the working spreadsheet, <a href="https://docs.google.com/spreadsheets/d/1SgxJVOCgbr7i8lwuTUquFRArCk77lFQiV8oBXaPKsVg/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer">Elsewhere 2027 &mdash; date options</a>. <strong>It is preliminary desk research and has not yet been verified.</strong> Replacing the rough fire-risk figures with something more rigorous is one of the named tasks for the information pack.</p>
-                        <p>The &ldquo;risk&rdquo; column is a rough score for the chance of the event being cancelled or evacuated in a given year; the scale is set out underneath. Temperatures are typical/extreme values for the week, not forecasts.</p>
+                        <h2>5. Candidate windows: heat and rain</h2>
+                        <p>The tables below are calculated from daily data for the established-site coordinate, <strong>41.7005615, -0.1363139</strong>. They compare matching calendar weeks historically; they are not forecasts for 2027.</p>
+                        <div class="evidence-note">
+                            <p><strong>Method:</strong> each candidate week is compared with the same seven calendar dates in the twenty complete years <strong>2006&ndash;2025</strong>. &ldquo;Typical&rdquo; is the median daily value; a &ldquo;hot day&rdquo; is the 95th percentile daily maximum; a &ldquo;cool night&rdquo; is the 5th percentile daily minimum. A wet day has at least 1 mm precipitation. &ldquo;Weeks with rain&rdquo; is the proportion of the twenty matching weeks with at least 1 mm total rain; the wet-week figure is the 90th percentile of those twenty weekly totals.</p>
+                            <p>The source is the <a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank" rel="noopener noreferrer">Open-Meteo Historical Weather API</a>, using its ERA5 / ERA5-Land best-match historical series. Reanalysis is appropriate for consistent comparison at an exact rural coordinate, but it is gridded data rather than a rain gauge on the festival site.</p>
+                            <p>
+                                <a class="source-chip" href="https://archive-api.open-meteo.com/v1/archive?latitude=41.7005615&amp;longitude=-0.1363139&amp;start_date=1991-01-01&amp;end_date=2025-12-31&amp;daily=temperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum&amp;timezone=Europe%2FMadrid" target="_blank" rel="noopener noreferrer">Exact source query</a>
+                                <a class="source-chip" href="/data/event-dates-2027/climate-weekly.csv">Download derived weekly data (CSV)</a>
+                            </p>
+                        </div>
 
+                        <h3>5.1 Temperature</h3>
                         <div class="table-wrap">
                             <table class="research-table">
                                 <thead>
                                     <tr>
-                                        <th>Week</th>
-                                        <th>Typical day</th>
-                                        <th>Max day</th>
-                                        <th>Typical night</th>
-                                        <th>Lowest night</th>
-                                        <th>Daily rain</th>
-                                        <th>Week rain</th>
-                                        <th>Precip.</th>
-                                        <th>Risk</th>
-                                        <th class="wrap">Clashes with</th>
+                                        <th scope="col">Week</th>
+                                        <th scope="col">Typical high</th>
+                                        <th scope="col">Hot day<br><small>95th percentile</small></th>
+                                        <th scope="col">Typical low</th>
+                                        <th scope="col">Cool night<br><small>5th percentile</small></th>
+                                        <th scope="col">Days &ge;35&deg;C<br><small>mean per week</small></th>
+                                        <th scope="col">Nights &ge;20&deg;C<br><small>mean per week</small></th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>3&ndash;9 May 2027</td><td>22&ndash;25°C</td><td>≈31°C</td><td>14&ndash;17°C</td><td>8&ndash;11°C</td><td>27%</td><td>89%</td><td>32.5 mm</td><td><span class="risk-pill risk-low">1.5</span></td><td class="wrap">AfrikaBurn (26 Apr&ndash;2 May)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>10&ndash;16 May 2027</td><td>23&ndash;26°C</td><td>≈33°C</td><td>15&ndash;18°C</td><td>9&ndash;12°C</td><td>25%</td><td>87%</td><td>32.5 mm</td><td><span class="risk-pill risk-low">2</span></td><td class="wrap">&mdash;</td>
-                                    </tr>
-                                    <tr>
-                                        <td>17&ndash;23 May 2027</td><td>24&ndash;27°C</td><td>≈35°C</td><td>16&ndash;19°C</td><td>10&ndash;13°C</td><td>24%</td><td>85%</td><td>32.5 mm</td><td><span class="risk-pill risk-low">2.5</span></td><td class="wrap">&mdash;</td>
-                                    </tr>
-                                    <tr>
-                                        <td>24&ndash;30 May 2027</td><td>26&ndash;29°C</td><td>≈36°C</td><td>17&ndash;21°C</td><td>12&ndash;15°C</td><td>22%</td><td>82%</td><td>32.5 mm</td><td><span class="risk-pill risk-mid">3</span></td><td class="wrap">Burning Nest (24&ndash;31), Crème Brûlée (late May), Flamingalo (24&ndash;30 May)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>31 May&ndash;6 Jun 2027</td><td>27&ndash;30°C</td><td>≈37°C</td><td>18&ndash;22°C</td><td>13&ndash;16°C</td><td>21%</td><td>81%</td><td>25.7 mm</td><td><span class="risk-pill risk-mid">3.5</span></td><td class="wrap">Somewhere (no dates confirmed; last event 2024)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>7&ndash;13 Jun 2027</td><td>28&ndash;31°C</td><td>38.5°C</td><td>19&ndash;23°C</td><td>14&ndash;17°C</td><td>19%</td><td>77%</td><td>25.7 mm</td><td><span class="risk-pill risk-mid">4.5</span></td><td class="wrap">Burning Bär (10&ndash;13 Jun)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>14&ndash;20 Jun 2027</td><td>29&ndash;32°C</td><td>≈40°C</td><td>20&ndash;24°C</td><td>15&ndash;18°C</td><td>17%</td><td>73%</td><td>25.7 mm</td><td><span class="risk-pill risk-high">5.5</span></td><td class="wrap">Aarhus Burns (mid-Jun), Where the Sheep Sleep (17&ndash;21), Bivrost (17&ndash;20), Degošie Jāņi (18&ndash;22)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>21&ndash;27 Jun 2027</td><td>31&ndash;34°C</td><td>≈41°C</td><td>22&ndash;25°C</td><td>17&ndash;20°C</td><td>15%</td><td>68%</td><td>25.7 mm</td><td><span class="risk-pill risk-high">6.5</span></td><td class="wrap">Kiez Burn (22&ndash;28 Jun)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>28 Jun&ndash;4 Jul 2027</td><td>32&ndash;35°C</td><td>≈42°C</td><td>23&ndash;26°C</td><td>18&ndash;21°C</td><td>12%</td><td>59%</td><td>21.3 mm</td><td><span class="risk-pill risk-max">7.5</span></td><td class="wrap">&mdash;</td>
-                                    </tr>
-                                    <tr class="is-current">
-                                        <td>5&ndash;11 Jul 2027 <strong>(current slot)</strong></td><td>33&ndash;36°C</td><td>≈42°C</td><td>24&ndash;27°C</td><td>19&ndash;22°C</td><td>10%</td><td>52%</td><td>21.3 mm</td><td><span class="risk-pill risk-max">8</span></td><td class="wrap">&mdash;</td>
-                                    </tr>
-                                    <tr>
-                                        <td>12&ndash;31 Jul 2027</td><td>33&ndash;36°C</td><td>≈43°C</td><td>24&ndash;28°C</td><td>19&ndash;23°C</td><td>8%</td><td>44%</td><td>21.3 mm</td><td><span class="risk-pill risk-max">9</span></td><td class="wrap">Borderlands (26 Jul&ndash;1 Aug), Celtic Burn (late Jul), RoBurn (end Jul&ndash;Aug)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>August 2027</td><td>32&ndash;35°C</td><td>≈42°C</td><td>23&ndash;27°C</td><td>18&ndash;22°C</td><td>10%</td><td>52%</td><td>15 mm</td><td><span class="risk-pill risk-max">9</span></td><td class="wrap">Schönburn (4&ndash;8 Aug)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1&ndash;19 Sep 2027</td><td>28&ndash;32°C</td><td>≈39°C</td><td>20&ndash;24°C</td><td>15&ndash;19°C</td><td>16%</td><td>70%</td><td>25.4 mm</td><td><span class="risk-pill risk-max">7.5</span></td><td class="wrap">Burning Man (29 Aug&ndash;6 Sep), Arctic Burn (early Sep), Pyraegea (12&ndash;22 Sep)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>20&ndash;26 Sep 2027</td><td>25&ndash;28°C</td><td>≈35°C</td><td>18&ndash;21°C</td><td>12&ndash;15°C</td><td>22%</td><td>82%</td><td>25.4 mm</td><td><span class="risk-pill risk-high">5</span></td><td class="wrap">Microburn (9&ndash;13 Sep)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>27 Sep&ndash;3 Oct 2027</td><td>23&ndash;27°C</td><td>≈34°C</td><td>16&ndash;20°C</td><td>10&ndash;14°C</td><td>24%</td><td>85%</td><td>42.4 mm</td><td><span class="risk-pill risk-mid">4</span></td><td class="wrap">&mdash;</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4&ndash;10 Oct 2027</td><td>21&ndash;25°C</td><td>≈31°C</td><td>14&ndash;18°C</td><td>8&ndash;12°C</td><td>25%</td><td>87%</td><td>42.4 mm</td><td><span class="risk-pill risk-mid">3</span></td><td class="wrap">&mdash;</td>
-                                    </tr>
-                                    <tr>
-                                        <td>11&ndash;17 Oct 2027</td><td>19&ndash;23°C</td><td>≈29°C</td><td>12&ndash;16°C</td><td>7&ndash;11°C</td><td>27%</td><td>89%</td><td>42.4 mm</td><td><span class="risk-pill risk-low">2</span></td><td class="wrap">&mdash;</td>
-                                    </tr>
+                                <tbody id="climate-heat-body">
+                                    <tr><td colspan="7">Loading the cited climate series&hellip;</td></tr>
                                 </tbody>
                             </table>
                         </div>
 
-                        <h4>How to read the risk score</h4>
+                        <h3>5.2 Rain</h3>
                         <div class="table-wrap">
                             <table class="research-table">
                                 <thead>
-                                    <tr><th>Score</th><th>Rough annual cancellation probability</th></tr>
+                                    <tr>
+                                        <th scope="col">Week</th>
+                                        <th scope="col">Wet-day chance</th>
+                                        <th scope="col">Historical weeks with rain</th>
+                                        <th scope="col">Mean weekly rain</th>
+                                        <th scope="col">High-rain week<br><small>90th-percentile total</small></th>
+                                    </tr>
                                 </thead>
-                                <tbody>
-                                    <tr><td>2</td><td>About 3&ndash;5%</td></tr>
-                                    <tr><td>3</td><td>About 5&ndash;10%</td></tr>
-                                    <tr><td>4</td><td>About 10&ndash;15%</td></tr>
-                                    <tr><td>5</td><td>About 15&ndash;25%</td></tr>
-                                    <tr><td>6</td><td>About 25&ndash;35%</td></tr>
-                                    <tr><td>7</td><td>About 35&ndash;45%</td></tr>
-                                    <tr><td>8</td><td>About 50%</td></tr>
-                                    <tr><td>9</td><td>About 60&ndash;70%</td></tr>
+                                <tbody id="climate-rain-body">
+                                    <tr><td colspan="5">Loading the cited climate series&hellip;</td></tr>
                                 </tbody>
                             </table>
                         </div>
-                        <p>These figures are a first-pass estimate, not a modelled result, and they are the numbers most in need of replacement before the vote. Treat them as an indication of shape &mdash; risk falling steeply either side of high summer &mdash; rather than as reliable percentages.</p>
-                        <p>Note also that the table&rsquo;s low-risk spring weeks sit inside the most sensitive part of the wildlife calendar (see section 6), and the low-risk October weeks bring rainfall roughly double the July figure onto a site with no hard standing. No window is clean on every axis.</p>
+
+                        <p>For the current 5&ndash;11 July slot, the recent historical median daily high is <strong>34.2&deg;C</strong>, with about <strong>2.6 days at or above 35&deg;C</strong> and <strong>3.9 nights at or above 20&deg;C</strong> in a typical matching week. The mean weekly rain is <strong>6.4 mm</strong>, and 65% of matching years had at least 1 mm during the week. May weeks are cooler but not uniformly wetter every week; late September and October have lower heat exposure but materially higher upper-tail weekly rain totals.</p>
 
                         <h4>Constraints the table does not capture</h4>
                         <ul>
-                            <li><strong>May and early June:</strong> local advice is that May is historically the wettest month in Monegros &mdash; over 100 litres recorded &mdash; and that it is peak harvest season, with tractors and harvesters on the same access roads. These windows have deliberately been kept in the list submitted for assessment, so that information comes back on every option rather than only the pre-selected ones.</li>
-                            <li><strong>Late September and October:</strong> this is the peak <em>DANA</em> / <em>gota fría</em> window in the Ebro basin. At a site defined by converging <em>barrancos</em>, that is a different kind of risk rather than an absence of risk, and it is the water authority&rsquo;s domain rather than the fire regime&rsquo;s.</li>
+                            <li><strong>May and early June:</strong> local advice is that this overlaps peak harvest activity, with tractors and harvesters using the same access roads. The climate table supplies the rain evidence; the harvest constraint is operational local evidence and has not yet been quantified.</li>
+                            <li><strong>Late September and October:</strong> the weekly reanalysis shows lower heat but a higher upper tail for accumulated rain. At a site defined by converging <em>barrancos</em>, the consequence of a concentrated storm is a hydraulic question for CHE; weekly averages cannot resolve flash-flood behaviour at the site.</li>
                             <li><strong>School and academic calendars:</strong> moving further into the academic year has been raised as a constraint for participants with children, and for teachers and students. This has not been quantified.</li>
                             <li><strong>Build and strike:</strong> the event week is not the whole footprint. Build begins roughly three weeks before and strike ends roughly ten days after, so any window drags a five-to-six week envelope behind it &mdash; which is what the authorities assess, and what a June event would push into May.</li>
                         </ul>
                     </section>
 
                     <section id="burns">
-                        <h2>5. Other European burns</h2>
+                        <h2>6. Other European burns</h2>
                         <p>Part of the work in progress is contacting other events directly &mdash; both to understand how a move would affect their communities and ours, and because several of them have moved their own dates in the past and can say what happened. The responses will go into the information pack; this table is only the calendar as currently mapped.</p>
 
                         <div class="table-wrap">
@@ -620,7 +908,7 @@
                     </section>
 
                     <section id="birds">
-                        <h2>6. Bird nesting and environmental constraints</h2>
+                        <h2>7. Bird nesting and environmental constraints</h2>
                         <p>Fire is not the only regulated axis. The area holds protected species &mdash; notably the lesser kestrel (<em>cernícalo primilla</em>) and Dupont&rsquo;s lark (<em>alondra ricotí</em>) &mdash; whose breeding seasons fall across spring and early summer, and the permitting authority holds a discretionary power to condition or restrict organised events in designated critical areas where they could affect reproduction.</p>
                         <p>The practical consequence is that <strong>moving earlier does not simply trade heat for safety</strong>: April to June is the most sensitive part of the wildlife calendar as well as being inside the fire season. We are currently working through the nesting schedules and the mapped protected-area overlaps <strong>for both the established site and the proposed new site</strong>, which have different exposures and cannot be assumed to behave the same way.</p>
                         <p>This work is preliminary and unverified. It will form part of the information pack once it is firmer.</p>
@@ -630,11 +918,12 @@
                     </section>
 
                     <section id="unknowns">
-                        <h2>7. What we do not know yet</h2>
+                        <h2>8. What we do not know yet</h2>
                         <p>An honest list of the gaps, since this page exists to show the work rather than the conclusion:</p>
                         <ul>
                             <li><strong>The authority&rsquo;s answer.</strong> Candidate windows went in on 5 August; a yes/no per window is expected late September or October, most likely after the vote.</li>
-                            <li><strong>Verified fire-risk figures.</strong> The risk column above is desk research. Replacing it with something defensible is an open task.</li>
+                            <li><strong>A defensible 2027 cancellation probability.</strong> Four seasons of daily alert data &mdash; only two under the current legal regime &mdash; are not enough to estimate a reliable annual probability for each week.</li>
+                            <li><strong>Complete 2026 fire statistics.</strong> The latest official statistical bulletin found stops on 14 June. Later daily incident reports cannot safely be added together into an August year-to-date total because incidents can reappear as their status or measured area changes.</li>
                             <li><strong>What attendees would actually do.</strong> Polling has not yet been run. A window that is legally and environmentally ideal but which most people cannot attend is not a solution.</li>
                             <li><strong>What other burns say.</strong> Outreach is under way; no responses are reflected here yet.</li>
                             <li><strong>Which site.</strong> Feasibility work on a possible new site is a separate workstream at an early stage, with a go/no-go requested by 1 December. It interacts with the dates question &mdash; the two sites have different environmental exposures and would need separate assessments &mdash; but it does not settle it, and the fire regime is not more favourable at the new site.</li>
@@ -643,22 +932,24 @@
                     </section>
 
                     <section id="sources">
-                        <h2>8. Where this material comes from</h2>
+                        <h2>9. Where this material comes from</h2>
                         <p>So that the reliability of each part can be judged separately:</p>
                         <ul>
-                            <li><strong>Sections 1, 2 and the governance detail</strong> &mdash; published board, community-call and governance working-group minutes, all available on the <a href="/transparency.html">transparency page</a>.</li>
-                            <li><strong>Section 3.1&ndash;3.6</strong> &mdash; the meeting with the Comarca de Los Monegros on 17 June 2026 (Spanish transcript), plus the published decree and alert records. The decree and its substance are confirmed against the official gazette; the specific article letters are not, so verify them before relying on the exact citation. Quoted remarks are translations from the June meeting.</li>
-                            <li><strong>Section 3.7 and section 6</strong> &mdash; published regulatory sources (Aragón species catalogues, INAGA resolutions, water-authority rules), researched at the start of August 2026 and not yet reviewed by anyone with formal legal standing.</li>
-                            <li><strong>Section 4</strong> &mdash; a working spreadsheet built from preliminary desk research. The fire-risk column in particular is a first-pass estimate and is explicitly queued for replacement.</li>
-                            <li><strong>Section 5</strong> &mdash; publicly listed dates for other events, compiled by hand and not yet confirmed with the organisers.</li>
+                            <li><strong>Sections 1 and 3, and the governance detail</strong> &mdash; published board, community-call and governance working-group minutes, all available on the <a href="/transparency.html">transparency page</a>.</li>
+                            <li><strong>Section 2 alert history</strong> &mdash; every daily NAPIF report published by the Gobierno de Aragón from 1 June to 15 October in 2023, 2024 and 2025, plus 1 June to 10 August 2026, classified for Castejón de Monegros using the official municipality-to-zone assignment. The <a href="/data/event-dates-2027/napif-daily-2023-2026.csv">daily CSV</a> retains a source link for every row.</li>
+                            <li><strong>Section 2 fire counts and area</strong> &mdash; the official IAEST table sourced from the Departamento de Medio Ambiente y Turismo. The 2024 and 2025 rows are marked provisional by IAEST.</li>
+                            <li><strong>Section 4.1&ndash;4.6</strong> &mdash; the meeting with the Comarca de Los Monegros on 17 June 2026 (Spanish transcript), the published decree, and the official alert reports. Quoted remarks are translations from the June meeting.</li>
+                            <li><strong>Section 4.7 and section 7</strong> &mdash; published regulatory sources (Aragón species catalogues, INAGA resolutions, water-authority rules), researched at the start of August 2026 and not yet reviewed by anyone with formal legal standing.</li>
+                            <li><strong>Section 5 climate figures</strong> &mdash; daily Open-Meteo historical reanalysis at the established-site coordinate, calculated over matching calendar weeks in 2006&ndash;2025. The derivation is reproducible from the published script and CSV.</li>
+                            <li><strong>Section 6</strong> &mdash; publicly listed dates for other events, compiled by hand and not yet confirmed with the organisers.</li>
                         </ul>
                         <p>None of it has been through legal review. Where a claim matters to how you would vote, follow it to its source and check it &mdash; and if you find something wrong, please say so, because it is much cheaper to fix now than after the pack is printed.</p>
                     </section>
 
                     <section id="taking-part">
-                        <h2>9. Taking part</h2>
+                        <h2>10. Taking part</h2>
                         <p>The dates conversation lives in <strong><a href="https://discord.gg/kNC3JnRvYB" target="_blank" rel="noopener noreferrer">#&#128198;-event-dates</a></strong> on Discord. That is the place to ask a question, challenge something on this page, or say which windows would and would not work for you.</p>
-                        <p>The information pack also needs hands. The named gaps &mdash; contacting other events, firming up the fire-risk data, formatting the booklet, running the attendee poll &mdash; are all work that can be shared.</p>
+                        <p>The information pack also needs hands. The named gaps &mdash; contacting other events, reviewing the evidence and methodology, formatting the booklet, and running the attendee poll &mdash; are all work that can be shared.</p>
                         <ul>
                             <li><strong>Contacting other burns</strong> &mdash; <strong>Peter K</strong> (<code>peter_k_nowhere</code> on Discord) is coordinating this. There are a lot of events to reach and it is the single biggest job; talk to him before starting, so two people don&rsquo;t write to the same organisers.</li>
                             <li><strong>Anything else on the pack</strong> &mdash; <strong>Daniel</strong> (<code>@swombat</code> on Discord) or <strong>Celine Valerie</strong> (<code>celini.valerie</code> on Discord).</li>
@@ -676,7 +967,7 @@
                     <section id="bottom-line">
                         <div class="bottom-line">
                             <h2>In one paragraph</h2>
-                            <p>A change in Aragonese law in March 2026 means a Roja Plus fire alert now automatically suspends the authorisations the event depends on, at a few hours&rsquo; notice, with evacuation rather than shelter-in-place as the authorities&rsquo; stated expectation. That alert can be declared at any point between 1 April and 15 October, it has been declared three times in the last two summers &mdash; twice around this year&rsquo;s event &mdash; and its frequency is rising. The General Assembly will be asked on 17 September whether to keep the early-July slot regardless, or move &mdash; and every alternative window carries its own costs, on wildlife, on weather, on clashes with other events, and on who can actually come. This page is the working state of that assessment. The readable version, with the case for and against each option, will follow in good time before the vote.</p>
+                            <p>A change in Aragonese law in March 2026 means a Roja Plus fire alert can automatically suspend the authorisations the event depends on, at short notice, with evacuation rather than shelter-in-place as the authorities&rsquo; stated expectation. Ordinary Red had already disrupted operations around the opening of Nowhere 2025; the first Roja Plus declaration then covered three days in August 2025. In 2026, one three-day Roja Plus declaration fell during build and two separate declarations fell on event days. The official daily series contains eight Red days in 2023, 20 in 2024, 16 Red and three Red Plus days in 2025, and 32 Red and five Red Plus days by 10 August 2026. Moving earlier reduces heat but enters the bird-breeding period; moving later reduces heat but does not remove fire exposure before 15 October and increases upper-tail rain. The decision is therefore a trade-off under uncertainty, not a choice between a safe week and an unsafe one.</p>
                         </div>
                     </section>
 
@@ -686,9 +977,10 @@
                     <h2>On this page</h2>
                     <ol>
                         <li><a href="#decision">What is being decided</a></li>
+                        <li><a href="#fire-evidence">Wildfire evidence</a></li>
                         <li><a href="#timeline">Timeline</a></li>
                         <li><a href="#why">Why a change is on the table</a></li>
-                        <li><a href="#windows">Candidate windows</a></li>
+                        <li><a href="#windows">Heat and rain by week</a></li>
                         <li><a href="#burns">Other European burns</a></li>
                         <li><a href="#birds">Bird nesting</a></li>
                         <li><a href="#unknowns">What we do not know yet</a></li>
@@ -702,6 +994,7 @@
 
     <div id="shared-footer"></div>
     <script src="footer.js"></script>
+    <script src="event-dates-2027.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
