@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+
+    <title>Board Meeting - August 10, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>Board Meeting</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Monday 10 August 2026, evening (~60 min)</span>
+                    </div>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>Board present: Daniel T, Peter D, Ben D (connection intermittent; hosted the early items), Pablo V &middot; Absent: Ward D (on standby had a quorum vote been needed), Victor P</strong>
+                        No quorum was present; no formal votes were taken. All items below were updates or discussions.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>A lighter August meeting focused on the event-dates workstream, a statutory question about board elections, and board working practices.</p>
+
+                        <h2>1. Check-in</h2>
+                        <ul>
+                            <li>Members shared brief personal updates. August energy: several members travelling or recovering from a busy stretch, with steady progress on backlogs.</li>
+                        </ul>
+
+                        <h2>2. Validation of previous meetings&rsquo; actas</h2>
+                        <ul>
+                            <li>The actas (formal records) for the board meetings held earlier this year have now been signed. A regular process for reviewing and validating each meeting&rsquo;s acta is being set up and should be in place within the next week or two.</li>
+                        </ul>
+
+                        <h2>3. Asociados onboarding procedure</h2>
+                        <ul>
+                            <li>Daniel T raised a request to make the asociado onboarding process more responsive ahead of the upcoming vote, proposing that approval be delegated to a single reviewer to reduce turnaround time.</li>
+                            <li>Discussion: the current multi-person review was defended as a safeguard &mdash; asociados hold a governance role, and multiple pairs of eyes have already caught applications that needed closer scrutiny. The immediate bottleneck is reviewer time rather than process, and the reviewer committed to speeding up throughput. The proposal was not pursued.</li>
+                            <li>The association currently has 86 asociados; realistic near-term potential from the current leads list is estimated at 100&ndash;150.</li>
+                            <li>A related open question was noted for the future: the criteria for what counts as a &ldquo;lead&rdquo; role vary widely across barrios and departments, and long-standing, highly engaged contributors may deserve eligibility even where formal role labels don&rsquo;t map neatly. To be revisited; no proposal yet.</li>
+                        </ul>
+
+                        <h2>4. Event dates &mdash; information pack update</h2>
+                        <ul>
+                            <li>The event-dates page has been updated with more data-driven content (heat-alert counts, wildfire-risk data, charts) replacing the earlier subjective ratings.</li>
+                            <li>Peter K is contacting other European burns to gather how different date choices would affect them; Celine has volunteered to help structure the voting information pack.</li>
+                            <li>The pack will be a compact webpage (not a document dump): a few tables and charts, arguments for and against, with expandable detail. Planned contents: weather and wildfire risk, bird-nesting information, agricultural-activity information, impact statements from other burns, school holidays, the board&rsquo;s own per-week recommendation, and community poll results.</li>
+                            <li>Process point: once voting opens to the General Assembly, the question and any information formally attached to it are fixed. Supporting material will be treated as background information, in draft until voting opens; the aim is to have the pack finalised before async GA voting begins (~3 weeks away).</li>
+                        </ul>
+
+                        <h2>5. Environmental (INAGA) report</h2>
+                        <ul>
+                            <li>Independent research has assembled the public Aragon environmental data (bird reports and similar), but raw data alone doesn&rsquo;t show how the authority weighs it in practice. The board is seeking further information on how INAGA has interpreted this kind of data for events in the region &mdash; improving the accuracy of what is presented to members about each date&rsquo;s permit likelihood.</li>
+                            <li>Members will be reminded in the pack that a voted date remains subject to INAGA authorisation; if a chosen date were disallowed, the next-preferred date would apply.</li>
+                        </ul>
+
+                        <h2>6. Board elections &mdash; statutory review</h2>
+                        <ul>
+                            <li>There has been community interest in board elections. The board reviewed the statutes and identified a genuine legal question: the statutes specify elections every two years (next scheduled January 2028), and it is not clear whether a mid-term election to fill vacant seats can be called outside that cycle, or whether it would first require a statute amendment approved by a General Assembly.</li>
+                            <li>A cautionary example from another association &mdash; where an election run outside the required form was later invalidated, causing significant legal problems &mdash; was shared and taken seriously.</li>
+                            <li>The association&rsquo;s legal counsel is being consulted on the specific question. Until the answer is back, the board will avoid committing publicly to running an election on any particular timeline; if an amendment is required first, that will be communicated and proposed at a General Assembly.</li>
+                            <li>Any election would also need to be announced at least 45 days before the relevant assembly, which puts a real deadline on resolving the legal question.</li>
+                        </ul>
+
+                        <h2>7. Board recommendation votes on event dates</h2>
+                        <ul>
+                            <li>Before the information pack is finalised, the board will hold a formal, minuted vote on each candidate week, with reasoning recorded. The pack will show, for each week, how many board members support it and why &mdash; so members can see, for example, that a week nobody on the board supports has known problems behind it.</li>
+                        </ul>
+
+                        <h2>8. Community polling ahead of the GA vote</h2>
+                        <ul>
+                            <li>A tiered approach was discussed and broadly supported: (1) an open public poll (favourite week / definitely-not week) that other burns&rsquo; communities can also be invited into &mdash; which doubles as outreach to past attendees who have drifted away, partly over summer heat; (2) a tracked poll of ticket holders and platform users; (3) the binding ranked vote of members at the General Assembly.</li>
+                            <li>The open poll is understood to be informal and not fraud-proof; the tracked tiers carry the reliability. Giving people a mission to share the poll with lapsed burners was suggested as part of the outreach.</li>
+                        </ul>
+
+                        <h2>9. New site &mdash; update</h2>
+                        <ul>
+                            <li>Term-sheet discussions with the landowners continue; an in-person meeting is planned for next week to obtain concrete plot details and pricing for the remaining portion.</li>
+                            <li>Alternative structures are being explored, including renting part of the site for the first year (with an option to purchase afterwards) rather than buying up front &mdash; slower, but substantially lighter financially, and it allows the site to be tested with a real event first. No decision yet; options are being gathered.</li>
+                        </ul>
+
+                        <h2>10. Board engagement and quorum mechanics</h2>
+                        <ul>
+                            <li>Daniel T noted that agenda items currently come mostly from one person and encouraged other members to bring items &mdash; the board meeting is also where the association&rsquo;s work becomes visible to the community through the minutes.</li>
+                            <li>A broader discussion followed on participation expectations: ideas included giving each board member a portfolio, a minimum-participation expectation, mechanisms for members inactive over long periods to step back, and/or adjusting quorum requirements so that decision-making isn&rsquo;t blocked by inactivity. It was also recognised that quieter, accountability-focused board membership is a legitimate mode of participation, and that activity is naturally seasonal.</li>
+                            <li>Legal counsel has been asked whether quorum changes or inactivity provisions are possible; proposals may be brought to a future assembly. Discussion only &mdash; no decision.</li>
+                        </ul>
+
+                        <h2>11. Go/no-go &mdash; clarification for future years</h2>
+                        <ul>
+                            <li>Historical context gathered from long-standing members of the European burner community: formal go/no-go consultations have been rare at comparable events. This year&rsquo;s go/no-go vote was driven by exceptional time pressure, not precedent.</li>
+                            <li>The board&rsquo;s view: the association exists to run a yearly event, and that is the default. The dates vote will therefore not include a &ldquo;no event&rdquo; option. If members wish to propose not holding an event, the statutory route (a motion to a General Assembly) is available, with the onus on the proposers.</li>
+                        </ul>
+
+                        <h2>12. Any other business</h2>
+                        <ul>
+                            <li>Ongoing administrative and legal follow-up topics will be consolidated under a single point of coordination on the board side, with an overall approach to be brought back to a future meeting. Related logistics topics are being tracked with Production and will be discussed when the Production lead is next present.</li>
+                        </ul>
+
+                        <h2>13. Check-out and next meeting</h2>
+                        <ul>
+                            <li>Members closed with brief personal reflections; general appreciation for forward momentum despite the August lull.</li>
+                            <li>Next week&rsquo;s meeting will combine the coordinators&rsquo; meeting debrief with whatever event-dates information is ready.</li>
+                        </ul>
+
+                        <p><em>Minutes prepared from the meeting recording and transcript. Sanitised for publication.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Junta presente: Daniel T, Peter D, Ben D (conexi&oacute;n intermitente; condujo los primeros puntos), Pablo V &middot; Ausentes: Ward D (a la espera por si hubiera hecho falta una votaci&oacute;n con qu&oacute;rum), Victor P</strong>
+                        No hubo qu&oacute;rum; no se celebr&oacute; ninguna votaci&oacute;n formal. Todos los puntos siguientes fueron actualizaciones o debates.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Una reuni&oacute;n de agosto m&aacute;s ligera, centrada en el trabajo sobre las fechas del evento, una cuesti&oacute;n estatutaria sobre las elecciones a la junta y las pr&aacute;cticas de trabajo de la junta.</p>
+
+                        <h2>1. Ronda inicial</h2>
+                        <ul>
+                            <li>Los miembros compartieron breves novedades personales. Energ&iacute;a de agosto: varias personas de viaje o recuper&aacute;ndose de una etapa intensa, con avances constantes en el trabajo acumulado.</li>
+                        </ul>
+
+                        <h2>2. Validaci&oacute;n de las actas de reuniones anteriores</h2>
+                        <ul>
+                            <li>Ya se han firmado las actas (registros formales) de las reuniones de la junta celebradas anteriormente este a&ntilde;o. Se est&aacute; estableciendo un proceso regular para revisar y validar el acta de cada reuni&oacute;n, que deber&iacute;a estar en marcha en una o dos semanas.</li>
+                        </ul>
+
+                        <h2>3. Procedimiento de alta de asociados</h2>
+                        <ul>
+                            <li>Daniel T plante&oacute; la petici&oacute;n de hacer m&aacute;s &aacute;gil el proceso de alta de asociados de cara a la pr&oacute;xima votaci&oacute;n, proponiendo que la aprobaci&oacute;n se delegue en una sola persona revisora para reducir los tiempos.</li>
+                            <li>Debate: se defendi&oacute; la revisi&oacute;n actual por varias personas como salvaguarda &mdash; los asociados tienen un papel de gobernanza, y varios pares de ojos ya han detectado solicitudes que requer&iacute;an un examen m&aacute;s atento. El cuello de botella inmediato es el tiempo de quien revisa, m&aacute;s que el proceso, y la persona revisora se comprometi&oacute; a acelerar el ritmo. La propuesta no sigui&oacute; adelante.</li>
+                            <li>La asociaci&oacute;n cuenta actualmente con 86 asociados; el potencial realista a corto plazo a partir de la lista actual de leads se estima en 100&ndash;150.</li>
+                            <li>Se anot&oacute; una cuesti&oacute;n abierta relacionada, para el futuro: los criterios sobre qu&eacute; cuenta como rol de &ldquo;lead&rdquo; var&iacute;an mucho entre barrios y departamentos, y quienes llevan mucho tiempo contribuyendo con gran implicaci&oacute;n podr&iacute;an merecer la elegibilidad aunque las etiquetas formales de rol no encajen del todo. A retomar; todav&iacute;a no hay propuesta.</li>
+                        </ul>
+
+                        <h2>4. Fechas del evento &mdash; actualizaci&oacute;n del paquete informativo</h2>
+                        <ul>
+                            <li>La p&aacute;gina de fechas del evento se ha actualizado con contenido m&aacute;s basado en datos (recuentos de alertas por calor, datos de riesgo de incendios forestales, gr&aacute;ficos) que sustituye a las valoraciones subjetivas anteriores.</li>
+                            <li>Peter K est&aacute; contactando con otros burns europeos para recoger c&oacute;mo les afectar&iacute;an las distintas opciones de fechas; Celine se ha ofrecido a ayudar a estructurar el paquete informativo para la votaci&oacute;n.</li>
+                            <li>El paquete ser&aacute; una p&aacute;gina web compacta (no un vertido de documentos): unas pocas tablas y gr&aacute;ficos, argumentos a favor y en contra, con detalle desplegable. Contenidos previstos: meteorolog&iacute;a y riesgo de incendios, informaci&oacute;n sobre nidificaci&oacute;n de aves, informaci&oacute;n sobre actividad agr&iacute;cola, declaraciones de impacto de otros burns, vacaciones escolares, la recomendaci&oacute;n de la propia junta semana por semana y los resultados de las encuestas comunitarias.</li>
+                            <li>Cuesti&oacute;n de procedimiento: una vez que se abre la votaci&oacute;n a la Asamblea General, la pregunta y cualquier informaci&oacute;n formalmente adjunta a ella quedan fijadas. El material de apoyo se tratar&aacute; como informaci&oacute;n de contexto, en borrador hasta que se abra la votaci&oacute;n; el objetivo es tener el paquete cerrado antes de que empiece la votaci&oacute;n as&iacute;ncrona de la Asamblea General (dentro de unas 3 semanas).</li>
+                        </ul>
+
+                        <h2>5. Informe medioambiental (INAGA)</h2>
+                        <ul>
+                            <li>Una investigaci&oacute;n independiente ha reunido los datos medioambientales p&uacute;blicos de Arag&oacute;n (informes de aves y similares), pero los datos en bruto por s&iacute; solos no muestran c&oacute;mo los pondera la autoridad en la pr&aacute;ctica. La junta busca m&aacute;s informaci&oacute;n sobre c&oacute;mo ha interpretado INAGA este tipo de datos para eventos en la regi&oacute;n &mdash; lo que mejora la precisi&oacute;n de lo que se presenta a los asociados sobre la probabilidad de permiso de cada fecha.</li>
+                            <li>En el paquete se recordar&aacute; a los asociados que la fecha votada sigue estando sujeta a la autorizaci&oacute;n de INAGA; si una fecha elegida no se autorizara, se aplicar&iacute;a la siguiente fecha preferida.</li>
+                        </ul>
+
+                        <h2>6. Elecciones a la junta &mdash; revisi&oacute;n estatutaria</h2>
+                        <ul>
+                            <li>Ha habido inter&eacute;s de la comunidad en las elecciones a la junta. La junta revis&oacute; los estatutos e identific&oacute; una cuesti&oacute;n jur&iacute;dica real: los estatutos establecen elecciones cada dos a&ntilde;os (las pr&oacute;ximas previstas en enero de 2028), y no est&aacute; claro si se puede convocar una elecci&oacute;n a mitad de mandato para cubrir puestos vacantes fuera de ese ciclo, o si har&iacute;a falta primero una modificaci&oacute;n de los estatutos aprobada por una Asamblea General.</li>
+                            <li>Se comparti&oacute; y se tom&oacute; en serio un ejemplo de advertencia de otra asociaci&oacute;n &mdash; donde una elecci&oacute;n celebrada fuera de la forma exigida fue posteriormente invalidada, causando problemas legales importantes.</li>
+                            <li>Se est&aacute; consultando a la asesor&iacute;a jur&iacute;dica de la asociaci&oacute;n sobre la cuesti&oacute;n concreta. Hasta que llegue la respuesta, la junta evitar&aacute; comprometerse p&uacute;blicamente a celebrar una elecci&oacute;n en un calendario determinado; si primero hiciera falta una modificaci&oacute;n, se comunicar&aacute; y se propondr&aacute; en una Asamblea General.</li>
+                            <li>Cualquier elecci&oacute;n tendr&iacute;a adem&aacute;s que anunciarse al menos 45 d&iacute;as antes de la asamblea correspondiente, lo que impone un plazo real para resolver la cuesti&oacute;n jur&iacute;dica.</li>
+                        </ul>
+
+                        <h2>7. Votaciones de recomendaci&oacute;n de la junta sobre las fechas del evento</h2>
+                        <ul>
+                            <li>Antes de cerrar el paquete informativo, la junta celebrar&aacute; una votaci&oacute;n formal y recogida en acta sobre cada semana candidata, con el razonamiento registrado. El paquete mostrar&aacute;, para cada semana, cu&aacute;ntos miembros de la junta la apoyan y por qu&eacute; &mdash; de modo que los asociados puedan ver, por ejemplo, que detr&aacute;s de una semana que nadie en la junta apoya hay problemas conocidos.</li>
+                        </ul>
+
+                        <h2>8. Encuestas a la comunidad antes de la votaci&oacute;n de la Asamblea General</h2>
+                        <ul>
+                            <li>Se debati&oacute; y cont&oacute; con amplio apoyo un enfoque por niveles: (1) una encuesta p&uacute;blica abierta (semana favorita / semana descartada) a la que tambi&eacute;n se puede invitar a las comunidades de otros burns &mdash; que sirve adem&aacute;s para reconectar con antiguos asistentes que se han ido alejando, en parte por el calor del verano; (2) una encuesta con seguimiento entre quienes tienen entrada y las personas usuarias de la plataforma; (3) el voto vinculante y ordenado por preferencia de los asociados en la Asamblea General.</li>
+                            <li>Se entiende que la encuesta abierta es informal y no est&aacute; a prueba de fraudes; la fiabilidad la aportan los niveles con seguimiento. Se sugiri&oacute;, como parte de esa labor de reconexi&oacute;n, dar a la gente la misi&oacute;n de compartir la encuesta con burners que se han desvinculado.</li>
+                        </ul>
+
+                        <h2>9. Nuevo terreno &mdash; actualizaci&oacute;n</h2>
+                        <ul>
+                            <li>Contin&uacute;an las conversaciones sobre el term sheet con los propietarios; se prev&eacute; una reuni&oacute;n presencial la semana que viene para obtener detalles concretos de las parcelas y el precio de la parte restante.</li>
+                            <li>Se est&aacute;n explorando estructuras alternativas, incluida la de alquilar parte del terreno el primer a&ntilde;o (con opci&oacute;n de compra posterior) en lugar de comprar de entrada &mdash; m&aacute;s lento, pero mucho m&aacute;s ligero desde el punto de vista financiero, y permite probar antes el terreno con un evento real. Todav&iacute;a no hay decisi&oacute;n; se est&aacute;n recopilando opciones.</li>
+                        </ul>
+
+                        <h2>10. Implicaci&oacute;n de la junta y mec&aacute;nica del qu&oacute;rum</h2>
+                        <ul>
+                            <li>Daniel T se&ntilde;al&oacute; que actualmente los puntos del orden del d&iacute;a vienen sobre todo de una sola persona y anim&oacute; a otros miembros a traer temas &mdash; la reuni&oacute;n de la junta es tambi&eacute;n donde el trabajo de la asociaci&oacute;n se hace visible para la comunidad a trav&eacute;s de las actas.</li>
+                            <li>Sigui&oacute; un debate m&aacute;s amplio sobre las expectativas de participaci&oacute;n: entre las ideas, dar a cada miembro de la junta un &aacute;rea de responsabilidad, una expectativa de participaci&oacute;n m&iacute;nima, mecanismos para que quienes lleven mucho tiempo inactivos den un paso atr&aacute;s, y/o ajustar los requisitos de qu&oacute;rum para que la inactividad no bloquee la toma de decisiones. Tambi&eacute;n se reconoci&oacute; que una participaci&oacute;n m&aacute;s silenciosa, centrada en la rendici&oacute;n de cuentas, es un modo leg&iacute;timo de estar en la junta, y que la actividad es naturalmente estacional.</li>
+                            <li>Se ha preguntado a la asesor&iacute;a jur&iacute;dica si son posibles cambios en el qu&oacute;rum o cl&aacute;usulas de inactividad; podr&iacute;an llevarse propuestas a una asamblea futura. Solo debate &mdash; sin decisi&oacute;n.</li>
+                        </ul>
+
+                        <h2>11. Go/no-go &mdash; aclaraci&oacute;n para a&ntilde;os futuros</h2>
+                        <ul>
+                            <li>Contexto hist&oacute;rico recogido de personas veteranas de la comunidad burner europea: las consultas formales de go/no-go han sido poco frecuentes en eventos comparables. La votaci&oacute;n de go/no-go de este a&ntilde;o respondi&oacute; a una presi&oacute;n de tiempo excepcional, no a un precedente.</li>
+                            <li>La posici&oacute;n de la junta: la asociaci&oacute;n existe para celebrar un evento anual, y eso es lo predeterminado. Por tanto, la votaci&oacute;n sobre las fechas no incluir&aacute; una opci&oacute;n de &ldquo;no celebrar evento&rdquo;. Si los asociados desean proponer no celebrar un evento, la v&iacute;a estatutaria (una moci&oacute;n a una Asamblea General) est&aacute; disponible, y la carga recae en quienes lo propongan.</li>
+                        </ul>
+
+                        <h2>12. Ruegos y preguntas</h2>
+                        <ul>
+                            <li>Los temas administrativos y legales de seguimiento en curso se consolidar&aacute;n bajo un &uacute;nico punto de coordinaci&oacute;n por parte de la junta, con un enfoque global que se traer&aacute; a una reuni&oacute;n futura. Los temas log&iacute;sticos relacionados se est&aacute;n siguiendo con Producci&oacute;n y se debatir&aacute;n cuando la persona responsable de Producci&oacute;n est&eacute; presente.</li>
+                        </ul>
+
+                        <h2>13. Cierre y pr&oacute;xima reuni&oacute;n</h2>
+                        <ul>
+                            <li>Los miembros cerraron con breves reflexiones personales; agradecimiento general por el impulso hacia delante pese al par&oacute;n de agosto.</li>
+                            <li>La reuni&oacute;n de la semana que viene combinar&aacute; el resumen de la reuni&oacute;n de coordinadores con la informaci&oacute;n sobre las fechas del evento que est&eacute; lista.</li>
+                        </ul>
+
+                        <p><em>Acta elaborada a partir de la grabaci&oacute;n y la transcripci&oacute;n de la reuni&oacute;n. Depurada para su publicaci&oacute;n.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Conseil pr&eacute;sent&nbsp;: Daniel T, Peter D, Ben D (connexion intermittente&nbsp;; a anim&eacute; les premiers points), Pablo V &middot; Absents&nbsp;: Ward D (en attente au cas o&ugrave; un vote avec quorum aurait &eacute;t&eacute; n&eacute;cessaire), Victor P</strong>
+                        Le quorum n&rsquo;&eacute;tait pas atteint&nbsp;; aucun vote formel n&rsquo;a &eacute;t&eacute; organis&eacute;. Tous les points ci-dessous &eacute;taient des mises &agrave; jour ou des discussions.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Une r&eacute;union d&rsquo;ao&ucirc;t plus l&eacute;g&egrave;re, centr&eacute;e sur le chantier des dates de l&rsquo;&eacute;v&eacute;nement, une question statutaire relative aux &eacute;lections du conseil, et les pratiques de travail du conseil.</p>
+
+                        <h2>1. Tour de table</h2>
+                        <ul>
+                            <li>Les membres ont partag&eacute; de br&egrave;ves nouvelles personnelles. &Eacute;nergie d&rsquo;ao&ucirc;t&nbsp;: plusieurs membres en voyage ou en train de r&eacute;cup&eacute;rer d&rsquo;une p&eacute;riode charg&eacute;e, avec des progr&egrave;s r&eacute;guliers sur les retards accumul&eacute;s.</li>
+                        </ul>
+
+                        <h2>2. Validation des actas des r&eacute;unions pr&eacute;c&eacute;dentes</h2>
+                        <ul>
+                            <li>Les actas (proc&egrave;s-verbaux formels) des r&eacute;unions du conseil tenues plus t&ocirc;t cette ann&eacute;e ont d&eacute;sormais &eacute;t&eacute; sign&eacute;es. Un processus r&eacute;gulier de relecture et de validation de l&rsquo;acta de chaque r&eacute;union est en cours de mise en place et devrait &ecirc;tre op&eacute;rationnel d&rsquo;ici une &agrave; deux semaines.</li>
+                        </ul>
+
+                        <h2>3. Proc&eacute;dure d&rsquo;int&eacute;gration des asociados</h2>
+                        <ul>
+                            <li>Daniel T a soulev&eacute; une demande visant &agrave; rendre le processus d&rsquo;int&eacute;gration des asociados plus r&eacute;actif en amont du vote &agrave; venir, en proposant que l&rsquo;approbation soit d&eacute;l&eacute;gu&eacute;e &agrave; une seule personne charg&eacute;e de l&rsquo;examen afin de r&eacute;duire les d&eacute;lais.</li>
+                            <li>Discussion&nbsp;: l&rsquo;examen actuel par plusieurs personnes a &eacute;t&eacute; d&eacute;fendu comme une garantie &mdash; les asociados exercent un r&ocirc;le de gouvernance, et plusieurs paires d&rsquo;yeux ont d&eacute;j&agrave; rep&eacute;r&eacute; des candidatures qui m&eacute;ritaient un examen plus attentif. Le goulet d&rsquo;&eacute;tranglement imm&eacute;diat est le temps disponible de la personne qui examine, plut&ocirc;t que le processus, et celle-ci s&rsquo;est engag&eacute;e &agrave; acc&eacute;l&eacute;rer le traitement. La proposition n&rsquo;a pas &eacute;t&eacute; poursuivie.</li>
+                            <li>L&rsquo;association compte actuellement 86 asociados&nbsp;; le potentiel r&eacute;aliste &agrave; court terme &agrave; partir de la liste actuelle de leads est estim&eacute; entre 100 et 150.</li>
+                            <li>Une question ouverte connexe a &eacute;t&eacute; not&eacute;e pour l&rsquo;avenir&nbsp;: les crit&egrave;res d&eacute;finissant ce qui constitue un r&ocirc;le de &laquo;&nbsp;lead&nbsp;&raquo; varient fortement d&rsquo;un barrio et d&rsquo;un d&eacute;partement &agrave; l&rsquo;autre, et des contributeurs de longue date, tr&egrave;s impliqu&eacute;s, pourraient m&eacute;riter l&rsquo;&eacute;ligibilit&eacute; m&ecirc;me lorsque les intitul&eacute;s formels de r&ocirc;le ne correspondent pas exactement. &Agrave; r&eacute;examiner&nbsp;; pas encore de proposition.</li>
+                        </ul>
+
+                        <h2>4. Dates de l&rsquo;&eacute;v&eacute;nement &mdash; point sur le dossier d&rsquo;information</h2>
+                        <ul>
+                            <li>La page des dates de l&rsquo;&eacute;v&eacute;nement a &eacute;t&eacute; mise &agrave; jour avec un contenu davantage fond&eacute; sur les donn&eacute;es (nombre d&rsquo;alertes canicule, donn&eacute;es de risque d&rsquo;incendie, graphiques) qui remplace les notations subjectives pr&eacute;c&eacute;dentes.</li>
+                            <li>Peter K contacte d&rsquo;autres burns europ&eacute;ens pour recueillir l&rsquo;incidence qu&rsquo;auraient sur eux diff&eacute;rents choix de dates&nbsp;; Celine s&rsquo;est port&eacute;e volontaire pour aider &agrave; structurer le dossier d&rsquo;information du vote.</li>
+                            <li>Le dossier sera une page web compacte (et non un empilement de documents)&nbsp;: quelques tableaux et graphiques, des arguments pour et contre, avec du d&eacute;tail d&eacute;pliable. Contenu pr&eacute;vu&nbsp;: m&eacute;t&eacute;o et risque d&rsquo;incendie, informations sur la nidification des oiseaux, informations sur l&rsquo;activit&eacute; agricole, d&eacute;clarations d&rsquo;impact d&rsquo;autres burns, vacances scolaires, la recommandation du conseil semaine par semaine, et les r&eacute;sultats des sondages communautaires.</li>
+                            <li>Point de proc&eacute;dure&nbsp;: d&egrave;s l&rsquo;ouverture du vote &agrave; l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale, la question et toute information qui y est formellement annex&eacute;e sont fig&eacute;es. Les documents d&rsquo;appui seront trait&eacute;s comme des informations de contexte, &agrave; l&rsquo;&eacute;tat de projet jusqu&rsquo;&agrave; l&rsquo;ouverture du vote&nbsp;; l&rsquo;objectif est de finaliser le dossier avant le d&eacute;but du vote asynchrone de l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale (dans environ 3 semaines).</li>
+                        </ul>
+
+                        <h2>5. Rapport environnemental (INAGA)</h2>
+                        <ul>
+                            <li>Des recherches ind&eacute;pendantes ont rassembl&eacute; les donn&eacute;es environnementales publiques d&rsquo;Aragon (rapports sur les oiseaux et documents similaires), mais les donn&eacute;es brutes seules ne montrent pas comment l&rsquo;autorit&eacute; les pond&egrave;re en pratique. Le conseil cherche des informations compl&eacute;mentaires sur la fa&ccedil;on dont l&rsquo;INAGA a interpr&eacute;t&eacute; ce type de donn&eacute;es pour des &eacute;v&eacute;nements dans la r&eacute;gion &mdash; ce qui am&eacute;liore l&rsquo;exactitude de ce qui est pr&eacute;sent&eacute; aux membres quant &agrave; la probabilit&eacute; d&rsquo;obtenir un permis pour chaque date.</li>
+                            <li>Il sera rappel&eacute; aux membres dans le dossier qu&rsquo;une date vot&eacute;e reste soumise &agrave; l&rsquo;autorisation de l&rsquo;INAGA&nbsp;; si une date choisie &eacute;tait refus&eacute;e, la date suivante par ordre de pr&eacute;f&eacute;rence s&rsquo;appliquerait.</li>
+                        </ul>
+
+                        <h2>6. &Eacute;lections du conseil &mdash; examen statutaire</h2>
+                        <ul>
+                            <li>La communaut&eacute; a manifest&eacute; de l&rsquo;int&eacute;r&ecirc;t pour les &eacute;lections du conseil. Le conseil a examin&eacute; les statuts et identifi&eacute; une v&eacute;ritable question juridique&nbsp;: les statuts pr&eacute;voient des &eacute;lections tous les deux ans (les prochaines &eacute;tant pr&eacute;vues en janvier 2028), et il n&rsquo;est pas clair si une &eacute;lection en cours de mandat destin&eacute;e &agrave; pourvoir des si&egrave;ges vacants peut &ecirc;tre convoqu&eacute;e en dehors de ce cycle, ou s&rsquo;il faudrait d&rsquo;abord une modification des statuts approuv&eacute;e par une Assembl&eacute;e G&eacute;n&eacute;rale.</li>
+                            <li>Un exemple d&rsquo;avertissement venu d&rsquo;une autre association &mdash; o&ugrave; une &eacute;lection organis&eacute;e en dehors de la forme requise a ensuite &eacute;t&eacute; invalid&eacute;e, provoquant d&rsquo;importants probl&egrave;mes juridiques &mdash; a &eacute;t&eacute; partag&eacute; et pris au s&eacute;rieux.</li>
+                            <li>Le conseil juridique de l&rsquo;association est consult&eacute; sur cette question pr&eacute;cise. En attendant la r&eacute;ponse, le conseil &eacute;vitera de s&rsquo;engager publiquement &agrave; organiser une &eacute;lection selon un calendrier d&eacute;termin&eacute;&nbsp;; si une modification est d&rsquo;abord n&eacute;cessaire, cela sera communiqu&eacute; et propos&eacute; lors d&rsquo;une Assembl&eacute;e G&eacute;n&eacute;rale.</li>
+                            <li>Toute &eacute;lection devrait par ailleurs &ecirc;tre annonc&eacute;e au moins 45 jours avant l&rsquo;assembl&eacute;e concern&eacute;e, ce qui impose une &eacute;ch&eacute;ance r&eacute;elle pour trancher la question juridique.</li>
+                        </ul>
+
+                        <h2>7. Votes de recommandation du conseil sur les dates de l&rsquo;&eacute;v&eacute;nement</h2>
+                        <ul>
+                            <li>Avant la finalisation du dossier d&rsquo;information, le conseil tiendra un vote formel et consign&eacute; au proc&egrave;s-verbal sur chaque semaine candidate, avec les motifs enregistr&eacute;s. Le dossier indiquera, pour chaque semaine, combien de membres du conseil la soutiennent et pourquoi &mdash; afin que les membres puissent voir, par exemple, qu&rsquo;une semaine que personne au conseil ne soutient pr&eacute;sente des probl&egrave;mes connus.</li>
+                        </ul>
+
+                        <h2>8. Sondages communautaires en amont du vote de l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale</h2>
+                        <ul>
+                            <li>Une approche par paliers a &eacute;t&eacute; discut&eacute;e et largement soutenue&nbsp;: (1) un sondage public ouvert (semaine pr&eacute;f&eacute;r&eacute;e / semaine &agrave; exclure absolument) auquel les communaut&eacute;s d&rsquo;autres burns peuvent aussi &ecirc;tre invit&eacute;es &mdash; ce qui sert &eacute;galement &agrave; renouer avec d&rsquo;anciens participants qui se sont &eacute;loign&eacute;s, en partie &agrave; cause de la chaleur estivale&nbsp;; (2) un sondage tra&ccedil;able aupr&egrave;s des d&eacute;tenteurs de billets et des utilisateurs de la plateforme&nbsp;; (3) le vote contraignant, par ordre de pr&eacute;f&eacute;rence, des membres lors de l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale.</li>
+                            <li>Le sondage ouvert est compris comme informel et non infaillible face &agrave; la fraude&nbsp;; ce sont les paliers tra&ccedil;ables qui portent la fiabilit&eacute;. Il a &eacute;t&eacute; sugg&eacute;r&eacute;, dans le cadre de cette d&eacute;marche, de confier aux gens la mission de partager le sondage avec des burners qui se sont &eacute;loign&eacute;s.</li>
+                        </ul>
+
+                        <h2>9. Nouveau site &mdash; point d&rsquo;avancement</h2>
+                        <ul>
+                            <li>Les discussions sur le term sheet avec les propri&eacute;taires des terrains se poursuivent&nbsp;; une r&eacute;union en pr&eacute;sentiel est pr&eacute;vue la semaine prochaine afin d&rsquo;obtenir des d&eacute;tails concrets sur les parcelles et le prix de la portion restante.</li>
+                            <li>D&rsquo;autres structures sont &eacute;tudi&eacute;es, notamment la location d&rsquo;une partie du site la premi&egrave;re ann&eacute;e (avec une option d&rsquo;achat ult&eacute;rieure) plut&ocirc;t qu&rsquo;un achat imm&eacute;diat &mdash; plus lent, mais nettement plus l&eacute;ger financi&egrave;rement, et cela permet de tester d&rsquo;abord le site avec un v&eacute;ritable &eacute;v&eacute;nement. Pas encore de d&eacute;cision&nbsp;; les options sont en cours de collecte.</li>
+                        </ul>
+
+                        <h2>10. Engagement du conseil et m&eacute;canique du quorum</h2>
+                        <ul>
+                            <li>Daniel T a fait observer que les points de l&rsquo;ordre du jour proviennent actuellement surtout d&rsquo;une seule personne et a encourag&eacute; les autres membres &agrave; en proposer &mdash; la r&eacute;union du conseil est aussi le lieu o&ugrave; le travail de l&rsquo;association devient visible pour la communaut&eacute; par le biais des proc&egrave;s-verbaux.</li>
+                            <li>Une discussion plus large a suivi sur les attentes en mati&egrave;re de participation&nbsp;: parmi les id&eacute;es, attribuer un portefeuille &agrave; chaque membre du conseil, d&eacute;finir une participation minimale attendue, pr&eacute;voir des m&eacute;canismes permettant aux membres inactifs sur de longues p&eacute;riodes de se retirer, et/ou ajuster les exigences de quorum afin que la prise de d&eacute;cision ne soit pas bloqu&eacute;e par l&rsquo;inactivit&eacute;. Il a &eacute;galement &eacute;t&eacute; reconnu qu&rsquo;une pr&eacute;sence plus discr&egrave;te, centr&eacute;e sur la reddition de comptes, est un mode l&eacute;gitime de participation au conseil, et que l&rsquo;activit&eacute; est naturellement saisonni&egrave;re.</li>
+                            <li>Le conseil juridique a &eacute;t&eacute; interrog&eacute; sur la possibilit&eacute; de modifier le quorum ou d&rsquo;introduire des dispositions relatives &agrave; l&rsquo;inactivit&eacute;&nbsp;; des propositions pourront &ecirc;tre soumises &agrave; une future assembl&eacute;e. Discussion uniquement &mdash; pas de d&eacute;cision.</li>
+                        </ul>
+
+                        <h2>11. Go/no-go &mdash; clarification pour les ann&eacute;es &agrave; venir</h2>
+                        <ul>
+                            <li>Contexte historique recueilli aupr&egrave;s de membres de longue date de la communaut&eacute; burner europ&eacute;enne&nbsp;: les consultations formelles de type go/no-go ont &eacute;t&eacute; rares lors d&rsquo;&eacute;v&eacute;nements comparables. Le vote go/no-go de cette ann&eacute;e a &eacute;t&eacute; motiv&eacute; par une pression temporelle exceptionnelle, non par un pr&eacute;c&eacute;dent.</li>
+                            <li>Position du conseil&nbsp;: l&rsquo;association existe pour organiser un &eacute;v&eacute;nement annuel, et c&rsquo;est l&agrave; l&rsquo;option par d&eacute;faut. Le vote sur les dates ne comportera donc pas d&rsquo;option &laquo;&nbsp;pas d&rsquo;&eacute;v&eacute;nement&nbsp;&raquo;. Si des membres souhaitent proposer de ne pas organiser d&rsquo;&eacute;v&eacute;nement, la voie statutaire (une motion pr&eacute;sent&eacute;e &agrave; une Assembl&eacute;e G&eacute;n&eacute;rale) est ouverte, la charge revenant aux auteurs de la proposition.</li>
+                        </ul>
+
+                        <h2>12. Questions diverses</h2>
+                        <ul>
+                            <li>Les sujets administratifs et juridiques en cours de suivi seront regroup&eacute;s sous un point de coordination unique du c&ocirc;t&eacute; du conseil, avec une approche d&rsquo;ensemble &agrave; pr&eacute;senter lors d&rsquo;une prochaine r&eacute;union. Les sujets logistiques connexes font l&rsquo;objet d&rsquo;un suivi avec la Production et seront discut&eacute;s lorsque la personne responsable de la Production sera de nouveau pr&eacute;sente.</li>
+                        </ul>
+
+                        <h2>13. Tour de cl&ocirc;ture et prochaine r&eacute;union</h2>
+                        <ul>
+                            <li>Les membres ont conclu par de br&egrave;ves r&eacute;flexions personnelles&nbsp;; appr&eacute;ciation g&eacute;n&eacute;rale pour la dynamique maintenue malgr&eacute; le creux d&rsquo;ao&ucirc;t.</li>
+                            <li>La r&eacute;union de la semaine prochaine combinera le d&eacute;briefing de la r&eacute;union des coordinateurs avec les informations sur les dates de l&rsquo;&eacute;v&eacute;nement qui seront pr&ecirc;tes.</li>
+                        </ul>
+
+                        <p><em>Proc&egrave;s-verbal pr&eacute;par&eacute; &agrave; partir de l&rsquo;enregistrement et de la transcription de la r&eacute;union. &Eacute;pur&eacute; pour publication.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanze tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Consiglio presente: Daniel T, Peter D, Ben D (connessione intermittente; ha condotto i primi punti), Pablo V &middot; Assenti: Ward D (a disposizione nel caso fosse servita una votazione con quorum), Victor P</strong>
+                        Non era presente il quorum; non si &egrave; tenuta alcuna votazione formale. Tutti i punti seguenti sono stati aggiornamenti o discussioni.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Una riunione di agosto pi&ugrave; leggera, incentrata sul lavoro relativo alle date dell&rsquo;evento, su una questione statutaria riguardante le elezioni del consiglio e sulle pratiche di lavoro del consiglio.</p>
+
+                        <h2>1. Check-in</h2>
+                        <ul>
+                            <li>I membri hanno condiviso brevi aggiornamenti personali. Energia d&rsquo;agosto: diverse persone in viaggio o in ripresa da un periodo intenso, con progressi costanti sugli arretrati.</li>
+                        </ul>
+
+                        <h2>2. Validazione delle actas delle riunioni precedenti</h2>
+                        <ul>
+                            <li>Le actas (verbali formali) delle riunioni del consiglio tenute in precedenza quest&rsquo;anno sono ora state firmate. &Egrave; in corso di definizione un processo regolare per rivedere e validare l&rsquo;acta di ciascuna riunione, che dovrebbe essere operativo entro una o due settimane.</li>
+                        </ul>
+
+                        <h2>3. Procedura di ingresso degli asociados</h2>
+                        <ul>
+                            <li>Daniel T ha sollevato la richiesta di rendere pi&ugrave; reattivo il processo di ingresso degli asociados in vista della votazione imminente, proponendo che l&rsquo;approvazione sia delegata a un unico revisore per ridurre i tempi.</li>
+                            <li>Discussione: l&rsquo;attuale revisione da parte di pi&ugrave; persone &egrave; stata difesa come garanzia &mdash; gli asociados hanno un ruolo di governance, e pi&ugrave; paia di occhi hanno gi&agrave; intercettato domande che richiedevano un esame pi&ugrave; attento. Il collo di bottiglia immediato &egrave; il tempo del revisore pi&ugrave; che il processo, e il revisore si &egrave; impegnato ad accelerare i tempi di lavorazione. La proposta non &egrave; stata portata avanti.</li>
+                            <li>L&rsquo;associazione conta attualmente 86 asociados; il potenziale realistico a breve termine a partire dall&rsquo;attuale elenco di lead &egrave; stimato in 100&ndash;150.</li>
+                            <li>&Egrave; stata annotata una questione aperta collegata, per il futuro: i criteri su cosa costituisca un ruolo di &ldquo;lead&rdquo; variano molto tra barrios e reparti, e chi contribuisce da lungo tempo con grande coinvolgimento potrebbe meritare l&rsquo;eleggibilit&agrave; anche laddove le etichette formali dei ruoli non corrispondano con precisione. Da riprendere; nessuna proposta al momento.</li>
+                        </ul>
+
+                        <h2>4. Date dell&rsquo;evento &mdash; aggiornamento sul pacchetto informativo</h2>
+                        <ul>
+                            <li>La pagina delle date dell&rsquo;evento &egrave; stata aggiornata con contenuti maggiormente basati sui dati (conteggi delle allerte per il caldo, dati sul rischio di incendi boschivi, grafici) che sostituiscono le precedenti valutazioni soggettive.</li>
+                            <li>Peter K sta contattando altri burns europei per raccogliere in che modo le diverse scelte di date li influenzerebbero; Celine si &egrave; offerta di aiutare a strutturare il pacchetto informativo per la votazione.</li>
+                            <li>Il pacchetto sar&agrave; una pagina web compatta (non un ammasso di documenti): poche tabelle e grafici, argomenti a favore e contro, con dettagli espandibili. Contenuti previsti: meteo e rischio di incendi, informazioni sulla nidificazione degli uccelli, informazioni sull&rsquo;attivit&agrave; agricola, dichiarazioni di impatto da altri burns, vacanze scolastiche, la raccomandazione del consiglio settimana per settimana e i risultati dei sondaggi comunitari.</li>
+                            <li>Nota di procedura: una volta aperta la votazione all&rsquo;Assemblea Generale, il quesito e qualsiasi informazione formalmente allegata restano fissati. Il materiale di supporto sar&agrave; trattato come informazione di contesto, in bozza fino all&rsquo;apertura della votazione; l&rsquo;obiettivo &egrave; finalizzare il pacchetto prima che inizi la votazione asincrona dell&rsquo;Assemblea Generale (tra circa 3 settimane).</li>
+                        </ul>
+
+                        <h2>5. Relazione ambientale (INAGA)</h2>
+                        <ul>
+                            <li>Una ricerca indipendente ha raccolto i dati ambientali pubblici dell&rsquo;Aragona (rapporti sugli uccelli e simili), ma i dati grezzi da soli non mostrano come l&rsquo;autorit&agrave; li ponderi nella pratica. Il consiglio sta cercando ulteriori informazioni su come INAGA abbia interpretato questo tipo di dati per gli eventi nella regione &mdash; migliorando l&rsquo;accuratezza di quanto viene presentato ai soci sulla probabilit&agrave; di ottenere il permesso per ciascuna data.</li>
+                            <li>Nel pacchetto si ricorder&agrave; ai soci che una data votata resta soggetta all&rsquo;autorizzazione di INAGA; se una data scelta non fosse ammessa, si applicherebbe la data successiva in ordine di preferenza.</li>
+                        </ul>
+
+                        <h2>6. Elezioni del consiglio &mdash; verifica statutaria</h2>
+                        <ul>
+                            <li>C&rsquo;&egrave; stato interesse da parte della comunit&agrave; per le elezioni del consiglio. Il consiglio ha esaminato lo statuto e ha individuato una reale questione giuridica: lo statuto prevede elezioni ogni due anni (le prossime in programma a gennaio 2028), e non &egrave; chiaro se un&rsquo;elezione a met&agrave; mandato per coprire i seggi vacanti possa essere indetta al di fuori di quel ciclo, oppure se richiederebbe prima una modifica dello statuto approvata da un&rsquo;Assemblea Generale.</li>
+                            <li>&Egrave; stato condiviso e preso sul serio un esempio ammonitore proveniente da un&rsquo;altra associazione &mdash; dove un&rsquo;elezione svolta al di fuori della forma richiesta &egrave; stata successivamente invalidata, causando notevoli problemi legali.</li>
+                            <li>I consulenti legali dell&rsquo;associazione vengono consultati sulla questione specifica. Finch&eacute; non arriver&agrave; la risposta, il consiglio eviter&agrave; di impegnarsi pubblicamente a tenere un&rsquo;elezione secondo una tempistica precisa; se fosse necessaria prima una modifica, ci&ograve; verr&agrave; comunicato e proposto in un&rsquo;Assemblea Generale.</li>
+                            <li>Qualsiasi elezione dovrebbe inoltre essere annunciata almeno 45 giorni prima dell&rsquo;assemblea di riferimento, il che impone una scadenza reale per risolvere la questione giuridica.</li>
+                        </ul>
+
+                        <h2>7. Votazioni di raccomandazione del consiglio sulle date dell&rsquo;evento</h2>
+                        <ul>
+                            <li>Prima che il pacchetto informativo venga finalizzato, il consiglio terr&agrave; una votazione formale e messa a verbale su ciascuna settimana candidata, con le motivazioni registrate. Il pacchetto mostrer&agrave;, per ogni settimana, quanti membri del consiglio la sostengono e perch&eacute; &mdash; cos&igrave; che i soci possano vedere, ad esempio, che dietro una settimana che nessuno nel consiglio sostiene ci sono problemi noti.</li>
+                        </ul>
+
+                        <h2>8. Sondaggi nella comunit&agrave; in vista della votazione dell&rsquo;Assemblea Generale</h2>
+                        <ul>
+                            <li>&Egrave; stato discusso e ampiamente sostenuto un approccio a livelli: (1) un sondaggio pubblico aperto (settimana preferita / settimana da escludere) al quale possono essere invitate anche le comunit&agrave; di altri burns &mdash; che serve anche a riavvicinare chi ha partecipato in passato e si &egrave; allontanato, in parte a causa del caldo estivo; (2) un sondaggio tracciato tra chi ha un biglietto e le persone che usano la piattaforma; (3) il voto vincolante, con ordine di preferenza, dei soci in Assemblea Generale.</li>
+                            <li>Si intende che il sondaggio aperto sia informale e non a prova di frode; l&rsquo;affidabilit&agrave; &egrave; portata dai livelli tracciati. &Egrave; stato suggerito, come parte di questo lavoro di riavvicinamento, di dare alle persone la missione di condividere il sondaggio con burners che si sono allontanati.</li>
+                        </ul>
+
+                        <h2>9. Nuovo sito &mdash; aggiornamento</h2>
+                        <ul>
+                            <li>Proseguono le discussioni sul term sheet con i proprietari dei terreni; &egrave; prevista una riunione di persona la prossima settimana per ottenere dettagli concreti sui lotti e il prezzo della porzione restante.</li>
+                            <li>Si stanno esplorando strutture alternative, inclusa quella di affittare una parte del sito per il primo anno (con opzione di acquisto successiva) invece di comprare subito &mdash; pi&ugrave; lenta, ma molto pi&ugrave; leggera dal punto di vista finanziario, e permette di testare prima il sito con un evento reale. Nessuna decisione al momento; si stanno raccogliendo le opzioni.</li>
+                        </ul>
+
+                        <h2>10. Coinvolgimento del consiglio e meccanica del quorum</h2>
+                        <ul>
+                            <li>Daniel T ha osservato che attualmente i punti all&rsquo;ordine del giorno arrivano soprattutto da una sola persona e ha incoraggiato gli altri membri a portarne &mdash; la riunione del consiglio &egrave; anche il luogo in cui il lavoro dell&rsquo;associazione diventa visibile alla comunit&agrave; attraverso i verbali.</li>
+                            <li>&Egrave; seguita una discussione pi&ugrave; ampia sulle aspettative di partecipazione: tra le idee, assegnare a ciascun membro del consiglio un&rsquo;area di responsabilit&agrave;, definire un&rsquo;aspettativa di partecipazione minima, prevedere meccanismi che permettano ai membri inattivi per lunghi periodi di farsi da parte, e/o modificare i requisiti di quorum in modo che il processo decisionale non venga bloccato dall&rsquo;inattivit&agrave;. &Egrave; stato inoltre riconosciuto che una presenza pi&ugrave; silenziosa, incentrata sulla responsabilit&agrave;, &egrave; un modo legittimo di far parte del consiglio, e che l&rsquo;attivit&agrave; &egrave; naturalmente stagionale.</li>
+                            <li>&Egrave; stato chiesto ai consulenti legali se siano possibili modifiche al quorum o clausole sull&rsquo;inattivit&agrave;; eventuali proposte potranno essere portate a una futura assemblea. Solo discussione &mdash; nessuna decisione.</li>
+                        </ul>
+
+                        <h2>11. Go/no-go &mdash; chiarimento per gli anni futuri</h2>
+                        <ul>
+                            <li>Contesto storico raccolto da membri di lunga data della comunit&agrave; burner europea: le consultazioni formali di go/no-go sono state rare in eventi comparabili. La votazione go/no-go di quest&rsquo;anno &egrave; stata determinata da una pressione temporale eccezionale, non da un precedente.</li>
+                            <li>La posizione del consiglio: l&rsquo;associazione esiste per organizzare un evento annuale, e questa &egrave; l&rsquo;impostazione predefinita. La votazione sulle date non includer&agrave; quindi un&rsquo;opzione &ldquo;nessun evento&rdquo;. Se i soci desiderano proporre di non tenere un evento, la via statutaria (una mozione a un&rsquo;Assemblea Generale) &egrave; disponibile, con l&rsquo;onere a carico dei proponenti.</li>
+                        </ul>
+
+                        <h2>12. Varie ed eventuali</h2>
+                        <ul>
+                            <li>I temi amministrativi e legali in corso di follow-up saranno consolidati sotto un unico punto di coordinamento sul versante del consiglio, con un approccio complessivo da riportare a una riunione futura. I temi logistici collegati sono seguiti insieme alla Produzione e saranno discussi quando la persona responsabile della Produzione sar&agrave; nuovamente presente.</li>
+                        </ul>
+
+                        <h2>13. Check-out e prossima riunione</h2>
+                        <ul>
+                            <li>I membri hanno chiuso con brevi riflessioni personali; apprezzamento generale per lo slancio in avanti nonostante la pausa d&rsquo;agosto.</li>
+                            <li>La riunione della prossima settimana unir&agrave; il resoconto della riunione dei coordinatori alle informazioni sulle date dell&rsquo;evento che saranno pronte.</li>
+                        </ul>
+
+                        <p><em>Verbale redatto a partire dalla registrazione e dalla trascrizione della riunione. Ripulito per la pubblicazione.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Bei Diskrepanzen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesender Vorstand: Daniel T, Peter D, Ben D (Verbindung zeitweise unterbrochen; leitete die ersten Punkte), Pablo V &middot; Abwesend: Ward D (in Bereitschaft, falls eine Abstimmung mit Quorum n&ouml;tig gewesen w&auml;re), Victor P</strong>
+                        Es war kein Quorum anwesend; es wurden keine formellen Abstimmungen durchgef&uuml;hrt. Alle unten aufgef&uuml;hrten Punkte waren Updates oder Diskussionen.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Eine leichtere August-Sitzung mit Fokus auf dem Arbeitsstrang zu den Event-Terminen, einer Satzungsfrage zu Vorstandswahlen und den Arbeitsweisen des Vorstands.</p>
+
+                        <h2>1. Check-in</h2>
+                        <ul>
+                            <li>Die Mitglieder teilten kurze pers&ouml;nliche Updates. August-Energie: mehrere Mitglieder sind unterwegs oder erholen sich von einer intensiven Phase, bei stetigem Fortschritt beim Abarbeiten von R&uuml;ckst&auml;nden.</li>
+                        </ul>
+
+                        <h2>2. Validierung der actas fr&uuml;herer Sitzungen</h2>
+                        <ul>
+                            <li>Die actas (formelle Protokolle) der in diesem Jahr bereits abgehaltenen Vorstandssitzungen sind nun unterzeichnet. Ein regelm&auml;&szlig;iger Prozess zur Durchsicht und Validierung der acta jeder Sitzung wird eingerichtet und sollte innerhalb der n&auml;chsten ein bis zwei Wochen stehen.</li>
+                        </ul>
+
+                        <h2>3. Onboarding-Verfahren f&uuml;r asociados</h2>
+                        <ul>
+                            <li>Daniel T brachte den Wunsch ein, das Onboarding-Verfahren f&uuml;r asociados vor der anstehenden Abstimmung reaktionsschneller zu machen, und schlug vor, die Genehmigung an eine einzige pr&uuml;fende Person zu delegieren, um die Bearbeitungszeit zu verk&uuml;rzen.</li>
+                            <li>Diskussion: Die derzeitige Pr&uuml;fung durch mehrere Personen wurde als Schutzmechanismus verteidigt &mdash; asociados haben eine Governance-Rolle, und mehrere Augenpaare haben bereits Antr&auml;ge erkannt, die eine genauere Pr&uuml;fung erforderten. Der unmittelbare Engpass ist die Zeit der pr&uuml;fenden Person und nicht das Verfahren; diese sagte zu, den Durchsatz zu erh&ouml;hen. Der Vorschlag wurde nicht weiterverfolgt.</li>
+                            <li>Der Verein hat derzeit 86 asociados; das realistische kurzfristige Potenzial aus der aktuellen Leads-Liste wird auf 100&ndash;150 gesch&auml;tzt.</li>
+                            <li>Eine damit zusammenh&auml;ngende offene Frage wurde f&uuml;r sp&auml;ter festgehalten: Die Kriterien daf&uuml;r, was als &bdquo;Lead&ldquo;-Rolle gilt, unterscheiden sich stark zwischen barrios und Abteilungen, und langj&auml;hrige, stark engagierte Mitwirkende k&ouml;nnten die W&auml;hlbarkeit verdienen, auch wenn formale Rollenbezeichnungen nicht sauber passen. Wieder aufzugreifen; noch kein Vorschlag.</li>
+                        </ul>
+
+                        <h2>4. Event-Termine &mdash; Update zum Informationspaket</h2>
+                        <ul>
+                            <li>Die Seite zu den Event-Terminen wurde mit st&auml;rker datengest&uuml;tzten Inhalten aktualisiert (Anzahl der Hitzewarnungen, Daten zum Waldbrandrisiko, Diagramme), die die fr&uuml;heren subjektiven Bewertungen ersetzen.</li>
+                            <li>Peter K nimmt Kontakt zu anderen europ&auml;ischen Burns auf, um zu erfahren, wie sich unterschiedliche Terminwahlen auf sie auswirken w&uuml;rden; Celine hat sich bereit erkl&auml;rt, beim Strukturieren des Informationspakets f&uuml;r die Abstimmung zu helfen.</li>
+                            <li>Das Paket wird eine kompakte Webseite (keine Dokumentenhalde): einige Tabellen und Diagramme, Argumente daf&uuml;r und dagegen, mit ausklappbaren Details. Geplante Inhalte: Wetter und Waldbrandrisiko, Informationen zu Vogelbrutzeiten, Informationen zur landwirtschaftlichen T&auml;tigkeit, Wirkungsaussagen anderer Burns, Schulferien, die eigene Empfehlung des Vorstands pro Woche sowie die Ergebnisse der Community-Umfragen.</li>
+                            <li>Verfahrenspunkt: Sobald die Abstimmung f&uuml;r die Generalversammlung ge&ouml;ffnet ist, sind die Frage und alle ihr formell beigef&uuml;gten Informationen fixiert. Begleitmaterial wird als Hintergrundinformation behandelt und bleibt bis zur &Ouml;ffnung der Abstimmung im Entwurfsstadium; Ziel ist, das Paket fertigzustellen, bevor die asynchrone Abstimmung der Generalversammlung beginnt (in etwa 3 Wochen).</li>
+                        </ul>
+
+                        <h2>5. Umweltbericht (INAGA)</h2>
+                        <ul>
+                            <li>Unabh&auml;ngige Recherche hat die &ouml;ffentlichen Umweltdaten Aragoniens (Vogelberichte und &Auml;hnliches) zusammengetragen, aber Rohdaten allein zeigen nicht, wie die Beh&ouml;rde sie in der Praxis gewichtet. Der Vorstand sucht weitere Informationen dazu, wie INAGA solche Daten f&uuml;r Events in der Region ausgelegt hat &mdash; was die Genauigkeit dessen verbessert, was den Mitgliedern &uuml;ber die Genehmigungswahrscheinlichkeit jedes Termins dargestellt wird.</li>
+                            <li>Die Mitglieder werden im Paket daran erinnert, dass ein abgestimmter Termin weiterhin der Genehmigung durch INAGA unterliegt; sollte ein gew&auml;hlter Termin nicht zugelassen werden, w&uuml;rde der n&auml;chstpr&auml;ferierte Termin gelten.</li>
+                        </ul>
+
+                        <h2>6. Vorstandswahlen &mdash; satzungsrechtliche Pr&uuml;fung</h2>
+                        <ul>
+                            <li>In der Community besteht Interesse an Vorstandswahlen. Der Vorstand hat die Satzung gepr&uuml;ft und eine echte Rechtsfrage identifiziert: Die Satzung sieht Wahlen alle zwei Jahre vor (die n&auml;chsten planm&auml;&szlig;ig im Januar 2028), und es ist nicht klar, ob eine Wahl w&auml;hrend der laufenden Amtszeit zur Besetzung freier Sitze au&szlig;erhalb dieses Zyklus einberufen werden kann, oder ob daf&uuml;r zun&auml;chst eine von einer Generalversammlung beschlossene Satzungs&auml;nderung erforderlich w&auml;re.</li>
+                            <li>Ein warnendes Beispiel aus einem anderen Verein &mdash; wo eine au&szlig;erhalb der vorgeschriebenen Form durchgef&uuml;hrte Wahl sp&auml;ter f&uuml;r ung&uuml;ltig erkl&auml;rt wurde und erhebliche rechtliche Probleme verursachte &mdash; wurde geteilt und ernst genommen.</li>
+                            <li>Der Rechtsbeistand des Vereins wird zu der konkreten Frage konsultiert. Bis die Antwort vorliegt, wird der Vorstand es vermeiden, sich &ouml;ffentlich auf einen bestimmten Zeitplan f&uuml;r eine Wahl festzulegen; falls zun&auml;chst eine Satzungs&auml;nderung n&ouml;tig ist, wird dies kommuniziert und einer Generalversammlung vorgeschlagen.</li>
+                            <li>Jede Wahl m&uuml;sste zudem mindestens 45 Tage vor der betreffenden Versammlung angek&uuml;ndigt werden, was eine reale Frist f&uuml;r die Kl&auml;rung der Rechtsfrage setzt.</li>
+                        </ul>
+
+                        <h2>7. Empfehlungsabstimmungen des Vorstands zu den Event-Terminen</h2>
+                        <ul>
+                            <li>Bevor das Informationspaket fertiggestellt wird, f&uuml;hrt der Vorstand zu jeder Kandidatenwoche eine formelle, protokollierte Abstimmung durch, wobei die Begr&uuml;ndungen festgehalten werden. Das Paket wird f&uuml;r jede Woche zeigen, wie viele Vorstandsmitglieder sie unterst&uuml;tzen und warum &mdash; damit die Mitglieder zum Beispiel sehen k&ouml;nnen, dass hinter einer Woche, die niemand im Vorstand unterst&uuml;tzt, bekannte Probleme stehen.</li>
+                        </ul>
+
+                        <h2>8. Community-Umfragen vor der Abstimmung der Generalversammlung</h2>
+                        <ul>
+                            <li>Ein gestufter Ansatz wurde diskutiert und weitgehend unterst&uuml;tzt: (1) eine offene &ouml;ffentliche Umfrage (Lieblingswoche / auf keinen Fall diese Woche), zu der auch die Communities anderer Burns eingeladen werden k&ouml;nnen &mdash; was zugleich fr&uuml;here Teilnehmende erreicht, die sich entfernt haben, teils wegen der Sommerhitze; (2) eine nachverfolgbare Umfrage unter Ticketinhabern und Plattformnutzenden; (3) die verbindliche Rangfolgeabstimmung der Mitglieder auf der Generalversammlung.</li>
+                            <li>Die offene Umfrage gilt als informell und nicht betrugssicher; die Verl&auml;sslichkeit tragen die nachverfolgbaren Stufen. Als Teil dieser Ansprache wurde vorgeschlagen, den Leuten die Mission zu geben, die Umfrage mit abgewanderten Burnern zu teilen.</li>
+                        </ul>
+
+                        <h2>9. Neues Gel&auml;nde &mdash; Update</h2>
+                        <ul>
+                            <li>Die Term-Sheet-Gespr&auml;che mit den Grundeigent&uuml;mern laufen weiter; f&uuml;r n&auml;chste Woche ist ein Treffen vor Ort geplant, um konkrete Angaben zu den Grundst&uuml;cken und die Preise f&uuml;r den verbleibenden Teil zu erhalten.</li>
+                            <li>Alternative Strukturen werden gepr&uuml;ft, darunter, einen Teil des Gel&auml;ndes im ersten Jahr zu mieten (mit anschlie&szlig;ender Kaufoption), statt sofort zu kaufen &mdash; langsamer, aber finanziell deutlich leichter, und es erlaubt, das Gel&auml;nde zuerst mit einem echten Event zu testen. Noch keine Entscheidung; Optionen werden gesammelt.</li>
+                        </ul>
+
+                        <h2>10. Engagement im Vorstand und Quorum-Mechanik</h2>
+                        <ul>
+                            <li>Daniel T merkte an, dass Tagesordnungspunkte derzeit &uuml;berwiegend von einer Person kommen, und ermutigte andere Mitglieder, Themen einzubringen &mdash; die Vorstandssitzung ist auch der Ort, an dem die Arbeit des Vereins &uuml;ber die Protokolle f&uuml;r die Community sichtbar wird.</li>
+                            <li>Es folgte eine breitere Diskussion &uuml;ber Beteiligungserwartungen: Zu den Ideen geh&ouml;rten, jedem Vorstandsmitglied ein Ressort zu geben, eine Mindestbeteiligung zu erwarten, Mechanismen f&uuml;r &uuml;ber l&auml;ngere Zeit inaktive Mitglieder, um zur&uuml;ckzutreten, und/oder die Quorum-Anforderungen so anzupassen, dass Entscheidungen nicht durch Inaktivit&auml;t blockiert werden. Ebenso wurde anerkannt, dass eine ruhigere, auf Rechenschaft ausgerichtete Vorstandsmitgliedschaft eine legitime Form der Beteiligung ist und dass die Aktivit&auml;t naturgem&auml;&szlig; saisonal schwankt.</li>
+                            <li>Der Rechtsbeistand wurde gefragt, ob &Auml;nderungen am Quorum oder Regelungen zu Inaktivit&auml;t m&ouml;glich sind; Vorschl&auml;ge k&ouml;nnten einer k&uuml;nftigen Versammlung vorgelegt werden. Nur Diskussion &mdash; keine Entscheidung.</li>
+                        </ul>
+
+                        <h2>11. Go/No-Go &mdash; Klarstellung f&uuml;r k&uuml;nftige Jahre</h2>
+                        <ul>
+                            <li>Historischer Kontext von langj&auml;hrigen Mitgliedern der europ&auml;ischen Burner-Community: Formelle Go/No-Go-Konsultationen waren bei vergleichbaren Events selten. Die diesj&auml;hrige Go/No-Go-Abstimmung war durch au&szlig;ergew&ouml;hnlichen Zeitdruck bedingt, nicht durch einen Pr&auml;zedenzfall.</li>
+                            <li>Die Sicht des Vorstands: Der Verein existiert, um j&auml;hrlich ein Event zu veranstalten, und das ist der Standardfall. Die Terminabstimmung wird daher keine Option &bdquo;kein Event&ldquo; enthalten. Wenn Mitglieder vorschlagen m&ouml;chten, kein Event durchzuf&uuml;hren, steht der satzungsgem&auml;&szlig;e Weg (ein Antrag an eine Generalversammlung) offen, wobei die Last bei den Antragstellenden liegt.</li>
+                        </ul>
+
+                        <h2>12. Sonstiges</h2>
+                        <ul>
+                            <li>Laufende administrative und rechtliche Follow-up-Themen werden auf Vorstandsseite unter einem einzigen Koordinationspunkt geb&uuml;ndelt; ein Gesamtansatz wird in einer sp&auml;teren Sitzung vorgestellt. Zugeh&ouml;rige Logistikthemen werden mit der Produktion verfolgt und besprochen, sobald die Produktionsleitung wieder anwesend ist.</li>
+                        </ul>
+
+                        <h2>13. Check-out und n&auml;chste Sitzung</h2>
+                        <ul>
+                            <li>Die Mitglieder schlossen mit kurzen pers&ouml;nlichen Reflexionen; allgemeine Wertsch&auml;tzung f&uuml;r den Vorw&auml;rtsschwung trotz der August-Flaute.</li>
+                            <li>Die Sitzung n&auml;chste Woche verbindet das Debriefing des Treffens der Koordinatorinnen und Koordinatoren mit den bis dahin verf&uuml;gbaren Informationen zu den Event-Terminen.</li>
+                        </ul>
+
+                        <p><em>Protokoll erstellt auf Grundlage der Sitzungsaufzeichnung und des Transkripts. F&uuml;r die Ver&ouml;ffentlichung bereinigt.</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>
