@@ -62,6 +62,13 @@
         year: "numeric",
         timeZone: "UTC",
     });
+    const exactAlertDate = new Intl.DateTimeFormat("en-GB", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        timeZone: "UTC",
+    });
 
     function dateFromIso(value) {
         return new Date(`${value}T00:00:00Z`);
@@ -225,7 +232,6 @@
         orange: "#dd6b20",
         red: "#c53030",
         red_plus: "#701a1a",
-        other: "#eee7da",
         unavailable: "#cbd5e1",
     };
 
@@ -312,8 +318,16 @@
             + "</svg>";
     }
 
-    function weeklyAlertCounts(rows) {
+    function countValues(values) {
+        return values.reduce((counts, value) => {
+            counts[value] = (counts[value] || 0) + 1;
+            return counts;
+        }, {});
+    }
+
+    function weeklyAlertDays(rows, dailyRows) {
         const years = [2023, 2024, 2025, 2026];
+        const dailyByDate = new Map(dailyRows.map((row) => [row.date, row.level]));
         const selected = rows.filter((row) => (
             row.week_start_2027 >= "2027-05-31"
             && row.week_start_2027 <= "2027-08-16"
@@ -321,11 +335,29 @@
         const weekly = selected.map((row) => ({
             row,
             values: Object.fromEntries(years.map((year) => {
-                const available = Number(row[`${year}_days_available`]);
+                const candidateStart = dateFromIso(row.week_start_2027);
+                const days = Array.from({ length: 7 }, (_, offset) => {
+                    const candidateDate = new Date(candidateStart);
+                    candidateDate.setUTCDate(candidateDate.getUTCDate() + offset);
+                    const historicalDate = new Date(Date.UTC(
+                        year,
+                        candidateDate.getUTCMonth(),
+                        candidateDate.getUTCDate()
+                    ));
+                    const date = historicalDate.toISOString().slice(0, 10);
+                    return {
+                        date,
+                        level: dailyByDate.get(date) || "unavailable",
+                    };
+                });
+                const counts = countValues(days.map((day) => day.level));
                 return [year, {
-                    available,
-                    red: Number(row[`${year}_red`]),
-                    red_plus: Number(row[`${year}_red_plus`]),
+                    days,
+                    available: 7 - (counts.unavailable || 0),
+                    yellow: counts.yellow || 0,
+                    orange: counts.orange || 0,
+                    red: counts.red || 0,
+                    red_plus: counts.red_plus || 0,
                 }];
             })),
         }));
@@ -333,14 +365,6 @@
     }
 
     function weeklyCell(value, x, y, width, height, compact = false) {
-        const other = Math.max(0, value.available - value.red - value.red_plus);
-        const unavailable = Math.max(0, 7 - value.available);
-        const levels = [
-            ...Array(other).fill("other"),
-            ...Array(value.red).fill("red"),
-            ...Array(value.red_plus).fill("red_plus"),
-            ...Array(unavailable).fill("unavailable"),
-        ];
         const padding = 4;
         const gap = 1.5;
         const slotWidth = Math.max(
@@ -348,30 +372,39 @@
             (width - padding * 2 - gap * 6) / 7
         );
         const slotHeight = Math.min(14, height * 0.34);
-        const slots = levels.map((level, index) => (
-            `<rect x="${x + padding + index * (slotWidth + gap)}" y="${y + 8}" `
-            + `width="${slotWidth}" height="${slotHeight}" rx="1.5" fill="${chartColors[level]}"></rect>`
-        )).join("");
-        let label = "0";
+        const levelLabels = {
+            yellow: "Yellow",
+            orange: "Orange",
+            red: "Red",
+            red_plus: "Red Plus",
+            unavailable: "No comparable data",
+        };
+        const slots = value.days.map((day, index) => {
+            const detail = `${exactAlertDate.format(dateFromIso(day.date))}: ${levelLabels[day.level]}`;
+            return `<rect x="${x + padding + index * (slotWidth + gap)}" y="${y + 8}" `
+                + `width="${slotWidth}" height="${slotHeight}" rx="1.5" fill="${chartColors[day.level]}" `
+                + `tabindex="0" aria-label="${escapeHtml(detail)}">`
+                + `<title>${escapeHtml(detail)}</title>`
+                + "</rect>";
+        }).join("");
+        let label;
         if (!value.available) {
             label = "n/a";
-        } else if (value.red || value.red_plus) {
-            const red = value.red ? `${value.red}R` : "";
-            const redPlus = value.red_plus ? `${value.red_plus}R+` : "";
-            label = compact
-                ? [red, redPlus].filter(Boolean).join("·")
-                : [red, redPlus].filter(Boolean).join(" · ");
+        } else {
+            const counts = [
+                value.yellow,
+                value.orange,
+                value.red,
+                value.red_plus,
+            ];
+            label = compact ? counts.join("/") : counts.join(" / ");
         }
         const note = value.available < 7
             ? ` Only ${value.available} of 7 days are available.`
             : "";
-        const redDayLabel = value.red === 1 ? "day" : "days";
-        const redPlusDayLabel = value.red_plus === 1 ? "day" : "days";
-        const otherDayLabel = other === 1 ? "day" : "days";
         return `<g>`
-            + `<title>${value.red} Red ${redDayLabel}; `
-            + `${value.red_plus} Red Plus ${redPlusDayLabel}; `
-            + `${other} other published alert ${otherDayLabel}.${note}</title>`
+            + `<title>${value.yellow} Yellow; ${value.orange} Orange; `
+            + `${value.red} Red; ${value.red_plus} Red Plus.${note}</title>`
             + `<rect x="${x + 1}" y="${y + 1}" width="${width - 2}" height="${height - 2}" `
             + 'rx="4" fill="rgba(255,255,255,0.18)" stroke="#d8d0c3"></rect>'
             + slots
@@ -407,8 +440,8 @@
                 + cells;
         }).join("");
         target.innerHTML = `<svg class="evidence-chart" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="napif-week-title napif-week-desc">`
-            + '<title id="napif-week-title">Red and Red Plus exposure by week and year</title>'
-            + '<desc id="napif-week-desc">A matrix with weeks as rows and years as columns. Each cell has seven slots showing how many days were below Red, Red, Red Plus, or unavailable.</desc>'
+            + '<title id="napif-week-title">Daily fire-alert levels by week and year</title>'
+            + '<desc id="napif-week-desc">A matrix with weeks as rows and years as columns. Each cell has seven chronological slots showing Yellow, Orange, Red, Red Plus, or unavailable days.</desc>'
             + yearLabels
             + rows
             + "</svg>";
@@ -441,17 +474,17 @@
                 + cells;
         }).join("");
         target.innerHTML = `<svg class="evidence-chart" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="napif-week-title napif-week-desc">`
-            + '<title id="napif-week-title">Red and Red Plus exposure by week and year</title>'
-            + '<desc id="napif-week-desc">A matrix with years as rows and weeks as columns. Each cell has seven slots showing how many days were below Red, Red, Red Plus, or unavailable.</desc>'
+            + '<title id="napif-week-title">Daily fire-alert levels by week and year</title>'
+            + '<desc id="napif-week-desc">A matrix with years as rows and weeks as columns. Each cell has seven chronological slots showing Yellow, Orange, Red, Red Plus, or unavailable days.</desc>'
             + weekLabels
             + rows
             + "</svg>";
     }
 
-    function renderWeeklyChart(rows) {
+    function renderWeeklyChart(rows, dailyRows) {
         const target = document.querySelector("#napif-week-chart");
         if (!target) return;
-        const { years, weekly } = weeklyAlertCounts(rows);
+        const { years, weekly } = weeklyAlertDays(rows, dailyRows);
         if (target.clientWidth < 700) {
             renderWeeklyMobile(target, years, weekly);
         } else {
@@ -505,12 +538,17 @@
             if (!response.ok) throw new Error(`Climate CSV: ${response.status}`);
             return response.text();
         }),
-    ]).then(([napif, climate]) => {
+        fetch("/data/event-dates-2027/napif-daily-2023-2026.csv").then((response) => {
+            if (!response.ok) throw new Error(`NAPIF daily CSV: ${response.status}`);
+            return response.text();
+        }),
+    ]).then(([napif, climate, napifDaily]) => {
         const napifRows = parseCsv(napif);
+        const napifDailyRows = parseCsv(napifDaily);
         renderNapif(napifRows);
         labelResponsiveTables();
         renderTotalChart(napifRows);
-        renderWeeklyChart(napifRows);
+        renderWeeklyChart(napifRows, napifDailyRows);
         renderClimate(parseCsv(climate));
         labelResponsiveTables();
 
@@ -523,7 +561,7 @@
                 if (!width || width === previousWidth) return;
                 previousWidth = width;
                 renderTotalChart(napifRows);
-                renderWeeklyChart(napifRows);
+                renderWeeklyChart(napifRows, napifDailyRows);
             }, 120);
         });
     }).catch((error) => {
