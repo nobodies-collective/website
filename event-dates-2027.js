@@ -225,6 +225,7 @@
         orange: "#dd6b20",
         red: "#c53030",
         red_plus: "#701a1a",
+        other: "#eee7da",
         unavailable: "#cbd5e1",
     };
 
@@ -331,132 +332,119 @@
         return { years, weekly };
     }
 
-    function renderWeeklyMobile(target, years, weekly, ceiling, ticks) {
+    function weeklyCell(value, x, y, width, height, compact = false) {
+        const other = Math.max(0, value.available - value.red - value.red_plus);
+        const unavailable = Math.max(0, 7 - value.available);
+        const levels = [
+            ...Array(other).fill("other"),
+            ...Array(value.red).fill("red"),
+            ...Array(value.red_plus).fill("red_plus"),
+            ...Array(unavailable).fill("unavailable"),
+        ];
+        const padding = 4;
+        const gap = 1.5;
+        const slotWidth = Math.max(
+            2,
+            (width - padding * 2 - gap * 6) / 7
+        );
+        const slotHeight = Math.min(14, height * 0.34);
+        const slots = levels.map((level, index) => (
+            `<rect x="${x + padding + index * (slotWidth + gap)}" y="${y + 8}" `
+            + `width="${slotWidth}" height="${slotHeight}" rx="1.5" fill="${chartColors[level]}"></rect>`
+        )).join("");
+        let label = "0";
+        if (!value.available) {
+            label = "n/a";
+        } else if (value.red || value.red_plus) {
+            const red = value.red ? `${value.red}R` : "";
+            const redPlus = value.red_plus ? `${value.red_plus}R+` : "";
+            label = compact
+                ? [red, redPlus].filter(Boolean).join("·")
+                : [red, redPlus].filter(Boolean).join(" · ");
+        }
+        const note = value.available < 7
+            ? ` Only ${value.available} of 7 days are available.`
+            : "";
+        const redDayLabel = value.red === 1 ? "day" : "days";
+        const redPlusDayLabel = value.red_plus === 1 ? "day" : "days";
+        const otherDayLabel = other === 1 ? "day" : "days";
+        return `<g>`
+            + `<title>${value.red} Red ${redDayLabel}; `
+            + `${value.red_plus} Red Plus ${redPlusDayLabel}; `
+            + `${other} other published alert ${otherDayLabel}.${note}</title>`
+            + `<rect x="${x + 1}" y="${y + 1}" width="${width - 2}" height="${height - 2}" `
+            + 'rx="4" fill="rgba(255,255,255,0.18)" stroke="#d8d0c3"></rect>'
+            + slots
+            + `<text class="value-label" x="${x + width / 2}" y="${y + height - 8}" text-anchor="middle">${label}</text>`
+            + "</g>";
+    }
+
+    function renderWeeklyMobile(target, years, weekly) {
         const width = Math.max(280, Math.round(target.clientWidth || 360));
-        const margin = { top: 28, right: 12, bottom: 45, left: 42 };
-        const labelWidth = 48;
-        const groupHeight = 104;
-        const plotLeft = margin.left + labelWidth;
-        const plotWidth = width - plotLeft - margin.right;
-        const plotHeight = weekly.length * groupHeight;
-        const height = margin.top + plotHeight + margin.bottom;
-
-        const verticalGrid = ticks.map((value) => {
-            const x = plotLeft + (value / ceiling) * plotWidth;
-            return `<line class="grid-line" x1="${x}" y1="${margin.top}" x2="${x}" y2="${margin.top + plotHeight}"></line>`
-                + `<text x="${x}" y="16" text-anchor="middle">${value}</text>`;
-        }).join("");
-
-        const groups = weekly.map(({ row, values }, weekIndex) => {
-            const top = margin.top + weekIndex * groupHeight;
+        const margin = { top: 34, right: 4, bottom: 10, left: 48 };
+        const plotWidth = width - margin.left - margin.right;
+        const columnWidth = plotWidth / years.length;
+        const rowHeight = 43;
+        const height = margin.top + weekly.length * rowHeight + margin.bottom;
+        const yearLabels = years.map((year, index) => (
+            `<text class="axis-label" x="${margin.left + index * columnWidth + columnWidth / 2}" `
+            + 'y="22" text-anchor="middle">'
+            + `${year}</text>`
+        )).join("");
+        const rows = weekly.map(({ row, values }, weekIndex) => {
+            const y = margin.top + weekIndex * rowHeight;
             const start = dateFromIso(row.week_start_2027);
-            const week = `${start.getUTCDate()} ${month.format(start)}`;
-            const separator = weekIndex
-                ? `<line class="grid-line" x1="${margin.left}" y1="${top}" x2="${width - margin.right}" y2="${top}"></line>`
-                : "";
-            const bars = years.map((year, yearIndex) => {
-                const value = values[year];
-                const y = top + 24 + yearIndex * 18;
-                if (!value.available) {
-                    return `<text x="${margin.left}" y="${y + 10}" text-anchor="start">${String(year).slice(2)}</text>`
-                        + `<rect class="is-partial" x="${plotLeft}" y="${y}" width="18" height="11" rx="2" fill="${chartColors.unavailable}">`
-                        + `<title>${year}: no data available yet for this week</title></rect>`
-                        + `<text x="${plotLeft + 23}" y="${y + 10}">n/a</text>`;
-                }
-                const redWidth = (value.red / ceiling) * plotWidth;
-                const redPlusWidth = (value.red_plus / ceiling) * plotWidth;
-                const partial = year === 2026 && value.available < 7;
-                const partialClass = partial ? ' class="is-partial"' : "";
-                const note = partial ? `; partial week (${value.available}/7 days)` : "";
-                const total = value.red + value.red_plus;
-                const totalLabel = total
-                    ? `<text class="value-label" x="${Math.min(plotLeft + redWidth + redPlusWidth + 5, width - 10)}" y="${y + 10}">${total}</text>`
-                    : "";
-                const redDayLabel = value.red === 1 ? "day" : "days";
-                const redPlusDayLabel = value.red_plus === 1 ? "day" : "days";
-                return `<g${partialClass}>`
-                    + `<text x="${margin.left}" y="${y + 10}" text-anchor="start">${String(year).slice(2)}</text>`
-                    + `<rect x="${plotLeft}" y="${y}" width="${redWidth}" height="11" fill="${chartColors.red}">`
-                    + `<title>${year}: ${value.red} Red ${redDayLabel} in this week${note}</title></rect>`
-                    + `<rect x="${plotLeft + redWidth}" y="${y}" width="${redPlusWidth}" height="11" fill="${chartColors.red_plus}">`
-                    + `<title>${year}: ${value.red_plus} Red Plus ${redPlusDayLabel} in this week${note}</title></rect>`
-                    + totalLabel
-                    + "</g>";
-            }).join("");
-            return separator
-                + `<text class="axis-label" x="${margin.left}" y="${top + 15}">${week}</text>`
-                + bars;
+            const label = `${start.getUTCDate()} ${month.format(start)}`;
+            const cells = years.map((year, yearIndex) => weeklyCell(
+                values[year],
+                margin.left + yearIndex * columnWidth,
+                y,
+                columnWidth,
+                rowHeight,
+                true
+            )).join("");
+            return `<text class="axis-label" x="${margin.left - 5}" y="${y + rowHeight / 2 + 4}" text-anchor="end">${label}</text>`
+                + cells;
         }).join("");
-
         target.innerHTML = `<svg class="evidence-chart" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="napif-week-title napif-week-desc">`
-            + '<title id="napif-week-title">Red and Red Plus alert days in each week, by year</title>'
-            + '<desc id="napif-week-desc">Horizontal grouped stacked bars show the number of Red and Red Plus days within each candidate week, for 2023 through 2026.</desc>'
-            + verticalGrid
-            + groups
-            + `<text x="${margin.left}" y="${height - 12}">Years shown as 23 / 24 / 25 / 26</text>`
+            + '<title id="napif-week-title">Red and Red Plus exposure by week and year</title>'
+            + '<desc id="napif-week-desc">A matrix with weeks as rows and years as columns. Each cell has seven slots showing how many days were below Red, Red, Red Plus, or unavailable.</desc>'
+            + yearLabels
+            + rows
             + "</svg>";
     }
 
-    function renderWeeklyDesktop(target, years, weekly, ceiling, ticks) {
+    function renderWeeklyDesktop(target, years, weekly) {
         const width = Math.max(700, Math.round(target.clientWidth || 1100));
-        const height = Math.max(390, Math.min(480, Math.round(width * 0.42)));
-        const margin = { top: 20, right: 20, bottom: 105, left: 52 };
+        const margin = { top: 42, right: 6, bottom: 10, left: 48 };
         const plotWidth = width - margin.left - margin.right;
-        const plotHeight = height - margin.top - margin.bottom;
-        const groupWidth = plotWidth / weekly.length;
-        const gap = 3;
-        const barWidth = Math.max(6, Math.min(17, (groupWidth - 8 - gap * 3) / 4));
-        const barsWidth = barWidth * 4 + gap * 3;
-
-        const groups = weekly.map(({ row, values }, weekIndex) => {
-            const groupLeft = margin.left + weekIndex * groupWidth + (groupWidth - barsWidth) / 2;
-            const columns = years.map((year, yearIndex) => {
-                const value = values[year];
-                const x = groupLeft + yearIndex * (barWidth + gap);
-                if (!value.available) {
-                    return `<g class="is-partial">`
-                        + `<rect x="${x}" y="${margin.top + plotHeight - 12}" width="${barWidth}" height="12" rx="2" fill="${chartColors.unavailable}">`
-                        + `<title>${year}: no data available yet for this week</title></rect>`
-                        + "</g>";
-                }
-                const redHeight = (value.red / ceiling) * plotHeight;
-                const redPlusHeight = (value.red_plus / ceiling) * plotHeight;
-                const baseY = margin.top + plotHeight;
-                const partial = year === 2026 && value.available < 7;
-                const partialClass = partial ? ' class="is-partial"' : "";
-                const note = partial ? `; partial week (${value.available}/7 days)` : "";
-                const total = value.red + value.red_plus;
-                const valueLabel = total
-                    ? `<text class="value-label" x="${x + barWidth / 2}" y="${Math.max(baseY - redHeight - redPlusHeight - 5, 12)}" text-anchor="middle">${total}</text>`
-                    : "";
-                const redDayLabel = value.red === 1 ? "day" : "days";
-                const redPlusDayLabel = value.red_plus === 1 ? "day" : "days";
-                return `<g${partialClass}>`
-                    + `<rect x="${x}" y="${baseY - redHeight}" width="${barWidth}" height="${redHeight}" fill="${chartColors.red}">`
-                    + `<title>${year}: ${value.red} Red ${redDayLabel} in this week${note}</title></rect>`
-                    + `<rect x="${x}" y="${baseY - redHeight - redPlusHeight}" width="${barWidth}" height="${redPlusHeight}" fill="${chartColors.red_plus}">`
-                    + `<title>${year}: ${value.red_plus} Red Plus ${redPlusDayLabel} in this week${note}</title></rect>`
-                    + valueLabel
-                    + "</g>";
-            }).join("");
+        const columnWidth = plotWidth / weekly.length;
+        const rowHeight = 52;
+        const height = margin.top + years.length * rowHeight + margin.bottom;
+        const weekLabels = weekly.map(({ row }, weekIndex) => {
             const start = dateFromIso(row.week_start_2027);
             const label = `${start.getUTCDate()} ${month.format(start)}`;
-            const center = margin.left + weekIndex * groupWidth + groupWidth / 2;
-            const yearLabels = years.map((year, yearIndex) => (
-                `<text x="${groupLeft + yearIndex * (barWidth + gap) + barWidth / 2}" y="${height - 72}" text-anchor="middle">${String(year).slice(2)}</text>`
-            )).join("");
-            return columns + yearLabels
-                + `<text class="axis-label" x="${center}" y="${height - 43}" text-anchor="middle">${label}</text>`;
+            return `<text class="axis-label" x="${margin.left + weekIndex * columnWidth + columnWidth / 2}" `
+                + 'y="25" text-anchor="middle">'
+                + `${label}</text>`;
         }).join("");
-
-        target.innerHTML = `<svg class="evidence-chart wide" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="napif-week-title napif-week-desc">`
-            + '<title id="napif-week-title">Red and Red Plus alert days in each week, by year</title>'
-            + '<desc id="napif-week-desc">Grouped stacked columns show the number of Red and Red Plus days within each candidate week, for 2023 through 2026.</desc>'
-            + gridMarkup(ticks, ceiling, margin.left, margin.top, plotWidth, plotHeight)
-            + `<line class="axis-line" x1="${margin.left}" y1="${margin.top + plotHeight}" x2="${margin.left + plotWidth}" y2="${margin.top + plotHeight}"></line>`
-            + `<text class="axis-label" x="15" y="${margin.top + plotHeight / 2}" text-anchor="middle" transform="rotate(-90 15 ${margin.top + plotHeight / 2})">Alert days in week</text>`
-            + groups
-            + `<text x="${margin.left}" y="${height - 10}">Small labels identify year: 23 / 24 / 25 / 26</text>`
+        const rows = years.map((year, yearIndex) => {
+            const y = margin.top + yearIndex * rowHeight;
+            const cells = weekly.map(({ values }, weekIndex) => weeklyCell(
+                values[year],
+                margin.left + weekIndex * columnWidth,
+                y,
+                columnWidth,
+                rowHeight
+            )).join("");
+            return `<text class="axis-label" x="${margin.left - 7}" y="${y + rowHeight / 2 + 4}" text-anchor="end">${year}</text>`
+                + cells;
+        }).join("");
+        target.innerHTML = `<svg class="evidence-chart" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="napif-week-title napif-week-desc">`
+            + '<title id="napif-week-title">Red and Red Plus exposure by week and year</title>'
+            + '<desc id="napif-week-desc">A matrix with years as rows and weeks as columns. Each cell has seven slots showing how many days were below Red, Red, Red Plus, or unavailable.</desc>'
+            + weekLabels
+            + rows
             + "</svg>";
     }
 
@@ -464,14 +452,10 @@
         const target = document.querySelector("#napif-week-chart");
         if (!target) return;
         const { years, weekly } = weeklyAlertCounts(rows);
-        const largest = Math.max(...weekly.flatMap(({ values }) => years.map(
-            (year) => values[year].available ? values[year].red + values[year].red_plus : 0
-        )));
-        const { ceiling, ticks } = chartTicks(largest);
         if (target.clientWidth < 700) {
-            renderWeeklyMobile(target, years, weekly, ceiling, ticks);
+            renderWeeklyMobile(target, years, weekly);
         } else {
-            renderWeeklyDesktop(target, years, weekly, ceiling, ticks);
+            renderWeeklyDesktop(target, years, weekly);
         }
     }
 
