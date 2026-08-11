@@ -492,6 +492,220 @@
         }
     }
 
+    function rgbFromHex(hex) {
+        return [
+            Number.parseInt(hex.slice(1, 3), 16),
+            Number.parseInt(hex.slice(3, 5), 16),
+            Number.parseInt(hex.slice(5, 7), 16),
+        ];
+    }
+
+    function colourFromPalette(palette, fraction) {
+        const bounded = Math.max(0, Math.min(1, fraction));
+        const position = bounded * (palette.length - 1);
+        const lower = Math.floor(position);
+        const upper = Math.min(palette.length - 1, Math.ceil(position));
+        const mix = position - lower;
+        const start = rgbFromHex(palette[lower]);
+        const end = rgbFromHex(palette[upper]);
+        return start.map((channel, index) => (
+            Math.round(channel + (end[index] - channel) * mix)
+        ));
+    }
+
+    function rgbCss(rgb) {
+        return `rgb(${rgb.join(",")})`;
+    }
+
+    function readableTextColour(rgb) {
+        const luminance = (
+            0.2126 * rgb[0]
+            + 0.7152 * rgb[1]
+            + 0.0722 * rgb[2]
+        ) / 255;
+        return luminance < 0.53 ? "#ffffff" : "#2c2418";
+    }
+
+    function svgHeader(lines, x, y) {
+        return `<text class="axis-label" x="${x}" y="${y}" text-anchor="middle">`
+            + lines.map((line, index) => (
+                `<tspan x="${x}" dy="${index ? 13 : 0}">${escapeHtml(line)}</tspan>`
+            )).join("")
+            + "</text>";
+    }
+
+    function renderClimateMatrix(target, rows, metrics, palette, chartId, description) {
+        if (!target) return;
+        const width = Math.max(280, Math.round(target.clientWidth || 760));
+        const margin = {
+            top: 56,
+            right: 4,
+            bottom: 8,
+            left: width < 480 ? 58 : 76,
+        };
+        const rowHeight = width < 480 ? 34 : 36;
+        const plotWidth = width - margin.left - margin.right;
+        const columnWidth = plotWidth / metrics.length;
+        const height = margin.top + rows.length * rowHeight + margin.bottom;
+        const headers = metrics.map((metric, index) => svgHeader(
+            metric.header,
+            margin.left + index * columnWidth + columnWidth / 2,
+            21
+        )).join("");
+        const cells = rows.map((row, rowIndex) => {
+            const y = margin.top + rowIndex * rowHeight;
+            const start = dateFromIso(row.week_start_2027);
+            const end = dateFromIso(row.week_end_2027);
+            const week = `${start.getUTCDate()} ${month.format(start)}`;
+            const current = row.week_start_2027 === "2027-07-05";
+            const highlight = current
+                ? `<rect x="0" y="${y}" width="${width}" height="${rowHeight}" fill="rgba(194,112,62,0.09)"></rect>`
+                : "";
+            const rowCells = metrics.map((metric, metricIndex) => {
+                const value = Number(row[metric.key]);
+                const fraction = (value - metric.min) / (metric.max - metric.min);
+                const colour = colourFromPalette(palette, fraction);
+                const fill = rgbCss(colour);
+                const text = readableTextColour(colour);
+                const display = metric.format(value);
+                const detail = `${longDate.format(start)}–${longDate.format(end)}: `
+                    + `${metric.label} ${display}. ${metric.definition}`;
+                const x = margin.left + metricIndex * columnWidth;
+                return `<g>`
+                    + `<rect x="${x + 1}" y="${y + 1}" width="${columnWidth - 2}" height="${rowHeight - 2}" `
+                    + `rx="4" fill="${fill}" tabindex="0" aria-label="${escapeHtml(detail)}">`
+                    + `<title>${escapeHtml(detail)}</title></rect>`
+                    + `<text x="${x + columnWidth / 2}" y="${y + rowHeight / 2 + 4}" text-anchor="middle" `
+                    + `style="fill:${text};font-weight:700">${escapeHtml(display)}</text>`
+                    + "</g>";
+            }).join("");
+            return highlight
+                + `<text class="axis-label" x="${margin.left - 6}" y="${y + rowHeight / 2 + 4}" text-anchor="end">${week}</text>`
+                + rowCells;
+        }).join("");
+        target.innerHTML = `<svg class="evidence-chart" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="${chartId}-title ${chartId}-desc">`
+            + `<title id="${chartId}-title">${escapeHtml(description.title)}</title>`
+            + `<desc id="${chartId}-desc">${escapeHtml(description.desc)}</desc>`
+            + headers
+            + cells
+            + "</svg>";
+    }
+
+    function renderClimateCharts(rows) {
+        const temperatureMetrics = [
+            {
+                key: "median_daily_high_c",
+                header: ["Typical", "high"],
+                label: "Typical daily high:",
+                definition: "Median daily maximum across the twenty matching historical weeks.",
+                min: 5,
+                max: 42,
+                format: (value) => `${value.toFixed(1)}°C`,
+            },
+            {
+                key: "p95_daily_high_c",
+                header: ["Hot day", "(p95)"],
+                label: "Hot-day temperature:",
+                definition: "95th percentile daily maximum across the twenty matching historical weeks; this is not the absolute maximum.",
+                min: 5,
+                max: 42,
+                format: (value) => `${value.toFixed(1)}°C`,
+            },
+            {
+                key: "median_daily_low_c",
+                header: ["Typical", "low"],
+                label: "Typical daily low:",
+                definition: "Median daily minimum across the twenty matching historical weeks.",
+                min: 5,
+                max: 42,
+                format: (value) => `${value.toFixed(1)}°C`,
+            },
+            {
+                key: "p05_daily_low_c",
+                header: ["Cool night", "(p05)"],
+                label: "Cool-night temperature:",
+                definition: "5th percentile daily minimum across the twenty matching historical weeks.",
+                min: 5,
+                max: 42,
+                format: (value) => `${value.toFixed(1)}°C`,
+            },
+        ];
+        const rainMetrics = [
+            {
+                key: "wet_day_probability_pct",
+                header: ["Wet-day", "chance"],
+                label: "Wet-day chance:",
+                definition: "Share of matching historical days with at least 1 mm of rain.",
+                min: 0,
+                max: 30,
+                format: (value) => `${value.toFixed(0)}%`,
+            },
+            {
+                key: "years_with_wet_week_pct",
+                header: ["Weeks", "with rain"],
+                label: "Historical weeks with rain:",
+                definition: "Share of the twenty matching historical weeks with at least 1 mm total rain.",
+                min: 0,
+                max: 100,
+                format: (value) => `${value.toFixed(0)}%`,
+            },
+            {
+                key: "mean_weekly_rain_mm",
+                header: ["Mean weekly", "rain"],
+                label: "Mean weekly rain:",
+                definition: "Mean seven-day rainfall total across the twenty matching historical weeks.",
+                min: 0,
+                max: 15,
+                format: (value) => `${value.toFixed(1)} mm`,
+            },
+            {
+                key: "p90_weekly_rain_mm",
+                header: ["High-rain", "week (p90)"],
+                label: "High-rain week total:",
+                definition: "90th percentile of the twenty matching seven-day rainfall totals.",
+                min: 0,
+                max: 40,
+                format: (value) => `${value.toFixed(1)} mm`,
+            },
+        ];
+        const temperaturePalette = [
+            "#315f9d",
+            "#91bfdb",
+            "#ffffbf",
+            "#fdae61",
+            "#a50026",
+        ];
+        const rainPalette = [
+            "#f7fbff",
+            "#c6dbef",
+            "#6baed6",
+            "#2171b5",
+            "#08306b",
+        ];
+        renderClimateMatrix(
+            document.querySelector("#climate-temperature-chart"),
+            rows,
+            temperatureMetrics,
+            temperaturePalette,
+            "climate-temperature",
+            {
+                title: "Historical temperature pattern by candidate week",
+                desc: "A heatmap with candidate weeks as rows and four temperature measures as columns. Cooler values are blue and hotter values are orange to red.",
+            }
+        );
+        renderClimateMatrix(
+            document.querySelector("#climate-rain-chart"),
+            rows,
+            rainMetrics,
+            rainPalette,
+            "climate-rain",
+            {
+                title: "Historical rain pattern by candidate week",
+                desc: "A heatmap with candidate weeks as rows and four rainfall measures as columns. Darker blue indicates a higher value within that measure's fixed scale.",
+            }
+        );
+    }
+
     function renderClimate(rows) {
         const heatBody = document.querySelector("#climate-heat-body");
         const rainBody = document.querySelector("#climate-rain-body");
@@ -520,6 +734,7 @@
                 + `<td>${escapeHtml(row.p90_weekly_rain_mm)} mm</td>`
                 + "</tr>";
         }).join("");
+        renderClimateCharts(rows);
     }
 
     function showLoadError(selector) {
@@ -545,11 +760,12 @@
     ]).then(([napif, climate, napifDaily]) => {
         const napifRows = parseCsv(napif);
         const napifDailyRows = parseCsv(napifDaily);
+        const climateRows = parseCsv(climate);
         renderNapif(napifRows);
         labelResponsiveTables();
         renderTotalChart(napifRows);
         renderWeeklyChart(napifRows, napifDailyRows);
-        renderClimate(parseCsv(climate));
+        renderClimate(climateRows);
         labelResponsiveTables();
 
         let resizeTimer;
@@ -562,6 +778,7 @@
                 previousWidth = width;
                 renderTotalChart(napifRows);
                 renderWeeklyChart(napifRows, napifDailyRows);
+                renderClimateCharts(climateRows);
             }, 120);
         });
     }).catch((error) => {
@@ -571,7 +788,11 @@
         showLoadError("#climate-rain-body");
         const totalChart = document.querySelector("#napif-total-chart");
         const weekChart = document.querySelector("#napif-week-chart");
+        const temperatureChart = document.querySelector("#climate-temperature-chart");
+        const rainChart = document.querySelector("#climate-rain-chart");
         if (totalChart) totalChart.textContent = "The alert chart data could not be loaded.";
         if (weekChart) weekChart.textContent = "The alert chart data could not be loaded.";
+        if (temperatureChart) temperatureChart.textContent = "The temperature chart data could not be loaded.";
+        if (rainChart) rainChart.textContent = "The rain chart data could not be loaded.";
     });
 })();
