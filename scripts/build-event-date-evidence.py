@@ -11,7 +11,8 @@ hundreds of source PDFs. Every NAPIF row includes the official source URL.
 Requirements:
   * Python 3.10+
   * curl
-  * pdftotext (Poppler)
+  * pdftotext and pdfimages (Poppler)
+  * Pillow
 """
 
 from __future__ import annotations
@@ -23,10 +24,14 @@ import json
 import math
 import re
 import subprocess
+import tempfile
 import unicodedata
 import urllib.parse
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
+
+from PIL import Image
 
 
 SITE_LATITUDE = 41.7005615
@@ -37,8 +42,20 @@ NORMAL_START_YEAR = 1991
 NORMAL_END_YEAR = 2020
 NAPIF_START_MONTH_DAY = (6, 1)
 NAPIF_END_MONTH_DAY = (10, 15)
-NAPIF_PARTIAL_2026_END = dt.date(2026, 8, 10)
+NAPIF_PARTIAL_2026_END = dt.date(2026, 8, 11)
 OUTPUT_DIR = Path(__file__).resolve().parent.parent / "data" / "event-dates-2027"
+
+NAPIF_LEVEL_COLOURS = {
+    "green": (56, 168, 0),
+    "yellow": (255, 255, 0),
+    "orange": (255, 119, 0),
+    "red": (255, 0, 0),
+    "red_plus": (153, 0, 0),
+}
+
+# The site sits within the Muela de Alcubierre polygon at this stable
+# proportional position in the current-day map embedded in each report.
+NAPIF_SITE_MAP_POSITION = (0.692, 0.397)
 
 OPEN_METEO_URL = "https://archive-api.open-meteo.com/v1/archive"
 NAPIF_URL = (
@@ -272,6 +289,107 @@ def classify_napif(text: str) -> str:
     return "yellow"
 
 
+def colour_distance(first: tuple[int, int, int], second: tuple[int, int, int]) -> int:
+    return sum((first[index] - second[index]) ** 2 for index in range(3))
+
+
+def classify_napif_map(pdf_path: Path) -> str:
+    """Read Castejón de Monegros' exact level from the official map.
+
+    The report prose generally lists only the zones at the highest alert
+    level. Treating every unlisted zone as Yellow therefore misclassifies
+    explicit Green areas, especially late in the season. The embedded map
+    contains the complete zone-level classification.
+    """
+
+    with tempfile.TemporaryDirectory() as directory:
+        prefix = Path(directory) / "napif"
+        subprocess.run(
+            [
+                "pdfimages",
+                "-f",
+                "1",
+                "-l",
+                "1",
+                "-png",
+                str(pdf_path),
+                str(prefix),
+            ],
+            check=True,
+            capture_output=True,
+        )
+
+        map_candidates = []
+        for image_path in sorted(Path(directory).glob("napif-*.png")):
+            image = Image.open(image_path).convert("RGB")
+            width, height = image.size
+            if width < 500 or height < 700:
+                continue
+
+            colours = image.getcolors(maxcolors=10_000_000) or []
+            mapped_pixels = sum(
+                count
+                for count, colour in colours
+                if min(
+                    colour_distance(colour, reference)
+                    for reference in NAPIF_LEVEL_COLOURS.values()
+                ) < 400
+            )
+            if mapped_pixels > width * height * 0.02:
+                map_candidates.append(image)
+
+        if not map_candidates:
+            raise RuntimeError(f"Could not find the current-day map in {pdf_path}")
+        current_map = max(
+            map_candidates,
+            key=lambda image: image.width * image.height,
+        )
+
+        width, height = current_map.size
+        centre_x = round(NAPIF_SITE_MAP_POSITION[0] * width)
+        centre_y = round(NAPIF_SITE_MAP_POSITION[1] * height)
+        votes = Counter()
+        for x in range(centre_x - 8, centre_x + 9):
+            for y in range(centre_y - 8, centre_y + 9):
+                colour = current_map.getpixel((x, y))
+                level, distance = min(
+                    (
+                        (level, colour_distance(colour, reference))
+                        for level, reference in NAPIF_LEVEL_COLOURS.items()
+                    ),
+                    key=lambda item: item[1],
+                )
+                if distance < 2_500:
+                    votes[level] += 1
+
+        if not votes:
+            raise RuntimeError(
+                f"Could not read the site colour from the map in {pdf_path}"
+            )
+        return votes.most_common(1)[0][0]
+
+
+def classify_napif_report(date: dt.date, cache_dir: Path) -> tuple[dt.date, str]:
+    pdf = download_napif_pdf(date, cache_dir)
+    try:
+        level = classify_napif_map(pdf)
+        if level == "red_plus":
+            text = ascii_normalise(pdf_first_page_text(pdf))
+            if (
+                "alerta rojo plus de incendios" not in text
+                and "alerta roja plus de incendios" not in text
+            ):
+                # Before Red Plus was introduced, the standard Red map colour
+                # used the same dark-red RGB value.
+                level = "red"
+        return date, level
+    except RuntimeError:
+        # A few Red Plus bulletins use a special, text-heavy layout without
+        # the standard embedded map. Their prose explicitly identifies the
+        # affected comarca or all Aragón.
+        return date, classify_napif(pdf_first_page_text(pdf))
+
+
 def download_napif_pdf(date: dt.date, cache_dir: Path) -> Path:
     cache_dir.mkdir(parents=True, exist_ok=True)
     path = cache_dir / f"{date.isoformat()}.pdf"
@@ -317,9 +435,14 @@ def build_napif_csvs(output_dir: Path, cache_dir: Path) -> None:
     daily_rows = []
     levels = {}
 
-    for date in napif_dates():
-        pdf = download_napif_pdf(date, cache_dir)
-        level = classify_napif(pdf_first_page_text(pdf))
+    dates = list(napif_dates())
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        classified = executor.map(
+            lambda date: classify_napif_report(date, cache_dir),
+            dates,
+        )
+
+    for date, level in classified:
         levels[date] = level
         daily_rows.append(
             {
@@ -350,6 +473,7 @@ def build_napif_csvs(output_dir: Path, cache_dir: Path) -> None:
             counts = Counter(levels[date] for date in dates)
             prefix = str(year)
             row[f"{prefix}_days_available"] = len(dates)
+            row[f"{prefix}_green"] = counts["green"]
             row[f"{prefix}_yellow"] = counts["yellow"]
             row[f"{prefix}_orange"] = counts["orange"]
             row[f"{prefix}_red"] = counts["red"]

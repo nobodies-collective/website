@@ -8,6 +8,13 @@
         .replaceAll('"', "&quot;")
         .replaceAll("'", "&#039;");
 
+    const evidenceVersion = "2026-08-11-green-map";
+    const evidenceUrl = (path) => `${path}?v=${evidenceVersion}`;
+    const numericValue = (value) => {
+        const number = Number(value);
+        return Number.isFinite(number) ? number : 0;
+    };
+
     function parseCsv(text) {
         const rows = [];
         let row = [];
@@ -112,8 +119,8 @@
         const available = Number(row[`${year}_days_available`]);
         if (!available) return noDataCell(row, year);
 
-        const levels = ["yellow", "orange", "red", "red_plus"];
-        const counts = levels.map((level) => Number(row[`${year}_${level}`]));
+        const levels = ["green", "yellow", "orange", "red", "red_plus"];
+        const counts = levels.map((level) => numericValue(row[`${year}_${level}`]));
         const label = counts.join("/");
         const notes = [];
         const redDates = dateList(row[`${year}_red_dates`]);
@@ -192,10 +199,10 @@
                 + "</tr>";
         }).join("");
 
-        const levels = ["yellow", "orange", "red", "red_plus"];
+        const levels = ["green", "yellow", "orange", "red", "red_plus"];
         const totalCell = (year) => levels
             .map((level) => rows.reduce(
-                (total, row) => total + Number(row[`${year}_${level}`]),
+                (total, row) => total + numericValue(row[`${year}_${level}`]),
                 0
             ))
             .join("/");
@@ -228,10 +235,13 @@
     }
 
     const chartColors = {
+        green: "#4f8f3a",
         yellow: "#d4a72c",
         orange: "#dd6b20",
         red: "#c53030",
         red_plus: "#701a1a",
+        future: "#cbd5e1",
+        outside_season: "#cbd5e1",
         unavailable: "#cbd5e1",
     };
 
@@ -261,6 +271,7 @@
 
         const years = [2023, 2024, 2025, 2026];
         const levels = [
+            ["green", "Green"],
             ["yellow", "Yellow"],
             ["orange", "Orange"],
             ["red", "Red"],
@@ -268,7 +279,9 @@
         ];
         const totals = years.map((year) => Object.fromEntries(levels.map(([level]) => [
             level,
-            rows.reduce((sum, row) => sum + Number(row[`${year}_${level}`]), 0),
+            rows.reduce((sum, row) => (
+                sum + numericValue(row[`${year}_${level}`])
+            ), 0),
         ])));
         const largest = Math.max(...totals.flatMap((total) => levels.map(([level]) => total[level])));
         const { ceiling, ticks } = chartTicks(largest);
@@ -284,8 +297,15 @@
         const plotHeight = height - margin.top - margin.bottom;
         const groupWidth = plotWidth / years.length;
         const gap = width < 480 ? 3 : 8;
-        const barWidth = Math.max(4, Math.min(32, (groupWidth - 10 - gap * 3) / 4));
-        const barsWidth = barWidth * 4 + gap * 3;
+        const barWidth = Math.max(
+            3,
+            Math.min(28, (
+                groupWidth - 8 - gap * (levels.length - 1)
+            ) / levels.length)
+        );
+        const barsWidth = (
+            barWidth * levels.length + gap * (levels.length - 1)
+        );
 
         const bars = years.map((year, yearIndex) => {
             const groupLeft = margin.left + yearIndex * groupWidth + (groupWidth - barsWidth) / 2;
@@ -295,7 +315,7 @@
                 const barHeight = (value / ceiling) * plotHeight;
                 const x = groupLeft + levelIndex * (barWidth + gap);
                 const y = margin.top + plotHeight - barHeight;
-                const coverage = year === 2026 ? " (partial through 10 August)" : "";
+                const coverage = year === 2026 ? " (partial through 11 August)" : "";
                 return `<g${yearClass}>`
                     + `<rect x="${x}" y="${y}" width="${barWidth}" height="${barHeight}" rx="2" fill="${chartColors[level]}">`
                     + `<title>${year} ${label}: ${value} days${coverage}</title></rect>`
@@ -309,12 +329,12 @@
 
         target.innerHTML = `<svg class="evidence-chart" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="napif-total-title napif-total-desc">`
             + '<title id="napif-total-title">Alert-day totals by year and alert level</title>'
-            + '<desc id="napif-total-desc">Grouped bar chart comparing Yellow, Orange, Red and Red Plus day totals for 2023 through 2026. The 2026 figures are partial through 10 August.</desc>'
+            + '<desc id="napif-total-desc">Grouped bar chart comparing Green, Yellow, Orange, Red and Red Plus day totals for 2023 through 2026. The 2026 figures are partial through 11 August.</desc>'
             + gridMarkup(ticks, ceiling, margin.left, margin.top, plotWidth, plotHeight)
             + `<line class="axis-line" x1="${margin.left}" y1="${margin.top + plotHeight}" x2="${margin.left + plotWidth}" y2="${margin.top + plotHeight}"></line>`
             + `<text class="axis-label" x="15" y="${margin.top + plotHeight / 2}" text-anchor="middle" transform="rotate(-90 15 ${margin.top + plotHeight / 2})">Published days</text>`
             + bars
-            + `<text x="${width - margin.right}" y="${height - 10}" text-anchor="end">* through 10 Aug</text>`
+            + `<text x="${width - margin.right}" y="${height - 10}" text-anchor="end">* through 11 Aug</text>`
             + "</svg>";
     }
 
@@ -330,7 +350,7 @@
         const dailyByDate = new Map(dailyRows.map((row) => [row.date, row.level]));
         const selected = rows.filter((row) => (
             row.week_start_2027 >= "2027-05-31"
-            && row.week_start_2027 <= "2027-08-16"
+            && row.week_start_2027 <= "2027-10-11"
         ));
         const weekly = selected.map((row) => ({
             row,
@@ -345,15 +365,28 @@
                         candidateDate.getUTCDate()
                     ));
                     const date = historicalDate.toISOString().slice(0, 10);
+                    const publishedLevel = dailyByDate.get(date);
+                    let level = publishedLevel;
+                    if (!level && year === 2026 && date > "2026-08-11") {
+                        level = "future";
+                    } else if (!level && date.slice(5) > "10-15") {
+                        level = "outside_season";
+                    } else if (!level) {
+                        level = "unavailable";
+                    }
                     return {
                         date,
-                        level: dailyByDate.get(date) || "unavailable",
+                        level,
                     };
                 });
                 const counts = countValues(days.map((day) => day.level));
                 return [year, {
                     days,
-                    available: 7 - (counts.unavailable || 0),
+                    available: ["green", "yellow", "orange", "red", "red_plus"]
+                        .reduce((total, level) => (
+                            total + (counts[level] || 0)
+                        ), 0),
+                    green: counts.green || 0,
                     yellow: counts.yellow || 0,
                     orange: counts.orange || 0,
                     red: counts.red || 0,
@@ -373,10 +406,13 @@
         );
         const slotHeight = Math.min(14, height * 0.34);
         const levelLabels = {
+            green: "Green",
             yellow: "Yellow",
             orange: "Orange",
             red: "Red",
             red_plus: "Red Plus",
+            future: "No data available yet",
+            outside_season: "Outside the regular daily publication series",
             unavailable: "No comparable data",
         };
         const slots = value.days.map((day, index) => {
@@ -392,6 +428,7 @@
             label = "n/a";
         } else {
             const counts = [
+                value.green,
                 value.yellow,
                 value.orange,
                 value.red,
@@ -403,7 +440,8 @@
             ? ` Only ${value.available} of 7 days are available.`
             : "";
         return `<g>`
-            + `<title>${value.yellow} Yellow; ${value.orange} Orange; `
+            + `<title>${value.green} Green; ${value.yellow} Yellow; `
+            + `${value.orange} Orange; `
             + `${value.red} Red; ${value.red_plus} Red Plus.${note}</title>`
             + `<rect x="${x + 1}" y="${y + 1}" width="${width - 2}" height="${height - 2}" `
             + 'rx="4" fill="rgba(255,255,255,0.18)" stroke="#d8d0c3"></rect>'
@@ -794,15 +832,21 @@
     initialiseChartTooltips();
 
     Promise.all([
-        fetch("/data/event-dates-2027/napif-weekly.csv").then((response) => {
+        fetch(evidenceUrl("/data/event-dates-2027/napif-weekly.csv"), {
+            cache: "no-store",
+        }).then((response) => {
             if (!response.ok) throw new Error(`NAPIF CSV: ${response.status}`);
             return response.text();
         }),
-        fetch("/data/event-dates-2027/climate-weekly.csv").then((response) => {
+        fetch(evidenceUrl("/data/event-dates-2027/climate-weekly.csv"), {
+            cache: "no-store",
+        }).then((response) => {
             if (!response.ok) throw new Error(`Climate CSV: ${response.status}`);
             return response.text();
         }),
-        fetch("/data/event-dates-2027/napif-daily-2023-2026.csv").then((response) => {
+        fetch(evidenceUrl("/data/event-dates-2027/napif-daily-2023-2026.csv"), {
+            cache: "no-store",
+        }).then((response) => {
             if (!response.ok) throw new Error(`NAPIF daily CSV: ${response.status}`);
             return response.text();
         }),
