@@ -415,6 +415,30 @@
             font-weight: 600;
         }
 
+        .data-toggle {
+            margin: 1.25rem 0 1.75rem;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .data-toggle summary {
+            padding: 0.85rem 1rem;
+            color: var(--color-text);
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .data-toggle[open] summary {
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .data-toggle .table-wrap {
+            margin: 0;
+            border: 0;
+            border-radius: 0 0 var(--radius) var(--radius);
+        }
+
         .level-key {
             display: flex;
             flex-wrap: wrap;
@@ -680,7 +704,7 @@
 
                         <div class="notice">
                             <p><strong>The verified Roja Plus record comprises four declaration episodes.</strong> There was one declaration in 2025, covering <strong>16&ndash;18 August</strong>. In 2026 there were <strong>three separate declarations covering five days</strong>: <strong>26&ndash;28 June</strong> during build, then <strong>10 July</strong> and <strong>12 July</strong> during the event.</p>
-                            <p><strong>Ordinary Red also caused real disruption before Roja Plus was first used.</strong> The site zone was Red from <strong>29 June to 3 July 2025</strong>, immediately before and during the opening of Nowhere 2025. The event activated its Red Alert protocol, including temporary movement restrictions. That was Red, not Red Plus, but it belongs in the operational history.</p>
+                            <p><strong>Ordinary Red also caused real disruption before Roja Plus was first used.</strong> The site zone was Red from <strong>29 June to 3 July 2025</strong>, immediately before and during the opening of a similar event in 2025. The event activated its Red Alert protocol, including temporary movement restrictions. That was Red, not Red Plus, but it belongs in the operational history.</p>
                             <p>
                                 <a class="source-chip" href="https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2025-06-29" target="_blank" rel="noopener noreferrer">Official report: 29 Jun 2025</a>
                                 <a class="source-chip" href="https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2025-08-16" target="_blank" rel="noopener noreferrer">Official report: 16&ndash;18 Aug 2025</a>
@@ -691,60 +715,7 @@
                         </div>
 
                         <h3>2.1 Daily alert levels in each candidate week</h3>
-                        <p>Each year cell is <strong>Green / Yellow / Orange / Red / Red Plus</strong>. Hover or focus a cell containing Red or Red Plus to see the exact dates. The 2026 column stops on <strong>11 August 2026</strong>; future dates are not filled with assumptions.</p>
-                        <div class="level-key">
-                            <span><strong>G</strong> = Green</span>
-                            <span><strong>Y</strong> = Yellow</span>
-                            <span><strong>O</strong> = Orange</span>
-                            <span><strong>R</strong> = Red</span>
-                            <span><strong>R+</strong> = Red Plus</span>
-                        </div>
-                        <div class="evidence-note">
-                            <p><strong>Coverage limitation:</strong> the archive does not provide a complete, consistently daily series before 1 June across all four years. May is therefore marked <strong>n/a</strong>, not zero-risk; some extraordinary reports were published before June. Future 2026 dates are also <strong>n/a</strong> because their reports do not exist yet. Hover or focus either abbreviation to see which reason applies.</p>
-                            <p><strong>How the site level is read:</strong> each classification comes from the colour of the Muelas del Ebro&ndash;Alcubierre polygon on that day&rsquo;s official map. The report prose often lists only zones at the highest level, so it is not sufficient by itself to distinguish Green from Yellow in every area.</p>
-                            <p><strong>What the final column means:</strong> each candidate week is mapped onto the same calendar dates in 2026. The column then counts Red and Red Plus days from 21 days before that week through 10 days after it &mdash; a 38-day window representing build, the event, and strike. Where part of that window falls after 11 August, <strong>Est</strong> fills the missing days with the alerts recorded on the same calendar dates in 2025. Hover or focus a value to see the exact date range and how the estimate was made. This is a historical stress test, not a forecast for 2027.</p>
-                            <p>
-                                <a class="source-chip" href="https://infoar.aragon.es/flamabk/indicesMeteo/descarga-informe?indice=NAPIF" target="_blank" rel="noopener noreferrer">Gobierno de Arag&oacute;n NAPIF archive</a>
-                                <a class="source-chip" href="/data/event-dates-2027/napif-daily-2023-2026.csv">Download daily site series (CSV)</a>
-                                <a class="source-chip" href="/data/event-dates-2027/napif-weekly.csv">Download weekly counts (CSV)</a>
-                                <a class="source-chip" href="https://www.aragon.es/documents/20127/674325/ZONA_METEOALERTA_V2.pdf/3326ee50-06f1-4d22-c1bd-0339cdb4dbcb" target="_blank" rel="noopener noreferrer">Official municipality-to-zone assignment</a>
-                            </p>
-                        </div>
-                        <div class="table-wrap">
-                            <table class="research-table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Candidate week</th>
-                                        <th scope="col">2023<br><small>G/Y/O/R/R+</small></th>
-                                        <th scope="col">2024<br><small>G/Y/O/R/R+</small></th>
-                                        <th scope="col">2025<br><small>G/Y/O/R/R+</small></th>
-                                        <th scope="col">2026 to 11 Aug<br><small>G/Y/O/R/R+</small></th>
-                                        <th scope="col" class="wrap">2026 Red/R+ days<br><small>full 38-day operating window</small></th>
-                                    </tr>
-                                </thead>
-                                <tbody id="napif-weekly-body">
-                                    <tr><td colspan="6">Loading the cited daily alert series&hellip;</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <h3>2.2 Alert history charts</h3>
                         <div class="chart-grid">
-                            <figure class="chart-card">
-                                <h4>Alert-day totals by year</h4>
-                                <div class="chart-legend" aria-hidden="true">
-                                    <span class="chart-key"><span class="chart-swatch" style="background:#4f8f3a"></span>Green</span>
-                                    <span class="chart-key"><span class="chart-swatch" style="background:#d4a72c"></span>Yellow</span>
-                                    <span class="chart-key"><span class="chart-swatch" style="background:#dd6b20"></span>Orange</span>
-                                    <span class="chart-key"><span class="chart-swatch" style="background:#c53030"></span>Red</span>
-                                    <span class="chart-key"><span class="chart-swatch" style="background:#701a1a"></span>Red Plus</span>
-                                </div>
-                                <div class="chart-scroll" id="napif-total-chart">
-                                    <p>Loading annual alert totals&hellip;</p>
-                                </div>
-                                <figcaption>Published NAPIF days by alert level. The 2023&ndash;2025 series covers 1 June&ndash;15 October; 2026 covers 1 June&ndash;11 August.</figcaption>
-                            </figure>
-
                             <figure class="chart-card">
                                 <h4>Daily alert levels by week</h4>
                                 <div class="chart-legend" aria-hidden="true">
@@ -760,7 +731,62 @@
                                 </div>
                                 <figcaption>The first four columns show observed alerts on matching calendar dates in 2023&ndash;2026; each is an equivalent historical period used to inform the 2027 choice. The separator distinguishes all four historical columns from the rightmost 2027 candidate-week column. Within each cell, seven slots run chronologically from the first historical date to the last. Hover or focus a slot for its exact date and official level. The number below is Green / Yellow / Orange / Red / Red Plus. Grey means unavailable, not zero. The chart runs through the candidate week ending 17 October 2027; the historical daily series ends on 15 October, so 16&ndash;17 October are grey. The 9 August 2026 week is partial through 11 August; later 2026 dates are not yet available.</figcaption>
                             </figure>
+
+                            <figure class="chart-card">
+                                <h4>Alert-day totals by year</h4>
+                                <div class="chart-legend" aria-hidden="true">
+                                    <span class="chart-key"><span class="chart-swatch" style="background:#4f8f3a"></span>Green</span>
+                                    <span class="chart-key"><span class="chart-swatch" style="background:#d4a72c"></span>Yellow</span>
+                                    <span class="chart-key"><span class="chart-swatch" style="background:#dd6b20"></span>Orange</span>
+                                    <span class="chart-key"><span class="chart-swatch" style="background:#c53030"></span>Red</span>
+                                    <span class="chart-key"><span class="chart-swatch" style="background:#701a1a"></span>Red Plus</span>
+                                </div>
+                                <div class="chart-scroll" id="napif-total-chart">
+                                    <p>Loading annual alert totals&hellip;</p>
+                                </div>
+                                <figcaption>Published NAPIF days by alert level. The 2023&ndash;2025 series covers 1 June&ndash;15 October; 2026 covers 1 June&ndash;11 August.</figcaption>
+                            </figure>
                         </div>
+
+                        <p>Each year cell in the underlying table is <strong>Green / Yellow / Orange / Red / Red Plus</strong>. Hover or focus a cell containing Red or Red Plus to see the exact dates. The 2026 column stops on <strong>11 August 2026</strong>; future dates are not filled with assumptions.</p>
+                        <div class="level-key">
+                            <span><strong>G</strong> = Green</span>
+                            <span><strong>Y</strong> = Yellow</span>
+                            <span><strong>O</strong> = Orange</span>
+                            <span><strong>R</strong> = Red</span>
+                            <span><strong>R+</strong> = Red Plus</span>
+                        </div>
+                        <details class="data-toggle">
+                            <summary>Show data</summary>
+                            <div class="evidence-note">
+                                <p><strong>Coverage limitation:</strong> the archive does not provide a complete, consistently daily series before 1 June across all four years. May is therefore marked <strong>n/a</strong>, not zero-risk; some extraordinary reports were published before June. Future 2026 dates are also <strong>n/a</strong> because their reports do not exist yet. Hover or focus either abbreviation to see which reason applies.</p>
+                                <p><strong>How the site level is read:</strong> each classification comes from the colour of the Muelas del Ebro&ndash;Alcubierre polygon on that day&rsquo;s official map. The report prose often lists only zones at the highest level, so it is not sufficient by itself to distinguish Green from Yellow in every area.</p>
+                                <p><strong>What the final column means:</strong> each candidate week is mapped onto the same calendar dates in 2026. The column then counts Red and Red Plus days from 21 days before that week through 10 days after it &mdash; a 38-day window representing build, the event, and strike. Where part of that window falls after 11 August, <strong>Est</strong> fills the missing days with the alerts recorded on the same calendar dates in 2025. Hover or focus a value to see the exact date range and how the estimate was made. This is a historical stress test, not a forecast for 2027.</p>
+                                <p>
+                                    <a class="source-chip" href="https://infoar.aragon.es/flamabk/indicesMeteo/descarga-informe?indice=NAPIF" target="_blank" rel="noopener noreferrer">Gobierno de Arag&oacute;n NAPIF archive</a>
+                                    <a class="source-chip" href="/data/event-dates-2027/napif-daily-2023-2026.csv">Download daily site series (CSV)</a>
+                                    <a class="source-chip" href="/data/event-dates-2027/napif-weekly.csv">Download weekly counts (CSV)</a>
+                                    <a class="source-chip" href="https://www.aragon.es/documents/20127/674325/ZONA_METEOALERTA_V2.pdf/3326ee50-06f1-4d22-c1bd-0339cdb4dbcb" target="_blank" rel="noopener noreferrer">Official municipality-to-zone assignment</a>
+                                </p>
+                            </div>
+                            <div class="table-wrap">
+                                <table class="research-table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Candidate week</th>
+                                            <th scope="col">2023<br><small>G/Y/O/R/R+</small></th>
+                                            <th scope="col">2024<br><small>G/Y/O/R/R+</small></th>
+                                            <th scope="col">2025<br><small>G/Y/O/R/R+</small></th>
+                                            <th scope="col">2026 to 11 Aug<br><small>G/Y/O/R/R+</small></th>
+                                            <th scope="col" class="wrap">2026 Red/R+ days<br><small>full 38-day operating window</small></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="napif-weekly-body">
+                                        <tr><td colspan="6">Loading the cited daily alert series&hellip;</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </details>
 
                         <p>The shift is visible without converting four seasons into a false probability. In the complete 1 June&ndash;15 October archive there were <strong>13 Red days in 2023</strong>, <strong>21 in 2024</strong>, and <strong>15 Red plus three Red Plus days in 2025</strong>. By 11 August 2026 there had already been <strong>40 Red and five Red Plus days</strong>. For 28 June&ndash;4 July, the site went from no Red days in 2023 or 2024, to five in 2025, to four Red and one Red Plus day in 2026. The following 5&ndash;11 July week had no Red days in 2023, 2024 or 2025, then six Red days and one Red Plus day in 2026.</p>
                         <p>This does not prove a particular cancellation probability for 2027. It does substantiate why the authorities&rsquo; concern is no longer hypothetical, and why build and strike cannot be excluded from the comparison.</p>
@@ -770,16 +796,17 @@
                         <div class="table-wrap">
                             <table class="research-table">
                                 <thead>
-                                    <tr><th scope="col">Year</th><th scope="col">Arag&oacute;n</th><th scope="col">Huesca province</th><th scope="col">Los Monegros</th><th scope="col">Castej&oacute;n de Monegros</th></tr>
+                                    <tr><th scope="col">Year</th><th scope="col">Arag&oacute;n</th><th scope="col">Huesca province</th><th scope="col">Los Monegros</th></tr>
                                 </thead>
                                 <tbody>
-                                    <tr><td>2023</td><td>352 fires / 1,549.13 ha</td><td>102 / 32.77 ha</td><td>13 / 6.99 ha</td><td>0 / 0 ha</td></tr>
-                                    <tr><td>2024 <small>(provisional)</small></td><td>276 / 1,441.76 ha</td><td>67 / 247.67 ha</td><td>11 / 3.27 ha</td><td>0 / 0 ha</td></tr>
-                                    <tr><td>2025 <small>(provisional)</small></td><td>269 / 353.26 ha</td><td>97 / 186.70 ha</td><td>13 / 21.40 ha</td><td>0 / 0 ha</td></tr>
-                                    <tr><td>2026 <small>(partial to 14 June)</small></td><td>193 / 238.22 ha</td><td>72 / 87.72 ha</td><td colspan="2" class="wrap">The latest official 2026 statistical bulletin found stops on 14 June and does not publish comparable Los Monegros or Castej&oacute;n subtotals. It predates the later June and July alert episodes.</td></tr>
+                                    <tr><td>2023</td><td>352 fires / 1,549.13 ha</td><td>102 / 32.77 ha</td><td>13 / 6.99 ha</td></tr>
+                                    <tr><td>2024 <small>(provisional)</small></td><td>276 / 1,441.76 ha</td><td>67 / 247.67 ha</td><td>11 / 3.27 ha</td></tr>
+                                    <tr><td>2025 <small>(provisional)</small></td><td>269 / 353.26 ha</td><td>97 / 186.70 ha</td><td>13 / 21.40 ha</td></tr>
+                                    <tr><td>2026 <small>(partial to 14 June)</small></td><td>193 / 238.22 ha</td><td>72 / 87.72 ha</td><td>n/a</td></tr>
                                 </tbody>
                             </table>
                         </div>
+                        <p><small><strong>2026 note:</strong> the latest official statistical bulletin stops on 14 June and does not publish a comparable Los Monegros subtotal. It predates the later June and July alert episodes.</small></p>
                         <div class="evidence-note">
                             <p>
                                 <a class="source-chip" href="https://servicios3.aragon.es/iaeaxi/tabla.do?L=0&amp;file=141201A03.px&amp;path=%2F14%2F12%2F01%2F&amp;type=pcaxis" target="_blank" rel="noopener noreferrer">IAEST: fires and forest area by municipality, comarca and province</a>
@@ -791,7 +818,7 @@
                     </section>
 
                     <section id="timeline">
-                        <h2>3. Timeline</h2>
+                        <h2>3. 2026 Timeline</h2>
                         <ul class="timeline">
                             <li><span class="when">11 March 2026</span> Decreto 22/2026 approved in Aragón; published in the BOA (no. 53) on 18 March, three and a half months before the 2026 event.</li>
                             <li><span class="when">17 June 2026</span> Meeting with the Comarca de Los Monegros. The comarca reads the new automatic-suspension clause aloud and sets out its evacuation planning.</li>
@@ -862,7 +889,7 @@
 
                     <section id="windows">
                         <h2>5. Candidate windows: heat and rain</h2>
-                        <p>The tables below are calculated from daily data for the established-site coordinate, <strong>41.7005615, -0.1363139</strong>. They compare matching calendar weeks historically; they are not forecasts for 2027.</p>
+                        <p>The tables below are calculated from daily data for the established-site coordinate, <strong><a href="https://www.google.com/maps?q=41.7005615,-0.1363139" target="_blank" rel="noopener noreferrer">41.7005615, -0.1363139</a></strong>. They compare matching calendar weeks historically; they are not forecasts for 2027.</p>
                         <div class="evidence-note">
                             <p><strong>Method:</strong> each candidate week is compared with the same seven calendar dates in the twenty complete years <strong>2006&ndash;2025</strong>. &ldquo;Typical&rdquo; is the median daily value; a &ldquo;hot day&rdquo; is the 95th percentile daily maximum; a &ldquo;cool night&rdquo; is the 5th percentile daily minimum. A wet day has at least 1 mm precipitation. &ldquo;Weeks with rain&rdquo; is the proportion of the twenty matching weeks with at least 1 mm total rain; the wet-week figure is the 90th percentile of those twenty weekly totals.</p>
                             <p>The source is the <a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank" rel="noopener noreferrer">Open-Meteo Historical Weather API</a>, using its ERA5 / ERA5-Land best-match historical series. Reanalysis is appropriate for consistent comparison at an exact rural coordinate, but it is gridded data rather than a rain gauge on the festival site.</p>
@@ -884,24 +911,27 @@
                             </div>
                             <figcaption>Candidate weeks start on 3 May and continue through 11 October 2027. Colour uses one shared 5&ndash;42&deg;C scale across all four columns, so temperature colours are directly comparable. Hover or focus a cell for its date range, definition and value. These are historical matching-week statistics, not a 2027 forecast.</figcaption>
                         </figure>
-                        <div class="table-wrap">
-                            <table class="research-table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Week</th>
-                                        <th scope="col">Typical high</th>
-                                        <th scope="col">Hot day<br><small>95th percentile</small></th>
-                                        <th scope="col">Typical low</th>
-                                        <th scope="col">Cool night<br><small>5th percentile</small></th>
-                                        <th scope="col">Days &ge;35&deg;C<br><small>mean per week</small></th>
-                                        <th scope="col">Nights &ge;20&deg;C<br><small>mean per week</small></th>
-                                    </tr>
-                                </thead>
-                                <tbody id="climate-heat-body">
-                                    <tr><td colspan="7">Loading the cited climate series&hellip;</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        <details class="data-toggle">
+                            <summary>Show data</summary>
+                            <div class="table-wrap">
+                                <table class="research-table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Week</th>
+                                            <th scope="col">Typical high</th>
+                                            <th scope="col">Hot day<br><small>95th percentile</small></th>
+                                            <th scope="col">Typical low</th>
+                                            <th scope="col">Cool night<br><small>5th percentile</small></th>
+                                            <th scope="col">Days &ge;35&deg;C<br><small>mean per week</small></th>
+                                            <th scope="col">Nights &ge;20&deg;C<br><small>mean per week</small></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="climate-heat-body">
+                                        <tr><td colspan="7">Loading the cited climate series&hellip;</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </details>
 
                         <h3>5.2 Rain</h3>
                         <figure class="chart-card">
@@ -915,22 +945,25 @@
                             </div>
                             <figcaption>Candidate weeks start on 3 May and continue through 11 October 2027. Each rain column has its own fixed, meaningful scale because percentages and millimetres are different quantities: 0&ndash;30% wet-day chance, 0&ndash;100% weeks with rain, 0&ndash;15 mm mean weekly rain, and 0&ndash;40 mm high-rain total. Compare colour down a column, not between unlike columns. Hover or focus a cell for details.</figcaption>
                         </figure>
-                        <div class="table-wrap">
-                            <table class="research-table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Week</th>
-                                        <th scope="col">Wet-day chance</th>
-                                        <th scope="col">Historical weeks with rain</th>
-                                        <th scope="col">Mean weekly rain</th>
-                                        <th scope="col">High-rain week<br><small>90th-percentile total</small></th>
-                                    </tr>
-                                </thead>
-                                <tbody id="climate-rain-body">
-                                    <tr><td colspan="5">Loading the cited climate series&hellip;</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        <details class="data-toggle">
+                            <summary>Show data</summary>
+                            <div class="table-wrap">
+                                <table class="research-table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Week</th>
+                                            <th scope="col">Wet-day chance</th>
+                                            <th scope="col">Historical weeks with rain</th>
+                                            <th scope="col">Mean weekly rain</th>
+                                            <th scope="col">High-rain week<br><small>90th-percentile total</small></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="climate-rain-body">
+                                        <tr><td colspan="5">Loading the cited climate series&hellip;</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </details>
 
                         <p>For the current 5&ndash;11 July slot, the recent historical median daily high is <strong>34.2&deg;C</strong>, with about <strong>2.6 days at or above 35&deg;C</strong> and <strong>3.9 nights at or above 20&deg;C</strong> in a typical matching week. The mean weekly rain is <strong>6.4 mm</strong>, and 65% of matching years had at least 1 mm during the week. May weeks are cooler but not uniformly wetter every week; late September and October have lower heat exposure but materially higher upper-tail weekly rain totals.</p>
 
@@ -1037,7 +1070,7 @@
                     <section id="bottom-line">
                         <div class="bottom-line">
                             <h2>In one paragraph</h2>
-                            <p>A change in Aragonese law in March 2026 means a Roja Plus fire alert can automatically suspend the authorisations the event depends on, at short notice, with evacuation rather than shelter-in-place as the authorities&rsquo; stated expectation. Ordinary Red had already disrupted operations around the opening of Nowhere 2025; the first Roja Plus declaration then covered three days in August 2025. In 2026, one three-day Roja Plus declaration fell during build and two separate declarations fell on event days. The official daily series contains eight Red days in 2023, 20 in 2024, 16 Red and three Red Plus days in 2025, and 32 Red and five Red Plus days by 10 August 2026. Moving earlier reduces heat but enters the bird-breeding period; moving later reduces heat but does not remove fire exposure before 15 October and increases upper-tail rain. The decision is therefore a trade-off under uncertainty, not a choice between a safe week and an unsafe one.</p>
+                            <p>A change in Aragonese law in March 2026 means a Roja Plus fire alert can automatically suspend the authorisations the event depends on, at short notice, with evacuation rather than shelter-in-place as the authorities&rsquo; stated expectation. Ordinary Red had already disrupted operations around the opening of a similar event in 2025; the first Roja Plus declaration then covered three days in August 2025. In 2026, one three-day Roja Plus declaration fell during build and two separate declarations fell on event days. The official daily series contains eight Red days in 2023, 20 in 2024, 16 Red and three Red Plus days in 2025, and 32 Red and five Red Plus days by 10 August 2026. Moving earlier reduces heat but enters the bird-breeding period; moving later reduces heat but does not remove fire exposure before 15 October and increases upper-tail rain. The decision is therefore a trade-off under uncertainty, not a choice between a safe week and an unsafe one.</p>
                         </div>
                     </section>
 
@@ -1048,7 +1081,7 @@
                     <ol>
                         <li><a href="#decision">What is being decided</a></li>
                         <li><a href="#fire-evidence">Wildfire evidence</a></li>
-                        <li><a href="#timeline">Timeline</a></li>
+                        <li><a href="#timeline">2026 Timeline</a></li>
                         <li><a href="#why">Why a change is on the table</a></li>
                         <li><a href="#windows">Heat and rain by week</a></li>
                         <li><a href="#burns">Other European burns</a></li>
