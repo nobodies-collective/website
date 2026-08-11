@@ -383,7 +383,7 @@
             const detail = `${exactAlertDate.format(dateFromIso(day.date))}: ${levelLabels[day.level]}`;
             return `<rect x="${x + padding + index * (slotWidth + gap)}" y="${y + 8}" `
                 + `width="${slotWidth}" height="${slotHeight}" rx="1.5" fill="${chartColors[day.level]}" `
-                + `tabindex="0" aria-label="${escapeHtml(detail)}">`
+                + `tabindex="0" aria-label="${escapeHtml(detail)}" data-chart-tip="${escapeHtml(detail)}">`
                 + `<title>${escapeHtml(detail)}</title>`
                 + "</rect>";
         }).join("");
@@ -412,71 +412,59 @@
             + "</g>";
     }
 
-    function renderWeeklyMobile(target, years, weekly) {
-        const width = Math.max(280, Math.round(target.clientWidth || 360));
-        const margin = { top: 34, right: 4, bottom: 10, left: 48 };
-        const plotWidth = width - margin.left - margin.right;
+    function shortWeekRange(row) {
+        const start = dateFromIso(row.week_start_2027);
+        const end = dateFromIso(row.week_end_2027);
+        if (start.getUTCMonth() === end.getUTCMonth()) {
+            return `${start.getUTCDate()}–${end.getUTCDate()} ${month.format(end)}`;
+        }
+        return `${start.getUTCDate()} ${month.format(start)}–${end.getUTCDate()} ${month.format(end)}`;
+    }
+
+    function renderWeeklyRows(target, years, weekly) {
+        const width = Math.max(280, Math.round(target.clientWidth || 560));
+        const margin = { top: 48, right: 4, bottom: 10, left: 4 };
+        const dateWidth = width < 480 ? 66 : 86;
+        const separatorGap = 10;
+        const plotWidth = width - margin.left - margin.right - dateWidth - separatorGap;
         const columnWidth = plotWidth / years.length;
         const rowHeight = 43;
         const height = margin.top + weekly.length * rowHeight + margin.bottom;
-        const yearLabels = years.map((year, index) => (
-            `<text class="axis-label" x="${margin.left + index * columnWidth + columnWidth / 2}" `
-            + 'y="22" text-anchor="middle">'
-            + `${year}</text>`
-        )).join("");
+        const yearLabels = years.map((year, index) => {
+            const x = margin.left
+                + index * columnWidth
+                + columnWidth / 2;
+            return svgHeader([String(year), "equiv."], x, 18);
+        }).join("");
+        const dateColumnX = margin.left + plotWidth + separatorGap;
+        const dateHeader = svgHeader(
+            ["2027", "candidate week"],
+            dateColumnX + dateWidth / 2,
+            18
+        );
+        const separatorX = margin.left + plotWidth + separatorGap / 2;
         const rows = weekly.map(({ row, values }, weekIndex) => {
             const y = margin.top + weekIndex * rowHeight;
-            const start = dateFromIso(row.week_start_2027);
-            const label = `${start.getUTCDate()} ${month.format(start)}`;
             const cells = years.map((year, yearIndex) => weeklyCell(
                 values[year],
-                margin.left + yearIndex * columnWidth,
+                margin.left
+                    + yearIndex * columnWidth,
                 y,
                 columnWidth,
                 rowHeight,
                 true
             )).join("");
-            return `<text class="axis-label" x="${margin.left - 5}" y="${y + rowHeight / 2 + 4}" text-anchor="end">${label}</text>`
-                + cells;
+            return cells
+                + `<text class="axis-label" x="${dateColumnX + dateWidth / 2}" `
+                + `y="${y + rowHeight / 2 + 4}" text-anchor="middle">${shortWeekRange(row)}</text>`;
         }).join("");
         target.innerHTML = `<svg class="evidence-chart" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="napif-week-title napif-week-desc">`
             + '<title id="napif-week-title">Daily fire-alert levels by week and year</title>'
-            + '<desc id="napif-week-desc">A matrix with weeks as rows and years as columns. Each cell has seven chronological slots showing Yellow, Orange, Red, Red Plus, or unavailable days.</desc>'
+            + '<desc id="napif-week-desc">A matrix comparing observed alerts on equivalent calendar dates in 2023 through 2026. A separator distinguishes those historical observations from the corresponding 2027 candidate week.</desc>'
             + yearLabels
-            + rows
-            + "</svg>";
-    }
-
-    function renderWeeklyDesktop(target, years, weekly) {
-        const width = Math.max(700, Math.round(target.clientWidth || 1100));
-        const margin = { top: 42, right: 6, bottom: 10, left: 48 };
-        const plotWidth = width - margin.left - margin.right;
-        const columnWidth = plotWidth / weekly.length;
-        const rowHeight = 52;
-        const height = margin.top + years.length * rowHeight + margin.bottom;
-        const weekLabels = weekly.map(({ row }, weekIndex) => {
-            const start = dateFromIso(row.week_start_2027);
-            const label = `${start.getUTCDate()} ${month.format(start)}`;
-            return `<text class="axis-label" x="${margin.left + weekIndex * columnWidth + columnWidth / 2}" `
-                + 'y="25" text-anchor="middle">'
-                + `${label}</text>`;
-        }).join("");
-        const rows = years.map((year, yearIndex) => {
-            const y = margin.top + yearIndex * rowHeight;
-            const cells = weekly.map(({ values }, weekIndex) => weeklyCell(
-                values[year],
-                margin.left + weekIndex * columnWidth,
-                y,
-                columnWidth,
-                rowHeight
-            )).join("");
-            return `<text class="axis-label" x="${margin.left - 7}" y="${y + rowHeight / 2 + 4}" text-anchor="end">${year}</text>`
-                + cells;
-        }).join("");
-        target.innerHTML = `<svg class="evidence-chart" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="napif-week-title napif-week-desc">`
-            + '<title id="napif-week-title">Daily fire-alert levels by week and year</title>'
-            + '<desc id="napif-week-desc">A matrix with years as rows and weeks as columns. Each cell has seven chronological slots showing Yellow, Orange, Red, Red Plus, or unavailable days.</desc>'
-            + weekLabels
+            + dateHeader
+            + `<line x1="${separatorX}" y1="4" x2="${separatorX}" y2="${height - 4}" `
+            + 'stroke="#8b7d6b" stroke-width="2"></line>'
             + rows
             + "</svg>";
     }
@@ -485,11 +473,7 @@
         const target = document.querySelector("#napif-week-chart");
         if (!target) return;
         const { years, weekly } = weeklyAlertDays(rows, dailyRows);
-        if (target.clientWidth < 700) {
-            renderWeeklyMobile(target, years, weekly);
-        } else {
-            renderWeeklyDesktop(target, years, weekly);
-        }
+        renderWeeklyRows(target, years, weekly);
     }
 
     function rgbFromHex(hex) {
@@ -551,7 +535,7 @@
             metric.header,
             margin.left + index * columnWidth + columnWidth / 2,
             21
-        )).join("");
+        )).join("") + svgHeader(["2027", "week"], margin.left / 2, 21);
         const cells = rows.map((row, rowIndex) => {
             const y = margin.top + rowIndex * rowHeight;
             const start = dateFromIso(row.week_start_2027);
@@ -573,7 +557,8 @@
                 const x = margin.left + metricIndex * columnWidth;
                 return `<g>`
                     + `<rect x="${x + 1}" y="${y + 1}" width="${columnWidth - 2}" height="${rowHeight - 2}" `
-                    + `rx="4" fill="${fill}" tabindex="0" aria-label="${escapeHtml(detail)}">`
+                    + `rx="4" fill="${fill}" tabindex="0" aria-label="${escapeHtml(detail)}" `
+                    + `data-chart-tip="${escapeHtml(detail)}">`
                     + `<title>${escapeHtml(detail)}</title></rect>`
                     + `<text x="${x + columnWidth / 2}" y="${y + rowHeight / 2 + 4}" text-anchor="middle" `
                     + `style="fill:${text};font-weight:700">${escapeHtml(display)}</text>`
@@ -743,6 +728,70 @@
             body.innerHTML = '<tr><td colspan="10">The evidence CSV could not be loaded. Use the download link above to inspect it directly.</td></tr>';
         }
     }
+
+    function initialiseChartTooltips() {
+        const tooltip = document.createElement("div");
+        tooltip.className = "chart-tooltip-floating";
+        tooltip.setAttribute("role", "tooltip");
+        document.body.append(tooltip);
+        let activeTarget = null;
+
+        const positionTooltip = (clientX, clientY) => {
+            const gap = 12;
+            const bounds = tooltip.getBoundingClientRect();
+            let left = clientX + gap;
+            let top = clientY + gap;
+            if (left + bounds.width > window.innerWidth - gap) {
+                left = clientX - bounds.width - gap;
+            }
+            if (top + bounds.height > window.innerHeight - gap) {
+                top = clientY - bounds.height - gap;
+            }
+            tooltip.style.left = `${Math.max(gap, left)}px`;
+            tooltip.style.top = `${Math.max(gap, top)}px`;
+        };
+
+        const showTooltip = (target, clientX, clientY) => {
+            const detail = target.dataset.chartTip;
+            if (!detail) return;
+            activeTarget = target;
+            tooltip.textContent = detail;
+            tooltip.classList.add("is-visible");
+            positionTooltip(clientX, clientY);
+        };
+
+        const hideTooltip = (target) => {
+            if (target && activeTarget !== target) return;
+            activeTarget = null;
+            tooltip.classList.remove("is-visible");
+        };
+
+        document.addEventListener("pointerover", (event) => {
+            const target = event.target.closest?.("[data-chart-tip]");
+            if (target) showTooltip(target, event.clientX, event.clientY);
+        });
+        document.addEventListener("pointermove", (event) => {
+            if (activeTarget && activeTarget.matches(":hover")) {
+                positionTooltip(event.clientX, event.clientY);
+            }
+        });
+        document.addEventListener("pointerout", (event) => {
+            const target = event.target.closest?.("[data-chart-tip]");
+            if (target && !target.contains(event.relatedTarget)) hideTooltip(target);
+        });
+        document.addEventListener("focusin", (event) => {
+            const target = event.target.closest?.("[data-chart-tip]");
+            if (!target) return;
+            const bounds = target.getBoundingClientRect();
+            showTooltip(target, bounds.left + bounds.width / 2, bounds.top);
+        });
+        document.addEventListener("focusout", (event) => {
+            const target = event.target.closest?.("[data-chart-tip]");
+            if (target) hideTooltip(target);
+        });
+    }
+
+    initialiseChartTooltips();
 
     Promise.all([
         fetch("/data/event-dates-2027/napif-weekly.csv").then((response) => {

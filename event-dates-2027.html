@@ -367,6 +367,29 @@
             font-size: 0.72rem;
         }
 
+        .chart-tooltip-floating {
+            position: fixed;
+            z-index: 1000;
+            max-width: min(320px, calc(100vw - 24px));
+            padding: 0.6rem 0.7rem;
+            background: #2c2418;
+            border-radius: 7px;
+            color: #fff;
+            font-size: 0.76rem;
+            line-height: 1.45;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.12s ease;
+        }
+
+        .chart-tooltip-floating.is-visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        [data-chart-tip] { cursor: help; }
+
         .evidence-note {
             margin: 1.1rem 0 1.5rem;
             padding: 1rem 1.15rem;
@@ -731,7 +754,7 @@
                                 <div class="chart-scroll" id="napif-week-chart">
                                     <p>Loading weekly Red and Red Plus history&hellip;</p>
                                 </div>
-                                <figcaption>Each cell represents one week in one year. Its seven slots run from the first calendar date to the last, left to right; hover or focus a slot for its exact date and official level. The number below is Yellow / Orange / Red / Red Plus. Because the comparison uses matching calendar dates, the historical dates do not always fall on the same weekdays as the 2027 candidate week. Grey means unavailable, not zero. The 9 August 2026 week is partial through 10 August; the 16 August 2026 week is not yet available.</figcaption>
+                                <figcaption>The first four columns show observed alerts on matching calendar dates in 2023&ndash;2026; each is an equivalent historical period used to inform the 2027 choice. The separator distinguishes all four historical columns from the rightmost 2027 candidate-week column. Within each cell, seven slots run chronologically from the first historical date to the last. Hover or focus a slot for its exact date and official level. The number below is Yellow / Orange / Red / Red Plus. Grey means unavailable, not zero. The 9 August 2026 week is partial through 10 August; later 2026 dates are not yet available.</figcaption>
                             </figure>
                         </div>
 
