@@ -1852,6 +1852,11 @@ h4 { font-size: 1.15rem; }
     padding: 8rem 0;
 }
 
+/* Community calls band near the top of the homepage */
+.event--calls {
+    padding: 4rem 0;
+}
+
 .event-content {
     display: grid;
     gap: 3rem;
