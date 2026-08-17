@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+
+    <title>Governance Working Group - Third Meeting - August 17, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .resource-links { background: var(--color-bg-secondary); padding: 1.25rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .resource-links h3 { margin: 0 0 0.75rem 0; font-size: 1rem; }
+        .resource-links ul { list-style: none; padding: 0; margin: 0; }
+        .resource-links li { margin-bottom: 0.5rem; }
+        .resource-links a { color: var(--color-accent); font-weight: 500; }
+        .resource-links a:hover { text-decoration: underline; }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>Governance Working Group &mdash; Third Meeting</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Monday 17 August 2026, video call</span>
+                    </div>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>Present (video call):</strong> Celine V (facilitator), Daniel T, Kate B, Anna T, Ben D, Julian, Peter K, Olivier (listening)
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Full Records</h3>
+                        <ul>
+                            <li><a href="2026-08-17-governance-wg-transcript.html">Full transcript (English only)</a> &mdash; published in line with the working group&rsquo;s transparency commitment, agreed at the second meeting</li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>The third meeting of the informal Governance Working Group. No binding decisions were taken. Most of the meeting was a substantive debate on a draft regulation for creating working groups, which surfaced the group&rsquo;s deepest open question &mdash; where legitimacy comes from: a written mandate, or direct engagement with the community. Rather than trying to resolve it among eight people, the group agreed on a concrete next step: go and ask the leads.</p>
+
+                        <h2>1. A Draft Regulation for Working Groups</h2>
+                        <p>Kate B, Anna T, and Julian were tasked at the second meeting with drafting a proposal to formally establish the governance working group. The discussion instead centred on a more general document shared with the group the previous day: a draft regulation from Peter D for creating working groups as such &mdash; how one is formed, how it is led, its goals, and a defined duration (roughly two to six months). Anna T and Julian noted they had not yet fully caught up on the draft; the group discussed it live.</p>
+
+                        <h2>2. Two Philosophies of Legitimacy</h2>
+                        <p>Julian read the situation through the statutes: at present only the General Assembly and the board can take decisions, and working groups are the one form of collaboration with a dedicated article &mdash; so if the association works within that framework, a clear way to create working groups matters. Kate B argued the regulation neatly resolves the &ldquo;chicken and egg&rdquo; problem of groups doubting their own legitimacy, and unlocks the downstream work she cares most about: defining which kinds of decisions can be made outside a General Assembly &mdash; a heavy, slow instrument that should be reserved for things the association is effectively putting into law. Easily-formed working groups, in her view, mean more agility, more dynamism, and more trust in the community. Ben D took a middle position: rules like these exist for the worst case &mdash; conflicts, misunderstandings, confusions that need a common reference point to come back to &mdash; and otherwise people should simply be left to work.</p>
+                        <p>Daniel T disagreed with the premise. Work does not need a formal working group as a prerequisite &mdash; the association ran an entire event without a single one, and the dates work is proceeding right now without one. The association was formed to serve the community by providing the structures needed to interface with society, not to restrict what people may do; &ldquo;if it&rsquo;s not in the statutes, you&rsquo;re not allowed to do it&rdquo; inverts that purpose. His concern with the draft: it imposes obligations on working groups without defining any benefits, which invites people to project benefits onto it &mdash; legitimacy above all. If legitimacy is a benefit of formal status, the document should define what it is, how limited it is, and when it can be withdrawn. And there is a prior question: whether the board even has legitimacy to confer &mdash; in his view, legitimacy is built by engaging with the community, not granted by a vote of the board, and decisions that skip that engagement get ignored regardless of their formal status.</p>
+
+                        <h2>3. Peter K&rsquo;s Perspective: What Are We Trying to Heal?</h2>
+                        <p>Peter K, involved with Nowhere since 2009 &mdash; second build lead, general coordinator, and, the role he is proudest of, toilet lead &mdash; framed the discussion in terms of the problems it exists to solve. As the community grew from around 400 to 4,200 participants, its structures went through real growing pains: many members felt they had too little visibility into how decisions were made, and the Meta Leads Committee, intended as a strong representation of the leads, was never fully staffed and fell out of use. What people actually need, in his view, is transparency &mdash; working groups should have all their activity as public as possible &mdash; and the feeling of being heard. His experience is that most of the community is happy to leave the details to those doing the work, as long as everything stays open for anyone who wants to look closer; the people to consult are the leads, emphatically including the barrio leads, since &ldquo;the barrios are the event&rdquo;. Before anything is set in stone, he would like a high-level proposal brought to the wider assembly, where the leads&rsquo; attention is assured.</p>
+
+                        <h2>4. Advice Process vs General Assembly</h2>
+                        <p>A thread within the debate: Kate B advocated the advice process &mdash; used at all levels by the Borderland &mdash; as a deeply consultative alternative to voting, and argued that putting the event-dates decision to a General Assembly is a &ldquo;category error&rdquo;: a law-level instrument applied to an operational decision, which risks eroding participation if overused. Daniel T, a long-time user of the advice process, countered that even Holacracy &mdash; which uses it almost everywhere &mdash; carves out governance-level changes for a more structured process, because decisions that define how others work cut deeper; and that whatever the mechanism, a decision without community-built legitimacy will simply be ignored, as existing policy at the event sometimes is.</p>
+
+                        <h2>5. The Level-Up Question: What Is the Board For?</h2>
+                        <p>Julian pulled the discussion up a level: the real question is whether the association wants every decision put to the community, or some level of delegation &mdash; and, behind that, what the board understands its own function to be. Daniel T described the event as mostly run by do-ocracy &mdash; the person doing the work makes the calls &mdash; and the board&rsquo;s current operational weight as a temporary necessity of the founding period; his hope is that &ldquo;the board becomes boring again&rdquo;. Anna T said the board-role question feels genuinely important and has gone unanswered when raised before, and flagged a structural concern: an enormous amount of value (the Humans app) has been created by one current board member, which also creates dependency on that person.</p>
+
+                        <h2>6. Agreed: Ask the Leads</h2>
+                        <p>The group converged on a concrete next step rather than a resolution. Peter K joins Kate B, Anna T, and Julian, and together they will gather input from the leads &mdash; including barrio leads &mdash; on the two high-level options: formalising working groups through a written regulation, or continuing to build legitimacy through direct community engagement. The question of the board&rsquo;s future function will be carried alongside as input. Peter K asked whether the September General Assembly could carry a high-level proposal on this; Daniel T confirmed that is possible in principle, though the assembly&rsquo;s scope is still in motion (see below).</p>
+
+                        <h2>7. September General Assembly: Status</h2>
+                        <p>Daniel T reported that the General Assembly announced for 17 September stands, but the exact mechanism of the event-dates decision is genuinely open: a binding General Assembly vote, or a board decision strongly informed by the community&rsquo;s input. He is taking that question to the board the same evening, and there is some feeling on the board that if there is a dates vote, it should be the only item on the assembly&rsquo;s agenda. An alternative timeline &mdash; discussing at the Annual Leadership Meeting in October with an assembly shortly after &mdash; was also mentioned, as was the open question of whether the ALM itself should host a General Assembly.</p>
+
+                        <h2>8. Event-Dates Update</h2>
+                        <p>Celine V summarised the dates work (also covered in the separate <a href="2026-08-17-event-dates-wg.html">Event Dates Working Group meeting</a> that followed this call): the decision criteria have been published as a summary table on the information page, and the consultation is structured as two polls &mdash; a broad one open to the whole community and beyond, and a Humans-app poll carrying more weight since it reaches people who have been at the event &mdash; both feeding the final decision. A first draft of the broad poll exists; feedback is welcome bilaterally.</p>
+
+                        <h2>9. Cadence and Housekeeping</h2>
+                        <p>Bi-weekly meetings in the same slot were confirmed &mdash; Kate B&rsquo;s schedule now allows it &mdash; with Celine V sending the invites. Meetings will be agenda-driven: members add their topics beforehand, meetings stay short when updates are thin, and can be cancelled when there is nothing to discuss. The informal roles-and-skills inventory in the shared document remains open for everyone to add to &mdash; with Daniel T noting the irony that the draft regulation under debate would make such self-documentation an obligation.</p>
+
+                        <h2>10. Next Steps</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Action</th><th>Due</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Peter K, Kate B, Anna T, Julian</td><td>Gather input from the leads (including barrio leads) on the two options &mdash; formal regulation vs community-built legitimacy &mdash; and on the board-function question</td><td>Coming weeks</td></tr>
+                                <tr><td>Daniel T</td><td>Take the dates decision-mechanism and GA-scope questions to the board; publish the board minutes to the governance channel</td><td>Tonight</td></tr>
+                                <tr><td>Celine V</td><td>Send bi-weekly meeting invites; continue the date-selection work with the dates group</td><td>This week</td></tr>
+                                <tr><td>All</td><td>Add agenda topics before meetings; add roles and skills to the shared document</td><td>Ongoing</td></tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Next meeting:</strong> in two weeks, same slot; invite to follow.</p>
+
+                        <p><em>Minutes prepared from a recording. The full transcript, lightly edited for readability (filler words and false starts removed, wording unchanged), is published alongside these minutes in line with the working group&rsquo;s transparency commitment.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Presentes (videollamada):</strong> Celine V (facilitadora), Daniel T, Kate B, Anna T, Ben D, Julian, Peter K, Olivier (escuchando)
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Registros Completos</h3>
+                        <ul>
+                            <li><a href="2026-08-17-governance-wg-transcript.html">Transcripci&oacute;n completa (solo en ingl&eacute;s)</a> &mdash; publicada en l&iacute;nea con el compromiso de transparencia del grupo de trabajo, acordado en la segunda reuni&oacute;n</li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Tercera reuni&oacute;n del grupo de trabajo informal de gobernanza. No se tomaron decisiones vinculantes. La mayor parte de la reuni&oacute;n fue un debate sustancial sobre un borrador de reglamento para la creaci&oacute;n de grupos de trabajo, que hizo aflorar la pregunta abierta m&aacute;s profunda del grupo &mdash; de d&oacute;nde viene la legitimidad: de un mandato escrito o del contacto directo con la comunidad. En lugar de intentar resolverla entre ocho personas, el grupo acord&oacute; un siguiente paso concreto: ir a preguntar a los leads.</p>
+
+                        <h2>1. Un Borrador de Reglamento para los Grupos de Trabajo</h2>
+                        <p>Kate B, Anna T y Julian recibieron en la segunda reuni&oacute;n el encargo de redactar una propuesta para establecer formalmente el grupo de trabajo de gobernanza. La discusi&oacute;n se centr&oacute; en cambio en un documento m&aacute;s general compartido con el grupo el d&iacute;a anterior: un borrador de reglamento de Peter D para la creaci&oacute;n de grupos de trabajo como tales &mdash; c&oacute;mo se forma uno, c&oacute;mo se lidera, sus objetivos y una duraci&oacute;n definida (aproximadamente de dos a seis meses). Anna T y Julian se&ntilde;alaron que a&uacute;n no se hab&iacute;an puesto al d&iacute;a del todo con el borrador; el grupo lo discuti&oacute; en directo.</p>
+
+                        <h2>2. Dos Filosof&iacute;as de la Legitimidad</h2>
+                        <p>Julian ley&oacute; la situaci&oacute;n a trav&eacute;s de los estatutos: por ahora solo la Asamblea General y la junta pueden tomar decisiones, y los grupos de trabajo son la &uacute;nica forma de colaboraci&oacute;n con un art&iacute;culo dedicado &mdash; as&iacute; que, si la asociaci&oacute;n trabaja dentro de ese marco, importa que exista una v&iacute;a clara para crear grupos de trabajo. Kate B argument&oacute; que el reglamento resuelve limpiamente el problema del &laquo;huevo y la gallina&raquo; de grupos que dudan de su propia legitimidad, y desbloquea el trabajo posterior que m&aacute;s le importa: definir qu&eacute; tipos de decisiones pueden tomarse fuera de una Asamblea General &mdash; un instrumento pesado y lento que deber&iacute;a reservarse para aquello que la asociaci&oacute;n est&aacute;, en la pr&aacute;ctica, convirtiendo en ley. Unos grupos de trabajo f&aacute;ciles de formar significan, en su opini&oacute;n, m&aacute;s agilidad, m&aacute;s dinamismo y m&aacute;s confianza en la comunidad. Ben D adopt&oacute; una posici&oacute;n intermedia: reglas como estas existen para el peor de los casos &mdash; conflictos, malentendidos, confusiones que necesitan un punto de referencia com&uacute;n al que volver &mdash; y, por lo dem&aacute;s, hay que dejar simplemente que la gente trabaje.</p>
+                        <p>Daniel T discrep&oacute; de la premisa. El trabajo no necesita un grupo de trabajo formal como requisito previo &mdash; la asociaci&oacute;n llev&oacute; a cabo un evento entero sin uno solo, y el trabajo de las fechas avanza ahora mismo sin ninguno. La asociaci&oacute;n se form&oacute; para servir a la comunidad proporcionando las estructuras necesarias para interactuar con la sociedad, no para restringir lo que la gente puede hacer; &laquo;si no est&aacute; en los estatutos, no est&aacute; permitido&raquo; invierte ese prop&oacute;sito. Su preocupaci&oacute;n con el borrador: impone obligaciones a los grupos de trabajo sin definir ning&uacute;n beneficio, lo que invita a la gente a proyectar beneficios sobre &eacute;l &mdash; legitimidad, ante todo. Si la legitimidad es un beneficio del estatus formal, el documento deber&iacute;a definir qu&eacute; es, cu&aacute;n limitada es y cu&aacute;ndo puede retirarse. Y hay una pregunta previa: si la junta siquiera tiene legitimidad que conferir &mdash; en su opini&oacute;n, la legitimidad se construye trabajando con la comunidad, no se otorga por un voto de la junta, y las decisiones que se saltan ese contacto acaban ignoradas al margen de su estatus formal.</p>
+
+                        <h2>3. La Perspectiva de Peter K: &iquest;Qu&eacute; Estamos Intentando Sanar?</h2>
+                        <p>Peter K, involucrado en Nowhere desde 2009 &mdash; segundo build lead, coordinador general y, el rol del que est&aacute; m&aacute;s orgulloso, toilet lead &mdash; enmarc&oacute; la discusi&oacute;n en t&eacute;rminos de los problemas que existe para resolver. A medida que la comunidad creci&oacute; de unas 400 a 4.200 personas participantes, sus estructuras atravesaron verdaderos dolores de crecimiento: muchos miembros sent&iacute;an que ten&iacute;an poca visibilidad sobre c&oacute;mo se tomaban las decisiones, y el Meta Leads Committee, concebido como una representaci&oacute;n fuerte de los leads, nunca lleg&oacute; a dotarse por completo y cay&oacute; en desuso. Lo que la gente realmente necesita, en su opini&oacute;n, es transparencia &mdash; los grupos de trabajo deber&iacute;an tener toda su actividad tan p&uacute;blica como sea posible &mdash; y la sensaci&oacute;n de ser escuchada. Su experiencia es que la mayor parte de la comunidad est&aacute; contenta de dejar los detalles a quienes hacen el trabajo, siempre que todo permanezca abierto para cualquiera que quiera mirar m&aacute;s de cerca; las personas a consultar son los leads, incluidos enf&aacute;ticamente los barrio leads, porque &laquo;los barrios son el evento&raquo;. Antes de fijar nada en piedra, le gustar&iacute;a que se llevara una propuesta de alto nivel a la asamblea m&aacute;s amplia, donde la atenci&oacute;n de los leads est&aacute; asegurada.</p>
+
+                        <h2>4. Proceso de Consejo (Advice Process) o Asamblea General</h2>
+                        <p>Un hilo dentro del debate: Kate B defendi&oacute; el proceso de consejo (advice process) &mdash; usado a todos los niveles en Borderland &mdash; como alternativa profundamente consultiva a la votaci&oacute;n, y argument&oacute; que llevar la decisi&oacute;n de las fechas del evento a una Asamblea General es un &laquo;error de categor&iacute;a&raquo;: un instrumento de nivel de ley aplicado a una decisi&oacute;n operativa, lo que arriesga erosionar la participaci&oacute;n si se abusa de &eacute;l. Daniel T, usuario del advice process desde hace mucho tiempo, replic&oacute; que incluso Holacracy &mdash; que lo usa casi en todas partes &mdash; reserva los cambios de nivel de gobernanza para un proceso m&aacute;s estructurado, porque las decisiones que definen c&oacute;mo trabajan otras personas cortan m&aacute;s hondo; y que, sea cual sea el mecanismo, una decisi&oacute;n sin legitimidad construida con la comunidad simplemente ser&aacute; ignorada, como a veces lo es la normativa existente en el evento.</p>
+
+                        <h2>5. La Pregunta de Nivel Superior: &iquest;Para Qu&eacute; Sirve la Junta?</h2>
+                        <p>Julian elev&oacute; la discusi&oacute;n un nivel: la verdadera pregunta es si la asociaci&oacute;n quiere que cada decisi&oacute;n se someta a la comunidad, o alg&uacute;n nivel de delegaci&oacute;n &mdash; y, detr&aacute;s de eso, cu&aacute;l entiende la junta que es su propia funci&oacute;n. Daniel T describi&oacute; el evento como gestionado en su mayor parte por do-ocracia &mdash; quien hace el trabajo toma las decisiones &mdash; y el actual peso operativo de la junta como una necesidad temporal del periodo fundacional; su esperanza es que &laquo;la junta vuelva a ser aburrida&raquo;. Anna T dijo que la pregunta sobre el rol de la junta le parece genuinamente importante y ha quedado sin respuesta cuando se plante&oacute; antes, y se&ntilde;al&oacute; una preocupaci&oacute;n estructural: una enorme cantidad de valor (la Humans app) ha sido creada por un miembro actual de la junta, lo que tambi&eacute;n crea dependencia de esa persona.</p>
+
+                        <h2>6. Acordado: Preguntar a los Leads</h2>
+                        <p>El grupo convergi&oacute; en un siguiente paso concreto en lugar de una resoluci&oacute;n. Peter K se une a Kate B, Anna T y Julian, y juntos recoger&aacute;n aportaciones de los leads &mdash; incluidos los barrio leads &mdash; sobre las dos opciones de alto nivel: formalizar los grupos de trabajo mediante un reglamento escrito, o seguir construyendo legitimidad mediante el contacto directo con la comunidad. La pregunta sobre la funci&oacute;n futura de la junta se llevar&aacute; en paralelo como insumo. Peter K pregunt&oacute; si la Asamblea General de septiembre podr&iacute;a incluir una propuesta de alto nivel al respecto; Daniel T confirm&oacute; que es posible en principio, aunque el alcance de la asamblea sigue en movimiento (ver m&aacute;s abajo).</p>
+
+                        <h2>7. Asamblea General de Septiembre: Estado</h2>
+                        <p>Daniel T inform&oacute; de que la Asamblea General anunciada para el 17 de septiembre se mantiene, pero el mecanismo exacto de la decisi&oacute;n sobre las fechas del evento est&aacute; genuinamente abierto: una votaci&oacute;n vinculante de la Asamblea General, o una decisi&oacute;n de la junta fuertemente informada por las aportaciones de la comunidad. &Eacute;l llevar&aacute; esa pregunta a la junta esa misma noche, y en la junta existe cierto sentir de que, si hay una votaci&oacute;n de fechas, deber&iacute;a ser el &uacute;nico punto del orden del d&iacute;a de la asamblea. Tambi&eacute;n se mencion&oacute; un calendario alternativo &mdash; debatir en el Annual Leadership Meeting de octubre con una asamblea poco despu&eacute;s &mdash; as&iacute; como la pregunta abierta de si el propio ALM deber&iacute;a acoger una Asamblea General.</p>
+
+                        <h2>8. Actualizaci&oacute;n sobre las Fechas del Evento</h2>
+                        <p>Celine V resumi&oacute; el trabajo de las fechas (cubierto tambi&eacute;n en la <a href="2026-08-17-event-dates-wg.html">reuni&oacute;n del Grupo de Trabajo de Fechas del Evento</a>, celebrada por separado a continuaci&oacute;n de esta llamada): los criterios de decisi&oacute;n se han publicado como tabla resumen en la p&aacute;gina informativa, y la consulta se estructura en dos encuestas &mdash; una amplia, abierta a toda la comunidad y m&aacute;s all&aacute;, y una encuesta en la Humans app con m&aacute;s peso, ya que llega a personas que han estado en el evento &mdash; ambas alimentando la decisi&oacute;n final. Existe un primer borrador de la encuesta amplia; el feedback es bienvenido de forma bilateral.</p>
+
+                        <h2>9. Cadencia y Cuestiones Pr&aacute;cticas</h2>
+                        <p>Se confirmaron reuniones quincenales en el mismo horario &mdash; la agenda de Kate B ahora lo permite &mdash; con Celine V enviando las invitaciones. Las reuniones se guiar&aacute;n por el orden del d&iacute;a: los miembros a&ntilde;aden sus temas de antemano, las reuniones se mantienen cortas cuando hay pocas novedades, y pueden cancelarse cuando no hay nada que discutir. El inventario informal de roles y capacidades del documento compartido sigue abierto para que cualquiera a&ntilde;ada lo suyo &mdash; con Daniel T se&ntilde;alando la iron&iacute;a de que el borrador de reglamento en debate convertir&iacute;a esa auto-documentaci&oacute;n en una obligaci&oacute;n.</p>
+
+                        <h2>10. Pr&oacute;ximos Pasos</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Acci&oacute;n</th><th>Plazo</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Peter K, Kate B, Anna T, Julian</td><td>Recoger aportaciones de los leads (incluidos los barrio leads) sobre las dos opciones &mdash; reglamento formal o legitimidad construida con la comunidad &mdash; y sobre la pregunta de la funci&oacute;n de la junta</td><td>Pr&oacute;ximas semanas</td></tr>
+                                <tr><td>Daniel T</td><td>Llevar a la junta las preguntas del mecanismo de decisi&oacute;n de las fechas y del alcance de la AG; publicar las actas de la junta en el canal de gobernanza</td><td>Esta noche</td></tr>
+                                <tr><td>Celine V</td><td>Enviar las invitaciones de las reuniones quincenales; continuar el trabajo de selecci&oacute;n de fechas con el grupo de fechas</td><td>Esta semana</td></tr>
+                                <tr><td>Todas las personas</td><td>A&ntilde;adir temas al orden del d&iacute;a antes de las reuniones; a&ntilde;adir roles y capacidades al documento compartido</td><td>En curso</td></tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Pr&oacute;xima reuni&oacute;n:</strong> en dos semanas, en el mismo horario; la invitaci&oacute;n se enviar&aacute; pr&oacute;ximamente.</p>
+
+                        <p><em>Actas elaboradas a partir de una grabaci&oacute;n. La transcripci&oacute;n completa, ligeramente editada para facilitar su lectura (se han eliminado muletillas y falsos comienzos, sin cambiar el contenido), se publica junto a estas actas en l&iacute;nea con el compromiso de transparencia del grupo de trabajo.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Pr&eacute;sents (visioconf&eacute;rence) :</strong> Celine V (facilitatrice), Daniel T, Kate B, Anna T, Ben D, Julian, Peter K, Olivier (en &eacute;coute)
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Documents Complets</h3>
+                        <ul>
+                            <li><a href="2026-08-17-governance-wg-transcript.html">Transcription compl&egrave;te (en anglais uniquement)</a> &mdash; publi&eacute;e conform&eacute;ment &agrave; l&rsquo;engagement de transparence du groupe de travail, convenu lors de la deuxi&egrave;me r&eacute;union</li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Troisi&egrave;me r&eacute;union du groupe de travail informel sur la gouvernance. Aucune d&eacute;cision contraignante n&rsquo;a &eacute;t&eacute; prise. L&rsquo;essentiel de la r&eacute;union a &eacute;t&eacute; un d&eacute;bat de fond sur un projet de r&egrave;glement pour la cr&eacute;ation de groupes de travail, qui a fait &eacute;merger la question ouverte la plus profonde du groupe &mdash; d&rsquo;o&ugrave; vient la l&eacute;gitimit&eacute; : d&rsquo;un mandat &eacute;crit, ou d&rsquo;un engagement direct aupr&egrave;s de la communaut&eacute;. Plut&ocirc;t que d&rsquo;essayer de la trancher &agrave; huit, le groupe s&rsquo;est accord&eacute; sur une prochaine &eacute;tape concr&egrave;te : aller demander aux leads.</p>
+
+                        <h2>1. Un Projet de R&egrave;glement pour les Groupes de Travail</h2>
+                        <p>Kate B, Anna T et Julian avaient &eacute;t&eacute; charg&eacute;s lors de la deuxi&egrave;me r&eacute;union de r&eacute;diger une proposition pour &eacute;tablir formellement le groupe de travail gouvernance. La discussion s&rsquo;est plut&ocirc;t centr&eacute;e sur un document plus g&eacute;n&eacute;ral partag&eacute; avec le groupe la veille : un projet de r&egrave;glement de Peter D pour la cr&eacute;ation des groupes de travail en tant que tels &mdash; comment un groupe se forme, comment il est dirig&eacute;, ses objectifs, et une dur&eacute;e d&eacute;finie (environ deux &agrave; six mois). Anna T et Julian ont indiqu&eacute; ne pas avoir encore pleinement pris connaissance du projet ; le groupe en a discut&eacute; en direct.</p>
+
+                        <h2>2. Deux Philosophies de la L&eacute;gitimit&eacute;</h2>
+                        <p>Julian a lu la situation &agrave; travers les statuts : &agrave; l&rsquo;heure actuelle, seuls l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale et le conseil peuvent prendre des d&eacute;cisions, et les groupes de travail sont la seule forme de collaboration dot&eacute;e d&rsquo;un article d&eacute;di&eacute; &mdash; donc si l&rsquo;association travaille dans ce cadre, une mani&egrave;re claire de cr&eacute;er des groupes de travail compte. Kate B a soutenu que le r&egrave;glement r&eacute;sout &eacute;l&eacute;gamment le probl&egrave;me de &laquo; la poule et l&rsquo;&oelig;uf &raquo; des groupes doutant de leur propre l&eacute;gitimit&eacute;, et d&eacute;bloque le travail en aval qui lui tient le plus &agrave; c&oelig;ur : d&eacute;finir quels types de d&eacute;cisions peuvent &ecirc;tre prises en dehors d&rsquo;une Assembl&eacute;e G&eacute;n&eacute;rale &mdash; un instrument lourd et lent qui devrait &ecirc;tre r&eacute;serv&eacute; &agrave; ce que l&rsquo;association inscrit en quelque sorte dans sa loi. Des groupes de travail faciles &agrave; former signifient, selon elle, plus d&rsquo;agilit&eacute;, plus de dynamisme et plus de confiance au sein de la communaut&eacute;. Ben D a pris une position interm&eacute;diaire : des r&egrave;gles comme celles-ci existent pour le pire des cas &mdash; conflits, malentendus, confusions qui n&eacute;cessitent un point de r&eacute;f&eacute;rence commun vers lequel revenir &mdash; et, sinon, il faut simplement laisser les gens travailler.</p>
+                        <p>Daniel T a contest&eacute; la pr&eacute;misse. Le travail n&rsquo;a pas besoin d&rsquo;un groupe de travail formel comme pr&eacute;alable &mdash; l&rsquo;association a organis&eacute; un &eacute;v&eacute;nement entier sans en avoir un seul, et le travail sur les dates avance en ce moment m&ecirc;me sans en avoir un. L&rsquo;association a &eacute;t&eacute; cr&eacute;&eacute;e pour servir la communaut&eacute; en fournissant les structures n&eacute;cessaires pour s&rsquo;interfacer avec la soci&eacute;t&eacute;, pas pour restreindre ce que les gens peuvent faire ; &laquo; si ce n&rsquo;est pas dans les statuts, vous n&rsquo;avez pas le droit de le faire &raquo; inverse cette finalit&eacute;. Sa pr&eacute;occupation concernant le projet : il impose des obligations aux groupes de travail sans d&eacute;finir aucun b&eacute;n&eacute;fice, ce qui invite les gens &agrave; y projeter des b&eacute;n&eacute;fices &mdash; la l&eacute;gitimit&eacute; avant tout. Si la l&eacute;gitimit&eacute; est un b&eacute;n&eacute;fice du statut formel, le document devrait d&eacute;finir ce qu&rsquo;elle est, &agrave; quel point elle est limit&eacute;e, et quand elle peut &ecirc;tre retir&eacute;e. Et il y a une question pr&eacute;alable : celle de savoir si le conseil a m&ecirc;me une l&eacute;gitimit&eacute; &agrave; conf&eacute;rer &mdash; &agrave; ses yeux, la l&eacute;gitimit&eacute; se construit en s&rsquo;engageant aupr&egrave;s de la communaut&eacute;, elle n&rsquo;est pas accord&eacute;e par un vote du conseil, et les d&eacute;cisions qui sautent cet engagement sont ignor&eacute;es quel que soit leur statut formel.</p>
+
+                        <h2>3. La Perspective de Peter K : Que Cherchons-Nous &agrave; Gu&eacute;rir ?</h2>
+                        <p>Peter K, impliqu&eacute; dans Nowhere depuis 2009 &mdash; deuxi&egrave;me build lead, coordinateur g&eacute;n&eacute;ral et, r&ocirc;le dont il est le plus fier, toilet lead &mdash; a cadr&eacute; la discussion &agrave; partir des probl&egrave;mes qu&rsquo;elle existe pour r&eacute;soudre. &Agrave; mesure que la communaut&eacute; passait d&rsquo;environ 400 &agrave; 4 200 participants, ses structures ont connu de vraies difficult&eacute;s de croissance : de nombreux membres estimaient avoir trop peu de visibilit&eacute; sur la fa&ccedil;on dont les d&eacute;cisions &eacute;taient prises, et le Meta Leads Committee, con&ccedil;u comme une repr&eacute;sentation forte des leads, n&rsquo;a jamais &eacute;t&eacute; pleinement pourvu et est tomb&eacute; en d&eacute;su&eacute;tude. Ce dont les gens ont r&eacute;ellement besoin, selon lui, c&rsquo;est de transparence &mdash; les groupes de travail devraient rendre toute leur activit&eacute; aussi publique que possible &mdash; et du sentiment d&rsquo;&ecirc;tre entendus. Son exp&eacute;rience est que la plus grande partie de la communaut&eacute; est heureuse de laisser les d&eacute;tails &agrave; celles et ceux qui font le travail, tant que tout reste ouvert pour quiconque souhaite y regarder de plus pr&egrave;s ; les personnes &agrave; consulter sont les leads, y compris, avec insistance, les barrio leads, puisque &laquo; les barrios sont l&rsquo;&eacute;v&eacute;nement &raquo;. Avant que quoi que ce soit ne soit grav&eacute; dans le marbre, il aimerait qu&rsquo;une proposition de haut niveau soit port&eacute;e devant l&rsquo;assembl&eacute;e &eacute;largie, o&ugrave; l&rsquo;attention des leads est assur&eacute;e.</p>
+
+                        <h2>4. Processus d&rsquo;Avis ou Assembl&eacute;e G&eacute;n&eacute;rale</h2>
+                        <p>Un fil au sein du d&eacute;bat : Kate B a d&eacute;fendu le processus d&rsquo;avis (advice process) &mdash; utilis&eacute; &agrave; tous les niveaux par le Borderland &mdash; comme alternative profond&eacute;ment consultative au vote, et a soutenu que soumettre la d&eacute;cision des dates de l&rsquo;&eacute;v&eacute;nement &agrave; une Assembl&eacute;e G&eacute;n&eacute;rale est une &laquo; erreur de cat&eacute;gorie &raquo; : un instrument de niveau l&eacute;gislatif appliqu&eacute; &agrave; une d&eacute;cision op&eacute;rationnelle, ce qui risque d&rsquo;&eacute;roder la participation en cas d&rsquo;usage excessif. Daniel T, utilisateur de longue date du processus d&rsquo;avis, a r&eacute;pondu que m&ecirc;me Holacracy &mdash; qui l&rsquo;utilise presque partout &mdash; r&eacute;serve les changements de niveau gouvernance &agrave; un processus plus structur&eacute;, parce que les d&eacute;cisions qui d&eacute;finissent comment les autres travaillent coupent plus profond ; et que, quel que soit le m&eacute;canisme, une d&eacute;cision sans l&eacute;gitimit&eacute; construite avec la communaut&eacute; sera simplement ignor&eacute;e, comme l&rsquo;est parfois la politique existante lors de l&rsquo;&eacute;v&eacute;nement.</p>
+
+                        <h2>5. La Question d&rsquo;un Cran au-Dessus : &Agrave; Quoi Sert le Conseil ?</h2>
+                        <p>Julian a &eacute;lev&eacute; la discussion d&rsquo;un niveau : la vraie question est de savoir si l&rsquo;association veut que chaque d&eacute;cision soit soumise &agrave; la communaut&eacute;, ou un certain niveau de d&eacute;l&eacute;gation &mdash; et, derri&egrave;re cela, ce que le conseil comprend de sa propre fonction. Daniel T a d&eacute;crit l&rsquo;&eacute;v&eacute;nement comme largement men&eacute; par la do-ocratie &mdash; la personne qui fait le travail prend les d&eacute;cisions &mdash; et le poids op&eacute;rationnel actuel du conseil comme une n&eacute;cessit&eacute; temporaire de la p&eacute;riode fondatrice ; son espoir est que &laquo; le conseil redevienne ennuyeux &raquo;. Anna T a dit que la question du r&ocirc;le du conseil lui semble r&eacute;ellement importante et qu&rsquo;elle est rest&eacute;e sans r&eacute;ponse lorsqu&rsquo;elle a &eacute;t&eacute; soulev&eacute;e auparavant, et a signal&eacute; une pr&eacute;occupation structurelle : une quantit&eacute; &eacute;norme de valeur (la Humans app) a &eacute;t&eacute; cr&eacute;&eacute;e par un membre actuel du conseil, ce qui cr&eacute;e aussi une d&eacute;pendance envers cette personne.</p>
+
+                        <h2>6. Convenu : Demander aux Leads</h2>
+                        <p>Le groupe a converg&eacute; vers une prochaine &eacute;tape concr&egrave;te plut&ocirc;t que vers une r&eacute;solution. Peter K rejoint Kate B, Anna T et Julian, et ensemble ils recueilleront l&rsquo;avis des leads &mdash; y compris des barrio leads &mdash; sur les deux options de haut niveau : formaliser les groupes de travail par un r&egrave;glement &eacute;crit, ou continuer &agrave; construire la l&eacute;gitimit&eacute; par un engagement direct aupr&egrave;s de la communaut&eacute;. La question de la fonction future du conseil sera port&eacute;e en parall&egrave;le comme &eacute;l&eacute;ment de r&eacute;flexion. Peter K a demand&eacute; si l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale de septembre pourrait porter une proposition de haut niveau &agrave; ce sujet ; Daniel T a confirm&eacute; que c&rsquo;est possible en principe, bien que le p&eacute;rim&egrave;tre de l&rsquo;assembl&eacute;e soit encore en mouvement (voir ci-dessous).</p>
+
+                        <h2>7. Assembl&eacute;e G&eacute;n&eacute;rale de Septembre : &Eacute;tat des Lieux</h2>
+                        <p>Daniel T a rapport&eacute; que l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale annonc&eacute;e pour le 17 septembre est maintenue, mais que le m&eacute;canisme exact de la d&eacute;cision sur les dates de l&rsquo;&eacute;v&eacute;nement est r&eacute;ellement ouvert : un vote contraignant en Assembl&eacute;e G&eacute;n&eacute;rale, ou une d&eacute;cision du conseil fortement &eacute;clair&eacute;e par les contributions de la communaut&eacute;. Il porte cette question au conseil le soir m&ecirc;me, et un certain sentiment existe au conseil que, s&rsquo;il y a un vote sur les dates, il devrait &ecirc;tre le seul point &agrave; l&rsquo;ordre du jour de l&rsquo;assembl&eacute;e. Un calendrier alternatif &mdash; discuter lors de l&rsquo;Annual Leadership Meeting en octobre, avec une assembl&eacute;e peu apr&egrave;s &mdash; a aussi &eacute;t&eacute; mentionn&eacute;, de m&ecirc;me que la question ouverte de savoir si l&rsquo;ALM lui-m&ecirc;me devrait accueillir une Assembl&eacute;e G&eacute;n&eacute;rale.</p>
+
+                        <h2>8. Point sur les Dates de l&rsquo;&Eacute;v&eacute;nement</h2>
+                        <p>Celine V a r&eacute;sum&eacute; le travail sur les dates (&eacute;galement couvert dans la <a href="2026-08-17-event-dates-wg.html">r&eacute;union du groupe de travail sur les dates de l&rsquo;&eacute;v&eacute;nement</a> qui a suivi cet appel) : les crit&egrave;res de d&eacute;cision ont &eacute;t&eacute; publi&eacute;s sous forme de tableau r&eacute;capitulatif sur la page d&rsquo;information, et la consultation est structur&eacute;e en deux sondages &mdash; un sondage large ouvert &agrave; toute la communaut&eacute; et au-del&agrave;, et un sondage via la Humans app ayant plus de poids puisqu&rsquo;il atteint des personnes qui ont d&eacute;j&agrave; particip&eacute; &agrave; l&rsquo;&eacute;v&eacute;nement &mdash; les deux alimentant la d&eacute;cision finale. Une premi&egrave;re &eacute;bauche du sondage large existe ; les retours sont bienvenus en bilat&eacute;ral.</p>
+
+                        <h2>9. Cadence et Intendance</h2>
+                        <p>Les r&eacute;unions bimensuelles dans le m&ecirc;me cr&eacute;neau ont &eacute;t&eacute; confirm&eacute;es &mdash; l&rsquo;emploi du temps de Kate B le permet d&eacute;sormais &mdash; Celine V envoyant les invitations. Les r&eacute;unions seront pilot&eacute;es par l&rsquo;ordre du jour : les membres ajoutent leurs sujets au pr&eacute;alable, les r&eacute;unions restent courtes quand il y a peu de nouvelles, et peuvent &ecirc;tre annul&eacute;es quand il n&rsquo;y a rien &agrave; discuter. L&rsquo;inventaire informel des r&ocirc;les et comp&eacute;tences dans le document partag&eacute; reste ouvert aux ajouts de chacun &mdash; Daniel T notant l&rsquo;ironie que le projet de r&egrave;glement en d&eacute;bat ferait de cette auto-documentation une obligation.</p>
+
+                        <h2>10. Prochaines &Eacute;tapes</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Personne</th><th>Action</th><th>&Eacute;ch&eacute;ance</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Peter K, Kate B, Anna T, Julian</td><td>Recueillir l&rsquo;avis des leads (y compris des barrio leads) sur les deux options &mdash; r&egrave;glement formel ou l&eacute;gitimit&eacute; construite avec la communaut&eacute; &mdash; et sur la question de la fonction du conseil</td><td>Prochaines semaines</td></tr>
+                                <tr><td>Daniel T</td><td>Porter au conseil les questions du m&eacute;canisme de d&eacute;cision des dates et du p&eacute;rim&egrave;tre de l&rsquo;AG ; publier le compte rendu du conseil dans le canal gouvernance</td><td>Ce soir</td></tr>
+                                <tr><td>Celine V</td><td>Envoyer les invitations aux r&eacute;unions bimensuelles ; poursuivre le travail de s&eacute;lection des dates avec le groupe dates</td><td>Cette semaine</td></tr>
+                                <tr><td>Tous</td><td>Ajouter des sujets &agrave; l&rsquo;ordre du jour avant les r&eacute;unions ; ajouter r&ocirc;les et comp&eacute;tences au document partag&eacute;</td><td>En continu</td></tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Prochaine r&eacute;union :</strong> dans deux semaines, m&ecirc;me cr&eacute;neau ; invitation &agrave; suivre.</p>
+
+                        <p><em>Compte rendu &eacute;tabli &agrave; partir d&rsquo;un enregistrement. La transcription int&eacute;grale, l&eacute;g&egrave;rement &eacute;dit&eacute;e pour en faciliter la lecture (tics de langage et faux d&eacute;parts supprim&eacute;s, sans modification du contenu), est publi&eacute;e aux c&ocirc;t&eacute;s de ce compte rendu conform&eacute;ment &agrave; l&rsquo;engagement de transparence du groupe de travail.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanze tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Presenti (videochiamata):</strong> Celine V (facilitatrice), Daniel T, Kate B, Anna T, Ben D, Julian, Peter K, Olivier (in ascolto)
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Documenti Completi</h3>
+                        <ul>
+                            <li><a href="2026-08-17-governance-wg-transcript.html">Trascrizione completa (solo in inglese)</a> &mdash; pubblicata in linea con l&rsquo;impegno di trasparenza del gruppo di lavoro, concordato alla seconda riunione</li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>La terza riunione del gruppo di lavoro informale sulla governance. Non sono state prese decisioni vincolanti. Gran parte della riunione &egrave; stata un dibattito sostanziale su una bozza di regolamento per la creazione dei gruppi di lavoro, che ha fatto emergere la questione aperta pi&ugrave; profonda del gruppo &mdash; da dove viene la legittimit&agrave;: da un mandato scritto o dal coinvolgimento diretto della comunit&agrave;. Invece di provare a risolverla in otto persone, il gruppo ha concordato un passo concreto: andare a chiedere ai leads.</p>
+
+                        <h2>1. Una Bozza di Regolamento per i Gruppi di Lavoro</h2>
+                        <p>Kate B, Anna T e Julian avevano ricevuto alla seconda riunione l&rsquo;incarico di redigere una proposta per istituire formalmente il gruppo di lavoro sulla governance. La discussione si &egrave; invece concentrata su un documento pi&ugrave; generale condiviso con il gruppo il giorno precedente: una bozza di regolamento di Peter D per la creazione dei gruppi di lavoro in quanto tali &mdash; come si forma un gruppo, come viene guidato, i suoi obiettivi e una durata definita (all&rsquo;incirca da due a sei mesi). Anna T e Julian hanno segnalato di non aver ancora esaminato a fondo la bozza; il gruppo ne ha discusso dal vivo.</p>
+
+                        <h2>2. Due Filosofie della Legittimit&agrave;</h2>
+                        <p>Julian ha letto la situazione attraverso gli statuti: al momento solo l&rsquo;Assemblea Generale e il consiglio possono prendere decisioni, e i gruppi di lavoro sono l&rsquo;unica forma di collaborazione con un articolo dedicato &mdash; quindi, se l&rsquo;associazione lavora entro quel quadro, un modo chiaro per creare gruppi di lavoro conta. Kate B ha sostenuto che il regolamento risolve elegantemente il problema &laquo;dell&rsquo;uovo e della gallina&raquo; dei gruppi che dubitano della propria legittimit&agrave;, e sblocca il lavoro a valle che le sta pi&ugrave; a cuore: definire quali tipi di decisioni possano essere prese al di fuori di un&rsquo;Assemblea Generale &mdash; uno strumento pesante e lento che dovrebbe essere riservato alle cose che l&rsquo;associazione sta di fatto trasformando in legge. Gruppi di lavoro facili da formare significano, a suo avviso, pi&ugrave; agilit&agrave;, pi&ugrave; dinamismo e pi&ugrave; fiducia nella comunit&agrave;. Ben D ha preso una posizione intermedia: regole come queste esistono per il caso peggiore &mdash; conflitti, incomprensioni, confusioni che hanno bisogno di un punto di riferimento comune a cui tornare &mdash; e per il resto le persone dovrebbero semplicemente essere lasciate lavorare.</p>
+                        <p>Daniel T ha contestato la premessa. Il lavoro non ha bisogno di un gruppo di lavoro formale come prerequisito &mdash; l&rsquo;associazione ha gestito un intero evento senza averne nemmeno uno, e il lavoro sulle date sta procedendo proprio ora senza. L&rsquo;associazione &egrave; stata costituita per servire la comunit&agrave; fornendo le strutture necessarie a interfacciarsi con la societ&agrave;, non per limitare ci&ograve; che le persone possono fare; &laquo;se non &egrave; negli statuti, non ti &egrave; permesso farlo&raquo; rovescia quello scopo. La sua preoccupazione sulla bozza: impone obblighi ai gruppi di lavoro senza definire alcun beneficio, il che invita le persone a proiettarvi dei benefici &mdash; la legittimit&agrave; prima di tutti. Se la legittimit&agrave; &egrave; un beneficio dello status formale, il documento dovrebbe definire cos&rsquo;&egrave;, quanto &egrave; limitata e quando pu&ograve; essere revocata. E c&rsquo;&egrave; una questione preliminare: se il consiglio abbia perfino una legittimit&agrave; da conferire &mdash; a suo avviso, la legittimit&agrave; si costruisce coinvolgendo la comunit&agrave;, non viene concessa da un voto del consiglio, e le decisioni che saltano quel coinvolgimento vengono ignorate a prescindere dal loro status formale.</p>
+
+                        <h2>3. La Prospettiva di Peter K: Cosa Stiamo Cercando di Guarire?</h2>
+                        <p>Peter K, coinvolto in Nowhere dal 2009 &mdash; secondo build lead, coordinatore generale e, il ruolo di cui va pi&ugrave; fiero, toilet lead &mdash; ha inquadrato la discussione nei termini dei problemi che essa esiste per risolvere. Man mano che la comunit&agrave; cresceva da circa 400 a 4.200 partecipanti, le sue strutture hanno attraversato veri dolori di crescita: molti membri sentivano di avere troppo poca visibilit&agrave; su come venivano prese le decisioni, e il Meta Leads Committee, concepito come una rappresentanza forte dei leads, non &egrave; mai stato completato nei suoi ranghi ed &egrave; caduto in disuso. Ci&ograve; di cui le persone hanno davvero bisogno, a suo avviso, &egrave; la trasparenza &mdash; i gruppi di lavoro dovrebbero rendere tutta la loro attivit&agrave; il pi&ugrave; pubblica possibile &mdash; e la sensazione di essere ascoltate. La sua esperienza &egrave; che la maggior parte della comunit&agrave; &egrave; contenta di lasciare i dettagli a chi fa il lavoro, purch&eacute; tutto resti aperto per chiunque voglia guardare pi&ugrave; da vicino; le persone da consultare sono i leads, includendo con forza i barrio leads, perch&eacute; &laquo;i barrios sono l&rsquo;evento&raquo;. Prima che qualcosa venga scolpito nella pietra, vorrebbe che una proposta di alto livello fosse portata all&rsquo;assemblea pi&ugrave; ampia, dove l&rsquo;attenzione dei leads &egrave; garantita.</p>
+
+                        <h2>4. Advice Process o Assemblea Generale</h2>
+                        <p>Un filo all&rsquo;interno del dibattito: Kate B ha difeso l&rsquo;advice process &mdash; usato a tutti i livelli dal Borderland &mdash; come alternativa profondamente consultiva al voto, e ha sostenuto che sottoporre la decisione sulle date dell&rsquo;evento a un&rsquo;Assemblea Generale &egrave; un &laquo;errore di categoria&raquo;: uno strumento di livello legislativo applicato a una decisione operativa, che rischia di erodere la partecipazione se usato troppo spesso. Daniel T, utilizzatore di lunga data dell&rsquo;advice process, ha ribattuto che perfino Holacracy &mdash; che lo usa quasi ovunque &mdash; riserva i cambiamenti di livello di governance a un processo pi&ugrave; strutturato, perch&eacute; le decisioni che definiscono come lavorano gli altri incidono pi&ugrave; a fondo; e che, qualunque sia il meccanismo, una decisione senza una legittimit&agrave; costruita con la comunit&agrave; verr&agrave; semplicemente ignorata, come talvolta accade alle regole gi&agrave; esistenti all&rsquo;evento.</p>
+
+                        <h2>5. La Domanda di Livello Superiore: A Cosa Serve il Consiglio?</h2>
+                        <p>Julian ha portato la discussione un livello pi&ugrave; su: la vera domanda &egrave; se l&rsquo;associazione voglia che ogni decisione sia sottoposta alla comunit&agrave;, o un certo grado di delega &mdash; e, dietro a questo, quale funzione il consiglio ritenga di avere. Daniel T ha descritto l&rsquo;evento come gestito in gran parte per do-ocrazia &mdash; chi fa il lavoro prende le decisioni &mdash; e l&rsquo;attuale peso operativo del consiglio come una necessit&agrave; temporanea della fase fondativa; la sua speranza &egrave; che &laquo;il consiglio torni a essere noioso&raquo;. Anna T ha detto che la domanda sul ruolo del consiglio le sembra davvero importante e che &egrave; rimasta senza risposta quando &egrave; stata posta in passato, e ha segnalato una preoccupazione strutturale: una quantit&agrave; enorme di valore (la Humans app) &egrave; stata creata da un solo membro attuale del consiglio, il che crea anche una dipendenza da quella persona.</p>
+
+                        <h2>6. Concordato: Chiedere ai Leads</h2>
+                        <p>Il gruppo &egrave; approdato a un passo concreto invece che a una risoluzione. Peter K si unisce a Kate B, Anna T e Julian, e insieme raccoglieranno il parere dei leads &mdash; inclusi i barrio leads &mdash; sulle due opzioni di alto livello: formalizzare i gruppi di lavoro attraverso un regolamento scritto, o continuare a costruire legittimit&agrave; attraverso il coinvolgimento diretto della comunit&agrave;. La domanda sulla futura funzione del consiglio verr&agrave; portata avanti in parallelo come input. Peter K ha chiesto se l&rsquo;Assemblea Generale di settembre possa accogliere una proposta di alto livello su questo; Daniel T ha confermato che in linea di principio &egrave; possibile, anche se il perimetro dell&rsquo;assemblea &egrave; ancora in movimento (si veda sotto).</p>
+
+                        <h2>7. Assemblea Generale di Settembre: Stato</h2>
+                        <p>Daniel T ha riferito che l&rsquo;Assemblea Generale annunciata per il 17 settembre resta confermata, ma il meccanismo esatto della decisione sulle date dell&rsquo;evento &egrave; genuinamente aperto: un voto vincolante dell&rsquo;Assemblea Generale, o una decisione del consiglio fortemente informata dal contributo della comunit&agrave;. Porter&agrave; la questione al consiglio la sera stessa, e nel consiglio c&rsquo;&egrave; chi ritiene che, se ci sar&agrave; un voto sulle date, dovrebbe essere l&rsquo;unico punto all&rsquo;ordine del giorno dell&rsquo;assemblea. &Egrave; stata menzionata anche una tempistica alternativa &mdash; discuterne all&rsquo;Annual Leadership Meeting di ottobre, con un&rsquo;assemblea poco dopo &mdash; cos&igrave; come la questione aperta se l&rsquo;ALM stesso debba ospitare un&rsquo;Assemblea Generale.</p>
+
+                        <h2>8. Aggiornamento sulle Date dell&rsquo;Evento</h2>
+                        <p>Celine V ha riassunto il lavoro sulle date (trattato anche nella riunione separata del <a href="2026-08-17-event-dates-wg.html">Gruppo di Lavoro sulle Date dell&rsquo;Evento</a> che ha seguito questa chiamata): i criteri di decisione sono stati pubblicati come tabella riassuntiva sulla pagina informativa, e la consultazione &egrave; strutturata in due sondaggi &mdash; uno ampio, aperto a tutta la comunit&agrave; e oltre, e un sondaggio sulla Humans app con pi&ugrave; peso, perch&eacute; raggiunge persone che sono state all&rsquo;evento &mdash; che confluiscono entrambi nella decisione finale. Esiste una prima bozza del sondaggio ampio; i riscontri sono benvenuti in via bilaterale.</p>
+
+                        <h2>9. Cadenza e Questioni Organizzative</h2>
+                        <p>Sono state confermate riunioni quindicinali nella stessa fascia oraria &mdash; l&rsquo;agenda di Kate B ora lo permette &mdash; con Celine V a inviare gli inviti. Le riunioni saranno guidate dall&rsquo;ordine del giorno: i membri aggiungono i propri temi in anticipo, le riunioni restano brevi quando gli aggiornamenti sono scarsi, e possono essere annullate quando non c&rsquo;&egrave; nulla da discutere. L&rsquo;inventario informale di ruoli e competenze nel documento condiviso resta aperto ai contributi di tutti &mdash; con Daniel T a notare l&rsquo;ironia che la bozza di regolamento in discussione renderebbe questa auto-documentazione un obbligo.</p>
+
+                        <h2>10. Prossimi Passi</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Azione</th><th>Scadenza</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Peter K, Kate B, Anna T, Julian</td><td>Raccogliere il parere dei leads (inclusi i barrio leads) sulle due opzioni &mdash; regolamento formale o legittimit&agrave; costruita con la comunit&agrave; &mdash; e sulla questione della funzione del consiglio</td><td>Prossime settimane</td></tr>
+                                <tr><td>Daniel T</td><td>Portare al consiglio le questioni del meccanismo di decisione sulle date e del perimetro dell&rsquo;AG; pubblicare il verbale del consiglio nel canale governance</td><td>Stasera</td></tr>
+                                <tr><td>Celine V</td><td>Inviare gli inviti alle riunioni quindicinali; proseguire il lavoro di selezione delle date con il gruppo date</td><td>Questa settimana</td></tr>
+                                <tr><td>Tutti</td><td>Aggiungere i temi all&rsquo;ordine del giorno prima delle riunioni; aggiungere ruoli e competenze al documento condiviso</td><td>In corso</td></tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Prossima riunione:</strong> tra due settimane, stessa fascia oraria; invito a seguire.</p>
+
+                        <p><em>Verbale redatto a partire da una registrazione. La trascrizione integrale, leggermente rivista per facilitarne la lettura (intercalari e false partenze rimossi, senza modificare i contenuti), &egrave; pubblicata accanto a questo verbale in linea con l&rsquo;impegno di trasparenza del gruppo di lavoro.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Bei Diskrepanzen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesend (Videokonferenz):</strong> Celine V (Moderation), Daniel T, Kate B, Anna T, Ben D, Julian, Peter K, Olivier (zuh&ouml;rend)
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Vollst&auml;ndige Aufzeichnungen</h3>
+                        <ul>
+                            <li><a href="2026-08-17-governance-wg-transcript.html">Vollst&auml;ndiges Transkript (nur auf Englisch)</a> &mdash; ver&ouml;ffentlicht im Einklang mit der Transparenzverpflichtung der Arbeitsgruppe, vereinbart bei der zweiten Sitzung</li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Die dritte Sitzung der informellen Governance-Arbeitsgruppe. Es wurden keine verbindlichen Beschl&uuml;sse gefasst. Der Gro&szlig;teil der Sitzung war eine substanzielle Debatte &uuml;ber einen Regelungsentwurf zur Bildung von Arbeitsgruppen, die die tiefste offene Frage der Gruppe zutage f&ouml;rderte &mdash; woher Legitimit&auml;t kommt: aus einem schriftlichen Mandat oder aus dem direkten Austausch mit der Community. Statt zu versuchen, sie unter acht Personen zu kl&auml;ren, einigte sich die Gruppe auf einen konkreten n&auml;chsten Schritt: die Leads fragen.</p>
+
+                        <h2>1. Ein Regelungsentwurf f&uuml;r Arbeitsgruppen</h2>
+                        <p>Kate B, Anna T und Julian waren bei der zweiten Sitzung damit beauftragt worden, einen Vorschlag zur formellen Einsetzung der Governance-Arbeitsgruppe zu entwerfen. Die Diskussion drehte sich stattdessen um ein allgemeineres Dokument, das am Vortag mit der Gruppe geteilt worden war: einen Regelungsentwurf von Peter D zur Bildung von Arbeitsgruppen als solchen &mdash; wie eine gebildet wird, wie sie geleitet wird, ihre Ziele und eine definierte Dauer (etwa zwei bis sechs Monate). Anna T und Julian merkten an, dass sie den Entwurf noch nicht vollst&auml;ndig durchgearbeitet hatten; die Gruppe diskutierte ihn live.</p>
+
+                        <h2>2. Zwei Philosophien der Legitimit&auml;t</h2>
+                        <p>Julian las die Lage durch die Brille der Statuten: Derzeit k&ouml;nnen nur die Generalversammlung und der Vorstand Entscheidungen treffen, und Arbeitsgruppen sind die einzige Form der Zusammenarbeit mit einem eigenen Artikel &mdash; wenn der Verein also innerhalb dieses Rahmens arbeitet, ist ein klarer Weg zur Bildung von Arbeitsgruppen wichtig. Kate B argumentierte, die Regelung l&ouml;se elegant das &bdquo;Henne-Ei&ldquo;-Problem von Gruppen, die an ihrer eigenen Legitimit&auml;t zweifeln, und mache die nachgelagerte Arbeit m&ouml;glich, die ihr am wichtigsten ist: zu definieren, welche Arten von Entscheidungen au&szlig;erhalb einer Generalversammlung getroffen werden k&ouml;nnen &mdash; einem schweren, langsamen Instrument, das den Dingen vorbehalten bleiben sollte, die der Verein faktisch in Gesetzesrang erhebt. Leicht zu bildende Arbeitsgruppen bedeuten aus ihrer Sicht mehr Agilit&auml;t, mehr Dynamik und mehr Vertrauen in die Community. Ben D nahm eine mittlere Position ein: Regeln wie diese existieren f&uuml;r den schlimmsten Fall &mdash; Konflikte, Missverst&auml;ndnisse, Verwirrungen, die einen gemeinsamen Bezugspunkt brauchen, zu dem man zur&uuml;ckkehren kann &mdash; und ansonsten sollte man die Leute einfach arbeiten lassen.</p>
+                        <p>Daniel T widersprach der Pr&auml;misse. Arbeit braucht keine formelle Arbeitsgruppe als Voraussetzung &mdash; der Verein hat eine ganze Veranstaltung ohne eine einzige durchgef&uuml;hrt, und die Arbeit an den Veranstaltungsdaten l&auml;uft gerade jetzt ohne eine. Der Verein wurde gegr&uuml;ndet, um der Community zu dienen, indem er die Strukturen bereitstellt, die f&uuml;r die Schnittstelle zur Gesellschaft n&ouml;tig sind &mdash; nicht, um einzuschr&auml;nken, was Menschen tun d&uuml;rfen; &bdquo;wenn es nicht in den Statuten steht, darfst du es nicht tun&ldquo; kehrt diesen Zweck um. Seine Sorge beim Entwurf: Er erlegt Arbeitsgruppen Pflichten auf, ohne irgendwelche Vorteile zu definieren, was dazu einl&auml;dt, Vorteile hineinzuprojizieren &mdash; allen voran Legitimit&auml;t. Wenn Legitimit&auml;t ein Vorteil des formellen Status ist, sollte das Dokument definieren, was sie ist, wie begrenzt sie ist und wann sie entzogen werden kann. Und es gibt eine vorgelagerte Frage: ob der Vorstand &uuml;berhaupt Legitimit&auml;t zu vergeben hat &mdash; aus seiner Sicht wird Legitimit&auml;t durch den Austausch mit der Community aufgebaut, nicht durch einen Beschluss des Vorstands verliehen, und Entscheidungen, die diesen Austausch &uuml;berspringen, werden ignoriert, unabh&auml;ngig von ihrem formellen Status.</p>
+
+                        <h2>3. Peter Ks Perspektive: Was versuchen wir zu heilen?</h2>
+                        <p>Peter K, seit 2009 bei Nowhere engagiert &mdash; zweiter Build-Lead, Generalkoordinator und, die Rolle, auf die er am stolzesten ist, Toiletten-Lead &mdash; rahmte die Diskussion &uuml;ber die Probleme, zu deren L&ouml;sung sie existiert. W&auml;hrend die Community von rund 400 auf 4.200 Teilnehmende wuchs, durchliefen ihre Strukturen echte Wachstumsschmerzen: Viele Mitglieder hatten das Gef&uuml;hl, zu wenig Einblick in die Entscheidungsfindung zu haben, und das Meta-Leads-Komitee, gedacht als starke Vertretung der Leads, wurde nie vollst&auml;ndig besetzt und kam au&szlig;er Gebrauch. Was die Menschen tats&auml;chlich brauchen, ist aus seiner Sicht Transparenz &mdash; Arbeitsgruppen sollten ihre gesamte Aktivit&auml;t so &ouml;ffentlich wie m&ouml;glich machen &mdash; und das Gef&uuml;hl, geh&ouml;rt zu werden. Seine Erfahrung ist, dass der Gro&szlig;teil der Community die Details gern denjenigen &uuml;berl&auml;sst, die die Arbeit machen, solange alles offen bleibt f&uuml;r alle, die genauer hinschauen m&ouml;chten; die Menschen, die man konsultieren sollte, sind die Leads, ausdr&uuml;cklich einschlie&szlig;lich der Barrio-Leads, denn &bdquo;die Barrios sind die Veranstaltung&ldquo;. Bevor irgendetwas in Stein gemei&szlig;elt wird, w&uuml;nscht er sich, dass ein grober Vorschlag in die gr&ouml;&szlig;ere Versammlung getragen wird, wo die Aufmerksamkeit der Leads gesichert ist.</p>
+
+                        <h2>4. Advice Process oder Generalversammlung</h2>
+                        <p>Ein Faden innerhalb der Debatte: Kate B warb f&uuml;r den Advice Process &mdash; beim Borderland auf allen Ebenen im Einsatz &mdash; als zutiefst konsultative Alternative zum Abstimmen, und argumentierte, die Entscheidung &uuml;ber die Veranstaltungsdaten einer Generalversammlung vorzulegen sei ein &bdquo;Kategorienfehler&ldquo;: ein Instrument auf Gesetzesebene, angewandt auf eine operative Entscheidung, was bei &Uuml;bernutzung die Beteiligung auszuh&ouml;hlen droht. Daniel T, langj&auml;hriger Nutzer des Advice Process, entgegnete, dass selbst Holacracy &mdash; das ihn fast &uuml;berall einsetzt &mdash; &Auml;nderungen auf Governance-Ebene einem st&auml;rker strukturierten Prozess vorbeh&auml;lt, weil Entscheidungen, die definieren, wie andere arbeiten, tiefer schneiden; und dass, welcher Mechanismus es auch sei, eine Entscheidung ohne in der Community aufgebaute Legitimit&auml;t schlicht ignoriert wird &mdash; wie es bestehenden Regeln bei der Veranstaltung manchmal ergeht.</p>
+
+                        <h2>5. Die &uuml;bergeordnete Frage: Wof&uuml;r ist der Vorstand da?</h2>
+                        <p>Julian hob die Diskussion eine Ebene h&ouml;her: Die eigentliche Frage ist, ob der Verein jede Entscheidung der Community vorlegen will oder ein gewisses Ma&szlig; an Delegation &mdash; und dahinter, wie der Vorstand seine eigene Funktion versteht. Daniel T beschrieb die Veranstaltung als gr&ouml;&szlig;tenteils per Do-okratie gef&uuml;hrt &mdash; wer die Arbeit macht, trifft die Entscheidungen &mdash; und das derzeitige operative Gewicht des Vorstands als vor&uuml;bergehende Notwendigkeit der Gr&uuml;ndungsphase; seine Hoffnung ist, dass &bdquo;der Vorstand wieder langweilig wird&ldquo;. Anna T sagte, die Frage nach der Rolle des Vorstands f&uuml;hle sich wirklich wichtig an und sei bei fr&uuml;heren Anl&auml;ssen unbeantwortet geblieben, und benannte eine strukturelle Sorge: Ein enormer Wert (die Humans app) wurde von einem einzigen aktuellen Vorstandsmitglied geschaffen, was zugleich eine Abh&auml;ngigkeit von dieser Person erzeugt.</p>
+
+                        <h2>6. Vereinbart: die Leads fragen</h2>
+                        <p>Die Gruppe einigte sich auf einen konkreten n&auml;chsten Schritt statt auf eine Aufl&ouml;sung der Frage. Peter K schlie&szlig;t sich Kate B, Anna T und Julian an, und gemeinsam werden sie Input von den Leads &mdash; einschlie&szlig;lich der Barrio-Leads &mdash; zu den beiden grunds&auml;tzlichen Optionen einholen: Arbeitsgruppen durch eine schriftliche Regelung zu formalisieren oder Legitimit&auml;t weiterhin durch direkten Austausch mit der Community aufzubauen. Die Frage nach der k&uuml;nftigen Funktion des Vorstands wird als Input mitgef&uuml;hrt. Peter K fragte, ob die September-Generalversammlung einen groben Vorschlag dazu tragen k&ouml;nnte; Daniel T best&auml;tigte, dass das im Prinzip m&ouml;glich ist, auch wenn der Umfang der Versammlung noch in Bewegung ist (siehe unten).</p>
+
+                        <h2>7. September-Generalversammlung: Stand</h2>
+                        <p>Daniel T berichtete, dass die f&uuml;r den 17. September angek&uuml;ndigte Generalversammlung steht, der genaue Mechanismus der Entscheidung &uuml;ber die Veranstaltungsdaten aber wirklich offen ist: eine verbindliche Abstimmung der Generalversammlung oder eine Entscheidung des Vorstands, die stark vom Input der Community geleitet wird. Er nimmt diese Frage noch am selben Abend mit in den Vorstand, und im Vorstand gibt es die Tendenz, dass eine etwaige Datumsabstimmung der einzige Punkt auf der Tagesordnung der Versammlung sein sollte. Auch ein alternativer Zeitplan &mdash; Diskussion beim Annual Leadership Meeting im Oktober mit einer Versammlung kurz danach &mdash; wurde erw&auml;hnt, ebenso die offene Frage, ob das ALM selbst eine Generalversammlung beherbergen sollte.</p>
+
+                        <h2>8. Update zu den Veranstaltungsdaten</h2>
+                        <p>Celine V fasste die Arbeit an den Daten zusammen (auch behandelt in der separaten <a href="2026-08-17-event-dates-wg.html">Sitzung der Arbeitsgruppe Veranstaltungsdaten</a>, die auf diesen Call folgte): Die Entscheidungskriterien wurden als &Uuml;bersichtstabelle auf der Informationsseite ver&ouml;ffentlicht, und die Konsultation ist als zwei Umfragen strukturiert &mdash; eine breite, offen f&uuml;r die gesamte Community und dar&uuml;ber hinaus, und eine Umfrage in der Humans app, die mehr Gewicht tr&auml;gt, da sie Menschen erreicht, die bei der Veranstaltung waren &mdash; beide flie&szlig;en in die endg&uuml;ltige Entscheidung ein. Ein erster Entwurf der breiten Umfrage existiert; Feedback ist bilateral willkommen.</p>
+
+                        <h2>9. Rhythmus und Organisatorisches</h2>
+                        <p>Zweiw&ouml;chentliche Treffen im gleichen Zeitfenster wurden best&auml;tigt &mdash; Kate Bs Terminkalender l&auml;sst es jetzt zu &mdash;, die Einladungen verschickt Celine V. Die Treffen werden tagesordnungsgetrieben sein: Mitglieder tragen ihre Themen vorab ein, Treffen bleiben kurz, wenn es wenig Neues gibt, und k&ouml;nnen abgesagt werden, wenn es nichts zu besprechen gibt. Das informelle Rollen-und-F&auml;higkeiten-Inventar im geteilten Dokument bleibt f&uuml;r alle offen, um sich einzutragen &mdash; wobei Daniel T die Ironie anmerkte, dass der gerade debattierte Regelungsentwurf genau solche Selbstdokumentation zur Pflicht machen w&uuml;rde.</p>
+
+                        <h2>10. N&auml;chste Schritte</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Aktion</th><th>F&auml;lligkeit</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Peter K, Kate B, Anna T, Julian</td><td>Input von den Leads (einschlie&szlig;lich der Barrio-Leads) zu den beiden Optionen einholen &mdash; formelle Regelung oder in der Community aufgebaute Legitimit&auml;t &mdash; sowie zur Frage der Vorstandsfunktion</td><td>Kommende Wochen</td></tr>
+                                <tr><td>Daniel T</td><td>Die Fragen zum Entscheidungsmechanismus f&uuml;r die Daten und zum Umfang der GV in den Vorstand tragen; das Vorstandsprotokoll im Governance-Kanal ver&ouml;ffentlichen</td><td>Heute Abend</td></tr>
+                                <tr><td>Celine V</td><td>Einladungen f&uuml;r die zweiw&ouml;chentlichen Treffen verschicken; die Arbeit an der Datumsauswahl mit der Daten-Gruppe fortsetzen</td><td>Diese Woche</td></tr>
+                                <tr><td>Alle</td><td>Tagesordnungspunkte vor den Treffen eintragen; Rollen und F&auml;higkeiten im geteilten Dokument erg&auml;nzen</td><td>Laufend</td></tr>
+                            </tbody>
+                        </table>
+                        <p><strong>N&auml;chste Sitzung:</strong> in zwei Wochen, gleiches Zeitfenster; Einladung folgt.</p>
+
+                        <p><em>Protokoll auf Grundlage einer Aufzeichnung erstellt. Das vollst&auml;ndige Transkript, zur besseren Lesbarkeit leicht &uuml;berarbeitet (F&uuml;llw&ouml;rter und Satzabbr&uuml;che entfernt, Inhalt unver&auml;ndert), wird im Einklang mit der Transparenzverpflichtung der Arbeitsgruppe neben diesem Protokoll ver&ouml;ffentlicht.</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>
