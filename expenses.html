@@ -1,334 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex, nofollow">
-<title>Expense Reimbursement Guide — Elsewhere 2026</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Expense Reimbursement Guide | Elsewhere &mdash; by Nobodies Collective</title>
+    <meta name="description" content="How to submit expenses, invoices, and claims for Elsewhere 2026 — Nobodies Collective Association.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .ex-page {
+            padding: 8rem 0 4rem;
+        }
 
-:root {
-  --sand: #F5F2EB;
-  --sand-dark: #EAE5D8;
-  --ink: #1C1A17;
-  --ink-mid: #4A4640;
-  --ink-light: #8C8680;
-  --dust: #D4CFC6;
-  --accent: #C8964A;
-  --accent-light: #F0E0C0;
-  --info-bg: #E4EFF5;
-  --info-fg: #1B4A5A;
-  --warn-bg: #FDF0DC;
-  --warn-fg: #7A5210;
-  --alert-bg: #F5E8E8;
-  --alert-fg: #7A1B1B;
-  --ok-bg: #E8F0E4;
-  --ok-fg: #2D5A1B;
-  --radius: 10px;
-  --radius-sm: 6px;
-}
+        .ex-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--sand);
-  color: var(--ink);
-  min-height: 100vh;
-  padding: 0;
-}
+        .ex-intro-label {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 0.75rem;
+        }
 
-header {
-  background: var(--ink);
-  color: var(--sand);
-  padding: 28px 40px 24px;
-}
+        .ex-content h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 1rem;
+        }
 
-header h1 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  line-height: 1.1;
-}
+        .ex-content .lead {
+            color: var(--color-text-muted);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            max-width: 700px;
+        }
 
-header p {
-  font-size: 13px;
-  color: #A09A90;
-  margin-top: 4px;
-}
+        .ex-section {
+            margin-top: 3rem;
+        }
 
-main {
-  padding: 32px 40px 60px;
-  max-width: 760px;
-  margin: 0 auto;
-}
+        .ex-section h2 {
+            font-size: clamp(1.4rem, 4vw, 1.9rem);
+            margin-bottom: 1rem;
+            color: var(--color-text);
+        }
 
-.intro {
-  font-size: 15px;
-  line-height: 1.7;
-  color: var(--ink-mid);
-  margin-bottom: 32px;
-}
+        .ex-section p,
+        .ex-section li {
+            color: var(--color-text-muted);
+            line-height: 1.7;
+        }
 
-.section {
-  margin-bottom: 32px;
-}
+        .ex-section p {
+            margin-bottom: 1rem;
+        }
 
-.section-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: -0.3px;
-  margin-bottom: 12px;
-}
+        .ex-card {
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 1.75rem 2rem;
+            margin-bottom: 1.25rem;
+        }
 
-.card {
-  background: #fff;
-  border: 1px solid var(--dust);
-  border-radius: var(--radius);
-  padding: 20px;
-  margin-bottom: 12px;
-  font-size: 14px;
-  line-height: 1.7;
-  color: var(--ink-mid);
-}
+        .ex-highlight {
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+            padding: 1.5rem 2rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--color-accent);
+        }
 
-.card p + p {
-  margin-top: 10px;
-}
+        .ex-highlight p {
+            color: var(--color-text-muted);
+            margin-bottom: 0.5rem;
+        }
 
-.card strong {
-  color: var(--ink);
-  font-weight: 600;
-}
+        .ex-highlight p:last-child { margin-bottom: 0; }
 
-.callout {
-  border-radius: var(--radius);
-  padding: 16px 20px;
-  font-size: 13px;
-  line-height: 1.6;
-  margin-bottom: 12px;
-}
+        .ex-highlight strong {
+            color: var(--color-text);
+        }
 
-.callout-warn {
-  background: var(--warn-bg);
-  color: var(--warn-fg);
-  border: 1px solid rgba(122, 82, 16, 0.15);
-}
+        .ex-invoice-block {
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0;
+            line-height: 1.6;
+        }
 
-.callout-alert {
-  background: var(--alert-bg);
-  color: var(--alert-fg);
-  border: 1px solid rgba(122, 27, 27, 0.15);
-}
+        .ex-invoice-block .label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 0.5rem;
+        }
 
-.callout-info {
-  background: var(--info-bg);
-  color: var(--info-fg);
-  border: 1px solid rgba(27, 74, 90, 0.15);
-}
+        .ex-invoice-block .detail {
+            color: var(--color-text);
+            font-weight: 500;
+        }
 
-.callout-ok {
-  background: var(--ok-bg);
-  color: var(--ok-fg);
-  border: 1px solid rgba(45, 90, 27, 0.15);
-}
+        /* Steps — same style as travel reimbursement page */
+        .ex-steps {
+            counter-reset: ex-step;
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0 0.5rem;
+        }
 
-.callout strong {
-  font-weight: 600;
-}
+        .ex-steps li {
+            counter-increment: ex-step;
+            display: flex;
+            gap: 1.25rem;
+            align-items: flex-start;
+            margin-bottom: 1.25rem;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
 
-.invoice-block {
-  background: var(--sand);
-  border-radius: var(--radius-sm);
-  padding: 14px 18px;
-  margin: 12px 0;
-  font-size: 13px;
-  line-height: 1.6;
-}
+        .ex-steps li::before {
+            content: counter(ex-step);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 2rem;
+            height: 2rem;
+            background: var(--color-accent);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.85rem;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
 
-.invoice-block .label {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ink-light);
-  margin-bottom: 6px;
-}
+        .ex-steps li strong {
+            color: var(--color-text);
+        }
 
-.invoice-block .detail {
-  color: var(--ink);
-  font-weight: 500;
-}
+        .ex-contact {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--color-border);
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+        }
 
-.steps {
-  counter-reset: step;
-  list-style: none;
-  padding: 0;
-}
-
-.steps li {
-  counter-increment: step;
-  display: flex;
-  gap: 14px;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--sand-dark);
-  font-size: 14px;
-  line-height: 1.6;
-  color: var(--ink-mid);
-}
-
-.steps li:last-child {
-  border-bottom: none;
-}
-
-.steps li::before {
-  content: counter(step);
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 13px;
-  width: 28px;
-  height: 28px;
-  background: var(--ink);
-  color: var(--sand);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-
-.footer-note {
-  margin-top: 40px;
-  padding-top: 24px;
-  border-top: 1px solid var(--dust);
-  font-size: 13px;
-  color: var(--ink-light);
-  text-align: center;
-}
-
-.footer-note a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.footer-note a:hover {
-  text-decoration: underline;
-}
-
-@media print {
-  header { background: var(--ink) !important; -webkit-print-color-adjust: exact; }
-  .card, .callout { break-inside: avoid; }
-}
-
-@media (max-width: 600px) {
-  header { padding: 20px; }
-  main { padding: 20px 16px 40px; }
-}
-</style>
+        .ex-contact a {
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
+    <div id="shared-header"></div>
+    <script src="header.js"></script>
 
-<header>
-  <h1>Expense Reimbursement Guide</h1>
-  <p>Coordinators &amp; Volunteers &middot; Elsewhere 2026 &middot; Nobodies Collective Association</p>
-</header>
+    <main class="ex-page">
+        <div class="ex-content">
 
-<main>
+            <span class="ex-intro-label">Coordinators &amp; Volunteers &middot; Elsewhere 2026</span>
+            <h1>Expense Reimbursement Guide</h1>
+            <p class="lead">Pay upfront, keep your invoice, submit an expense report in the Humans app via <a href="https://humans.nobodies.team/Expenses" target="_blank" rel="noopener noreferrer">humans.nobodies.team/Expenses</a>. Once approved, you receive a SEPA bank transfer. This includes art grants and travel reimbursements &mdash; same process, just select the relevant budget category.</p>
 
-  <p class="intro">
-    Pay upfront, keep your invoice, submit an expense report in the Humans app via
-    <a href="https://humans.nobodies.team/Expenses" style="color:var(--accent);font-weight:500;">humans.nobodies.team/Expenses</a>.
-    Once approved, you receive a SEPA bank transfer. This includes art grants and travel reimbursements &mdash;
-    same process, just select the relevant budget category.
-  </p>
+            <!-- Before you buy -->
+            <section class="ex-section">
+                <h2>Before you buy</h2>
+                <div class="ex-highlight">
+                    <p><strong>Check your budget first.</strong> Make sure the expense is within your department's approved budget. If unsure, check with your coordinator or Daniela or Peter <em>before</em> purchasing &mdash; not after.</p>
+                </div>
+            </section>
 
-  <div class="section">
-    <h2 class="section-title">Before you buy</h2>
-    <div class="callout callout-warn">
-      <strong>Check your budget first.</strong> Make sure the expense is within your department's approved budget.
-      If unsure, check with your coordinator or Daniela or Peter <em>before</em> purchasing &mdash; not after.
-    </div>
-  </div>
+            <!-- Invoice -->
+            <section class="ex-section">
+                <h2>Getting the invoice right</h2>
+                <div class="ex-card">
+                    <p>Always request a <strong>proper invoice</strong> (not just a till receipt). The invoice must be addressed to:</p>
 
-  <div class="section">
-    <h2 class="section-title">Getting the invoice right</h2>
-    <div class="card">
-      <p>Always request a <strong>proper invoice</strong> (not just a till receipt). The invoice must be addressed to:</p>
+                    <div class="ex-invoice-block">
+                        <div class="label">Purchases within Spain</div>
+                        <div class="detail">
+                            Asociaci&oacute;n Nobodies Collective<br>
+                            NIF: G26726299<br>
+                            Glorieta de Bilbao 1, 3&ordm; Derecha<br>
+                            28004 Madrid, Spain
+                        </div>
+                    </div>
 
-      <div class="invoice-block">
-        <div class="label">Purchases within Spain</div>
-        <div class="detail">
-          Asociaci&oacute;n Nobodies Collective<br>
-          NIF: G26726299<br>
-          Glorieta de Bilbao 1, 3&ordm; Derecha<br>
-          28004 Madrid, Spain
+                    <div class="ex-invoice-block">
+                        <div class="label">EU / UK / International purchases</div>
+                        <div class="detail">
+                            Same details, but use<br>
+                            VAT Number: ESG26726299 <span style="color:var(--color-text-muted);font-weight:400;">(instead of the NIF)</span>
+                        </div>
+                    </div>
+
+                    <p style="margin-bottom:0;">Tickets (till receipts) are accepted when no invoice is possible, but a proper invoice is always preferable &mdash; it lets us recover VAT and keeps our accounting clean.</p>
+                </div>
+            </section>
+
+            <!-- Meals & fuel -->
+            <section class="ex-section">
+                <h2>Meals &amp; fuel &mdash; important</h2>
+                <div class="ex-highlight">
+                    <p><strong>Association card only.</strong> Meals and fuel must be paid with an Association card to be compliant &mdash; personal payment won't be reimbursed for these categories.* Purchasing is managed through four cards, each covering a group of departments. Redirect to your department&rsquo;s coordinator if you need to incur these types of expenses.</p>
+                </div>
+                <div class="ex-card">
+                    <p style="margin-bottom:0;"><strong>*Note for 2026 &mdash; fuel specifically:</strong> if you don't have an invoice addressed to NCA, we'll accept either a till receipt for the amount, or if you're a freelancer in Spain, an invoice from you to NCA for the same amount. Send to <a href="mailto:purchases@nobodies.team">purchases@nobodies.team</a> with a brief explanation.</p>
+                </div>
+            </section>
+
+            <!-- Submitting -->
+            <section class="ex-section">
+                <h2>Submitting your claim</h2>
+                <div class="ex-card">
+                    <ol class="ex-steps">
+                        <li>Go to the <strong>Humans app</strong> &rarr; Expense Reports &rarr; New Report</li>
+                        <li>Select your <strong>budget category</strong></li>
+                        <li>Add expense lines with amounts and <strong>attach the invoice/receipt</strong> to each line</li>
+                        <li>Set your <strong>payment IBAN</strong> if you haven't already</li>
+                        <li>Submit for coordinator / Finance Admin review</li>
+                        <li>On approval you receive a <strong>SEPA bank transfer</strong></li>
+                    </ol>
+                </div>
+                <div class="ex-highlight">
+                    <p>You can group multiple purchases in one report &mdash; but each invoice needs its own line. Keep it to <strong>one department per report</strong> &mdash; don't mix categories (e.g. Cantina and Radios in the same report). Made expenses for multiple categories? Fill one report per category.</p>
+                </div>
+                <div class="ex-highlight">
+                    <p><strong>No invoice, no reimbursement.</strong> Missing or incorrect invoices mean we can't process the reimbursement. When in doubt, ask before you buy.</p>
+                </div>
+            </section>
+
+            <p class="ex-contact">Questions? &rarr; <a href="mailto:purchases@nobodies.team">purchases@nobodies.team</a></p>
+
         </div>
-      </div>
+    </main>
 
-      <div class="invoice-block">
-        <div class="label">EU / UK / International purchases</div>
-        <div class="detail">
-          Same details, but use<br>
-          VAT Number: ESG26726299 <span style="color:var(--ink-light);">(instead of the NIF)</span>
-        </div>
-      </div>
-
-      <p>Tickets (till receipts) are accepted when no invoice is possible, but a proper invoice is always
-      preferable &mdash; it lets us recover VAT and keeps our accounting clean.</p>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title">Meals &amp; fuel</h2>
-    <div class="callout callout-alert">
-      <strong>Association card only.</strong> Meals and fuel must be paid with an Association card to be compliant &mdash;
-      personal payment won't be reimbursed for these categories.* Purchasing is managed through four cards,
-      each covering a group of departments. Redirect to your department&rsquo;s coordinator if you need to incur
-      these types of expenses.
-    </div>
-    <div class="callout callout-info">
-      <strong>*Note for 2026 &mdash; fuel specifically:</strong> if you don't have an invoice addressed to NCA,
-      we'll accept either a till receipt for the amount, or if you're a freelancer in Spain, an invoice from you
-      to NCA for the same amount. Send to <a href="mailto:purchases@nobodies.team" style="color:inherit;font-weight:600;">purchases@nobodies.team</a>
-      with a brief explanation.
-    </div>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title">Submitting your claim</h2>
-    <div class="card">
-      <ol class="steps">
-        <li>Go to the <strong>Humans app</strong> &rarr; Expense Reports &rarr; New Report</li>
-        <li>Select your <strong>budget category</strong></li>
-        <li>Add expense lines with amounts and <strong>attach the invoice/receipt</strong> to each line</li>
-        <li>Set your <strong>payment IBAN</strong> if you haven't already</li>
-        <li>Submit for coordinator / Finance Admin review</li>
-        <li>On approval you receive a <strong>SEPA bank transfer</strong></li>
-      </ol>
-    </div>
-    <div class="callout callout-info">
-      You can group multiple purchases in one report &mdash; but each invoice needs its own line.
-      Keep it to <strong>one department per report</strong> &mdash; don't mix categories (e.g. Cantina and Radios in the same report).
-      Made expenses for multiple categories? Fill one report per category.
-    </div>
-  </div>
-
-  <div class="callout callout-alert" style="margin-top: 8px;">
-    <strong>No invoice, no reimbursement.</strong> Missing or incorrect invoices mean we can't process the
-    reimbursement. When in doubt, ask before you buy.
-  </div>
-
-  <div class="footer-note">
-    Questions? &rarr; <a href="mailto:purchases@nobodies.team">purchases@nobodies.team</a>
-  </div>
-
-</main>
-
+    <div id="shared-footer"></div>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
