@@ -115,19 +115,41 @@
 
         /* Steps — same style as travel reimbursement page */
         .ex-steps {
-            list-style: decimal;
-            padding-left: 1.4rem;
-            margin: 0;
+            counter-reset: ex-step;
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0 0.5rem;
         }
 
         .ex-steps li {
-            margin-bottom: 0.6rem;
+            counter-increment: ex-step;
+            position: relative;
+            display: block;
+            padding-left: 3.25rem;
+            margin-bottom: 1.25rem;
             color: var(--color-text-muted);
             line-height: 1.6;
         }
 
         .ex-steps li:last-child {
             margin-bottom: 0;
+        }
+
+        .ex-steps li::before {
+            content: counter(ex-step);
+            position: absolute;
+            left: 0;
+            top: 0.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background: var(--color-accent);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.85rem;
+            border-radius: 50%;
         }
 
         .ex-steps li strong {
