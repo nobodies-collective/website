@@ -219,9 +219,9 @@
 
         .tr-steps li {
             counter-increment: tr-step;
-            display: flex;
-            gap: 1.25rem;
-            align-items: flex-start;
+            position: relative;
+            display: block;
+            padding-left: 3.25rem;
             margin-bottom: 1.25rem;
             color: var(--color-text-muted);
             line-height: 1.6;
@@ -229,18 +229,19 @@
 
         .tr-steps li::before {
             content: counter(tr-step);
+            position: absolute;
+            left: 0;
+            top: 0.1rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-width: 2rem;
+            width: 2rem;
             height: 2rem;
             background: var(--color-accent);
             color: #fff;
             font-weight: 700;
             font-size: 0.85rem;
             border-radius: 50%;
-            flex-shrink: 0;
-            margin-top: 0.1rem;
         }
 
         .tr-steps li strong {
