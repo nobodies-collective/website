@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+
+    <title>Community Meeting - August 20, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .resource-links { background: var(--color-bg-secondary); padding: 1.25rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .resource-links h3 { margin: 0 0 0.75rem 0; font-size: 1rem; }
+        .resource-links ul { list-style: none; padding: 0; margin: 0; }
+        .resource-links li { margin-bottom: 0.5rem; }
+        .resource-links a { color: var(--color-accent); font-weight: 500; }
+        .resource-links a:hover { text-decoration: underline; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 2rem; border-radius: 8px; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px; }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>Community Meeting</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Thursday 20 August 2026, 20:00 CEST</span>
+                    </div>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>With Daniel T (MC), Pablo V, Anna T, Ellen / Dr Plantes, João T, Condor, Vishal, Benoit, Azzurro, Imanol, Tancredi T, Olivier (Ankhor), Ren&eacute; B, and community members &mdash; around 33 people on the call</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Full Records</h3>
+                        <ul>
+                            <li><a href="2026-08-20-community-transcript.html">Full transcript (English only)</a></li>
+                            <li><a href="2026-08-20-community-chat.html">Chat log</a></li>
+                            <li><a href="https://youtu.be/BQitJIpfZ0w">Video recording (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/BQitJIpfZ0w" title="Community Meeting - August 20, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>A lighter-agenda call that turned into a substantive consultation: a board-elections update, the proposed working-groups framework, the El Sitio (new site) working group going public, the coordinators&rsquo; debrief cycle, and an extended community discussion on how the 2027 event-dates decision should be made.</p>
+
+                        <h2>1. Board Elections Update (Pablo V)</h2>
+                        <ul>
+                            <li>Following questions on Discord about how the board works and how people can join: the board currently has <strong>eight members</strong>; the statutes allow up to <strong>13</strong>.</li>
+                            <li>Per legal advice, <strong>new members can only be added at an election, and the next scheduled election is January 2028</strong> (two years after the first). There is currently no mechanism for an earlier election &mdash; unless a board member steps down or is removed by the General Assembly, which would trigger an extraordinary election. <strong>Anyone can run for the board.</strong></li>
+                            <li>Pablo has asked the lawyers whether a statute amendment could allow elections to be called earlier; answer pending &mdash; update at a future call.</li>
+                            <li>A related issue: <strong>quorum</strong>. Decisions need half-plus-one of board members, and the statutes have no escape mechanism if quorum repeatedly can&rsquo;t be reached. Pablo intends to propose a statute amendment addressing quorum blocks (potentially bundled with easier election-calling).</li>
+                            <li>Beyond elections, Pablo is exploring other ways for people to get involved with board work (e.g. observer roles) &mdash; ideas to be brought to a future board meeting and community call.</li>
+                        </ul>
+
+                        <h2>2. Working Groups Framework (Daniel T)</h2>
+                        <ul>
+                            <li>The board discussed working groups at length on Monday (see the board minutes on this transparency page) and reached a direction, not yet voted on: a <strong>registry model</strong>. Anyone who wants to organise people around a topic can register a working group with the secretary, and gets a Discord channel plus a page on the website for minutes and resources.</li>
+                            <li>Registration is <strong>not</strong> a board endorsement &mdash; it doesn&rsquo;t mean the board has decided you&rsquo;re the right people for the topic; it means you&rsquo;ve decided to work on it and are doing so visibly.</li>
+                            <li>Working groups can bring their output anywhere appropriate: community calls, a department, a board proposal, or a General Assembly proposal.</li>
+                            <li>Guidance rather than gatekeeping: engage the people you&rsquo;re impacting, be transparent, be inclusive, make it easy for others to find and join the group.</li>
+                            <li>The board hopes to <strong>pass the enabling resolution at Monday&rsquo;s board meeting</strong>, then set up channels and pages for the first working groups. Questions and opinions to the governance channel on Discord.</li>
+                        </ul>
+
+                        <h2>3. El Sitio &mdash; New Site Working Group (Pablo V)</h2>
+                        <p>The group that has been working on the new site for months is becoming the first worked example of the framework &mdash; &ldquo;a working group is a bit like a barrio: get together with a few people and you can make one.&rdquo;</p>
+                        <ul>
+                            <li><strong>Website:</strong> <a href="https://elsitio.kimi.page/">elsitio.kimi.page</a> &mdash; the up-to-date presentation, project status, and FAQ (commercially sensitive negotiation details excluded).</li>
+                            <li><strong>Status: feasibility stage.</strong> One parcel of land is secured; negotiations continue on the other. Candidate event dates have been submitted to the authorities, who are away until September &mdash; so an event there in September is almost certainly not happening; <strong>October is a maybe</strong>.</li>
+                            <li>The plan: lock in terms to establish clear costs; if possible run a <strong>trial event (roughly 100&ndash;500 people)</strong>; then bring a proposal to a <strong>binding community-wide vote</strong> before NCA commits to purchasing land &mdash; that gate is where a working group&rsquo;s output becomes an organisational decision.</li>
+                            <li>Upcoming projects: land agreements, finding a co-buyer, due diligence, species protection. Offers of help welcome.</li>
+                            <li><strong>Open calls every other Wednesday at 18:00 (Spain), starting Wednesday 26 August</strong> &mdash; calendar link and Zoom on the website and Discord.</li>
+                            <li>Pablo noted he acts in this group as a coordinator/point of contact, not as a board member. The framework will likely formalise one or two coordinators per working group &mdash; points of contact, not leads.</li>
+                        </ul>
+
+                        <h2>4. Coordinators&rsquo; Debrief Cycle (Daniel T)</h2>
+                        <ul>
+                            <li>The coordinators met this week for the <strong>setup debrief</strong>; next week covers the <strong>event phase</strong>, then <strong>strike</strong>.</li>
+                            <li>Minutes are on the transparency page. Coordinators can attend; anyone else interested should contact Daniela.</li>
+                        </ul>
+
+                        <h2>5. 2027 Event Dates &mdash; Survey Status &amp; Decision-Process Consultation</h2>
+                        <p><strong>Survey status (Daniel T):</strong> the community survey (Google Form + Humans app, launched together to avoid poll fatigue) is in final preparation &mdash; target is to send it out <strong>by the end of the weekend</strong>. It will cover date preferences, dates people can&rsquo;t attend, and build/strike availability, with a pre-selected set of plausible dates to keep the form manageable. The survey is input, not the binding vote.</p>
+                        <p><strong>Why dates are moving (recap):</strong> under the decreto passed in March, all permits are <strong>automatically suspended by law</strong> during Roja Plus fire alerts &mdash; and by that law, <strong>this year&rsquo;s event should have been cancelled three times</strong>. It went ahead only because of intense discussions with the government of Arag&oacute;n, with the Comarca and the mayor on the event&rsquo;s side &mdash; leniency that cannot be counted on next year, after the authorities strongly implied the event should move. This wasn&rsquo;t theoretical: during build, a fire was heading towards the site and ash was falling on it; it happened not to come close enough to force an evacuation. The board believes that staying in the same window carries a more-than-50% chance of cancellation next year. Alert criteria haven&rsquo;t changed year-on-year; the alerts themselves have spread and started earlier &mdash; no green periods at all this year. Full data (fire alerts, weather, bird-nesting schedules) on the <a href="../event-dates-2027.html">2027 Dates page</a>.</p>
+                        <p><strong>Permits (Anna T&rsquo;s point):</strong> community preference is one input; permits are another. <a href="../inaga-monegros-bird-nesting.html">INAGA</a> (the environmental agency) assesses factors like bird-nesting seasons and typically takes one to three months to respond; clearance requests covering the candidate range have been submitted. Voting before the INAGA report &mdash; with ranked preferences &mdash; means that if the top date is ruled out, the next-ranked permitted date applies without a new process. Early clarity matters: participants, suppliers, and other burns all plan around these dates.</p>
+                        <p><strong>The open question Daniel put to the call:</strong> how should the final decision be made? (1) The board decides, with surveys as advisory input; (2) the board pre-selects viable dates from the survey data and the <strong>asociados make a binding vote</strong> among them; (3) the asociados vote on the full range of sensible dates, binding on the board.</p>
+                        <p>Community input, in summary:</p>
+                        <ul>
+                            <li><strong>João T:</strong> the discussion before the vote matters as much as the vote. The go/no-go process suffered from concerns surfacing last-minute with no time to discuss them. Proposed dedicated space &mdash; a call and/or Discord threads &mdash; where people can make the case for specific dates before voting; supportive of a community decision provided turnout is meaningful and voters are informed.</li>
+                            <li><strong>Condor:</strong> fine either way on board vs. members, as long as there&rsquo;s an opportunity to discuss beforehand; suggested a <strong>board recommendation</strong> accompanying any member vote (as at many AGMs); keep the number of options small &mdash; the name vote showed what too many choices does. The two-level nature of the vote (big-picture viability vs. personal convenience) is probably why some expect the board to filter options.</li>
+                            <li><strong>Vishal:</strong> add free-text fields to the survey &mdash; preferred date and why, unwanted date and why &mdash; then summarise the reasons (AI can help) so the eventual voters see the full range of arguments without a hundred people repeating them live.</li>
+                            <li><strong>Benoit:</strong> the <strong>asociados should decide</strong> &mdash; deferring to the board gives up ownership and invites &ldquo;the board did this&rdquo; resentment later; barrio leads especially need to own the outcome. Also suggested voting on ranges (early/late month) rather than exact dates, and echoed that capturing reasons matters &mdash; many are structural (fire risk, event character, school holidays) rather than personal.</li>
+                            <li><strong>Azzurro:</strong> most topics suit a member vote, but some are better decided by the board where it has materially more insight or carries the workload consequences.</li>
+                            <li><strong>Imanol:</strong> make it <strong>data-driven</strong> &mdash; the survey should establish availability (build, event, strike) per candidate window, and the choice should sit where attendance capacity and weather/fire data best overlap.</li>
+                            <li><strong>Tancredi T:</strong> whoever decides, a <strong>working group should own the preparation</strong> &mdash; compiling the information package, gathering opinions, chasing the discussion &mdash; so the informed-vote workload doesn&rsquo;t keep falling on the same people.</li>
+                            <li><strong>Ellen:</strong> asked whether &ldquo;no change&rdquo; is an option &mdash; answer: it will appear in the survey; whether it appears in a final vote depends on the process chosen, and the board would strongly advise against it on fire-risk grounds. (A null result is always possible under ranked voting: if no option clears 50% at any rank, all options are rejected.) Also asked about the asociado application cutoff &mdash; there is none beyond being approved before the vote; approval takes a few days, so apply early.</li>
+                            <li><strong>Olivier (Ankhor):</strong> asked why the board would pre-select dates at all. Daniel&rsquo;s answer: partly voter consideration (nobody wants another 26-option ranked ballot), partly a fear some hold that an unfiltered vote picks a non-viable date &mdash; a fear Daniel said he doesn&rsquo;t share, citing the Swiss model: frequent votes work when voters get good information, and with the data pages plus AI-assisted summaries that standard is reachable.</li>
+                        </ul>
+                        <p><strong>In the chat, meanwhile:</strong> Pablo V (before signing off) proposed a concrete sequence &mdash; take the current report, send the survey as information-gathering, then prepare an Assembly voting-ready version with board recommendations for the top 2&ndash;3 choices, with deep context (&ldquo;As a board member I want the GA to settle this vote&rdquo;). Ren&eacute; B strongly felt it should be put to a vote &mdash; &ldquo;that is why we are an association: to move away from top-down decision-making and giving the community a voice&rdquo; &mdash; the message Daniel read aloud on the call. Inge W would love the community to vote, with pros/cons per date. Humberto noted several festivals were cancelled in August for heat &mdash; moving is clearly in the community&rsquo;s interest. Azzurro added that free campers who want to get involved will get involved &mdash; the job is to create the possibility. Condor cautioned that referendums on complex issues fail when voters lack information &mdash; fine with asociados deciding, not a whole-community binding vote. And Ellen K offered a barrio-support push to make sure every barrio lead who wants to be an asociado has applied &mdash; taken up on the spot (&ldquo;Yes please do!&rdquo;).</p>
+                        <p><strong>Daniel&rsquo;s own position</strong> (stated as personal, not board opinion): the community should be in charge of this event, and the way a community learns to use its power is by using it &mdash; but he&rsquo;d heard feedback that he may be moving too fast, which is why he asked. His reading of the call: <strong>the middle option &mdash; board pre-selects viable dates, asociados vote among them &mdash; is emerging as the likely shape</strong>, possibly with board support levels shown per date.</p>
+                        <p><strong>Membership reminder:</strong> people who were leads at related events in the region qualify to apply as asociados even if they weren&rsquo;t at this year&rsquo;s event &mdash; a misconception surfaced just today. If that&rsquo;s you or someone you know, apply.</p>
+
+                        <h2>6. Community Call Logistics (João T / Daniel T)</h2>
+                        <ul>
+                            <li>João T only learned of this call as it started. Request acknowledged: calls need advance scheduling, published agendas, and cancellation of the recurring slot when a call isn&rsquo;t happening.</li>
+                            <li>Daniel openly asked for a volunteer to take ownership of community-call logistics &mdash; coordination continues in the community-calls group on Discord.</li>
+                        </ul>
+
+                        <h2>Decisions</h2>
+                        <ul>
+                            <li><strong>No decisions were taken on this call.</strong> The working-groups resolution is expected at the board meeting on Monday; the event-dates decision process remains open, informed by this consultation.</li>
+                        </ul>
+
+                        <h2>Action Items</h2>
+                        <table class="action-table">
+                            <tr><th>Action</th><th>Owner</th></tr>
+                            <tr><td>Send out the event-dates survey (Google Form + Humans, simultaneously) &mdash; target end of the weekend</td><td>Daniel T, with C&eacute;line S, Peter D, Olivier</td></tr>
+                            <tr><td>Add free-text &ldquo;why&rdquo; fields to the survey and plan for summarising responses</td><td>Survey team</td></tr>
+                            <tr><td>Pass the working-groups resolution; set up channels/pages for first working groups</td><td>Board (Monday)</td></tr>
+                            <tr><td>Bring lawyer&rsquo;s answer on early-elections amendment to a future call</td><td>Pablo V</td></tr>
+                            <tr><td>Draft statute amendment addressing quorum blocks</td><td>Pablo V</td></tr>
+                            <tr><td>Announce El Sitio open calls (every other Wednesday, 18:00 Spain, from 26 Aug)</td><td>Pablo V</td></tr>
+                            <tr><td>Organise a dedicated discussion space/call for date advocacy before the vote</td><td>Daniel T / future event-dates working group</td></tr>
+                            <tr><td>Improve community-call scheduling and agenda publication</td><td>Community-calls group (volunteer wanted)</td></tr>
+                            <tr><td>Barrio-support push: reach out to barrio leads so everyone who wants to be an asociado has applied</td><td>Ellen K / barrio support</td></tr>
+                            <tr><td>Process asociado applications promptly ahead of the vote</td><td>Board</td></tr>
+                        </table>
+
+                        <p><em>Next call: check the website and Discord &mdash; advance scheduling improvements in progress. The event-dates survey should reach inboxes around the end of the weekend: check your email and share it.</em></p>
+                        <p><em>Minutes prepared from the audio recording and full transcript.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
+                    <div class="lang-note">En caso de discrepancia entre esta versi&oacute;n y la versi&oacute;n en espa&ntilde;ol, prevalecer&aacute; la versi&oacute;n en espa&ntilde;ol.</div>
+
+                    <div class="attendees">
+                        <strong>Con Daniel T (MC), Pablo V, Anna T, Ellen / Dr Plantes, João T, Condor, Vishal, Benoit, Azzurro, Imanol, Tancredi T, Olivier (Ankhor), Ren&eacute; B y miembros de la comunidad &mdash; unas 33 personas en la llamada</strong>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Una llamada con agenda ligera que se convirti&oacute; en una consulta sustantiva: actualizaci&oacute;n sobre elecciones a la junta, el marco propuesto de grupos de trabajo, el grupo de trabajo El Sitio (nuevo terreno) haci&eacute;ndose p&uacute;blico, el ciclo de balances de coordinadores, y un debate comunitario extenso sobre c&oacute;mo debe tomarse la decisi&oacute;n de las fechas del evento 2027.</p>
+
+                        <h2>1. Actualizaci&oacute;n sobre elecciones a la junta (Pablo V)</h2>
+                        <ul>
+                            <li>A ra&iacute;z de preguntas en Discord sobre c&oacute;mo funciona la junta y c&oacute;mo unirse: la junta tiene actualmente <strong>ocho miembros</strong>; los estatutos permiten hasta <strong>13</strong>.</li>
+                            <li>Seg&uacute;n el asesoramiento legal, <strong>solo se pueden a&ntilde;adir miembros en una elecci&oacute;n, y la pr&oacute;xima elecci&oacute;n programada es en enero de 2028</strong> (dos a&ntilde;os despu&eacute;s de la primera). Actualmente no hay mecanismo para una elecci&oacute;n anticipada &mdash; salvo que un miembro dimita o sea destituido por la Asamblea General, lo que desencadenar&iacute;a una elecci&oacute;n extraordinaria. <strong>Cualquiera puede presentarse.</strong></li>
+                            <li>Pablo ha preguntado a los abogados si una modificaci&oacute;n de estatutos permitir&iacute;a convocar elecciones antes; respuesta pendiente.</li>
+                            <li>Un tema relacionado: el <strong>qu&oacute;rum</strong>. Las decisiones requieren la mitad m&aacute;s uno de los miembros, y los estatutos no prev&eacute;n salida si el qu&oacute;rum no se alcanza repetidamente. Pablo propone preparar una modificaci&oacute;n de estatutos para los bloqueos de qu&oacute;rum.</li>
+                            <li>M&aacute;s all&aacute; de las elecciones, Pablo explora otras v&iacute;as de participaci&oacute;n en el trabajo de la junta (p. ej. roles de observador) &mdash; ideas para pr&oacute;ximas reuniones.</li>
+                        </ul>
+
+                        <h2>2. Marco de grupos de trabajo (Daniel T)</h2>
+                        <ul>
+                            <li>La junta debati&oacute; los grupos de trabajo el lunes y lleg&oacute; a una direcci&oacute;n, a&uacute;n no votada: un <strong>modelo de registro</strong>. Cualquiera que quiera organizar a gente en torno a un tema puede registrar un grupo de trabajo ante la secretar&iacute;a, y recibe un canal de Discord y una p&aacute;gina en la web para actas y recursos.</li>
+                            <li>El registro <strong>no</strong> es un respaldo de la junta &mdash; no significa que la junta haya decidido que sois las personas adecuadas; significa que hab&eacute;is decidido trabajar en ello y lo hac&eacute;is de forma visible.</li>
+                            <li>Los grupos de trabajo pueden llevar sus resultados adonde corresponda: llamadas comunitarias, un departamento, una propuesta a la junta o a la Asamblea General.</li>
+                            <li>Orientaci&oacute;n en vez de control: implicad a las personas afectadas, sed transparentes e inclusivos, facilitad que otros encuentren el grupo y se unan.</li>
+                            <li>La junta espera <strong>aprobar la resoluci&oacute;n habilitante en la reuni&oacute;n del lunes</strong>. Preguntas y opiniones en el canal de gobernanza de Discord.</li>
+                        </ul>
+
+                        <h2>3. El Sitio &mdash; Grupo de trabajo del nuevo terreno (Pablo V)</h2>
+                        <p>El grupo que lleva meses trabajando en el nuevo terreno se convierte en el primer ejemplo pr&aacute;ctico del marco &mdash; &ldquo;un grupo de trabajo es un poco como un barrio: si te juntas con unas cuantas personas, puedes crear uno&rdquo;.</p>
+                        <ul>
+                            <li><strong>Web:</strong> <a href="https://elsitio.kimi.page/">elsitio.kimi.page</a> &mdash; presentaci&oacute;n actualizada, estado del proyecto y FAQ (sin los detalles comercialmente sensibles de la negociaci&oacute;n).</li>
+                            <li><strong>Estado: fase de viabilidad.</strong> Una parcela est&aacute; asegurada; contin&uacute;an las negociaciones sobre la otra. Se han presentado fechas candidatas a las autoridades, que est&aacute;n de vacaciones hasta septiembre &mdash; un evento all&iacute; en septiembre casi seguro que no; <strong>octubre, quiz&aacute;</strong>.</li>
+                            <li>El plan: cerrar condiciones para tener costes claros; si es posible, organizar un <strong>evento de prueba (aprox. 100&ndash;500 personas)</strong>; y despu&eacute;s llevar una propuesta a una <strong>votaci&oacute;n comunitaria vinculante</strong> antes de que NCA se comprometa a comprar terreno.</li>
+                            <li>Pr&oacute;ximos proyectos: acuerdos de terreno, b&uacute;squeda de co-comprador, due diligence, protecci&oacute;n de especies. Se agradecen ofertas de ayuda.</li>
+                            <li><strong>Llamadas abiertas cada dos mi&eacute;rcoles a las 18:00 (Espa&ntilde;a), desde el mi&eacute;rcoles 26 de agosto</strong> &mdash; calendario y Zoom en la web y Discord.</li>
+                            <li>Pablo act&uacute;a en este grupo como coordinador/punto de contacto, no como miembro de la junta. El marco probablemente formalizar&aacute; uno o dos coordinadores por grupo &mdash; puntos de contacto, no jefes.</li>
+                        </ul>
+
+                        <h2>4. Ciclo de balances de coordinadores (Daniel T)</h2>
+                        <ul>
+                            <li>Los coordinadores se reunieron esta semana para el <strong>balance del montaje</strong>; la pr&oacute;xima semana toca la <strong>fase del evento</strong>, y despu&eacute;s el <strong>desmontaje</strong>.</li>
+                            <li>Las actas est&aacute;n en la p&aacute;gina de transparencia. Los coordinadores pueden asistir; cualquier otra persona interesada, que contacte con Daniela.</li>
+                        </ul>
+
+                        <h2>5. Fechas del evento 2027 &mdash; Estado de la encuesta y consulta sobre el proceso de decisi&oacute;n</h2>
+                        <p><strong>Estado de la encuesta (Daniel T):</strong> la encuesta comunitaria (Google Form + app Humans, lanzadas a la vez para evitar fatiga de encuestas) est&aacute; en preparaci&oacute;n final &mdash; objetivo: enviarla <strong>antes del final del fin de semana</strong>. Cubrir&aacute; preferencias de fechas, fechas imposibles y disponibilidad para montaje/desmontaje, con un conjunto preseleccionado de fechas plausibles. La encuesta es informaci&oacute;n de entrada, no la votaci&oacute;n vinculante.</p>
+                        <p><strong>Por qu&eacute; se mueven las fechas (resumen):</strong> seg&uacute;n el decreto aprobado en marzo, todos los permisos quedan <strong>autom&aacute;ticamente suspendidos por ley</strong> durante las alertas Roja Plus &mdash; y seg&uacute;n esa ley, <strong>el evento de este a&ntilde;o deber&iacute;a haberse cancelado tres veces</strong>. Sali&oacute; adelante solo gracias a intensas conversaciones con el Gobierno de Arag&oacute;n, con la Comarca y el alcalde del lado del evento &mdash; una tolerancia con la que no se puede contar el a&ntilde;o que viene, despu&eacute;s de que las autoridades sugirieran con claridad que el evento deber&iacute;a moverse. No fue algo te&oacute;rico: durante el montaje, un incendio se dirig&iacute;a hacia el terreno y ca&iacute;a ceniza sobre &eacute;l; simplemente no lleg&oacute; lo bastante cerca como para forzar una evacuaci&oacute;n. La junta cree que quedarse en la misma ventana conlleva una probabilidad de cancelaci&oacute;n superior al 50% el pr&oacute;ximo a&ntilde;o. Los criterios de alerta no han cambiado de un a&ntilde;o a otro; las alertas se han extendido y empiezan antes &mdash; este a&ntilde;o no ha habido periodos verdes. Todos los datos en la <a href="../event-dates-2027.html">p&aacute;gina de Fechas 2027</a>.</p>
+                        <p><strong>Permisos (apunte de Anna T):</strong> la preferencia comunitaria es un factor; los permisos, otro. <a href="../inaga-monegros-bird-nesting.html">INAGA</a> (la agencia ambiental) eval&uacute;a factores como las &eacute;pocas de nidificaci&oacute;n y suele tardar de uno a tres meses; ya se han presentado solicitudes que cubren el rango de fechas candidatas. Votar antes del informe de INAGA &mdash; con preferencias ordenadas &mdash; significa que si la primera fecha queda descartada, se aplica la siguiente fecha permitida sin un proceso nuevo.</p>
+                        <p><strong>La pregunta abierta que Daniel plante&oacute;:</strong> &iquest;c&oacute;mo debe tomarse la decisi&oacute;n final? (1) Decide la junta, con las encuestas como consulta; (2) la junta preselecciona fechas viables y los <strong>asociados votan de forma vinculante</strong> entre ellas; (3) los asociados votan sobre el rango completo de fechas razonables, con car&aacute;cter vinculante.</p>
+                        <p>Aportaciones de la comunidad, en resumen:</p>
+                        <ul>
+                            <li><strong>João T:</strong> el debate previo importa tanto como el voto. El proceso del go/no-go sufri&oacute; porque las objeciones aparecieron en el &uacute;ltimo momento sin tiempo para discutirlas. Propone espacios dedicados &mdash; una llamada y/o hilos de Discord &mdash; donde defender fechas concretas antes de votar.</li>
+                            <li><strong>Condor:</strong> le vale cualquiera de las dos opciones, siempre que haya oportunidad de debatir antes; sugiere una <strong>recomendaci&oacute;n de la junta</strong> acompa&ntilde;ando el voto (como en muchas asambleas); y pocas opciones &mdash; la votaci&oacute;n del nombre ense&ntilde;&oacute; lo que pasa con demasiadas.</li>
+                            <li><strong>Vishal:</strong> a&ntilde;adir campos de texto libre a la encuesta &mdash; fecha preferida y por qu&eacute;, fecha no deseada y por qu&eacute; &mdash; y resumir los motivos (la IA puede ayudar) para que los votantes vean todos los argumentos.</li>
+                            <li><strong>Benoit:</strong> deben decidir <strong>los asociados</strong> &mdash; delegar en la junta es renunciar a la propiedad de la decisi&oacute;n e invita al resentimiento posterior; los leads de barrio en particular necesitan sentirla suya. Tambi&eacute;n sugiri&oacute; votar por rangos (principios/finales de mes) y recalc&oacute; que capturar los motivos importa.</li>
+                            <li><strong>Azzurro:</strong> la mayor&iacute;a de temas encajan con voto de los miembros, pero algunos los decide mejor la junta cuando tiene mucho m&aacute;s contexto o carga con las consecuencias de trabajo.</li>
+                            <li><strong>Imanol:</strong> que sea <strong>data-driven</strong> &mdash; la encuesta debe establecer disponibilidad (montaje, evento, desmontaje) por ventana candidata, y la elecci&oacute;n debe estar donde mejor se cruzan asistencia y datos de clima/incendios.</li>
+                            <li><strong>Tancredi T:</strong> decida quien decida, <strong>un grupo de trabajo debe encargarse de la preparaci&oacute;n</strong> &mdash; compilar la informaci&oacute;n, recoger opiniones, dinamizar el debate &mdash; para que ese trabajo no recaiga siempre en las mismas personas.</li>
+                            <li><strong>Ellen:</strong> pregunt&oacute; si &ldquo;sin cambio&rdquo; es una opci&oacute;n &mdash; respuesta: estar&aacute; en la encuesta; que est&eacute; en la votaci&oacute;n final depende del proceso elegido, y la junta desaconsejar&iacute;a firmemente esa opci&oacute;n por el riesgo de incendios. Tambi&eacute;n pregunt&oacute; por la fecha l&iacute;mite para hacerse asociado: no hay m&aacute;s l&iacute;mite que estar aprobado antes del voto; la aprobaci&oacute;n tarda unos d&iacute;as, as&iacute; que solicitadlo pronto.</li>
+                            <li><strong>Olivier (Ankhor):</strong> pregunt&oacute; por qu&eacute; preseleccionar&iacute;a fechas la junta. Respuesta de Daniel: en parte por consideraci&oacute;n al votante (nadie quiere otra papeleta de 26 opciones ordenadas), en parte por un miedo que algunos tienen a que un voto sin filtrar elija una fecha inviable &mdash; miedo que Daniel dijo no compartir, citando el modelo suizo: las votaciones frecuentes funcionan cuando los votantes reciben buena informaci&oacute;n.</li>
+                        </ul>
+                        <p><strong>Mientras tanto, en el chat:</strong> Pablo V (antes de desconectarse) propuso una secuencia concreta &mdash; tomar el informe actual, enviar la encuesta como recogida de informaci&oacute;n, y preparar despu&eacute;s una versi&oacute;n lista para la votaci&oacute;n de la Asamblea con recomendaciones de la junta para las 2&ndash;3 mejores opciones, con contexto profundo (&laquo;Como miembro de la junta quiero que la AG zanje este voto&raquo;). Ren&eacute; B defendi&oacute; con fuerza que se someta a votaci&oacute;n &mdash; &laquo;para eso somos una asociaci&oacute;n: para alejarnos de las decisiones desde arriba y dar voz a la comunidad&raquo; &mdash; el mensaje que Daniel ley&oacute; en voz alta. Inge W: encantada de que vote la comunidad, con pros y contras por fecha. Humberto: varios festivales se cancelaron en agosto por el calor &mdash; mudarse es claramente lo que conviene. Azzurro: los free campers que quieran implicarse se implicar&aacute;n &mdash; el trabajo es crear la posibilidad. Condor advirti&oacute; que los refer&eacute;ndums sobre temas complejos fallan cuando falta informaci&oacute;n &mdash; de acuerdo con que decidan los asociados, no un voto vinculante de toda la comunidad. Y Ellen K ofreci&oacute; una campa&ntilde;a desde barrio support para asegurar que todo lead de barrio que quiera ser asociado lo haya solicitado &mdash; aceptada al momento (&laquo;&iexcl;S&iacute;, por favor!&raquo;).</p>
+                        <p><strong>La posici&oacute;n personal de Daniel</strong> (personal, no de la junta): la comunidad debe estar al mando de este evento, y la forma de aprender a usar el poder es us&aacute;ndolo &mdash; pero hab&iacute;a o&iacute;do que quiz&aacute; iba demasiado deprisa, y por eso pregunt&oacute;. Su lectura de la llamada: <strong>la opci&oacute;n intermedia &mdash; la junta preselecciona fechas viables y los asociados votan entre ellas &mdash; emerge como la forma probable</strong>, posiblemente mostrando el apoyo de la junta por fecha.</p>
+                        <p><strong>Recordatorio de membres&iacute;a:</strong> quienes fueron leads en eventos relacionados de la zona pueden solicitar ser asociados aunque no estuvieran en el evento de este a&ntilde;o &mdash; un malentendido que surgi&oacute; hoy mismo. Si es tu caso o el de alguien que conoces, solicitadlo.</p>
+
+                        <h2>6. Log&iacute;stica de las llamadas comunitarias (João T / Daniel T)</h2>
+                        <ul>
+                            <li>João T se enter&oacute; de esta llamada cuando empezaba. Petici&oacute;n reconocida: las llamadas necesitan programaci&oacute;n anticipada, agendas publicadas y cancelaci&oacute;n del evento recurrente cuando no haya llamada.</li>
+                            <li>Daniel pidi&oacute; abiertamente una persona voluntaria para encargarse de la log&iacute;stica de las llamadas &mdash; la coordinaci&oacute;n sigue en el grupo de community calls en Discord.</li>
+                        </ul>
+
+                        <h2>Decisiones</h2>
+                        <ul>
+                            <li><strong>No se tomaron decisiones en esta llamada.</strong> La resoluci&oacute;n de grupos de trabajo se espera en la reuni&oacute;n de la junta del lunes; el proceso de decisi&oacute;n de fechas sigue abierto, informado por esta consulta.</li>
+                        </ul>
+
+                        <h2>Acciones</h2>
+                        <table class="action-table">
+                            <tr><th>Acci&oacute;n</th><th>Responsable</th></tr>
+                            <tr><td>Enviar la encuesta de fechas (Google Form + Humans, simult&aacute;neamente) &mdash; objetivo: final del fin de semana</td><td>Daniel T, con C&eacute;line S, Peter D, Olivier</td></tr>
+                            <tr><td>A&ntilde;adir campos de texto libre (&ldquo;por qu&eacute;&rdquo;) a la encuesta y planificar el resumen de respuestas</td><td>Equipo de la encuesta</td></tr>
+                            <tr><td>Aprobar la resoluci&oacute;n de grupos de trabajo; crear canales/p&aacute;ginas</td><td>Junta (lunes)</td></tr>
+                            <tr><td>Traer la respuesta legal sobre elecciones anticipadas</td><td>Pablo V</td></tr>
+                            <tr><td>Preparar modificaci&oacute;n de estatutos sobre bloqueos de qu&oacute;rum</td><td>Pablo V</td></tr>
+                            <tr><td>Anunciar las llamadas abiertas de El Sitio (mi&eacute;rcoles alternos, 18:00, desde el 26 de agosto)</td><td>Pablo V</td></tr>
+                            <tr><td>Organizar un espacio/llamada de debate sobre fechas antes del voto</td><td>Daniel T / futuro grupo de trabajo de fechas</td></tr>
+                            <tr><td>Mejorar la programaci&oacute;n y publicaci&oacute;n de agendas de las llamadas</td><td>Grupo de community calls (se busca voluntario/a)</td></tr>
+                            <tr><td>Campa&ntilde;a de barrio support: contactar a los leads de barrio para que todo el que quiera ser asociado lo solicite</td><td>Ellen K / barrio support</td></tr>
+                            <tr><td>Procesar solicitudes de asociados con agilidad antes del voto</td><td>Junta</td></tr>
+                        </table>
+
+                        <p><em>Pr&oacute;xima llamada: consulta la web y Discord. La encuesta de fechas deber&iacute;a llegar a los correos hacia el final del fin de semana: revisa tu email y comp&aacute;rtela.</em></p>
+                        <p><em>Acta elaborada a partir de la grabaci&oacute;n de audio y el transcript completo.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaut.</div>
+
+                    <div class="attendees">
+                        <strong>Avec Daniel T (MC), Pablo V, Anna T, Ellen / Dr Plantes, João T, Condor, Vishal, Benoit, Azzurro, Imanol, Tancredi T, Olivier (Ankhor), Ren&eacute; B et des membres de la communaut&eacute; &mdash; environ 33 personnes</strong>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Un appel &agrave; l&rsquo;ordre du jour l&eacute;ger devenu une v&eacute;ritable consultation : point sur les &eacute;lections du conseil, cadre propos&eacute; pour les groupes de travail, le groupe El Sitio (nouveau site) devenu public, le cycle de d&eacute;briefs des coordinateurs, et une longue discussion communautaire sur la mani&egrave;re de d&eacute;cider des dates de l&rsquo;&eacute;v&eacute;nement 2027.</p>
+
+                        <h2>1. Point sur les &eacute;lections du conseil (Pablo V)</h2>
+                        <ul>
+                            <li>Suite &agrave; des questions sur Discord : le conseil compte actuellement <strong>huit membres</strong> ; les statuts en autorisent jusqu&rsquo;&agrave; <strong>13</strong>.</li>
+                            <li>Selon les avocats, <strong>de nouveaux membres ne peuvent &ecirc;tre ajout&eacute;s que lors d&rsquo;une &eacute;lection, et la prochaine est pr&eacute;vue en janvier 2028</strong> (deux ans apr&egrave;s la premi&egrave;re). Il n&rsquo;existe pas de m&eacute;canisme d&rsquo;&eacute;lection anticip&eacute;e &mdash; sauf d&eacute;mission ou r&eacute;vocation d&rsquo;un membre par l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale, qui d&eacute;clencherait une &eacute;lection extraordinaire. <strong>Tout le monde peut se pr&eacute;senter.</strong></li>
+                            <li>Pablo a demand&eacute; aux avocats si un amendement des statuts permettrait de convoquer des &eacute;lections plus t&ocirc;t ; r&eacute;ponse en attente.</li>
+                            <li>Question li&eacute;e : le <strong>quorum</strong> (moiti&eacute; plus un). Les statuts ne pr&eacute;voient aucune issue si le quorum n&rsquo;est jamais atteint. Pablo compte proposer un amendement contre les blocages de quorum.</li>
+                            <li>Au-del&agrave; des &eacute;lections, Pablo explore d&rsquo;autres formes d&rsquo;implication (p. ex. r&ocirc;les d&rsquo;observateur) &mdash; id&eacute;es &agrave; venir.</li>
+                        </ul>
+
+                        <h2>2. Cadre des groupes de travail (Daniel T)</h2>
+                        <ul>
+                            <li>Le conseil en a longuement discut&eacute; lundi et a d&eacute;gag&eacute; une direction, pas encore vot&eacute;e : un <strong>mod&egrave;le de registre</strong>. Quiconque veut organiser des personnes autour d&rsquo;un sujet peut enregistrer un groupe de travail aupr&egrave;s du secr&eacute;tariat, et obtient un canal Discord et une page sur le site pour les comptes rendus et ressources.</li>
+                            <li>L&rsquo;enregistrement n&rsquo;est <strong>pas</strong> une validation du conseil &mdash; il signifie que vous avez d&eacute;cid&eacute; de travailler sur le sujet, et de le faire de mani&egrave;re visible.</li>
+                            <li>Les groupes peuvent porter leurs r&eacute;sultats o&ugrave; c&rsquo;est pertinent : appels communautaires, d&eacute;partement, proposition au conseil ou &agrave; l&rsquo;Assembl&eacute;e G&eacute;n&eacute;rale.</li>
+                            <li>Des principes plut&ocirc;t qu&rsquo;un contr&ocirc;le : impliquer les personnes concern&eacute;es, &ecirc;tre transparent et inclusif, faciliter l&rsquo;acc&egrave;s au groupe.</li>
+                            <li>Le conseil esp&egrave;re <strong>voter la r&eacute;solution lundi</strong>. Questions et avis sur le canal gouvernance de Discord.</li>
+                        </ul>
+
+                        <h2>3. El Sitio &mdash; Groupe de travail du nouveau site (Pablo V)</h2>
+                        <p>Le groupe qui travaille depuis des mois sur le nouveau site devient le premier exemple concret du cadre &mdash; &laquo; un groupe de travail, c&rsquo;est un peu comme un barrio : r&eacute;unissez quelques personnes et vous pouvez en cr&eacute;er un &raquo;.</p>
+                        <ul>
+                            <li><strong>Site web :</strong> <a href="https://elsitio.kimi.page/">elsitio.kimi.page</a> &mdash; pr&eacute;sentation &agrave; jour, &eacute;tat du projet et FAQ (hors d&eacute;tails commercialement sensibles).</li>
+                            <li><strong>&Eacute;tat : phase de faisabilit&eacute;.</strong> Une parcelle est s&eacute;curis&eacute;e ; les n&eacute;gociations continuent sur l&rsquo;autre. Des dates candidates ont &eacute;t&eacute; soumises aux autorit&eacute;s, absentes jusqu&rsquo;en septembre &mdash; un &eacute;v&eacute;nement l&agrave;-bas en septembre est quasi exclu ; <strong>octobre, peut-&ecirc;tre</strong>.</li>
+                            <li>Le plan : verrouiller les conditions pour clarifier les co&ucirc;ts ; si possible organiser un <strong>&eacute;v&eacute;nement test (environ 100&ndash;500 personnes)</strong> ; puis soumettre une proposition &agrave; un <strong>vote communautaire contraignant</strong> avant que NCA ne s&rsquo;engage &agrave; acheter le terrain.</li>
+                            <li>Projets &agrave; venir : accords fonciers, recherche d&rsquo;un co-acheteur, due diligence, protection des esp&egrave;ces. Aide bienvenue.</li>
+                            <li><strong>Appels ouverts un mercredi sur deux &agrave; 18h00 (Espagne), &agrave; partir du mercredi 26 ao&ucirc;t</strong> &mdash; calendrier et Zoom sur le site et Discord.</li>
+                            <li>Pablo y agit comme coordinateur/point de contact, pas comme membre du conseil. Le cadre formalisera sans doute un ou deux coordinateurs par groupe &mdash; points de contact, pas des chefs.</li>
+                        </ul>
+
+                        <h2>4. Cycle de d&eacute;briefs des coordinateurs (Daniel T)</h2>
+                        <ul>
+                            <li>Les coordinateurs se sont r&eacute;unis cette semaine pour le <strong>d&eacute;brief du montage</strong> ; la semaine prochaine, la <strong>phase &eacute;v&eacute;nement</strong>, puis le <strong>d&eacute;montage</strong>.</li>
+                            <li>Les comptes rendus sont sur la page transparence. Les coordinateurs peuvent y assister ; toute autre personne int&eacute;ress&eacute;e peut contacter Daniela.</li>
+                        </ul>
+
+                        <h2>5. Dates 2027 &mdash; &Eacute;tat du sondage et consultation sur le processus de d&eacute;cision</h2>
+                        <p><strong>&Eacute;tat du sondage (Daniel T) :</strong> le sondage communautaire (Google Form + app Humans, lanc&eacute;s ensemble pour &eacute;viter la fatigue) est en pr&eacute;paration finale &mdash; objectif : envoi <strong>d&rsquo;ici la fin du week-end</strong>. Il couvrira les pr&eacute;f&eacute;rences de dates, les dates impossibles et les disponibilit&eacute;s montage/d&eacute;montage, avec un ensemble pr&eacute;s&eacute;lectionn&eacute; de dates plausibles. Le sondage est une contribution, pas le vote contraignant.</p>
+                        <p><strong>Pourquoi changer les dates (rappel) :</strong> selon le d&eacute;cret adopt&eacute; en mars, tous les permis sont <strong>automatiquement suspendus par la loi</strong> pendant les alertes incendie Roja Plus &mdash; et selon cette loi, <strong>l&rsquo;&eacute;v&eacute;nement de cette ann&eacute;e aurait d&ucirc; &ecirc;tre annul&eacute; trois fois</strong>. Il n&rsquo;a eu lieu que gr&acirc;ce &agrave; d&rsquo;intenses discussions avec le gouvernement d&rsquo;Aragon, la Comarca et le maire soutenant l&rsquo;&eacute;v&eacute;nement &mdash; une tol&eacute;rance sur laquelle on ne peut pas compter l&rsquo;an prochain, les autorit&eacute;s ayant fortement sugg&eacute;r&eacute; de d&eacute;placer l&rsquo;&eacute;v&eacute;nement. Ce n&rsquo;&eacute;tait pas th&eacute;orique : pendant le montage, un incendie se dirigeait vers le site et des cendres y tombaient ; il n&rsquo;est simplement pas venu assez pr&egrave;s pour forcer une &eacute;vacuation. Le conseil estime que rester sur le m&ecirc;me cr&eacute;neau comporte plus de 50% de risque d&rsquo;annulation l&rsquo;an prochain. Les crit&egrave;res d&rsquo;alerte n&rsquo;ont pas chang&eacute; ; les alertes se sont &eacute;tendues et commencent plus t&ocirc;t &mdash; aucune p&eacute;riode verte cette ann&eacute;e. Donn&eacute;es compl&egrave;tes sur la <a href="../event-dates-2027.html">page Dates 2027</a>.</p>
+                        <p><strong>Permis (point d&rsquo;Anna T) :</strong> la pr&eacute;f&eacute;rence communautaire est un facteur ; les permis en sont un autre. L&rsquo;<a href="../inaga-monegros-bird-nesting.html">INAGA</a> (agence environnementale) &eacute;value notamment les p&eacute;riodes de nidification et met g&eacute;n&eacute;ralement un &agrave; trois mois &agrave; r&eacute;pondre ; les demandes couvrant les dates candidates sont d&eacute;pos&eacute;es. Voter avant le rapport INAGA &mdash; par classement &mdash; signifie que si la premi&egrave;re date est exclue, la suivante autoris&eacute;e s&rsquo;applique sans nouveau processus.</p>
+                        <p><strong>La question ouverte pos&eacute;e par Daniel :</strong> comment prendre la d&eacute;cision finale ? (1) Le conseil d&eacute;cide, sondages consultatifs ; (2) le conseil pr&eacute;s&eacute;lectionne des dates viables et les <strong>asociados votent de mani&egrave;re contraignante</strong> parmi elles ; (3) les asociados votent sur toute la gamme de dates sens&eacute;es, de mani&egrave;re contraignante.</p>
+                        <p>Contributions de la communaut&eacute;, en r&eacute;sum&eacute; :</p>
+                        <ul>
+                            <li><strong>João T :</strong> la discussion avant le vote compte autant que le vote. Le processus go/no-go a souffert d&rsquo;objections arriv&eacute;es &agrave; la derni&egrave;re minute. Il propose des espaces d&eacute;di&eacute;s &mdash; un appel et/ou des fils Discord &mdash; pour d&eacute;fendre des dates avant de voter.</li>
+                            <li><strong>Condor :</strong> conseil ou membres, peu importe, tant qu&rsquo;on peut discuter avant ; sugg&egrave;re une <strong>recommandation du conseil</strong> accompagnant le vote, et peu d&rsquo;options &mdash; le vote du nom a montr&eacute; ce que trop de choix produit.</li>
+                            <li><strong>Vishal :</strong> ajouter des champs libres au sondage &mdash; date pr&eacute;f&eacute;r&eacute;e et pourquoi, date refus&eacute;e et pourquoi &mdash; puis r&eacute;sumer les raisons (l&rsquo;IA peut aider).</li>
+                            <li><strong>Benoit :</strong> ce sont <strong>les asociados qui doivent d&eacute;cider</strong> &mdash; s&rsquo;en remettre au conseil, c&rsquo;est abandonner la propri&eacute;t&eacute; de la d&eacute;cision ; les leads de barrio surtout doivent se l&rsquo;approprier. Sugg&egrave;re aussi de voter par p&eacute;riodes (d&eacute;but/fin de mois) plut&ocirc;t que par dates exactes.</li>
+                            <li><strong>Azzurro :</strong> la plupart des sujets conviennent &agrave; un vote des membres, mais certains sont mieux d&eacute;cid&eacute;s par le conseil quand il a nettement plus de contexte ou porte la charge de travail.</li>
+                            <li><strong>Imanol :</strong> une approche <strong>guid&eacute;e par les donn&eacute;es</strong> &mdash; le sondage doit &eacute;tablir les disponibilit&eacute;s (montage, &eacute;v&eacute;nement, d&eacute;montage) par cr&eacute;neau, et le choix doit se situer o&ugrave; capacit&eacute; de pr&eacute;sence et donn&eacute;es m&eacute;t&eacute;o/incendie se recoupent le mieux.</li>
+                            <li><strong>Tancredi T :</strong> quel que soit le d&eacute;cideur, <strong>un groupe de travail doit porter la pr&eacute;paration</strong> &mdash; compiler l&rsquo;information, recueillir les avis, animer le d&eacute;bat &mdash; pour que cette charge ne retombe pas toujours sur les m&ecirc;mes.</li>
+                            <li><strong>Ellen :</strong> &laquo; aucun changement &raquo; est-il une option ? R&eacute;ponse : elle figurera dans le sondage ; sa pr&eacute;sence au vote final d&eacute;pend du processus choisi, et le conseil la d&eacute;conseillerait fortement pour cause de risque incendie. A aussi demand&eacute; la date limite pour devenir asociado : aucune, sinon &ecirc;tre approuv&eacute; avant le vote ; l&rsquo;approbation prend quelques jours, candidatez t&ocirc;t.</li>
+                            <li><strong>Olivier (Ankhor) :</strong> pourquoi le conseil pr&eacute;s&eacute;lectionnerait-il des dates ? R&eacute;ponse de Daniel : en partie par &eacute;gard pour les votants (personne ne veut un autre bulletin de 26 options class&eacute;es), en partie par une crainte, que certains ont, qu&rsquo;un vote non filtr&eacute; choisisse une date non viable &mdash; crainte que Daniel ne partage pas, citant le mod&egrave;le suisse : des votes fr&eacute;quents fonctionnent quand les votants re&ccedil;oivent une bonne information.</li>
+                        </ul>
+                        <p><strong>Pendant ce temps, dans le chat :</strong> Pablo V (avant de partir) a propos&eacute; une s&eacute;quence concr&egrave;te &mdash; prendre le rapport actuel, envoyer le sondage comme collecte d&rsquo;information, puis pr&eacute;parer une version pr&ecirc;te pour le vote de l&rsquo;Assembl&eacute;e avec les recommandations du conseil pour les 2&ndash;3 meilleures options, avec un contexte approfondi (&laquo; en tant que membre du conseil, je veux que l&rsquo;AG tranche ce vote &raquo;). Ren&eacute; B a fortement d&eacute;fendu un vote &mdash; &laquo; c&rsquo;est pour cela que nous sommes une association : pour sortir des d&eacute;cisions descendantes et donner une voix &agrave; la communaut&eacute; &raquo; &mdash; le message que Daniel a lu &agrave; voix haute. Inge W : ravie que la communaut&eacute; vote, avec les pour/contre par date. Humberto : plusieurs festivals ont &eacute;t&eacute; annul&eacute;s en ao&ucirc;t &agrave; cause de la chaleur &mdash; d&eacute;placer l&rsquo;&eacute;v&eacute;nement est clairement dans l&rsquo;int&eacute;r&ecirc;t de la communaut&eacute;. Azzurro : les free campers qui veulent s&rsquo;impliquer s&rsquo;impliqueront &mdash; le travail, c&rsquo;est de cr&eacute;er la possibilit&eacute;. Condor a mis en garde : les r&eacute;f&eacute;rendums sur des sujets complexes &eacute;chouent quand les votants manquent d&rsquo;information &mdash; d&rsquo;accord pour que les asociados d&eacute;cident, pas pour un vote contraignant de toute la communaut&eacute;. Et Ellen K a propos&eacute; une action de barrio support pour que chaque lead de barrio souhaitant devenir asociado ait candidat&eacute; &mdash; accept&eacute;e sur-le-champ (&laquo; oui, s&rsquo;il vous pla&icirc;t ! &raquo;).</p>
+                        <p><strong>La position personnelle de Daniel</strong> (personnelle, pas celle du conseil) : la communaut&eacute; doit &ecirc;tre aux commandes de cet &eacute;v&eacute;nement, et on apprend &agrave; utiliser son pouvoir en l&rsquo;utilisant &mdash; mais des retours sugg&eacute;raient qu&rsquo;il allait peut-&ecirc;tre trop vite, d&rsquo;o&ugrave; la question. Sa lecture de l&rsquo;appel : <strong>l&rsquo;option interm&eacute;diaire &mdash; le conseil pr&eacute;s&eacute;lectionne, les asociados votent &mdash; se dessine comme la forme probable</strong>, possiblement avec le niveau de soutien du conseil affich&eacute; par date.</p>
+                        <p><strong>Rappel adh&eacute;sion :</strong> les personnes ayant &eacute;t&eacute; leads d&rsquo;&eacute;v&eacute;nements li&eacute;s dans la r&eacute;gion peuvent devenir asociados m&ecirc;me sans avoir &eacute;t&eacute; &agrave; l&rsquo;&eacute;v&eacute;nement de cette ann&eacute;e &mdash; un malentendu apparu aujourd&rsquo;hui m&ecirc;me. Si c&rsquo;est votre cas, candidatez.</p>
+
+                        <h2>6. Logistique des appels communautaires (João T / Daniel T)</h2>
+                        <ul>
+                            <li>João T n&rsquo;a appris l&rsquo;existence de cet appel qu&rsquo;&agrave; son d&eacute;but. Demande reconnue : programmation &agrave; l&rsquo;avance, ordres du jour publi&eacute;s, annulation du cr&eacute;neau r&eacute;current quand il n&rsquo;y a pas d&rsquo;appel.</li>
+                            <li>Daniel a ouvertement demand&eacute; un&middot;e volontaire pour prendre en charge la logistique des appels &mdash; coordination dans le groupe community calls sur Discord.</li>
+                        </ul>
+
+                        <h2>D&eacute;cisions</h2>
+                        <ul>
+                            <li><strong>Aucune d&eacute;cision prise lors de cet appel.</strong> La r&eacute;solution sur les groupes de travail est attendue lundi ; le processus de d&eacute;cision des dates reste ouvert, nourri par cette consultation.</li>
+                        </ul>
+
+                        <h2>Actions</h2>
+                        <table class="action-table">
+                            <tr><th>Action</th><th>Responsable</th></tr>
+                            <tr><td>Envoyer le sondage dates (Google Form + Humans, simultan&eacute;ment) &mdash; d&rsquo;ici la fin du week-end</td><td>Daniel T, avec C&eacute;line S, Peter D, Olivier</td></tr>
+                            <tr><td>Ajouter des champs libres (&laquo; pourquoi &raquo;) au sondage et pr&eacute;voir la synth&egrave;se</td><td>&Eacute;quipe sondage</td></tr>
+                            <tr><td>Voter la r&eacute;solution groupes de travail ; cr&eacute;er canaux/pages</td><td>Conseil (lundi)</td></tr>
+                            <tr><td>Rapporter la r&eacute;ponse juridique sur les &eacute;lections anticip&eacute;es</td><td>Pablo V</td></tr>
+                            <tr><td>Pr&eacute;parer l&rsquo;amendement sur les blocages de quorum</td><td>Pablo V</td></tr>
+                            <tr><td>Annoncer les appels El Sitio (mercredis altern&eacute;s, 18h00, d&egrave;s le 26 ao&ucirc;t)</td><td>Pablo V</td></tr>
+                            <tr><td>Organiser un espace/appel de d&eacute;bat sur les dates avant le vote</td><td>Daniel T / futur groupe dates</td></tr>
+                            <tr><td>Am&eacute;liorer la programmation et la publication des ordres du jour</td><td>Groupe community calls (volontaire recherch&eacute;&middot;e)</td></tr>
+                            <tr><td>Action barrio support : contacter les leads de barrio pour que chacun souhaitant devenir asociado ait candidat&eacute;</td><td>Ellen K / barrio support</td></tr>
+                            <tr><td>Traiter rapidement les candidatures d&rsquo;asociados avant le vote</td><td>Conseil</td></tr>
+                        </table>
+
+                        <p><em>Prochain appel : voir le site et Discord. Le sondage dates devrait arriver dans les bo&icirc;tes mail vers la fin du week-end : v&eacute;rifiez vos emails et partagez-le.</em></p>
+                        <p><em>Compte rendu &eacute;tabli &agrave; partir de l&rsquo;enregistrement audio et du transcript complet.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevale la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Con Daniel T (MC), Pablo V, Anna T, Ellen / Dr Plantes, João T, Condor, Vishal, Benoit, Azzurro, Imanol, Tancredi T, Olivier (Ankhor), Ren&eacute; B e membri della comunit&agrave; &mdash; circa 33 persone</strong>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Una call dall&rsquo;agenda leggera trasformatasi in una consultazione sostanziale: aggiornamento sulle elezioni del consiglio, il quadro proposto per i gruppi di lavoro, il gruppo El Sitio (nuovo sito) diventato pubblico, il ciclo di debrief dei coordinatori, e un&rsquo;ampia discussione su come prendere la decisione sulle date dell&rsquo;evento 2027.</p>
+
+                        <h2>1. Aggiornamento elezioni del consiglio (Pablo V)</h2>
+                        <ul>
+                            <li>A seguito di domande su Discord: il consiglio ha attualmente <strong>otto membri</strong>; lo statuto ne consente fino a <strong>13</strong>.</li>
+                            <li>Secondo i legali, <strong>nuovi membri possono essere aggiunti solo con un&rsquo;elezione, e la prossima &egrave; prevista per gennaio 2028</strong> (due anni dopo la prima). Non esiste un meccanismo per elezioni anticipate &mdash; salvo dimissioni o rimozione di un membro da parte dell&rsquo;Assemblea Generale, che innescherebbe un&rsquo;elezione straordinaria. <strong>Chiunque pu&ograve; candidarsi.</strong></li>
+                            <li>Pablo ha chiesto ai legali se un emendamento statutario possa consentire elezioni anticipate; risposta in attesa.</li>
+                            <li>Tema collegato: il <strong>quorum</strong> (met&agrave; pi&ugrave; uno). Lo statuto non prevede vie d&rsquo;uscita se il quorum non viene mai raggiunto. Pablo intende proporre un emendamento contro i blocchi da quorum.</li>
+                            <li>Oltre alle elezioni, Pablo sta esplorando altri modi di coinvolgimento (per es. ruoli di osservatore) &mdash; idee in arrivo.</li>
+                        </ul>
+
+                        <h2>2. Quadro dei gruppi di lavoro (Daniel T)</h2>
+                        <ul>
+                            <li>Il consiglio ne ha discusso a lungo luned&igrave; e ha raggiunto una direzione, non ancora votata: un <strong>modello a registro</strong>. Chiunque voglia organizzare persone attorno a un tema pu&ograve; registrare un gruppo di lavoro presso la segreteria, ottenendo un canale Discord e una pagina sul sito per verbali e risorse.</li>
+                            <li>La registrazione <strong>non</strong> &egrave; un&rsquo;approvazione del consiglio &mdash; significa che avete deciso di lavorarci, e di farlo in modo visibile.</li>
+                            <li>I gruppi possono portare i risultati dove serve: call comunitarie, un dipartimento, una proposta al consiglio o all&rsquo;Assemblea Generale.</li>
+                            <li>Linee guida invece di controllo: coinvolgete chi &egrave; impattato, siate trasparenti e inclusivi, rendete facile trovare e unirsi al gruppo.</li>
+                            <li>Il consiglio spera di <strong>approvare la risoluzione luned&igrave;</strong>. Domande e opinioni nel canale governance su Discord.</li>
+                        </ul>
+
+                        <h2>3. El Sitio &mdash; Gruppo di lavoro del nuovo sito (Pablo V)</h2>
+                        <p>Il gruppo che lavora da mesi sul nuovo sito diventa il primo esempio concreto del quadro &mdash; &laquo;un gruppo di lavoro &egrave; un po&rsquo; come un barrio: bastano poche persone per crearne uno&raquo;.</p>
+                        <ul>
+                            <li><strong>Sito web:</strong> <a href="https://elsitio.kimi.page/">elsitio.kimi.page</a> &mdash; presentazione aggiornata, stato del progetto e FAQ (esclusi i dettagli commercialmente sensibili).</li>
+                            <li><strong>Stato: fase di fattibilit&agrave;.</strong> Un terreno &egrave; assicurato; le trattative continuano sull&rsquo;altro. Date candidate sono state presentate alle autorit&agrave;, assenti fino a settembre &mdash; un evento l&igrave; a settembre &egrave; quasi certamente escluso; <strong>ottobre, forse</strong>.</li>
+                            <li>Il piano: fissare le condizioni per avere costi chiari; se possibile organizzare un <strong>evento di prova (circa 100&ndash;500 persone)</strong>; poi portare una proposta a un <strong>voto comunitario vincolante</strong> prima che NCA si impegni all&rsquo;acquisto del terreno.</li>
+                            <li>Prossimi progetti: accordi sul terreno, ricerca di un co-acquirente, due diligence, protezione delle specie. Offerte di aiuto benvenute.</li>
+                            <li><strong>Call aperte un mercoled&igrave; su due alle 18:00 (Spagna), dal mercoled&igrave; 26 agosto</strong> &mdash; calendario e Zoom sul sito e su Discord.</li>
+                            <li>Pablo vi agisce come coordinatore/punto di contatto, non come membro del consiglio. Il quadro probabilmente formalizzer&agrave; uno o due coordinatori per gruppo &mdash; punti di contatto, non capi.</li>
+                        </ul>
+
+                        <h2>4. Ciclo di debrief dei coordinatori (Daniel T)</h2>
+                        <ul>
+                            <li>I coordinatori si sono riuniti questa settimana per il <strong>debrief del montaggio</strong>; la prossima settimana la <strong>fase evento</strong>, poi lo <strong>smontaggio</strong>.</li>
+                            <li>I verbali sono sulla pagina trasparenza. I coordinatori possono partecipare; chiunque altro sia interessato contatti Daniela.</li>
+                        </ul>
+
+                        <h2>5. Date 2027 &mdash; Stato del sondaggio e consultazione sul processo decisionale</h2>
+                        <p><strong>Stato del sondaggio (Daniel T):</strong> il sondaggio comunitario (Google Form + app Humans, lanciati insieme per evitare fatica da sondaggi) &egrave; in preparazione finale &mdash; obiettivo: invio <strong>entro la fine del weekend</strong>. Coprir&agrave; preferenze di date, date impossibili e disponibilit&agrave; per montaggio/smontaggio, con un insieme preselezionato di date plausibili. Il sondaggio &egrave; un contributo, non il voto vincolante.</p>
+                        <p><strong>Perch&eacute; spostare le date (riepilogo):</strong> secondo il decreto approvato a marzo, tutti i permessi sono <strong>automaticamente sospesi per legge</strong> durante le allerte incendio Roja Plus &mdash; e secondo quella legge, <strong>l&rsquo;evento di quest&rsquo;anno avrebbe dovuto essere cancellato tre volte</strong>. Si &egrave; svolto solo grazie a intense discussioni con il governo dell&rsquo;Aragona, con la Comarca e il sindaco dalla parte dell&rsquo;evento &mdash; una tolleranza su cui non si pu&ograve; contare l&rsquo;anno prossimo, dopo che le autorit&agrave; hanno fortemente suggerito di spostare l&rsquo;evento. Non era teoria: durante il montaggio, un incendio si dirigeva verso il sito e vi cadeva cenere; semplicemente non si &egrave; avvicinato abbastanza da imporre un&rsquo;evacuazione. Il consiglio ritiene che restare nella stessa finestra comporti oltre il 50% di probabilit&agrave; di cancellazione l&rsquo;anno prossimo. I criteri di allerta non sono cambiati; le allerte si sono estese e iniziano prima &mdash; nessun periodo verde quest&rsquo;anno. Dati completi sulla <a href="../event-dates-2027.html">pagina Date 2027</a>.</p>
+                        <p><strong>Permessi (punto di Anna T):</strong> la preferenza della comunit&agrave; &egrave; un fattore; i permessi un altro. <a href="../inaga-monegros-bird-nesting.html">INAGA</a> (l&rsquo;agenzia ambientale) valuta tra l&rsquo;altro i periodi di nidificazione e impiega di solito da uno a tre mesi; le richieste per l&rsquo;intervallo di date candidate sono state presentate. Votare prima del rapporto INAGA &mdash; con preferenze ordinate &mdash; significa che se la prima data viene esclusa, si applica la successiva consentita senza un nuovo processo.</p>
+                        <p><strong>La domanda aperta posta da Daniel:</strong> come prendere la decisione finale? (1) Decide il consiglio, con i sondaggi come input consultivo; (2) il consiglio preseleziona date praticabili e gli <strong>asociados votano in modo vincolante</strong> tra esse; (3) gli asociados votano sull&rsquo;intera gamma di date sensate, in modo vincolante.</p>
+                        <p>Contributi della comunit&agrave;, in sintesi:</p>
+                        <ul>
+                            <li><strong>João T:</strong> la discussione prima del voto conta quanto il voto. Il processo go/no-go ha sofferto di obiezioni arrivate all&rsquo;ultimo momento. Propone spazi dedicati &mdash; una call e/o thread Discord &mdash; per argomentare le date prima di votare.</li>
+                            <li><strong>Condor:</strong> consiglio o soci, va bene comunque, purch&eacute; si possa discutere prima; suggerisce una <strong>raccomandazione del consiglio</strong> ad accompagnare il voto, e poche opzioni &mdash; il voto sul nome ha mostrato cosa succede con troppe scelte.</li>
+                            <li><strong>Vishal:</strong> aggiungere campi liberi al sondaggio &mdash; data preferita e perch&eacute;, data indesiderata e perch&eacute; &mdash; e poi riassumere le ragioni (l&rsquo;IA pu&ograve; aiutare).</li>
+                            <li><strong>Benoit:</strong> devono decidere <strong>gli asociados</strong> &mdash; delegare al consiglio significa rinunciare alla titolarit&agrave; della decisione; i lead dei barrio in particolare devono sentirla propria. Suggerisce anche di votare per periodi (inizio/fine mese) invece che date esatte.</li>
+                            <li><strong>Azzurro:</strong> la maggior parte dei temi si presta al voto dei soci, ma alcuni li decide meglio il consiglio quando ha molto pi&ugrave; contesto o ne porta il carico di lavoro.</li>
+                            <li><strong>Imanol:</strong> approccio <strong>guidato dai dati</strong> &mdash; il sondaggio deve stabilire le disponibilit&agrave; (montaggio, evento, smontaggio) per finestra candidata, e la scelta deve cadere dove capacit&agrave; di presenza e dati meteo/incendi si sovrappongono meglio.</li>
+                            <li><strong>Tancredi T:</strong> chiunque decida, <strong>un gruppo di lavoro deve curare la preparazione</strong> &mdash; compilare le informazioni, raccogliere opinioni, animare il dibattito &mdash; perch&eacute; quel carico non ricada sempre sulle stesse persone.</li>
+                            <li><strong>Ellen:</strong> &laquo;nessun cambiamento&raquo; &egrave; un&rsquo;opzione? Risposta: sar&agrave; nel sondaggio; la presenza nel voto finale dipende dal processo scelto, e il consiglio la sconsiglierebbe fermamente per il rischio incendi. Ha chiesto anche la scadenza per diventare asociado: nessuna, se non essere approvati prima del voto; l&rsquo;approvazione richiede alcuni giorni, candidatevi presto.</li>
+                            <li><strong>Olivier (Ankhor):</strong> perch&eacute; il consiglio dovrebbe preselezionare le date? Risposta di Daniel: in parte per riguardo ai votanti (nessuno vuole un&rsquo;altra scheda con 26 opzioni da ordinare), in parte per un timore, di alcuni, che un voto non filtrato scelga una data non praticabile &mdash; timore che Daniel non condivide, citando il modello svizzero: votazioni frequenti funzionano quando i votanti ricevono buone informazioni.</li>
+                        </ul>
+                        <p><strong>Nel frattempo, in chat:</strong> Pablo V (prima di uscire) ha proposto una sequenza concreta &mdash; prendere il rapporto attuale, inviare il sondaggio come raccolta di informazioni, poi preparare una versione pronta per il voto dell&rsquo;Assemblea con le raccomandazioni del consiglio per le 2&ndash;3 opzioni migliori, con contesto approfondito (&laquo;come membro del consiglio voglio che sia l&rsquo;AG a chiudere questo voto&raquo;). Ren&eacute; B ha sostenuto con forza il voto &mdash; &laquo;per questo siamo un&rsquo;associazione: per allontanarci dalle decisioni dall&rsquo;alto e dare voce alla comunit&agrave;&raquo; &mdash; il messaggio che Daniel ha letto ad alta voce. Inge W: felice che voti la comunit&agrave;, con pro e contro per data. Humberto: diversi festival sono stati cancellati ad agosto per il caldo &mdash; spostarsi &egrave; chiaramente nell&rsquo;interesse della comunit&agrave;. Azzurro: i free camper che vogliono partecipare parteciperanno &mdash; il lavoro &egrave; creare la possibilit&agrave;. Condor ha avvertito che i referendum su temi complessi falliscono quando manca l&rsquo;informazione &mdash; va bene che decidano gli asociados, non un voto vincolante di tutta la comunit&agrave;. Ed Ellen K ha offerto una spinta di barrio support perch&eacute; ogni lead di barrio che voglia diventare asociado abbia fatto domanda &mdash; accolta all&rsquo;istante (&laquo;s&igrave;, per favore!&raquo;).</p>
+                        <p><strong>La posizione personale di Daniel</strong> (personale, non del consiglio): la comunit&agrave; deve essere al comando di questo evento, e il modo per imparare a usare il proprio potere &egrave; usarlo &mdash; ma alcuni feedback suggerivano che stesse andando troppo veloce, da cui la domanda. La sua lettura della call: <strong>l&rsquo;opzione intermedia &mdash; il consiglio preseleziona, gli asociados votano &mdash; emerge come la forma probabile</strong>, possibilmente mostrando il sostegno del consiglio per ciascuna data.</p>
+                        <p><strong>Promemoria soci:</strong> chi &egrave; stato lead in eventi collegati della zona pu&ograve; candidarsi come asociado anche senza essere stato all&rsquo;evento di quest&rsquo;anno &mdash; un equivoco emerso proprio oggi. Se &egrave; il vostro caso, candidatevi.</p>
+
+                        <h2>6. Logistica delle call comunitarie (João T / Daniel T)</h2>
+                        <ul>
+                            <li>João T ha saputo di questa call solo al suo inizio. Richiesta riconosciuta: programmazione anticipata, agende pubblicate, cancellazione dello slot ricorrente quando la call non si tiene.</li>
+                            <li>Daniel ha chiesto apertamente un/a volontario/a per la logistica delle call &mdash; coordinamento nel gruppo community calls su Discord.</li>
+                        </ul>
+
+                        <h2>Decisioni</h2>
+                        <ul>
+                            <li><strong>Nessuna decisione presa in questa call.</strong> La risoluzione sui gruppi di lavoro &egrave; attesa luned&igrave;; il processo decisionale sulle date resta aperto, informato da questa consultazione.</li>
+                        </ul>
+
+                        <h2>Azioni</h2>
+                        <table class="action-table">
+                            <tr><th>Azione</th><th>Responsabile</th></tr>
+                            <tr><td>Inviare il sondaggio date (Google Form + Humans, simultaneamente) &mdash; entro fine weekend</td><td>Daniel T, con C&eacute;line S, Peter D, Olivier</td></tr>
+                            <tr><td>Aggiungere campi liberi (&laquo;perch&eacute;&raquo;) al sondaggio e pianificare la sintesi</td><td>Team sondaggio</td></tr>
+                            <tr><td>Approvare la risoluzione sui gruppi di lavoro; creare canali/pagine</td><td>Consiglio (luned&igrave;)</td></tr>
+                            <tr><td>Riportare la risposta legale sulle elezioni anticipate</td><td>Pablo V</td></tr>
+                            <tr><td>Preparare l&rsquo;emendamento sui blocchi da quorum</td><td>Pablo V</td></tr>
+                            <tr><td>Annunciare le call di El Sitio (mercoled&igrave; alterni, 18:00, dal 26 agosto)</td><td>Pablo V</td></tr>
+                            <tr><td>Organizzare uno spazio/call di dibattito sulle date prima del voto</td><td>Daniel T / futuro gruppo date</td></tr>
+                            <tr><td>Migliorare programmazione e pubblicazione delle agende</td><td>Gruppo community calls (cercasi volontario/a)</td></tr>
+                            <tr><td>Spinta di barrio support: contattare i lead di barrio perch&eacute; chi vuole diventare asociado faccia domanda</td><td>Ellen K / barrio support</td></tr>
+                            <tr><td>Processare rapidamente le candidature asociados prima del voto</td><td>Consiglio</td></tr>
+                        </table>
+
+                        <p><em>Prossima call: controllate il sito e Discord. Il sondaggio date dovrebbe arrivare via email verso fine weekend: controllate la posta e condividetelo.</em></p>
+                        <p><em>Verbale redatto dalla registrazione audio e dal transcript completo.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Bei Abweichungen zwischen dieser Version und der spanischen Version ist die spanische Version ma&szlig;geblich.</div>
+
+                    <div class="attendees">
+                        <strong>Mit Daniel T (MC), Pablo V, Anna T, Ellen / Dr Plantes, João T, Condor, Vishal, Benoit, Azzurro, Imanol, Tancredi T, Olivier (Ankhor), Ren&eacute; B und Community-Mitgliedern &mdash; rund 33 Personen</strong>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Ein Call mit leichter Agenda, der zu einer substanziellen Konsultation wurde: Update zu den Vorstandswahlen, das vorgeschlagene Arbeitsgruppen-Modell, die El-Sitio-Arbeitsgruppe (neues Gel&auml;nde) wird &ouml;ffentlich, der Debrief-Zyklus der Koordinator*innen und eine ausf&uuml;hrliche Diskussion dar&uuml;ber, wie die Entscheidung &uuml;ber die Termine 2027 getroffen werden soll.</p>
+
+                        <h2>1. Update Vorstandswahlen (Pablo V)</h2>
+                        <ul>
+                            <li>Nach Fragen auf Discord: Der Vorstand hat derzeit <strong>acht Mitglieder</strong>; die Satzung erlaubt bis zu <strong>13</strong>.</li>
+                            <li>Laut Rechtsberatung k&ouml;nnen <strong>neue Mitglieder nur bei einer Wahl hinzukommen; die n&auml;chste regul&auml;re Wahl ist im Januar 2028</strong> (zwei Jahre nach der ersten). Einen Mechanismus f&uuml;r vorgezogene Wahlen gibt es derzeit nicht &mdash; au&szlig;er ein Mitglied tritt zur&uuml;ck oder wird von der Generalversammlung abberufen, was eine au&szlig;erordentliche Wahl ausl&ouml;sen w&uuml;rde. <strong>Kandidieren kann jede*r.</strong></li>
+                            <li>Pablo hat die Anw&auml;lte gefragt, ob eine Satzungs&auml;nderung fr&uuml;here Wahlen erm&ouml;glichen k&ouml;nnte; Antwort steht aus.</li>
+                            <li>Verwandtes Thema: das <strong>Quorum</strong> (H&auml;lfte plus eins). Die Satzung kennt keinen Ausweg, wenn das Quorum wiederholt verfehlt wird. Pablo will eine Satzungs&auml;nderung gegen Quorum-Blockaden vorschlagen.</li>
+                            <li>Jenseits von Wahlen pr&uuml;ft Pablo weitere Beteiligungswege (z. B. Beobachterrollen) &mdash; Ideen folgen.</li>
+                        </ul>
+
+                        <h2>2. Arbeitsgruppen-Modell (Daniel T)</h2>
+                        <ul>
+                            <li>Der Vorstand hat am Montag ausf&uuml;hrlich diskutiert und eine Richtung gefunden, noch nicht abgestimmt: ein <strong>Registermodell</strong>. Wer Menschen zu einem Thema organisieren will, kann eine Arbeitsgruppe beim Sekretariat registrieren und erh&auml;lt einen Discord-Kanal und eine Website-Seite f&uuml;r Protokolle und Ressourcen.</li>
+                            <li>Die Registrierung ist <strong>keine</strong> Best&auml;tigung durch den Vorstand &mdash; sie bedeutet, dass ihr entschieden habt, daran zu arbeiten, und zwar sichtbar.</li>
+                            <li>Arbeitsgruppen k&ouml;nnen ihre Ergebnisse dorthin bringen, wo es passt: Community Calls, ein Department, ein Vorschlag an den Vorstand oder die Generalversammlung.</li>
+                            <li>Leitlinien statt Kontrolle: Betroffene einbeziehen, transparent und inklusiv sein, den Zugang zur Gruppe leicht machen.</li>
+                            <li>Der Vorstand hofft, <strong>die Resolution am Montag zu beschlie&szlig;en</strong>. Fragen und Meinungen im Governance-Kanal auf Discord.</li>
+                        </ul>
+
+                        <h2>3. El Sitio &mdash; Arbeitsgruppe neues Gel&auml;nde (Pablo V)</h2>
+                        <p>Die Gruppe, die seit Monaten am neuen Gel&auml;nde arbeitet, wird zum ersten Praxisbeispiel des Modells &mdash; &bdquo;eine Arbeitsgruppe ist ein bisschen wie ein Barrio: ein paar Leute zusammen, und ihr k&ouml;nnt eine gr&uuml;nden&ldquo;.</p>
+                        <ul>
+                            <li><strong>Website:</strong> <a href="https://elsitio.kimi.page/">elsitio.kimi.page</a> &mdash; aktuelle Pr&auml;sentation, Projektstatus und FAQ (ohne kommerziell sensible Verhandlungsdetails).</li>
+                            <li><strong>Status: Machbarkeitsphase.</strong> Ein Grundst&uuml;ck ist gesichert; &uuml;ber das andere wird weiterverhandelt. Kandidatentermine wurden bei den Beh&ouml;rden eingereicht, die bis September abwesend sind &mdash; ein Event dort im September findet fast sicher nicht statt; <strong>Oktober: vielleicht</strong>.</li>
+                            <li>Der Plan: Konditionen fixieren f&uuml;r klare Kosten; wenn m&ouml;glich ein <strong>Testevent (ca. 100&ndash;500 Personen)</strong>; danach ein Vorschlag f&uuml;r eine <strong>bindende Community-Abstimmung</strong>, bevor NCA sich zum Landkauf verpflichtet.</li>
+                            <li>Kommende Projekte: Landvertr&auml;ge, Suche nach Mitk&auml;ufern, Due Diligence, Artenschutz. Hilfe willkommen.</li>
+                            <li><strong>Offene Calls jeden zweiten Mittwoch um 18:00 Uhr (Spanien), ab Mittwoch, 26. August</strong> &mdash; Kalender und Zoom auf der Website und Discord.</li>
+                            <li>Pablo agiert dort als Koordinator/Ansprechperson, nicht als Vorstandsmitglied. Das Modell wird voraussichtlich ein bis zwei Koordinator*innen pro Gruppe formalisieren &mdash; Ansprechpersonen, keine Leads.</li>
+                        </ul>
+
+                        <h2>4. Debrief-Zyklus der Koordinator*innen (Daniel T)</h2>
+                        <ul>
+                            <li>Die Koordinator*innen trafen sich diese Woche zum <strong>Aufbau-Debrief</strong>; n&auml;chste Woche folgt die <strong>Eventphase</strong>, danach der <strong>Abbau</strong>.</li>
+                            <li>Protokolle auf der Transparenz-Seite. Koordinator*innen k&ouml;nnen teilnehmen; alle anderen Interessierten wenden sich an Daniela.</li>
+                        </ul>
+
+                        <h2>5. Termine 2027 &mdash; Umfrage-Status &amp; Konsultation zum Entscheidungsprozess</h2>
+                        <p><strong>Umfrage-Status (Daniel T):</strong> Die Community-Umfrage (Google Form + Humans-App, gleichzeitig gestartet, um Umfragem&uuml;digkeit zu vermeiden) ist in der Endvorbereitung &mdash; Ziel: Versand <strong>bis Ende des Wochenendes</strong>. Abgefragt werden Terminpr&auml;ferenzen, unm&ouml;gliche Termine und Verf&uuml;gbarkeit f&uuml;r Auf-/Abbau, mit einer vorausgew&auml;hlten Menge plausibler Termine. Die Umfrage ist Input, nicht die bindende Abstimmung.</p>
+                        <p><strong>Warum die Termine verschoben werden (Rekap):</strong> Nach dem im M&auml;rz verabschiedeten Dekret werden alle Genehmigungen w&auml;hrend Roja-Plus-Brandalarmen <strong>per Gesetz automatisch ausgesetzt</strong> &mdash; und nach diesem Gesetz <strong>h&auml;tte das diesj&auml;hrige Event dreimal abgesagt werden m&uuml;ssen</strong>. Es fand nur statt dank intensiver Gespr&auml;che mit der Regierung von Aragonien, mit der Comarca und dem B&uuml;rgermeister auf Seiten des Events &mdash; eine Nachsicht, auf die man n&auml;chstes Jahr nicht z&auml;hlen kann, nachdem die Beh&ouml;rden deutlich nahegelegt haben, das Event zu verlegen. Das war nicht theoretisch: W&auml;hrend des Aufbaus bewegte sich ein Feuer auf das Gel&auml;nde zu, und Asche fiel darauf; es kam schlicht nicht nah genug, um eine Evakuierung zu erzwingen. Der Vorstand sch&auml;tzt, dass ein Verbleib im selben Zeitfenster eine Absagewahrscheinlichkeit von &uuml;ber 50% f&uuml;r n&auml;chstes Jahr bedeutet. Die Alarmkriterien haben sich nicht ge&auml;ndert; die Alarme selbst sind ausgedehnter und beginnen fr&uuml;her &mdash; dieses Jahr gab es gar keine gr&uuml;nen Phasen. Alle Daten auf der <a href="../event-dates-2027.html">Seite Termine 2027</a>.</p>
+                        <p><strong>Genehmigungen (Anna Ts Punkt):</strong> Die Community-Pr&auml;ferenz ist ein Faktor; Genehmigungen sind ein anderer. <a href="../inaga-monegros-bird-nesting.html">INAGA</a> (die Umweltbeh&ouml;rde) bewertet u. a. Brutzeiten und braucht meist ein bis drei Monate; Anfragen f&uuml;r den Kandidatenzeitraum sind eingereicht. Vor dem INAGA-Bericht abzustimmen &mdash; mit Rangfolge &mdash; hei&szlig;t: F&auml;llt der Spitzentermin weg, gilt der n&auml;chstplatzierte zul&auml;ssige Termin ohne neuen Prozess.</p>
+                        <p><strong>Die offene Frage, die Daniel stellte:</strong> Wie soll die finale Entscheidung fallen? (1) Der Vorstand entscheidet, Umfragen sind beratend; (2) der Vorstand w&auml;hlt praktikable Termine vor und die <strong>Asociados stimmen bindend</strong> dar&uuml;ber ab; (3) die Asociados stimmen bindend &uuml;ber die gesamte sinnvolle Terminspanne ab.</p>
+                        <p>Community-Input, zusammengefasst:</p>
+                        <ul>
+                            <li><strong>João T:</strong> Die Diskussion vor der Abstimmung z&auml;hlt so viel wie die Abstimmung. Beim Go/No-Go kamen Bedenken in letzter Minute ohne Zeit zur Diskussion. Vorschlag: eigene R&auml;ume &mdash; ein Call und/oder Discord-Threads &mdash; um vor der Abstimmung f&uuml;r Termine zu argumentieren.</li>
+                            <li><strong>Condor:</strong> Vorstand oder Mitglieder &mdash; beides okay, solange vorher diskutiert werden kann; schl&auml;gt eine <strong>Vorstandsempfehlung</strong> zur Abstimmung vor (wie bei vielen Versammlungen) und wenige Optionen &mdash; die Namensabstimmung hat gezeigt, was zu viel Auswahl anrichtet.</li>
+                            <li><strong>Vishal:</strong> Freitextfelder in die Umfrage &mdash; Wunschtermin und warum, unerw&uuml;nschter Termin und warum &mdash; und die Gr&uuml;nde dann zusammenfassen (KI kann helfen).</li>
+                            <li><strong>Benoit:</strong> <strong>Die Asociados sollen entscheiden</strong> &mdash; die Entscheidung dem Vorstand zu &uuml;berlassen, gibt Verantwortung ab und l&auml;dt sp&auml;ter zu &bdquo;der Vorstand war&rsquo;s&ldquo;-Ressentiment ein; gerade Barrio-Leads m&uuml;ssen die Entscheidung als ihre eigene empfinden. Schl&auml;gt auch Zeitr&auml;ume (Monatsanfang/-ende) statt exakter Daten vor.</li>
+                            <li><strong>Azzurro:</strong> Die meisten Themen passen zur Mitgliederabstimmung, aber manche entscheidet der Vorstand besser, wenn er deutlich mehr Kontext hat oder die Arbeitslast tr&auml;gt.</li>
+                            <li><strong>Imanol:</strong> <strong>datengetrieben</strong> &mdash; die Umfrage soll Verf&uuml;gbarkeiten (Aufbau, Event, Abbau) je Zeitfenster erheben, und die Wahl soll dort liegen, wo Teilnahmef&auml;higkeit und Wetter-/Branddaten sich am besten &uuml;berlappen.</li>
+                            <li><strong>Tancredi T:</strong> Wer auch immer entscheidet: <strong>eine Arbeitsgruppe soll die Vorbereitung tragen</strong> &mdash; Informationen zusammenstellen, Meinungen einholen, die Debatte antreiben &mdash; damit diese Last nicht immer bei denselben Leuten landet.</li>
+                            <li><strong>Ellen:</strong> Ist &bdquo;keine &Auml;nderung&ldquo; eine Option? Antwort: In der Umfrage ja; ob sie in der finalen Abstimmung erscheint, h&auml;ngt vom gew&auml;hlten Prozess ab, und der Vorstand w&uuml;rde wegen des Brandrisikos dringend abraten. Frage nach der Frist f&uuml;r die Asociado-Aufnahme: keine, au&szlig;er vor der Abstimmung best&auml;tigt zu sein; die Best&auml;tigung dauert einige Tage &mdash; fr&uuml;h bewerben.</li>
+                            <li><strong>Olivier (Ankhor):</strong> Warum sollte der Vorstand Termine vorauswhlen? Daniels Antwort: teils aus R&uuml;cksicht auf die Abstimmenden (niemand will noch einmal 26 Optionen ranken), teils aus einer Angst mancher, dass eine ungefilterte Abstimmung einen nicht praktikablen Termin w&auml;hlt &mdash; eine Angst, die Daniel nicht teilt, mit Verweis auf das Schweizer Modell: h&auml;ufige Abstimmungen funktionieren, wenn die Abstimmenden gute Informationen bekommen.</li>
+                        </ul>
+                        <p><strong>Derweil im Chat:</strong> Pablo V (vor dem Ausloggen) schlug eine konkrete Abfolge vor &mdash; den aktuellen Bericht nehmen, die Umfrage als Informationssammlung versenden, dann eine abstimmungsreife Fassung f&uuml;r die Versammlung mit Vorstandsempfehlungen f&uuml;r die 2&ndash;3 besten Optionen vorbereiten, mit tiefem Kontext (&bdquo;als Vorstandsmitglied m&ouml;chte ich, dass die GV diese Abstimmung entscheidet&ldquo;). Ren&eacute; B pl&auml;dierte nachdr&uuml;cklich f&uuml;r eine Abstimmung &mdash; &bdquo;daf&uuml;r sind wir ein Verein: um von Top-down-Entscheidungen wegzukommen und der Community eine Stimme zu geben&ldquo; &mdash; die Nachricht, die Daniel im Call vorlas. Inge W: sehr gern eine Community-Abstimmung, mit Pro/Contra je Termin. Humberto: mehrere Festivals wurden im August wegen Hitze abgesagt &mdash; der Umzug liegt klar im Interesse der Community. Azzurro: Free Camper, die sich einbringen wollen, tun das &mdash; die Aufgabe ist, die M&ouml;glichkeit zu schaffen. Condor warnte: Referenden zu komplexen Themen scheitern, wenn Information fehlt &mdash; einverstanden mit einer Asociado-Entscheidung, nicht mit einer bindenden Gesamtabstimmung. Und Ellen K bot eine Barrio-Support-Aktion an, damit jede*r Barrio-Lead, der Asociado werden will, sich beworben hat &mdash; sofort angenommen (&bdquo;ja, bitte!&ldquo;).</p>
+                        <p><strong>Daniels pers&ouml;nliche Position</strong> (pers&ouml;nlich, nicht Vorstandsmeinung): Die Community soll dieses Event steuern, und Macht lernt man durch ihren Gebrauch &mdash; aber es gab R&uuml;ckmeldungen, er gehe vielleicht zu schnell, daher die Frage. Seine Lesart des Calls: <strong>die mittlere Option &mdash; Vorstand w&auml;hlt vor, Asociados stimmen ab &mdash; zeichnet sich als wahrscheinliche Form ab</strong>, m&ouml;glicherweise mit ausgewiesener Vorstandsunterst&uuml;tzung je Termin.</p>
+                        <p><strong>Mitglieder-Hinweis:</strong> Wer bei verwandten Events der Region Lead war, kann Asociado werden, auch ohne beim diesj&auml;hrigen Event gewesen zu sein &mdash; ein Missverst&auml;ndnis, das heute auftauchte. Wenn das auf euch zutrifft: bewerbt euch.</p>
+
+                        <h2>6. Logistik der Community Calls (João T / Daniel T)</h2>
+                        <ul>
+                            <li>João T erfuhr erst beim Start von diesem Call. Anliegen anerkannt: Calls brauchen Vorank&uuml;ndigung, ver&ouml;ffentlichte Agenden und Absage des wiederkehrenden Termins, wenn kein Call stattfindet.</li>
+                            <li>Daniel bat offen um eine*n Freiwillige*n f&uuml;r die Call-Logistik &mdash; Koordination in der Community-Calls-Gruppe auf Discord.</li>
+                        </ul>
+
+                        <h2>Entscheidungen</h2>
+                        <ul>
+                            <li><strong>In diesem Call wurden keine Entscheidungen getroffen.</strong> Die Arbeitsgruppen-Resolution wird f&uuml;r die Vorstandssitzung am Montag erwartet; der Entscheidungsprozess zu den Terminen bleibt offen, informiert durch diese Konsultation.</li>
+                        </ul>
+
+                        <h2>Aufgaben</h2>
+                        <table class="action-table">
+                            <tr><th>Aufgabe</th><th>Verantwortlich</th></tr>
+                            <tr><td>Termine-Umfrage versenden (Google Form + Humans, gleichzeitig) &mdash; bis Ende des Wochenendes</td><td>Daniel T, mit C&eacute;line S, Peter D, Olivier</td></tr>
+                            <tr><td>Freitextfelder (&bdquo;warum&ldquo;) erg&auml;nzen und Zusammenfassung planen</td><td>Umfrage-Team</td></tr>
+                            <tr><td>Arbeitsgruppen-Resolution beschlie&szlig;en; Kan&auml;le/Seiten einrichten</td><td>Vorstand (Montag)</td></tr>
+                            <tr><td>Juristische Antwort zu vorgezogenen Wahlen mitbringen</td><td>Pablo V</td></tr>
+                            <tr><td>Satzungs&auml;nderung zu Quorum-Blockaden entwerfen</td><td>Pablo V</td></tr>
+                            <tr><td>El-Sitio-Calls ank&uuml;ndigen (jeden zweiten Mittwoch, 18:00, ab 26. August)</td><td>Pablo V</td></tr>
+                            <tr><td>Diskussionsraum/-call f&uuml;r Termin-Argumente vor der Abstimmung organisieren</td><td>Daniel T / k&uuml;nftige Termine-Arbeitsgruppe</td></tr>
+                            <tr><td>Planung und Agenda-Ver&ouml;ffentlichung der Calls verbessern</td><td>Community-Calls-Gruppe (Freiwillige*r gesucht)</td></tr>
+                            <tr><td>Barrio-Support-Aktion: Barrio-Leads kontaktieren, damit alle Interessierten sich als Asociado bewerben</td><td>Ellen K / Barrio Support</td></tr>
+                            <tr><td>Asociado-Bewerbungen vor der Abstimmung z&uuml;gig bearbeiten</td><td>Vorstand</td></tr>
+                        </table>
+
+                        <p><em>N&auml;chster Call: Website und Discord pr&uuml;fen. Die Termine-Umfrage sollte gegen Ende des Wochenendes in den Postf&auml;chern sein: E-Mails pr&uuml;fen und weiterleiten.</em></p>
+                        <p><em>Protokoll erstellt aus der Audioaufzeichnung und dem vollst&auml;ndigen Transkript.</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>
