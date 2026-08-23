@@ -170,7 +170,7 @@ date,municipality,meteoalerta_zone,comarca,level,source_url
 2024-07-02,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,green,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2024-07-02
 2024-07-03,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,yellow,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2024-07-03
 2024-07-04,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,yellow,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2024-07-04
-2024-07-05,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,green,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2024-07-05
+2024-07-05,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,yellow,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2024-07-05
 2024-07-06,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,green,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2024-07-06
 2024-07-07,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,green,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2024-07-07
 2024-07-08,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,green,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2024-07-08
@@ -339,7 +339,7 @@ date,municipality,meteoalerta_zone,comarca,level,source_url
 2025-08-03,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,yellow,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2025-08-03
 2025-08-04,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,orange,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2025-08-04
 2025-08-05,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,red,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2025-08-05
-2025-08-06,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,orange,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2025-08-06
+2025-08-06,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,red,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2025-08-06
 2025-08-07,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,orange,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2025-08-07
 2025-08-08,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,orange,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2025-08-08
 2025-08-09,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,red,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2025-08-09
@@ -482,3 +482,14 @@ date,municipality,meteoalerta_zone,comarca,level,source_url
 2026-08-09,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,red,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2026-08-09
 2026-08-10,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,red,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2026-08-10
 2026-08-11,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,red,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2026-08-11
+2026-08-12,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,red,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2026-08-12
+2026-08-13,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,red,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2026-08-13
+2026-08-14,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,red,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2026-08-14
+2026-08-15,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,red,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2026-08-15
+2026-08-16,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,red,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2026-08-16
+2026-08-17,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,red,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2026-08-17
+2026-08-18,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,red,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2026-08-18
+2026-08-19,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,red,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2026-08-19
+2026-08-20,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,red,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2026-08-20
+2026-08-21,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,orange,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2026-08-21
+2026-08-22,Castejón de Monegros,Muelas del Ebro - Alcubierre,Los Monegros,orange,https://infoar.aragon.es/flamabk/indicesMeteo/napif-pdf/download?fecha=2026-08-22
