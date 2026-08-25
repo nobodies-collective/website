@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolutions | Nobodies Collective Association</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .transparency-page {
+            padding: 8rem 0 4rem;
+        }
+
+        .transparency-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .transparency-header h1 {
+            margin-bottom: 1rem;
+        }
+
+        .transparency-intro {
+            color: var(--color-text-muted);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+        .back-link:hover { color: var(--color-accent); }
+        .back-link::before { content: '\2190'; }
+
+        .meetings-list {
+            margin-top: 2rem;
+        }
+
+        .meeting-card {
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 1.5rem 2rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s;
+            display: block;
+            color: inherit;
+        }
+
+        .meeting-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            border-color: var(--color-accent);
+            color: inherit;
+        }
+
+        .meeting-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .meeting-date {
+            font-size: 0.85rem;
+            color: var(--color-accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .meeting-type {
+            font-size: 0.8rem;
+            padding: 0.25rem 0.75rem;
+            background: var(--color-bg-alt);
+            border-radius: 50px;
+            color: var(--color-text-muted);
+        }
+
+        .meeting-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: 0.5rem;
+        }
+
+        .meeting-summary {
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
+        }
+
+        .meeting-attendees {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+        }
+
+        .meeting-attendees strong {
+            color: var(--color-text);
+        }
+
+        .year-section {
+            margin-top: 3rem;
+        }
+
+        .year-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+        }
+
+        @media (max-width: 768px) {
+            .meeting-card {
+                padding: 1.25rem;
+            }
+
+            .meeting-card-header {
+                flex-direction: column;
+            }
+        }
+
+        .resolution { margin-bottom: 3rem; }
+        .resolution-meta { color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 1.25rem; }
+        .resolution-meta span { margin-right: 1.5rem; }
+        .resolution-body { max-width: 800px; line-height: 1.7; }
+        .resolution-body p { margin-bottom: 1rem; }
+        .resolution-body ol.res-clauses { padding-left: 1.5rem; margin-bottom: 1rem; }
+        .resolution-body ol.res-clauses > li { margin-bottom: 1rem; }
+        .resolution-body ol[type="a"] { padding-left: 1.5rem; margin: 0.5rem 0; }
+        .resolution-body ol[type="a"] li { margin-bottom: 0.35rem; }
+        .guidance { max-width: 800px; margin-top: 1.5rem; border: 1px solid var(--color-border); border-radius: var(--radius); background: var(--color-bg-secondary); }
+        .guidance summary { cursor: pointer; padding: 1rem 1.5rem; font-weight: 600; list-style: none; display: flex; align-items: center; justify-content: space-between; }
+        .guidance summary::-webkit-details-marker { display: none; }
+        .guidance summary::after { content: '\25BE'; transition: transform 0.2s ease; }
+        .guidance[open] summary::after { transform: rotate(180deg); }
+        .guidance-body { padding: 0 1.5rem 1.25rem; line-height: 1.7; }
+        .guidance-body p { margin-bottom: 1rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header"></div>
+    <script src="header.js"></script>
+
+    <main class="transparency-page">
+        <div class="container">
+            <a href="/" class="back-link">Back to Home</a>
+
+            <div class="transparency-header">
+                <h1>Resolutions</h1>
+                <p class="transparency-intro">
+                    Formal resolutions adopted by the board of the association, published in full. Where a resolution adopts accompanying guidance, the guidance is included below it.
+                </p>
+            </div>
+
+            <section class="year-section">
+                <h2>2026</h2>
+
+                <article class="resolution" id="working-groups">
+                    <h3>Board Resolution &mdash; Working Groups</h3>
+                    <p class="resolution-meta">
+                        <span><strong>Adopted:</strong> 24 August 2026 (unanimously, <a href="transparency/2026-08-24-board.html">board meeting minutes</a>)</span>
+                        <span><strong>Source:</strong> <a href="https://docs.google.com/document/d/1KagbFBHCOu9BTVo6dn0a70VBeR5fxU-kvEiZBAJ39E0/edit?tab=t.0" target="_blank" rel="noopener noreferrer">Google Doc</a></span>
+                    </p>
+                    <div class="resolution-body">
+<p>Whereas the Statutes contemplate working groups (Arts. 5.4, 13.8, 13.9, 20 and 20 bis), make member participation in them subject to Board approval (Art. 22.10), and require the Board to appoint their coordinators (Art. 13.9); and whereas the Board wishes working groups to form quickly and without case-by-case authorisation, the Board resolves:</p>
+<ol class="res-clauses">
+<li><strong>Register.</strong> The Secretary shall keep a register of working groups, published to members and collaborators. A group applies by notifying the Secretary of its name, purpose, coordinator, expected timeline and expected output. The Secretary shall register it within fourteen (14) days, and shall refer the application to the Board only where a ground in paragraph 2 applies or may apply, in which case the Board shall decide at its next meeting.</li>
+<li><strong>Grounds for refusal.</strong> Registration may be refused, or subsequently withdrawn, only on the grounds that:
+<ol type="a"><li>the purpose falls outside the association's aims under Art. 5, or is contrary to law;</li><li>it substantially duplicates an existing registered group; or</li><li>it presupposes authority, budget, or power to represent the association that the Board has not granted.</li></ol><p>A refusal or withdrawal shall be given in writing with reasons and recorded in the minutes. It does not affect the right of members to raise the matter at the General Assembly by the means the Statutes provide, nor the freedom of members to associate and discuss among themselves outside the association's name and resources.</p></li>
+<li><strong>Standing approvals.</strong> The Board grants standing approval under Art. 22.10 for member participation in any registered working group, and appoints as coordinator under Art. 13.9 the person each group proposes. The Board may revisit an appointment on reasons recorded in the minutes.</li>
+<li><strong>No authority conferred.</strong> Registration is administrative recognition and nothing more. No working group has decision-making power, budget, legitimacy, delegated competence, authority to bind the association or contract on its behalf, or standing over the Board or the General Assembly. A working group may propose; it may not decide. Any delegation of Board powers requires an express resolution adopted by two-thirds under Art. 17.1. Any authority to represent or speak for the association to third parties requires express Board authorisation.</li>
+<li><strong>Reporting.</strong> Working groups active for more than one year shall submit, through their coordinator, the annual report of activities required by Art. 20.2.</li>
+<li><strong>Guidance adopted.</strong> The Board adopts the accompanying Working Group Guidance as Board policy. It is not an Internal Regulation, creates no obligations on members or collaborators, and may be amended or withdrawn by the Board at any time. It is subject to the Statutes, to Organic Law 1/2002, and to any resolution of the General Assembly.</li>
+<li><strong>Scope.</strong> This resolution concerns working groups formed to answer a question or produce a proposal for the association. The standing operational teams that deliver the association's events, and their coordinators, will be addressed by separate resolution.</li>
+</ol>
+                    </div>
+                    <details class="guidance">
+                        <summary>Working Group Guidance (adopted as board policy under clause 6)</summary>
+                        <div class="guidance-body">
+<p><strong>What this is.</strong> How to start and run a working group at NCA, and what the Board expects to see before it acts on what you produce. This is guidance, not regulation. It creates no obligations, and it will change as we learn what works.</p>
+<p><strong>What a working group is.</strong> A group that comes together to answer a question or produce a proposal for the association &mdash; a policy, a recommendation, a decision the Board or the Assembly needs to make. Normally time-bound; most should take two to six months. If yours needs longer, say so and say why.</p>
+<p><strong>This guidance covers association-level working groups.</strong> The standing teams that run the event are a different thing and aren't covered here; how they're recognised and how their leads are chosen is separate work.</p>
+<p><strong>Starting one.</strong> Tell the Secretary: name, purpose, coordinator, expected timeline, and what you expect to produce. You'll be on the register and have a channel and a page within fourteen days &mdash; usually much sooner. No application form, no waiting for a Board meeting, no need to lobby anyone first.</p>
+<p><strong>Check the register before you start.</strong> If a group already exists on your subject, join it rather than running a parallel one.</p>
+<p><strong>Registration is nearly automatic.</strong> It's refused only where the purpose is outside what the association exists to do or is unlawful, where a group already exists on the subject, or where you're assuming authority or budget nobody has granted. Any refusal comes with written reasons. The Board's intent here is to register, not to gatekeep.</p>
+<p><strong>Say what you'll hand over.</strong> One line is enough, but be concrete about the artefact. Common ones: a written recommendation to the Board; a draft policy or regulation; a decision brief setting out options with a preferred one; a report or research summary; a proposal to the General Assembly; a community consultation and its results; an event or open session.</p>
+<p>The useful form is one sentence: "By [date] we will deliver [artefact] to [the Board / the Assembly / the community]." "By November we'll deliver a recommendation on 2027 dates with the temperature and site data behind it" works. "Improve communications" doesn't &mdash; nobody can tell when it's finished.</p>
+<p><strong>Name the audience, not just the artefact.</strong> Plenty of good outputs go to the community rather than the Board. Deciding that at the start stops you spending four months producing something aimed at the wrong room.</p>
+<p><strong>If you don't know yet, say so and say when you will.</strong> Scope changes are normal &mdash; tell the Secretary and update the register so people following along know what to expect. If your output grows into something much larger than what you registered, talk to the Board early, since it may need budget or authority you don't have.</p>
+<p><strong>Someone has to be named.</strong> Every group has a coordinator &mdash; one person, or two if you'd rather share it. Not a boss: the coordinator convenes the group, keeps it moving, files the monthly update, and is who the Board and the community come to with questions. Groups with nobody named tend to drift, and there's no one to ask when something needs answering.</p>
+<p><strong>What a working group can and can't do.</strong> You can research, consult, deliberate, and propose. You can't decide on the association's behalf, spend its money, or speak for it. A working group on governance can propose changes to how the association is governed; it has no authority over the Board or the Assembly. If your work genuinely needs budget or delegated authority, ask the Board for it specifically &mdash; that's a separate decision needing a two-thirds vote.</p>
+<p><strong>Work in the open.</strong> Use your channel and your page. Post when you're meeting, post what you're working on, post what you produce. Provide minutes or summarized transcripts of your meetings. The reason isn't process for its own sake: people who could have taken part and chose not to will usually accept the outcome if they see they could have participated. People who never knew it was happening or felt they couldn&rsquo;t have joined in even if they wanted, won't.</p>
+<p><strong>Consult the people affected.</strong> Not as a checkpoint bolted on at the end &mdash; throughout, from early on. A public draft before you finalise is a good idea too, but it's not a substitute. When you're proposing how other people will do things, the bar is higher and the affected people should be in the room from the start.</p>
+<p>The community expects any proposal to show who was consulted, how, and what came back &mdash; including what you heard and decided against. A proposal without that is likely to come back rather than be acted on.</p>
+<p><strong>Everyone can contribute; arguments carry the weight.</strong> All input is welcome, and volume isn't a vote. In deciding on proposals, the Board or Assembly should weigh reasoning, relevant experience and evidence &mdash; and on safety, legal, financial or technical questions it will seek out qualified input and give it weight. Expect that, and go get that input yourselves rather than having others find it missing. Where you landed against the general sentiment, say so and say why: a proposal that's honest about that is more persuasive, not less.</p>
+<p><strong>Disclose interests.</strong> If you have a personal, professional or financial stake in what your group is deciding, tell the group early. It rarely disqualifies anyone. Discovering it late is the problem.</p>
+<p><strong>Keep people posted.</strong> A few bullets a month to the Board: what's done, what's next, on track or not, anything blocking you. The Board or any member may ask for a status update at any time, and you should answer within about a week. Groups that go quiet for two months will be asked whether they're still going, and closed if no answer comes &mdash; no stigma, just register hygiene, and the same subject can be picked up again anytime.</p>
+<p><strong>Finishing.</strong> Send your output to the Board through your coordinator, or present it to the community if that's the right audience. The Board will minute its disposition and reply in writing to the coordinator by its second meeting after delivery, or say why it can't yet and when it will. It will read what you registered: if you delivered what you said you would, that's the standard you're held to, and not something invented afterwards.</p>
+                        </div>
+                    </details>
+                </article>
+            </section>
+
+        </div>
+    </main>
+
+    <div id="shared-footer"></div>
+    <script src="footer.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
