@@ -1,4 +1,4 @@
-// Community Planning Calls — renders the next N Thursday-8PM-Madrid call cards.
+// Community Calls — renders the next N Thursday-8PM-Madrid call cards.
 // Dates are computed client-side so the cards never go stale.
 (function () {
     'use strict';
@@ -10,6 +10,8 @@
     var CALL_COUNT = 2;          // how many upcoming calls to show
     var CALL_HOUR = 20;          // 20:00 Madrid time
     var CALL_END = 21 * 60 + 30; // keep today's card up until 21:30 Madrid time
+    // One-off labels for specific dates (YYYYMMDD) — everything else is a plain Community Call.
+    var SPECIAL = { '20260903': 'Event Dates Call' };
     var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
     // Current date + time in Europe/Madrid, regardless of the visitor's timezone.
@@ -34,11 +36,12 @@
     var html = '';
     for (var i = 0; i < CALL_COUNT; i++) {
         var ymd = '' + d.getUTCFullYear() + pad(d.getUTCMonth() + 1) + pad(d.getUTCDate());
+        var label = SPECIAL[ymd] || 'Community Call';
         var calUrl = 'https://calendar.google.com/calendar/render?action=TEMPLATE' +
-            '&text=' + encodeURIComponent('Elsewhere Community Planning Call') +
+            '&text=' + encodeURIComponent('Elsewhere ' + label) +
             '&dates=' + ymd + 'T' + pad(CALL_HOUR) + '0000/' + ymd + 'T213000' +
             '&ctz=Europe%2FMadrid' +
-            '&details=' + encodeURIComponent('Weekly community planning call for Elsewhere. Every Thursday at 8:00 PM (Madrid time).\n\nGoogle Meet: ' + MEET_URL) +
+            '&details=' + encodeURIComponent('Weekly community call for Elsewhere. Every Thursday at 8:00 PM (Madrid time).\n\nGoogle Meet: ' + MEET_URL) +
             '&location=' + encodeURIComponent('Google Meet');
 
         html +=
@@ -48,7 +51,7 @@
                     '<span class="call-month">' + MONTHS[d.getUTCMonth()] + '</span>' +
                 '</div>' +
                 '<div class="call-details">' +
-                    '<strong>Community Planning Call</strong>' +
+                    '<strong>' + label + '</strong>' +
                     '<span>Thursday, 8:00 PM (Madrid time)</span>' +
                     '<div class="call-links">' +
                         '<a href="' + MEET_URL + '" target="_blank" rel="noopener noreferrer" class="btn-link">Join Call</a>' +
