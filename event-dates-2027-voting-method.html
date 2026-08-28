@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="How the Asociados ranked vote on Elsewhere's 2027 dates will be counted, and why Ranked Pairs was selected.">
+
+    <title>How the 2027 Date Vote Will Be Counted | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .voting-hero {
+            padding: 10rem 0 5rem;
+            color: #fff;
+            background:
+                linear-gradient(135deg, rgba(44, 36, 24, 0.97), rgba(95, 112, 80, 0.92)),
+                radial-gradient(circle at 82% 18%, rgba(201, 146, 42, 0.35), transparent 40%);
+        }
+
+        .voting-hero-inner { max-width: 850px; }
+
+        .voting-kicker {
+            display: inline-block;
+            margin-bottom: 1.2rem;
+            padding: 0.45rem 0.85rem;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 999px;
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .voting-hero h1 {
+            max-width: 820px;
+            margin-bottom: 1.4rem;
+            font-size: clamp(2.7rem, 7vw, 5.2rem);
+        }
+
+        .voting-deck {
+            max-width: 740px;
+            color: rgba(255, 255, 255, 0.84);
+            font-size: clamp(1.05rem, 2vw, 1.28rem);
+            line-height: 1.7;
+        }
+
+        .voting-page { padding: 4rem 0 6rem; }
+
+        .voting-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .voting-content section {
+            margin-bottom: 3.5rem;
+            scroll-margin-top: 6rem;
+        }
+
+        .voting-content h2 {
+            margin-bottom: 1.15rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--color-border);
+            font-size: clamp(1.7rem, 4vw, 2.35rem);
+        }
+
+        .voting-content h3 {
+            margin: 1.8rem 0 0.65rem;
+            font-size: 1.25rem;
+        }
+
+        .voting-content p {
+            margin-bottom: 1rem;
+            color: var(--color-text-muted);
+            line-height: 1.75;
+        }
+
+        .voting-content strong { color: var(--color-text); }
+
+        .selected-method {
+            margin-bottom: 3.5rem;
+            padding: clamp(1.5rem, 4vw, 2.4rem);
+            background: linear-gradient(135deg, rgba(122, 139, 106, 0.16), rgba(201, 146, 42, 0.09));
+            border: 1px solid rgba(122, 139, 106, 0.42);
+            border-radius: calc(var(--radius) * 1.2);
+        }
+
+        .selected-label {
+            display: inline-block;
+            margin-bottom: 0.75rem;
+            padding: 0.35rem 0.7rem;
+            border-radius: 999px;
+            color: var(--color-purple-dark);
+            background: rgba(122, 139, 106, 0.2);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .selected-method h2 {
+            margin-bottom: 0.8rem;
+            padding-bottom: 0;
+            border: 0;
+        }
+
+        .reason-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+            margin-top: 1.4rem;
+        }
+
+        .reason-card {
+            padding: 1.15rem;
+            background: rgba(250, 245, 238, 0.72);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+        }
+
+        .reason-card strong {
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .reason-card p {
+            margin: 0;
+            font-size: 0.92rem;
+            line-height: 1.55;
+        }
+
+        .steps {
+            margin: 1.2rem 0 0 1.35rem;
+            color: var(--color-text-muted);
+        }
+
+        .steps li {
+            margin-bottom: 0.65rem;
+            padding-left: 0.2rem;
+            line-height: 1.65;
+        }
+
+        .table-wrap {
+            width: 100%;
+            margin: 1.25rem 0 1.75rem;
+            overflow-x: auto;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+        }
+
+        .method-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+        }
+
+        .method-table th,
+        .method-table td {
+            padding: 0.85rem 1rem;
+            border-bottom: 1px solid var(--color-border);
+            text-align: left;
+            vertical-align: top;
+            line-height: 1.5;
+        }
+
+        .method-table th {
+            background: var(--color-bg-alt);
+            color: var(--color-text);
+            font-size: 0.74rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .method-table td { color: var(--color-text-muted); }
+        .method-table tr:last-child td { border-bottom: 0; }
+
+        .method-table tr.selected td {
+            background: rgba(122, 139, 106, 0.13);
+        }
+
+        .method-table .method-name {
+            min-width: 9.5rem;
+            color: var(--color-text);
+            font-weight: 700;
+        }
+
+        .method-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+            margin-top: 1.25rem;
+        }
+
+        .method-card {
+            padding: 1.25rem;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .method-card h3 { margin-top: 0; }
+        .method-card p:last-child { margin-bottom: 0; }
+
+        .principle {
+            padding: 1.4rem 1.55rem;
+            background: rgba(201, 146, 42, 0.1);
+            border-left: 4px solid var(--color-yellow);
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+
+        .principle p:last-child { margin-bottom: 0; }
+
+        @media (max-width: 720px) {
+            .voting-hero { padding: 8rem 0 3.5rem; }
+            .voting-page { padding-top: 2.5rem; }
+            .reason-grid,
+            .method-list { grid-template-columns: 1fr; }
+
+            .table-wrap {
+                overflow: visible;
+                border: 0;
+            }
+
+            .method-table,
+            .method-table tbody,
+            .method-table tr,
+            .method-table td {
+                display: block;
+                width: 100%;
+            }
+
+            .method-table thead {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                white-space: nowrap;
+                border: 0;
+            }
+
+            .method-table tr {
+                margin-bottom: 0.9rem;
+                overflow: hidden;
+                border: 1px solid var(--color-border);
+                border-radius: var(--radius);
+            }
+
+            .method-table td {
+                display: grid;
+                grid-template-columns: minmax(7rem, 34%) minmax(0, 1fr);
+                gap: 0.7rem;
+                padding: 0.7rem;
+            }
+
+            .method-table td::before {
+                content: attr(data-label);
+                color: var(--color-text);
+                font-size: 0.68rem;
+                font-weight: 700;
+                letter-spacing: 0.035em;
+                text-transform: uppercase;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="shared-header"></div>
+    <script src="header.js"></script>
+
+    <main>
+        <header class="voting-hero">
+            <div class="container">
+                <div class="voting-hero-inner">
+                    <span class="voting-kicker">Asociados vote · 2027 event dates</span>
+                    <h1>How the Date Vote Will Be Counted</h1>
+                    <p class="voting-deck">Why we selected Ranked Pairs, how it turns ranked ballots into a result, and how the main alternatives differ.</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="voting-page">
+            <div class="container">
+                <article class="voting-content">
+                    <section class="selected-method" id="selected-method">
+                        <span class="selected-label">Selected system</span>
+                        <h2>Ranked Pairs (Tideman)</h2>
+                        <p><strong>Ranked Pairs looks for the date that performs best in direct, head-to-head comparisons with every other date.</strong> If one date is preferred to every alternative by a majority, it wins. If preferences form a cycle, Ranked Pairs resolves it by giving priority to the strongest head-to-head victories without creating a contradictory loop.</p>
+
+                        <div class="reason-grid">
+                            <div class="reason-card">
+                                <strong>It looks for broad agreement</strong>
+                                <p>A date with wide second-choice support is not eliminated simply because another date has more first-choice votes.</p>
+                            </div>
+                            <div class="reason-card">
+                                <strong>Our options are very similar</strong>
+                                <p>Adjacent weeks can split the same group of voters. Ranked Pairs is comparatively resistant to this “clone” effect.</p>
+                            </div>
+                            <div class="reason-card">
+                                <strong>It handles genuine indifference</strong>
+                                <p>Asociados may rank dates equally. A tied pair contributes no preference to that particular head-to-head comparison.</p>
+                            </div>
+                            <div class="reason-card">
+                                <strong>It supports later exclusions</strong>
+                                <p>If a date proves unavailable after the vote, it can be removed and the same ballots recounted without rewriting anyone&rsquo;s preferences.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="how-it-works">
+                        <h2>How Ranked Pairs works</h2>
+                        <ol class="steps">
+                            <li>Each Asociado ranks as many dates as they wish. Equal rankings are allowed; unranked or rejected dates are treated as equally least-preferred.</li>
+                            <li>Every pair of dates is compared: how many voters prefer A to B, and how many prefer B to A?</li>
+                            <li>Those victories are ordered from strongest to weakest.</li>
+                            <li>Victories are “locked in” in that order, except where doing so would create a cycle.</li>
+                            <li>The date left at the top of the resulting preference order wins.</li>
+                        </ol>
+                        <p>Any exact procedural tie-breaking rule will be declared before voting. The official counting method will not be changed after seeing the result.</p>
+                    </section>
+
+                    <section id="comparison">
+                        <h2>Comparison of the main systems</h2>
+                        <div class="table-wrap">
+                            <table class="method-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">System</th>
+                                        <th scope="col">Main strength</th>
+                                        <th scope="col">Main weakness</th>
+                                        <th scope="col">Fit for this vote</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="selected">
+                                        <td class="method-name" data-label="System">Ranked Pairs</td>
+                                        <td data-label="Strength">Finds a head-to-head consensus winner and handles cycles; resistant to similar options splitting support.</td>
+                                        <td data-label="Weakness">Less familiar and slightly harder to explain than a simple elimination count.</td>
+                                        <td data-label="Fit"><strong>Selected.</strong> Best match for choosing among many similar dates.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="method-name" data-label="System">Condorcet check</td>
+                                        <td data-label="Strength">Directly identifies a date that beats every alternative one-to-one.</td>
+                                        <td data-label="Weakness">It is not a complete method: sometimes A beats B, B beats C, and C beats A.</td>
+                                        <td data-label="Fit">Useful diagnostic, but it needs a completion method such as Ranked Pairs.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="method-name" data-label="System">Borda count</td>
+                                        <td data-label="Strength">Uses the whole ranking and often rewards broadly acceptable compromise options.</td>
+                                        <td data-label="Weakness">Sensitive to strategic ranking and to which alternatives happen to be included.</td>
+                                        <td data-label="Fit">Reasonable comparison result, but weaker protection against tactical effects.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="method-name" data-label="System">Baldwin</td>
+                                        <td data-label="Strength">Combines Borda&rsquo;s use of the full ranking with successive elimination.</td>
+                                        <td data-label="Weakness">More complex, and the elimination path can make the result harder to interpret.</td>
+                                        <td data-label="Fit">A useful alternative analysis, but not simpler or more compelling here.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="method-name" data-label="System">IRV</td>
+                                        <td data-label="Strength">Well known and relatively easy to describe as repeated last-place elimination.</td>
+                                        <td data-label="Weakness">Can eliminate the broadly acceptable consensus date early because it has too few first choices.</td>
+                                        <td data-label="Fit">Familiar, but poorly matched to our main risk.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="method-name" data-label="System">Coombs</td>
+                                        <td data-label="Strength">Actively removes the option receiving the most last-place opposition.</td>
+                                        <td data-label="Weakness">Highly sensitive to bottom rankings and unfamiliar to most voters.</td>
+                                        <td data-label="Fit">Interesting where avoiding a disliked option is paramount, but less natural for date selection.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section id="brief-descriptions">
+                        <h2>The systems in brief</h2>
+                        <div class="method-list">
+                            <div class="method-card">
+                                <h3>Ranked Pairs</h3>
+                                <p>Compares every option against every other option, then locks the strongest victories while preventing cycles.</p>
+                            </div>
+                            <div class="method-card">
+                                <h3>Condorcet check</h3>
+                                <p>Asks whether one option defeats every other option head-to-head. It may return no winner when preferences cycle.</p>
+                            </div>
+                            <div class="method-card">
+                                <h3>Borda count</h3>
+                                <p>Awards points for every position on each ballot. The option with the highest total score wins.</p>
+                            </div>
+                            <div class="method-card">
+                                <h3>Baldwin</h3>
+                                <p>Repeatedly calculates Borda scores and eliminates the lowest-scoring option until one remains.</p>
+                            </div>
+                            <div class="method-card">
+                                <h3>Instant-runoff voting (IRV)</h3>
+                                <p>Counts first preferences, eliminates the weakest option, and transfers those ballots to their next remaining preference.</p>
+                            </div>
+                            <div class="method-card">
+                                <h3>Coombs</h3>
+                                <p>Checks for a first-choice majority, then eliminates the option with the most last-place rankings until one wins.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="principle" id="principle">
+                        <h2>One method, chosen in advance</h2>
+                        <p>Other systems may be shown after the vote to demonstrate how sensitive the result is to the counting rule. They will not be used to choose whichever outcome looks most convenient. <strong>Ranked Pairs is the official method because it has been selected before the ballots are counted.</strong></p>
+                    </section>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <div id="shared-footer"></div>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
