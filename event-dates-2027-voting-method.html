@@ -145,6 +145,43 @@
             line-height: 1.65;
         }
 
+        .example-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+            margin-top: 1.4rem;
+        }
+
+        .example-card {
+            padding: 1.35rem;
+            background: rgba(255, 255, 255, 0.22);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+        }
+
+        .example-card h3 { margin-top: 0; }
+
+        .ballot-list {
+            margin: 1rem 0 1rem 1.25rem;
+            color: var(--color-text-muted);
+        }
+
+        .ballot-list li {
+            margin-bottom: 0.45rem;
+            line-height: 1.5;
+        }
+
+        .example-result {
+            margin-top: 1rem;
+            padding: 0.85rem 1rem;
+            background: rgba(122, 139, 106, 0.12);
+            border-left: 3px solid var(--color-purple);
+            border-radius: 0 7px 7px 0;
+            color: var(--color-text-muted);
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
         .table-wrap {
             width: 100%;
             margin: 1.25rem 0 1.75rem;
@@ -220,6 +257,7 @@
             .voting-hero { padding: 8rem 0 3.5rem; }
             .voting-page { padding-top: 2.5rem; }
             .reason-grid,
+            .example-grid,
             .method-list { grid-template-columns: 1fr; }
 
             .table-wrap {
@@ -326,6 +364,37 @@
                             <li>The date left at the top of the resulting preference order wins.</li>
                         </ol>
                         <p>Any exact procedural tie-breaking rule will be declared before voting. The official counting method will not be changed after seeing the result.</p>
+                    </section>
+
+                    <section id="examples">
+                        <h2>Two examples with four options</h2>
+                        <p>These simplified examples use options A, B, C and D. The numbers represent groups of voters who submitted the same ranking.</p>
+
+                        <div class="example-grid">
+                            <div class="example-card">
+                                <h3>1. The consensus option has few first choices</h3>
+                                <ul class="ballot-list">
+                                    <li><strong>4 voters:</strong> A &gt; B &gt; C &gt; D</li>
+                                    <li><strong>3 voters:</strong> C &gt; B &gt; D &gt; A</li>
+                                    <li><strong>3 voters:</strong> D &gt; B &gt; C &gt; A</li>
+                                    <li><strong>1 voter:</strong> B &gt; A &gt; C &gt; D</li>
+                                </ul>
+                                <p>B has only one first-choice vote, so IRV would eliminate it immediately. But B beats A by 7&ndash;4, C by 8&ndash;3, and D by 8&ndash;3 in direct comparisons.</p>
+                                <div class="example-result"><strong>Ranked Pairs chooses B:</strong> the option preferred by a majority over every alternative, despite not leading on first choices.</div>
+                            </div>
+
+                            <div class="example-card">
+                                <h3>2. A preference cycle would otherwise deadlock</h3>
+                                <ul class="ballot-list">
+                                    <li><strong>4 voters:</strong> A &gt; B &gt; C &gt; D</li>
+                                    <li><strong>3 voters:</strong> B &gt; C &gt; A &gt; D</li>
+                                    <li><strong>2 voters:</strong> C &gt; A &gt; B &gt; D</li>
+                                </ul>
+                                <p>The group produces a cycle: A beats B by 6&ndash;3, B beats C by 7&ndash;2, but C beats A by 5&ndash;4. A simple Condorcet check therefore has no winner.</p>
+                                <p>Ranked Pairs locks B over C first, then A over B. It skips C over A because that final, weakest victory would create the cycle A &gt; B &gt; C &gt; A.</p>
+                                <div class="example-result"><strong>Ranked Pairs chooses A:</strong> it resolves the cycle by respecting the stronger victories before the weaker conflicting one.</div>
+                            </div>
+                        </div>
                     </section>
 
                     <section id="comparison">
