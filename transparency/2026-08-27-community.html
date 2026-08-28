@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+
+    <title>Community Meeting - August 27, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .resource-links { background: var(--color-bg-secondary); padding: 1.25rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .resource-links h3 { margin: 0 0 0.75rem 0; font-size: 1rem; }
+        .resource-links ul { list-style: none; padding: 0; margin: 0; }
+        .resource-links li { margin-bottom: 0.5rem; }
+        .resource-links a { color: var(--color-accent); font-weight: 500; }
+        .resource-links a:hover { text-decoration: underline; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 2rem; border-radius: 8px; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px; }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>Community Meeting</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Thursday 27 August 2026, 20:00 CEST</span>
+                    </div>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>With Daniel T (MC), C&eacute;line S, Anna T, Ellen K / Dr Plantes, Viktor V, Heather W, Yakir R, and community members</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Full Records</h3>
+                        <ul>
+                            <li><a href="2026-08-27-community-transcript.html">Full transcript (English only)</a></li>
+                            <li><a href="https://youtu.be/jf74SigJaXE">Video recording (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/jf74SigJaXE" title="Community Meeting - August 27, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>A shorter call (about 45 minutes) with two main threads: a status update on the 2027 event-dates survey and the road to the 17 September vote, and an introduction to the <strong>working groups</strong> system passed by the board on Monday &mdash; followed by the first working-group ideas from the floor and a presentation of the governance working group.</p>
+
+                        <h2>1. Event Dates &mdash; Survey Status and the Road to the Vote (Daniel T / C&eacute;line S)</h2>
+                        <ul>
+                            <li><strong>638 responses</strong> so far, of which roughly <strong>300 are identified</strong> (logged-in, unique) &mdash; just under half.</li>
+                            <li>Details are being withheld so as not to bias the vote, but: there is a clear pattern, including support for moving the dates away from early July; the shape is the same for identified and anonymous respondents; and it has <strong>not changed since the first 100 votes</strong> on the first night &mdash; at 100, 200, 300, 500 and 600 responses the distribution has looked the same. The survey nonetheless stays open for another week to gather more input.</li>
+                            <li>The <a href="../event-dates-2027.html">2027 Dates page</a> has been reorganised by C&eacute;line into something close to a proper information pack. Still missing: information from some other burns (in particular a contact who helps organise Burning Nest), the survey results, and how INAGA actually decides which permits to grant (the bird-nesting data itself is there). If you know anyone connected to another burn who has useful information, please share it.</li>
+                            <li><strong>Timeline:</strong> once the information is finalised, a remote asynchronous vote opens a few days before the <strong>General Assembly on 17 September</strong>, which holds the binding vote.</li>
+                            <li><strong>Ranked voting:</strong> because INAGA&rsquo;s answer on permits won&rsquo;t be in by the time of the vote (Spanish administration, August), the vote will be ranked. If the top-ranked date is refused, the next-ranked community choice applies automatically, with no new process.</li>
+                            <li><strong>Options on the ballot:</strong> following last week&rsquo;s consultation, the board will pre-select a set of dates rather than listing them all. Whether that is five or seven is still debated (see the board minutes). The current dates will probably be included &mdash; it would not look right to leave them out &mdash; and a &ldquo;null&rdquo; outcome remains possible by rejecting all options.</li>
+                        </ul>
+
+                        <h2>2. The Working Groups System (Daniel T)</h2>
+                        <p>Lots of people want to get things done between events, and it has historically been very hard to organise for anything that affects the whole event &mdash; even a sound policy. The board voted on Monday to establish <strong>working groups</strong>; the resolution and guidance are on the website under <em>Association &rarr; Working Groups</em>.</p>
+                        <ul>
+                            <li><strong>Deliberately not a centralising system.</strong> Authority does not flow from the board to the groups. Any community members who want to work on something get together and <strong>register</strong> a working group.</li>
+                            <li><strong>How to register:</strong> contact the secretary (Ben) with a name, the people coordinating it, what you&rsquo;re trying to do, and roughly when you expect to be done. The association then supports you as it can &mdash; a Discord channel, a section on the website for minutes and materials, and so on. It&rsquo;s a container for the work: a flag planted so others can find and join you.</li>
+                            <li><strong>Examples of what could be a working group:</strong> a sound policy; a statute change &mdash; e.g. the board would like an election to grow and diversify the board, but the statutes only allow one every two years unless someone steps down, so a working group could propose staggered annual elections with two-year terms; how departments should be defined and organised (explicitly left open by the resolution).</li>
+                            <li><strong>Guidance</strong> (no surprises for anyone following NCA): be transparent, engage with the people affected, publish your materials. The point is legitimacy: if someone finds out about a decision after the fact but can see they <em>could</em> have been involved, they tend to accept the process even if they disagree with the outcome. If it happened somewhere they had no way of knowing about, even people who agree with the decision may feel it was done without them.</li>
+                            <li><strong>Board approval is limited by design.</strong> The board can only reject a registration for a short list of reasons: duplicate of an existing group; so far out of scope it makes no sense; or claiming authority it doesn&rsquo;t have (e.g. a group to <em>allocate</em> the event budget to a charity &mdash; a group to <em>discuss</em> charitable donations would be fine). The board cannot reject a group simply because it doesn&rsquo;t like it.</li>
+                            <li>You don&rsquo;t have to be the person who does the work: mentioning an idea on a call means someone reading the minutes may pick it up.</li>
+                        </ul>
+
+                        <h3>Working groups vs. departments</h3>
+                        <p>Viktor V asked whether improving the Middle of Elsewhere &mdash; simplifying the technical setup, rethinking the stage and its construction after a very improvised year &mdash; is a working group or an existing department that just lacks a Discord channel. The distinction, as it stands: <strong>departments make the event happen</strong> (infrastructure, the Middle of Elsewhere build team); <strong>working groups make things happen between events</strong> and across them &mdash; the sound policy for the event, not the sound policy for 2027. Anna T&rsquo;s reading: a working group is people coming together to help the community reach a decision on something, which is then implemented, after which the group disbands &mdash; it&rsquo;s about the organisation rather than the making of the event, unlike permanent departments such as Consent or Cantina.</p>
+
+                        <h3>What comes out of a working group</h3>
+                        <p>Anna T noted that a working group can&rsquo;t simply reorganise something and impose it &mdash; the outcome is more likely a proposal that the community decides on. Daniel clarified that <strong>a vote is one mechanism, not the only one</strong>. Some decisions need everyone&rsquo;s buy-in through a transparent community-wide process &mdash; event dates are the clear case, since no date is right for everyone. But a group working out a better system for Cantina only needs the Cantina team to adopt it; the rest of the event doesn&rsquo;t need to vote, though planting the flag publicly means Cantina people who didn&rsquo;t know about the group feel they could have joined. Improvements to the Middle of Elsewhere need the Middle of Elsewhere team and whoever cares about it behind them, not a community vote. The community&rsquo;s independence is a feature: teams choose how they organise themselves; centralisation is needed only where coordination is unavoidable (sound policy, dates, permits). <strong>Talk to the people impacted by whatever you&rsquo;re doing.</strong></p>
+
+                        <h2>3. Working Group Ideas from the Floor</h2>
+                        <ul>
+                            <li><strong>Equipment and materials (Ellen K):</strong> Barrio Support had to reinvent the wheel this year because the team was new and had no access to the materials and infrastructure that other departments were able to draw on. The question of what the association owns, rents or needs to buy affects many departments and shouldn&rsquo;t be decided by a single coordinator or by Cantina or the Toolhouse alone in their corner. Ellen is looking for people to form a working group to think this through together. Contact: <a href="mailto:ellen@nobodies.team">ellen@nobodies.team</a> or <em>Dr Plantes</em> on Discord.</li>
+                            <li><strong>Sound policy:</strong> raised by Ellen and, repeatedly, by Daniel (&ldquo;I like to sleep&rdquo;). Viktor V offered to help. Looking for someone to start it.</li>
+                            <li><strong>Middle of Elsewhere (Viktor V):</strong> simplifying the technical setup and rethinking the stage design &mdash; a candidate for a working group or a Discord channel within the department; either way, involve the people who build it.</li>
+                            <li><strong>Art / artist support (Heather W):</strong> asked whether managing and supporting artists who want to bring art could be a working group. Answer: a <strong>Creativity department</strong> already exists with history, processes and a budget (about &euro;62,000 this year, up from a planned 50,000). Specific improvements could be a working group, but not without the people who have run that department.</li>
+                            <li>Also floated: replacing Discord (&ldquo;officially recorded: Discord&rsquo;s user interface is horrifying&rdquo; &mdash; a working group would need real community buy-in); better use of solar power and underground fridges; transitions to the new site. The <em>#2027-was-better</em> Discord channel is a good source of ideas (C&eacute;line S).</li>
+                        </ul>
+
+                        <h2>4. The Governance Working Group (C&eacute;line S / Anna T)</h2>
+                        <ul>
+                            <li>Presented as a worked example of a working group. Meets <strong>every second Monday at 16:00 CET</strong>; anyone can join &mdash; a heads-up to C&eacute;line beforehand is welcome but not required.</li>
+                            <li>Core purpose: empowering members to participate in the association. Principles so far: transparency; communicating with and educating members (the event-dates page is the example &mdash; making sure the GA can take informed decisions); facilitating discussion; defining participatory decision-making; helping working groups form &mdash; with the explicit note that forming a working group does <em>not</em> depend on the governance group.</li>
+                            <li>The document was put together by Kate, Anna, Bambi, Peter and C&eacute;line, with feedback from Daniel and Matt. Progress is shared in the governance Discord channel; the group&rsquo;s log shows agenda topics, status and owners. Feedback welcome.</li>
+                            <li>Anna T raised whether this is a working group at all or rather a <strong>seed bed</strong> that supports working groups; C&eacute;line&rsquo;s view is that decision-making processes are the core of the group, while topics like date selection are sub-streams. To be explored further on Monday. Daniel&rsquo;s comparison: the community call isn&rsquo;t a working group either, but working groups can emerge from it.</li>
+                        </ul>
+
+                        <h2>5. Barrio Features on Future Calls (Ellen K)</h2>
+                        <p>From September, Ellen will invite barrios onto community calls to show the cool things they&rsquo;ve built &mdash; to keep the creative energy and idea-sharing going through the year rather than losing it after the event. Several contacts already lined up (&ldquo;an intense amount of plumbing suggestions&rdquo;). If you&rsquo;re in a barrio and want to feature something, reach out.</p>
+
+                        <h2>6. Next Week&rsquo;s Call &mdash; Event Dates Perspectives</h2>
+                        <ul>
+                            <li>As requested last week, <strong>next week&rsquo;s community call is dedicated to sharing perspectives on the event dates</strong>. The 90-minute slot will be divided among whoever signs up; each person gets a fixed time, and the contributions will be recorded and minuted so they can become part of the information pack for the vote.</li>
+                            <li>So far <strong>nobody has actually asked to speak</strong>. If you want to make the case for particular dates, let the organisers know.</li>
+                            <li><strong>Please fill in the survey</strong> (it&rsquo;s the survey, not the vote) and share the link &mdash; also with people who go to other burns, or who used to come to a burn in Spain but stopped because of the heat. The survey&rsquo;s purpose is to establish when the event is <strong>commercially viable</strong>: if 60% of members can&rsquo;t come on a date, it doesn&rsquo;t matter that there&rsquo;s no wildfire risk &mdash; there won&rsquo;t be an event. The other side of the balance is wildfire risk and bird nesting. The link is at the top of the homepage: <a href="https://humans.nobodies.team/Survey/event-dates-2027">humans.nobodies.team/Survey/event-dates-2027</a>.</li>
+                        </ul>
+
+                        <h2>Decisions</h2>
+                        <ul>
+                            <li><strong>No decisions were taken on this call.</strong> The working-groups resolution was passed by the board on Monday; the event-dates vote takes place at the General Assembly on 17 September.</li>
+                        </ul>
+
+                        <h2>Action Items</h2>
+                        <table class="action-table">
+                            <tr><th>Action</th><th>Owner</th></tr>
+                            <tr><td>Fill in and share the event-dates survey (<a href="https://humans.nobodies.team/Survey/event-dates-2027">survey link</a>, also at the top of the homepage)</td><td>Everyone</td></tr>
+                            <tr><td>Sign up to speak about event dates on next week&rsquo;s call</td><td>Anyone with a perspective to share</td></tr>
+                            <tr><td>Find a contact involved in organising Burning Nest; pass any other burn information to the board / C&eacute;line</td><td>Community</td></tr>
+                            <tr><td>Register working groups via the secretary (name, coordinators, goals, timeline)</td><td>Anyone starting a group &rarr; Ben D</td></tr>
+                            <tr><td>Form a working group on equipment and materials</td><td>Ellen K (looking for members)</td></tr>
+                            <tr><td>Form a sound policy working group</td><td>Volunteer wanted (Viktor V offered to help)</td></tr>
+                            <tr><td>Open discussion on Middle of Elsewhere setup and stage design</td><td>Viktor V</td></tr>
+                            <tr><td>Line up barrios to feature on calls from September</td><td>Ellen K</td></tr>
+                            <tr><td>Continue exploring what the governance group is (working group vs. seed bed)</td><td>Governance group (Monday)</td></tr>
+                            <tr><td>Open the remote vote a few days before 17 September; ranked ballot with board-preselected dates</td><td>Board</td></tr>
+                        </table>
+
+                        <p><em>Next call: Thursday 3 September, 20:00 CEST &mdash; the Event Dates Call. Sign up to speak if you want your perspective on the record.</em></p>
+                        <p><em>Minutes prepared from the audio recording and full transcript.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
+                    <div class="lang-note">En caso de discrepancia entre esta versi&oacute;n y la versi&oacute;n en espa&ntilde;ol, prevalecer&aacute; la versi&oacute;n en espa&ntilde;ol.</div>
+
+                    <div class="attendees">
+                        <strong>Con Daniel T (MC), C&eacute;line S, Anna T, Ellen K / Dr Plantes, Viktor V, Heather W, Yakir R, y miembros de la comunidad</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Registros completos</h3>
+                        <ul>
+                            <li><a href="2026-08-27-community-transcript.html">Transcripci&oacute;n completa (solo en ingl&eacute;s)</a></li>
+                            <li><a href="https://youtu.be/jf74SigJaXE">Grabaci&oacute;n en v&iacute;deo (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/jf74SigJaXE" title="Community Meeting - August 27, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Una llamada m&aacute;s corta (unos 45 minutos) con dos hilos principales: una actualizaci&oacute;n del estado de la encuesta sobre las fechas del evento de 2027 y el camino hacia la votaci&oacute;n del 17 de septiembre, y una introducci&oacute;n al sistema de <strong>grupos de trabajo</strong> aprobado por la junta el lunes &mdash; seguida de las primeras ideas de grupos de trabajo planteadas desde el p&uacute;blico y una presentaci&oacute;n del grupo de trabajo de gobernanza.</p>
+
+                        <h2>1. Fechas del evento &mdash; Estado de la encuesta y el camino hacia la votaci&oacute;n (Daniel T / C&eacute;line S)</h2>
+                        <ul>
+                            <li><strong>638 respuestas</strong> hasta el momento, de las cuales aproximadamente <strong>300 est&aacute;n identificadas</strong> (con sesi&oacute;n iniciada, &uacute;nicas) &mdash; algo menos de la mitad.</li>
+                            <li>Los detalles se est&aacute;n reservando para no sesgar la votaci&oacute;n, pero: hay un patr&oacute;n claro, incluido el apoyo a alejar las fechas de principios de julio; la forma es la misma tanto para los encuestados identificados como para los an&oacute;nimos; y no ha cambiado desde los primeros 100 votos la primera noche &mdash; con 100, 200, 300, 500 y 600 respuestas la distribuci&oacute;n ha tenido el mismo aspecto. Aun as&iacute;, la encuesta seguir&aacute; abierta una semana m&aacute;s para recoger m&aacute;s aportaciones.</li>
+                            <li>La <a href="../event-dates-2027.html">p&aacute;gina de fechas de 2027</a> ha sido reorganizada por C&eacute;line hasta convertirse en algo cercano a un dossier informativo en condiciones. A&uacute;n falta: informaci&oacute;n de otros burns (en particular, un contacto que ayuda a organizar Burning Nest), los resultados de la encuesta, y c&oacute;mo decide INAGA realmente qu&eacute; permisos conceder (los datos sobre nidificaci&oacute;n de aves s&iacute; est&aacute;n). Si conoces a alguien relacionado con otro burn que tenga informaci&oacute;n &uacute;til, comp&aacute;rtela por favor.</li>
+                            <li><strong>Cronograma:</strong> una vez finalizada la informaci&oacute;n, se abrir&aacute; una votaci&oacute;n remota as&iacute;ncrona unos d&iacute;as antes de la <strong>Asamblea General del 17 de septiembre</strong>, que es la que celebra la votaci&oacute;n vinculante.</li>
+                            <li><strong>Votaci&oacute;n por orden de preferencia:</strong> como la respuesta de INAGA sobre los permisos no estar&aacute; lista para el momento de la votaci&oacute;n (administraci&oacute;n espa&ntilde;ola, agosto), la votaci&oacute;n ser&aacute; por orden de preferencia. Si se rechaza la fecha mejor clasificada, se aplica autom&aacute;ticamente la siguiente opci&oacute;n de la comunidad, sin necesidad de un nuevo proceso.</li>
+                            <li><strong>Opciones en la papeleta:</strong> tras la consulta de la semana pasada, la junta preseleccionar&aacute; un conjunto de fechas en lugar de incluirlas todas. Si ser&aacute;n cinco o siete todav&iacute;a se est&aacute; debatiendo (v&eacute;anse las actas de la junta). Es probable que se incluyan las fechas actuales &mdash; no quedar&iacute;a bien dejarlas fuera &mdash; y sigue siendo posible un resultado &ldquo;nulo&rdquo; rechazando todas las opciones.</li>
+                        </ul>
+
+                        <h2>2. El sistema de grupos de trabajo (Daniel T)</h2>
+                        <p>Mucha gente quiere sacar adelante cosas entre eventos, y hist&oacute;ricamente ha sido muy dif&iacute;cil organizarse para cualquier cosa que afecte a todo el evento &mdash; incluso una pol&iacute;tica de sonido. La junta vot&oacute; el lunes establecer los <strong>grupos de trabajo</strong>; la resoluci&oacute;n y las directrices est&aacute;n en la web, en <em>Asamblea General &rarr; Grupos de Trabajo</em>.</p>
+                        <ul>
+                            <li><strong>Deliberadamente, no es un sistema centralizador.</strong> La autoridad no fluye de la junta hacia los grupos. Cualquier miembro de la comunidad que quiera trabajar en algo se re&uacute;ne con otros y <strong>registra</strong> un grupo de trabajo.</li>
+                            <li><strong>C&oacute;mo registrarse:</strong> contacta con el secretario (Ben) indicando un nombre, las personas que lo coordinan, qu&eacute; se pretende hacer y, aproximadamente, cu&aacute;ndo se espera terminar. La asociaci&oacute;n entonces te apoya en lo que puede &mdash; un canal de Discord, una secci&oacute;n en la web para actas y materiales, etc&eacute;tera. Es un contenedor para el trabajo: una bandera plantada para que otros puedan encontrarte y unirse.</li>
+                            <li><strong>Ejemplos de lo que podr&iacute;a ser un grupo de trabajo:</strong> una pol&iacute;tica de sonido; un cambio de estatutos &mdash; por ejemplo, a la junta le gustar&iacute;a que hubiera una elecci&oacute;n para hacer crecer y diversificar la junta, pero los estatutos solo permiten una cada dos a&ntilde;os salvo que alguien dimita, as&iacute; que un grupo de trabajo podr&iacute;a proponer elecciones anuales escalonadas con mandatos de dos a&ntilde;os; c&oacute;mo deber&iacute;an definirse y organizarse los departamentos (algo que la resoluci&oacute;n deja expl&iacute;citamente abierto).</li>
+                            <li><strong>Directrices</strong> (nada sorprendente para quien sigue NCA): s&eacute; transparente, involucra a las personas afectadas, publica tus materiales. La cuesti&oacute;n es la legitimidad: si alguien se entera de una decisi&oacute;n despu&eacute;s de tomada pero puede ver que <em>podr&iacute;a</em> haber participado, tiende a aceptar el proceso aunque no est&eacute; de acuerdo con el resultado. Si ocurri&oacute; en un lugar del que no ten&iacute;a manera de enterarse, incluso quienes est&aacute;n de acuerdo con la decisi&oacute;n pueden sentir que se hizo sin contar con ellos.</li>
+                            <li><strong>La aprobaci&oacute;n de la junta est&aacute; limitada por dise&ntilde;o.</strong> La junta solo puede rechazar un registro por una lista breve de motivos: que duplique un grupo ya existente; que est&eacute; tan fuera de alcance que no tenga sentido; o que reclame una autoridad que no tiene (por ejemplo, un grupo para <em>asignar</em> el presupuesto del evento a una organizaci&oacute;n ben&eacute;fica &mdash; un grupo para <em>debatir</em> donaciones ben&eacute;ficas s&iacute; estar&iacute;a bien). La junta no puede rechazar un grupo simplemente porque no le guste.</li>
+                            <li>No hace falta ser la persona que hace el trabajo: mencionar una idea en una llamada puede hacer que alguien que lea las actas la retome.</li>
+                        </ul>
+
+                        <h3>Grupos de trabajo frente a departamentos</h3>
+                        <p>Viktor V pregunt&oacute; si mejorar el Middle of Elsewhere &mdash; simplificar la instalaci&oacute;n t&eacute;cnica, repensar el escenario y su construcci&oacute;n tras un a&ntilde;o muy improvisado &mdash; es un grupo de trabajo o un departamento ya existente al que simplemente le falta un canal de Discord. La distinci&oacute;n, tal como est&aacute;: los <strong>departamentos hacen que el evento suceda</strong> (infraestructura, el equipo de construcci&oacute;n del Middle of Elsewhere); los <strong>grupos de trabajo hacen que sucedan cosas entre eventos</strong> y a trav&eacute;s de ellos &mdash; la pol&iacute;tica de sonido para el evento, no la pol&iacute;tica de sonido para 2027. La lectura de Anna T: un grupo de trabajo es gente que se re&uacute;ne para ayudar a la comunidad a llegar a una decisi&oacute;n sobre algo, que luego se implementa, tras lo cual el grupo se disuelve &mdash; tiene que ver con la organizaci&oacute;n m&aacute;s que con la realizaci&oacute;n del evento, a diferencia de departamentos permanentes como Consent o Cantina.</p>
+
+                        <h3>Qu&eacute; sale de un grupo de trabajo</h3>
+                        <p>Anna T se&ntilde;al&oacute; que un grupo de trabajo no puede simplemente reorganizar algo e imponerlo &mdash; el resultado es m&aacute;s probablemente una propuesta que la comunidad decide. Daniel aclar&oacute; que <strong>una votaci&oacute;n es un mecanismo, no el &uacute;nico</strong>. Algunas decisiones necesitan el respaldo de todo el mundo a trav&eacute;s de un proceso transparente y comunitario &mdash; las fechas del evento son el caso claro, ya que ninguna fecha viene bien a todo el mundo. Pero un grupo que dise&ntilde;a un sistema mejor para Cantina solo necesita que el equipo de Cantina lo adopte; el resto del evento no necesita votar, aunque plantar la bandera p&uacute;blicamente hace que la gente de Cantina que no sab&iacute;a del grupo sienta que podr&iacute;a haberse unido. Las mejoras al Middle of Elsewhere necesitan al equipo del Middle of Elsewhere y a quienes se preocupan por &eacute;l detr&aacute;s, no una votaci&oacute;n comunitaria. La independencia de la comunidad es una caracter&iacute;stica: cada equipo elige c&oacute;mo organizarse; la centralizaci&oacute;n solo hace falta donde la coordinaci&oacute;n es inevitable (pol&iacute;tica de sonido, fechas, permisos). <strong>Habla con las personas afectadas por lo que sea que est&eacute;s haciendo.</strong></p>
+
+                        <h2>3. Ideas de grupos de trabajo planteadas desde el p&uacute;blico</h2>
+                        <ul>
+                            <li><strong>Equipamiento y materiales (Ellen K):</strong> Barrio Support tuvo que reinventar la rueda este a&ntilde;o porque el equipo era nuevo y no ten&iacute;a acceso a los materiales e infraestructura de los que otros departamentos s&iacute; pudieron disponer. La pregunta de qu&eacute; posee, alquila o necesita comprar la asociaci&oacute;n afecta a muchos departamentos y no deber&iacute;a decidirla en solitario un &uacute;nico coordinador, ni Cantina o el Toolhouse por su cuenta, cada uno en su rinc&oacute;n. Ellen busca gente para formar un grupo de trabajo y pensar esto juntos. Contacto: <a href="mailto:ellen@nobodies.team">ellen@nobodies.team</a> o <em>Dr Plantes</em> en Discord.</li>
+                            <li><strong>Pol&iacute;tica de sonido:</strong> planteada por Ellen y, repetidamente, por Daniel (&ldquo;me gusta dormir&rdquo;). Viktor V se ofreci&oacute; a ayudar. Se busca a alguien que la ponga en marcha.</li>
+                            <li><strong>Middle of Elsewhere (Viktor V):</strong> simplificar la instalaci&oacute;n t&eacute;cnica y repensar el dise&ntilde;o del escenario &mdash; un candidato a grupo de trabajo o a canal de Discord dentro del departamento; en cualquier caso, involucrando a quienes lo construyen.</li>
+                            <li><strong>Arte / apoyo a artistas (Heather W):</strong> pregunt&oacute; si gestionar y apoyar a los artistas que quieren traer arte podr&iacute;a ser un grupo de trabajo. Respuesta: ya existe un <strong>departamento de Creatividad</strong> con historia, procesos y un presupuesto (unos 62.000 &euro; este a&ntilde;o, frente a los 50.000 previstos). Mejoras concretas s&iacute; podr&iacute;an ser un grupo de trabajo, pero no sin las personas que han llevado ese departamento.</li>
+                            <li>Tambi&eacute;n se apunt&oacute;: sustituir Discord (&ldquo;que quede oficialmente registrado: la interfaz de usuario de Discord es horripilante&rdquo; &mdash; un grupo de trabajo necesitar&iacute;a un respaldo real de la comunidad); un mejor uso de la energ&iacute;a solar y las neveras subterr&aacute;neas; la transici&oacute;n al nuevo emplazamiento. El canal de Discord <em>#2027-was-better</em> es una buena fuente de ideas (C&eacute;line S).</li>
+                        </ul>
+
+                        <h2>4. El grupo de trabajo de gobernanza (C&eacute;line S / Anna T)</h2>
+                        <ul>
+                            <li>Presentado como ejemplo pr&aacute;ctico de grupo de trabajo. Se re&uacute;ne <strong>cada dos lunes a las 16:00 CET</strong>; cualquiera puede unirse &mdash; avisar a C&eacute;line de antemano es bienvenido, pero no obligatorio.</li>
+                            <li>Objetivo central: capacitar a los asociados para que participen en la asociaci&oacute;n. Principios definidos hasta ahora: transparencia; comunicar y formar a los asociados (la p&aacute;gina de fechas del evento es el ejemplo &mdash; asegurarse de que la Asamblea General pueda tomar decisiones informadas); facilitar el debate; definir la toma de decisiones participativa; ayudar a que se formen grupos de trabajo &mdash; con la nota expl&iacute;cita de que formar un grupo de trabajo <em>no</em> depende del grupo de gobernanza.</li>
+                            <li>El documento lo elaboraron Kate, Anna, Bambi, Peter y C&eacute;line, con comentarios de Daniel y Matt. El avance se comparte en el canal de Discord de gobernanza; el registro del grupo muestra los temas del orden del d&iacute;a, su estado y los responsables. Se agradecen los comentarios.</li>
+                            <li>Anna T plante&oacute; si esto es realmente un grupo de trabajo o m&aacute;s bien un <strong>semillero</strong> que apoya a los grupos de trabajo; la opini&oacute;n de C&eacute;line es que los procesos de toma de decisiones son el n&uacute;cleo del grupo, mientras que temas como la elecci&oacute;n de fechas son subl&iacute;neas de trabajo. Se seguir&aacute; explorando el lunes. La comparaci&oacute;n de Daniel: la llamada comunitaria tampoco es un grupo de trabajo, pero de ella pueden surgir grupos de trabajo.</li>
+                        </ul>
+
+                        <h2>5. Barrios protagonistas en futuras llamadas (Ellen K)</h2>
+                        <p>A partir de septiembre, Ellen invitar&aacute; a los barrios a las llamadas comunitarias para mostrar las cosas geniales que han construido &mdash; para mantener viva la energ&iacute;a creativa y el intercambio de ideas durante todo el a&ntilde;o, en lugar de perderla despu&eacute;s del evento. Ya hay varios contactos previstos (&ldquo;una cantidad intensa de sugerencias sobre fontaner&iacute;a&rdquo;). Si formas parte de un barrio y quieres mostrar algo, ponte en contacto.</p>
+
+                        <h2>6. La llamada de la semana que viene &mdash; Perspectivas sobre las fechas del evento</h2>
+                        <ul>
+                            <li>Tal y como se pidi&oacute; la semana pasada, <strong>la llamada comunitaria de la semana que viene se dedica a compartir perspectivas sobre las fechas del evento</strong>. La franja de 90 minutos se repartir&aacute; entre quienes se apunten; cada persona dispondr&aacute; de un tiempo fijo, y las intervenciones se grabar&aacute;n y quedar&aacute;n en acta para poder formar parte del dossier informativo de cara a la votaci&oacute;n.</li>
+                            <li>Por ahora, <strong>nadie se ha apuntado realmente para hablar</strong>. Si quieres defender fechas concretas, av&iacute;sale a los organizadores.</li>
+                            <li><strong>Por favor, rellena la encuesta</strong> (es la encuesta, no la votaci&oacute;n) y comparte el enlace &mdash; tambi&eacute;n con gente que va a otros burns, o que sol&iacute;a venir a un burn en Espa&ntilde;a pero dej&oacute; de hacerlo por el calor. El prop&oacute;sito de la encuesta es establecer cu&aacute;ndo el evento es <strong>comercialmente viable</strong>: si el 60% de los asociados no puede venir en una fecha determinada, da igual que no haya riesgo de incendio &mdash; no habr&aacute; evento. El otro lado de la balanza es el riesgo de incendio y la nidificaci&oacute;n de aves. El enlace est&aacute; en la parte superior de la p&aacute;gina de inicio: <a href="https://humans.nobodies.team/Survey/event-dates-2027">humans.nobodies.team/Survey/event-dates-2027</a>.</li>
+                        </ul>
+
+                        <h2>Decisiones</h2>
+                        <ul>
+                            <li><strong>No se tomaron decisiones en esta llamada.</strong> La resoluci&oacute;n sobre los grupos de trabajo fue aprobada por la junta el lunes; la votaci&oacute;n de las fechas del evento tendr&aacute; lugar en la Asamblea General del 17 de septiembre.</li>
+                        </ul>
+
+                        <h2>Acciones</h2>
+                        <table class="action-table">
+                            <tr><th>Acci&oacute;n</th><th>Responsable</th></tr>
+                            <tr><td>Rellenar y compartir la encuesta de fechas del evento (<a href="https://humans.nobodies.team/Survey/event-dates-2027">enlace a la encuesta</a>, tambi&eacute;n en la parte superior de la p&aacute;gina de inicio)</td><td>Todos</td></tr>
+                            <tr><td>Apuntarse para hablar sobre las fechas del evento en la llamada de la semana que viene</td><td>Cualquiera que quiera compartir su perspectiva</td></tr>
+                            <tr><td>Encontrar un contacto implicado en la organizaci&oacute;n de Burning Nest; trasladar cualquier informaci&oacute;n de otros burns a la junta / C&eacute;line</td><td>Comunidad</td></tr>
+                            <tr><td>Registrar los grupos de trabajo a trav&eacute;s del secretario (nombre, coordinadores, objetivos, cronograma)</td><td>Quien inicie un grupo &rarr; Ben D</td></tr>
+                            <tr><td>Formar un grupo de trabajo sobre equipamiento y materiales</td><td>Ellen K (busca miembros)</td></tr>
+                            <tr><td>Formar un grupo de trabajo de pol&iacute;tica de sonido</td><td>Se busca voluntario/a (Viktor V se ofreci&oacute; a ayudar)</td></tr>
+                            <tr><td>Abrir el debate sobre la instalaci&oacute;n del Middle of Elsewhere y el dise&ntilde;o del escenario</td><td>Viktor V</td></tr>
+                            <tr><td>Preparar barrios para participar en las llamadas a partir de septiembre</td><td>Ellen K</td></tr>
+                            <tr><td>Seguir explorando qu&eacute; es el grupo de gobernanza (grupo de trabajo o semillero)</td><td>Grupo de gobernanza (lunes)</td></tr>
+                            <tr><td>Abrir la votaci&oacute;n remota unos d&iacute;as antes del 17 de septiembre; papeleta por orden de preferencia con fechas preseleccionadas por la junta</td><td>Junta</td></tr>
+                        </table>
+
+                        <p><em>Pr&oacute;xima llamada: jueves 3 de septiembre, 20:00 CEST &mdash; la Llamada de Fechas del Evento. Ap&uacute;ntate para hablar si quieres que tu perspectiva quede registrada en acta.</em></p>
+                        <p><em>Acta preparada a partir de la grabaci&oacute;n de audio y la transcripci&oacute;n completa.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaut.</div>
+
+                    <div class="attendees">
+                        <strong>Avec Daniel T (animateur), C&eacute;line S, Anna T, Ellen K / Dr Plantes, Viktor V, Heather W, Yakir R, et des membres de la communaut&eacute;</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Documents complets</h3>
+                        <ul>
+                            <li><a href="2026-08-27-community-transcript.html">Transcription compl&egrave;te (en anglais uniquement)</a></li>
+                            <li><a href="https://youtu.be/jf74SigJaXE">Enregistrement vid&eacute;o (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/jf74SigJaXE" title="Community Meeting - August 27, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Un appel plus court (environ 45 minutes) avec deux fils conducteurs principaux&nbsp;: un point d&rsquo;&eacute;tape sur le sondage des dates de l&rsquo;&eacute;v&eacute;nement 2027 et le chemin vers le vote du 17 septembre, et une pr&eacute;sentation du syst&egrave;me des <strong>groupes de travail</strong> adopt&eacute; par le conseil lundi &mdash; suivie des premi&egrave;res id&eacute;es de groupes de travail propos&eacute;es par les participants et d&rsquo;une pr&eacute;sentation du groupe de travail sur la gouvernance.</p>
+
+                        <h2>1. Dates de l&rsquo;&eacute;v&eacute;nement &mdash; &Eacute;tat du sondage et chemin vers le vote (Daniel T / C&eacute;line S)</h2>
+                        <ul>
+                            <li><strong>638 r&eacute;ponses</strong> &agrave; ce jour, dont environ <strong>300 sont identifi&eacute;es</strong> (connect&eacute;es, uniques) &mdash; un peu moins de la moiti&eacute;.</li>
+                            <li>Les d&eacute;tails restent confidentiels pour ne pas influencer le vote, mais&nbsp;: une tendance claire se dessine, notamment un soutien pour &eacute;loigner les dates du d&eacute;but juillet&nbsp;; la forme est la m&ecirc;me pour les r&eacute;pondants identifi&eacute;s et anonymes&nbsp;; et elle n&rsquo;a <strong>pas chang&eacute; depuis les 100 premiers votes</strong> de la premi&egrave;re soir&eacute;e &mdash; &agrave; 100, 200, 300, 500 et 600 r&eacute;ponses, la distribution est rest&eacute;e la m&ecirc;me. Le sondage reste n&eacute;anmoins ouvert une semaine de plus pour recueillir davantage d&rsquo;avis.</li>
+                            <li>La <a href="../event-dates-2027.html">page des dates 2027</a> a &eacute;t&eacute; r&eacute;organis&eacute;e par C&eacute;line pour se rapprocher d&rsquo;un vrai dossier d&rsquo;information. Il manque encore&nbsp;: des informations d&rsquo;autres burns (en particulier un contact qui aide &agrave; organiser Burning Nest), les r&eacute;sultats du sondage, et la mani&egrave;re dont l&rsquo;INAGA d&eacute;cide r&eacute;ellement quels permis accorder (les donn&eacute;es sur la nidification des oiseaux, elles, sont d&eacute;j&agrave; l&agrave;). Si vous connaissez quelqu&rsquo;un li&eacute; &agrave; un autre burn qui d&eacute;tient des informations utiles, merci de les partager.</li>
+                            <li><strong>Calendrier&nbsp;:</strong> une fois les informations finalis&eacute;es, un vote &agrave; distance asynchrone s&rsquo;ouvrira quelques jours avant l&rsquo;<strong>Assembl&eacute;e G&eacute;n&eacute;rale du 17 septembre</strong>, qui tient le vote contraignant.</li>
+                            <li><strong>Vote class&eacute;&nbsp;:</strong> comme la r&eacute;ponse de l&rsquo;INAGA sur les permis ne sera pas connue au moment du vote (administration espagnole, ao&ucirc;t), le vote se fera par classement. Si la date la mieux class&eacute;e est refus&eacute;e, le choix suivant de la communaut&eacute; s&rsquo;applique automatiquement, sans nouvelle proc&eacute;dure.</li>
+                            <li><strong>Options sur le bulletin&nbsp;:</strong> suite &agrave; la consultation de la semaine derni&egrave;re, le conseil pr&eacute;s&eacute;lectionnera un ensemble de dates plut&ocirc;t que de toutes les lister. Le nombre &mdash; cinq ou sept &mdash; fait encore d&eacute;bat (voir le compte-rendu du conseil). Les dates actuelles seront probablement incluses &mdash; il ne serait pas correct de les exclure &mdash; et un r&eacute;sultat &laquo;&nbsp;nul&nbsp;&raquo; reste possible en rejetant toutes les options.</li>
+                        </ul>
+
+                        <h2>2. Le syst&egrave;me des groupes de travail (Daniel T)</h2>
+                        <p>Beaucoup de gens veulent faire avancer les choses entre les &eacute;v&eacute;nements, et il a toujours &eacute;t&eacute; tr&egrave;s difficile de s&rsquo;organiser pour tout ce qui concerne l&rsquo;&eacute;v&eacute;nement dans son ensemble &mdash; m&ecirc;me une politique sonore. Le conseil a vot&eacute; lundi la mise en place des <strong>groupes de travail</strong>&nbsp;; la r&eacute;solution et les directives sont sur le site sous <em>Association &rarr; Working Groups</em>.</p>
+                        <ul>
+                            <li><strong>D&eacute;lib&eacute;r&eacute;ment pas un syst&egrave;me centralisateur.</strong> L&rsquo;autorit&eacute; ne descend pas du conseil vers les groupes. Tout membre de la communaut&eacute; qui souhaite travailler sur quelque chose peut se r&eacute;unir avec d&rsquo;autres et <strong>enregistrer</strong> un groupe de travail.</li>
+                            <li><strong>Comment s&rsquo;enregistrer&nbsp;:</strong> contactez le secr&eacute;taire (Ben) avec un nom, les personnes qui le coordonnent, ce que vous cherchez &agrave; faire, et une estimation approximative du d&eacute;lai. L&rsquo;association vous soutient alors du mieux qu&rsquo;elle peut &mdash; un canal Discord, une section du site pour les comptes-rendus et les documents, etc. C&rsquo;est un cadre pour le travail&nbsp;: un drapeau plant&eacute; pour que d&rsquo;autres puissent vous trouver et vous rejoindre.</li>
+                            <li><strong>Exemples de ce qui pourrait &ecirc;tre un groupe de travail&nbsp;:</strong> une politique sonore&nbsp;; une modification des statuts &mdash; par exemple, le conseil souhaiterait une &eacute;lection permettant de faire grandir et de diversifier le conseil, mais les statuts n&rsquo;en autorisent qu&rsquo;une tous les deux ans sauf d&eacute;mission, donc un groupe de travail pourrait proposer des &eacute;lections annuelles &eacute;chelonn&eacute;es avec des mandats de deux ans&nbsp;; la fa&ccedil;on dont les d&eacute;partements devraient &ecirc;tre d&eacute;finis et organis&eacute;s (question explicitement laiss&eacute;e ouverte par la r&eacute;solution).</li>
+                            <li><strong>Directives</strong> (rien de surprenant pour qui suit la NCA)&nbsp;: soyez transparents, dialoguez avec les personnes concern&eacute;es, publiez vos documents. L&rsquo;enjeu est la l&eacute;gitimit&eacute;&nbsp;: si quelqu&rsquo;un apprend une d&eacute;cision apr&egrave;s coup mais peut constater qu&rsquo;il <em>aurait pu</em> &ecirc;tre impliqu&eacute;, il a tendance &agrave; accepter le processus m&ecirc;me s&rsquo;il n&rsquo;est pas d&rsquo;accord avec le r&eacute;sultat. Si cela s&rsquo;est pass&eacute; d&rsquo;une mani&egrave;re dont il n&rsquo;avait aucun moyen d&rsquo;avoir connaissance, m&ecirc;me des personnes d&rsquo;accord avec la d&eacute;cision peuvent avoir l&rsquo;impression que cela s&rsquo;est fait sans elles.</li>
+                            <li><strong>L&rsquo;approbation du conseil est volontairement limit&eacute;e.</strong> Le conseil ne peut rejeter un enregistrement que pour une courte liste de raisons&nbsp;: doublon d&rsquo;un groupe existant&nbsp;; hors p&eacute;rim&egrave;tre au point de n&rsquo;avoir aucun sens&nbsp;; ou revendication d&rsquo;une autorit&eacute; qu&rsquo;il n&rsquo;a pas (par exemple un groupe pour <em>attribuer</em> le budget de l&rsquo;&eacute;v&eacute;nement &agrave; une association caritative &mdash; un groupe pour <em>discuter</em> de dons caritatifs serait, lui, acceptable). Le conseil ne peut pas rejeter un groupe simplement parce qu&rsquo;il ne l&rsquo;appr&eacute;cie pas.</li>
+                            <li>Vous n&rsquo;avez pas &agrave; &ecirc;tre la personne qui fait le travail&nbsp;: mentionner une id&eacute;e lors d&rsquo;un appel peut suffire &agrave; ce que quelqu&rsquo;un lisant le compte-rendu s&rsquo;en saisisse.</li>
+                        </ul>
+
+                        <h3>Groupes de travail vs. d&eacute;partements</h3>
+                        <p>Viktor V a demand&eacute; si am&eacute;liorer le Middle of Elsewhere &mdash; simplifier l&rsquo;installation technique, repenser la sc&egrave;ne et sa construction apr&egrave;s une ann&eacute;e tr&egrave;s improvis&eacute;e &mdash; rel&egrave;ve d&rsquo;un groupe de travail ou d&rsquo;un d&eacute;partement existant qui manque simplement d&rsquo;un canal Discord. La distinction, en l&rsquo;&eacute;tat&nbsp;: <strong>les d&eacute;partements font arriver l&rsquo;&eacute;v&eacute;nement</strong> (infrastructure, l&rsquo;&eacute;quipe de construction du Middle of Elsewhere)&nbsp;; <strong>les groupes de travail font avancer les choses entre les &eacute;v&eacute;nements</strong> et &agrave; travers eux &mdash; la politique sonore de l&rsquo;&eacute;v&eacute;nement, et non la politique sonore pour 2027. La lecture d&rsquo;Anna T&nbsp;: un groupe de travail rassemble des personnes pour aider la communaut&eacute; &agrave; prendre une d&eacute;cision sur quelque chose, qui est ensuite mise en &oelig;uvre, apr&egrave;s quoi le groupe se dissout &mdash; il s&rsquo;agit de l&rsquo;organisation plut&ocirc;t que de la r&eacute;alisation de l&rsquo;&eacute;v&eacute;nement, &agrave; la diff&eacute;rence des d&eacute;partements permanents comme Consent ou Cantina.</p>
+
+                        <h3>Ce qui sort d&rsquo;un groupe de travail</h3>
+                        <p>Anna T a fait remarquer qu&rsquo;un groupe de travail ne peut pas simplement r&eacute;organiser quelque chose et l&rsquo;imposer &mdash; le r&eacute;sultat est plut&ocirc;t une proposition sur laquelle la communaut&eacute; se prononce. Daniel a pr&eacute;cis&eacute; qu&rsquo;<strong>un vote est un m&eacute;canisme parmi d&rsquo;autres, pas le seul</strong>. Certaines d&eacute;cisions n&eacute;cessitent l&rsquo;adh&eacute;sion de tous via un processus communautaire transparent &mdash; les dates de l&rsquo;&eacute;v&eacute;nement en sont l&rsquo;exemple &eacute;vident, puisqu&rsquo;aucune date ne convient &agrave; tout le monde. Mais un groupe qui &eacute;labore un meilleur syst&egrave;me pour Cantina n&rsquo;a besoin que l&rsquo;&eacute;quipe Cantina l&rsquo;adopte&nbsp;; le reste de l&rsquo;&eacute;v&eacute;nement n&rsquo;a pas &agrave; voter, m&ecirc;me si planter le drapeau publiquement permet aux personnes de Cantina qui ne connaissaient pas le groupe de sentir qu&rsquo;elles auraient pu le rejoindre. Les am&eacute;liorations du Middle of Elsewhere ont besoin de l&rsquo;&eacute;quipe du Middle of Elsewhere et de quiconque s&rsquo;en soucie derri&egrave;re elles, pas d&rsquo;un vote communautaire. L&rsquo;ind&eacute;pendance de la communaut&eacute; est une caract&eacute;ristique voulue&nbsp;: les &eacute;quipes choisissent comment elles s&rsquo;organisent&nbsp;; la centralisation n&rsquo;est n&eacute;cessaire que l&agrave; o&ugrave; la coordination est incontournable (politique sonore, dates, permis). <strong>Parlez aux personnes concern&eacute;es par ce que vous faites.</strong></p>
+
+                        <h2>3. Id&eacute;es de groupes de travail propos&eacute;es par les participants</h2>
+                        <ul>
+                            <li><strong>&Eacute;quipement et mat&eacute;riel (Ellen K)&nbsp;:</strong> Barrio Support a d&ucirc; r&eacute;inventer la roue cette ann&eacute;e car l&rsquo;&eacute;quipe &eacute;tait nouvelle et n&rsquo;avait pas acc&egrave;s au mat&eacute;riel et &agrave; l&rsquo;infrastructure dont d&rsquo;autres d&eacute;partements pouvaient disposer. La question de ce que l&rsquo;association poss&egrave;de, loue ou doit acheter concerne de nombreux d&eacute;partements et ne devrait pas &ecirc;tre d&eacute;cid&eacute;e par un seul coordinateur ou par Cantina ou le Toolhouse seuls dans leur coin. Ellen cherche des personnes pour former un groupe de travail afin d&rsquo;y r&eacute;fl&eacute;chir ensemble. Contact&nbsp;: <a href="mailto:ellen@nobodies.team">ellen@nobodies.team</a> ou <em>Dr Plantes</em> sur Discord.</li>
+                            <li><strong>Politique sonore&nbsp;:</strong> soulev&eacute;e par Ellen et, &agrave; plusieurs reprises, par Daniel (&laquo;&nbsp;j&rsquo;aime dormir&nbsp;&raquo;). Viktor V a propos&eacute; son aide. On cherche quelqu&rsquo;un pour s&rsquo;en occuper.</li>
+                            <li><strong>Middle of Elsewhere (Viktor V)&nbsp;:</strong> simplifier l&rsquo;installation technique et repenser la conception de la sc&egrave;ne &mdash; un bon candidat pour un groupe de travail ou un canal Discord au sein du d&eacute;partement&nbsp;; dans tous les cas, impliquer les personnes qui la construisent.</li>
+                            <li><strong>Art / soutien aux artistes (Heather W)&nbsp;:</strong> a demand&eacute; si g&eacute;rer et soutenir les artistes qui souhaitent apporter des &oelig;uvres pourrait &ecirc;tre un groupe de travail. R&eacute;ponse&nbsp;: un <strong>d&eacute;partement Cr&eacute;ativit&eacute;</strong> existe d&eacute;j&agrave;, avec un historique, des processus et un budget (environ 62&nbsp;000&nbsp;&euro; cette ann&eacute;e, contre 50&nbsp;000 pr&eacute;vus). Des am&eacute;liorations sp&eacute;cifiques pourraient faire l&rsquo;objet d&rsquo;un groupe de travail, mais pas sans les personnes qui ont dirig&eacute; ce d&eacute;partement.</li>
+                            <li>&Eacute;galement &eacute;voqu&eacute;&nbsp;: remplacer Discord (&laquo;&nbsp;pour le compte-rendu&nbsp;: l&rsquo;interface utilisateur de Discord est effrayante&nbsp;&raquo; &mdash; un groupe de travail aurait besoin d&rsquo;une vraie adh&eacute;sion de la communaut&eacute;)&nbsp;; une meilleure utilisation de l&rsquo;&eacute;nergie solaire et des r&eacute;frig&eacute;rateurs souterrains&nbsp;; la transition vers le nouveau site. Le canal Discord <em>#2027-was-better</em> est une bonne source d&rsquo;id&eacute;es (C&eacute;line S).</li>
+                        </ul>
+
+                        <h2>4. Le groupe de travail sur la gouvernance (C&eacute;line S / Anna T)</h2>
+                        <ul>
+                            <li>Pr&eacute;sent&eacute; comme un exemple concret de groupe de travail. Se r&eacute;unit <strong>un lundi sur deux &agrave; 16h00 CET</strong>&nbsp;; tout le monde peut se joindre &mdash; pr&eacute;venir C&eacute;line &agrave; l&rsquo;avance est appr&eacute;ci&eacute; mais pas obligatoire.</li>
+                            <li>Objectif central&nbsp;: donner aux membres les moyens de participer &agrave; l&rsquo;association. Principes retenus jusqu&rsquo;ici&nbsp;: la transparence&nbsp;; communiquer avec les membres et les informer (la page des dates de l&rsquo;&eacute;v&eacute;nement en est l&rsquo;exemple &mdash; s&rsquo;assurer que l&rsquo;<strong>Assembl&eacute;e G&eacute;n&eacute;rale</strong> puisse prendre des d&eacute;cisions inform&eacute;es)&nbsp;; faciliter la discussion&nbsp;; d&eacute;finir une prise de d&eacute;cision participative&nbsp;; aider les groupes de travail &agrave; se former &mdash; avec la pr&eacute;cision explicite que la formation d&rsquo;un groupe de travail ne d&eacute;pend <em>pas</em> du groupe de gouvernance.</li>
+                            <li>Le document a &eacute;t&eacute; r&eacute;dig&eacute; par Kate, Anna, Bambi, Peter et C&eacute;line, avec les retours de Daniel et Matt. L&rsquo;avancement est partag&eacute; dans le canal Discord de la gouvernance&nbsp;; le journal du groupe indique les sujets &agrave; l&rsquo;ordre du jour, leur statut et leurs responsables. Vos retours sont les bienvenus.</li>
+                            <li>Anna T s&rsquo;est demand&eacute; si c&rsquo;est vraiment un groupe de travail ou plut&ocirc;t une <strong>p&eacute;pini&egrave;re</strong> qui soutient les groupes de travail&nbsp;; pour C&eacute;line, les processus de prise de d&eacute;cision sont le c&oelig;ur du groupe, tandis que des sujets comme le choix des dates en sont des sous-th&eacute;matiques. &Agrave; approfondir lundi. La comparaison de Daniel&nbsp;: l&rsquo;appel communautaire n&rsquo;est pas non plus un groupe de travail, mais des groupes de travail peuvent en &eacute;merger.</li>
+                        </ul>
+
+                        <h2>5. Pr&eacute;sentations de barrios lors des prochains appels (Ellen K)</h2>
+                        <p>&Agrave; partir de septembre, Ellen invitera des barrios sur les appels communautaires pour montrer les choses g&eacute;niales qu&rsquo;ils ont construites &mdash; afin de garder vivante l&rsquo;&eacute;nergie cr&eacute;ative et le partage d&rsquo;id&eacute;es tout au long de l&rsquo;ann&eacute;e plut&ocirc;t que de les perdre apr&egrave;s l&rsquo;&eacute;v&eacute;nement. Plusieurs contacts sont d&eacute;j&agrave; pr&eacute;vus (&laquo;&nbsp;une quantit&eacute; impressionnante de suggestions de plomberie&nbsp;&raquo;). Si vous faites partie d&rsquo;un barrio et voulez pr&eacute;senter quelque chose, faites-vous conna&icirc;tre.</p>
+
+                        <h2>6. L&rsquo;appel de la semaine prochaine &mdash; Perspectives sur les dates de l&rsquo;&eacute;v&eacute;nement</h2>
+                        <ul>
+                            <li>Comme demand&eacute; la semaine derni&egrave;re, <strong>l&rsquo;appel communautaire de la semaine prochaine sera consacr&eacute; au partage de perspectives sur les dates de l&rsquo;&eacute;v&eacute;nement</strong>. Le cr&eacute;neau de 90 minutes sera r&eacute;parti entre celles et ceux qui s&rsquo;inscrivent&nbsp;; chaque personne dispose d&rsquo;un temps fixe, et les contributions seront enregistr&eacute;es et consign&eacute;es dans le compte-rendu afin de pouvoir int&eacute;grer le dossier d&rsquo;information pour le vote.</li>
+                            <li>Pour l&rsquo;instant, <strong>personne n&rsquo;a encore demand&eacute; &agrave; prendre la parole</strong>. Si vous voulez plaider pour des dates particuli&egrave;res, faites-le savoir aux organisateurs.</li>
+                            <li><strong>Merci de remplir le sondage</strong> (c&rsquo;est le sondage, pas le vote) et de partager le lien &mdash; y compris avec des personnes qui fr&eacute;quentent d&rsquo;autres burns, ou qui venaient &agrave; un burn en Espagne mais ont arr&ecirc;t&eacute; &agrave; cause de la chaleur. Le sondage a pour but d&rsquo;&eacute;tablir quand l&rsquo;&eacute;v&eacute;nement est <strong>viable commercialement</strong>&nbsp;: si 60&nbsp;% des membres ne peuvent pas venir &agrave; une date donn&eacute;e, peu importe qu&rsquo;il n&rsquo;y ait aucun risque d&rsquo;incendie de for&ecirc;t &mdash; il n&rsquo;y aura pas d&rsquo;&eacute;v&eacute;nement. L&rsquo;autre c&ocirc;t&eacute; de la balance, c&rsquo;est le risque d&rsquo;incendie et la nidification des oiseaux. Le lien se trouve en haut de la page d&rsquo;accueil&nbsp;: <a href="https://humans.nobodies.team/Survey/event-dates-2027">humans.nobodies.team/Survey/event-dates-2027</a>.</li>
+                        </ul>
+
+                        <h2>D&eacute;cisions</h2>
+                        <ul>
+                            <li><strong>Aucune d&eacute;cision n&rsquo;a &eacute;t&eacute; prise lors de cet appel.</strong> La r&eacute;solution sur les groupes de travail a &eacute;t&eacute; adopt&eacute;e par le conseil lundi&nbsp;; le vote sur les dates de l&rsquo;&eacute;v&eacute;nement aura lieu lors de l&rsquo;<strong>Assembl&eacute;e G&eacute;n&eacute;rale du 17 septembre</strong>.</li>
+                        </ul>
+
+                        <h2>Actions</h2>
+                        <table class="action-table">
+                            <tr><th>Action</th><th>Responsable</th></tr>
+                            <tr><td>Remplir et partager le sondage sur les dates de l&rsquo;&eacute;v&eacute;nement (<a href="https://humans.nobodies.team/Survey/event-dates-2027">lien vers le sondage</a>, aussi en haut de la page d&rsquo;accueil)</td><td>Tout le monde</td></tr>
+                            <tr><td>S&rsquo;inscrire pour s&rsquo;exprimer sur les dates de l&rsquo;&eacute;v&eacute;nement lors de l&rsquo;appel de la semaine prochaine</td><td>Toute personne ayant un point de vue &agrave; partager</td></tr>
+                            <tr><td>Trouver un contact impliqu&eacute; dans l&rsquo;organisation de Burning Nest&nbsp;; transmettre toute information sur d&rsquo;autres burns au conseil / &agrave; C&eacute;line</td><td>Communaut&eacute;</td></tr>
+                            <tr><td>Enregistrer les groupes de travail aupr&egrave;s du secr&eacute;taire (nom, coordinateurs, objectifs, calendrier)</td><td>Toute personne lan&ccedil;ant un groupe &rarr; Ben D</td></tr>
+                            <tr><td>Former un groupe de travail sur l&rsquo;&eacute;quipement et le mat&eacute;riel</td><td>Ellen K (cherche des membres)</td></tr>
+                            <tr><td>Former un groupe de travail sur la politique sonore</td><td>Volontaire recherch&eacute; (Viktor V a propos&eacute; son aide)</td></tr>
+                            <tr><td>Ouvrir la discussion sur l&rsquo;installation du Middle of Elsewhere et la conception de la sc&egrave;ne</td><td>Viktor V</td></tr>
+                            <tr><td>Programmer des barrios pour les appels &agrave; partir de septembre</td><td>Ellen K</td></tr>
+                            <tr><td>Continuer &agrave; d&eacute;finir la nature du groupe de gouvernance (groupe de travail ou p&eacute;pini&egrave;re)</td><td>Groupe de gouvernance (lundi)</td></tr>
+                            <tr><td>Ouvrir le vote &agrave; distance quelques jours avant le 17 septembre&nbsp;; bulletin class&eacute; avec dates pr&eacute;s&eacute;lectionn&eacute;es par le conseil</td><td>Conseil</td></tr>
+                        </table>
+
+                        <p><em>Prochain appel&nbsp;: jeudi 3 septembre, 20h00 CEST &mdash; l&rsquo;appel sur les dates de l&rsquo;&eacute;v&eacute;nement. Inscrivez-vous pour prendre la parole si vous voulez que votre point de vue figure au compte-rendu.</em></p>
+                        <p><em>Compte-rendu r&eacute;dig&eacute; &agrave; partir de l&rsquo;enregistrement audio et de la transcription compl&egrave;te.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevale la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Con Daniel T (MC), C&eacute;line S, Anna T, Ellen K / Dr Plantes, Viktor V, Heather W, Yakir R, e membri della comunit&agrave;</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Documentazione completa</h3>
+                        <ul>
+                            <li><a href="2026-08-27-community-transcript.html">Trascrizione completa (solo in inglese)</a></li>
+                            <li><a href="https://youtu.be/jf74SigJaXE">Registrazione video (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/jf74SigJaXE" title="Community Meeting - August 27, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Una chiamata pi&ugrave; breve (circa 45 minuti) con due filoni principali: un aggiornamento sullo stato del sondaggio sulle date dell'evento 2027 e il percorso verso il voto del 17 settembre, e una presentazione del sistema dei <strong>gruppi di lavoro</strong> approvato dal consiglio luned&igrave; &mdash; seguita dalle prime idee di gruppi di lavoro proposte dalla platea e da una presentazione del gruppo di lavoro sulla governance.</p>
+
+                        <h2>1. Date dell'Evento &mdash; Stato del Sondaggio e il Percorso verso il Voto (Daniel T / C&eacute;line S)</h2>
+                        <ul>
+                            <li><strong>638 risposte</strong> finora, di cui circa <strong>300 identificate</strong> (autenticate, uniche) &mdash; poco meno della met&agrave;.</li>
+                            <li>I dettagli vengono tenuti riservati per non influenzare il voto, ma: c'&egrave; una tendenza chiara, incluso un sostegno per spostare le date lontano dai primi di luglio; la forma &egrave; la stessa per chi ha risposto identificato e chi in forma anonima; e non &egrave; cambiata dai primi 100 voti della prima sera &mdash; a 100, 200, 300, 500 e 600 risposte la distribuzione &egrave; apparsa identica. Il sondaggio resta comunque aperto per un'altra settimana per raccogliere ulteriori contributi.</li>
+                            <li>La <a href="../event-dates-2027.html">pagina Date 2027</a> &egrave; stata riorganizzata da C&eacute;line in qualcosa di simile a un vero e proprio dossier informativo. Manca ancora: informazioni da altri burn (in particolare un contatto che aiuta a organizzare Burning Nest), i risultati del sondaggio, e come INAGA decida effettivamente quali permessi concedere (i dati sulla nidificazione degli uccelli sono gi&agrave; presenti). Se conoscete qualcuno legato a un altro burn che abbia informazioni utili, per favore condividetele.</li>
+                            <li><strong>Tempistica:</strong> una volta finalizzate le informazioni, un voto remoto asincrono si apre alcuni giorni prima dell'<strong>Assemblea Generale del 17 settembre</strong>, che detiene il voto vincolante.</li>
+                            <li><strong>Voto per preferenza ordinata:</strong> poich&eacute; la risposta di INAGA sui permessi non sar&agrave; disponibile entro il momento del voto (amministrazione spagnola, agosto), il voto sar&agrave; a preferenza ordinata. Se la data classificata al primo posto viene rifiutata, si applica automaticamente la scelta successiva della comunit&agrave;, senza bisogno di un nuovo processo.</li>
+                            <li><strong>Opzioni sulla scheda:</strong> a seguito della consultazione della settimana scorsa, il consiglio preselezioner&agrave; un insieme di date invece di elencarle tutte. Se saranno cinque o sette &egrave; ancora in discussione (vedi i verbali del consiglio). Le date attuali saranno probabilmente incluse &mdash; non sembrerebbe corretto escluderle &mdash; e resta possibile un esito &ldquo;nullo&rdquo; rifiutando tutte le opzioni.</li>
+                        </ul>
+
+                        <h2>2. Il Sistema dei Gruppi di Lavoro (Daniel T)</h2>
+                        <p>Molte persone vogliono portare avanti iniziative tra un evento e l'altro, e storicamente &egrave; sempre stato molto difficile organizzarsi per qualsiasi cosa riguardi l'intero evento &mdash; anche solo una policy sul rumore. Luned&igrave; il consiglio ha votato per istituire i <strong>gruppi di lavoro</strong>; la delibera e le linee guida sono sul sito, sotto <em>Associazione &rarr; Gruppi di Lavoro</em>.</p>
+                        <ul>
+                            <li><strong>Deliberatamente non un sistema centralizzante.</strong> L'autorit&agrave; non fluisce dal consiglio ai gruppi. Qualsiasi membro della comunit&agrave; che voglia lavorare su qualcosa si riunisce e <strong>registra</strong> un gruppo di lavoro.</li>
+                            <li><strong>Come registrarsi:</strong> contattare il segretario (Ben) indicando un nome, le persone che lo coordinano, cosa si intende fare e all'incirca quando si prevede di concludere. L'associazione poi vi sostiene come pu&ograve;: un canale Discord, una sezione sul sito per verbali e materiali, e cos&igrave; via. &Egrave; un contenitore per il lavoro: una bandierina piantata affinch&eacute; altri possano trovarvi e unirsi.</li>
+                            <li><strong>Esempi di cosa potrebbe essere un gruppo di lavoro:</strong> una policy sul rumore; una modifica allo statuto &mdash; ad esempio il consiglio vorrebbe un'elezione per far crescere e diversificare il consiglio stesso, ma lo statuto ne permette una solo ogni due anni a meno che qualcuno non si dimetta, quindi un gruppo di lavoro potrebbe proporre elezioni annuali scaglionate con mandati biennali; come dovrebbero essere definiti e organizzati i dipartimenti (esplicitamente lasciato aperto dalla delibera).</li>
+                            <li><strong>Linee guida</strong> (nessuna sorpresa per chi segue NCA): essere trasparenti, coinvolgere le persone interessate, pubblicare i propri materiali. Il punto &egrave; la legittimit&agrave;: se qualcuno scopre una decisione a cose fatte ma pu&ograve; vedere che avrebbe potuto essere coinvolto, tende ad accettare il processo anche se non &egrave; d'accordo con l'esito. Se invece &egrave; successo in un luogo di cui non aveva modo di sapere, anche chi &egrave; d'accordo con la decisione pu&ograve; sentirsi escluso.</li>
+                            <li><strong>L'approvazione del consiglio &egrave; volutamente limitata.</strong> Il consiglio pu&ograve; rifiutare una registrazione solo per un breve elenco di motivi: duplicato di un gruppo gi&agrave; esistente; talmente fuori tema da non avere senso; oppure rivendica un'autorit&agrave; che non possiede (ad esempio un gruppo per <em>assegnare</em> il budget dell'evento a un ente benefico &mdash; un gruppo per <em>discutere</em> di donazioni benefiche andrebbe invece bene). Il consiglio non pu&ograve; rifiutare un gruppo semplicemente perch&eacute; non gli piace.</li>
+                            <li>Non serve essere voi a fare il lavoro: menzionare un'idea durante una chiamata significa che chi legge i verbali potrebbe raccoglierla.</li>
+                        </ul>
+
+                        <h3>Gruppi di lavoro vs. dipartimenti</h3>
+                        <p>Viktor V ha chiesto se migliorare il Middle of Elsewhere &mdash; semplificare l'allestimento tecnico, ripensare il palco e la sua costruzione dopo un anno molto improvvisato &mdash; sia un gruppo di lavoro o un dipartimento gi&agrave; esistente a cui manca solo un canale Discord. La distinzione, cos&igrave; come sta: i <strong>dipartimenti fanno accadere l'evento</strong> (infrastruttura, il team di costruzione del Middle of Elsewhere); i <strong>gruppi di lavoro fanno accadere le cose tra un evento e l'altro</strong> e trasversalmente &mdash; la policy sul rumore per l'evento, non la policy sul rumore per il 2027. La lettura di Anna T: un gruppo di lavoro &egrave; un insieme di persone che si riuniscono per aiutare la comunit&agrave; a prendere una decisione su qualcosa, che viene poi implementata, dopodich&eacute; il gruppo si scioglie &mdash; riguarda l'organizzazione piuttosto che la realizzazione dell'evento, a differenza dei dipartimenti permanenti come Consent o Cantina.</p>
+
+                        <h3>Cosa nasce da un gruppo di lavoro</h3>
+                        <p>Anna T ha osservato che un gruppo di lavoro non pu&ograve; semplicemente riorganizzare qualcosa e imporlo &mdash; l'esito &egrave; pi&ugrave; probabilmente una proposta su cui decide la comunit&agrave;. Daniel ha chiarito che <strong>un voto &egrave; un meccanismo, non l'unico</strong>. Alcune decisioni richiedono il consenso di tutti attraverso un processo trasparente e comunitario &mdash; le date dell'evento sono il caso pi&ugrave; chiaro, dato che nessuna data va bene per tutti. Ma un gruppo che elabora un sistema migliore per la Cantina ha bisogno solo che il team della Cantina lo adotti; il resto dell'evento non deve votare, anche se piantare la bandierina pubblicamente fa s&igrave; che chi lavora in Cantina e non sapeva del gruppo si senta comunque libero di potersi unire. I miglioramenti al Middle of Elsewhere richiedono il team del Middle of Elsewhere e chiunque ci tenga dietro alle spalle, non un voto della comunit&agrave;. L'indipendenza della comunit&agrave; &egrave; una caratteristica voluta: i team scelgono come organizzarsi; la centralizzazione serve solo dove il coordinamento &egrave; inevitabile (policy sul rumore, date, permessi). <strong>Parlate con le persone coinvolte da qualsiasi cosa stiate facendo.</strong></p>
+
+                        <h2>3. Idee per Gruppi di Lavoro dalla Platea</h2>
+                        <ul>
+                            <li><strong>Attrezzature e materiali (Ellen K):</strong> quest'anno Barrio Support ha dovuto reinventare la ruota perch&eacute; il team era nuovo e non aveva accesso ai materiali e alle infrastrutture su cui altri dipartimenti hanno potuto contare. La questione di cosa l'associazione possieda, noleggi o debba acquistare riguarda molti dipartimenti e non dovrebbe essere decisa da un singolo coordinatore o solo da Cantina o dal Toolhouse per conto proprio. Ellen cerca persone per formare un gruppo di lavoro che ci pensi insieme. Contatto: <a href="mailto:ellen@nobodies.team">ellen@nobodies.team</a> oppure <em>Dr Plantes</em> su Discord.</li>
+                            <li><strong>Policy sul rumore:</strong> sollevata da Ellen e, ripetutamente, da Daniel (&ldquo;mi piace dormire&rdquo;). Viktor V si &egrave; offerto di aiutare. Si cerca qualcuno che la avvii.</li>
+                            <li><strong>Middle of Elsewhere (Viktor V):</strong> semplificare l'allestimento tecnico e ripensare il design del palco &mdash; un candidato per un gruppo di lavoro o un canale Discord all'interno del dipartimento; in entrambi i casi, coinvolgere le persone che lo costruiscono.</li>
+                            <li><strong>Arte / supporto agli artisti (Heather W):</strong> ha chiesto se gestire e supportare gli artisti che vogliono portare arte potesse essere un gruppo di lavoro. Risposta: esiste gi&agrave; un <strong>dipartimento Creativit&agrave;</strong> con una storia, dei processi e un budget (circa &euro;62.000 quest'anno, in aumento rispetto ai 50.000 previsti). Miglioramenti specifici potrebbero essere un gruppo di lavoro, ma non senza le persone che hanno gestito quel dipartimento.</li>
+                            <li>Altre idee emerse: sostituire Discord (&ldquo;messo a verbale ufficialmente: l'interfaccia utente di Discord &egrave; spaventosa&rdquo; &mdash; un gruppo di lavoro richiederebbe un vero sostegno della comunit&agrave;); un migliore uso dell'energia solare e dei frigoriferi interrati; le transizioni verso il nuovo sito. Il canale Discord <em>#2027-was-better</em> &egrave; una buona fonte di idee (C&eacute;line S).</li>
+                        </ul>
+
+                        <h2>4. Il Gruppo di Lavoro sulla Governance (C&eacute;line S / Anna T)</h2>
+                        <ul>
+                            <li>Presentato come esempio concreto di gruppo di lavoro. Si riunisce <strong>ogni secondo luned&igrave; alle 16:00 CET</strong>; chiunque pu&ograve; partecipare &mdash; un avviso preventivo a C&eacute;line &egrave; gradito ma non obbligatorio.</li>
+                            <li>Scopo principale: mettere i membri nella condizione di partecipare all'associazione. Principi finora individuati: trasparenza; comunicare con i membri ed educarli (la pagina delle date dell'evento &egrave; l'esempio &mdash; assicurarsi che l'Assemblea Generale possa prendere decisioni informate); facilitare la discussione; definire i processi decisionali partecipativi; aiutare a formare gruppi di lavoro &mdash; con la precisazione esplicita che formare un gruppo di lavoro <em>non</em> dipende dal gruppo di governance.</li>
+                            <li>Il documento &egrave; stato redatto da Kate, Anna, Bambi, Peter e C&eacute;line, con il contributo di Daniel e Matt. I progressi vengono condivisi nel canale Discord sulla governance; il registro del gruppo mostra i temi all'ordine del giorno, lo stato e i responsabili. I feedback sono benvenuti.</li>
+                            <li>Anna T ha sollevato la questione se questo sia davvero un gruppo di lavoro o piuttosto un <strong>vivaio</strong> che sostiene i gruppi di lavoro; secondo C&eacute;line i processi decisionali sono il nucleo del gruppo, mentre temi come la scelta delle date sono flussi secondari. Da approfondire luned&igrave;. Il paragone di Daniel: anche la chiamata comunitaria non &egrave; un gruppo di lavoro, ma da essa possono nascere dei gruppi di lavoro.</li>
+                        </ul>
+
+                        <h2>5. Presentazioni dei Barrio nelle Prossime Chiamate (Ellen K)</h2>
+                        <p>A partire da settembre, Ellen inviter&agrave; i barrio alle chiamate comunitarie per mostrare le cose interessanti che hanno costruito &mdash; per mantenere viva l'energia creativa e la condivisione di idee durante tutto l'anno invece di perderla dopo l'evento. Diversi contatti sono gi&agrave; stati organizzati (&ldquo;una quantit&agrave; impressionante di suggerimenti sull'impiantistica idraulica&rdquo;). Se fate parte di un barrio e volete presentare qualcosa, fatevi avanti.</p>
+
+                        <h2>6. La Chiamata della Prossima Settimana &mdash; Prospettive sulle Date dell'Evento</h2>
+                        <ul>
+                            <li>Come richiesto la settimana scorsa, <strong>la chiamata comunitaria della prossima settimana &egrave; dedicata alla condivisione di prospettive sulle date dell'evento</strong>. Lo spazio di 90 minuti sar&agrave; suddiviso tra chi si iscrive; ogni persona avr&agrave; un tempo fisso, e i contributi saranno registrati e messi a verbale in modo da poter entrare a far parte del dossier informativo per il voto.</li>
+                            <li>Finora <strong>nessuno si &egrave; effettivamente proposto per parlare</strong>. Se volete sostenere la causa di date particolari, fatelo sapere agli organizzatori.</li>
+                            <li><strong>Vi preghiamo di compilare il sondaggio</strong> (&egrave; il sondaggio, non il voto) e di condividere il link &mdash; anche con persone che frequentano altri burn, o che venivano a un burn in Spagna ma hanno smesso a causa del caldo. Lo scopo del sondaggio &egrave; stabilire quando l'evento &egrave; <strong>commercialmente sostenibile</strong>: se il 60% dei membri non pu&ograve; venire in una data, non importa che non ci sia rischio di incendi boschivi &mdash; non ci sar&agrave; un evento. L'altro piatto della bilancia &egrave; il rischio di incendi boschivi e la nidificazione degli uccelli. Il link si trova in cima alla homepage: <a href="https://humans.nobodies.team/Survey/event-dates-2027">humans.nobodies.team/Survey/event-dates-2027</a>.</li>
+                        </ul>
+
+                        <h2>Decisioni</h2>
+                        <ul>
+                            <li><strong>Non sono state prese decisioni durante questa chiamata.</strong> La delibera sui gruppi di lavoro &egrave; stata approvata dal consiglio luned&igrave;; il voto sulle date dell'evento si terr&agrave; durante l'<strong>Assemblea Generale del 17 settembre</strong>.</li>
+                        </ul>
+
+                        <h2>Azioni</h2>
+                        <table class="action-table">
+                            <tr><th>Azione</th><th>Responsabile</th></tr>
+                            <tr><td>Compilare e condividere il sondaggio sulle date dell'evento (<a href="https://humans.nobodies.team/Survey/event-dates-2027">link al sondaggio</a>, anche in cima alla homepage)</td><td>Tutti</td></tr>
+                            <tr><td>Iscriversi per parlare delle date dell'evento nella chiamata della prossima settimana</td><td>Chiunque abbia una prospettiva da condividere</td></tr>
+                            <tr><td>Trovare un contatto coinvolto nell'organizzazione di Burning Nest; comunicare qualsiasi altra informazione sui burn al consiglio / C&eacute;line</td><td>Comunit&agrave;</td></tr>
+                            <tr><td>Registrare i gruppi di lavoro tramite il segretario (nome, coordinatori, obiettivi, tempistica)</td><td>Chiunque avvii un gruppo &rarr; Ben D</td></tr>
+                            <tr><td>Formare un gruppo di lavoro su attrezzature e materiali</td><td>Ellen K (cerca membri)</td></tr>
+                            <tr><td>Formare un gruppo di lavoro sulla policy del rumore</td><td>Cercasi volontario/a (Viktor V si &egrave; offerto di aiutare)</td></tr>
+                            <tr><td>Aprire una discussione sull'allestimento del Middle of Elsewhere e sul design del palco</td><td>Viktor V</td></tr>
+                            <tr><td>Organizzare i barrio da presentare nelle chiamate a partire da settembre</td><td>Ellen K</td></tr>
+                            <tr><td>Continuare ad approfondire cosa sia il gruppo di governance (gruppo di lavoro vs. vivaio)</td><td>Gruppo di governance (luned&igrave;)</td></tr>
+                            <tr><td>Aprire il voto remoto alcuni giorni prima del 17 settembre; scheda a preferenza ordinata con date preselezionate dal consiglio</td><td>Consiglio</td></tr>
+                        </table>
+
+                        <p><em>Prossima chiamata: gioved&igrave; 3 settembre, ore 20:00 CEST &mdash; la Chiamata sulle Date dell'Evento. Iscrivetevi per parlare se volete che la vostra prospettiva sia messa a verbale.</em></p>
+                        <p><em>Verbale redatto a partire dalla registrazione audio e dalla trascrizione completa.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Bei Abweichungen zwischen dieser Version und der spanischen Version ist die spanische Version ma&szlig;geblich.</div>
+
+                    <div class="attendees">
+                        <strong>Mit Daniel T (MC), C&eacute;line S, Anna T, Ellen K / Dr Plantes, Viktor V, Heather W, Yakir R und Community-Mitgliedern</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Vollst&auml;ndige Unterlagen</h3>
+                        <ul>
+                            <li><a href="2026-08-27-community-transcript.html">Vollst&auml;ndiges Transkript (nur Englisch)</a></li>
+                            <li><a href="https://youtu.be/jf74SigJaXE">Videoaufzeichnung (YouTube)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/jf74SigJaXE" title="Community Meeting - August 27, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Ein k&uuml;rzerer Call (etwa 45 Minuten) mit zwei Hauptthemen: ein Statusupdate zur Umfrage zu den Veranstaltungsterminen 2027 und dem Weg zur Abstimmung am 17. September, sowie eine Einf&uuml;hrung in das vom Vorstand am Montag verabschiedete System der <strong>Arbeitsgruppen</strong> &mdash; gefolgt von den ersten Arbeitsgruppen-Ideen aus dem Plenum und einer Vorstellung der Arbeitsgruppe Governance.</p>
+
+                        <h2>1. Veranstaltungstermine &mdash; Status der Umfrage und der Weg zur Abstimmung (Daniel T / C&eacute;line S)</h2>
+                        <ul>
+                            <li><strong>638 Antworten</strong> bisher, davon sind rund <strong>300 identifiziert</strong> (eingeloggt, eindeutig) &mdash; knapp die H&auml;lfte.</li>
+                            <li>Details werden zur&uuml;ckgehalten, um die Abstimmung nicht zu beeinflussen, aber: Es gibt ein klares Muster, einschlie&szlig;lich Zustimmung dazu, die Termine weg vom fr&uuml;hen Juli zu verschieben; das Muster ist bei identifizierten und anonymen Teilnehmenden gleich; und es hat sich <strong>seit den ersten 100 Stimmen</strong> in der ersten Nacht nicht ver&auml;ndert &mdash; bei 100, 200, 300, 500 und 600 Antworten sah die Verteilung immer gleich aus. Die Umfrage bleibt trotzdem noch eine Woche l&auml;nger offen, um weitere R&uuml;ckmeldungen zu sammeln.</li>
+                            <li>Die <a href="../event-dates-2027.html">Seite zu den Terminen 2027</a> wurde von C&eacute;line so umstrukturiert, dass sie fast einem richtigen Informationspaket entspricht. Es fehlen noch: Informationen von einigen anderen Burns (insbesondere ein Kontakt, der bei der Organisation von Burning Nest hilft), die Umfrageergebnisse, und wie INAGA tats&auml;chlich entscheidet, welche Genehmigungen erteilt werden (die Daten zum Vogelbr&uuml;ten selbst sind bereits vorhanden). Wenn ihr jemanden kennt, der mit einem anderen Burn verbunden ist und n&uuml;tzliche Informationen hat, teilt sie bitte.</li>
+                            <li><strong>Zeitplan:</strong> Sobald die Informationen finalisiert sind, &ouml;ffnet eine asynchrone Fernabstimmung ein paar Tage vor der <strong>Generalversammlung am 17. September</strong>, bei der die verbindliche Abstimmung stattfindet.</li>
+                            <li><strong>Rangfolge-Abstimmung:</strong> Da INAGAs Antwort zu den Genehmigungen bis zum Zeitpunkt der Abstimmung nicht vorliegen wird (spanische Verwaltung, August), wird die Abstimmung als Rangfolge durchgef&uuml;hrt. Wird der bestplatzierte Termin abgelehnt, gilt automatisch die n&auml;chstplatzierte Wahl der Community &mdash; ohne neuen Prozess.</li>
+                            <li><strong>Optionen auf dem Stimmzettel:</strong> Nach der Konsultation der letzten Woche wird der Vorstand eine Auswahl von Terminen vorab festlegen, statt alle aufzulisten. Ob das f&uuml;nf oder sieben sind, wird noch diskutiert (siehe die Vorstandsprotokolle). Die aktuellen Termine werden wahrscheinlich enthalten sein &mdash; es w&auml;re seltsam, sie wegzulassen &mdash; und ein &ldquo;Null&rdquo;-Ergebnis bleibt m&ouml;glich, indem alle Optionen abgelehnt werden.</li>
+                        </ul>
+
+                        <h2>2. Das System der Arbeitsgruppen (Daniel T)</h2>
+                        <p>Viele Menschen wollen zwischen den Events Dinge voranbringen, und historisch war es sehr schwer, irgendetwas zu organisieren, das das gesamte Event betrifft &mdash; selbst eine Sound-Policy. Der Vorstand hat am Montag beschlossen, <strong>Arbeitsgruppen</strong> einzuf&uuml;hren; der Beschluss und die Richtlinien stehen auf der Website unter <em>Verein &rarr; Arbeitsgruppen</em>.</p>
+                        <ul>
+                            <li><strong>Bewusst kein zentralisierendes System.</strong> Autorit&auml;t flie&szlig;t nicht vom Vorstand zu den Gruppen. Community-Mitglieder, die an etwas arbeiten wollen, finden sich zusammen und <strong>registrieren</strong> eine Arbeitsgruppe.</li>
+                            <li><strong>So registriert ihr euch:</strong> Wendet euch an den Sekret&auml;r (Ben) mit einem Namen, den koordinierenden Personen, dem, was ihr erreichen wollt, und ungef&auml;hr, wann ihr fertig sein wollt. Der Verein unterst&uuml;tzt euch dann, so gut er kann &mdash; ein Discord-Kanal, ein Bereich auf der Website f&uuml;r Protokolle und Materialien, und so weiter. Es ist ein Rahmen f&uuml;r die Arbeit: eine Flagge, die gesetzt wird, damit andere euch finden und sich anschlie&szlig;en k&ouml;nnen.</li>
+                            <li><strong>Beispiele daf&uuml;r, was eine Arbeitsgruppe sein k&ouml;nnte:</strong> eine Sound-Policy; eine Satzungs&auml;nderung &mdash; z.&nbsp;B. m&ouml;chte der Vorstand eine Wahl, um den Vorstand zu vergr&ouml;&szlig;ern und vielf&auml;ltiger zu machen, aber die Satzung erlaubt nur alle zwei Jahre eine, sofern nicht jemand zur&uuml;cktritt, sodass eine Arbeitsgruppe gestaffelte j&auml;hrliche Wahlen mit zweij&auml;hrigen Amtszeiten vorschlagen k&ouml;nnte; wie Abteilungen definiert und organisiert werden sollten (im Beschluss ausdr&uuml;cklich offengelassen).</li>
+                            <li><strong>Leitlinien</strong> (keine &Uuml;berraschung f&uuml;r alle, die NCA verfolgen): transparent sein, die betroffenen Menschen einbeziehen, eure Materialien ver&ouml;ffentlichen. Es geht um Legitimit&auml;t: Wenn jemand erst im Nachhinein von einer Entscheidung erf&auml;hrt, aber erkennen kann, dass er h&auml;tte beteiligt sein k&ouml;nnen, akzeptiert er den Prozess in der Regel, auch wenn er mit dem Ergebnis nicht einverstanden ist. Geschah es an einem Ort, von dem er keine M&ouml;glichkeit hatte zu wissen, k&ouml;nnen sich selbst Menschen, die der Entscheidung zustimmen, &uuml;bergangen f&uuml;hlen.</li>
+                            <li><strong>Die Zustimmung des Vorstands ist bewusst eingeschr&auml;nkt.</strong> Der Vorstand kann eine Registrierung nur aus einer kurzen Liste von Gr&uuml;nden ablehnen: Duplikat einer bestehenden Gruppe; so weit au&szlig;erhalb des Rahmens, dass es keinen Sinn ergibt; oder die Beanspruchung einer Autorit&auml;t, die er nicht hat (z.&nbsp;B. eine Gruppe, die das Event-Budget einer wohlt&auml;tigen Organisation <em>zuweist</em> &mdash; eine Gruppe, die wohlt&auml;tige Spenden <em>diskutiert</em>, w&auml;re in Ordnung). Der Vorstand kann eine Gruppe nicht einfach ablehnen, weil sie ihm nicht gef&auml;llt.</li>
+                            <li>Ihr m&uuml;sst nicht selbst diejenigen sein, die die Arbeit machen: Wenn eine Idee in einem Call erw&auml;hnt wird, kann jemand, der das Protokoll liest, sie aufgreifen.</li>
+                        </ul>
+
+                        <h3>Arbeitsgruppen vs. Abteilungen</h3>
+                        <p>Viktor V fragte, ob die Verbesserung von Middle of Elsewhere &mdash; die Vereinfachung des technischen Aufbaus, ein &Uuml;berdenken der B&uuml;hne und ihrer Konstruktion nach einem sehr improvisierten Jahr &mdash; eine Arbeitsgruppe ist oder eine bestehende Abteilung, der nur ein Discord-Kanal fehlt. Die Unterscheidung, so wie sie derzeit gehandhabt wird: <strong>Abteilungen bringen das Event zustande</strong> (Infrastruktur, das Bauteam von Middle of Elsewhere); <strong>Arbeitsgruppen bringen Dinge zwischen den Events und &uuml;ber sie hinweg voran</strong> &mdash; die Sound-Policy f&uuml;r das Event, nicht die Sound-Policy f&uuml;r 2027. Anna Ts Lesart: Eine Arbeitsgruppe besteht aus Menschen, die zusammenkommen, um der Community zu helfen, eine Entscheidung zu etwas zu treffen, die dann umgesetzt wird, wonach sich die Gruppe wieder aufl&ouml;st &mdash; es geht um die Organisation und nicht um die Durchf&uuml;hrung des Events, im Unterschied zu dauerhaften Abteilungen wie Consent oder Cantina.</p>
+
+                        <h3>Was aus einer Arbeitsgruppe hervorgeht</h3>
+                        <p>Anna T merkte an, dass eine Arbeitsgruppe nicht einfach etwas umorganisieren und durchsetzen kann &mdash; das Ergebnis ist eher ein Vorschlag, &uuml;ber den die Community entscheidet. Daniel stellte klar, dass <strong>eine Abstimmung ein Mechanismus ist, nicht der einzige</strong>. Manche Entscheidungen brauchen die Zustimmung aller durch einen transparenten, gesamtcommunityweiten Prozess &mdash; die Veranstaltungstermine sind der klare Fall, da kein Termin f&uuml;r alle passt. Aber eine Gruppe, die ein besseres System f&uuml;r Cantina erarbeitet, braucht nur, dass das Cantina-Team es &uuml;bernimmt; der Rest des Events muss nicht abstimmen, auch wenn das &ouml;ffentliche Setzen der Flagge bedeutet, dass Cantina-Leute, die von der Gruppe nichts wussten, das Gef&uuml;hl haben, h&auml;tten mitmachen k&ouml;nnen. Verbesserungen an Middle of Elsewhere brauchen das Middle of Elsewhere-Team und alle, denen es wichtig ist, hinter sich, nicht eine Abstimmung der Community. Die Unabh&auml;ngigkeit der Community ist ein Feature: Teams entscheiden selbst, wie sie sich organisieren; Zentralisierung ist nur dort n&ouml;tig, wo Koordination unvermeidlich ist (Sound-Policy, Termine, Genehmigungen). <strong>Sprecht mit den Menschen, die von dem betroffen sind, woran ihr arbeitet.</strong></p>
+
+                        <h2>3. Arbeitsgruppen-Ideen aus dem Plenum</h2>
+                        <ul>
+                            <li><strong>Ausr&uuml;stung und Materialien (Ellen K):</strong> Barrio Support musste dieses Jahr das Rad neu erfinden, weil das Team neu war und keinen Zugang zu den Materialien und der Infrastruktur hatte, auf die andere Abteilungen zur&uuml;ckgreifen konnten. Die Frage, was der Verein besitzt, mietet oder kaufen muss, betrifft viele Abteilungen und sollte nicht von einer einzelnen koordinierenden Person oder von Cantina oder dem Toolhouse allein in ihrer Ecke entschieden werden. Ellen sucht Leute, um gemeinsam eine Arbeitsgruppe zu bilden und das durchzudenken. Kontakt: <a href="mailto:ellen@nobodies.team">ellen@nobodies.team</a> oder <em>Dr Plantes</em> auf Discord.</li>
+                            <li><strong>Sound-Policy:</strong> angesprochen von Ellen und wiederholt von Daniel (&ldquo;Ich schlafe gerne&rdquo;). Viktor V bot seine Hilfe an. Es wird jemand gesucht, der sie startet.</li>
+                            <li><strong>Middle of Elsewhere (Viktor V):</strong> Vereinfachung des technischen Aufbaus und &Uuml;berdenken des B&uuml;hnendesigns &mdash; ein Kandidat f&uuml;r eine Arbeitsgruppe oder einen Discord-Kanal innerhalb der Abteilung; so oder so sollten die Menschen einbezogen werden, die sie bauen.</li>
+                            <li><strong>Kunst / K&uuml;nstler*innen-Unterst&uuml;tzung (Heather W):</strong> fragte, ob die Betreuung und Unterst&uuml;tzung von K&uuml;nstler*innen, die Kunst mitbringen wollen, eine Arbeitsgruppe sein k&ouml;nnte. Antwort: Es gibt bereits eine <strong>Creativity-Abteilung</strong> mit Geschichte, Prozessen und einem Budget (dieses Jahr rund 62.000&nbsp;&euro;, gegen&uuml;ber geplanten 50.000). Konkrete Verbesserungen k&ouml;nnten eine Arbeitsgruppe sein, aber nicht ohne die Menschen, die diese Abteilung bisher geleitet haben.</li>
+                            <li>Ebenfalls angesprochen: das Ersetzen von Discord (&ldquo;offiziell festgehalten: Discords Benutzeroberfl&auml;che ist grauenhaft&rdquo; &mdash; eine Arbeitsgruppe br&auml;uchte echte Zustimmung der Community); bessere Nutzung von Solarenergie und unterirdischen K&uuml;hlschr&auml;nken; &Uuml;berg&auml;nge zum neuen Gel&auml;nde. Der Discord-Kanal <em>#2027-was-better</em> ist eine gute Ideenquelle (C&eacute;line S).</li>
+                        </ul>
+
+                        <h2>4. Die Arbeitsgruppe Governance (C&eacute;line S / Anna T)</h2>
+                        <ul>
+                            <li>Vorgestellt als praktisches Beispiel einer Arbeitsgruppe. Trifft sich <strong>jeden zweiten Montag um 16:00 Uhr CET</strong>; jede*r kann teilnehmen &mdash; eine vorherige kurze Nachricht an C&eacute;line ist willkommen, aber nicht erforderlich.</li>
+                            <li>Kernzweck: Mitglieder zu bef&auml;higen, sich am Verein zu beteiligen. Bisherige Prinzipien: Transparenz; Kommunikation mit und Aufkl&auml;rung der Mitglieder (die Seite zu den Veranstaltungsterminen ist das Beispiel &mdash; sicherstellen, dass die Generalversammlung informierte Entscheidungen treffen kann); Diskussionen erm&ouml;glichen; partizipative Entscheidungsfindung definieren; der Gr&uuml;ndung von Arbeitsgruppen helfen &mdash; mit dem ausdr&uuml;cklichen Hinweis, dass die Gr&uuml;ndung einer Arbeitsgruppe <em>nicht</em> von der Governance-Gruppe abh&auml;ngt.</li>
+                            <li>Das Dokument wurde von Kate, Anna, Bambi, Peter und C&eacute;line zusammengestellt, mit R&uuml;ckmeldungen von Daniel und Matt. Der Fortschritt wird im Governance-Discord-Kanal geteilt; das Protokoll der Gruppe zeigt Themen der Agenda, Status und Zust&auml;ndige. R&uuml;ckmeldungen sind willkommen.</li>
+                            <li>Anna T warf die Frage auf, ob dies &uuml;berhaupt eine Arbeitsgruppe ist oder eher ein <strong>Saatbeet</strong>, das Arbeitsgruppen unterst&uuml;tzt; C&eacute;lines Sicht ist, dass Entscheidungsprozesse der Kern der Gruppe sind, w&auml;hrend Themen wie die Terminwahl Unterstr&ouml;me sind. Wird am Montag weiter untersucht. Daniels Vergleich: Auch der <em>Community Call</em> ist keine Arbeitsgruppe, aber Arbeitsgruppen k&ouml;nnen aus ihm hervorgehen.</li>
+                        </ul>
+
+                        <h2>5. Barrio-Vorstellungen in k&uuml;nftigen Calls (Ellen K)</h2>
+                        <p>Ab September wird Ellen Barrios zu den Community Calls einladen, um die coolen Dinge zu zeigen, die sie gebaut haben &mdash; um die kreative Energie und den Ideenaustausch &uuml;bers Jahr am Leben zu halten, statt sie nach dem Event zu verlieren. Mehrere Kontakte stehen bereits fest (&ldquo;eine enorme Menge an Sanit&auml;r-Vorschl&auml;gen&rdquo;). Wenn ihr in einem Barrio seid und etwas vorstellen wollt, meldet euch.</p>
+
+                        <h2>6. Der Call n&auml;chste Woche &mdash; Perspektiven zu den Veranstaltungsterminen</h2>
+                        <ul>
+                            <li>Wie letzte Woche gew&uuml;nscht, ist der <strong>Community Call n&auml;chste Woche dem Austausch von Perspektiven zu den Veranstaltungsterminen gewidmet</strong>. Der 90-min&uuml;tige Slot wird unter allen aufgeteilt, die sich anmelden; jede Person erh&auml;lt eine feste Zeit, und die Beitr&auml;ge werden aufgezeichnet und protokolliert, damit sie Teil des Informationspakets f&uuml;r die Abstimmung werden k&ouml;nnen.</li>
+                            <li>Bisher hat sich <strong>noch niemand tats&auml;chlich zu Wort gemeldet</strong>. Wenn ihr euch f&uuml;r bestimmte Termine starkmachen wollt, sagt es den Organisator*innen Bescheid.</li>
+                            <li><strong>Bitte f&uuml;llt die Umfrage aus</strong> (es ist die Umfrage, nicht die Abstimmung) und teilt den Link &mdash; auch mit Leuten, die zu anderen Burns gehen, oder die fr&uuml;her zu einem Burn in Spanien kamen, aber wegen der Hitze aufgeh&ouml;rt haben. Der Zweck der Umfrage ist festzustellen, wann das Event <strong>wirtschaftlich tragf&auml;hig</strong> ist: Wenn 60&nbsp;% der Mitglieder an einem Termin nicht kommen k&ouml;nnen, spielt es keine Rolle, dass kein Waldbrandrisiko besteht &mdash; dann findet kein Event statt. Die andere Seite der Abw&auml;gung ist das Waldbrandrisiko und das Vogelbr&uuml;ten. Der Link steht oben auf der Startseite: <a href="https://humans.nobodies.team/Survey/event-dates-2027">humans.nobodies.team/Survey/event-dates-2027</a>.</li>
+                        </ul>
+
+                        <h2>Entscheidungen</h2>
+                        <ul>
+                            <li><strong>Bei diesem Call wurden keine Entscheidungen getroffen.</strong> Der Beschluss zu den Arbeitsgruppen wurde am Montag vom Vorstand gefasst; die Abstimmung zu den Veranstaltungsterminen findet auf der <strong>Generalversammlung am 17. September</strong> statt.</li>
+                        </ul>
+
+                        <h2>Aufgaben</h2>
+                        <table class="action-table">
+                            <tr><th>Aufgabe</th><th>Verantwortlich</th></tr>
+                            <tr><td>Umfrage zu den Veranstaltungsterminen ausf&uuml;llen und teilen (<a href="https://humans.nobodies.team/Survey/event-dates-2027">Link zur Umfrage</a>, auch oben auf der Startseite)</td><td>Alle</td></tr>
+                            <tr><td>F&uuml;r einen Redebeitrag zu den Veranstaltungsterminen im n&auml;chsten Call anmelden</td><td>Alle mit einer Perspektive</td></tr>
+                            <tr><td>Einen Kontakt finden, der an der Organisation von Burning Nest beteiligt ist; weitere Burn-Informationen an den Vorstand / C&eacute;line weitergeben</td><td>Community</td></tr>
+                            <tr><td>Arbeitsgruppen &uuml;ber den Sekret&auml;r registrieren (Name, Koordinator*innen, Ziele, Zeitplan)</td><td>Alle, die eine Gruppe starten &rarr; Ben D</td></tr>
+                            <tr><td>Arbeitsgruppe zu Ausr&uuml;stung und Materialien bilden</td><td>Ellen K (sucht Mitglieder)</td></tr>
+                            <tr><td>Arbeitsgruppe Sound-Policy bilden</td><td>Freiwillige gesucht (Viktor V bot Hilfe an)</td></tr>
+                            <tr><td>Diskussion zu Aufbau und B&uuml;hnendesign von Middle of Elsewhere er&ouml;ffnen</td><td>Viktor V</td></tr>
+                            <tr><td>Barrios f&uuml;r Vorstellungen in Calls ab September organisieren</td><td>Ellen K</td></tr>
+                            <tr><td>Weiter kl&auml;ren, was die Governance-Gruppe ist (Arbeitsgruppe vs. Saatbeet)</td><td>Governance-Gruppe (Montag)</td></tr>
+                            <tr><td>Fernabstimmung ein paar Tage vor dem 17. September &ouml;ffnen; Rangfolge-Stimmzettel mit vom Vorstand vorausgew&auml;hlten Terminen</td><td>Vorstand</td></tr>
+                        </table>
+
+                        <p><em>N&auml;chster Call: Donnerstag, 3. September, 20:00 Uhr CEST &mdash; der Event Dates Call. Meldet euch f&uuml;r einen Redebeitrag an, wenn ihr eure Perspektive festgehalten haben wollt.</em></p>
+                        <p><em>Protokoll erstellt aus der Audioaufnahme und dem vollst&auml;ndigen Transkript.</em></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>
