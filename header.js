@@ -43,6 +43,9 @@
                         '<ul class="nav-dropdown-menu">' +
                             '<li><a href="' + prefix + '/transparency.html">Meetings</a></li>' +
                             '<li><a href="' + prefix + '/working-groups.html">Working Groups</a></li>' +
+                            '<li><a class="nav-subitem" href="https://elsitio.kimi.page/" target="_blank" rel="noopener noreferrer">Elsitio</a></li>' +
+                            '<li><a class="nav-subitem" href="' + prefix + '/event-dates-2027.html">Event Dates 2027</a></li>' +
+                            '<li><a class="nav-subitem" href="' + prefix + '/transparency/wg/governance.html">Governance Meeting</a></li>' +
                             '<li><a href="' + prefix + '/resolutions.html">Resolutions</a></li>' +
                         '</ul>' +
                     '</li>' +

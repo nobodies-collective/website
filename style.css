@@ -289,6 +289,11 @@ h4 { font-size: 1.15rem; }
     font-size: 0.88rem;
     white-space: nowrap;
 }
+.nav-dropdown-menu a.nav-subitem {
+    padding-left: 2.4rem;
+    font-size: 0.82rem;
+    justify-content: flex-start;
+}
 .nav-badge {
     display: inline-block;
     padding: 0.1rem 0.5rem;
