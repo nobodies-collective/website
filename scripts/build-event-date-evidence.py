@@ -42,7 +42,7 @@ NORMAL_START_YEAR = 1991
 NORMAL_END_YEAR = 2020
 NAPIF_START_MONTH_DAY = (6, 1)
 NAPIF_END_MONTH_DAY = (10, 15)
-NAPIF_PARTIAL_2026_END = dt.date(2026, 8, 22)
+NAPIF_PARTIAL_2026_END = dt.date(2026, 9, 4)
 OUTPUT_DIR = Path(__file__).resolve().parent.parent / "data" / "event-dates-2027"
 
 NAPIF_LEVEL_COLOURS = {

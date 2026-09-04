@@ -8,7 +8,8 @@
         .replaceAll('"', "&quot;")
         .replaceAll("'", "&#039;");
 
-    const evidenceVersion = "2026-08-23-data-refresh";
+    const evidenceVersion = "2026-09-04-data-refresh";
+    const napif2026End = "2026-09-04";
     const evidenceUrl = (path) => `${path}?v=${evidenceVersion}`;
     const numericValue = (value) => {
         const number = Number(value);
@@ -108,7 +109,8 @@
     }
 
     function noDataCell(row, year) {
-        const futureIn2026 = year === 2026 && row.week_start_2027 >= "2027-08-16";
+        const historicalWeekStart = row.week_start_2027.replace("2027-", "2026-");
+        const futureIn2026 = year === 2026 && historicalWeekStart > napif2026End;
         const reason = futureIn2026
             ? "No data available yet."
             : "No comparable daily series.";
@@ -315,7 +317,7 @@
                 const barHeight = (value / ceiling) * plotHeight;
                 const x = groupLeft + levelIndex * (barWidth + gap);
                 const y = margin.top + plotHeight - barHeight;
-                const coverage = year === 2026 ? " (partial through 22 August)" : "";
+                const coverage = year === 2026 ? " (partial through 4 September)" : "";
                 return `<g${yearClass}>`
                     + `<rect x="${x}" y="${y}" width="${barWidth}" height="${barHeight}" rx="2" fill="${chartColors[level]}">`
                     + `<title>${year} ${label}: ${value} days${coverage}</title></rect>`
