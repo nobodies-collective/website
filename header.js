@@ -21,7 +21,7 @@
                             '<li><a href="' + prefix + '/survival-guide.html">Survival Guide</a></li>' +
                             '<li><a href="' + prefix + '/getting-there.html">Getting There</a></li>' +
                             '<li><a href="' + prefix + '/bus-tickets.html">Bus Tickets</a></li>' +
-                            '<li><a href="' + prefix + '/volunteering.html">Volunteering<span class="nav-badge">Help needed!</span></a></li>' +
+                            '<li><a href="' + prefix + '/volunteering.html">Volunteering</a></li>' +
                             '<li><a href="' + prefix + '/werkhaus.html">Werkhaus</a></li>' +
                             '<li><a href="' + prefix + '/travel-reimbursement.html">Travel Reimbursement</a></li>' +
                             '<li><a href="' + prefix + '/speaking-about-elsewhere.html">Speaking About Elsewhere</a></li>' +
