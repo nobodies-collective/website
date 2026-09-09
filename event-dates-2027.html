@@ -112,6 +112,39 @@
         .notice p { margin-bottom: 0.85rem; }
         .notice p:last-child { margin-bottom: 0; }
 
+        .research-table.board-votes { table-layout: fixed; width: 100%; }
+        .research-table.board-votes th, .research-table.board-votes td {
+            padding: 0.6rem 0.2rem;
+            white-space: nowrap;
+            overflow-wrap: normal;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .research-table.board-votes col.c-week { width: 21%; }
+        .research-table.board-votes col.c-tally { width: 9%; }
+        .research-table.board-votes th:first-child, .research-table.board-votes td:first-child { text-align: left; padding-left: 0.75rem; }
+        .research-table.board-votes th { font-size: 0.6rem; letter-spacing: 0; }
+        .research-table.board-votes td:first-child { color: var(--color-text); font-size: 0.84rem; }
+        .research-table.board-votes td:first-child small { display: block; font-size: 0.68rem; color: var(--color-text-muted); }
+        .research-table.board-votes .vote-mark { display: inline-block; font-size: 1.2rem; line-height: 1; font-weight: 700; }
+        .research-table.board-votes td.vote-for .vote-mark { color: #2f8f52; }
+        .research-table.board-votes td.vote-against .vote-mark { color: #c0392b; }
+        .research-table.board-votes td.vote-for small, .research-table.board-votes td.vote-against small { display: block; font-size: 0.6rem; color: var(--color-text-muted); margin-top: 0.1rem; }
+        .research-table.board-votes td.tally { padding-right: 0.6rem; }
+        .research-table.board-votes td.tally strong { color: var(--color-text); font-size: 1rem; }
+        .research-table.board-votes td.tally .of { color: var(--color-text-muted); font-size: 0.75rem; }
+        .research-table.board-votes tr.is-current td { font-weight: inherit; }
+        .research-table.board-reasons th, .research-table.board-reasons td { overflow-wrap: normal; }
+        .research-table.board-reasons td { font-size: 0.86rem; width: 50%; padding: 0.75rem 0.9rem 1rem; }
+        .research-table.board-reasons tr.wk th {
+            text-transform: none; letter-spacing: 0; font-size: 0.92rem; font-weight: 600;
+            padding: 0.7rem 0.9rem 0.4rem; border-top: 2px solid var(--color-border); border-bottom: 0;
+            background: rgba(255,255,255,0.35);
+        }
+        .research-table.board-reasons tr.wk.is-current th { background: rgba(194, 112, 62, 0.12); }
+        .research-table.board-reasons tr.wk th .tally { float: right; font-weight: 500; font-size: 0.8rem; color: var(--color-text-muted); }
+        .research-table.board-reasons thead th { border-bottom: 0; }
+
         .notice.pack {
             background: rgba(122, 139, 106, 0.13);
             border-left-color: var(--color-purple);
@@ -698,6 +731,7 @@
                             <li><strong>Who decides</strong> &mdash; <em>asociados</em> (association members).</li>
                             <li><strong>When</strong> &mdash; 17 September 2026.</li>
                             <li><strong>How</strong> &mdash; ranked vote between the candidate weeks listed below (see <a href="event-dates-2027-voting-method.html">how the ranking method works</a>).</li>
+                            <li><strong>Board opinion</strong> &mdash; each board member&rsquo;s for/against view on the viability of every shortlisted week is in <a href="#board-opinion">section 2.6</a>.</li>
                         </ul>
                         <div class="notice">
                             <p><strong>Important disclaimer:</strong> the highest-ranked option may still not be feasible if the relevant authorities do not approve the dates &mdash; for example due to environmental or bird-nesting restrictions. The authority&rsquo;s response is currently expected <em>after</em> the vote, so voters should understand that limitation before looking at the options.</p>
@@ -1008,6 +1042,180 @@
                         </ul>
                     </section>
 
+                    <section id="board-opinion">
+                        <h3>2.6 Board opinion</h3>
+                        <p>At its meeting of <a href="transparency/2026-09-07-board.html">7 September 2026</a> the board fixed the eight-week shortlist that goes to the vote, and committed to publishing how each board member sees each week. The four members present recorded their positions in the meeting; the others sent theirs in writing over the following two days. Michelle has not yet recorded a position, so the counts below are out of seven.</p>
+                        <div class="notice">
+                            <p><strong>What these votes mean:</strong> each board member was asked whether, on the information available, the event would be <em>viable</em> in a given week &mdash; commercial viability, cancellation and wildfire risk, permit risk &mdash; not which week they would personally prefer. Several members said they will attend whichever week wins, and more than one voted for weeks they would not choose for themselves. No week is a board recommendation; the current week is on the ballot as the status quo. Every week remains subject to the INAGA (bird-nesting) permit decision.</p>
+                        </div>
+
+                        <h4>Votes by board member</h4>
+                        <div class="table-wrap">
+                            <table class="research-table board-votes">
+                                <colgroup><col class="c-week"><col span="7"><col class="c-tally"></colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>Week</th>
+                                        <th>Victor</th>
+                                        <th>Chris</th>
+                                        <th>Pablo</th>
+                                        <th>Daniel</th>
+                                        <th>Ward</th>
+                                        <th>Peter</th>
+                                        <th>Ben</th>
+                                        <th class="num">For</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Week">31 May&ndash;6 Jun</td>
+                                        <td data-label="Victor P" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="Chris" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="Pablo V" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="Daniel T" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="Ward D" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="Peter D" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="Ben D" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="For" class="num tally"><strong>3</strong><span class="of">/7</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Week">7&ndash;13 Jun</td>
+                                        <td data-label="Victor P" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="Chris" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="Pablo V" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="Daniel T" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="Ward D" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="Peter D" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="Ben D" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="For" class="num tally"><strong>5</strong><span class="of">/7</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Week">14&ndash;20 Jun</td>
+                                        <td data-label="Victor P" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="Chris" class="vote-against"><span class="vote-mark" role="img" aria-label="Against (leaning)" title="Against (leaning)">&#10007;</span> <small>leaning</small></td>
+                                        <td data-label="Pablo V" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="Daniel T" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="Ward D" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="Peter D" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="Ben D" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="For" class="num tally"><strong>0</strong><span class="of">/7</span></td>
+                                    </tr>
+                                    <tr class="is-current">
+                                        <td data-label="Week">5&ndash;11 Jul <small>(current)</small></td>
+                                        <td data-label="Victor P" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="Chris" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="Pablo V" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="Daniel T" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="Ward D" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="Peter D" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="Ben D" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="For" class="num tally"><strong>0</strong><span class="of">/7</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Week">6&ndash;12 Sep</td>
+                                        <td data-label="Victor P" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="Chris" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="Pablo V" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="Daniel T" class="vote-for"><span class="vote-mark" role="img" aria-label="For (tentative)" title="For (tentative)">&#10003;</span> <small>tentative</small></td>
+                                        <td data-label="Ward D" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="Peter D" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="Ben D" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="For" class="num tally"><strong>3</strong><span class="of">/7</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Week">13&ndash;19 Sep</td>
+                                        <td data-label="Victor P" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="Chris" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="Pablo V" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="Daniel T" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="Ward D" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="Peter D" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="Ben D" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="For" class="num tally"><strong>6</strong><span class="of">/7</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Week">20&ndash;26 Sep</td>
+                                        <td data-label="Victor P" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="Chris" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="Pablo V" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="Daniel T" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="Ward D" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="Peter D" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="Ben D" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="For" class="num tally"><strong>6</strong><span class="of">/7</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Week">27 Sep&ndash;3 Oct</td>
+                                        <td data-label="Victor P" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="Chris" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="Pablo V" class="vote-for"><span class="vote-mark" role="img" aria-label="For (reservations)" title="For (reservations)">&#10003;</span> <small>reserv.</small></td>
+                                        <td data-label="Daniel T" class="vote-for"><span class="vote-mark" role="img" aria-label="For (reservations)" title="For (reservations)">&#10003;</span> <small>reserv.</small></td>
+                                        <td data-label="Ward D" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="Peter D" class="vote-for"><span class="vote-mark" role="img" aria-label="For" title="For">&#10003;</span></td>
+                                        <td data-label="Ben D" class="vote-against"><span class="vote-mark" role="img" aria-label="Against" title="Against">&#10007;</span></td>
+                                        <td data-label="For" class="num tally"><strong>5</strong><span class="of">/7</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h4>Reasons given, week by week</h4>
+                        <p>A summary of the arguments board members gave for and against each week, drawn from the <a href="transparency/2026-09-07-board.html">minutes</a> and the written positions sent afterwards. The name in brackets is who raised the point; where several members made the same point, only the count is given.</p>
+                        <div class="table-wrap">
+                            <table class="research-table board-reasons">
+                                <thead>
+                                    <tr>
+                                        <th>Arguments for</th>
+                                        <th>Arguments against</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="wk"><th colspan="2" scope="rowgroup">31 May &ndash; 6 June <span class="tally">3 of 7 for</span></th></tr>
+                                    <tr>
+                                        <td data-label="For">No specific risk identified; people already travel to Midburn and AfricaBurn in this period, and the Burning Nest overlap (it ends the day before) is not disqualifying (Pablo). Weather window acceptable, subject to INAGA (Ben). Late May / early June is a good window (Peter).</td>
+                                        <td data-label="Against">Too close to the end of the working year for an event with a long build and strike; risk of low attendance (Victor, Chris). Bird-nesting season adds permit uncertainty (Victor, Daniel, Ward). More rain, and local-authority advice that late May is a heavy farm-machinery period (Daniel). Academic calendars (Ward). Would prefer no overlap with the UK burn (Peter, who still voted for).</td>
+                                    </tr>
+                                    <tr class="wk"><th colspan="2" scope="rowgroup">7 &ndash; 13 June <span class="tally">5 of 7 for</span></th></tr>
+                                    <tr>
+                                        <td data-label="For">The most-selected week in the survey (67% could attend), so commercially viable (Chris, Daniel). Best week for build and strike availability; good combination of every factor, with better temperatures (Pablo). No direct clash with another event (Chris). No red-alert fire days in this week this year (Daniel). Weather window acceptable, subject to INAGA (Ben). Early June good (Peter).</td>
+                                        <td data-label="Against">Same bird-nesting permit risk and end-of-working-year concern as the week before (Victor). Birds, and students and teachers not yet free (Ward).</td>
+                                    </tr>
+                                    <tr class="wk"><th colspan="2" scope="rowgroup">14 &ndash; 20 June <span class="tally">0 of 7 for</span></th></tr>
+                                    <tr>
+                                        <td data-label="For">Decently viable commercially (Chris, who nonetheless leaned against). Nobody voted for it.</td>
+                                        <td data-label="Against">Lower survey support (56%) than 7&ndash;13 June (Pablo, Daniel). Edging into the fire season: had the event been on this week this year there would have been an evacuation near the end of strike (Daniel); hotter, and in the projections it only gets worse (Victor, Pablo, Chris). Maximum calendar congestion with other events (Ben). Bird-nesting season (Victor, Ward).</td>
+                                    </tr>
+                                    <tr class="wk is-current"><th colspan="2" scope="rowgroup">5 &ndash; 11 July (current week) <span class="tally">0 of 7 for</span></th></tr>
+                                    <tr class="is-current">
+                                        <td data-label="For">None. It is on the ballot as the status quo so that members can express a preference for no change.</td>
+                                        <td data-label="Against">High probability that a permit for this week would not be granted at all, and if granted the event would very likely be suspended; this year&rsquo;s leniency from the authorities cannot be assumed to repeat (Daniel, Victor). Not worth the effort only to face evacuating 3,000 people (Daniel). Heat has been unbearable for some years; people have stopped coming for that reason alone (Victor, Ben). Inside the red-plus alert period (Ward).</td>
+                                    </tr>
+                                    <tr class="wk"><th colspan="2" scope="rowgroup">6 &ndash; 12 September <span class="tally">3 of 7 for</span></th></tr>
+                                    <tr>
+                                        <td data-label="For">Avoids the red-plus fire-alert periods and the bird-nesting season, and finishes before most academic years start (Ward &mdash; his first choice). Weather window acceptable; the Burning Man overlap makes it less preferable but still viable (Ben). Nowhere&rsquo;s community is price-conscious and only a small minority can afford Burning Man, so the overlap matters less than it looks (Daniel).</td>
+                                        <td data-label="Against">Overlaps with Burning Man, which ends on 6 September &mdash; don&rsquo;t start the move with that conflict; if the association wants to test the overlap it can do so later once the impact is understood (Chris, Pablo, Peter). Many community members would still be on holiday or just back, and planning an event straight after that period is uncomfortable (Victor). Slightly more fire risk than the later September weeks (Daniel).</td>
+                                    </tr>
+                                    <tr class="wk"><th colspan="2" scope="rowgroup">13 &ndash; 19 September <span class="tally">6 of 7 for</span></th></tr>
+                                    <tr>
+                                        <td data-label="For">No clear risk of any kind; far enough from the holidays; high survey support (62%, the September peak) (Victor, Chris, Daniel). Lower bird-nesting risk than the June weeks, so less likely to be moved by the permit decision (Daniel, Ward). Doable for people who do both events, and the association would learn how much the Burning Man overlap matters (Pablo). Weather window acceptable (Ben). Before most academic years start (Ward).</td>
+                                        <td data-label="Against">Too close after Burning Man &mdash; with it ending on 6 September there is no gap between the two (Peter). Temperatures start to come down, which some will see as a loss (Daniel, who still voted for).</td>
+                                    </tr>
+                                    <tr class="wk"><th colspan="2" scope="rowgroup">20 &ndash; 26 September <span class="tally">6 of 7 for</span></th></tr>
+                                    <tr>
+                                        <td data-label="For">Same reasoning as 13&ndash;19 September (Victor, Chris, Daniel). Two weeks after Burning Man, so a real gap (Peter). Cooler nights (Pablo). Lower bird-nesting risk (Daniel). Weather window acceptable (Ben).</td>
+                                        <td data-label="Against">Some academic years start mid- or late September (Ward).</td>
+                                    </tr>
+                                    <tr class="wk"><th colspan="2" scope="rowgroup">27 September &ndash; 3 October <span class="tally">5 of 7 for</span></th></tr>
+                                    <tr>
+                                        <td data-label="For">Late enough that people can do their summer festivals and come to a burn after a few weeks of work; the best week for the bird permit; cooler nights and longer mornings without heat (Victor &mdash; his favourite). Viable, so let the members decide; it will simply be ranked down if they don&rsquo;t want it (Pablo, Daniel). Clear of Burning Man (Peter).</td>
+                                        <td data-label="Against">Weather becoming too wet and cold (Ben). Feels late, and the survey numbers are slightly worse than the other September weeks (55%), with core members less available than anonymous respondents (Pablo, Daniel, Peter &mdash; the last two still voted for). Academic year already under way (Ward). &ldquo;October feels wrong&rdquo; &mdash; acknowledged as not a rational argument (Chris, who voted for).</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Where a board member is recorded as voting for a week &ldquo;with reservations&rdquo; or &ldquo;tentatively&rdquo;, they consider it viable but less than ideal. The full reasoning of the members present at the meeting is in the <a href="transparency/2026-09-07-board.html">minutes</a>.</p>
+                    </section>
+
                     <section id="additional">
                         <h2>3. Additional information</h2>
                         <p>Background and context: why the question is being asked at all, the open gaps, the timeline, sourcing, and how to take part.</p>
@@ -1138,6 +1346,7 @@
                                 <li><a href="#windows">Heat and rain by week</a></li>
                                 <li><a href="#burns">Other European burns</a></li>
                                 <li><a href="#birds">Bird nesting</a></li>
+                                <li><a href="#board-opinion">Board opinion</a></li>
                             </ul>
                         </li>
                         <li><a href="#additional">Additional information</a>
