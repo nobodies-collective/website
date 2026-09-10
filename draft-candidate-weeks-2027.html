@@ -60,37 +60,44 @@
         table {
             border-collapse: collapse;
             width: 100%;
-            min-width: 980px;
-            font-size: 0.88rem;
+            font-size: 0.78rem;
+            table-layout: fixed;
         }
+        col.c-week { width: 9%; }
+        col.c-fire { width: 9%; }
+        col.c-temp { width: 8.5%; }
+        col.c-rain { width: 6%; }
+        col.c-bird { width: 14%; }
+        col.c-avail { width: 7%; }
+        col.c-board { width: 6%; }
+        col.c-other { width: 22%; }
         thead th {
             background: var(--ink);
             color: #fff;
             text-align: left;
-            padding: 0.85rem 0.9rem;
+            padding: 0.55rem 0.55rem;
             font-weight: 700;
-            font-size: 0.8rem;
-            letter-spacing: 0.03em;
+            font-size: 0.68rem;
+            letter-spacing: 0.02em;
             text-transform: uppercase;
-            white-space: nowrap;
         }
         thead th .sub {
             display: block;
             margin-top: 0.25rem;
             font-weight: 400;
-            font-size: 0.68rem;
+            font-size: 0.6rem;
             letter-spacing: 0;
             text-transform: none;
             color: rgba(255,255,255,0.65);
         }
         tbody td {
-            padding: 0.75rem 0.9rem;
+            padding: 0.5rem 0.55rem;
             border-top: 1px solid var(--border);
             vertical-align: top;
             line-height: 1.5;
         }
         tbody tr:nth-child(even) { background: #fcfbf8; }
-        td.week { font-weight: 700; white-space: nowrap; }
+        td.week { font-weight: 700; }
         td.week .season {
             display: block;
             font-weight: 500;
@@ -99,11 +106,10 @@
         }
         .pill {
             display: inline-block;
-            padding: 0.2rem 0.6rem;
+            padding: 0.15rem 0.5rem;
             border-radius: 999px;
             font-weight: 700;
-            font-size: 0.78rem;
-            white-space: nowrap;
+            font-size: 0.72rem;
         }
         .cell-vgood { background: var(--vgood); color: var(--good-ink); }
         .cell-good  { background: var(--good);  color: var(--good-ink); }
@@ -111,7 +117,7 @@
         .cell-bad   { background: var(--bad);   color: var(--bad-ink); }
         .cell-vbad  { background: var(--vbad);  color: var(--bad-ink); }
         td.board { font-weight: 800; white-space: nowrap; }
-        td.other { font-size: 0.82rem; color: #55503f; min-width: 220px; }
+        td.other { font-size: 0.72rem; color: #55503f; }
         .legend {
             margin-top: 1.75rem;
             display: grid;
@@ -134,16 +140,19 @@
 
         <div class="table-scroll">
             <table>
+                <colgroup>
+                    <col class="c-week"><col class="c-fire"><col class="c-temp"><col class="c-rain"><col class="c-bird"><col class="c-avail"><col class="c-board"><col class="c-other">
+                </colgroup>
                 <thead>
                     <tr>
                         <th>Candidate week</th>
-                        <th>Wildfire risk<span class="sub">historical alert exposure &middot; affects: cancellation</span></th>
-                        <th>Temperature<span class="sub">typical low / median daily high &middot; affects: tickets</span></th>
-                        <th>Rain<span class="sub">wet-day chance &middot; affects: tickets</span></th>
-                        <th>Bird nesting<span class="sub">est. probability of refusal &middot; affects: cancellation</span></th>
-                        <th>Availability<span class="sub">% of community who can come</span></th>
+                        <th>Wildfire risk<span class="sub">affects: cancellation</span></th>
+                        <th>Temperature<span class="sub">low / daily high</span></th>
+                        <th>Rain<span class="sub">wet-day chance</span></th>
+                        <th>Bird nesting<span class="sub">refusal probability</span></th>
+                        <th>Availability<span class="sub">% who can come</span></th>
                         <th>Board<span class="sub">voting yes, of 7</span></th>
-                        <th>Other European burns / Monegros events<span class="sub">overlap &middot; affects: tickets</span></th>
+                        <th>Other burns / events<span class="sub">overlap</span></th>
                     </tr>
                 </thead>
                 <tbody>
