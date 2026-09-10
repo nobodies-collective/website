@@ -65,7 +65,20 @@
         }
         col.c-week { width: 9%; }
         col.c-fire { width: 9%; }
-        col.c-temp { width: 8.5%; }
+        col.c-tlow { width: 4.5%; }
+        col.c-thigh { width: 4.5%; }
+        td.temp { text-align: center; font-weight: 600; }
+        /* blue (cold) -> red (hot) scale */
+        .t-15 { background: hsl(210, 70%, 88%); color: hsl(210, 60%, 28%); }
+        .t-16 { background: hsl(199, 70%, 88%); color: hsl(199, 60%, 28%); }
+        .t-17 { background: hsl(188, 68%, 87%); color: hsl(188, 60%, 26%); }
+        .t-18 { background: hsl(178, 62%, 86%); color: hsl(178, 65%, 24%); }
+        .t-20 { background: hsl(156, 58%, 86%); color: hsl(156, 60%, 24%); }
+        .t-26 { background: hsl(91, 62%, 86%); color: hsl(91, 55%, 26%); }
+        .t-28 { background: hsl(70, 72%, 84%); color: hsl(60, 70%, 24%); }
+        .t-30 { background: hsl(48, 85%, 84%); color: hsl(40, 80%, 28%); }
+        .t-31 { background: hsl(37, 88%, 85%); color: hsl(30, 80%, 30%); }
+        .t-34 { background: hsl(5, 78%, 87%); color: hsl(5, 65%, 34%); }
         col.c-rain { width: 6%; }
         col.c-bird { width: 14%; }
         col.c-avail { width: 7%; }
@@ -141,13 +154,13 @@
         <div class="table-scroll">
             <table>
                 <colgroup>
-                    <col class="c-week"><col class="c-fire"><col class="c-temp"><col class="c-rain"><col class="c-bird"><col class="c-avail"><col class="c-board"><col class="c-other">
+                    <col class="c-week"><col class="c-fire"><col class="c-tlow"><col class="c-thigh"><col class="c-rain"><col class="c-bird"><col class="c-avail"><col class="c-board"><col class="c-other">
                 </colgroup>
                 <thead>
                     <tr>
                         <th>Candidate week</th>
                         <th>Wildfire risk<span class="sub">affects: cancellation</span></th>
-                        <th>Temperature<span class="sub">low / daily high</span></th>
+                        <th colspan="2">Temperature<span class="sub">low / daily high</span></th>
                         <th>Rain<span class="sub">wet-day chance</span></th>
                         <th>Bird nesting<span class="sub">refusal probability</span></th>
                         <th>Availability<span class="sub">% who can come</span></th>
@@ -159,7 +172,8 @@
                     <tr>
                         <td class="week">31 May &ndash; 6 Jun<span class="season">early summer</span></td>
                         <td><span class="pill cell-good">Low</span></td>
-                        <td>16&ndash;28&nbsp;&deg;C</td>
+                        <td class="temp t-16">16&nbsp;&deg;C</td>
+                        <td class="temp t-28">28&nbsp;&deg;C</td>
                         <td class="cell-mid">21%</td>
                         <td class="cell-mid">Moderate: ~25&ndash;45%</td>
                         <td class="cell-good">59%</td>
@@ -169,7 +183,8 @@
                     <tr>
                         <td class="week">7 &ndash; 13 Jun<span class="season">early summer</span></td>
                         <td><span class="pill cell-good">Low</span></td>
-                        <td>17&ndash;30&nbsp;&deg;C</td>
+                        <td class="temp t-17">17&nbsp;&deg;C</td>
+                        <td class="temp t-30">30&nbsp;&deg;C</td>
                         <td class="cell-mid">24%</td>
                         <td class="cell-mid">Moderate: ~15&ndash;35%</td>
                         <td class="cell-vgood">63%</td>
@@ -179,7 +194,8 @@
                     <tr>
                         <td class="week">14 &ndash; 20 Jun<span class="season">early summer</span></td>
                         <td><span class="pill cell-mid">Med</span></td>
-                        <td>18&ndash;31&nbsp;&deg;C</td>
+                        <td class="temp t-18">18&nbsp;&deg;C</td>
+                        <td class="temp t-31">31&nbsp;&deg;C</td>
                         <td class="cell-good">18%</td>
                         <td class="cell-good">Low&ndash;moderate: ~10&ndash;25%</td>
                         <td class="cell-mid">52%</td>
@@ -189,7 +205,8 @@
                     <tr>
                         <td class="week">5 &ndash; 11 Jul<span class="season">established window</span></td>
                         <td><span class="pill cell-vbad">Very high</span></td>
-                        <td>20&ndash;34&nbsp;&deg;C</td>
+                        <td class="temp t-20">20&nbsp;&deg;C</td>
+                        <td class="temp t-34">34&nbsp;&deg;C</td>
                         <td class="cell-good">10%</td>
                         <td class="cell-good">Low: ~5&ndash;20%</td>
                         <td class="cell-bad">44%</td>
@@ -199,7 +216,8 @@
                     <tr>
                         <td class="week">6 &ndash; 12 Sep<span class="season">late summer</span></td>
                         <td><span class="pill cell-mid">Low&ndash;Med</span></td>
-                        <td>18&ndash;30&nbsp;&deg;C</td>
+                        <td class="temp t-18">18&nbsp;&deg;C</td>
+                        <td class="temp t-30">30&nbsp;&deg;C</td>
                         <td class="cell-good">14%</td>
                         <td class="cell-vgood">Very low</td>
                         <td class="cell-mid">51%</td>
@@ -209,7 +227,8 @@
                     <tr>
                         <td class="week">13 &ndash; 19 Sep<span class="season">late summer</span></td>
                         <td><span class="pill cell-good">Low</span></td>
-                        <td>17&ndash;28&nbsp;&deg;C</td>
+                        <td class="temp t-17">17&nbsp;&deg;C</td>
+                        <td class="temp t-28">28&nbsp;&deg;C</td>
                         <td class="cell-mid">23%</td>
                         <td class="cell-vgood">Very low</td>
                         <td class="cell-good">59%</td>
@@ -219,7 +238,8 @@
                     <tr>
                         <td class="week">20 &ndash; 26 Sep<span class="season">late summer</span></td>
                         <td><span class="pill cell-good">Low</span></td>
-                        <td>16&ndash;26&nbsp;&deg;C</td>
+                        <td class="temp t-16">16&nbsp;&deg;C</td>
+                        <td class="temp t-26">26&nbsp;&deg;C</td>
                         <td class="cell-good">20%</td>
                         <td class="cell-vgood">Very low</td>
                         <td class="cell-good">55%</td>
@@ -229,7 +249,8 @@
                     <tr>
                         <td class="week">27 Sep &ndash; 3 Oct<span class="season">autumn</span></td>
                         <td><span class="pill cell-vgood">Very low</span></td>
-                        <td>15&ndash;26&nbsp;&deg;C</td>
+                        <td class="temp t-15">15&nbsp;&deg;C</td>
+                        <td class="temp t-26">26&nbsp;&deg;C</td>
                         <td class="cell-good">14%</td>
                         <td class="cell-vgood">Very low</td>
                         <td class="cell-mid">52%</td>
