@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Draft — Candidate Weeks 2027 Comparison | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #2c2418;
+            --olive: #5f7050;
+            --ochre: #c9922a;
+            --bg: #faf8f4;
+            --border: #e4ded2;
+            --good: #e5f0e0;
+            --good-ink: #33691e;
+            --vgood: #d3e8ca;
+            --mid: #fdf3d7;
+            --mid-ink: #9c6f00;
+            --bad: #fbe0d9;
+            --bad-ink: #b3261e;
+            --vbad: #f6c9c0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            padding: 2.5rem 1.5rem 4rem;
+        }
+        .draft-banner {
+            max-width: 1200px;
+            margin: 0 auto 2rem;
+            padding: 0.6rem 1rem;
+            background: var(--mid);
+            border: 1px solid var(--ochre);
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: var(--mid-ink);
+            font-weight: 600;
+        }
+        .wrap { max-width: 1200px; margin: 0 auto; }
+        h1 {
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        .deck {
+            color: #6b6353;
+            margin-bottom: 2rem;
+            max-width: 760px;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        .table-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; background: #fff; }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 980px;
+            font-size: 0.88rem;
+        }
+        thead th {
+            background: var(--ink);
+            color: #fff;
+            text-align: left;
+            padding: 0.85rem 0.9rem;
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        thead th .sub {
+            display: block;
+            margin-top: 0.25rem;
+            font-weight: 400;
+            font-size: 0.68rem;
+            letter-spacing: 0;
+            text-transform: none;
+            color: rgba(255,255,255,0.65);
+        }
+        tbody td {
+            padding: 0.75rem 0.9rem;
+            border-top: 1px solid var(--border);
+            vertical-align: top;
+            line-height: 1.5;
+        }
+        tbody tr:nth-child(even) { background: #fcfbf8; }
+        td.week { font-weight: 700; white-space: nowrap; }
+        td.week .season {
+            display: block;
+            font-weight: 500;
+            font-size: 0.72rem;
+            color: #8a8170;
+        }
+        .pill {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.78rem;
+            white-space: nowrap;
+        }
+        .cell-vgood { background: var(--vgood); color: var(--good-ink); }
+        .cell-good  { background: var(--good);  color: var(--good-ink); }
+        .cell-mid   { background: var(--mid);   color: var(--mid-ink); }
+        .cell-bad   { background: var(--bad);   color: var(--bad-ink); }
+        .cell-vbad  { background: var(--vbad);  color: var(--bad-ink); }
+        td.board { font-weight: 800; white-space: nowrap; }
+        td.other { font-size: 0.82rem; color: #55503f; min-width: 220px; }
+        .legend {
+            margin-top: 1.75rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 0.75rem 2rem;
+            font-size: 0.8rem;
+            color: #6b6353;
+            line-height: 1.55;
+        }
+        .legend strong { color: var(--ink); }
+        .legend-swatches { margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.78rem; }
+        .footnote { margin-top: 1.5rem; font-size: 0.78rem; color: #8a8170; }
+    </style>
+</head>
+<body>
+    <div class="draft-banner">DRAFT PREVIEW &mdash; working document, not linked from the site and not part of the published information pack.</div>
+    <div class="wrap">
+        <h1>Candidate Weeks 2027 &mdash; Comparison</h1>
+        <p class="deck">The eight shortlisted weeks compared across wildfire risk, weather, bird nesting, community availability and Board opinion. Data from 2025 unless noted. Green is favourable, amber is caution, red is unfavourable.</p>
+
+        <div class="table-scroll">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Candidate week</th>
+                        <th>Wildfire risk<span class="sub">historical alert exposure &middot; affects: cancellation</span></th>
+                        <th>Temperature<span class="sub">typical low / median daily high &middot; affects: tickets</span></th>
+                        <th>Rain<span class="sub">wet-day chance &middot; affects: tickets</span></th>
+                        <th>Bird nesting<span class="sub">est. probability of refusal &middot; affects: cancellation</span></th>
+                        <th>Availability<span class="sub">% of community who can come</span></th>
+                        <th>Board<span class="sub">voting yes, of 7</span></th>
+                        <th>Other European burns / Monegros events<span class="sub">overlap &middot; affects: tickets</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="week">31 May &ndash; 6 Jun<span class="season">early summer</span></td>
+                        <td><span class="pill cell-good">Low</span></td>
+                        <td>16&ndash;28&nbsp;&deg;C</td>
+                        <td class="cell-mid">21%</td>
+                        <td class="cell-mid">Moderate: ~25&ndash;45%</td>
+                        <td class="cell-good">59%</td>
+                        <td class="board cell-mid">3 / 7</td>
+                        <td class="other">Burning Nest ends; Somewhere uncertain</td>
+                    </tr>
+                    <tr>
+                        <td class="week">7 &ndash; 13 Jun<span class="season">early summer</span></td>
+                        <td><span class="pill cell-good">Low</span></td>
+                        <td>17&ndash;30&nbsp;&deg;C</td>
+                        <td class="cell-mid">24%</td>
+                        <td class="cell-mid">Moderate: ~15&ndash;35%</td>
+                        <td class="cell-vgood">63%</td>
+                        <td class="board cell-good">5 / 7</td>
+                        <td class="other">Art B&auml;r</td>
+                    </tr>
+                    <tr>
+                        <td class="week">14 &ndash; 20 Jun<span class="season">early summer</span></td>
+                        <td><span class="pill cell-mid">Med</span></td>
+                        <td>18&ndash;31&nbsp;&deg;C</td>
+                        <td class="cell-good">18%</td>
+                        <td class="cell-good">Low&ndash;moderate: ~10&ndash;25%</td>
+                        <td class="cell-mid">52%</td>
+                        <td class="board cell-vbad">0 / 7</td>
+                        <td class="other">Art B&auml;r, Aarhus, Where the Sheep Sleep, Bivrost, Dego&scaron;ie J&#257;&#326;i</td>
+                    </tr>
+                    <tr>
+                        <td class="week">5 &ndash; 11 Jul<span class="season">established window</span></td>
+                        <td><span class="pill cell-vbad">Very high</span></td>
+                        <td>20&ndash;34&nbsp;&deg;C</td>
+                        <td class="cell-good">10%</td>
+                        <td class="cell-good">Low: ~5&ndash;20%</td>
+                        <td class="cell-bad">44%</td>
+                        <td class="board cell-vbad">0 / 7</td>
+                        <td class="other">None mapped</td>
+                    </tr>
+                    <tr>
+                        <td class="week">6 &ndash; 12 Sep<span class="season">late summer</span></td>
+                        <td><span class="pill cell-mid">Low&ndash;Med</span></td>
+                        <td>18&ndash;30&nbsp;&deg;C</td>
+                        <td class="cell-good">14%</td>
+                        <td class="cell-vgood">Very low</td>
+                        <td class="cell-mid">51%</td>
+                        <td class="board cell-mid">3 / 7</td>
+                        <td class="other">Arctic; Microburn / Pyraegea start around this period; Burning Man</td>
+                    </tr>
+                    <tr>
+                        <td class="week">13 &ndash; 19 Sep<span class="season">late summer</span></td>
+                        <td><span class="pill cell-good">Low</span></td>
+                        <td>17&ndash;28&nbsp;&deg;C</td>
+                        <td class="cell-mid">23%</td>
+                        <td class="cell-vgood">Very low</td>
+                        <td class="cell-good">59%</td>
+                        <td class="board cell-vgood">6 / 7</td>
+                        <td class="other">Microburn + Pyraegea</td>
+                    </tr>
+                    <tr>
+                        <td class="week">20 &ndash; 26 Sep<span class="season">late summer</span></td>
+                        <td><span class="pill cell-good">Low</span></td>
+                        <td>16&ndash;26&nbsp;&deg;C</td>
+                        <td class="cell-good">20%</td>
+                        <td class="cell-vgood">Very low</td>
+                        <td class="cell-good">55%</td>
+                        <td class="board cell-vgood">6 / 7</td>
+                        <td class="other">Pyraegea to ~22 Sep</td>
+                    </tr>
+                    <tr>
+                        <td class="week">27 Sep &ndash; 3 Oct<span class="season">autumn</span></td>
+                        <td><span class="pill cell-vgood">Very low</span></td>
+                        <td>15&ndash;26&nbsp;&deg;C</td>
+                        <td class="cell-good">14%</td>
+                        <td class="cell-vgood">Very low</td>
+                        <td class="cell-mid">52%</td>
+                        <td class="board cell-good">5 / 7</td>
+                        <td class="other">None mapped</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="legend-swatches">
+            <span class="pill cell-vgood">most favourable</span>
+            <span class="pill cell-good">favourable</span>
+            <span class="pill cell-mid">caution</span>
+            <span class="pill cell-bad">unfavourable</span>
+            <span class="pill cell-vbad">most unfavourable</span>
+        </div>
+
+        <div class="legend">
+            <p><strong>Wildfire risk</strong> &mdash; historical wildfire alert exposure for equivalent weeks. Potential impact: cancellation of the event.</p>
+            <p><strong>Temperature</strong> &mdash; typical low / median daily high. Potential impact: ticket sales.</p>
+            <p><strong>Rain</strong> &mdash; wet-day chance. Potential impact: ticket sales.</p>
+            <p><strong>Bird nesting</strong> &mdash; estimated probability of refusal specifically on bird-nesting grounds. Potential impact: cancellation of the event.</p>
+            <p><strong>Community availability</strong> &mdash; % of survey respondents who selected availability on this date.</p>
+            <p><strong>Board opinion</strong> &mdash; Board members voting yes, out of 7.</p>
+        </div>
+
+        <p class="footnote">Data from 2025. Draft for review &mdash; not linked from the site.</p>
+    </div>
+</body>
+</html>
