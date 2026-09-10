@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Weeks 2027 Comparison | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #2c2418;
+            --olive: #5f7050;
+            --ochre: #c9922a;
+            --bg: #faf8f4;
+            --border: #e4ded2;
+            --good: #e5f0e0;
+            --good-ink: #33691e;
+            --vgood: #d3e8ca;
+            --mid: #fdf3d7;
+            --mid-ink: #9c6f00;
+            --bad: #fbe0d9;
+            --bad-ink: #b3261e;
+            --vbad: #f6c9c0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            padding: 2.5rem 1.5rem 4rem;
+        }
+        .lang-switch {
+            max-width: 1200px;
+            margin: 0 auto 1.25rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+        .lang-switch button {
+            border: 1px solid var(--border);
+            background: #fff;
+            padding: 0.35rem 0.85rem;
+            border-radius: 999px;
+            font-family: inherit;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--ink);
+        }
+        .lang-switch button.active {
+            background: var(--ink);
+            color: #fff;
+            border-color: var(--ink);
+        }
+        .wrap { max-width: 1200px; margin: 0 auto; }
+        h1 {
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        .deck {
+            color: #6b6353;
+            margin-bottom: 2rem;
+            max-width: 760px;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        .table-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; background: #fff; }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 0.78rem;
+            table-layout: fixed;
+        }
+        col.c-week { width: 9%; }
+        col.c-fire { width: 9%; }
+        col.c-tlow { width: 4.5%; }
+        col.c-thigh { width: 4.5%; }
+        td.temp { text-align: center; font-weight: 600; }
+        /* blue (cold) -> red (hot) scale */
+        .t-15 { background: hsl(210, 70%, 88%); color: hsl(210, 60%, 28%); }
+        .t-16 { background: hsl(199, 70%, 88%); color: hsl(199, 60%, 28%); }
+        .t-17 { background: hsl(188, 68%, 87%); color: hsl(188, 60%, 26%); }
+        .t-18 { background: hsl(178, 62%, 86%); color: hsl(178, 65%, 24%); }
+        .t-20 { background: hsl(156, 58%, 86%); color: hsl(156, 60%, 24%); }
+        .t-26 { background: hsl(91, 62%, 86%); color: hsl(91, 55%, 26%); }
+        .t-28 { background: hsl(70, 72%, 84%); color: hsl(60, 70%, 24%); }
+        .t-30 { background: hsl(48, 85%, 84%); color: hsl(40, 80%, 28%); }
+        .t-31 { background: hsl(37, 88%, 85%); color: hsl(30, 80%, 30%); }
+        .t-34 { background: hsl(5, 78%, 87%); color: hsl(5, 65%, 34%); }
+        col.c-rain { width: 6%; }
+        col.c-bird { width: 14%; }
+        col.c-avail { width: 7%; }
+        col.c-board { width: 6%; }
+        col.c-other { width: 22%; }
+        thead th {
+            background: var(--ink);
+            color: #fff;
+            text-align: left;
+            padding: 0.55rem 0.55rem;
+            font-weight: 700;
+            font-size: 0.68rem;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+        thead th .sub {
+            display: block;
+            margin-top: 0.25rem;
+            font-weight: 400;
+            font-size: 0.6rem;
+            letter-spacing: 0;
+            text-transform: none;
+            color: rgba(255,255,255,0.65);
+        }
+        tbody td {
+            padding: 0.5rem 0.55rem;
+            border-top: 1px solid var(--border);
+            vertical-align: top;
+            line-height: 1.5;
+        }
+        tbody tr:nth-child(even) { background: #fcfbf8; }
+        td.week { font-weight: 700; }
+        td.week .season {
+            display: block;
+            font-weight: 500;
+            font-size: 0.72rem;
+            color: #8a8170;
+        }
+        .pill {
+            display: inline-block;
+            padding: 0.15rem 0.5rem;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.72rem;
+        }
+        .cell-vgood { background: var(--vgood); color: var(--good-ink); }
+        .cell-good  { background: var(--good);  color: var(--good-ink); }
+        .cell-mid   { background: var(--mid);   color: var(--mid-ink); }
+        .cell-bad   { background: var(--bad);   color: var(--bad-ink); }
+        .cell-vbad  { background: var(--vbad);  color: var(--bad-ink); }
+        td.board { font-weight: 800; white-space: nowrap; }
+        td.other { font-size: 0.72rem; color: #55503f; }
+        .legend {
+            margin-top: 1.75rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 0.75rem 2rem;
+            font-size: 0.8rem;
+            color: #6b6353;
+            line-height: 1.55;
+        }
+        .legend strong { color: var(--ink); }
+        .legend-swatches { margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.78rem; }
+        .footnote { margin-top: 1.5rem; font-size: 0.78rem; color: #8a8170; }
+    </style>
+</head>
+<body>
+    <div class="lang-switch" id="langSwitch">
+        <button data-lang="en" class="active">English</button>
+        <button data-lang="es">Español</button>
+        <button data-lang="fr">Français</button>
+        <button data-lang="de">Deutsch</button>
+        <button data-lang="it">Italiano</button>
+    </div>
+    <div class="wrap">
+        <h1 data-i18n="h1">Candidate Weeks 2027 — Comparison</h1>
+        <p class="deck" data-i18n="deck">The eight shortlisted weeks compared across wildfire risk, weather, bird nesting, community availability and Board opinion. Data from 2025 unless noted. Green is favourable, amber is caution, red is unfavourable.</p>
+
+        <div class="table-scroll">
+            <table>
+                <colgroup>
+                    <col class="c-week"><col class="c-fire"><col class="c-tlow"><col class="c-thigh"><col class="c-rain"><col class="c-bird"><col class="c-avail"><col class="c-board"><col class="c-other">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th data-i18n="th_week">Candidate week</th>
+                        <th data-i18n="th_fire">Wildfire risk<span class="sub">affects: cancellation</span></th>
+                        <th colspan="2" data-i18n="th_temp">Temperature<span class="sub">low / daily high</span></th>
+                        <th data-i18n="th_rain">Rain<span class="sub">wet-day chance</span></th>
+                        <th data-i18n="th_bird">Bird nesting<span class="sub">refusal probability</span></th>
+                        <th data-i18n="th_avail">Availability<span class="sub">% who can come</span></th>
+                        <th data-i18n="th_board">Board<span class="sub">voting yes, of 7</span></th>
+                        <th data-i18n="th_other">Other burns / events<span class="sub">overlap</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="week" data-i18n="w1">31 May – 6 Jun<span class="season">early summer</span></td>
+                        <td><span class="pill cell-good" data-i18n="v_low">Low</span></td>
+                        <td class="temp t-16">16&nbsp;&deg;C</td>
+                        <td class="temp t-28">28&nbsp;&deg;C</td>
+                        <td class="cell-mid">21%</td>
+                        <td class="cell-mid" data-i18n="bird1">Moderate: ~25–45%</td>
+                        <td class="cell-good">59%</td>
+                        <td class="board cell-mid">3 / 7</td>
+                        <td class="other" data-i18n="other1">Burning Nest ends; Somewhere uncertain</td>
+                    </tr>
+                    <tr>
+                        <td class="week" data-i18n="w2">7 – 13 Jun<span class="season">early summer</span></td>
+                        <td><span class="pill cell-good" data-i18n="v_low">Low</span></td>
+                        <td class="temp t-17">17&nbsp;&deg;C</td>
+                        <td class="temp t-30">30&nbsp;&deg;C</td>
+                        <td class="cell-mid">24%</td>
+                        <td class="cell-mid" data-i18n="bird2">Moderate: ~15–35%</td>
+                        <td class="cell-vgood">63%</td>
+                        <td class="board cell-good">5 / 7</td>
+                        <td class="other">Art B&auml;r</td>
+                    </tr>
+                    <tr>
+                        <td class="week" data-i18n="w3">14 – 20 Jun<span class="season">early summer</span></td>
+                        <td><span class="pill cell-mid" data-i18n="v_med">Med</span></td>
+                        <td class="temp t-18">18&nbsp;&deg;C</td>
+                        <td class="temp t-31">31&nbsp;&deg;C</td>
+                        <td class="cell-good">18%</td>
+                        <td class="cell-good" data-i18n="bird3">Low–moderate: ~10–25%</td>
+                        <td class="cell-mid">52%</td>
+                        <td class="board cell-vbad">0 / 7</td>
+                        <td class="other">Art B&auml;r, Aarhus, Where the Sheep Sleep, Bivrost, Dego&scaron;ie J&#257;&#326;i</td>
+                    </tr>
+                    <tr>
+                        <td class="week" data-i18n="w4">5 – 11 Jul<span class="season">established window</span></td>
+                        <td><span class="pill cell-vbad" data-i18n="v_vhigh">Very high</span></td>
+                        <td class="temp t-20">20&nbsp;&deg;C</td>
+                        <td class="temp t-34">34&nbsp;&deg;C</td>
+                        <td class="cell-good">10%</td>
+                        <td class="cell-good" data-i18n="bird4">Low: ~5–20%</td>
+                        <td class="cell-bad">44%</td>
+                        <td class="board cell-vbad">0 / 7</td>
+                        <td class="other" data-i18n="none_mapped">None mapped</td>
+                    </tr>
+                    <tr>
+                        <td class="week" data-i18n="w5">6 – 12 Sep<span class="season">late summer</span></td>
+                        <td><span class="pill cell-mid" data-i18n="v_lowmed">Low–Med</span></td>
+                        <td class="temp t-18">18&nbsp;&deg;C</td>
+                        <td class="temp t-30">30&nbsp;&deg;C</td>
+                        <td class="cell-good">14%</td>
+                        <td class="cell-vgood" data-i18n="v_vlow_f">Very low</td>
+                        <td class="cell-mid">51%</td>
+                        <td class="board cell-mid">3 / 7</td>
+                        <td class="other" data-i18n="other5">Arctic; Microburn / Pyraegea start around this period; Burning Man</td>
+                    </tr>
+                    <tr>
+                        <td class="week" data-i18n="w6">13 – 19 Sep<span class="season">late summer</span></td>
+                        <td><span class="pill cell-good" data-i18n="v_low">Low</span></td>
+                        <td class="temp t-17">17&nbsp;&deg;C</td>
+                        <td class="temp t-28">28&nbsp;&deg;C</td>
+                        <td class="cell-mid">23%</td>
+                        <td class="cell-vgood" data-i18n="v_vlow_f">Very low</td>
+                        <td class="cell-good">59%</td>
+                        <td class="board cell-vgood">6 / 7</td>
+                        <td class="other">Microburn + Pyraegea</td>
+                    </tr>
+                    <tr>
+                        <td class="week" data-i18n="w7">20 – 26 Sep<span class="season">late summer</span></td>
+                        <td><span class="pill cell-good" data-i18n="v_low">Low</span></td>
+                        <td class="temp t-16">16&nbsp;&deg;C</td>
+                        <td class="temp t-26">26&nbsp;&deg;C</td>
+                        <td class="cell-good">20%</td>
+                        <td class="cell-vgood" data-i18n="v_vlow_f">Very low</td>
+                        <td class="cell-good">55%</td>
+                        <td class="board cell-vgood">6 / 7</td>
+                        <td class="other" data-i18n="other7">Pyraegea to ~22 Sep</td>
+                    </tr>
+                    <tr>
+                        <td class="week" data-i18n="w8">27 Sep – 3 Oct<span class="season">autumn</span></td>
+                        <td><span class="pill cell-vgood" data-i18n="v_vlow">Very low</span></td>
+                        <td class="temp t-15">15&nbsp;&deg;C</td>
+                        <td class="temp t-26">26&nbsp;&deg;C</td>
+                        <td class="cell-good">14%</td>
+                        <td class="cell-vgood" data-i18n="v_vlow_f">Very low</td>
+                        <td class="cell-mid">52%</td>
+                        <td class="board cell-good">5 / 7</td>
+                        <td class="other" data-i18n="none_mapped">None mapped</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="legend-swatches">
+            <span class="pill cell-vgood" data-i18n="sw_vgood">most favourable</span>
+            <span class="pill cell-good" data-i18n="sw_good">favourable</span>
+            <span class="pill cell-mid" data-i18n="sw_mid">caution</span>
+            <span class="pill cell-bad" data-i18n="sw_bad">unfavourable</span>
+            <span class="pill cell-vbad" data-i18n="sw_vbad">most unfavourable</span>
+        </div>
+
+        <div class="legend">
+            <p data-i18n="l_fire"><strong>Wildfire risk</strong> — historical wildfire alert exposure for equivalent weeks. Potential impact: cancellation of the event.</p>
+            <p data-i18n="l_temp"><strong>Temperature</strong> — typical low / median daily high. Potential impact: ticket sales.</p>
+            <p data-i18n="l_rain"><strong>Rain</strong> — wet-day chance. Potential impact: ticket sales.</p>
+            <p data-i18n="l_bird"><strong>Bird nesting</strong> — estimated probability of refusal specifically on bird-nesting grounds. Potential impact: cancellation of the event.</p>
+            <p data-i18n="l_avail"><strong>Community availability</strong> — % of survey respondents who selected availability on this date.</p>
+            <p data-i18n="l_board"><strong>Board opinion</strong> — Board members voting yes, out of 7.</p>
+        </div>
+
+        <p class="footnote" data-i18n="footnote">Data from 2025.</p>
+    </div>
+
+    <script>
+    const I18N = {
+        en: {
+            title: `Candidate Weeks 2027 Comparison | Nobodies Collective`,
+            h1: `Candidate Weeks 2027 — Comparison`,
+            deck: `The eight shortlisted weeks compared across wildfire risk, weather, bird nesting, community availability and Board opinion. Data from 2025 unless noted. Green is favourable, amber is caution, red is unfavourable.`,
+            th_week: `Candidate week`,
+            th_fire: `Wildfire risk<span class="sub">affects: cancellation</span>`,
+            th_temp: `Temperature<span class="sub">low / daily high</span>`,
+            th_rain: `Rain<span class="sub">wet-day chance</span>`,
+            th_bird: `Bird nesting<span class="sub">refusal probability</span>`,
+            th_avail: `Availability<span class="sub">% who can come</span>`,
+            th_board: `Board<span class="sub">voting yes, of 7</span>`,
+            th_other: `Other burns / events<span class="sub">overlap</span>`,
+            w1: `31 May – 6 Jun<span class="season">early summer</span>`,
+            w2: `7 – 13 Jun<span class="season">early summer</span>`,
+            w3: `14 – 20 Jun<span class="season">early summer</span>`,
+            w4: `5 – 11 Jul<span class="season">established window</span>`,
+            w5: `6 – 12 Sep<span class="season">late summer</span>`,
+            w6: `13 – 19 Sep<span class="season">late summer</span>`,
+            w7: `20 – 26 Sep<span class="season">late summer</span>`,
+            w8: `27 Sep – 3 Oct<span class="season">autumn</span>`,
+            v_low: `Low`, v_med: `Med`, v_vhigh: `Very high`, v_lowmed: `Low–Med`, v_vlow: `Very low`, v_vlow_f: `Very low`,
+            bird1: `Moderate: ~25–45%`, bird2: `Moderate: ~15–35%`, bird3: `Low–moderate: ~10–25%`, bird4: `Low: ~5–20%`,
+            other1: `Burning Nest ends; Somewhere uncertain`,
+            other5: `Arctic; Microburn / Pyraegea start around this period; Burning Man`,
+            other7: `Pyraegea to ~22 Sep`,
+            none_mapped: `None mapped`,
+            sw_vgood: `most favourable`, sw_good: `favourable`, sw_mid: `caution`, sw_bad: `unfavourable`, sw_vbad: `most unfavourable`,
+            l_fire: `<strong>Wildfire risk</strong> — historical wildfire alert exposure for equivalent weeks. Potential impact: cancellation of the event.`,
+            l_temp: `<strong>Temperature</strong> — typical low / median daily high. Potential impact: ticket sales.`,
+            l_rain: `<strong>Rain</strong> — wet-day chance. Potential impact: ticket sales.`,
+            l_bird: `<strong>Bird nesting</strong> — estimated probability of refusal specifically on bird-nesting grounds. Potential impact: cancellation of the event.`,
+            l_avail: `<strong>Community availability</strong> — % of survey respondents who selected availability on this date.`,
+            l_board: `<strong>Board opinion</strong> — Board members voting yes, out of 7.`,
+            footnote: `Data from 2025.`
+        },
+        es: {
+            title: `Semanas candidatas 2027 | Nobodies Collective`,
+            h1: `Semanas candidatas 2027 — Comparativa`,
+            deck: `Las ocho semanas preseleccionadas comparadas según riesgo de incendio forestal, meteorología, nidificación de aves, disponibilidad de la comunidad y opinión de la Junta. Datos de 2025 salvo indicación. Verde es favorable, ámbar es precaución, rojo es desfavorable.`,
+            th_week: `Semana candidata`,
+            th_fire: `Riesgo de incendio<span class="sub">afecta a: cancelación</span>`,
+            th_temp: `Temperatura<span class="sub">mínima / máxima diaria</span>`,
+            th_rain: `Lluvia<span class="sub">prob. de día lluvioso</span>`,
+            th_bird: `Nidificación de aves<span class="sub">probabilidad de denegación</span>`,
+            th_avail: `Disponibilidad<span class="sub">% que puede venir</span>`,
+            th_board: `Junta<span class="sub">votos a favor, de 7</span>`,
+            th_other: `Otros burns / eventos<span class="sub">solapamiento</span>`,
+            w1: `31 may – 6 jun<span class="season">principios de verano</span>`,
+            w2: `7 – 13 jun<span class="season">principios de verano</span>`,
+            w3: `14 – 20 jun<span class="season">principios de verano</span>`,
+            w4: `5 – 11 jul<span class="season">ventana habitual</span>`,
+            w5: `6 – 12 sep<span class="season">finales de verano</span>`,
+            w6: `13 – 19 sep<span class="season">finales de verano</span>`,
+            w7: `20 – 26 sep<span class="season">finales de verano</span>`,
+            w8: `27 sep – 3 oct<span class="season">otoño</span>`,
+            v_low: `Bajo`, v_med: `Medio`, v_vhigh: `Muy alto`, v_lowmed: `Bajo–medio`, v_vlow: `Muy bajo`, v_vlow_f: `Muy baja`,
+            bird1: `Moderada: ~25–45%`, bird2: `Moderada: ~15–35%`, bird3: `Baja–moderada: ~10–25%`, bird4: `Baja: ~5–20%`,
+            other1: `Termina Burning Nest; Somewhere incierto`,
+            other5: `Arctic; Microburn / Pyraegea comienzan en este periodo; Burning Man`,
+            other7: `Pyraegea hasta ~22 sep`,
+            none_mapped: `Ninguno identificado`,
+            sw_vgood: `muy favorable`, sw_good: `favorable`, sw_mid: `precaución`, sw_bad: `desfavorable`, sw_vbad: `muy desfavorable`,
+            l_fire: `<strong>Riesgo de incendio</strong> — exposición histórica a alertas de incendio en semanas equivalentes. Impacto potencial: cancelación del evento.`,
+            l_temp: `<strong>Temperatura</strong> — mínima típica / mediana de máximas diarias. Impacto potencial: venta de entradas.`,
+            l_rain: `<strong>Lluvia</strong> — probabilidad de día lluvioso. Impacto potencial: venta de entradas.`,
+            l_bird: `<strong>Nidificación de aves</strong> — probabilidad estimada de denegación específicamente por motivos de nidificación. Impacto potencial: cancelación del evento.`,
+            l_avail: `<strong>Disponibilidad de la comunidad</strong> — % de personas encuestadas que marcaron disponibilidad en esta fecha.`,
+            l_board: `<strong>Opinión de la Junta</strong> — miembros de la Junta que votan sí, de 7.`,
+            footnote: `Datos de 2025.`
+        },
+        fr: {
+            title: `Semaines candidates 2027 | Nobodies Collective`,
+            h1: `Semaines candidates 2027 — Comparaison`,
+            deck: `Les huit semaines présélectionnées comparées selon le risque d'incendie, la météo, la nidification des oiseaux, la disponibilité de la communauté et l'avis du Conseil. Données de 2025 sauf mention contraire. Vert : favorable, ambre : prudence, rouge : défavorable.`,
+            th_week: `Semaine candidate`,
+            th_fire: `Risque d'incendie<span class="sub">impact : annulation</span>`,
+            th_temp: `Température<span class="sub">minimale / maximale journalière</span>`,
+            th_rain: `Pluie<span class="sub">prob. de jour pluvieux</span>`,
+            th_bird: `Nidification des oiseaux<span class="sub">probabilité de refus</span>`,
+            th_avail: `Disponibilité<span class="sub">% pouvant venir</span>`,
+            th_board: `Conseil<span class="sub">votes pour, sur 7</span>`,
+            th_other: `Autres burns / événements<span class="sub">chevauchement</span>`,
+            w1: `31 mai – 6 juin<span class="season">début d'été</span>`,
+            w2: `7 – 13 juin<span class="season">début d'été</span>`,
+            w3: `14 – 20 juin<span class="season">début d'été</span>`,
+            w4: `5 – 11 juil.<span class="season">créneau habituel</span>`,
+            w5: `6 – 12 sept.<span class="season">fin d'été</span>`,
+            w6: `13 – 19 sept.<span class="season">fin d'été</span>`,
+            w7: `20 – 26 sept.<span class="season">fin d'été</span>`,
+            w8: `27 sept. – 3 oct.<span class="season">automne</span>`,
+            v_low: `Faible`, v_med: `Moyen`, v_vhigh: `Très élevé`, v_lowmed: `Faible–moyen`, v_vlow: `Très faible`, v_vlow_f: `Très faible`,
+            bird1: `Modérée : ~25–45%`, bird2: `Modérée : ~15–35%`, bird3: `Faible–modérée : ~10–25%`, bird4: `Faible : ~5–20%`,
+            other1: `Fin de Burning Nest ; Somewhere incertain`,
+            other5: `Arctic ; Microburn / Pyraegea commencent vers cette période ; Burning Man`,
+            other7: `Pyraegea jusqu'au ~22 sept.`,
+            none_mapped: `Aucun recensé`,
+            sw_vgood: `très favorable`, sw_good: `favorable`, sw_mid: `prudence`, sw_bad: `défavorable`, sw_vbad: `très défavorable`,
+            l_fire: `<strong>Risque d'incendie</strong> — exposition historique aux alertes incendie pour des semaines équivalentes. Impact potentiel : annulation de l'événement.`,
+            l_temp: `<strong>Température</strong> — minimale typique / médiane des maximales journalières. Impact potentiel : ventes de billets.`,
+            l_rain: `<strong>Pluie</strong> — probabilité de jour pluvieux. Impact potentiel : ventes de billets.`,
+            l_bird: `<strong>Nidification des oiseaux</strong> — probabilité estimée d'un refus spécifiquement pour motif de nidification. Impact potentiel : annulation de l'événement.`,
+            l_avail: `<strong>Disponibilité de la communauté</strong> — % des personnes sondées ayant indiqué être disponibles à cette date.`,
+            l_board: `<strong>Avis du Conseil</strong> — membres du Conseil votant oui, sur 7.`,
+            footnote: `Données de 2025.`
+        },
+        de: {
+            title: `Kandidatenwochen 2027 | Nobodies Collective`,
+            h1: `Kandidatenwochen 2027 — Vergleich`,
+            deck: `Die acht Wochen der engeren Auswahl im Vergleich nach Waldbrandrisiko, Wetter, Vogelbrutzeit, Verfügbarkeit der Community und Meinung des Vorstands. Daten von 2025, sofern nicht anders angegeben. Grün ist günstig, Gelb bedeutet Vorsicht, Rot ist ungünstig.`,
+            th_week: `Kandidatenwoche`,
+            th_fire: `Waldbrandrisiko<span class="sub">betrifft: Absage</span>`,
+            th_temp: `Temperatur<span class="sub">Tiefst- / Tageshöchstwert</span>`,
+            th_rain: `Regen<span class="sub">Regentag-Wahrscheinlichkeit</span>`,
+            th_bird: `Vogelbrut<span class="sub">Ablehnungswahrscheinlichkeit</span>`,
+            th_avail: `Verfügbarkeit<span class="sub">% die kommen können</span>`,
+            th_board: `Vorstand<span class="sub">Ja-Stimmen, von 7</span>`,
+            th_other: `Andere Burns / Events<span class="sub">Überschneidung</span>`,
+            w1: `31. Mai – 6. Jun<span class="season">Frühsommer</span>`,
+            w2: `7. – 13. Jun<span class="season">Frühsommer</span>`,
+            w3: `14. – 20. Jun<span class="season">Frühsommer</span>`,
+            w4: `5. – 11. Jul<span class="season">bisheriges Zeitfenster</span>`,
+            w5: `6. – 12. Sep<span class="season">Spätsommer</span>`,
+            w6: `13. – 19. Sep<span class="season">Spätsommer</span>`,
+            w7: `20. – 26. Sep<span class="season">Spätsommer</span>`,
+            w8: `27. Sep – 3. Okt<span class="season">Herbst</span>`,
+            v_low: `Niedrig`, v_med: `Mittel`, v_vhigh: `Sehr hoch`, v_lowmed: `Niedrig–mittel`, v_vlow: `Sehr niedrig`, v_vlow_f: `Sehr gering`,
+            bird1: `Mäßig: ~25–45%`, bird2: `Mäßig: ~15–35%`, bird3: `Gering–mäßig: ~10–25%`, bird4: `Gering: ~5–20%`,
+            other1: `Burning Nest endet; Somewhere unsicher`,
+            other5: `Arctic; Microburn / Pyraegea beginnen etwa in diesem Zeitraum; Burning Man`,
+            other7: `Pyraegea bis ~22. Sep`,
+            none_mapped: `Keine bekannt`,
+            sw_vgood: `sehr günstig`, sw_good: `günstig`, sw_mid: `Vorsicht`, sw_bad: `ungünstig`, sw_vbad: `sehr ungünstig`,
+            l_fire: `<strong>Waldbrandrisiko</strong> — historische Waldbrandwarnungen in vergleichbaren Wochen. Mögliche Folge: Absage des Events.`,
+            l_temp: `<strong>Temperatur</strong> — typischer Tiefstwert / Median der Tageshöchstwerte. Mögliche Folge: Ticketverkäufe.`,
+            l_rain: `<strong>Regen</strong> — Wahrscheinlichkeit eines Regentags. Mögliche Folge: Ticketverkäufe.`,
+            l_bird: `<strong>Vogelbrut</strong> — geschätzte Wahrscheinlichkeit einer Ablehnung speziell aus Vogelschutzgründen. Mögliche Folge: Absage des Events.`,
+            l_avail: `<strong>Verfügbarkeit der Community</strong> — % der Befragten, die an diesem Termin verfügbar sind.`,
+            l_board: `<strong>Meinung des Vorstands</strong> — Vorstandsmitglieder, die mit Ja stimmen, von 7.`,
+            footnote: `Daten von 2025.`
+        },
+        it: {
+            title: `Settimane candidate 2027 | Nobodies Collective`,
+            h1: `Settimane candidate 2027 — Confronto`,
+            deck: `Le otto settimane preselezionate confrontate per rischio di incendi, meteo, nidificazione degli uccelli, disponibilità della community e parere del Consiglio. Dati del 2025 salvo diversa indicazione. Verde è favorevole, ambra è cautela, rosso è sfavorevole.`,
+            th_week: `Settimana candidata`,
+            th_fire: `Rischio incendi<span class="sub">impatto: annullamento</span>`,
+            th_temp: `Temperatura<span class="sub">minima / massima giornaliera</span>`,
+            th_rain: `Pioggia<span class="sub">prob. di giorno piovoso</span>`,
+            th_bird: `Nidificazione uccelli<span class="sub">probabilità di diniego</span>`,
+            th_avail: `Disponibilità<span class="sub">% che può venire</span>`,
+            th_board: `Consiglio<span class="sub">voti a favore, su 7</span>`,
+            th_other: `Altri burn / eventi<span class="sub">sovrapposizione</span>`,
+            w1: `31 mag – 6 giu<span class="season">inizio estate</span>`,
+            w2: `7 – 13 giu<span class="season">inizio estate</span>`,
+            w3: `14 – 20 giu<span class="season">inizio estate</span>`,
+            w4: `5 – 11 lug<span class="season">finestra abituale</span>`,
+            w5: `6 – 12 set<span class="season">fine estate</span>`,
+            w6: `13 – 19 set<span class="season">fine estate</span>`,
+            w7: `20 – 26 set<span class="season">fine estate</span>`,
+            w8: `27 set – 3 ott<span class="season">autunno</span>`,
+            v_low: `Basso`, v_med: `Medio`, v_vhigh: `Molto alto`, v_lowmed: `Basso–medio`, v_vlow: `Molto basso`, v_vlow_f: `Molto bassa`,
+            bird1: `Moderata: ~25–45%`, bird2: `Moderata: ~15–35%`, bird3: `Bassa–moderata: ~10–25%`, bird4: `Bassa: ~5–20%`,
+            other1: `Burning Nest termina; Somewhere incerto`,
+            other5: `Arctic; Microburn / Pyraegea iniziano in questo periodo; Burning Man`,
+            other7: `Pyraegea fino al ~22 set`,
+            none_mapped: `Nessuno censito`,
+            sw_vgood: `molto favorevole`, sw_good: `favorevole`, sw_mid: `cautela`, sw_bad: `sfavorevole`, sw_vbad: `molto sfavorevole`,
+            l_fire: `<strong>Rischio incendi</strong> — esposizione storica alle allerte incendi in settimane equivalenti. Impatto potenziale: annullamento dell'evento.`,
+            l_temp: `<strong>Temperatura</strong> — minima tipica / mediana delle massime giornaliere. Impatto potenziale: vendita dei biglietti.`,
+            l_rain: `<strong>Pioggia</strong> — probabilità di giorno piovoso. Impatto potenziale: vendita dei biglietti.`,
+            l_bird: `<strong>Nidificazione degli uccelli</strong> — probabilità stimata di un diniego specificamente per motivi di nidificazione. Impatto potenziale: annullamento dell'evento.`,
+            l_avail: `<strong>Disponibilità della community</strong> — % degli intervistati che hanno indicato disponibilità in questa data.`,
+            l_board: `<strong>Parere del Consiglio</strong> — membri del Consiglio che votano sì, su 7.`,
+            footnote: `Dati del 2025.`
+        }
+    };
+
+    function setLang(lang) {
+        const dict = I18N[lang];
+        if (!dict) return;
+        document.documentElement.lang = lang;
+        document.title = dict.title;
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (dict[key] !== undefined) el.innerHTML = dict[key];
+        });
+        document.querySelectorAll('#langSwitch button').forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+        });
+    }
+
+    document.querySelectorAll('#langSwitch button').forEach(btn => {
+        btn.addEventListener('click', () => setLang(btn.getAttribute('data-lang')));
+    });
+
+    // allow linking straight to a language, e.g. …#es
+    const hashLang = location.hash.replace('#', '');
+    if (I18N[hashLang]) setLang(hashLang);
+    </script>
+</body>
+</html>
