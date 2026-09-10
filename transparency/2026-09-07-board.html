@@ -37,6 +37,12 @@
         .action-table td.tally { font-variant-numeric: tabular-nums; white-space: nowrap; }
         .shortlist { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin: 1rem 0 1.5rem; }
         .shortlist ol { margin-bottom: 0; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -55,8 +61,17 @@
                     </div>
                 </div>
 
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
                 <!-- ==================== ENGLISH ==================== -->
                 <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
 
                     <div class="attendees">
                         <strong>Board present: Daniel T (president), Pablo V (vice-president), Chris, Victor P &middot; Absent: Peter D (treasurer, travelling), Ward D, Ben D, Michelle &middot; Observers: none (Daniela, production coordinator, sent apologies)</strong>
@@ -244,6 +259,1335 @@
                         <p><em>Minutes prepared from the audio recording and full transcript. Names abbreviated.</em></p>
                     </div>
                 </div>
+
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Junta presente: Daniel T (presidente), Pablo V (vicepresidente), Chris, Victor P &middot; Ausentes: Peter D (tesorero, de viaje), Ward D, Ben D, Michelle &middot; Observadores: ninguno (Daniela, coordinadora de producci&oacute;n, disculp&oacute; su ausencia)</strong>
+                        Asistieron cuatro de los ocho miembros de la junta, por lo que no hubo qu&oacute;rum. Las personas presentes trabajaron el &uacute;nico punto sustantivo del orden del d&iacute;a &mdash;fijar la lista corta de semanas para la votaci&oacute;n de los asociados sobre las fechas del evento de 2027 y dejar constancia de la posici&oacute;n de cada miembro de la junta sobre cada semana&mdash;. Se est&aacute; pidiendo a los miembros restantes que registren sus posiciones sobre la misma lista en el plazo de un d&iacute;a, para que la opini&oacute;n de toda la junta pueda incluirse en el paquete de votaci&oacute;n. El punto de Ben D sobre la aprobaci&oacute;n de asociados se aplaz&oacute; en su ausencia; por el mismo motivo no se valid&oacute; el acta de la reuni&oacute;n anterior.
+                    </div>
+                    <div class="meeting-content">
+                        <p>Una reuni&oacute;n breve y centrada en un solo tema: la junta ley&oacute; conjuntamente la encuesta publicada, debati&oacute; hasta llegar a una lista corta de <strong>ocho semanas</strong> para la votaci&oacute;n de los asociados &mdash;tres en torno al pico de principios de junio, tres en torno al pico de mediados de septiembre, la semana actual de principios de julio como statu quo, y el 6&ndash;12 de septiembre a&ntilde;adido para que nadie tenga que preguntar por qu&eacute; se dej&oacute; fuera&mdash; y despu&eacute;s repas&oacute; la lista semana por semana, indicando cada miembro de la junta una posici&oacute;n a favor/en contra sobre la <em>viabilidad y el riesgo</em> y sus razones. Estas actas recogen tanto el camino hasta la lista corta como los razonamientos, porque constituyen la principal aportaci&oacute;n de la junta a la votaci&oacute;n.</p>
+                        <h2>1. Ronda inicial y orden del d&iacute;a</h2>
+                        <ul><li>Ronda inicial realizada. Orden del d&iacute;a confirmado: un punto, las fechas del evento. Sin actualizaci&oacute;n de producci&oacute;n (Daniela ausente); no se valid&oacute; el acta de la reuni&oacute;n anterior (Ben ausente).</li></ul>
+                        <h2>2. Qu&eacute; estaba decidiendo la junta y por qu&eacute;</h2>
+                        <ul>
+                            <li>Tras la <a href="2026-09-03-community.html">llamada comunitaria del 3 de septiembre</a>, el enfoque con mayor apoyo fue el intermedio de las tres opciones all&iacute; presentadas: <strong>la junta preselecciona una lista corta de semanas y los asociados eligen entre ellas</strong> mediante una votaci&oacute;n por orden de preferencia, en lugar de votar todas las semanas de la encuesta (la experiencia de las &laquo;26 opciones&raquo; de la votaci&oacute;n sobre el nombre del evento) o de que la junta decidiera por s&iacute; sola.</li>
+                            <li>La llamada dej&oacute; abiertas dos cuestiones: el tama&ntilde;o de la lista corta (&iquest;cinco o siete?) y si la semana actual de principios de julio cuenta dentro de ese n&uacute;mero o se a&ntilde;ade aparte.</li>
+                            <li>La junta tambi&eacute;n se comprometi&oacute; a publicar <strong>c&oacute;mo vota cada miembro de la junta sobre cada semana preseleccionada</strong>, como parte del paquete informativo. Daniel propuso hacerlo mediante una posici&oacute;n a favor/en contra por semana en lugar de una clasificaci&oacute;n: con siete u ocho votantes, una clasificaci&oacute;n aporta poca informaci&oacute;n, mientras que &laquo;dos miembros de la junta apoyan esta semana, los ocho apoyan aquella&raquo; resulta &uacute;til para los miembros, tambi&eacute;n cuando la junta <em>no</em> considera que una semana sea buena idea.</li>
+                        </ul>
+                        <h2>3. C&oacute;mo se lleg&oacute; a la lista corta</h2>
+                        <ol>
+                            <li><strong>Lectura de la encuesta.</strong> Daniel repas&oacute; los resultados publicados (v&eacute;ase la <a href="../event-dates-2027-survey-results.html">p&aacute;gina de resultados de la encuesta</a>). Hay dos picos claros de disponibilidad: <strong>principios de junio</strong>, centrado en el 7&ndash;13 de junio (pod&iacute;a asistir el 67% de todas las personas encuestadas; el 73% de las identificadas), y <strong>mediados de septiembre</strong>, centrado en el 13&ndash;19 de septiembre (62%; 61% identificadas, 63% an&oacute;nimas). El inter&eacute;s disminuye en mayo, a finales de junio y, bruscamente, a principios de julio (5&ndash;11 de julio: 47% en total, 36% entre las respuestas an&oacute;nimas; seg&uacute;n la lectura de Daniel, las personas identificadas son el n&uacute;cleo comprometido que &laquo;vendr&aacute; sea cual sea la fecha&raquo;, que es como se formul&oacute; la encuesta), y vuelve a caer al entrar en octubre. Su propuesta inicial: <strong>tres semanas alrededor de cada pico, m&aacute;s la semana actual</strong> &mdash;seis m&aacute;s una&mdash;, y ninguna de mayo, finales de junio u octubre, donde el inter&eacute;s comunitario es visiblemente menor.</li>
+                            <li><strong>Una alternativa: enumerarlo todo y marcar las favoritas.</strong> Pablo V pregunt&oacute; si la intenci&oacute;n era <em>filtrar</em> hasta una lista corta o incluir todas las semanas y marcar las favoritas de la junta; recordaba que en la llamada comunitaria la gente quer&iacute;a ver la opini&oacute;n de la junta, no necesariamente una papeleta reducida. Su esquema: todas las semanas en la papeleta, con cuatro o cinco marcadas como favoritas de la junta (dos en junio y dos en septiembre) y la semana actual marcada como &laquo;actual&raquo;, no como &laquo;favorita&raquo;, para poder expresar una preferencia por no cambiar. Seg&uacute;n su an&aacute;lisis, cinco semanas (los dos picos m&aacute;s la actual) ya cubrir&iacute;an aproximadamente al 94% de las personas encuestadas ponderadas. Daniel recordaba que la llamada se inclin&oacute; por la preselecci&oacute;n y que nadie hab&iacute;a pedido votar sobre todo; Pablo lo acept&oacute;, se&ntilde;alando que, si se preselecciona, siete ofrece una ventaja marginal frente a cinco.</li>
+                            <li><strong>&iquest;Pueden los miembros a&ntilde;adir una semana durante la votaci&oacute;n?</strong> Chris pregunt&oacute; si alguien podr&iacute;a presentar una moci&oacute;n para a&ntilde;adir una semana. No: una vez abierta una votaci&oacute;n en Humans, el paquete queda fijo &mdash;sin modificaciones ni opciones a&ntilde;adidas&mdash;, y una semana a&ntilde;adida tarde ser&iacute;a desconocida para quienes hubieran votado antes y perder&iacute;a por defecto. La opini&oacute;n de Daniel, compartida por Victor P (se elige entre las candidaturas que se presentan; no se a&ntilde;ade una en la urna), es que las semanas previas de consultas, llamadas y res&uacute;menes <em>eran</em> el periodo para poner opciones sobre la mesa. Chris lo acept&oacute; para la votaci&oacute;n de las fechas, se&ntilde;alando que para otros tipos de votaci&oacute;n la asociaci&oacute;n acabar&aacute; necesitando una forma de que los miembros presenten propuestas.</li>
+                            <li><strong>&iquest;Cu&aacute;ntas?</strong> Dada la preselecci&oacute;n, Chris prefer&iacute;a m&aacute;s de cuatro opciones; Victor P y Daniel se decantaron por unas siete. Daniel se&ntilde;al&oacute; que, a diferencia de la votaci&oacute;n sobre el nombre del evento, los miembros no tienen que ordenar todas las opciones &mdash;las semanas sin clasificar cuentan conjuntamente como &uacute;ltimas&mdash;, por lo que una lista algo m&aacute;s larga no supone una carga.</li>
+                            <li><strong>Equilibrio entre los dos picos.</strong> Daniel quer&iacute;a el <em>mismo n&uacute;mero</em> de semanas en cada grupo. Ranked Pairs gestiona la divisi&oacute;n del voto (tres semanas de septiembre frente a una de junio no perjudicar&iacute;an a septiembre), pero una lista desequilibrada seguir&iacute;a pareciendo injusta. El an&aacute;lisis de Victor P, realizado con una versi&oacute;n anterior de los datos, hab&iacute;a arrojado mayo + dos junios + dos septiembres, lo que a su juicio sesgaba la lista hacia fechas m&aacute;s tempranas; acept&oacute; cambiarlo para equilibrarla.</li>
+                            <li><strong>Qu&eacute; semanas exactamente.</strong> Alrededor del pico de junio, el tercer puesto se disputaba entre el <strong>24&ndash;30 de mayo</strong> y el <strong>14&ndash;20 de junio</strong>, ambos con menor inter&eacute;s (55% y 56%). Se descart&oacute; mayo: menor inter&eacute;s, m&aacute;s lluvia y el consejo de las autoridades locales de que finales de mayo es un periodo de mucha actividad de maquinaria agr&iacute;cola en la zona. Alrededor del pico de septiembre, el <strong>6&ndash;12 de septiembre</strong> mostraba una bajada (56%) que Daniel atribuy&oacute; a la semana de Burning Man; Chris dijo que votar&iacute;a en contra por ese motivo, as&iacute; que se eligi&oacute; el <strong>27 de septiembre&ndash;3 de octubre</strong> como tercera semana de septiembre; Pablo: incluirla no cuesta nada y sencillamente quedar&aacute; m&aacute;s abajo si no es popular. Victor P pregunt&oacute; por el solapamiento de junio con Cr&egrave;me Br&ucirc;l&eacute;e: Olivier est&aacute; al corriente y no ha sugerido que ese evento se trasladase a julio; Burning Nest ha confirmado que est&aacute; vinculado al permiso de su recinto y no puede trasladarse. Daniel a&ntilde;adi&oacute; que, en cualquier caso, las fechas tempranas coinciden con la &eacute;poca de planificaci&oacute;n m&aacute;s intensa de otros burns (los procesos de subvenciones y ubicaci&oacute;n de Borderland tienen lugar en abril&ndash;mayo), lo que supone una carga para quienes lideran campamentos.</li>
+                            <li><strong>Siete se convierten en ocho.</strong> Con siete semanas en la lista (31 de mayo, 7 de junio, 14 de junio, 5 de julio, 13, 20 y 27 de septiembre), Victor P propuso volver a a&ntilde;adir el <strong>6&ndash;12 de septiembre</strong> como octava, para anticiparse a la pregunta &laquo;&iquest;por qu&eacute; dejasteis esta fuera?&raquo;: la junta puede votar en contra y explicar por qu&eacute;. Daniel y Pablo estuvieron de acuerdo.</li>
+                        </ol>
+                        <h2>4. La lista corta para la votaci&oacute;n de los asociados</h2>
+                        <div class="shortlist"><ol>
+                            <li><strong>31 de mayo &ndash; 6 de junio</strong> &mdash; principios de junio</li><li><strong>7 &ndash; 13 de junio</strong> &mdash; principios de junio (pico de la encuesta)</li><li><strong>14 &ndash; 20 de junio</strong> &mdash; principios de junio</li><li><strong>5 &ndash; 11 de julio</strong> &mdash; semana actual (statu quo)</li><li><strong>6 &ndash; 12 de septiembre</strong> &mdash; mediados de septiembre</li><li><strong>13 &ndash; 19 de septiembre</strong> &mdash; mediados de septiembre (pico de la encuesta)</li><li><strong>20 &ndash; 26 de septiembre</strong> &mdash; mediados de septiembre</li><li><strong>27 de septiembre &ndash; 3 de octubre</strong> &mdash; mediados de septiembre</li>
+                        </ol></div>
+                        <ul>
+                            <li>La semana actual figura en la papeleta como statu quo, para que los miembros puedan expresar una preferencia por no cambiar; no es una recomendaci&oacute;n de la junta. Daniel dijo que, como miembro de la junta, estar&iacute;a en contra de celebrar el evento en cualquiera de las semanas <em>no</em> preseleccionadas: la encuesta muestra menos inter&eacute;s en mayo y octubre, y ambos grupos preseleccionados abordan de forma plausible los problemas de bienestar y cancelaci&oacute;n de las fechas de este a&ntilde;o.</li>
+                            <li>Todas las semanas siguen sujetas a la decisi&oacute;n de INAGA sobre el permiso (por nidificaci&oacute;n de aves), que puede tardar meses; la p&aacute;gina de votaci&oacute;n indicar&aacute; que la junta se adaptar&aacute; a las circunstancias y bajar&aacute; por la lista, y el sistema de votaci&oacute;n puede volver a contar las mismas papeletas eliminando cualquier semana.</li>
+                        </ul>
+                        <h2>5. Posiciones de los miembros de la junta sobre cada semana</h2>
+                        <p><strong>Base de las posiciones:</strong> la junta acord&oacute; que expresaba una opini&oacute;n sobre la <strong>viabilidad y el riesgo</strong> &mdash;viabilidad comercial, riesgo de cancelaci&oacute;n y de incendio forestal, riesgo del permiso&mdash;, no sobre preferencias personales. Varios miembros dijeron que asistir&iacute;an cualquiera que fuera la semana ganadora. No se indica ninguna semana preferida por la junta entre las preseleccionadas; el objetivo es concentrar la votaci&oacute;n en semanas viables, no dirigirla.</p>
+                        <h3>Resumen</h3>
+                        <div class="table-wrap"><table class="action-table"><thead><tr><th>Semana</th><th>Victor P</th><th>Chris</th><th>Pablo V</th><th>Daniel T</th><th>A favor / en contra</th></tr></thead><tbody>
+                            <tr><td>31 may &ndash; 6 jun</td><td class="against">En contra</td><td class="against">En contra</td><td class="for">A favor</td><td class="against">En contra</td><td class="tally">1 / 3</td></tr>
+                            <tr><td>7 &ndash; 13 jun</td><td class="against">En contra</td><td class="for">A favor</td><td class="for">A favor</td><td class="for">A favor</td><td class="tally">3 / 1</td></tr>
+                            <tr><td>14 &ndash; 20 jun</td><td class="against">En contra</td><td class="against">Se inclina en contra</td><td class="against">En contra</td><td class="against">En contra</td><td class="tally">0 / 4</td></tr>
+                            <tr><td>5 &ndash; 11 jul (actual)</td><td class="against">En contra</td><td class="against">En contra</td><td class="against">En contra</td><td class="against">En contra</td><td class="tally">0 / 4</td></tr>
+                            <tr><td>6 &ndash; 12 sep</td><td class="against">En contra</td><td class="against">En contra</td><td class="against">En contra</td><td class="for">Tentativamente a favor</td><td class="tally">1 / 3</td></tr>
+                            <tr><td>13 &ndash; 19 sep</td><td class="for">A favor</td><td class="for">A favor</td><td class="for">A favor</td><td class="for">A favor</td><td class="tally">4 / 0</td></tr>
+                            <tr><td>20 &ndash; 26 sep</td><td class="for">A favor</td><td class="for">A favor</td><td class="for">A favor</td><td class="for">A favor</td><td class="tally">4 / 0</td></tr>
+                            <tr><td>27 sep &ndash; 3 oct</td><td class="for">A favor</td><td class="for">A favor</td><td class="for">A favor (con reservas)</td><td class="for">A favor (con reservas)</td><td class="tally">4 / 0</td></tr>
+                        </tbody></table></div>
+                        <p>Se est&aacute;n recopilando las posiciones de los miembros de la junta que no estuvieron presentes y se a&ntilde;adir&aacute;n al paquete de votaci&oacute;n.</p>
+                        <h3>Razonamiento, semana por semana</h3>
+                        <h4>31 de mayo &ndash; 6 de junio</h4><ul>
+                            <li><em>Victor P &mdash; en contra.</em> Demasiado cerca del final del a&ntilde;o laboral para un evento de este tama&ntilde;o, dada la larga duraci&oacute;n del montaje y desmontaje; riesgo de baja asistencia; la temporada de nidificaci&oacute;n a&ntilde;ade incertidumbre al permiso. (Aplic&oacute; el mismo razonamiento a todas las semanas de mayo&ndash;junio.)</li>
+                            <li><em>Chris &mdash; en contra.</em> Coincidi&oacute; con el razonamiento de Victor.</li>
+                            <li><em>Pablo V &mdash; a favor.</em> No pudo se&ntilde;alar ning&uacute;n riesgo espec&iacute;fico: la gente viaja a Midburn y AfricaBurn en este periodo; el principal problema ser&iacute;an los conflictos con otros burns (Burning Nest termina el d&iacute;a anterior), que no consider&oacute; excluyentes.</li>
+                            <li><em>Daniel T &mdash; en contra.</em> Los motivos de Victor, adem&aacute;s de m&aacute;s lluvia y el consejo de las autoridades locales de que finales de mayo es un periodo de mucha maquinaria agr&iacute;cola en la zona.</li>
+                        </ul>
+                        <h4>7 &ndash; 13 de junio</h4><ul>
+                            <li><em>Victor P &mdash; en contra.</em> Menos conflictos con otros burns que la semana anterior, pero las mismas preocupaciones por la nidificaci&oacute;n y el final del a&ntilde;o laboral; ve un riesgo real.</li>
+                            <li><em>Chris &mdash; a favor.</em> La semana m&aacute;s seleccionada en la encuesta, por tanto comercialmente viable; ning&uacute;n choque directo con otro evento; las aves son algo con lo que la asociaci&oacute;n tendr&aacute; que lidiar en cualquier caso.</li>
+                            <li><em>Pablo V &mdash; a favor.</em> Tambi&eacute;n la mejor semana de la encuesta para la disponibilidad de montaje y desmontaje; una buena combinaci&oacute;n de todos los factores, con mejores temperaturas.</li>
+                            <li><em>Daniel T &mdash; a favor.</em> El mayor apoyo en la encuesta; ning&uacute;n d&iacute;a de alerta roja este a&ntilde;o, por lo que es mucho mejor respecto al riesgo de incendio; sujeta, como todas las semanas, a INAGA. Hab&iacute;a sido su semana preferida hasta que la llamada del 3 de septiembre le inclin&oacute; hacia septiembre; sigue siendo un s&iacute; claro.</li>
+                        </ul>
+                        <h4>14 &ndash; 20 de junio</h4><ul>
+                            <li><em>Victor P &mdash; en contra.</em> Lo anterior, y acerc&aacute;ndose a la temporada de calor m&aacute;s peligrosa; si no ahora, s&iacute; en las proyecciones para los pr&oacute;ximos a&ntilde;os.</li>
+                            <li><em>Chris &mdash; se inclina en contra.</em> Comercialmente bastante viable, pero acerc&aacute;ndose al periodo de riesgo de incendios; indeciso, ligeramente inclinado en contra.</li>
+                            <li><em>Pablo V &mdash; en contra.</em> M&aacute;s calor y menos ganadora en la encuesta que el 7&ndash;13 de junio; si se concentran los votos, esta es una que dejar fuera.</li>
+                            <li><em>Daniel T &mdash; en contra.</em> Menor apoyo en la encuesta y mayor riesgo de incendio: si el evento se hubiera celebrado esta semana este a&ntilde;o, habr&iacute;a habido una evacuaci&oacute;n cerca del final del desmontaje.</li>
+                        </ul>
+                        <h4>5 &ndash; 11 de julio (semana actual)</h4><ul>
+                            <li><em>Victor P &mdash; en contra.</em> El riesgo del permiso es demasiado alto y el calor ha sido insoportable algunos a&ntilde;os; personas que conoce han dejado de venir solo por eso.</li><li><em>Chris &mdash; en contra.</em></li><li><em>Pablo V &mdash; en contra.</em></li>
+                            <li><em>Daniel T &mdash; en contra.</em> Alta probabilidad de que no se concediera en absoluto un permiso para esta semana; si se concediera, lo m&aacute;s probable es que el evento fuera suspendido, y no se puede suponer que se repita la indulgencia de las autoridades de este a&ntilde;o. No merece la pena el esfuerzo para acabar teniendo que evacuar a 3.000 personas.</li>
+                        </ul>
+                        <h4>6 &ndash; 12 de septiembre</h4><ul>
+                            <li><em>Victor P &mdash; en contra.</em> Buena candidata en s&iacute; misma, pero muchos miembros de la comunidad seguir&iacute;an de vacaciones o acabar&iacute;an de regresar, y planificar un evento inmediatamente despu&eacute;s de ese periodo resulta inc&oacute;modo.</li>
+                            <li><em>Chris &mdash; en contra.</em> Proximidad a Burning Man.</li>
+                            <li><em>Pablo V &mdash; en contra.</em> No empezar el cambio con un conflicto con Burning Man; si la asociaci&oacute;n quiere probar alguna vez ese solapamiento, puede hacerlo m&aacute;s adelante, una vez comprendido su impacto.</li>
+                            <li><em>Daniel T &mdash; tentativamente a favor.</em> Le preocupa menos el solapamiento: la comunidad de Nowhere es sensible a los precios y solo una peque&ntilde;a minor&iacute;a puede permitirse Burning Man. Viable, con algo m&aacute;s de riesgo de incendio que a finales de septiembre, pero aceptable.</li>
+                        </ul>
+                        <h4>13 &ndash; 19 de septiembre</h4><ul>
+                            <li><em>Victor P &mdash; a favor.</em> Ning&uacute;n riesgo claro de ning&uacute;n tipo; suficientemente lejos de las vacaciones; alto apoyo en la encuesta.</li><li><em>Chris &mdash; a favor.</em> Suficientemente lejos de Burning Man; le gusta.</li>
+                            <li><em>Pablo V &mdash; a favor.</em> Factible &mdash;quienes asisten a ambos eventos pueden tomarse uno con m&aacute;s calma&mdash;, y la asociaci&oacute;n aprender&iacute;a cu&aacute;nto importa el solapamiento para a&ntilde;os futuros.</li>
+                            <li><em>Daniel T &mdash; a favor.</em> Un s&iacute; muy claro, se&ntilde;alando que las temperaturas empiezan a bajar y que personalmente preferir&iacute;a el extremo m&aacute;s c&aacute;lido; sigue estando bien hasta bien entrado septiembre.</li>
+                        </ul>
+                        <h4>20 &ndash; 26 de septiembre</h4><ul>
+                            <li><em>Victor P &mdash; a favor.</em> Los mismos motivos que para el 13&ndash;19 de septiembre.</li><li><em>Chris &mdash; a favor.</em></li><li><em>Pablo V &mdash; a favor.</em> (Y las noches m&aacute;s frescas permiten llevar los atuendos.)</li>
+                            <li><em>Daniel T &mdash; a favor.</em> Comercialmente viable. Se&ntilde;al&oacute; que todas las semanas de septiembre parecen tener menor riesgo de nidificaci&oacute;n, por lo que es menos probable que la decisi&oacute;n sobre el permiso las desplace.</li>
+                        </ul>
+                        <h4>27 de septiembre &ndash; 3 de octubre</h4><ul>
+                            <li><em>Victor P &mdash; a favor.</em> Su favorita: lo bastante tarde para que la gente pueda asistir a sus festivales de verano y despu&eacute;s venir a un burn tras unas semanas de trabajo; la mejor semana para el permiso por aves; noches m&aacute;s frescas y ma&ntilde;anas m&aacute;s largas sin calor.</li>
+                            <li><em>Chris &mdash; a favor.</em> Lo &uacute;nico en contra es que &laquo;octubre&raquo; no le parece correcto, lo que reconoci&oacute; que no es un argumento racional; quienes tienen experiencia dicen que la lluvia es divertida.</li>
+                            <li><em>Pablo V &mdash; a favor, con reservas.</em> Parece tarde y las cifras son ligeramente peores que las de las otras semanas de septiembre; pero es viable, as&iacute; que que decidan los miembros: bajar&aacute; en la clasificaci&oacute;n si no la quieren.</li>
+                            <li><em>Daniel T &mdash; a favor, con reservas.</em> Personalmente, demasiado tarde; como miembro de la junta, le preocupa ligeramente que las personas identificadas (los miembros m&aacute;s centrales) est&eacute;n menos disponibles esta semana que las an&oacute;nimas. No es inviable, solo menos que ideal, y tras haber votado contra una semana (31 de mayo) con <em>m&aacute;s</em> apoyo en la encuesta, la coherencia aconseja dejar esto en manos de los asociados.</li>
+                        </ul>
+                        <h2>6. Presentaci&oacute;n de la votaci&oacute;n</h2><ul>
+                            <li>Victor P pidi&oacute; anotaciones en la p&aacute;gina de votaci&oacute;n &mdash;riesgo del permiso por las aves, meteorolog&iacute;a, conflictos con otros eventos&mdash; para que las contrapartidas sean visibles donde la gente vota. Daniel confirm&oacute; que el paquete informativo incluir&aacute; un resumen de la investigaci&oacute;n sobre nidificaci&oacute;n (aplicable a ambos recintos) y los datos meteorol&oacute;gicos, de la forma m&aacute;s compacta y visual posible: una tabla resumen que contenga casi todo, ya que mucha gente no har&aacute; clic para ampliar, con pesta&ntilde;as de detalles detr&aacute;s. Est&aacute; trabajando en ello con C&eacute;line S.</li>
+                            <li>Pablo V propuso presentar cada semana con una l&iacute;nea breve sobre conflictos y un enlace al razonamiento completo; la postura de Daniel es que el paquete debe explicar las semanas <em>ofrecidas</em>, no justificar la selecci&oacute;n: la selecci&oacute;n se explica en estas actas.</li>
+                            <li>Pablo V intentar&aacute; cuantificar la limitaci&oacute;n de las vacaciones escolares, que considera el factor peor entendido: afect&oacute; aproximadamente al 3,5% de quienes respondieron a la encuesta, y los miembros que imaginen que es mucho mayor pueden votar contra cualquier cambio solo por eso. Seg&uacute;n las cifras, la asociaci&oacute;n gana m&aacute;s personas de las que pierde al trasladar el evento, y el riesgo es menor.</li>
+                            <li>INAGA: sigue sin haber respuesta, ni tampoco noticias del contacto de conservaci&oacute;n de aves. INAGA puede denegar un permiso por motivos medioambientales; junio conlleva ese riesgo, pero tambi&eacute;n la semana actual, y se espera que septiembre no presente problemas, sin garant&iacute;as. Chris pregunt&oacute; qu&eacute; significar&iacute;a en la pr&aacute;ctica una denegaci&oacute;n: nadie lo sabe; podr&iacute;a ser un no rotundo o imponer condiciones (Daniel especul&oacute; con restricciones de ruido o veh&iacute;culos, aunque ya opera maquinaria agr&iacute;cola pesada en la zona). La papeleta indicar&aacute; que la junta se adaptar&aacute; a las circunstancias y bajar&aacute; por la lista; el sistema puede volver a contar las mismas papeletas eliminando cualquier semana.</li>
+                        </ul>
+                        <h2>7. Pr&oacute;ximos pasos y calendario</h2><ol>
+                            <li><strong>Esta noche:</strong> publicaci&oacute;n de estas actas.</li>
+                            <li><strong>Martes 8 de septiembre:</strong> Daniel recoge las posiciones a favor/en contra sobre las ocho semanas de los miembros de la junta ausentes (Peter D se ha comprometido a registrar la suya incluso mientras viaja), para incluirlas en el paquete de votaci&oacute;n.</li>
+                            <li><strong>Esta semana:</strong> prueba de la votaci&oacute;n en Humans, configurada como votaci&oacute;n de miembros de la junta del tipo asociado; se pide a los miembros de la junta que voten en la prueba y comuniquen cualquier aspecto confuso o fallo para corregirlo r&aacute;pidamente.</li>
+                            <li><strong>Antes del final de la semana:</strong> se abre la votaci&oacute;n de los asociados.</li>
+                            <li><strong>17 de septiembre:</strong> se cierra la votaci&oacute;n (fecha de la asamblea general); los resultados se publican un par de d&iacute;as despu&eacute;s.</li>
+                        </ol>
+                        <h2>8. Ronda final</h2><ul><li>Se intercambiaron agradecimientos por el trabajo sobre el proceso de las fechas: Victor P: &laquo;muy bien gestionado y muy bien comunicado, implicando mucho a la comunidad&raquo;; Pablo V: &laquo;estamos convergiendo en algunas respuestas&raquo;.</li></ul>
+                        <h2>Decisiones</h2><ul>
+                            <li><strong>Lista corta para la votaci&oacute;n de los asociados fijada</strong> por los miembros de la junta presentes: 31 may&ndash;6 jun, 7&ndash;13 jun, 14&ndash;20 jun, 5&ndash;11 jul (actual, statu quo), 6&ndash;12 sep, 13&ndash;19 sep, 20&ndash;26 sep, 27 sep&ndash;3 oct.</li>
+                            <li><strong>Las posiciones de la junta se publicar&aacute;n por semana, a favor/en contra y con motivos</strong>: las de los cuatro miembros presentes, como se indica arriba; las dem&aacute;s se a&ntilde;adir&aacute;n.</li>
+                            <li><strong>Base de las posiciones de la junta:</strong> viabilidad y riesgo, no preferencia. No se marca ninguna semana como preferida por la junta.</li>
+                        </ul>
+                        <h2>Acciones</h2><div class="table-wrap"><table class="action-table"><thead><tr><th>Acci&oacute;n</th><th>Responsable</th></tr></thead><tbody>
+                            <tr><td>Publicar estas actas esta noche</td><td>Daniel T</td></tr>
+                            <tr><td>Recopilar en un d&iacute;a las posiciones semanales de Peter D, Ward D, Ben D (y cualquier otro miembro ausente)</td><td>Daniel T</td></tr>
+                            <tr><td>Crear la votaci&oacute;n en Humans; realizar una votaci&oacute;n de prueba de la junta; abrir la votaci&oacute;n de los asociados antes del final de la semana</td><td>Daniel T</td></tr>
+                            <tr><td>Paquete informativo compacto y visual para la p&aacute;gina de votaci&oacute;n (tabla resumen + pesta&ntilde;as de detalles; resumen sobre nidificaci&oacute;n; meteorolog&iacute;a)</td><td>Daniel T, C&eacute;line S</td></tr>
+                            <tr><td>Cuantificar la limitaci&oacute;n de las vacaciones escolares para el paquete informativo</td><td>Pablo V</td></tr>
+                            <tr><td>Votar en la prueba y comunicar problemas</td><td>Todos los miembros de la junta</td></tr>
+                            <tr><td>Insistir al contacto de conservaci&oacute;n de aves sobre los criterios de INAGA</td><td>Peter K</td></tr>
+                        </tbody></table></div>
+                        <p><em>Actas preparadas a partir de la grabaci&oacute;n de audio y la transcripci&oacute;n completa. Nombres abreviados.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== FRENCH ==================== -->
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">
+                     En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.
+                    </div>
+
+                    <div class="attendees">
+                     <strong>
+                      Conseil pr&eacute;sent : Daniel T (pr&eacute;sident), Pablo V (vice-pr&eacute;sident), Chris, Victor P &middot; Absents : Peter D (tr&eacute;sorier, en voyage), Ward D, Ben D, Michelle &middot; Observateurs : aucun (Daniela, coordinatrice de production, s&rsquo;est excus&eacute;e)
+                     </strong>
+                     Quatre des huit membres du conseil ont particip&eacute;, si bien que le quorum n&rsquo;&eacute;tait pas atteint. Les personnes pr&eacute;sentes ont examin&eacute; le seul point substantiel de l&rsquo;ordre du jour &mdash; fixer la liste restreinte de semaines pour le vote des asociados sur les dates de l&rsquo;&eacute;v&eacute;nement 2027 et consigner la position de chaque membre du conseil sur chacune de ces semaines. Il est demand&eacute; aux autres membres du conseil de consigner leurs positions sur la m&ecirc;me liste dans un d&eacute;lai d&rsquo;un jour, afin que l&rsquo;avis de l&rsquo;ensemble du conseil puisse &ecirc;tre inclus dans le dossier de vote. Le point de Ben D sur l&rsquo;approbation des asociados a &eacute;t&eacute; report&eacute; en son absence ; pour la m&ecirc;me raison, le compte rendu de la r&eacute;union pr&eacute;c&eacute;dente n&rsquo;a pas &eacute;t&eacute; valid&eacute;.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>
+                         Une br&egrave;ve r&eacute;union consacr&eacute;e &agrave; un seul sujet : le conseil a lu ensemble l&rsquo;enqu&ecirc;te publi&eacute;e, d&eacute;battu pour parvenir &agrave; une liste restreinte de
+                         <strong>
+                          huit semaines
+                         </strong>
+                         pour le vote des asociados &mdash; trois autour du pic de d&eacute;but juin, trois autour du pic de mi-septembre, la semaine actuelle de d&eacute;but juillet comme statu quo, et le 6&ndash;12 septembre ajout&eacute; afin que personne n&rsquo;ait &agrave; demander pourquoi cette semaine avait &eacute;t&eacute; laiss&eacute;e de c&ocirc;t&eacute; &mdash;, puis parcouru la liste semaine par semaine, chaque membre du conseil indiquant une position pour ou contre sur la
+                         <em>
+                          viabilit&eacute; et le risque
+                         </em>
+                         , ainsi que les raisons de cette position. Le pr&eacute;sent compte rendu consigne &agrave; la fois le cheminement ayant conduit &agrave; la liste restreinte et les raisonnements, car ils constituent la principale contribution du conseil au vote.
+                        </p>
+
+                        <h2>
+                         1. Tour de table et ordre du jour
+                        </h2>
+                        <ul>
+                         <li>
+                          Tour de table effectu&eacute;. Ordre du jour confirm&eacute; : un seul point, les dates de l&rsquo;&eacute;v&eacute;nement. Pas de point sur la production (Daniela absente) ; le compte rendu de la r&eacute;union pr&eacute;c&eacute;dente n&rsquo;a pas &eacute;t&eacute; valid&eacute; (Ben absent).
+                         </li>
+                        </ul>
+
+                        <h2>
+                         2. Ce que le conseil devait d&eacute;cider, et pourquoi
+                        </h2>
+                        <ul>
+                         <li>
+                          &Agrave; la suite de l&rsquo;
+                          <a href="2026-09-03-community.html">
+                           appel communautaire du 3 septembre
+                          </a>
+                          , l&rsquo;approche ayant recueilli le soutien le plus large &eacute;tait l&rsquo;option interm&eacute;diaire parmi les trois pr&eacute;sent&eacute;es lors de cet appel :
+                          <strong>
+                           le conseil pr&eacute;s&eacute;lectionne une liste restreinte de semaines, puis les asociados choisissent entre elles
+                          </strong>
+                          au moyen d&rsquo;un vote pr&eacute;f&eacute;rentiel &mdash; plut&ocirc;t que d&rsquo;organiser soit un vote sur chacune des semaines couvertes par l&rsquo;enqu&ecirc;te (comme lors de l&rsquo;exp&eacute;rience des &laquo; 26 options &raquo; pour le vote sur le nom de l&rsquo;&eacute;v&eacute;nement), soit une d&eacute;cision prise par le seul conseil.
+                         </li>
+                         <li>
+                          L&rsquo;appel avait laiss&eacute; ouvertes la question de la taille de la liste restreinte (cinq ou sept ?) et celle de savoir si la semaine actuelle de d&eacute;but juillet devait compter dans ce nombre ou &ecirc;tre ajout&eacute;e en plus.
+                         </li>
+                         <li>
+                          Le conseil s&rsquo;est &eacute;galement engag&eacute; &agrave; publier
+                          <strong>
+                           la mani&egrave;re dont chaque membre du conseil vote sur chacune des semaines retenues
+                          </strong>
+                          , dans le cadre du dossier d&rsquo;information. Daniel a propos&eacute; de le faire sous la forme d&rsquo;une position pour ou contre pour chaque semaine, plut&ocirc;t que d&rsquo;un classement : avec sept ou huit votants, un classement apporte peu d&rsquo;informations, tandis qu&rsquo;une indication telle que &laquo; deux membres du conseil soutiennent cette semaine, les huit soutiennent celle-l&agrave; &raquo; est utile aux membres &mdash; y compris lorsqu&rsquo;elle montre que le conseil
+                          <em>
+                           ne
+                          </em>
+                          consid&egrave;re pas qu&rsquo;une semaine constitue une bonne option.
+                         </li>
+                        </ul>
+
+                        <h2>
+                         3. Comment la liste restreinte a &eacute;t&eacute; &eacute;tablie
+                        </h2>
+                        <ol>
+                         <li>
+                          <strong>
+                           Lecture de l&rsquo;enqu&ecirc;te.
+                          </strong>
+                          Daniel a parcouru les r&eacute;sultats publi&eacute;s de l&rsquo;enqu&ecirc;te (voir la
+                          <a href="../event-dates-2027-survey-results.html">
+                           page des r&eacute;sultats de l&rsquo;enqu&ecirc;te
+                          </a>
+                          ). Deux pics nets de disponibilit&eacute; apparaissent :
+                          <strong>
+                           d&eacute;but juin
+                          </strong>
+                          , autour du 7&ndash;13 juin (67 % de l&rsquo;ensemble des personnes ayant r&eacute;pondu pouvaient venir ; 73 % des personnes identifi&eacute;es), et
+                          <strong>
+                           mi-septembre
+                          </strong>
+                          , autour du 13&ndash;19 septembre (62 % ; 61 % des personnes identifi&eacute;es et 63 % des personnes anonymes). L&rsquo;int&eacute;r&ecirc;t diminue en mai, &agrave; la fin du mois de juin et, tr&egrave;s nettement, au d&eacute;but du mois de juillet (5&ndash;11 juillet : 47 % au total, 36 % parmi les personnes anonymes &mdash; Daniel interpr&egrave;te ce r&eacute;sultat comme le signe que les personnes identifi&eacute;es constituent le noyau engag&eacute; qui &laquo; viendra quelle que soit la date &raquo;, conform&eacute;ment &agrave; la formulation de l&rsquo;enqu&ecirc;te), puis il diminue de nouveau &agrave; l&rsquo;approche du mois d&rsquo;octobre. Sa proposition initiale &eacute;tait la suivante :
+                          <strong>
+                           trois semaines autour de chaque pic, plus la semaine actuelle
+                          </strong>
+                          &mdash; six plus une &mdash;, et aucune semaine en mai, &agrave; la fin du mois de juin ou en octobre, p&eacute;riodes pendant lesquelles l&rsquo;int&eacute;r&ecirc;t de la communaut&eacute; est visiblement plus faible.
+                         </li>
+                         <li>
+                          <strong>
+                           Une autre possibilit&eacute; : tout inclure et signaler les semaines favorites.
+                          </strong>
+                          Pablo V a demand&eacute; si l&rsquo;intention &eacute;tait de
+                          <em>
+                           filtrer
+                          </em>
+                          les semaines pour parvenir &agrave; une liste restreinte, ou de toutes les inclure en indiquant les favorites du conseil &mdash; il se souvenait que, lors de l&rsquo;appel communautaire, les participants voulaient conna&icirc;tre l&rsquo;avis du conseil, sans n&eacute;cessairement demander un bulletin de vote plus &eacute;troit. Son sch&eacute;ma &eacute;tait le suivant : toutes les semaines figureraient sur le bulletin, quatre ou cinq seraient signal&eacute;es comme favorites du conseil (deux en juin, deux en septembre), et la semaine actuelle serait marqu&eacute;e comme &laquo; actuelle &raquo; plut&ocirc;t que comme &laquo; favorite &raquo;, de fa&ccedil;on &agrave; permettre encore l&rsquo;expression d&rsquo;une pr&eacute;f&eacute;rence en faveur de l&rsquo;absence de changement. Selon son analyse, cinq semaines (les deux pics et la semaine actuelle) couvriraient d&eacute;j&agrave; environ 94 % des personnes interrog&eacute;es apr&egrave;s pond&eacute;ration. Daniel se souvenait pour sa part que les participants &agrave; l&rsquo;appel penchaient vers la pr&eacute;s&eacute;lection et que personne n&rsquo;avait demand&eacute; &agrave; voter sur toutes les semaines ; Pablo l&rsquo;a accept&eacute;, tout en notant que, si une pr&eacute;s&eacute;lection &eacute;tait faite, une liste de sept semaines pr&eacute;sentait un avantage marginal par rapport &agrave; une liste de cinq.
+                         </li>
+                         <li>
+                          <strong>
+                           Les membres peuvent-ils ajouter une semaine pendant le vote ?
+                          </strong>
+                          Chris a demand&eacute; si quelqu&rsquo;un pouvait pr&eacute;senter une motion visant &agrave; ajouter une semaine. Non : d&egrave;s qu&rsquo;un vote est ouvert sur Humans, il constitue un ensemble fixe &mdash; aucune modification, aucune option suppl&eacute;mentaire &mdash;, et une semaine ajout&eacute;e tardivement serait inconnue des personnes ayant d&eacute;j&agrave; vot&eacute; et perdrait par d&eacute;faut. Le point de vue de Daniel, partag&eacute; par Victor P (on choisit parmi les candidats qui se pr&eacute;sentent ; on n&rsquo;en ajoute pas un dans l&rsquo;isoloir), est que les semaines de consultation, les appels et les synth&egrave;ses qui ont pr&eacute;c&eacute;d&eacute;
+                          <em>
+                           constituaient
+                          </em>
+                          la p&eacute;riode pendant laquelle les options devaient &ecirc;tre propos&eacute;es. Chris a accept&eacute; cette approche pour le vote sur les dates, tout en observant que, pour d&rsquo;autres types de vote, l&rsquo;association devra &agrave; terme disposer d&rsquo;un moyen permettant aux membres de pr&eacute;senter des propositions.
+                         </li>
+                         <li>
+                          <strong>
+                           Combien de semaines ?
+                          </strong>
+                          Dans le cadre d&rsquo;une pr&eacute;s&eacute;lection, Chris pr&eacute;f&eacute;rait qu&rsquo;il y ait plus de quatre options ; Victor P et Daniel se sont tous deux arr&ecirc;t&eacute;s sur un nombre d&rsquo;environ sept. Daniel a fait remarquer que, contrairement au vote sur le nom de l&rsquo;&eacute;v&eacute;nement, les membres ne sont pas oblig&eacute;s de classer toutes les options &mdash; les semaines non class&eacute;es sont consid&eacute;r&eacute;es comme derni&egrave;res ex &aelig;quo &mdash;, de sorte qu&rsquo;une liste un peu plus longue ne constitue pas une charge.
+                         </li>
+                         <li>
+                          <strong>
+                           &Eacute;quilibre entre les deux pics.
+                          </strong>
+                          Daniel voulait que chaque groupe contienne le
+                          <em>
+                           m&ecirc;me nombre
+                          </em>
+                          de semaines. La m&eacute;thode Ranked Pairs g&egrave;re la dispersion des voix (trois semaines de septembre face &agrave; une seule semaine de juin ne d&eacute;savantageraient pas septembre), mais une liste d&eacute;s&eacute;quilibr&eacute;e donnerait tout de m&ecirc;me une impression d&rsquo;injustice. L&rsquo;analyse de Victor P, effectu&eacute;e sur une version ant&eacute;rieure des donn&eacute;es, avait produit une liste compos&eacute;e de mai + deux semaines de juin + deux semaines de septembre, qui lui semblait orienter la liste vers des dates plus pr&eacute;coces ; il a accept&eacute; de modifier cette composition afin de r&eacute;tablir l&rsquo;&eacute;quilibre.
+                         </li>
+                         <li>
+                          <strong>
+                           Quelles semaines, pr&eacute;cis&eacute;ment ?
+                          </strong>
+                          Autour du pic de juin, le troisi&egrave;me cr&eacute;neau se jouait entre le
+                          <strong>
+                           24&ndash;30 mai
+                          </strong>
+                          et le
+                          <strong>
+                           14&ndash;20 juin
+                          </strong>
+                          &mdash; deux semaines suscitant un int&eacute;r&ecirc;t moindre (55 % et 56 %). Le mois de mai a &eacute;t&eacute; &eacute;cart&eacute; : int&eacute;r&ecirc;t plus faible, davantage de pluie, et avis des autorit&eacute;s locales selon lequel la fin du mois de mai est une p&eacute;riode de forte activit&eacute; des machines agricoles dans la r&eacute;gion. Autour du pic de septembre, le
+                          <strong>
+                           6&ndash;12 septembre
+                          </strong>
+                          pr&eacute;sentait un creux (56 %) que Daniel attribuait &agrave; la semaine de Burning Man ; Chris a indiqu&eacute; qu&rsquo;il voterait contre cette semaine pour cette raison. Le
+                          <strong>
+                           27 septembre&ndash;3 octobre
+                          </strong>
+                          a donc &eacute;t&eacute; retenu comme troisi&egrave;me semaine de septembre &mdash; selon Pablo, son inclusion ne co&ucirc;te rien et elle sera simplement moins bien class&eacute;e si elle est impopulaire. Victor P a pos&eacute; la question du chevauchement de juin avec Cr&egrave;me Br&ucirc;l&eacute;e : Olivier est au courant et n&rsquo;a pas laiss&eacute; entendre que cet &eacute;v&eacute;nement serait d&eacute;plac&eacute; en juillet ; Burning Nest a confirm&eacute; qu&rsquo;il &eacute;tait li&eacute; au permis de son site et ne pouvait pas changer de date. Daniel a ajout&eacute; que les dates pr&eacute;coces correspondent de toute fa&ccedil;on &agrave; la p&eacute;riode la plus charg&eacute;e pour la planification d&rsquo;autres burns (les proc&eacute;dures de subventions et de placement de Borderland ont lieu en avril&ndash;mai), ce qui p&egrave;se sur les responsables de camps.
+                         </li>
+                         <li>
+                          <strong>
+                           Sept deviennent huit.
+                          </strong>
+                          Alors que la liste comptait sept semaines (31 mai, 7 juin, 14 juin, 5 juillet, 13, 20 et 27 septembre), Victor P a propos&eacute; d&rsquo;y r&eacute;int&eacute;grer le
+                          <strong>
+                           6&ndash;12 septembre
+                          </strong>
+                          comme huiti&egrave;me option, afin d&rsquo;anticiper la question &laquo; pourquoi avez-vous laiss&eacute; celle-ci de c&ocirc;t&eacute; ? &raquo; &mdash; le conseil peut voter contre cette semaine et en expliquer les raisons. Daniel et Pablo ont approuv&eacute;.
+                         </li>
+                        </ol>
+
+                        <h2>
+                         4. La liste restreinte pour le vote des asociados
+                        </h2>
+                        <div class="shortlist">
+                         <ol>
+                          <li>
+                           <strong>
+                            31 mai &ndash; 6 juin
+                           </strong>
+                           &mdash; d&eacute;but juin
+                          </li>
+                          <li>
+                           <strong>
+                            7 &ndash; 13 juin
+                           </strong>
+                           &mdash; d&eacute;but juin (pic de l&rsquo;enqu&ecirc;te)
+                          </li>
+                          <li>
+                           <strong>
+                            14 &ndash; 20 juin
+                           </strong>
+                           &mdash; d&eacute;but juin
+                          </li>
+                          <li>
+                           <strong>
+                            5 &ndash; 11 juillet
+                           </strong>
+                           &mdash; semaine actuelle (statu quo)
+                          </li>
+                          <li>
+                           <strong>
+                            6 &ndash; 12 septembre
+                           </strong>
+                           &mdash; mi-septembre
+                          </li>
+                          <li>
+                           <strong>
+                            13 &ndash; 19 septembre
+                           </strong>
+                           &mdash; mi-septembre (pic de l&rsquo;enqu&ecirc;te)
+                          </li>
+                          <li>
+                           <strong>
+                            20 &ndash; 26 septembre
+                           </strong>
+                           &mdash; mi-septembre
+                          </li>
+                          <li>
+                           <strong>
+                            27 septembre &ndash; 3 octobre
+                           </strong>
+                           &mdash; mi-septembre
+                          </li>
+                         </ol>
+                        </div>
+                        <ul>
+                         <li>
+                          La semaine actuelle figure sur le bulletin comme statu quo, afin que les membres puissent exprimer une pr&eacute;f&eacute;rence en faveur de l&rsquo;absence de changement ; elle ne constitue pas une recommandation du conseil. Daniel a d&eacute;clar&eacute; qu&rsquo;en tant que membre du conseil, il serait oppos&eacute; &agrave; la tenue de l&rsquo;&eacute;v&eacute;nement pendant n&rsquo;importe laquelle des semaines
+                          <em>
+                           non
+                          </em>
+                          retenues &mdash; l&rsquo;enqu&ecirc;te montre un int&eacute;r&ecirc;t moindre en mai et en octobre, et les deux groupes de semaines retenus r&eacute;pondent de mani&egrave;re plausible aux probl&egrave;mes de bien-&ecirc;tre et d&rsquo;annulation li&eacute;s aux dates de cette ann&eacute;e.
+                         </li>
+                         <li>
+                          Chaque semaine reste soumise &agrave; la d&eacute;cision d&rsquo;INAGA concernant le permis li&eacute; &agrave; la nidification des oiseaux, d&eacute;cision qui peut prendre plusieurs mois ; la page de vote indiquera que le conseil s&rsquo;adaptera aux circonstances et progressera dans la liste, et le syst&egrave;me de vote peut recompter les m&ecirc;mes bulletins apr&egrave;s le retrait de n&rsquo;importe quelle semaine.
+                         </li>
+                        </ul>
+
+                        <h2>
+                         5. Positions des membres du conseil sur chaque semaine
+                        </h2>
+                        <p>
+                         <strong>
+                          Fondement des positions :
+                         </strong>
+                         le conseil a convenu qu&rsquo;il exprimait un avis sur la
+                         <strong>
+                          viabilit&eacute; et le risque
+                         </strong>
+                         &mdash; viabilit&eacute; commerciale, risque d&rsquo;annulation et d&rsquo;incendie de for&ecirc;t, risque li&eacute; au permis &mdash;, et non une pr&eacute;f&eacute;rence personnelle. Plusieurs membres ont indiqu&eacute; qu&rsquo;ils participeraient quelle que soit la semaine gagnante. Aucune semaine pr&eacute;f&eacute;r&eacute;e par le conseil n&rsquo;est signal&eacute;e parmi les semaines retenues ; l&rsquo;objectif est de concentrer le vote sur des semaines viables, et non de l&rsquo;orienter.
+                        </p>
+                        <h3>
+                         Synth&egrave;se
+                        </h3>
+                        <div class="table-wrap">
+                         <table class="action-table">
+                          <thead>
+                           <tr>
+                            <th>
+                             Semaine
+                            </th>
+                            <th>
+                             Victor P
+                            </th>
+                            <th>
+                             Chris
+                            </th>
+                            <th>
+                             Pablo V
+                            </th>
+                            <th>
+                             Daniel T
+                            </th>
+                            <th>
+                             Pour / contre
+                            </th>
+                           </tr>
+                          </thead>
+                          <tbody>
+                           <tr>
+                            <td>
+                             31 mai &ndash; 6 juin
+                            </td>
+                            <td class="against">
+                             Contre
+                            </td>
+                            <td class="against">
+                             Contre
+                            </td>
+                            <td class="for">
+                             Pour
+                            </td>
+                            <td class="against">
+                             Contre
+                            </td>
+                            <td class="tally">
+                             1 / 3
+                            </td>
+                           </tr>
+                           <tr>
+                            <td>
+                             7 &ndash; 13 juin
+                            </td>
+                            <td class="against">
+                             Contre
+                            </td>
+                            <td class="for">
+                             Pour
+                            </td>
+                            <td class="for">
+                             Pour
+                            </td>
+                            <td class="for">
+                             Pour
+                            </td>
+                            <td class="tally">
+                             3 / 1
+                            </td>
+                           </tr>
+                           <tr>
+                            <td>
+                             14 &ndash; 20 juin
+                            </td>
+                            <td class="against">
+                             Contre
+                            </td>
+                            <td class="against">
+                             Penche contre
+                            </td>
+                            <td class="against">
+                             Contre
+                            </td>
+                            <td class="against">
+                             Contre
+                            </td>
+                            <td class="tally">
+                             0 / 4
+                            </td>
+                           </tr>
+                           <tr>
+                            <td>
+                             5 &ndash; 11 juil. (actuelle)
+                            </td>
+                            <td class="against">
+                             Contre
+                            </td>
+                            <td class="against">
+                             Contre
+                            </td>
+                            <td class="against">
+                             Contre
+                            </td>
+                            <td class="against">
+                             Contre
+                            </td>
+                            <td class="tally">
+                             0 / 4
+                            </td>
+                           </tr>
+                           <tr>
+                            <td>
+                             6 &ndash; 12 sept.
+                            </td>
+                            <td class="against">
+                             Contre
+                            </td>
+                            <td class="against">
+                             Contre
+                            </td>
+                            <td class="against">
+                             Contre
+                            </td>
+                            <td class="for">
+                             Pour (sous r&eacute;serve)
+                            </td>
+                            <td class="tally">
+                             1 / 3
+                            </td>
+                           </tr>
+                           <tr>
+                            <td>
+                             13 &ndash; 19 sept.
+                            </td>
+                            <td class="for">
+                             Pour
+                            </td>
+                            <td class="for">
+                             Pour
+                            </td>
+                            <td class="for">
+                             Pour
+                            </td>
+                            <td class="for">
+                             Pour
+                            </td>
+                            <td class="tally">
+                             4 / 0
+                            </td>
+                           </tr>
+                           <tr>
+                            <td>
+                             20 &ndash; 26 sept.
+                            </td>
+                            <td class="for">
+                             Pour
+                            </td>
+                            <td class="for">
+                             Pour
+                            </td>
+                            <td class="for">
+                             Pour
+                            </td>
+                            <td class="for">
+                             Pour
+                            </td>
+                            <td class="tally">
+                             4 / 0
+                            </td>
+                           </tr>
+                           <tr>
+                            <td>
+                             27 sept. &ndash; 3 oct.
+                            </td>
+                            <td class="for">
+                             Pour
+                            </td>
+                            <td class="for">
+                             Pour
+                            </td>
+                            <td class="for">
+                             Pour (avec r&eacute;serves)
+                            </td>
+                            <td class="for">
+                             Pour (avec r&eacute;serves)
+                            </td>
+                            <td class="tally">
+                             4 / 0
+                            </td>
+                           </tr>
+                          </tbody>
+                         </table>
+                        </div>
+                        <p>
+                         Les positions des membres du conseil qui n&rsquo;&eacute;taient pas pr&eacute;sents sont en cours de collecte et seront ajout&eacute;es au dossier de vote.
+                        </p>
+                        <h3>
+                         Raisonnement, semaine par semaine
+                        </h3>
+                        <h4>
+                         31 mai &ndash; 6 juin
+                        </h4>
+                        <ul>
+                         <li>
+                          <em>
+                           Victor P &mdash; contre.
+                          </em>
+                          Cette semaine est trop proche de la fin de l&rsquo;ann&eacute;e de travail pour un &eacute;v&eacute;nement de cette ampleur, compte tenu de la longueur du montage et du d&eacute;montage ; il existe un risque de faible participation ; la saison de nidification ajoute de l&rsquo;incertitude quant au permis. (Il a appliqu&eacute; le m&ecirc;me raisonnement &agrave; toutes les semaines de mai&ndash;juin.)
+                         </li>
+                         <li>
+                          <em>
+                           Chris &mdash; contre.
+                          </em>
+                          Il &eacute;tait d&rsquo;accord avec le raisonnement de Victor.
+                         </li>
+                         <li>
+                          <em>
+                           Pablo V &mdash; pour.
+                          </em>
+                          Il ne voyait aucun risque pr&eacute;cis qu&rsquo;il puisse citer : les gens se rendent &agrave; Midburn et &agrave; AfricaBurn pendant cette p&eacute;riode ; le principal probl&egrave;me serait les conflits avec d&rsquo;autres burns (Burning Nest se termine la veille), qu&rsquo;il ne consid&eacute;rait pas comme r&eacute;dhibitoires.
+                         </li>
+                         <li>
+                          <em>
+                           Daniel T &mdash; contre.
+                          </em>
+                          Pour les raisons avanc&eacute;es par Victor, auxquelles s&rsquo;ajoutent davantage de pluie et l&rsquo;avis des autorit&eacute;s locales selon lequel la fin du mois de mai est une p&eacute;riode de forte activit&eacute; des machines agricoles dans la r&eacute;gion.
+                         </li>
+                        </ul>
+                        <h4>
+                         7 &ndash; 13 juin
+                        </h4>
+                        <ul>
+                         <li>
+                          <em>
+                           Victor P &mdash; contre.
+                          </em>
+                          Il y a moins de conflits avec d&rsquo;autres burns que la semaine pr&eacute;c&eacute;dente, mais les m&ecirc;mes pr&eacute;occupations concernant la nidification et la fin de l&rsquo;ann&eacute;e de travail subsistent ; il estime qu&rsquo;il existe un risque r&eacute;el.
+                         </li>
+                         <li>
+                          <em>
+                           Chris &mdash; pour.
+                          </em>
+                          C&rsquo;est la semaine qui a &eacute;t&eacute; la plus s&eacute;lectionn&eacute;e dans l&rsquo;enqu&ecirc;te, elle est donc commercialement viable ; elle ne co&iuml;ncide directement avec aucun autre &eacute;v&eacute;nement ; les oiseaux sont une question que l&rsquo;association devra de toute fa&ccedil;on traiter.
+                         </li>
+                         <li>
+                          <em>
+                           Pablo V &mdash; pour.
+                          </em>
+                          C&rsquo;est aussi la meilleure semaine de l&rsquo;enqu&ecirc;te en ce qui concerne les disponibilit&eacute;s pour le montage et le d&eacute;montage ; elle offre une bonne combinaison de tous les facteurs, avec de meilleures temp&eacute;ratures.
+                         </li>
+                         <li>
+                          <em>
+                           Daniel T &mdash; pour.
+                          </em>
+                          Elle b&eacute;n&eacute;ficie du plus fort soutien dans l&rsquo;enqu&ecirc;te ; il n&rsquo;y a eu aucune journ&eacute;e d&rsquo;alerte rouge cette ann&eacute;e, si bien que le risque d&rsquo;incendie est bien plus favorable ; elle reste soumise, comme chaque semaine, &agrave; INAGA. Il s&rsquo;agissait de sa semaine pr&eacute;f&eacute;r&eacute;e jusqu&rsquo;&agrave; ce que l&rsquo;appel du 3 septembre l&rsquo;oriente vers septembre &mdash; cela reste n&eacute;anmoins un oui sans ambigu&iuml;t&eacute;.
+                         </li>
+                        </ul>
+                        <h4>
+                         14 &ndash; 20 juin
+                        </h4>
+                        <ul>
+                         <li>
+                          <em>
+                           Victor P &mdash; contre.
+                          </em>
+                          Pour les raisons indiqu&eacute;es ci-dessus, et parce que cette semaine commence &agrave; empi&eacute;ter sur la saison de chaleur plus dangereuse &mdash; si ce n&rsquo;est pas encore le cas aujourd&rsquo;hui, cela appara&icirc;t dans les projections pour les ann&eacute;es &agrave; venir.
+                         </li>
+                         <li>
+                          <em>
+                           Chris &mdash; penche contre.
+                          </em>
+                          Cette semaine est assez viable sur le plan commercial, mais se rapproche peu &agrave; peu de la p&eacute;riode de risque d&rsquo;incendie ; il est ind&eacute;cis et penche l&eacute;g&egrave;rement contre.
+                         </li>
+                         <li>
+                          <em>
+                           Pablo V &mdash; contre.
+                          </em>
+                          Il ferait plus chaud, et cette semaine ressort moins bien de l&rsquo;enqu&ecirc;te que le 7&ndash;13 juin ; s&rsquo;il s&rsquo;agit de concentrer les voix, c&rsquo;est une semaine &agrave; &eacute;carter.
+                         </li>
+                         <li>
+                          <em>
+                           Daniel T &mdash; contre.
+                          </em>
+                          Le soutien dans l&rsquo;enqu&ecirc;te est plus faible et le risque d&rsquo;incendie plus &eacute;lev&eacute; : si l&rsquo;&eacute;v&eacute;nement avait eu lieu pendant cette semaine cette ann&eacute;e, une &eacute;vacuation aurait &eacute;t&eacute; n&eacute;cessaire vers la fin du d&eacute;montage.
+                         </li>
+                        </ul>
+                        <h4>
+                         5 &ndash; 11 juillet (semaine actuelle)
+                        </h4>
+                        <ul>
+                         <li>
+                          <em>
+                           Victor P &mdash; contre.
+                          </em>
+                          Le risque li&eacute; au permis est beaucoup trop &eacute;lev&eacute; et, certaines ann&eacute;es, la chaleur a &eacute;t&eacute; insupportable &mdash; des personnes qu&rsquo;il conna&icirc;t ont cess&eacute; de venir pour cette seule raison.
+                         </li>
+                         <li>
+                          <em>
+                           Chris &mdash; contre.
+                          </em>
+                         </li>
+                         <li>
+                          <em>
+                           Pablo V &mdash; contre.
+                          </em>
+                         </li>
+                         <li>
+                          <em>
+                           Daniel T &mdash; contre.
+                          </em>
+                          Il est tr&egrave;s probable qu&rsquo;aucun permis ne soit accord&eacute; pour cette semaine ; s&rsquo;il l&rsquo;&eacute;tait, l&rsquo;&eacute;v&eacute;nement serait tr&egrave;s vraisemblablement suspendu, et il n&rsquo;est pas possible de supposer que la cl&eacute;mence manifest&eacute;e cette ann&eacute;e par les autorit&eacute;s se reproduira. Cela ne vaut pas les efforts engag&eacute;s si c&rsquo;est pour devoir ensuite &eacute;vacuer 3 000 personnes.
+                         </li>
+                        </ul>
+                        <h4>
+                         6 &ndash; 12 septembre
+                        </h4>
+                        <ul>
+                         <li>
+                          <em>
+                           Victor P &mdash; contre.
+                          </em>
+                          Cette semaine est une bonne candidate en elle-m&ecirc;me, mais de nombreux membres de la communaut&eacute; seraient encore en vacances ou tout juste de retour, et il est inconfortable de planifier un &eacute;v&eacute;nement imm&eacute;diatement apr&egrave;s cette p&eacute;riode.
+                         </li>
+                         <li>
+                          <em>
+                           Chris &mdash; contre.
+                          </em>
+                          En raison de la proximit&eacute; avec Burning Man.
+                         </li>
+                         <li>
+                          <em>
+                           Pablo V &mdash; contre.
+                          </em>
+                          Il ne faut pas commencer le changement de dates par un conflit avec Burning Man ; si l&rsquo;association souhaite un jour tester ce chevauchement, elle pourra le faire ult&eacute;rieurement, une fois son impact compris.
+                         </li>
+                         <li>
+                          <em>
+                           Daniel T &mdash; pour, sous r&eacute;serve.
+                          </em>
+                          Ce chevauchement l&rsquo;inqui&egrave;te moins : la communaut&eacute; de Nowhere est attentive aux prix et seule une petite minorit&eacute; peut se permettre Burning Man. La semaine est viable ; elle pr&eacute;sente un risque d&rsquo;incendie l&eacute;g&egrave;rement sup&eacute;rieur &agrave; celui de la fin du mois de septembre, mais ce risque reste acceptable.
+                         </li>
+                        </ul>
+                        <h4>
+                         13 &ndash; 19 septembre
+                        </h4>
+                        <ul>
+                         <li>
+                          <em>
+                           Victor P &mdash; pour.
+                          </em>
+                          Il n&rsquo;existe aucun risque manifeste de quelque nature que ce soit ; cette semaine est suffisamment &eacute;loign&eacute;e des vacances ; elle b&eacute;n&eacute;ficie d&rsquo;un fort soutien dans l&rsquo;enqu&ecirc;te.
+                         </li>
+                         <li>
+                          <em>
+                           Chris &mdash; pour.
+                          </em>
+                          Elle est suffisamment &eacute;loign&eacute;e de Burning Man ; elle lui pla&icirc;t.
+                         </li>
+                         <li>
+                          <em>
+                           Pablo V &mdash; pour.
+                          </em>
+                          C&rsquo;est faisable &mdash; les personnes qui participent aux deux &eacute;v&eacute;nements peuvent s&rsquo;investir plus l&eacute;g&egrave;rement dans l&rsquo;un d&rsquo;eux &mdash;, et l&rsquo;association apprendrait dans quelle mesure le chevauchement compte pour les ann&eacute;es &agrave; venir.
+                         </li>
+                         <li>
+                          <em>
+                           Daniel T &mdash; pour.
+                          </em>
+                          C&rsquo;est un oui tr&egrave;s net, tout en notant que les temp&eacute;ratures commencent &agrave; baisser et qu&rsquo;il pr&eacute;f&eacute;rerait personnellement l&rsquo;extr&eacute;mit&eacute; la plus chaude de la p&eacute;riode ; les conditions restent bonnes jusqu&rsquo;&agrave; une date avanc&eacute;e en septembre.
+                         </li>
+                        </ul>
+                        <h4>
+                         20 &ndash; 26 septembre
+                        </h4>
+                        <ul>
+                         <li>
+                          <em>
+                           Victor P &mdash; pour.
+                          </em>
+                          Pour les m&ecirc;mes raisons que pour le 13&ndash;19 septembre.
+                         </li>
+                         <li>
+                          <em>
+                           Chris &mdash; pour.
+                          </em>
+                         </li>
+                         <li>
+                          <em>
+                           Pablo V &mdash; pour.
+                          </em>
+                          (Et les nuits plus fra&icirc;ches permettent de porter les tenues.)
+                         </li>
+                         <li>
+                          <em>
+                           Daniel T &mdash; pour.
+                          </em>
+                          Cette semaine est commercialement viable. Il a fait remarquer que toutes les semaines de septembre semblent pr&eacute;senter un risque de nidification plus faible, si bien qu&rsquo;elles sont moins susceptibles d&rsquo;&ecirc;tre d&eacute;plac&eacute;es par la d&eacute;cision concernant le permis.
+                         </li>
+                        </ul>
+                        <h4>
+                         27 septembre &ndash; 3 octobre
+                        </h4>
+                        <ul>
+                         <li>
+                          <em>
+                           Victor P &mdash; pour.
+                          </em>
+                          C&rsquo;est sa semaine favorite : elle est suffisamment tardive pour que les gens puissent participer &agrave; leurs festivals d&rsquo;&eacute;t&eacute;, puis venir &agrave; un burn apr&egrave;s quelques semaines de travail ; c&rsquo;est la meilleure semaine pour le permis relatif aux oiseaux ; les nuits sont plus fra&icirc;ches et les matin&eacute;es sans chaleur sont plus longues.
+                         </li>
+                         <li>
+                          <em>
+                           Chris &mdash; pour.
+                          </em>
+                          Le seul &eacute;l&eacute;ment qui joue contre elle est que le mot &laquo; octobre &raquo; lui para&icirc;t inappropri&eacute;, ce qui, comme il l&rsquo;a reconnu, n&rsquo;est pas un argument rationnel ; les personnes qui ont l&rsquo;habitude de ces conditions disent que la pluie est amusante.
+                         </li>
+                         <li>
+                          <em>
+                           Pablo V &mdash; pour, avec r&eacute;serves.
+                          </em>
+                          Cette semaine para&icirc;t tardive et ses chiffres sont l&eacute;g&egrave;rement moins bons que ceux des autres semaines de septembre ; mais elle est viable, alors il faut laisser les membres d&eacute;cider &mdash; s&rsquo;ils n&rsquo;en veulent pas, elle sera moins bien class&eacute;e.
+                         </li>
+                         <li>
+                          <em>
+                           Daniel T &mdash; pour, avec r&eacute;serves.
+                          </em>
+                          Pour lui, elle est personnellement trop tardive ; en tant que membre du conseil, il est l&eacute;g&egrave;rement pr&eacute;occup&eacute; par le fait que les personnes identifi&eacute;es ayant r&eacute;pondu (les membres les plus proches du noyau de l&rsquo;association) sont moins disponibles cette semaine que les personnes anonymes. Elle n&rsquo;est pas non viable &mdash; elle est simplement moins qu&rsquo;id&eacute;ale &mdash;, et puisqu&rsquo;il a vot&eacute; contre une semaine (le 31 mai) qui b&eacute;n&eacute;ficiait d&rsquo;un soutien
+                          <em>
+                           plus important
+                          </em>
+                          dans l&rsquo;enqu&ecirc;te, la coh&eacute;rence veut que cette d&eacute;cision soit laiss&eacute;e aux asociados.
+                         </li>
+                        </ul>
+
+                        <h2>
+                         6. Pr&eacute;sentation du vote
+                        </h2>
+                        <ul>
+                         <li>
+                          Victor P a demand&eacute; que la page de vote comporte des annotations &mdash; risque li&eacute; au permis en raison des oiseaux, m&eacute;t&eacute;o, conflits avec d&rsquo;autres &eacute;v&eacute;nements &mdash;, afin que les arbitrages soient visibles &agrave; l&rsquo;endroit o&ugrave; les gens votent. Daniel a confirm&eacute; que le dossier d&rsquo;information comprendra un r&eacute;sum&eacute; des recherches sur la nidification (qui s&rsquo;appliquent aux deux sites) et les donn&eacute;es m&eacute;t&eacute;orologiques, sous une forme aussi compacte et visuelle que possible : un seul tableau r&eacute;capitulatif qui contiendra presque tout, puisque beaucoup de gens ne cliqueront pas pour aller plus loin, et des onglets de d&eacute;tail derri&egrave;re celui-ci. Il y travaille avec C&eacute;line S.
+                         </li>
+                         <li>
+                          Pablo V a propos&eacute; de pr&eacute;senter chaque semaine avec une courte ligne sur les conflits et un lien vers un raisonnement plus complet ; Daniel estime que le dossier doit expliquer les semaines
+                          <em>
+                           propos&eacute;es
+                          </em>
+                          , et non justifier la s&eacute;lection &mdash; celle-ci est expliqu&eacute;e dans le pr&eacute;sent compte rendu.
+                         </li>
+                         <li>
+                          Pablo V tentera de quantifier la contrainte li&eacute;e aux vacances scolaires, qu&rsquo;il consid&egrave;re comme le facteur le plus mal compris : elle a concern&eacute; environ 3,5 % des personnes ayant r&eacute;pondu &agrave; l&rsquo;enqu&ecirc;te, et les membres qui l&rsquo;imaginent beaucoup plus importante pourraient, pour ce seul motif, voter contre tout changement. D&rsquo;apr&egrave;s les chiffres, en d&eacute;pla&ccedil;ant l&rsquo;&eacute;v&eacute;nement l&rsquo;association gagne plus de personnes qu&rsquo;elle n&rsquo;en perd, et le risque est moindre.
+                         </li>
+                         <li>
+                          INAGA : toujours aucune r&eacute;ponse, et toujours rien non plus du contact charg&eacute; de la conservation des oiseaux. INAGA peut refuser un permis pour des raisons environnementales ; juin comporte ce risque, mais la semaine actuelle aussi, tandis que septembre devrait convenir sans que cela soit garanti. Chris a demand&eacute; ce qu&rsquo;un refus signifierait en pratique &mdash; personne ne le sait ; il pourrait s&rsquo;agir d&rsquo;un refus pur et simple ou de conditions (Daniel a &eacute;voqu&eacute; d&rsquo;&eacute;ventuelles restrictions concernant le bruit ou les v&eacute;hicules, bien que des engins agricoles lourds soient d&eacute;j&agrave; utilis&eacute;s dans la zone). Le bulletin indiquera que le conseil s&rsquo;adaptera aux circonstances et descendra la liste ; le syst&egrave;me peut recompter les m&ecirc;mes bulletins en retirant n&rsquo;importe quelle semaine.
+                         </li>
+                        </ul>
+
+                        <h2>
+                         7. Prochaines &eacute;tapes et calendrier
+                        </h2>
+                        <ol>
+                         <li>
+                          <strong>
+                           Ce soir :
+                          </strong>
+                          publication du pr&eacute;sent compte rendu.
+                         </li>
+                         <li>
+                          <strong>
+                           Mardi 8 septembre :
+                          </strong>
+                          Daniel recueille les positions pour ou contre sur les huit semaines aupr&egrave;s des membres du conseil qui n&rsquo;&eacute;taient pas pr&eacute;sents (Peter D s&rsquo;est engag&eacute; &agrave; consigner la sienne m&ecirc;me pendant son voyage), afin de les inclure dans le dossier de vote.
+                         </li>
+                         <li>
+                          <strong>
+                           Cette semaine :
+                          </strong>
+                          un essai du vote sera organis&eacute; sur Humans, configur&eacute; comme un vote des membres du conseil du type asociado &mdash; il est demand&eacute; aux membres du conseil de participer &agrave; cet essai et de signaler tout &eacute;l&eacute;ment peu clair ou d&eacute;fectueux afin qu&rsquo;il puisse &ecirc;tre corrig&eacute; rapidement.
+                         </li>
+                         <li>
+                          <strong>
+                           D&rsquo;ici la fin de la semaine :
+                          </strong>
+                          ouverture du vote des asociados.
+                         </li>
+                         <li>
+                          <strong>
+                           17 septembre :
+                          </strong>
+                          cl&ocirc;ture du vote (date de l&rsquo;assembl&eacute;e g&eacute;n&eacute;rale) ; les r&eacute;sultats seront publi&eacute;s deux ou trois jours plus tard.
+                         </li>
+                        </ol>
+
+                        <h2>
+                         8. Tour de cl&ocirc;ture
+                        </h2>
+                        <ul>
+                         <li>
+                          Les participants se sont remerci&eacute;s mutuellement pour le travail accompli dans le cadre du processus relatif aux dates &mdash; Victor P : &laquo; cela a &eacute;t&eacute; super bien g&eacute;r&eacute; et super bien communiqu&eacute;, en impliquant beaucoup la communaut&eacute; &raquo; ; Pablo V : &laquo; nous sommes en train de converger vers certaines r&eacute;ponses &raquo;.
+                         </li>
+                        </ul>
+
+                        <h2>
+                         D&eacute;cisions
+                        </h2>
+                        <ul>
+                         <li>
+                          <strong>
+                           Liste restreinte pour le vote des asociados fix&eacute;e
+                          </strong>
+                          par les membres du conseil pr&eacute;sents : 31 mai&ndash;6 juin, 7&ndash;13 juin, 14&ndash;20 juin, 5&ndash;11 juillet (semaine actuelle, statu quo), 6&ndash;12 septembre, 13&ndash;19 septembre, 20&ndash;26 septembre, 27 septembre&ndash;3 octobre.
+                         </li>
+                         <li>
+                          <strong>
+                           Les positions du conseil seront publi&eacute;es pour chaque semaine, pour ou contre, avec leurs motifs
+                          </strong>
+                          &mdash; comme ci-dessus pour les quatre membres pr&eacute;sents ; celles des autres membres suivront.
+                         </li>
+                         <li>
+                          <strong>
+                           Fondement des positions du conseil :
+                          </strong>
+                          la viabilit&eacute; et le risque, et non les pr&eacute;f&eacute;rences. Aucune semaine pr&eacute;f&eacute;r&eacute;e par le conseil n&rsquo;est signal&eacute;e.
+                         </li>
+                        </ul>
+
+                        <h2>
+                         Actions
+                        </h2>
+                        <div class="table-wrap">
+                         <table class="action-table">
+                          <thead>
+                           <tr>
+                            <th>
+                             Action
+                            </th>
+                            <th>
+                             Responsable
+                            </th>
+                           </tr>
+                          </thead>
+                          <tbody>
+                           <tr>
+                            <td>
+                             Publier le pr&eacute;sent compte rendu ce soir
+                            </td>
+                            <td>
+                             Daniel T
+                            </td>
+                           </tr>
+                           <tr>
+                            <td>
+                             Recueillir, dans un d&eacute;lai d&rsquo;un jour, les positions de Peter D, Ward D, Ben D (et de tout autre membre absent) sur chaque semaine
+                            </td>
+                            <td>
+                             Daniel T
+                            </td>
+                           </tr>
+                           <tr>
+                            <td>
+                             Construire le vote sur Humans ; organiser un vote d&rsquo;essai du conseil ; ouvrir le vote des asociados d&rsquo;ici la fin de la semaine
+                            </td>
+                            <td>
+                             Daniel T
+                            </td>
+                           </tr>
+                           <tr>
+                            <td>
+                             Pr&eacute;parer un dossier d&rsquo;information compact et visuel pour la page de vote (tableau r&eacute;capitulatif + onglets de d&eacute;tail ; r&eacute;sum&eacute; sur la nidification ; m&eacute;t&eacute;o)
+                            </td>
+                            <td>
+                             Daniel T, C&eacute;line S
+                            </td>
+                           </tr>
+                           <tr>
+                            <td>
+                             Quantifier la contrainte li&eacute;e aux vacances scolaires pour le dossier d&rsquo;information
+                            </td>
+                            <td>
+                             Pablo V
+                            </td>
+                           </tr>
+                           <tr>
+                            <td>
+                             Participer au vote d&rsquo;essai et signaler les probl&egrave;mes
+                            </td>
+                            <td>
+                             Tous les membres du conseil
+                            </td>
+                           </tr>
+                           <tr>
+                            <td>
+                             Relancer le contact charg&eacute; de la conservation des oiseaux au sujet des crit&egrave;res d&rsquo;INAGA
+                            </td>
+                            <td>
+                             Peter K
+                            </td>
+                           </tr>
+                          </tbody>
+                         </table>
+                        </div>
+                        <p>
+                         <em>
+                          Compte rendu pr&eacute;par&eacute; &agrave; partir de l&rsquo;enregistrement audio et de la transcription int&eacute;grale. Noms abr&eacute;g&eacute;s.
+                         </em>
+                        </p>
+                    </div>
+                </div>
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+<div class="lang-note">In caso di discrepanze tra questa versione e la versione spagnola, prevarrà la versione spagnola.</div>
+<div class="attendees"><strong>Consiglieri presenti: Daniel T (presidente), Pablo V (vicepresidente), Chris, Victor P · Assenti: Peter D (tesoriere, in viaggio), Ward D, Ben D, Michelle · Osservatori: nessuno (Daniela, coordinatrice della produzione, ha comunicato di non poter partecipare)</strong>
+Erano presenti quattro degli otto membri del consiglio, quindi il quorum non era raggiunto. I presenti hanno affrontato l’unico punto sostanziale all’ordine del giorno: definire la rosa di settimane per il voto degli asociados sulle date dell’evento 2027 e registrare la posizione di ogni consigliere su ciascuna settimana. Agli altri consiglieri viene chiesto di registrare le proprie posizioni sulla stessa lista entro un giorno, affinché il parere dell’intero consiglio possa essere incluso nel materiale per la votazione. Il punto di Ben D sull’approvazione degli asociados è stato rinviato a causa della sua assenza; per lo stesso motivo non è stato convalidato il verbale della riunione precedente.</div>
+<div class="meeting-content">
+<p>Una riunione breve, dedicata a un solo argomento: il consiglio ha letto insieme i risultati pubblicati del sondaggio, ha discusso fino a definire una rosa di <strong>otto settimane</strong> per il voto degli asociados — tre attorno al picco di inizio giugno, tre attorno a quello di metà settembre, l’attuale settimana di inizio luglio come status quo e il 6–12 settembre, aggiunto affinché nessuno debba chiedere perché fosse stato escluso — e ha poi ripercorso la lista settimana per settimana, con ogni consigliere che ha espresso una posizione a favore o contro in termini di <em>fattibilità e rischio</em>, spiegandone le ragioni. Questo verbale registra sia il percorso che ha portato alla rosa sia i ragionamenti, perché costituiscono il principale contributo del consiglio alla votazione.</p>
+<h2>1. Giro iniziale e ordine del giorno</h2>
+<ul>
+<li>Giro iniziale svolto. Ordine del giorno confermato: un solo punto, le date dell’evento. Nessun aggiornamento sulla produzione (Daniela assente); verbale della riunione precedente non convalidato (Ben assente).</li>
+</ul>
+<h2>2. Che cosa stava decidendo il consiglio, e perché</h2>
+<ul>
+<li>Dopo la <a href="2026-09-03-community.html">call della comunità del 3 settembre</a>, l’approccio con il sostegno più ampio era quello intermedio fra le tre opzioni presentate: <strong>il consiglio preseleziona una rosa di settimane e gli asociados scelgono fra queste</strong> mediante un voto con ordine di preferenza, anziché votare su ogni settimana del sondaggio (l’esperienza delle “26 opzioni” del voto sul nome dell’evento) o affidare la decisione al solo consiglio.</li>
+<li>La call aveva lasciato aperte la dimensione della rosa (cinque o sette settimane?) e la questione se l’attuale settimana di inizio luglio dovesse essere compresa in quel numero o aggiunta a parte.</li>
+<li>Il consiglio si è inoltre impegnato a pubblicare <strong>come vota ogni consigliere su ciascuna settimana preselezionata</strong>, come parte del materiale informativo. Daniel ha proposto di esprimere una posizione a favore o contro per ogni settimana, anziché una graduatoria: con sette o otto votanti una graduatoria comunica poco, mentre “due consiglieri sostengono questa settimana, tutti e otto sostengono quell’altra” è un’informazione utile per i soci, anche quando il consiglio <em>non</em> ritiene una settimana una buona idea.</li>
+</ul>
+<h2>3. Come si è arrivati alla rosa di settimane</h2>
+<ol>
+<li><strong>Lettura del sondaggio.</strong> Daniel ha illustrato i risultati pubblicati del sondaggio (si veda la <a href="../event-dates-2027-survey-results.html">pagina dei risultati del sondaggio</a>). Due picchi netti di disponibilità: <strong>inizio giugno</strong>, centrato sul 7–13 giugno (il 67% di tutti i rispondenti potrebbe venire; il 73% di quelli identificati), e <strong>metà settembre</strong>, centrato sul 13–19 settembre (62%; 61% identificati, 63% anonimi). L’interesse cala a maggio, a fine giugno e, nettamente, a inizio luglio (5–11 luglio: 47% complessivo, 36% fra i rispondenti anonimi — secondo la lettura di Daniel, quelli identificati sono il nucleo più coinvolto, che “verrà qualunque sia la data”, come recitava il sondaggio), per poi calare nuovamente in ottobre. La sua proposta iniziale: <strong>tre settimane attorno a ogni picco, più la settimana attuale</strong> — sei più una — e nessuna a maggio, fine giugno o ottobre, periodi in cui l’interesse della comunità è visibilmente inferiore.</li>
+<li><strong>Un’alternativa: elencarle tutte e segnare le preferite.</strong> Pablo V ha chiesto se l’intento fosse <em>filtrare</em> fino a ottenere una rosa o elencare tutte le settimane segnando le preferite dal consiglio: ricordava che nella call la comunità aveva chiesto di conoscere il parere del consiglio, non necessariamente di avere una scheda con meno opzioni. Il suo schema: tutte le settimane sulla scheda, con quattro o cinque indicate come preferite dal consiglio (due a giugno, due a settembre) e quella attuale indicata come “attuale” anziché “preferita”, così da poter comunque esprimere una preferenza per non cambiare. Secondo la sua analisi, cinque settimane (i due picchi più quella attuale) coprirebbero già circa il 94% dei rispondenti ponderati. Daniel ricordava che la preselezione era l’opzione verso cui le persone propendevano e che nessuno aveva chiesto di votare su tutte le settimane; Pablo ha accettato questa lettura, osservando che, se si preseleziona, sette offrono un vantaggio marginale rispetto a cinque.</li>
+<li><strong>I soci possono aggiungere una settimana durante la votazione?</strong> Chris ha chiesto se qualcuno potesse presentare una mozione per aggiungere una settimana. No: una volta aperta una votazione su Humans, il pacchetto è fisso — niente modifiche né opzioni aggiuntive — e una settimana aggiunta in ritardo sarebbe sconosciuta a chi ha già votato e perderebbe per questo motivo. Secondo Daniel, con il quale Victor P concordava (si sceglie fra i candidati che si presentano; non se ne aggiunge uno al seggio), le settimane trascorse fra consultazioni, call e riepiloghi <em>erano</em> il periodo in cui proporre le opzioni. Chris ha accettato questo per il voto sulle date, osservando che per altri tipi di votazione l’associazione dovrà prima o poi prevedere un modo affinché i soci possano presentare proposte.</li>
+<li><strong>Quante?</strong> Una volta scelta la preselezione, Chris preferiva più di quattro opzioni; Victor P e Daniel si sono entrambi orientati su circa sette. Daniel ha osservato che, a differenza del voto sul nome dell’evento, i soci non devono classificare tutte le opzioni — le settimane non classificate sono considerate ultime a pari merito — quindi una lista un po’ più lunga non costituisce un onere.</li>
+<li><strong>Equilibrio fra i due picchi.</strong> Daniel voleva lo <em>stesso numero</em> di settimane in ogni gruppo. Ranked Pairs gestisce la dispersione dei voti (tre settimane di settembre contro una di giugno non svantaggerebbero settembre), ma una lista squilibrata sembrerebbe comunque ingiusta. L’analisi di Victor P, condotta su una versione precedente dei dati, aveva prodotto maggio + due settimane di giugno + due di settembre, che a suo avviso sbilanciavano la lista verso date più anticipate; ha accettato la sostituzione per ristabilire l’equilibrio.</li>
+<li><strong>Quali settimane, esattamente.</strong> Attorno al picco di giugno, il terzo posto era conteso fra il <strong>24–30 maggio</strong> e il <strong>14–20 giugno</strong>, entrambi con un interesse inferiore (55% e 56%). Maggio è stato escluso: meno interesse, più pioggia e l’indicazione delle autorità locali secondo cui a fine maggio l’attività dei mezzi agricoli nella zona è intensa. Attorno al picco di settembre, il <strong>6–12 settembre</strong> mostrava un calo (56%) che Daniel attribuiva alla settimana di Burning Man; Chris ha detto che per questo motivo avrebbe votato contro, quindi come terza settimana di settembre è stato scelto invece il <strong>27 settembre–3 ottobre</strong> — per Pablo, includerla non costa nulla e, se è impopolare, sarà semplicemente classificata più in basso. Victor P ha chiesto della sovrapposizione di giugno con Crème Brûlée: Olivier ne è consapevole e non ha suggerito che quell’evento si sposti a luglio; Burning Nest ha confermato di essere vincolato al permesso del proprio sito e di non potersi spostare. Daniel ha aggiunto che le date anticipate coincidono comunque con il periodo di pianificazione più intenso per gli altri burn (i processi di sovvenzione e collocazione dei camp di Borderland cadono in aprile–maggio), il che pesa sui responsabili dei camp.</li>
+<li><strong>Da sette a otto.</strong> Quando la lista era di sette settimane (31 maggio, 7 giugno, 14 giugno, 5 luglio, 13, 20, 27 settembre), Victor P ha proposto di reinserire il <strong>6–12 settembre</strong> come ottava, per prevenire la domanda “perché avete escluso questa?”: il consiglio può votare contro e spiegarne il motivo. Daniel e Pablo hanno concordato.</li>
+</ol>
+<h2>4. La rosa per il voto degli asociados</h2>
+<div class="shortlist">
+<ol>
+<li><strong>31 maggio – 6 giugno</strong> — inizio giugno</li>
+<li><strong>7 – 13 giugno</strong> — inizio giugno (picco del sondaggio)</li>
+<li><strong>14 – 20 giugno</strong> — inizio giugno</li>
+<li><strong>5 – 11 luglio</strong> — settimana attuale (status quo)</li>
+<li><strong>6 – 12 settembre</strong> — metà settembre</li>
+<li><strong>13 – 19 settembre</strong> — metà settembre (picco del sondaggio)</li>
+<li><strong>20 – 26 settembre</strong> — metà settembre</li>
+<li><strong>27 settembre – 3 ottobre</strong> — metà settembre</li>
+</ol>
+</div>
+<ul>
+<li>La settimana attuale è sulla scheda come status quo, affinché i soci possano esprimere una preferenza per non cambiare; non è una raccomandazione del consiglio. Daniel ha detto che, in quanto consigliere, sarebbe contrario a tenere l’evento in qualunque settimana <em>non</em> preselezionata: il sondaggio mostra meno interesse a maggio e ottobre ed entrambi i gruppi selezionati affrontano plausibilmente i problemi di benessere e di annullamento legati alle date di quest’anno.</li>
+<li>Ogni settimana resta subordinata alla decisione di INAGA sul permesso relativo alla nidificazione degli uccelli, che potrebbe richiedere mesi; la pagina di votazione dirà che il consiglio si adatterà alle circostanze e scorrerà la graduatoria, e il sistema di voto può riconteggiare le stesse schede eliminando qualsiasi settimana.</li>
+</ul>
+<h2>5. Posizioni dei consiglieri su ciascuna settimana</h2>
+<p><strong>Base delle posizioni:</strong> il consiglio ha concordato che stava esprimendo un parere sulla <strong>fattibilità e sul rischio</strong> — fattibilità commerciale, rischio di annullamento e di incendi boschivi, rischio relativo ai permessi — non una preferenza personale. Diversi membri hanno detto che parteciperebbero qualunque sia la settimana vincente. Nella rosa non è indicata una settimana preferita dal consiglio; l’obiettivo è concentrare il voto su settimane fattibili, non orientarlo.</p>
+<h3>Riepilogo</h3>
+<div class="table-wrap">
+<table class="action-table">
+<thead>
+<tr><th>Settimana</th><th>Victor P</th><th>Chris</th><th>Pablo V</th><th>Daniel T</th><th>A favore / contro</th></tr>
+</thead>
+<tbody>
+<tr><td>31 mag – 6 giu</td><td class="against">Contro</td><td class="against">Contro</td><td class="for">A favore</td><td class="against">Contro</td><td class="tally">1 / 3</td></tr>
+<tr><td>7 – 13 giu</td><td class="against">Contro</td><td class="for">A favore</td><td class="for">A favore</td><td class="for">A favore</td><td class="tally">3 / 1</td></tr>
+<tr><td>14 – 20 giu</td><td class="against">Contro</td><td class="against">Tendenzialmente contro</td><td class="against">Contro</td><td class="against">Contro</td><td class="tally">0 / 4</td></tr>
+<tr><td>5 – 11 lug (attuale)</td><td class="against">Contro</td><td class="against">Contro</td><td class="against">Contro</td><td class="against">Contro</td><td class="tally">0 / 4</td></tr>
+<tr><td>6 – 12 set</td><td class="against">Contro</td><td class="against">Contro</td><td class="against">Contro</td><td class="for">Tendenzialmente a favore</td><td class="tally">1 / 3</td></tr>
+<tr><td>13 – 19 set</td><td class="for">A favore</td><td class="for">A favore</td><td class="for">A favore</td><td class="for">A favore</td><td class="tally">4 / 0</td></tr>
+<tr><td>20 – 26 set</td><td class="for">A favore</td><td class="for">A favore</td><td class="for">A favore</td><td class="for">A favore</td><td class="tally">4 / 0</td></tr>
+<tr><td>27 set – 3 ott</td><td class="for">A favore</td><td class="for">A favore</td><td class="for">A favore (con riserve)</td><td class="for">A favore (con riserve)</td><td class="tally">4 / 0</td></tr>
+</tbody>
+</table>
+</div>
+<p>Si stanno raccogliendo le posizioni dei consiglieri non presenti, che saranno aggiunte al materiale per la votazione.</p>
+<h3>Ragionamenti, settimana per settimana</h3>
+<h4>31 maggio – 6 giugno</h4>
+<ul>
+<li><em>Victor P — contro.</em> Troppo vicina alla fine dell’anno lavorativo per un evento di queste dimensioni, considerando i lunghi periodi di montaggio e smontaggio; rischio di scarsa affluenza; la stagione di nidificazione degli uccelli aggiunge incertezza sui permessi. (Ha applicato lo stesso ragionamento a tutte le settimane di maggio–giugno.)</li>
+<li><em>Chris — contro.</em> Ha concordato con il ragionamento di Victor.</li>
+<li><em>Pablo V — a favore.</em> Nessun rischio specifico che potesse indicare: in questo periodo le persone vanno a Midburn e AfricaBurn; il problema principale sarebbero i conflitti con altri burn (Burning Nest termina il giorno prima), che non riteneva un motivo di esclusione.</li>
+<li><em>Daniel T — contro.</em> Le ragioni di Victor, più la maggiore pioggia, più l’indicazione delle autorità locali secondo cui a fine maggio l’attività dei mezzi agricoli nella zona è intensa.</li>
+</ul>
+<h4>7 – 13 giugno</h4>
+<ul>
+<li><em>Victor P — contro.</em> Meno conflitti con altri burn rispetto alla settimana precedente, ma le stesse preoccupazioni per la nidificazione e la fine dell’anno lavorativo; vede un rischio reale.</li>
+<li><em>Chris — a favore.</em> È la settimana più selezionata nel sondaggio, quindi commercialmente fattibile; nessuno scontro diretto con un altro evento; gli uccelli sono una questione che l’associazione dovrà affrontare comunque.</li>
+<li><em>Pablo V — a favore.</em> Nel sondaggio è anche la settimana migliore per la disponibilità al montaggio e allo smontaggio; una buona combinazione di tutti i fattori, con temperature migliori.</li>
+<li><em>Daniel T — a favore.</em> Il sostegno più alto nel sondaggio; nessun giorno di allerta rossa quest’anno, quindi molto meglio sul piano del rischio incendi; subordinata, come ogni settimana, a INAGA. Era la sua settimana preferita finché la call del 3 settembre non lo ha orientato verso settembre: resta comunque un sì netto.</li>
+</ul>
+<h4>14 – 20 giugno</h4>
+<ul>
+<li><em>Victor P — contro.</em> Come sopra, e ci si avvicina alla stagione del caldo più pericoloso: se non già ora, nelle proiezioni per i prossimi anni.</li>
+<li><em>Chris — tendenzialmente contro.</em> Discretamente fattibile sul piano commerciale, ma ci si avvicina al periodo di rischio incendi; indeciso, con una lieve propensione al no.</li>
+<li><em>Pablo V — contro.</em> Più calda e meno vincente nel sondaggio del 7–13 giugno; se si vogliono concentrare i voti, questa è una settimana da lasciare da parte.</li>
+<li><em>Daniel T — contro.</em> Meno sostegno nel sondaggio e rischio incendi più alto: se quest’anno l’evento fosse caduto in questa settimana, si sarebbe verificata un’evacuazione verso la fine dello smontaggio.</li>
+</ul>
+<h4>5 – 11 luglio (settimana attuale)</h4>
+<ul>
+<li><em>Victor P — contro.</em> Rischio relativo ai permessi decisamente troppo alto e caldo insopportabile da alcuni anni: persone che conosce hanno smesso di venire solo per questo motivo.</li>
+<li><em>Chris — contro.</em></li>
+<li><em>Pablo V — contro.</em></li>
+<li><em>Daniel T — contro.</em> Alta probabilità che per questa settimana il permesso non venga affatto concesso; se concesso, molto probabilmente l’evento sarebbe sospeso, e non si può presumere che la tolleranza mostrata quest’anno dalle autorità si ripeta. Non vale la pena fare tutto questo lavoro per poi trovarsi a evacuare 3.000 persone.</li>
+</ul>
+<h4>6 – 12 settembre</h4>
+<ul>
+<li><em>Victor P — contro.</em> Una buona candidata di per sé, ma molti membri della comunità sarebbero ancora in vacanza o appena rientrati, e pianificare un evento subito dopo quel periodo è scomodo.</li>
+<li><em>Chris — contro.</em> Vicinanza a Burning Man.</li>
+<li><em>Pablo V — contro.</em> Non iniziare lo spostamento con un conflitto con Burning Man; se l’associazione vorrà mai sperimentare questa sovrapposizione, potrà farlo in seguito, una volta compreso l’impatto.</li>
+<li><em>Daniel T — tendenzialmente a favore.</em> È meno preoccupato per la sovrapposizione: la comunità di Nowhere è attenta ai prezzi e solo una piccola minoranza può permettersi Burning Man. Fattibile, con un rischio incendi leggermente maggiore rispetto alla fine di settembre, ma accettabile.</li>
+</ul>
+<h4>13 – 19 settembre</h4>
+<ul>
+<li><em>Victor P — a favore.</em> Nessun rischio evidente di alcun tipo; abbastanza distante dalle vacanze; forte sostegno nel sondaggio.</li>
+<li><em>Chris — a favore.</em> Abbastanza distante da Burning Man; gli piace.</li>
+<li><em>Pablo V — a favore.</em> Fattibile: chi partecipa a entrambi gli eventi può impegnarsi meno in uno dei due; inoltre l’associazione imparerebbe quanto conta la sovrapposizione per gli anni futuri.</li>
+<li><em>Daniel T — a favore.</em> Un sì molto netto, con l’osservazione che le temperature iniziano a scendere e lui personalmente preferirebbe il periodo più caldo; resta comunque accettabile anche inoltrandosi in settembre.</li>
+</ul>
+<h4>20 – 26 settembre</h4>
+<ul>
+<li><em>Victor P — a favore.</em> Stesse ragioni del 13–19 settembre.</li>
+<li><em>Chris — a favore.</em></li>
+<li><em>Pablo V — a favore.</em> (E le notti più fresche permettono di indossare i costumi.)</li>
+<li><em>Daniel T — a favore.</em> Commercialmente fattibile. Ha osservato che tutte le settimane di settembre sembrano comportare un rischio minore legato alla nidificazione, quindi è meno probabile che debbano essere spostate in conseguenza della decisione sul permesso.</li>
+</ul>
+<h4>27 settembre – 3 ottobre</h4>
+<ul>
+<li><em>Victor P — a favore.</em> La sua preferita: abbastanza tardi da consentire alle persone di partecipare ai festival estivi e poi venire a un burn dopo qualche settimana di lavoro; la settimana migliore per il permesso legato agli uccelli; notti più fresche e mattine più lunghe senza caldo.</li>
+<li><em>Chris — a favore.</em> L’unico elemento contrario è che “ottobre” sembra sbagliato, cosa che ha riconosciuto non essere un argomento razionale; chi affronta la pioggia dice che è divertente.</li>
+<li><em>Pablo V — a favore, con riserve.</em> Sembra tardi e i numeri sono leggermente peggiori rispetto alle altre settimane di settembre; ma è fattibile, quindi che decidano i soci: se non la vogliono, la classificheranno più in basso.</li>
+<li><em>Daniel T — a favore, con riserve.</em> Personalmente troppo tardi; come consigliere, è lievemente preoccupato dal fatto che i rispondenti identificati (il nucleo più coinvolto) siano meno disponibili questa settimana rispetto a quelli anonimi. Non è irrealizzabile, solo meno che ideale; e, avendo votato contro una settimana (31 maggio) con <em>più</em> sostegno nel sondaggio, la coerenza suggerisce di lasciare questa scelta agli asociados.</li>
+</ul>
+<h2>6. Presentazione della votazione</h2>
+<ul>
+<li>Victor P ha chiesto annotazioni sulla pagina di votazione — rischio relativo al permesso per gli uccelli, meteo, conflitti con altri eventi — affinché i compromessi siano visibili nel punto in cui le persone votano. Daniel ha confermato che il materiale informativo includerà una sintesi della ricerca sulla nidificazione (valida per entrambi i siti) e i dati meteorologici, nella forma più compatta e visiva possibile: una tabella riassuntiva che contenga quasi tutto, dato che molte persone non cliccheranno oltre, con schede di approfondimento dietro di essa. Ci sta lavorando con Céline S.</li>
+<li>Pablo V ha proposto di presentare ogni settimana con una breve riga sui conflitti e un collegamento a ragionamenti più dettagliati; la posizione di Daniel è che il materiale debba spiegare le settimane <em>proposte</em>, non giustificare la selezione, che è spiegata in questo verbale.</li>
+<li>Pablo V proverà a quantificare il vincolo delle vacanze scolastiche, che ritiene il fattore più frainteso: riguardava circa il 3,5% dei rispondenti al sondaggio, e i soci che lo immaginano molto più ampio potrebbero votare contro qualsiasi cambiamento soltanto su questa base. Stando ai numeri, spostandosi l’associazione guadagna più persone di quante ne perda, e il rischio è inferiore.</li>
+<li>INAGA: ancora nessuna risposta, e nemmeno dal contatto per la conservazione degli uccelli. INAGA può negare un permesso per motivi ambientali; giugno comporta quel rischio, ma anche la settimana attuale, mentre si prevede che settembre vada bene, senza poterlo garantire. Chris ha chiesto che cosa comporterebbe in pratica un rifiuto: nessuno lo sa; potrebbe essere un no secco oppure l’imposizione di condizioni (Daniel ha ipotizzato restrizioni sul rumore o sui veicoli, benché nella zona operino già mezzi agricoli pesanti). La scheda di voto indicherà che il consiglio si adatterà alle circostanze e scorrerà la graduatoria; il sistema può riconteggiare le stesse schede eliminando qualsiasi settimana.</li>
+</ul>
+<h2>7. Prossimi passi e calendario</h2>
+<ol>
+<li><strong>Stasera:</strong> pubblicazione di questo verbale.</li>
+<li><strong>Martedì 8 settembre:</strong> Daniel raccoglie le posizioni a favore o contro sulle otto settimane dei consiglieri non presenti (Peter D si è impegnato a registrare le proprie anche mentre è in viaggio), affinché siano incluse nel materiale per la votazione.</li>
+<li><strong>Questa settimana:</strong> una prova della votazione su Humans, configurata come voto dei consiglieri di tipo asociado; si chiede ai consiglieri di partecipare alla prova e segnalare qualsiasi aspetto poco chiaro o non funzionante, affinché possa essere corretto rapidamente.</li>
+<li><strong>Entro la fine della settimana:</strong> apertura del voto degli asociados.</li>
+<li><strong>17 settembre:</strong> chiusura del voto (data dell’assemblea generale); pubblicazione dei risultati un paio di giorni dopo.</li>
+</ol>
+<h2>8. Giro conclusivo</h2>
+<ul>
+<li>Sono stati scambiati ringraziamenti per il lavoro sul processo relativo alle date — Victor P: “gestito benissimo e comunicato benissimo, coinvolgendo molto la comunità”; Pablo V: “stiamo convergendo su alcune risposte”.</li>
+</ul>
+<h2>Decisioni</h2>
+<ul>
+<li><strong>Rosa per il voto degli asociados definita</strong> dai consiglieri presenti: 31 mag–6 giu, 7–13 giu, 14–20 giu, 5–11 lug (attuale, status quo), 6–12 set, 13–19 set, 20–26 set, 27 set–3 ott.</li>
+<li><strong>Posizioni del consiglio da pubblicare per settimana, a favore o contro, con le ragioni</strong>: come riportato sopra per i quattro membri presenti; seguiranno quelle degli altri.</li>
+<li><strong>Base delle posizioni del consiglio:</strong> fattibilità e rischio, non preferenza. Non è indicata alcuna settimana preferita dal consiglio.</li>
+</ul>
+<h2>Azioni da intraprendere</h2>
+<div class="table-wrap">
+<table class="action-table">
+<thead><tr><th>Azione</th><th>Responsabile</th></tr></thead>
+<tbody>
+<tr><td>Pubblicare questo verbale stasera</td><td>Daniel T</td></tr>
+<tr><td>Raccogliere entro un giorno le posizioni per ciascuna settimana da Peter D, Ward D, Ben D (e ogni altro membro assente)</td><td>Daniel T</td></tr>
+<tr><td>Preparare la votazione su Humans; svolgere una prova con il consiglio; aprire il voto degli asociados entro la fine della settimana</td><td>Daniel T</td></tr>
+<tr><td>Materiale informativo compatto e visivo per la pagina di voto (tabella riassuntiva + schede di approfondimento; sintesi sulla nidificazione; meteo)</td><td>Daniel T, Céline S</td></tr>
+<tr><td>Quantificare il vincolo delle vacanze scolastiche per il materiale informativo</td><td>Pablo V</td></tr>
+<tr><td>Partecipare al voto di prova e segnalare problemi</td><td>Tutti i consiglieri</td></tr>
+<tr><td>Sollecitare il contatto per la conservazione degli uccelli sui criteri di INAGA</td><td>Peter K</td></tr>
+</tbody>
+</table>
+</div>
+<p><em>Verbale preparato a partire dalla registrazione audio e dalla trascrizione completa. Nomi abbreviati.</em></p>
+</div>
+</div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Bei Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesender Vorstand: Daniel T (Präsident), Pablo V (Vizepräsident), Chris, Victor P &middot; Abwesend: Peter D (Schatzmeister, auf Reisen), Ward D, Ben D, Michelle &middot; Beobachter: keine (Daniela, Produktionskoordinatorin, ließ sich entschuldigen)</strong>
+                        Vier der acht Vorstandsmitglieder nahmen teil, sodass kein Quorum vorhanden war. Der einzige inhaltliche Tagesordnungspunkt &mdash; die Festlegung der engeren Auswahl von Wochen für die Abstimmung der Asociados über die Event-Termine 2027 sowie die Dokumentation der Position jedes Vorstandsmitglieds zu jeder Woche &mdash; wurde von den Anwesenden durchgearbeitet. Die übrigen Vorstandsmitglieder werden gebeten, ihre Positionen zu derselben Liste innerhalb eines Tages festzuhalten, damit die Sicht des gesamten Vorstands in das Informationspaket zur Abstimmung aufgenommen werden kann. Ben Ds Tagesordnungspunkt zur Aufnahme von Asociados wurde wegen seiner Abwesenheit vertagt; aus demselben Grund wurde das Protokoll der vorangegangenen Sitzung nicht bestätigt.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Eine kurze Sitzung zu einem einzigen Thema: Der Vorstand las gemeinsam die veröffentlichte Umfrage, diskutierte sich zu einer engeren Auswahl von <strong>acht Wochen</strong> für die Abstimmung der Asociados durch &mdash; drei rund um den Höhepunkt Anfang Juni, drei rund um den Höhepunkt Mitte September, die derzeitige Woche Anfang Juli als Status quo sowie zusätzlich den 6.&ndash;12. September, damit niemand fragen muss, warum diese Woche ausgelassen wurde &mdash;, und ging die Liste anschließend Woche für Woche durch. Dabei erklärte jedes Vorstandsmitglied seine Dafür-/Dagegen-Position im Hinblick auf <em>Tragfähigkeit und Risiken</em> und die Gründe dafür. Dieses Protokoll hält sowohl den Weg zur engeren Auswahl als auch die Begründungen fest, da beides den wesentlichen Beitrag des Vorstands zur Abstimmung bildet.</p>
+
+                        <h2>1. Check-in und Tagesordnung</h2>
+                        <ul>
+                            <li>Der Check-in wurde durchgeführt. Die Tagesordnung wurde bestätigt: ein Punkt, die Event-Termine. Es gab kein Produktionsupdate (Daniela war abwesend); das Protokoll der vorangegangenen Sitzung wurde nicht bestätigt (Ben war abwesend).</li>
+                        </ul>
+
+                        <h2>2. Worüber der Vorstand entschied und warum</h2>
+                        <ul>
+                            <li>Nach dem <a href="2026-09-03-community.html">Community-Call vom 3. September</a> hatte der mittlere der drei dort vorgestellten Ansätze die breiteste Unterstützung: <strong>Der Vorstand trifft eine engere Vorauswahl von Wochen, und die Asociados wählen unter ihnen</strong> in einer Rangfolgeabstimmung &mdash; statt entweder über jede in der Umfrage abgefragte Woche abzustimmen (die Erfahrung mit „26 Optionen“ bei der Abstimmung über den Event-Namen) oder die Entscheidung allein dem Vorstand zu überlassen.</li>
+                            <li>Offen blieb nach dem Call, wie groß die engere Auswahl sein sollte (fünf oder sieben?) und ob die derzeitige Woche Anfang Juli in dieser Zahl enthalten ist oder zusätzlich hinzukommt.</li>
+                            <li>Der Vorstand verpflichtete sich außerdem, als Teil des Informationspakets zu veröffentlichen, <strong>wie jedes Vorstandsmitglied zu jeder Woche der engeren Auswahl abstimmt</strong>. Daniel schlug vor, dies als Dafür-/Dagegen-Position pro Woche statt als Rangfolge festzuhalten: Bei sieben oder acht Abstimmenden hat eine Rangfolge wenig Aussagekraft, während „zwei Vorstandsmitglieder unterstützen diese Woche, alle acht unterstützen jene“ für die Mitglieder nützlich ist &mdash; auch dort, wo der Vorstand eine Woche <em>nicht</em> für eine gute Idee hält.</li>
+                        </ul>
+
+                        <h2>3. Wie die engere Auswahl zustande kam</h2>
+                        <ol>
+                            <li><strong>Die Umfrage lesen.</strong> Daniel ging die veröffentlichten Umfrageergebnisse durch (siehe die <a href="../event-dates-2027-survey-results.html">Seite mit den Umfrageergebnissen</a>). Es gab zwei deutliche Höhepunkte der Verfügbarkeit: <strong>Anfang Juni</strong>, mit dem Schwerpunkt auf dem 7.&ndash;13. Juni (67% aller Befragten konnten kommen; 73% der identifizierten Befragten), und <strong>Mitte September</strong>, mit dem Schwerpunkt auf dem 13.&ndash;19. September (62%; 61% der identifizierten und 63% der anonymen Befragten). Das Interesse fällt im Mai, Ende Juni und besonders deutlich Anfang Juli ab (5.&ndash;11. Juli: insgesamt 47%, unter den anonymen Befragten 36% &mdash; Daniels Lesart war, dass die identifizierten Befragten den engagierten Kern bilden, der „unabhängig vom Datum kommen wird“, wie es in der Umfrage formuliert war), und nimmt in Richtung Oktober erneut ab. Sein Ausgangsvorschlag lautete: <strong>drei Wochen rund um jeden Höhepunkt plus die derzeitige Woche</strong> &mdash; sechs plus eins &mdash; und keine Wochen aus dem Mai, von Ende Juni oder aus dem Oktober, wo das Interesse der Community sichtbar geringer ist.</li>
+                            <li><strong>Eine Alternative: alles auflisten und Favoriten markieren.</strong> Pablo V fragte, ob die Absicht sei, auf eine engere Auswahl zu <em>filtern</em> oder alle Wochen aufzulisten und die Favoriten des Vorstands zu markieren &mdash; seiner Erinnerung nach wollten die Menschen beim Community-Call die Meinung des Vorstands sehen, nicht unbedingt einen eingeschränkten Stimmzettel. Sein Entwurf sah alle Wochen auf dem Stimmzettel vor, wobei vier oder fünf als Favoriten des Vorstands markiert würden (zwei im Juni, zwei im September) und die derzeitige Woche als „derzeitig“ statt als „Favorit“, damit weiterhin eine Präferenz gegen eine Änderung ausgedrückt werden kann. Seiner Analyse zufolge würden fünf Wochen (die beiden Höhepunkte plus die derzeitige Woche) bereits etwa 94% der gewichteten Befragten abdecken. Daniel erinnerte sich an den Call so, dass die Menschen zur Vorauswahl tendiert hätten und niemand darum gebeten habe, über alles abzustimmen; Pablo akzeptierte dies und merkte an, dass bei einer Vorauswahl sieben gegenüber fünf nur einen geringen Zusatznutzen bieten.</li>
+                            <li><strong>Können Mitglieder während der Abstimmung eine Woche hinzufügen?</strong> Chris fragte, ob jemand einen Antrag stellen könne, eine Woche hinzuzufügen. Nein: Sobald eine Abstimmung auf Humans eröffnet ist, handelt es sich um ein festes Paket &mdash; keine Änderungen, keine zusätzlichen Optionen &mdash;, und eine spät hinzugefügte Woche wäre früheren Abstimmenden unbekannt und würde dadurch zwangsläufig verlieren. Daniels Ansicht, die Victor P teilte (man wählt unter den aufgestellten Kandidaten; man fügt an der Wahlurne keinen hinzu), war, dass die vergangenen Wochen mit Konsultationen, Calls und Zusammenfassungen die Phase <em>waren</em>, in der Optionen eingebracht werden konnten. Chris akzeptierte dies für die Terminabstimmung und merkte an, dass der Verein bei anderen Arten von Abstimmungen irgendwann einen Weg brauchen werde, über den Mitglieder Vorschläge einbringen können.</li>
+                            <li><strong>Wie viele?</strong> Unter der Voraussetzung einer Vorauswahl bevorzugte Chris mehr als vier Optionen; Victor P und Daniel legten sich beide auf ungefähr sieben fest. Daniel wies darauf hin, dass die Mitglieder anders als bei der Abstimmung über den Event-Namen nicht jede Option in eine Rangfolge bringen müssen &mdash; nicht eingestufte Wochen gelten gemeinsam als Letztplatzierte &mdash;, sodass eine etwas längere Liste keine Belastung darstellt.</li>
+                            <li><strong>Ausgewogenheit zwischen den beiden Höhepunkten.</strong> Daniel wollte in jedem Block die <em>gleiche Anzahl</em> von Wochen. Ranked Pairs kann mit der Aufteilung von Stimmen umgehen (drei Septemberwochen gegenüber einer Juniwoche würden September nicht benachteiligen), aber eine unausgewogene Liste würde dennoch unfair wirken. Victor Ps eigene Analyse anhand eines früheren Datenstands hatte Mai plus zwei Juniwochen plus zwei Septemberwochen ergeben, was seiner Ansicht nach die Liste in Richtung früherer Termine verzerrte; er stimmte einem Austausch zugunsten der Ausgewogenheit zu.</li>
+                            <li><strong>Welche Wochen genau?</strong> Rund um den Juni-Höhepunkt standen für den dritten Platz der <strong>24.&ndash;30. Mai</strong> und der <strong>14.&ndash;20. Juni</strong> zur Wahl &mdash; beide mit geringerem Interesse (55% und 56%). Mai wurde gestrichen: geringeres Interesse, mehr Regen und der Hinweis der örtlichen Behörden, dass Ende Mai in der Gegend eine intensive Einsatzzeit für landwirtschaftliche Maschinen ist. Rund um den September-Höhepunkt zeigte der <strong>6.&ndash;12. September</strong> einen Rückgang (56%), den Daniel auf die Burning-Man-Woche zurückführte; Chris sagte, er würde aus diesem Grund dagegen stimmen, sodass stattdessen der <strong>27. September&ndash;3. Oktober</strong> als dritte Septemberwoche aufgenommen wurde &mdash; Pablo zufolge kostet es nichts, sie aufzunehmen, und sie würde bei mangelnder Beliebtheit einfach niedriger eingestuft. Victor P fragte nach der Überschneidung im Juni mit Cr&egrave;me Br&ucirc;l&eacute;e: Olivier weiß davon und hat nicht vorgeschlagen, dass jenes Event in den Juli wechseln würde; Burning Nest hat bestätigt, dass es an die Genehmigung für seinen Veranstaltungsort gebunden ist und nicht verschoben werden kann. Daniel ergänzte, dass die frühen Termine ohnehin in die arbeitsintensivste Planungszeit anderer Burns fallen (die Fördermittel- und Placement-Verfahren von Borderland liegen im April&ndash;Mai), was die Camp-Leads belastet.</li>
+                            <li><strong>Aus sieben werden acht.</strong> Als die Liste sieben Wochen umfasste (31. Mai, 7. Juni, 14. Juni, 5. Juli, 13., 20., 27. September), schlug Victor P vor, den <strong>6.&ndash;12. September</strong> als achte Woche wieder hinzuzufügen, um der Frage „Warum habt ihr diese ausgelassen?“ zuvorzukommen &mdash; der Vorstand könne dagegen stimmen und erklären, warum. Daniel und Pablo stimmten zu.</li>
+                        </ol>
+
+                        <h2>4. Die engere Auswahl für die Abstimmung der Asociados</h2>
+                        <div class="shortlist">
+                            <ol>
+                                <li><strong>31. Mai &ndash; 6. Juni</strong> &mdash; Anfang Juni</li>
+                                <li><strong>7. &ndash; 13. Juni</strong> &mdash; Anfang Juni (Höhepunkt der Umfrage)</li>
+                                <li><strong>14. &ndash; 20. Juni</strong> &mdash; Anfang Juni</li>
+                                <li><strong>5. &ndash; 11. Juli</strong> &mdash; derzeitige Woche (Status quo)</li>
+                                <li><strong>6. &ndash; 12. September</strong> &mdash; Mitte September</li>
+                                <li><strong>13. &ndash; 19. September</strong> &mdash; Mitte September (Höhepunkt der Umfrage)</li>
+                                <li><strong>20. &ndash; 26. September</strong> &mdash; Mitte September</li>
+                                <li><strong>27. September &ndash; 3. Oktober</strong> &mdash; Mitte September</li>
+                            </ol>
+                        </div>
+                        <ul>
+                            <li>Die derzeitige Woche steht als Status quo auf dem Stimmzettel, damit Mitglieder eine Präferenz gegen eine Änderung ausdrücken können; sie ist keine Empfehlung des Vorstands. Daniel sagte, als Vorstandsmitglied wäre er dagegen, das Event in einer der <em>nicht</em> in die engere Auswahl aufgenommenen Wochen abzuhalten &mdash; die Umfrage zeigt geringeres Interesse im Mai und Oktober, und beide ausgewählten Terminblöcke bieten plausible Lösungen für die Probleme hinsichtlich des Wohlergehens und möglicher Absagen bei den diesjährigen Terminen.</li>
+                            <li>Jede Woche bleibt von der Genehmigungsentscheidung der INAGA zur Vogelbrut abhängig, die Monate dauern kann; auf der Abstimmungsseite wird stehen, dass der Vorstand sich den Umständen anpassen und die Liste der Reihe nach durchgehen wird, und das Abstimmungssystem kann dieselben Stimmzettel erneut auszählen, wobei jede beliebige Woche entfernt werden kann.</li>
+                        </ul>
+
+                        <h2>5. Positionen der Vorstandsmitglieder zu jeder Woche</h2>
+                        <p><strong>Grundlage der Positionen:</strong> Der Vorstand war sich einig, dass er eine Einschätzung zu <strong>Tragfähigkeit und Risiken</strong> abgibt &mdash; wirtschaftliche Tragfähigkeit, Absage- und Waldbrandrisiko, Genehmigungsrisiko &mdash; und keine persönliche Präferenz. Mehrere Mitglieder sagten, sie würden unabhängig davon teilnehmen, welche Woche gewinnt. In der engeren Auswahl wird keine vom Vorstand bevorzugte Woche gekennzeichnet; das Ziel ist, die Abstimmung auf tragfähige Wochen zu konzentrieren, nicht sie zu lenken.</p>
+
+                        <h3>Zusammenfassung</h3>
+                        <div class="table-wrap">
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Woche</th><th>Victor P</th><th>Chris</th><th>Pablo V</th><th>Daniel T</th><th>Dafür / dagegen</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>31. Mai &ndash; 6. Juni</td><td class="against">Dagegen</td><td class="against">Dagegen</td><td class="for">Dafür</td><td class="against">Dagegen</td><td class="tally">1 / 3</td></tr>
+                                <tr><td>7. &ndash; 13. Juni</td><td class="against">Dagegen</td><td class="for">Dafür</td><td class="for">Dafür</td><td class="for">Dafür</td><td class="tally">3 / 1</td></tr>
+                                <tr><td>14. &ndash; 20. Juni</td><td class="against">Dagegen</td><td class="against">Dagegen (tendenziell)</td><td class="against">Dagegen</td><td class="against">Dagegen</td><td class="tally">0 / 4</td></tr>
+                                <tr><td>5. &ndash; 11. Juli (derzeitig)</td><td class="against">Dagegen</td><td class="against">Dagegen</td><td class="against">Dagegen</td><td class="against">Dagegen</td><td class="tally">0 / 4</td></tr>
+                                <tr><td>6. &ndash; 12. Sept.</td><td class="against">Dagegen</td><td class="against">Dagegen</td><td class="against">Dagegen</td><td class="for">Dafür (vorläufig)</td><td class="tally">1 / 3</td></tr>
+                                <tr><td>13. &ndash; 19. Sept.</td><td class="for">Dafür</td><td class="for">Dafür</td><td class="for">Dafür</td><td class="for">Dafür</td><td class="tally">4 / 0</td></tr>
+                                <tr><td>20. &ndash; 26. Sept.</td><td class="for">Dafür</td><td class="for">Dafür</td><td class="for">Dafür</td><td class="for">Dafür</td><td class="tally">4 / 0</td></tr>
+                                <tr><td>27. Sept. &ndash; 3. Okt.</td><td class="for">Dafür</td><td class="for">Dafür</td><td class="for">Dafür (mit Vorbehalten)</td><td class="for">Dafür (mit Vorbehalten)</td><td class="tally">4 / 0</td></tr>
+                            </tbody>
+                        </table>
+                        </div>
+                        <p>Die Positionen der nicht anwesenden Vorstandsmitglieder werden eingeholt und dem Informationspaket zur Abstimmung hinzugefügt.</p>
+
+                        <h3>Begründungen, Woche für Woche</h3>
+
+                        <h4>31. Mai &ndash; 6. Juni</h4>
+                        <ul>
+                            <li><em>Victor P &mdash; dagegen.</em> Angesichts des langen Auf- und Abbaus liegt der Termin für ein Event dieser Größe zu nahe am Ende des Arbeitsjahres; es besteht das Risiko einer geringen Teilnahme, und die Vogelbrutzeit bringt zusätzliche Unsicherheit bei der Genehmigung mit sich. (Er wandte dieselbe Begründung auf alle Wochen im Mai&ndash;Juni an.)</li>
+                            <li><em>Chris &mdash; dagegen.</em> Er stimmte Victors Begründung zu.</li>
+                            <li><em>Pablo V &mdash; dafür.</em> Er konnte kein konkretes Risiko benennen: Menschen reisen in diesem Zeitraum zu Midburn und AfricaBurn; das Hauptproblem wären Überschneidungen mit anderen Burns (Burning Nest endet am Tag zuvor), was er nicht als Ausschlussgrund betrachtete.</li>
+                            <li><em>Daniel T &mdash; dagegen.</em> Er teilte Victors Gründe; hinzu kommen mehr Regen und der Hinweis der örtlichen Behörden, dass Ende Mai in der Gegend eine intensive Einsatzzeit für landwirtschaftliche Maschinen ist.</li>
+                        </ul>
+
+                        <h4>7. &ndash; 13. Juni</h4>
+                        <ul>
+                            <li><em>Victor P &mdash; dagegen.</em> Es gibt weniger Überschneidungen mit anderen Burns als in der Vorwoche, aber dieselben Bedenken hinsichtlich der Vogelbrut und des Endes des Arbeitsjahres; er sieht ein echtes Risiko.</li>
+                            <li><em>Chris &mdash; dafür.</em> Es ist die in der Umfrage am häufigsten ausgewählte Woche und damit wirtschaftlich tragfähig; es gibt keine direkte Überschneidung mit einem anderen Event, und mit den Vögeln wird sich der Verein ohnehin auseinandersetzen müssen.</li>
+                            <li><em>Pablo V &mdash; dafür.</em> Auch hinsichtlich der Verfügbarkeit für Auf- und Abbau ist dies die beste Woche der Umfrage; sie bietet eine gute Kombination aller Faktoren bei besseren Temperaturen.</li>
+                            <li><em>Daniel T &mdash; dafür.</em> Die Woche hat die höchste Unterstützung in der Umfrage; in diesem Jahr gab es keine Tage mit roter Alarmstufe, sodass sie beim Brandrisiko deutlich besser abschneidet; wie jede Woche steht sie unter dem Vorbehalt der INAGA. Dies war seine eigene bevorzugte Woche gewesen, bis ihn der Call vom 3. September stärker in Richtung September bewegte &mdash; weiterhin ein klares Ja.</li>
+                        </ul>
+
+                        <h4>14. &ndash; 20. Juni</h4>
+                        <ul>
+                            <li><em>Victor P &mdash; dagegen.</em> Es gelten die oben genannten Gründe, und die Woche rückt in die gefährlichere Hitzeperiode hinein &mdash; wenn nicht schon jetzt, dann in den Prognosen für die kommenden Jahre.</li>
+                            <li><em>Chris &mdash; tendenziell dagegen.</em> Die Woche ist wirtschaftlich durchaus tragfähig, rückt aber näher an die Zeit mit Brandrisiko heran; er ist unentschieden, mit einer leichten Tendenz dagegen.</li>
+                            <li><em>Pablo V &mdash; dagegen.</em> Die Woche ist heißer und schneidet in der Umfrage weniger gut ab als der 7.&ndash;13. Juni; wenn die Stimmen konzentriert werden sollen, ist dies eine Woche, auf die man verzichten sollte.</li>
+                            <li><em>Daniel T &mdash; dagegen.</em> Die Woche hat geringere Unterstützung in der Umfrage und ein höheres Brandrisiko: Hätte das Event dieses Jahr in dieser Woche stattgefunden, hätte es gegen Ende des Abbaus eine Evakuierung gegeben.</li>
+                        </ul>
+
+                        <h4>5. &ndash; 11. Juli (derzeitige Woche)</h4>
+                        <ul>
+                            <li><em>Victor P &mdash; dagegen.</em> Das Genehmigungsrisiko ist viel zu hoch, und die Hitze ist seit einigen Jahren unerträglich &mdash; Menschen, die er kennt, kommen allein aus diesem Grund nicht mehr.</li>
+                            <li><em>Chris &mdash; dagegen.</em></li>
+                            <li><em>Pablo V &mdash; dagegen.</em></li>
+                            <li><em>Daniel T &mdash; dagegen.</em> Es besteht eine hohe Wahrscheinlichkeit, dass für diese Woche überhaupt keine Genehmigung erteilt würde; falls sie erteilt würde, würde das Event sehr wahrscheinlich ausgesetzt, und es kann nicht davon ausgegangen werden, dass sich die diesjährige Nachsicht der Behörden wiederholt. Der Aufwand lohnt sich nicht, wenn am Ende die Evakuierung von 3.000 Menschen droht.</li>
+                        </ul>
+
+                        <h4>6. &ndash; 12. September</h4>
+                        <ul>
+                            <li><em>Victor P &mdash; dagegen.</em> An sich ist dies ein guter Kandidat, aber viele Community-Mitglieder wären noch im Urlaub oder gerade erst zurück, und ein Event unmittelbar nach diesem Zeitraum zu planen, ist ungünstig.</li>
+                            <li><em>Chris &mdash; dagegen.</em> Der Grund ist die zeitliche Nähe zu Burning Man.</li>
+                            <li><em>Pablo V &mdash; dagegen.</em> Die Terminverlegung sollte nicht mit einer Überschneidung mit Burning Man beginnen; wenn der Verein diese Überschneidung irgendwann ausprobieren möchte, kann er dies später tun, sobald die Auswirkungen verstanden sind.</li>
+                            <li><em>Daniel T &mdash; vorläufig dafür.</em> Er macht sich weniger Sorgen über die Überschneidung: Die Community von Nowhere ist preisbewusst, und nur eine kleine Minderheit kann sich Burning Man leisten. Die Woche ist tragfähig; sie birgt etwas mehr Brandrisiko als spätere Septembertermine, aber in akzeptablem Maß.</li>
+                        </ul>
+
+                        <h4>13. &ndash; 19. September</h4>
+                        <ul>
+                            <li><em>Victor P &mdash; dafür.</em> Es gibt kein erkennbares Risiko irgendeiner Art; der Abstand zur Urlaubszeit ist groß genug, und die Woche hat hohe Unterstützung in der Umfrage.</li>
+                            <li><em>Chris &mdash; dafür.</em> Der Abstand zu Burning Man ist groß genug; ihm gefällt die Woche.</li>
+                            <li><em>Pablo V &mdash; dafür.</em> Es ist machbar &mdash; Menschen, die an beiden Events teilnehmen, können bei einem davon weniger aufwendig mitmachen &mdash;, und der Verein würde für künftige Jahre lernen, wie stark die Überschneidung ins Gewicht fällt.</li>
+                            <li><em>Daniel T &mdash; dafür.</em> Er spricht ein sehr klares Ja aus, mit dem Hinweis, dass die Temperaturen zu sinken beginnen und er persönlich das wärmere Ende bevorzugen würde; dennoch ist es auch weit in den September hinein noch in Ordnung.</li>
+                        </ul>
+
+                        <h4>20. &ndash; 26. September</h4>
+                        <ul>
+                            <li><em>Victor P &mdash; dafür.</em> Es gelten dieselben Gründe wie für den 13.&ndash;19. September.</li>
+                            <li><em>Chris &mdash; dafür.</em></li>
+                            <li><em>Pablo V &mdash; dafür.</em> (Und kühlere Nächte bedeuten, dass man die Outfits tragen kann.)</li>
+                            <li><em>Daniel T &mdash; dafür.</em> Die Woche ist wirtschaftlich tragfähig. Er merkte an, dass alle Septemberwochen offenbar ein geringeres Risiko hinsichtlich der Vogelbrut aufweisen, sodass sie infolge der Genehmigungsentscheidung mit geringerer Wahrscheinlichkeit verschoben werden müssten.</li>
+                        </ul>
+
+                        <h4>27. September &ndash; 3. Oktober</h4>
+                        <ul>
+                            <li><em>Victor P &mdash; dafür.</em> Dies ist sein Favorit: spät genug, dass die Menschen ihre Sommerfestivals besuchen und nach einigen Arbeitswochen zu einem Burn kommen können; es ist die beste Woche für die Genehmigung hinsichtlich der Vögel, mit kühleren Nächten und längeren Vormittagen ohne Hitze.</li>
+                            <li><em>Chris &mdash; dafür.</em> Das Einzige, was dagegen spricht, ist, dass sich „Oktober“ falsch anfühlt, was er ausdrücklich nicht als rationales Argument ansah; Menschen, die damit umgehen, sagen, dass Regen Spaß macht.</li>
+                            <li><em>Pablo V &mdash; dafür, mit Vorbehalten.</em> Es fühlt sich spät an, und die Zahlen sind etwas schlechter als bei den anderen Septemberwochen; aber die Woche ist tragfähig, also sollen die Mitglieder entscheiden &mdash; wenn sie sie nicht wollen, wird sie niedriger eingestuft.</li>
+                            <li><em>Daniel T &mdash; dafür, mit Vorbehalten.</em> Persönlich ist es ihm zu spät; als Vorstandsmitglied ist er leicht besorgt, dass identifizierte Befragte (die stärker zum Kern gehörenden Mitglieder) in dieser Woche weniger verfügbar sind als anonyme. Die Woche ist nicht untragfähig &mdash; nur weniger als ideal &mdash;, und nachdem er gegen eine Woche (31. Mai) gestimmt hat, die <em>mehr</em> Unterstützung in der Umfrage hatte, spricht die Konsequenz dafür, dies den Asociados zu überlassen.</li>
+                        </ul>
+
+                        <h2>6. Darstellung der Abstimmung</h2>
+                        <ul>
+                            <li>Victor P bat um Anmerkungen auf der Abstimmungsseite &mdash; Genehmigungsrisiko hinsichtlich der Vögel, Wetter, Überschneidungen mit anderen Events &mdash;, damit die Abwägungen dort sichtbar sind, wo die Menschen abstimmen. Daniel bestätigte, dass das Informationspaket eine Zusammenfassung der Recherchen zur Vogelbrut (die für beide Gelände gilt) und der Wetterdaten enthalten wird, so kompakt und visuell wie möglich: eine Übersichtstabelle, die nahezu alles enthält, da viele Menschen nicht weiterklicken werden, und dahinter Registerkarten mit Details. Er arbeitet daran mit C&eacute;line S.</li>
+                            <li>Pablo V schlug vor, jede Woche mit einer kurzen Zeile zu Überschneidungen und einem Link zu ausführlicheren Begründungen darzustellen; Daniels Position ist, dass das Paket die <em>angebotenen</em> Wochen erklären und nicht die Auswahl rechtfertigen sollte &mdash; die Auswahl wird in diesem Protokoll erläutert.</li>
+                            <li>Pablo V wird versuchen, die Einschränkung durch Schulferien zu quantifizieren, die er für den am meisten missverstandenen Faktor hält: Sie betraf rund 3,5% der Befragten, und Mitglieder, die ihren Umfang für wesentlich größer halten, könnten allein deshalb gegen jede Änderung stimmen. Den Zahlen zufolge gewinnt der Verein durch die Verlegung mehr Menschen hinzu, als er verliert, und das Risiko ist geringer.</li>
+                            <li>INAGA: Es gibt weiterhin keine Antwort und auch noch nichts von der Kontaktperson für Vogelschutz. INAGA kann eine Genehmigung aus Umweltgründen verweigern; der Juni birgt dieses Risiko, aber die derzeitige Woche ebenfalls, und für September wird mit einer unproblematischen Genehmigung gerechnet, ohne dass sie garantiert ist. Chris fragte, was eine Ablehnung in der Praxis bedeuten würde &mdash; niemand weiß es; es könnte ein klares Nein oder Auflagen geben (Daniel spekulierte über Lärm- oder Fahrzeugbeschränkungen, obwohl in der Gegend bereits schwere landwirtschaftliche Fahrzeuge eingesetzt werden). Auf dem Stimmzettel wird stehen, dass sich der Vorstand den Umständen anpassen und die Liste der Reihe nach durchgehen wird; das Abstimmungssystem kann dieselben Stimmzettel erneut auszählen, wobei jede beliebige Woche entfernt werden kann.</li>
+                        </ul>
+
+                        <h2>7. Nächste Schritte und Zeitplan</h2>
+                        <ol>
+                            <li><strong>Heute Abend:</strong> Dieses Protokoll wird veröffentlicht.</li>
+                            <li><strong>Dienstag, 8. September:</strong> Daniel holt von den nicht anwesenden Vorstandsmitgliedern die Dafür-/Dagegen-Positionen zu den acht Wochen ein (Peter D hat zugesagt, seine Positionen auch auf Reisen festzuhalten), damit sie in das Informationspaket zur Abstimmung aufgenommen werden können.</li>
+                            <li><strong>Diese Woche:</strong> Es findet ein Probelauf der Abstimmung auf Humans statt, eingerichtet als Abstimmung für Vorstandsmitglieder vom Typ einer Asociado-Abstimmung &mdash; die Vorstandsmitglieder werden gebeten, am Probelauf teilzunehmen und alles Unklare oder Fehlerhafte zu melden, damit es schnell behoben werden kann.</li>
+                            <li><strong>Bis Ende der Woche:</strong> Die Abstimmung der Asociados wird eröffnet.</li>
+                            <li><strong>17. September:</strong> Die Abstimmung schließt (Datum der Generalversammlung); die Ergebnisse werden ein paar Tage später veröffentlicht.</li>
+                        </ol>
+
+                        <h2>8. Abschlussrunde</h2>
+                        <ul>
+                            <li>Es wurde gegenseitig für die Arbeit am Verfahren zur Terminfindung gedankt &mdash; Victor P: „super gut gehandhabt und super gut kommuniziert, unter starker Einbeziehung der Community“; Pablo V: „Wir nähern uns einigen Antworten an“.</li>
+                        </ul>
+
+                        <h2>Entscheidungen</h2>
+                        <ul>
+                            <li><strong>Die engere Auswahl für die Abstimmung der Asociados wurde festgelegt</strong>, und zwar von den anwesenden Vorstandsmitgliedern: 31. Mai&ndash;6. Juni, 7.&ndash;13. Juni, 14.&ndash;20. Juni, 5.&ndash;11. Juli (derzeitig, Status quo), 6.&ndash;12. Sept., 13.&ndash;19. Sept., 20.&ndash;26. Sept., 27. Sept.&ndash;3. Okt.</li>
+                            <li><strong>Die Positionen des Vorstands werden für jede Woche als Dafür/Dagegen mit Begründungen veröffentlicht</strong> &mdash; wie oben für die vier anwesenden Mitglieder; die übrigen folgen.</li>
+                            <li><strong>Grundlage der Vorstandspositionen:</strong> Maßgeblich sind Tragfähigkeit und Risiken, nicht Präferenzen. Es wird keine vom Vorstand bevorzugte Woche markiert.</li>
+                        </ul>
+
+                        <h2>Aufgaben</h2>
+                        <div class="table-wrap">
+                        <table class="action-table">
+                            <thead><tr><th>Aufgabe</th><th>Verantwortlich</th></tr></thead>
+                            <tbody>
+                                <tr><td>Dieses Protokoll heute Abend veröffentlichen</td><td>Daniel T</td></tr>
+                                <tr><td>Innerhalb eines Tages die Positionen zu jeder Woche von Peter D, Ward D, Ben D (und allen anderen abwesenden Mitgliedern) einholen</td><td>Daniel T</td></tr>
+                                <tr><td>Die Abstimmung auf Humans einrichten; eine Probeabstimmung des Vorstands durchführen; die Abstimmung der Asociados bis Ende der Woche eröffnen</td><td>Daniel T</td></tr>
+                                <tr><td>Ein kompaktes, visuelles Informationspaket für die Abstimmungsseite erstellen (Übersichtstabelle + Detailregisterkarten; Zusammenfassung zur Vogelbrut; Wetter)</td><td>Daniel T, C&eacute;line S</td></tr>
+                                <tr><td>Die Einschränkung durch Schulferien für das Informationspaket quantifizieren</td><td>Pablo V</td></tr>
+                                <tr><td>An der Probeabstimmung teilnehmen und Probleme melden</td><td>Alle Vorstandsmitglieder</td></tr>
+                                <tr><td>Bei der Kontaktperson für Vogelschutz bezüglich der INAGA-Kriterien nachhaken</td><td>Peter K</td></tr>
+                            </tbody>
+                        </table>
+                        </div>
+
+                        <p><em>Das Protokoll wurde anhand der Audioaufzeichnung und des vollständigen Transkripts erstellt. Die Namen wurden abgekürzt.</em></p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -252,5 +1596,17 @@
     <script src="../footer.js"></script>
 
     <script src="../script.js"></script>
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>

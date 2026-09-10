@@ -31,6 +31,12 @@
         .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
         .action-table th { font-weight: 600; }
         .draft-banner { background: #fff3cd; color: #6b4e00; border: 1px solid #ffe08a; padding: 0.75rem 1.25rem; border-radius: 8px; margin-bottom: 1.5rem; font-weight: 500; max-width: 800px; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -49,8 +55,17 @@
                     </div>
                 </div>
 
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
                 <!-- ==================== ENGLISH ==================== -->
                 <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
 
                     <div class="attendees">
                         <strong>Board present: Daniel T (president), Ben D (secretary &mdash; intermittent connection, left partway through), Pablo V, Ward D &middot; Absent: Peter D (treasurer, travelling), Victor P &middot; Observers: Daniela (production coordinator), Ellen K; Anna T joined for the governance item</strong>
@@ -157,6 +172,441 @@
                     </div>
                 </div>
 
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
+
+                    <div class="attendees">
+                        <strong>Junta presente: Daniel T (presidente), Ben D (secretario &mdash; conexión intermitente, se marchó durante la reunión), Pablo V, Ward D &middot; Ausentes: Peter D (tesorero, de viaje), Victor P &middot; Observadoras: Daniela (coordinadora de producción), Ellen K; Anna T se incorporó para el punto sobre gobernanza</strong>
+                        No hubo quórum; no se realizaron votaciones formales. Todos los puntos que figuran a continuación fueron actualizaciones o debates. La reunión transcurrió sin su estructura de facilitación habitual (sin ronda inicial); el presidente asumió la responsabilidad por la dispersión resultante, y la facilitación normal se reanudará la próxima semana.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Una reunión de finales de agosto más larga y menos estructurada, sin quórum, pero con contenido sustancial: los primeros grupos de trabajo registrados bajo el nuevo marco, una actualización sobre el cierre de producción y finanzas, la planificación del ALM, un amplio debate sobre en qué debería convertirse el &ldquo;departamento&rdquo; de gobernanza, el asesoramiento jurídico recibido sobre elecciones y quórum, y el sistema de votación propuesto para la decisión sobre las fechas del evento.</p>
+
+                        <h2>1. Grupos de trabajo: primeras inscripciones</h2>
+                        <ul>
+                            <li>Se han tramitado las primeras solicitudes de grupos de trabajo bajo la resolución aprobada recientemente. Según la resolución, el secretario registra las solicitudes directamente y solo las remite a la junta cuando se aplica uno de los motivos específicos de la resolución, por lo que no fue necesaria una votación de la junta.</li>
+                            <li>Se felicitó a quienes coordinan los grupos de trabajo recién inscritos.</li>
+                        </ul>
+
+                        <h2>2. Actualización de producción</h2>
+                        <ul>
+                            <li>Continúa el cierre financiero posterior al evento: conciliación de facturas, cotejo de las transacciones con los presupuestos y preparación de las declaraciones del tercer trimestre para el contable de la asociación (que está de vacaciones durante agosto, como gran parte de España). Se está implantando un sistema de seguimiento por partida doble para que la asociación lleve su propia contabilidad en paralelo a la del contable.</li>
+                            <li>Entre los desembolsos pendientes se incluyen las facturas finales de suministros, las solicitudes de reembolso de viajes y gastos, y las subvenciones artísticas; se están tramitando a medida que llega la documentación.</li>
+                            <li>La junta debatió cuándo informar sobre las finanzas del evento y acordó lo siguiente: <strong>no se publicarán estados financieros hasta que las cifras estén cerradas y el tesorero haya regresado.</strong> El propio tesorero emitirá la actualización financiera. La junta pide a la comunidad un par de semanas más de paciencia.</li>
+                        </ul>
+
+                        <h2>3. Planificación del ALM</h2>
+                        <ul>
+                            <li>El interés en el ALM de este año parece mayor que en años anteriores, algo alentador para una asociación joven.</li>
+                            <li>Actualmente se está confirmando la disponibilidad del lugar previsto y, en paralelo, se están explorando alternativas. Se han preparado opciones presupuestarias para un formato de dos noches (con un grupo más pequeño de montaje y desmontaje antes y después), con una capacidad práctica de unas 50 personas.</li>
+                            <li>La coordinación se realizará a través de un canal específico para coordinadores y responsables, donde se compartirán el plan, las fechas y el presupuesto; una nota pública confirmará que la organización está en marcha y se comunicará una fecha para la decisión.</li>
+                        </ul>
+
+                        <h2>4. Gobernanza: ¿departamento o grupo de trabajo?</h2>
+                        <ul>
+                            <li>Ahora que el marco de grupos de trabajo está en vigor, la junta debatió qué debería ocurrir con el <em>departamento</em> de gobernanza, una estructura heredada de la configuración inicial que actualmente no cuenta con una persona coordinadora activa (la persona asignada se ha retirado debido a nuevos compromisos laborales).</li>
+                            <li>El grupo que se ha estado reuniendo sobre temas de gobernanza pretende constituirse bajo el marco de grupos de trabajo (como &ldquo;reuniones de gobernanza&rdquo;), actuando en parte como semillero: una base de conocimientos sobre gobernanza de la que surjan grupos de trabajo centrados en propuestas concretas.</li>
+                            <li>Puntos planteados durante el debate:
+                                <ul>
+                                    <li>El marco de grupos de trabajo es el único instrumento definido actualmente; un grupo que prevea funcionar a largo plazo puede delimitar su alcance a un año y renovarse (esto ya se contempló cuando se aprobó la resolución).</li>
+                                    <li>Los departamentos aún no están definidos formalmente. Varias personas participantes señalaron como auténtica prioridad, por delante de muchas otras cuestiones, definirlos, incluido cómo se seleccionan quienes coordinan y lideran, sus responsabilidades y la duración de sus mandatos. Se plantearon como motivo de preocupación las prácticas informales actuales de sucesión (traspaso de funciones sin vacantes abiertas), algo que unas definiciones adecuadas corregirían.</li>
+                                    <li>También hay peticiones de la comunidad para que se celebren elecciones a la junta y exista una mayor diversidad en ella; se señaló que resulta difícil elegir bien a más personas para la junta antes de que la comunidad haya definido qué <em>es</em> la junta: qué decisiones toma y cuáles se distribuyen entre coordinadores y grupos de trabajo.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Secuencia propuesta</strong> (Pablo V, que se publicará): (1)&nbsp;grupos de trabajo &mdash; hecho; (2)&nbsp;un grupo de trabajo para definir los departamentos (&ldquo;diseño organizativo&rdquo;); (3)&nbsp;un grupo de trabajo sobre el perfeccionamiento de la junta &mdash; función, tamaño, quórum, puestos escalonados, calendario electoral &mdash; informado por el trabajo de diseño organizativo y las fechas del evento elegidas. Un buen punto para el orden del día del ALM.</li>
+                            <li>Paso práctico (salvo que se planteen objeciones): el canal de gobernanza de Discord pasará de la sección de departamentos a la de grupos de trabajo después de que se publiquen estas actas, con una nota explicativa. La parte relativa al equipo y las herramientas se ordenará más adelante.</li>
+                        </ul>
+
+                        <h2>5. Nuevo terreno</h2>
+                        <ul>
+                            <li>Continúa el trabajo para conseguir un terreno para un futuro evento. Siguiendo el consejo de la asesoría jurídica de la asociación, la junta debatió cómo podría estructurarse un depósito sobre un terreno &mdash; ya fuera firmado directamente por la asociación o como un acuerdo transferible que se le cediera posteriormente &mdash; antes de que concluyera cualquier negociación. No fue necesario tomar ninguna decisión ni se tomó ninguna.</li>
+                            <li>La posición del presidente: la asamblea general puede aprobarlo, pero solo los cargos pueden firmar; y él solo firmaría en nombre de la asociación si hubiera pruebas &mdash; mediante algún tipo de consulta a la comunidad &mdash; de que hacerlo refleja lo que quiere la comunidad. El proceso para esa consulta se diseñará antes de que sea necesaria ninguna firma.</li>
+                        </ul>
+
+                        <h2>6. Contacto con la comunidad &mdash; fechas del evento</h2>
+                        <ul>
+                            <li>Ellen K informó tras ponerse en contacto con todos los barrios acerca de la administración posterior al evento, la votación sobre las fechas del evento y la condición de asociado. La respuesta fue considerable; algunas confusiones sobre la votación y la condición de asociado se aclararon directamente.</li>
+                            <li>Algunas voces de los barrios replantean la cuestión como &ldquo;trasladar el <em>área</em>, mantener las fechas&rdquo;, en lugar de cambiar las fechas. La junta espera que esta perspectiva se plantee en la llamada comunitaria del jueves y anima a quienes deseen un tiempo específico de intervención a inscribirse para un turno.</li>
+                        </ul>
+
+                        <h2>7. Encuesta sobre las fechas del evento: situación</h2>
+                        <ul>
+                            <li>La encuesta ha recibido 771 respuestas hasta el momento. Tras la decisión anterior de la junta, no se publican resultados provisionales mientras la consulta siga abierta, para evitar influir en ella.</li>
+                            <li>Calendario: los resultados principales se compartirán en la llamada comunitaria del jueves; la encuesta seguirá abierta un día más para quien quiera decidir después de escuchar el debate y luego se cerrará.</li>
+                            <li>Se publicarán todos los datos anonimizados de las respuestas para que cualquiera pueda realizar su propio análisis.</li>
+                            <li>Se reconocieron las lecciones aprendidas sobre el diseño de la encuesta: algunas columnas aportaron poca información adicional, y habría sido mejor una estructura más sencilla de puede asistir/no puede asistir. De todo se aprende.</li>
+                        </ul>
+
+                        <h2>8. Sistema de votación para la votación de asociados</h2>
+                        <ul>
+                            <li>Tras investigar algoritmos de votación por orden de preferencia, el presidente propone <strong><a href="../event-dates-2027-voting-method.html">Pares ordenados (Tideman)</a></strong> para la votación sobre las fechas del evento: los votantes ordenan las fechas por preferencia (se permiten posiciones iguales, opciones sin clasificar y el rechazo explícito), y cada par de opciones se compara directamente. El método gestiona los ciclos de preferencias y produce un ganador defendible incluso sin una mayoría de primeras preferencias.</li>
+                            <li>Se ha redactado una página explicativa que se compartirá para recibir comentarios antes de anunciar la votación; al ser determinista, el método es totalmente verificable: se publicarán los datos brutos para que los resultados puedan reproducirse de forma independiente.</li>
+                            <li>Propiedades de integridad del sistema de votación que se está desarrollando: una votación no puede editarse una vez abierta; mientras esté abierta, las pantallas de administración solo muestran estadísticas de participación, nunca resultados; la votación está restringida a asociados; y, una vez cerrada, no puede volver a abrirse. La junta probará el sistema con encuestas de prueba antes de abrirlo a los asociados.</li>
+                            <li>Se explicará con antelación una propiedad contraintuitiva: con los pares ordenados, eliminar una opción puede cambiar cuál de las opciones restantes gana. Esto se tratará en la llamada del jueves.</li>
+                            <li>Sobre la ponderación de las respuestas identificadas frente a las anónimas: la posición de la junta es que no le corresponde decidirlo; los resultados se presentarán completos (combinados y por separado), acompañados de la interpretación de la junta, y la comunidad será libre de interpretar los datos como considere.</li>
+                        </ul>
+
+                        <h2>9. Elecciones y quórum de la junta: asesoramiento jurídico recibido</h2>
+                        <ul>
+                            <li>Los abogados de la asociación han confirmado que las próximas elecciones a la junta <strong>pueden</strong> trasladarse respecto al ciclo estricto de dos años (actualmente enero de 2028), por ejemplo para alinearlas con el curso escolar o con el ciclo del evento; un cambio de unos meses entra dentro de las competencias de la junta, mientras que cambios mayores se someterían a la asamblea general.</li>
+                            <li>Sobre el quórum, los abogados propusieron lo siguiente: el quórum de la junta seguiría siendo la mitad más uno, pero si dos reuniones debidamente convocadas y separadas por al menos 15 días no alcanzaran el quórum, una tercera reunión podría decidir sin él (con la ratificación de la asamblea general como salvaguarda opcional).</li>
+                            <li>Debate: se consideró que la versión de 15 días era demasiado lenta para decisiones reales. Alternativas exploradas: un quórum fijo de cuatro; un quórum satisfecho por los cuatro cargos designados (que en la práctica han sido quienes han asistido con mayor regularidad) <strong>o</strong> por la mitad más uno, lo que se cumpla primero; y la delegación formal: un miembro que no pueda asistir podrá delegar por escrito su puesto para una reunión concreta. Pablo V trasladará una pregunta más afinada a los abogados.</li>
+                            <li><strong>Decisión sobre la secuencia (por consenso de las personas presentes):</strong> la modificación del quórum <em>no</em> se añadirá a la votación de la asamblea general del 17 de septiembre. Esa votación seguirá centrada en las fechas del evento: es la primera votación de la AG de la asociación y debe ser sencilla. Las cuestiones sobre quórum y elecciones vendrán después, a través de la vía de grupos de trabajo descrita anteriormente, con propuestas que se llevarán a una asamblea posterior (por ejemplo, en torno al ALM).</li>
+                        </ul>
+
+                        <h2>10. Transparencia de las reuniones de la junta</h2>
+                        <ul>
+                            <li>Se volvió a debatir la posibilidad de abrir las reuniones de la junta. Puntos planteados: en principio, las reuniones podrían ser abiertas, con personas observadoras que escuchen pero no voten (como han hecho varios otros órganos de la comunidad); los miembros ausentes deberían tener la oportunidad de opinar antes de cambiar los formatos; y la transparencia no es lo mismo que la información sin filtrar: fragmentos sin contexto pueden generar problemas de comunicación en una comunidad grande. Se señaló (de nuevo) que contar con una estructura de comunicación interna es una necesidad real.</li>
+                            <li>El acceso de observadores a los espacios de coordinación de la junta no está definido actualmente; esto también recae en el trabajo de diseño organizativo.</li>
+                        </ul>
+
+                        <h2>11. Próximos pasos</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Acción</th><th>Plazo</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniela</td><td>Confirmar la disponibilidad del lugar del ALM y explorar alternativas; abrir el canal de coordinadores y responsables con el plan, las fechas y el presupuesto; publicar una nota pública que indique que la organización está en marcha</td><td>Esta semana</td></tr>
+                                <tr><td>Daniel T</td><td>Trasladar el canal de gobernanza de Discord a la sección de grupos de trabajo (con una nota explicativa) después de que se publiquen estas actas</td><td>Después de la publicación</td></tr>
+                                <tr><td>Daniel T</td><td>Enviar el recordatorio de la encuesta junto con el anuncio de la llamada del jueves; compartir la explicación del método de votación para recibir comentarios; desplegar el sistema de votación y realizar encuestas de prueba con la junta</td><td>Esta semana</td></tr>
+                                <tr><td>Pablo V</td><td>Publicar la secuencia de gobernanza propuesta; trasladar a los abogados la pregunta más afinada sobre el quórum; ponerse en contacto con miembros de la comunidad interesados en un grupo de trabajo sobre elecciones</td><td>Esta semana</td></tr>
+                                <tr><td>Ellen K</td><td>Animar a las voces de los barrios con una perspectiva sobre las fechas a inscribirse para los turnos de intervención del jueves</td><td>Antes del jueves</td></tr>
+                                <tr><td>Ward D</td><td>Facilitar una próxima reunión de la junta (una vez solucionado el acceso al orden del día desde el móvil)</td><td>Próximas semanas</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Acta elaborada a partir de una grabación.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole prévaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Conseil présent&nbsp;: Daniel T (président), Ben D (secrétaire &mdash; connexion intermittente, parti en cours de réunion), Pablo V, Ward D &middot; Absents&nbsp;: Peter D (trésorier, en voyage), Victor P &middot; Observatrices&nbsp;: Daniela (coordinatrice de production), Ellen K&nbsp;; Anna T a rejoint la réunion pour le point sur la gouvernance</strong>
+                        Le quorum n’était pas atteint&nbsp;; aucun vote formel n’a eu lieu. Tous les points ci-dessous étaient des mises à jour ou des discussions. La réunion s’est déroulée sans sa structure de facilitation habituelle (pas de tour d’ouverture)&nbsp;; le président a assumé la responsabilité de la dispersion qui en a résulté, et la facilitation normale reprendra la semaine prochaine.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Une réunion de fin août plus longue et moins structurée, sans quorum, mais substantielle&nbsp;: les premiers groupes de travail enregistrés dans le nouveau cadre, une mise à jour sur la clôture de la production et des finances, la planification de l’ALM, une discussion de fond sur ce que le «&nbsp;département&nbsp;» de la gouvernance devrait devenir, le retour des conseils juridiques sur les élections et le quorum, et le système de vote proposé pour la décision sur les dates de l’événement.</p>
+
+                        <h2>1. Groupes de travail&nbsp;: premiers enregistrements</h2>
+                        <ul>
+                            <li>Les premières demandes de groupes de travail relevant de la résolution récemment adoptée ont été traitées. En vertu de la résolution, le secrétaire enregistre directement les demandes et ne les transmet au conseil que lorsque l’un des motifs précis prévus par la résolution s’applique&nbsp;; aucun vote du conseil n’était donc nécessaire.</li>
+                            <li>Des félicitations ont été adressées aux personnes qui coordonnent les groupes de travail nouvellement enregistrés.</li>
+                        </ul>
+
+                        <h2>2. Mise à jour de la production</h2>
+                        <ul>
+                            <li>La clôture financière post-événement se poursuit&nbsp;: rapprochement des factures, mise en correspondance des transactions avec les devis et préparation des déclarations du troisième trimestre pour le comptable de l’association (qui est en vacances pendant tout le mois d’août, comme une grande partie de l’Espagne). Un système de suivi en partie double est en cours de mise en place afin que l’association tienne ses propres comptes en parallèle de ceux du comptable.</li>
+                            <li>Les dépenses restantes comprennent les dernières factures de services publics, les demandes de remboursement de frais de voyage et autres dépenses, ainsi que les subventions artistiques&nbsp;; elles sont traitées au fur et à mesure de la réception des justificatifs.</li>
+                            <li>Le conseil a discuté du moment où communiquer sur les finances de l’événement et a convenu de ce qui suit&nbsp;: <strong>aucun état financier ne sera publié avant que les chiffres soient finalisés et que le trésorier soit de retour.</strong> Le trésorier publiera lui-même la mise à jour financière. Le conseil demande à la communauté encore deux semaines de patience.</li>
+                        </ul>
+
+                        <h2>3. Planification de l’ALM</h2>
+                        <ul>
+                            <li>L’intérêt pour l’ALM de cette année semble supérieur à celui des années précédentes, ce qui est encourageant pour une jeune association.</li>
+                            <li>La disponibilité du lieu prévu est en cours de confirmation, tandis que d’autres lieux sont explorés en parallèle. Des options budgétaires ont été préparées pour un format de deux nuits (avec un groupe plus restreint pour le montage et le démontage avant et après), pour une capacité pratique d’environ 50 personnes.</li>
+                            <li>La coordination passera par un canal dédié aux coordinateurs et responsables, où seront communiqués le plan, les dates et le budget&nbsp;; une note publique confirmera que l’organisation est en cours et une date de décision sera annoncée.</li>
+                        </ul>
+
+                        <h2>4. Gouvernance&nbsp;: département ou groupe de travail&nbsp;?</h2>
+                        <ul>
+                            <li>Le cadre des groupes de travail étant désormais en place, le conseil a discuté de l’avenir du <em>département</em> de la gouvernance, une structure héritée de la mise en place initiale qui n’a actuellement plus de coordinateur actif (la personne désignée s’est retirée en raison de nouveaux engagements professionnels).</li>
+                            <li>Le groupe qui se réunit sur les questions de gouvernance entend se constituer dans le cadre des groupes de travail (sous le nom de «&nbsp;réunions de gouvernance&nbsp;»), en servant en partie de pépinière&nbsp;: une base de connaissances en matière de gouvernance qui donne naissance à des groupes de travail ciblés sur des propositions précises.</li>
+                            <li>Points soulevés lors de la discussion&nbsp;:
+                                <ul>
+                                    <li>Le cadre des groupes de travail est le seul instrument défini à l’heure actuelle&nbsp;; un groupe appelé à fonctionner sur le long terme peut définir son périmètre sur un an et le renouveler (cela avait été anticipé lors de l’adoption de la résolution).</li>
+                                    <li>Les départements ne sont pas encore formellement définis. Leur définition &mdash; notamment la manière dont les coordinateurs et responsables sont sélectionnés, leurs responsabilités et la durée de leurs mandats &mdash; a été identifiée par plusieurs participants comme une véritable priorité, avant bien d’autres sujets. Les pratiques informelles actuelles de succession (des rôles transmis sans vacance ouverte) ont été évoquées comme un sujet de préoccupation que des définitions appropriées permettraient de régler.</li>
+                                    <li>La communauté demande également des élections au conseil et davantage de diversité au sein de celui-ci&nbsp;; il a été souligné qu’il est difficile d’élire correctement davantage de personnes au conseil avant que la communauté ait défini ce qu’<em>est</em> le conseil &mdash; quelles décisions il prend et lesquelles sont distribuées aux coordinateurs et aux groupes de travail.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Ordonnancement proposé</strong> (Pablo V, à publier)&nbsp;: (1)&nbsp;groupes de travail &mdash; fait&nbsp;; (2)&nbsp;un groupe de travail pour définir les départements («&nbsp;conception organisationnelle&nbsp;»)&nbsp;; (3)&nbsp;un groupe de travail sur l’amélioration du conseil &mdash; rôle, taille, quorum, sièges renouvelés par roulement, calendrier des élections &mdash; éclairé par le travail de conception organisationnelle et les dates d’événement retenues. Un bon point à inscrire à l’ordre du jour de l’ALM.</li>
+                            <li>Étape pratique (sauf objection)&nbsp;: le canal de gouvernance sur Discord passera de la section des départements à celle des groupes de travail après la publication de ce procès-verbal, avec une note explicative. Le volet équipe/outils sera mis en ordre ultérieurement.</li>
+                        </ul>
+
+                        <h2>5. Nouveau terrain</h2>
+                        <ul>
+                            <li>Le travail visant à obtenir un terrain pour un futur événement se poursuit. Sur les conseils du cabinet juridique de l’association, le conseil a discuté de la manière dont un acompte sur un terrain pourrait être structuré &mdash; soit signé directement par l’association, soit sous la forme d’un accord transférable qui lui serait cédé ultérieurement &mdash; en amont de la conclusion de toute négociation. Aucune décision n’était nécessaire et aucune n’a été prise.</li>
+                            <li>Position du président&nbsp;: l’assemblée générale peut donner son approbation, mais seuls les membres du bureau peuvent signer&nbsp;; et il ne signerait au nom de l’association que s’il existait des éléments démontrant &mdash; par une forme de consultation de la communauté &mdash; que cela correspond à ce que souhaite la communauté. Le processus de cette consultation sera conçu avant qu’une signature soit nécessaire.</li>
+                        </ul>
+
+                        <h2>6. Dialogue avec la communauté &mdash; dates de l’événement</h2>
+                        <ul>
+                            <li>Ellen K a rendu compte de ses contacts avec tous les barrios au sujet de l’administration post-événement, du vote sur les dates de l’événement et du statut d’asociado. La réponse a été forte&nbsp;; certaines confusions concernant le vote et le statut d’asociado ont été dissipées directement.</li>
+                            <li>Certaines voix des barrios reformulent la question ainsi&nbsp;: «&nbsp;déplacer la <em>zone</em>, conserver les dates&nbsp;», plutôt que déplacer les dates. Le conseil s’attend à ce que cette perspective soit exprimée lors du community call de jeudi et encourage toute personne souhaitant disposer d’un temps de parole dédié à s’inscrire sur un créneau.</li>
+                        </ul>
+
+                        <h2>7. Enquête sur les dates de l’événement&nbsp;: état d’avancement</h2>
+                        <ul>
+                            <li>L’enquête a reçu 771 réponses à ce jour. Conformément à la décision antérieure du conseil, les résultats intermédiaires ne sont pas publiés tant que la consultation est ouverte, afin d’éviter de l’influencer.</li>
+                            <li>Calendrier&nbsp;: les principaux résultats seront communiqués lors du community call de jeudi&nbsp;; l’enquête restera ouverte une journée supplémentaire pour toute personne souhaitant décider après avoir entendu la discussion, puis elle sera clôturée.</li>
+                            <li>L’intégralité des données de réponse anonymisées sera publiée afin que chacun puisse effectuer sa propre analyse.</li>
+                            <li>Les enseignements tirés de la conception de l’enquête ont été reconnus&nbsp;: certaines colonnes ont apporté peu d’informations supplémentaires, et une structure plus simple peut venir/ne peut pas venir aurait été préférable. On apprend de ses erreurs.</li>
+                        </ul>
+
+                        <h2>8. Système de vote pour le vote des asociados</h2>
+                        <ul>
+                            <li>Après avoir étudié les algorithmes de vote préférentiel, le président propose les <strong><a href="../event-dates-2027-voting-method.html">Paires classées (Tideman)</a></strong> pour le vote sur les dates de l’événement&nbsp;: les votants classent les dates (les classements ex æquo, les options non classées et le rejet explicite sont tous autorisés), puis chaque paire d’options est comparée en face-à-face. La méthode gère les cycles de préférences et produit un gagnant défendable même sans majorité de premiers choix.</li>
+                            <li>Une page explicative a été préparée et sera partagée pour recueillir des commentaires avant l’annonce du vote&nbsp;; la méthode étant déterministe, elle est entièrement vérifiable &mdash; les données brutes seront publiées afin que les résultats puissent être reproduits de manière indépendante.</li>
+                            <li>Propriétés d’intégrité du système de vote en cours de construction&nbsp;: un vote ne peut plus être modifié une fois ouvert&nbsp;; tant qu’un vote est ouvert, les écrans d’administration n’affichent que les statistiques de participation, jamais les résultats&nbsp;; le vote est réservé aux asociados&nbsp;; et, une fois clos, il ne peut pas être rouvert. Le conseil testera le système avec des enquêtes d’essai avant son ouverture aux asociados.</li>
+                            <li>Une propriété contre-intuitive sera expliquée à l’avance&nbsp;: avec les paires classées, retirer une option peut modifier l’option gagnante parmi celles qui restent. Ce point sera abordé lors du call de jeudi.</li>
+                            <li>Concernant la pondération des réponses identifiées par rapport aux réponses anonymes&nbsp;: la position du conseil est qu’il ne lui appartient pas de trancher &mdash; les résultats seront présentés dans leur intégralité (combinés et séparés), accompagnés de l’interprétation du conseil, et la communauté sera libre d’interpréter les données comme elle l’entend.</li>
+                        </ul>
+
+                        <h2>9. Élections et quorum du conseil&nbsp;: avis juridique reçu</h2>
+                        <ul>
+                            <li>Les avocats de l’association ont confirmé que la prochaine élection du conseil <strong>peut</strong> être décalée par rapport au cycle strict de deux ans (actuellement janvier 2028), par exemple pour l’aligner sur l’année scolaire ou le cycle de l’événement &mdash; un décalage de quelques mois relève des attributions du conseil&nbsp;; des décalages plus importants seraient soumis à l’assemblée générale.</li>
+                            <li>Concernant le quorum, les avocats ont proposé ce qui suit&nbsp;: le quorum du conseil reste fixé à la moitié plus un, mais si deux réunions dûment convoquées et espacées d’au moins 15 jours ne l’atteignent pas, une troisième réunion peut statuer sans quorum (avec une ratification par l’assemblée générale comme garantie facultative).</li>
+                            <li>Discussion&nbsp;: la version imposant 15 jours a été jugée trop lente pour de véritables décisions. Alternatives explorées&nbsp;: un quorum fixe de quatre personnes&nbsp;; un quorum atteint soit par les quatre fonctions nommément désignées du bureau (dont les titulaires ont, en pratique, été les plus régulièrement présents), <strong>soit</strong> par la moitié plus un, selon la première condition remplie&nbsp;; et la délégation formelle &mdash; un membre qui ne peut pas être présent peut déléguer son siège par écrit pour une réunion précise. Pablo V transmettra une question affinée aux avocats.</li>
+                            <li><strong>Décision sur l’ordonnancement (par consensus des personnes présentes)&nbsp;:</strong> l’amendement relatif au quorum ne sera <em>pas</em> ajouté au vote de l’assemblée générale du 17 septembre. Ce vote restera centré sur les dates de l’événement &mdash; c’est le premier vote en AG de l’association et il doit rester simple. Les questions de quorum et d’élections viendront ultérieurement, par la voie des groupes de travail décrite ci-dessus, avec des propositions soumises à une assemblée ultérieure (par exemple autour de l’ALM).</li>
+                        </ul>
+
+                        <h2>10. Transparence des réunions du conseil</h2>
+                        <ul>
+                            <li>La question de l’ouverture des réunions du conseil a de nouveau été discutée. Points soulevés&nbsp;: les réunions pourraient en principe être ouvertes, avec des observateurs qui écoutent mais ne votent pas (comme l’ont fait plusieurs autres organes de la communauté)&nbsp;; les membres absents devraient avoir la possibilité de donner leur avis avant que les formats ne changent&nbsp;; et la transparence n’est pas la même chose qu’une information non filtrée &mdash; des fragments sans contexte peuvent créer des malentendus au sein d’une grande communauté. La nécessité d’une structure de communication interne a été soulignée (une fois de plus).</li>
+                            <li>L’accès des observateurs aux espaces de coordination du conseil n’est actuellement pas défini&nbsp;; ce sujet relève lui aussi du travail de conception organisationnelle.</li>
+                        </ul>
+
+                        <h2>11. Prochaines étapes</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Personne</th><th>Action</th><th>Échéance</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniela</td><td>Confirmer la disponibilité du lieu de l’ALM et explorer d’autres options&nbsp;; ouvrir le canal des coordinateurs et responsables avec le plan, les dates et le budget&nbsp;; publier une note indiquant que l’organisation est en cours</td><td>Cette semaine</td></tr>
+                                <tr><td>Daniel T</td><td>Déplacer le canal de gouvernance sur Discord vers la section des groupes de travail (avec une note explicative) après la publication de ce procès-verbal</td><td>Après publication</td></tr>
+                                <tr><td>Daniel T</td><td>Envoyer le rappel de l’enquête avec l’annonce du call de jeudi&nbsp;; partager la page explicative de la méthode de vote pour recueillir des commentaires&nbsp;; déployer le système de vote et effectuer des enquêtes d’essai avec le conseil</td><td>Cette semaine</td></tr>
+                                <tr><td>Pablo V</td><td>Publier l’ordonnancement proposé pour la gouvernance&nbsp;; transmettre aux avocats la question affinée sur le quorum&nbsp;; prendre contact avec les membres de la communauté intéressés par un groupe de travail sur les élections</td><td>Cette semaine</td></tr>
+                                <tr><td>Ellen K</td><td>Encourager les voix des barrios ayant un point de vue sur les dates à s’inscrire aux créneaux de parole de jeudi</td><td>Avant jeudi</td></tr>
+                                <tr><td>Ward D</td><td>Faciliter une prochaine réunion du conseil (une fois l’accès mobile à l’ordre du jour corrigé)</td><td>Dans les semaines à venir</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Procès-verbal préparé à partir d’un enregistrement.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanze tra questa versione e la versione spagnola, prevarrà la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Consiglio presente: Daniel T (presidente), Ben D (segretario &mdash; connessione intermittente, ha lasciato la riunione prima della fine), Pablo V, Ward D &middot; Assenti: Peter D (tesoriere, in viaggio), Victor P &middot; Osservatrici: Daniela (coordinatrice di produzione), Ellen K; Anna T si è unita per il punto sulla governance</strong>
+                        Non era presente il quorum; non si sono tenute votazioni formali. Tutti i punti riportati di seguito sono stati aggiornamenti o discussioni. La riunione si è svolta senza la consueta struttura di facilitazione (nessun check-in); il presidente si è assunto la responsabilità della conseguente dispersione e la normale facilitazione riprenderà la prossima settimana.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Una riunione di fine agosto più lunga e meno strutturata, senza quorum ma con contenuti sostanziali: i primi gruppi di lavoro registrati nel nuovo quadro, un aggiornamento sulla chiusura della produzione e delle finanze, la pianificazione dell’ALM, un’ampia discussione su cosa dovrebbe diventare il «dipartimento» di governance, il parere legale ricevuto su elezioni e quorum e il sistema di voto proposto per la decisione sulle date dell’evento.</p>
+
+                        <h2>1. Gruppi di lavoro: prime registrazioni</h2>
+                        <ul>
+                            <li>Sono state elaborate le prime domande per gruppi di lavoro presentate ai sensi della risoluzione recentemente approvata. In base alla risoluzione, il segretario registra direttamente le domande e le sottopone al consiglio solo quando ricorre uno dei motivi specifici previsti dalla risoluzione; non è stata quindi necessaria una votazione del consiglio.</li>
+                            <li>Sono state rivolte congratulazioni ai coordinatori dei gruppi di lavoro appena registrati.</li>
+                        </ul>
+
+                        <h2>2. Aggiornamento sulla produzione</h2>
+                        <ul>
+                            <li>Prosegue la chiusura finanziaria post-evento: riconciliazione delle fatture, abbinamento delle transazioni ai preventivi e preparazione delle dichiarazioni del terzo trimestre per il commercialista dell’associazione (che è in ferie per tutto agosto, come gran parte della Spagna). Si sta predisponendo un sistema di monitoraggio a partita doppia affinché l’associazione tenga la propria contabilità parallelamente a quella del commercialista.</li>
+                            <li>Le uscite rimanenti comprendono le fatture finali delle utenze, le richieste di rimborso per viaggi e spese e i contributi artistici; vengono elaborate man mano che arriva la documentazione.</li>
+                            <li>Il consiglio ha discusso quando comunicare le finanze dell’evento e ha convenuto: <strong>nessun rendiconto finanziario finché le cifre non saranno definitive e il tesoriere non sarà rientrato.</strong> Sarà il tesoriere stesso a pubblicare l’aggiornamento finanziario. Il consiglio chiede alla comunità ancora un paio di settimane di pazienza.</li>
+                        </ul>
+
+                        <h2>3. Pianificazione dell’ALM</h2>
+                        <ul>
+                            <li>L’interesse per l’ALM di quest’anno sembra superiore a quello degli anni precedenti, un segnale incoraggiante per un’associazione giovane.</li>
+                            <li>È in corso la conferma della disponibilità della sede prevista e, parallelamente, si stanno valutando sedi alternative. Sono state preparate opzioni di budget per un formato di due notti (con un gruppo più piccolo per allestimento e smontaggio prima e dopo), con una capacità pratica di circa 50 persone.</li>
+                            <li>Il coordinamento avverrà attraverso un canale dedicato a coordinatori e responsabili, nel quale verranno condivisi piano, date e budget; una nota pubblica confermerà che l’organizzazione è in corso e verrà comunicata una data per la decisione.</li>
+                        </ul>
+
+                        <h2>4. Governance: dipartimento o gruppo di lavoro?</h2>
+                        <ul>
+                            <li>Ora che il quadro dei gruppi di lavoro è operativo, il consiglio ha discusso cosa dovrebbe accadere al <em>dipartimento</em> di governance, una struttura ereditata dall’impostazione iniziale e attualmente priva di un coordinatore attivo (il coordinatore assegnato si è ritirato a causa di nuovi impegni di lavoro).</li>
+                            <li>Il gruppo che si è riunito sui temi di governance intende costituirsi nell’ambito del quadro dei gruppi di lavoro (come «riunioni di governance»), fungendo in parte da vivaio: una base di conoscenze sulla governance da cui nascano gruppi di lavoro mirati per proposte specifiche.</li>
+                            <li>Punti emersi nella discussione:
+                                <ul>
+                                    <li>Il quadro dei gruppi di lavoro è l’unico strumento attualmente definito; un gruppo destinato a operare a lungo termine può delimitare il proprio ambito a un anno e rinnovarsi (questa possibilità era stata prevista quando è stata approvata la risoluzione).</li>
+                                    <li>I dipartimenti non sono ancora formalmente definiti. Definirli &mdash; compresi il modo in cui vengono scelti coordinatori e responsabili, le loro responsabilità e la durata degli incarichi &mdash; è stato indicato da diversi partecipanti come una vera priorità, prima di molte altre questioni. Le attuali pratiche informali di successione (ruoli trasferiti senza posizioni vacanti aperte) sono state sollevate come una criticità che definizioni adeguate risolverebbero.</li>
+                                    <li>La comunità chiede inoltre elezioni del consiglio e maggiore diversità al suo interno; è stato osservato che è difficile eleggere bene più persone nel consiglio prima che la comunità abbia definito cosa <em>sia</em> il consiglio, ovvero quali decisioni prenda e quali siano invece distribuite a coordinatori e gruppi di lavoro.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Sequenza proposta</strong> (Pablo V, da pubblicare): (1)&nbsp;gruppi di lavoro &mdash; fatto; (2)&nbsp;un gruppo di lavoro per definire i dipartimenti («progettazione organizzativa»); (3)&nbsp;un gruppo di lavoro sul perfezionamento del consiglio &mdash; ruolo, dimensioni, quorum, seggi scaglionati, tempistica delle elezioni &mdash; informato dal lavoro di progettazione organizzativa e dalle date dell’evento scelte. Un buon punto all’ordine del giorno dell’ALM.</li>
+                            <li>Passo pratico (salvo obiezioni): dopo la pubblicazione di questo verbale, il canale governance su Discord passerà dalla sezione dei dipartimenti a quella dei gruppi di lavoro, con una nota esplicativa. Il lato relativo a team e strumenti verrà sistemato in seguito.</li>
+                        </ul>
+
+                        <h2>5. Nuovo terreno</h2>
+                        <ul>
+                            <li>Prosegue il lavoro per assicurarsi un terreno per un evento futuro. Su consiglio dei legali dell’associazione, il consiglio ha discusso come potrebbe essere strutturato un deposito su un terreno &mdash; firmato direttamente dall’associazione oppure sotto forma di accordo trasferibile da cederle successivamente &mdash; prima della conclusione di qualsiasi trattativa. Non era necessario prendere alcuna decisione e nessuna decisione è stata presa.</li>
+                            <li>La posizione del presidente: l’assemblea generale può approvare, ma solo le cariche possono firmare; e lui firmerebbe a nome dell’associazione soltanto in presenza di prove &mdash; attraverso una qualche forma di consultazione della comunità &mdash; che ciò rispecchi quanto vuole la comunità. Il processo per tale consultazione sarà progettato prima che sia necessaria qualsiasi firma.</li>
+                        </ul>
+
+                        <h2>6. Contatto con la comunità &mdash; date dell’evento</h2>
+                        <ul>
+                            <li>Ellen K ha riferito dopo aver contattato tutti i barrios in merito all’amministrazione post-evento, al voto sulle date dell’evento e allo status di asociado. La risposta è stata forte; alcuni dubbi sul voto e sullo status di asociado sono stati chiariti direttamente.</li>
+                            <li>Alcune voci dei barrios riformulano la questione come «spostare l’<em>area</em>, mantenere le date», anziché spostare le date. Il consiglio si aspetta che questa prospettiva emerga nella community call di giovedì e incoraggia chiunque desideri un tempo di parola dedicato a iscriversi per uno spazio.</li>
+                        </ul>
+
+                        <h2>7. Sondaggio sulle date dell’evento: stato</h2>
+                        <ul>
+                            <li>Finora il sondaggio ha ricevuto 771 risposte. In seguito alla precedente decisione del consiglio, i risultati intermedi non vengono pubblicati mentre la consultazione è aperta, per evitare di influenzarla.</li>
+                            <li>Tempistica: i risultati principali saranno condivisi durante la community call di giovedì; il sondaggio resterà aperto un ulteriore giorno per chi desidera decidere dopo aver ascoltato la discussione, dopodiché verrà chiuso.</li>
+                            <li>Verranno pubblicati tutti i dati anonimizzati delle risposte, affinché chiunque possa effettuare la propria analisi.</li>
+                            <li>Sono state riconosciute le lezioni apprese sulla progettazione del sondaggio: alcune colonne hanno prodotto poche informazioni aggiuntive e una struttura più semplice può venire/non può venire sarebbe stata migliore. Sbagliando s’impara.</li>
+                        </ul>
+
+                        <h2>8. Sistema di voto per il voto degli asociados</h2>
+                        <ul>
+                            <li>Dopo aver studiato gli algoritmi di voto preferenziale, il presidente propone le <strong><a href="../event-dates-2027-voting-method.html">Coppie ordinate (Tideman)</a></strong> per il voto sulle date dell’evento: gli elettori ordinano le date per preferenza (sono consentiti posizionamenti a pari merito, opzioni non classificate e rifiuto esplicito) e ogni coppia di opzioni viene confrontata direttamente. Il metodo gestisce i cicli di preferenze e produce un vincitore difendibile anche senza una maggioranza di prime scelte.</li>
+                            <li>È stata preparata una pagina esplicativa che sarà condivisa per ricevere commenti prima dell’annuncio del voto; essendo deterministico, il metodo è completamente verificabile &mdash; i dati grezzi saranno pubblicati affinché i risultati possano essere riprodotti in modo indipendente.</li>
+                            <li>Proprietà di integrità del sistema di voto in fase di realizzazione: un voto non può essere modificato una volta aperto; mentre un voto è aperto, le schermate di amministrazione mostrano solo statistiche sulla partecipazione e mai i risultati; il voto è riservato agli asociados; una volta chiuso, un voto non può essere riaperto. Il consiglio proverà il sistema con sondaggi di test prima che venga aperto agli asociados.</li>
+                            <li>Una proprietà controintuitiva verrà spiegata in anticipo: con le coppie ordinate, rimuovere un’opzione può cambiare quale delle opzioni rimanenti vince. Questo aspetto sarà trattato nella call di giovedì.</li>
+                            <li>Sulla ponderazione delle risposte identificate rispetto a quelle anonime: la posizione del consiglio è che non spetta al consiglio decidere &mdash; i risultati saranno presentati per intero (combinati e separati), insieme all’interpretazione del consiglio, e la comunità sarà libera di interpretare i dati come preferisce.</li>
+                        </ul>
+
+                        <h2>9. Elezioni e quorum del consiglio: parere legale ricevuto</h2>
+                        <ul>
+                            <li>Gli avvocati dell’associazione hanno confermato che le prossime elezioni del consiglio <strong>possono</strong> essere spostate rispetto al rigido ciclo biennale (attualmente gennaio 2028), per esempio per allinearle all’anno scolastico o al ciclo dell’evento &mdash; uno spostamento di alcuni mesi rientra nelle competenze del consiglio; spostamenti maggiori verrebbero sottoposti all’assemblea generale.</li>
+                            <li>Sul quorum, gli avvocati hanno proposto: il quorum del consiglio resta pari alla metà più uno, ma se due riunioni regolarmente convocate e distanziate di almeno 15 giorni non raggiungono il quorum, una terza riunione può decidere senza di esso (con la ratifica dell’assemblea generale come garanzia facoltativa).</li>
+                            <li>Discussione: la versione dei 15 giorni è stata ritenuta troppo lenta per decisioni effettive. Alternative esaminate: un quorum fisso di quattro; quorum raggiunto dalle quattro cariche nominate (che in pratica sono state le presenze più costanti) <strong>oppure</strong> dalla metà più uno, a seconda di quale condizione venga soddisfatta; e delega formale &mdash; un membro che non può partecipare può delegare per iscritto il proprio seggio per una riunione specifica. Pablo V sottoporrà agli avvocati una domanda più precisa.</li>
+                            <li><strong>Decisione sulla sequenza (per consenso dei presenti):</strong> l’emendamento sul quorum <em>non</em> sarà aggiunto al voto dell’assemblea generale del 17 settembre. Quel voto resterà incentrato sulle date dell’evento &mdash; è il primo voto dell’AG dell’associazione e dovrebbe essere semplice. Le questioni sul quorum e sulle elezioni seguiranno in seguito, attraverso il percorso dei gruppi di lavoro descritto sopra, con proposte presentate a una successiva assemblea (ad esempio in prossimità dell’ALM).</li>
+                        </ul>
+
+                        <h2>10. Trasparenza delle riunioni del consiglio</h2>
+                        <ul>
+                            <li>La questione dell’apertura delle riunioni del consiglio è stata nuovamente discussa. Punti sollevati: in linea di principio, le riunioni potrebbero essere aperte con osservatori che ascoltano ma non votano (come hanno fatto diversi altri organi della comunità); i membri assenti dovrebbero avere la possibilità di esprimersi prima che i formati cambino; e trasparenza non significa informazione non filtrata &mdash; frammenti privi di contesto possono creare incomprensioni in una comunità numerosa. Una struttura di comunicazione interna è stata indicata (ancora una volta) come una reale necessità.</li>
+                            <li>L’accesso degli osservatori agli spazi di coordinamento del consiglio non è attualmente definito; anche questo rientra nel lavoro di progettazione organizzativa.</li>
+                        </ul>
+
+                        <h2>11. Prossimi passi</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Azione</th><th>Scadenza</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniela</td><td>Confermare la disponibilità della sede dell’ALM e valutare alternative; aprire il canale per coordinatori e responsabili con piano, date e budget; pubblicare una nota che comunichi che l’organizzazione è in corso</td><td>Questa settimana</td></tr>
+                                <tr><td>Daniel T</td><td>Spostare il canale governance di Discord nella sezione dei gruppi di lavoro (con nota esplicativa) dopo la pubblicazione di questo verbale</td><td>Dopo la pubblicazione</td></tr>
+                                <tr><td>Daniel T</td><td>Inviare il promemoria del sondaggio con l’annuncio della call di giovedì; condividere la spiegazione del metodo di voto per ricevere commenti; distribuire il sistema di voto ed eseguire sondaggi di prova con il consiglio</td><td>Questa settimana</td></tr>
+                                <tr><td>Pablo V</td><td>Pubblicare la sequenza proposta per la governance; sottoporre agli avvocati la domanda più precisa sul quorum; mettersi in contatto con membri della comunità interessati a un gruppo di lavoro sulle elezioni</td><td>Questa settimana</td></tr>
+                                <tr><td>Ellen K</td><td>Incoraggiare le voci dei barrios con una prospettiva sulle date a iscriversi agli spazi di intervento di giovedì</td><td>Prima di giovedì</td></tr>
+                                <tr><td>Ward D</td><td>Facilitare una prossima riunione del consiglio (una volta risolto l’accesso all’ordine del giorno da dispositivi mobili)</td><td>Prossime settimane</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Verbale redatto a partire da una registrazione.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Bei Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesender Vorstand: Daniel T (Präsident), Ben D (Sekretär &mdash; zeitweise Verbindungsprobleme, verließ die Sitzung vorzeitig), Pablo V, Ward D &middot; Abwesend: Peter D (Schatzmeister, auf Reisen), Victor P &middot; Beobachterinnen: Daniela (Produktionskoordinatorin), Ellen K; Anna T kam für den Tagesordnungspunkt zur Governance hinzu</strong>
+                        Es war kein Quorum vorhanden; es fanden keine formellen Abstimmungen statt. Bei allen nachstehenden Punkten handelte es sich um Updates oder Diskussionen. Die Sitzung fand ohne ihre übliche Moderationsstruktur statt (kein Check-in); der Präsident übernahm die Verantwortung für die daraus resultierende Unübersichtlichkeit, und die normale Moderation wird nächste Woche wieder aufgenommen.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Eine längere, weniger straff geführte Sitzung Ende August ohne Quorum, aber mit Substanz: die ersten nach dem neuen Rahmen registrierten Arbeitsgruppen, ein Update zum Abschluss von Produktion und Finanzen, die ALM-Planung, eine breit angelegte Diskussion darüber, was aus der Governance-„Abteilung“ werden sollte, die eingegangene Rechtsberatung zu Wahlen und Quorum sowie das vorgeschlagene Abstimmungssystem für die Entscheidung über die Event-Termine.</p>
+
+                        <h2>1. Arbeitsgruppen: erste Registrierungen</h2>
+                        <ul>
+                            <li>Die ersten Anträge auf Arbeitsgruppen nach dem kürzlich verabschiedeten Beschluss wurden bearbeitet. Gemäß dem Beschluss registriert der Sekretär Anträge direkt und legt sie dem Vorstand nur dann vor, wenn einer der im Beschluss genannten besonderen Gründe vorliegt; daher war keine Abstimmung des Vorstands erforderlich.</li>
+                            <li>Den Koordinatorinnen und Koordinatoren der neu registrierten Arbeitsgruppen wurde gratuliert.</li>
+                        </ul>
+
+                        <h2>2. Produktionsupdate</h2>
+                        <ul>
+                            <li>Der finanzielle Abschluss nach dem Event läuft weiter: Rechnungsabgleich, Zuordnung von Transaktionen zu Angeboten und Vorbereitung der Meldungen für das dritte Quartal an den Steuerberater des Vereins (der den ganzen August im Urlaub ist, wie ein großer Teil Spaniens). Ein System zur doppelten Buchführung wird eingerichtet, damit der Verein neben der Buchführung des Steuerberaters seine eigenen Bücher führt.</li>
+                            <li>Zu den verbleibenden Ausgaben gehören abschließende Versorgungsrechnungen, Reise- und Spesenabrechnungen sowie Kunstförderungen; sie werden bearbeitet, sobald die Unterlagen eingehen.</li>
+                            <li>Der Vorstand besprach, wann über die Finanzen des Events informiert werden soll, und vereinbarte: <strong>keine Finanzberichte, bevor die Zahlen endgültig feststehen und der Schatzmeister zurück ist.</strong> Der Schatzmeister wird das Finanzupdate selbst veröffentlichen. Der Vorstand bittet die Community um noch ein paar Wochen Geduld.</li>
+                        </ul>
+
+                        <h2>3. ALM-Planung</h2>
+                        <ul>
+                            <li>Das Interesse am diesjährigen ALM scheint größer als in den Vorjahren zu sein, was für einen jungen Verein ermutigend ist.</li>
+                            <li>Die Verfügbarkeit des vorgesehenen Veranstaltungsorts wird derzeit bestätigt; parallel werden alternative Orte geprüft. Für ein Format mit zwei Übernachtungen (und jeweils einer kleineren Auf- und Abbaugruppe davor und danach) wurden Budgetoptionen mit einer praktischen Kapazität von etwa 50 Personen erstellt.</li>
+                            <li>Die Koordination erfolgt über einen eigenen Kanal für Koordinatoren und Leads, in dem Plan, Termine und Budget geteilt werden; eine öffentliche Mitteilung wird bestätigen, dass die Organisation läuft, und ein Entscheidungstermin wird bekannt gegeben.</li>
+                        </ul>
+
+                        <h2>4. Governance: Abteilung oder Arbeitsgruppe?</h2>
+                        <ul>
+                            <li>Da der Rahmen für Arbeitsgruppen nun besteht, diskutierte der Vorstand, was mit der Governance-<em>Abteilung</em> geschehen soll, einer aus der anfänglichen Struktur übernommenen Einheit, die derzeit keinen aktiven Koordinator hat (der zugewiesene Koordinator hat sich wegen neuer beruflicher Verpflichtungen zurückgezogen).</li>
+                            <li>Die Gruppe, die sich zu Governance-Themen trifft, beabsichtigt, sich im Rahmen für Arbeitsgruppen zu konstituieren (als „Governance-Treffen“) und teilweise als Keimzelle zu wirken: eine Grundlage an Governance-Wissen, aus der fokussierte Arbeitsgruppen für konkrete Vorschläge hervorgehen.</li>
+                            <li>In der Diskussion vorgebrachte Punkte:
+                                <ul>
+                                    <li>Der Rahmen für Arbeitsgruppen ist derzeit das einzige definierte Instrument; eine Gruppe, die langfristig arbeiten soll, kann ihren Umfang auf ein Jahr begrenzen und sich erneuern (dies war bei der Verabschiedung des Beschlusses bereits vorgesehen).</li>
+                                    <li>Abteilungen sind noch nicht formell definiert. Ihre Definition &mdash; einschließlich der Auswahl von Koordinatoren und Leads, ihrer Verantwortlichkeiten und Amtszeiten &mdash; wurde von mehreren Teilnehmenden als echte Priorität vor vielen anderen Dingen bezeichnet. Die derzeitigen informellen Nachfolgepraktiken (Übergabe von Rollen ohne offene Ausschreibung) wurden als Problem angesprochen, das durch angemessene Definitionen behoben würde.</li>
+                                    <li>Aus der Community gibt es außerdem Forderungen nach Vorstandswahlen und größerer Vielfalt im Vorstand; es wurde darauf hingewiesen, dass es schwierig ist, mehr Personen sinnvoll in den Vorstand zu wählen, bevor die Community definiert hat, was der Vorstand <em>ist</em> &mdash; welche Entscheidungen er trifft und welche an Koordinatoren und Arbeitsgruppen verteilt werden.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Vorgeschlagene Reihenfolge</strong> (Pablo V, öffentlich zu posten): (1)&nbsp;Arbeitsgruppen &mdash; erledigt; (2)&nbsp;eine Arbeitsgruppe zur Definition von Abteilungen („Organisationsgestaltung“); (3)&nbsp;eine Arbeitsgruppe zur Weiterentwicklung des Vorstands &mdash; Rolle, Größe, Quorum, zeitlich versetzte Sitze, Wahlzeitpunkt &mdash; gestützt auf die Arbeit zur Organisationsgestaltung und die gewählten Event-Termine. Ein guter Tagesordnungspunkt für das ALM.</li>
+                            <li>Praktischer Schritt (sofern keine Einwände eingehen): Nach Veröffentlichung dieses Protokolls wird der Governance-Kanal auf Discord aus dem Abteilungsbereich in den Arbeitsgruppenbereich verschoben, zusammen mit einer erläuternden Mitteilung. Die Team-/Tooling-Seite wird später aufgeräumt.</li>
+                        </ul>
+
+                        <h2>5. Neues Gelände</h2>
+                        <ul>
+                            <li>Die Arbeit zur Sicherung eines Grundstücks für ein künftiges Event geht weiter. Auf Anraten der Rechtsberatung des Vereins erörterte der Vorstand, wie eine Anzahlung auf ein Grundstück gestaltet werden könnte &mdash; entweder direkt vom Verein unterzeichnet oder als übertragbare Vereinbarung, die ihm später abgetreten wird &mdash;, bevor etwaige Verhandlungen abgeschlossen werden. Eine Entscheidung war weder erforderlich noch wurde eine getroffen.</li>
+                            <li>Position des Präsidenten: Die Generalversammlung kann zustimmen, aber nur Amtsträger können unterzeichnen; und er würde nur dann im Namen des Vereins unterzeichnen, wenn es &mdash; durch eine Form der Community-Konsultation &mdash; Belege dafür gibt, dass dies dem Wunsch der Community entspricht. Das Verfahren für diese Konsultation wird entwickelt, bevor eine Unterschrift benötigt wird.</li>
+                        </ul>
+
+                        <h2>6. Kontakt zur Community &mdash; Event-Termine</h2>
+                        <ul>
+                            <li>Ellen K berichtete über ihre Kontaktaufnahme mit allen Barrios zur Verwaltung nach dem Event, zur Abstimmung über die Event-Termine und zum Asociado-Status. Die Resonanz war stark; einige Unklarheiten über die Abstimmung und den Asociado-Status wurden direkt ausgeräumt.</li>
+                            <li>Einige Stimmen aus den Barrios formulieren die Frage als „das <em>Gelände</em> verlegen, die Termine beibehalten“ statt die Termine zu verlegen. Der Vorstand erwartet, dass diese Perspektive beim Community-Call am Donnerstag zur Sprache kommt, und ermutigt alle, die eigene Redezeit wünschen, sich für einen Slot anzumelden.</li>
+                        </ul>
+
+                        <h2>7. Umfrage zu den Event-Terminen: Stand</h2>
+                        <ul>
+                            <li>Die Umfrage hat bisher 771 Antworten erhalten. Gemäß der früheren Entscheidung des Vorstands werden während der laufenden Konsultation keine Zwischenergebnisse veröffentlicht, um sie nicht zu beeinflussen.</li>
+                            <li>Zeitplan: Die wichtigsten Ergebnisse werden beim Community-Call am Donnerstag vorgestellt; die Umfrage bleibt einen weiteren Tag für alle offen, die sich erst nach der Diskussion entscheiden möchten, und wird danach geschlossen.</li>
+                            <li>Die vollständigen anonymisierten Antwortdaten werden veröffentlicht, damit jeder eine eigene Analyse durchführen kann.</li>
+                            <li>Erkenntnisse zur Gestaltung der Umfrage wurden anerkannt: Einige Spalten lieferten kaum zusätzliche Informationen, und eine einfachere Struktur „kann kommen/kann nicht kommen“ wäre besser gewesen. Aus Erfahrung wird man klug.</li>
+                        </ul>
+
+                        <h2>8. Abstimmungssystem für die Asociado-Abstimmung</h2>
+                        <ul>
+                            <li>Nach Recherche zu Präferenzwahlverfahren schlägt der Präsident <strong><a href="../event-dates-2027-voting-method.html">Ranked Pairs (Tideman)</a></strong> für die Abstimmung über die Event-Termine vor: Die Abstimmenden bringen die Termine in eine Rangfolge (gleiche Platzierungen, nicht eingestufte Optionen und ausdrückliche Ablehnung sind zulässig), und jedes Optionspaar wird direkt miteinander verglichen. Das Verfahren bewältigt Präferenzzyklen und liefert auch ohne Mehrheit der Erstpräferenzen einen gut begründbaren Sieger.</li>
+                            <li>Eine Erklärseite wurde entworfen und wird vor Ankündigung der Abstimmung zur Rückmeldung geteilt; da das Verfahren deterministisch ist, ist es vollständig überprüfbar &mdash; die Rohdaten werden veröffentlicht, sodass die Ergebnisse unabhängig reproduziert werden können.</li>
+                            <li>Integritätseigenschaften des im Aufbau befindlichen Abstimmungssystems: Eine Abstimmung kann nach ihrer Eröffnung nicht bearbeitet werden; solange sie offen ist, zeigen Verwaltungsansichten ausschließlich Teilnahmestatistiken und niemals Ergebnisse; die Teilnahme ist auf Asociados beschränkt; und nach dem Schließen kann eine Abstimmung nicht wieder geöffnet werden. Der Vorstand wird das System mit Testumfragen erproben, bevor es für Asociados geöffnet wird.</li>
+                            <li>Eine kontraintuitive Eigenschaft wird vorab erklärt: Bei Ranked Pairs kann das Entfernen einer Option verändern, welche der verbleibenden Optionen gewinnt. Dies wird beim Call am Donnerstag behandelt.</li>
+                            <li>Zur Gewichtung identifizierter gegenüber anonymer Umfrageantworten: Der Vorstand vertritt die Position, dass er darüber nicht entscheidet &mdash; die Ergebnisse werden vollständig (kombiniert und getrennt) zusammen mit der Interpretation des Vorstands vorgelegt, und die Community kann die Daten nach eigenem Ermessen interpretieren.</li>
+                        </ul>
+
+                        <h2>9. Wahlen und Vorstandsquorum: Rechtsberatung eingegangen</h2>
+                        <ul>
+                            <li>Die Anwälte des Vereins haben bestätigt, dass die nächste Vorstandswahl vom strikten Zweijahresrhythmus (derzeit Januar 2028) abweichend angesetzt werden <strong>kann</strong>, etwa zur Angleichung an das Schuljahr oder den Event-Zyklus &mdash; eine Verschiebung um einige Monate liegt im Zuständigkeitsbereich des Vorstands; größere Verschiebungen würden der Generalversammlung vorgelegt.</li>
+                            <li>Zum Quorum schlugen die Anwälte vor: Das Vorstandsquorum bleibt bei der Hälfte plus eins; erreichen jedoch zwei ordnungsgemäß einberufene Sitzungen im Abstand von mindestens 15 Tagen kein Quorum, darf eine dritte Sitzung ohne Quorum entscheiden (mit einer Ratifizierung durch die Generalversammlung als optionaler Absicherung).</li>
+                            <li>Diskussion: Die 15-Tage-Variante wurde für tatsächliche Entscheidungen als zu langsam empfunden. Geprüfte Alternativen: ein festes Quorum von vier; ein durch die vier benannten Amtsfunktionen (deren Inhaber in der Praxis am regelmäßigsten anwesend waren) <strong>oder</strong> durch die Hälfte plus eins erfülltes Quorum, je nachdem, welche Bedingung erfüllt ist; und formelle Delegation &mdash; ein Mitglied, das nicht teilnehmen kann, darf seinen Sitz für eine bestimmte Sitzung schriftlich delegieren. Pablo V wird den Anwälten eine präzisierte Frage vorlegen.</li>
+                            <li><strong>Entscheidung zur Reihenfolge (im Konsens der Anwesenden):</strong> Die Quorumsänderung wird der Abstimmung der Generalversammlung am 17. September <em>nicht</em> hinzugefügt. Diese Abstimmung bleibt auf die Event-Termine konzentriert &mdash; sie ist die erste GV-Abstimmung des Vereins und sollte einfach sein. Fragen zu Quorum und Wahlen folgen später über den oben beschriebenen Arbeitsgruppenweg; Vorschläge werden einer nachfolgenden Versammlung vorgelegt (zum Beispiel im Umfeld des ALM).</li>
+                        </ul>
+
+                        <h2>10. Transparenz von Vorstandssitzungen</h2>
+                        <ul>
+                            <li>Die Frage einer Öffnung der Vorstandssitzungen wurde erneut diskutiert. Vorgebrachte Punkte: Sitzungen könnten grundsätzlich offen sein, mit Beobachtern, die zuhören, aber nicht abstimmen (wie es mehrere andere Gremien der Community praktiziert haben); abwesende Mitglieder sollten Gelegenheit zur Stellungnahme erhalten, bevor Formate geändert werden; und Transparenz ist nicht dasselbe wie ungefilterte Information &mdash; kontextfreie Fragmente können in einer großen Community Missverständnisse verursachen. Eine interne Kommunikationsstruktur wurde (erneut) als echte Notwendigkeit hervorgehoben.</li>
+                            <li>Der Zugang von Beobachtern zu den Koordinationsräumen des Vorstands ist derzeit nicht definiert; auch dies fällt in die Arbeit zur Organisationsgestaltung.</li>
+                        </ul>
+
+                        <h2>11. Nächste Schritte</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Aufgabe</th><th>Fälligkeit</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniela</td><td>Verfügbarkeit des ALM-Veranstaltungsorts bestätigen und Alternativen prüfen; den Kanal für Koordinatoren und Leads mit Plan, Terminen und Budget eröffnen; öffentlich mitteilen, dass die Organisation läuft</td><td>Diese Woche</td></tr>
+                                <tr><td>Daniel T</td><td>Den Governance-Kanal auf Discord nach Veröffentlichung dieses Protokolls in den Arbeitsgruppenbereich verschieben (mit erläuternder Mitteilung)</td><td>Nach Veröffentlichung</td></tr>
+                                <tr><td>Daniel T</td><td>Die Umfrageerinnerung zusammen mit der Ankündigung des Calls am Donnerstag versenden; die Erklärung zur Abstimmungsmethode zur Rückmeldung teilen; das Abstimmungssystem bereitstellen und Testumfragen mit dem Vorstand durchführen</td><td>Diese Woche</td></tr>
+                                <tr><td>Pablo V</td><td>Die vorgeschlagene Governance-Reihenfolge öffentlich posten; die präzisierte Quorumsfrage den Anwälten vorlegen; Kontakt zu Community-Mitgliedern aufnehmen, die an einer Arbeitsgruppe zu Wahlen interessiert sind</td><td>Diese Woche</td></tr>
+                                <tr><td>Ellen K</td><td>Stimmen aus den Barrios mit einer Perspektive zu den Terminen ermutigen, sich für Redezeiten am Donnerstag anzumelden</td><td>Vor Donnerstag</td></tr>
+                                <tr><td>Ward D</td><td>Eine kommende Vorstandssitzung moderieren (sobald der mobile Zugriff auf die Tagesordnung behoben ist)</td><td>Kommende Wochen</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Protokoll auf Grundlage einer Aufzeichnung erstellt.</em></p>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -165,5 +615,18 @@
     <script src="../footer.js"></script>
 
     <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>
