@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+
+    <title>Governance Meeting - Fifth Session - September 14, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .table-wrap { overflow-x: auto; margin: 1rem 0; }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); vertical-align: top; }
+        .action-table th { font-weight: 600; }
+        .draft-banner { background: #fff3cd; color: #6b4e00; border: 1px solid #ffe08a; padding: 0.75rem 1.25rem; border-radius: 8px; margin-bottom: 1.5rem; font-weight: 500; max-width: 800px; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="wg/governance.html" class="back-link">&larr; Governance Working Group</a>
+
+                <div class="meeting-header">
+                    <h1>Governance Meeting &mdash; Fifth Session</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Monday 14 September 2026, afternoon, video call (~70 min)</span>
+                    </div>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>Present (video call): Celine V (facilitator), Daniel T, Anna T, Pablo V. Apologies: Peter K, Peter D.</strong>
+                        
+                    </div>
+
+                    <div class="meeting-content">
+<p>The fifth governance meeting, and the first since the group registered as a working group under the board's framework. Pablo V joined for the first time, to see what the group is doing and avoid duplicating work. The session closed the loop on the event-dates vote, agreed an all-channels message to the wider community, resolved what happens to the old governance "department", and — its main substance — worked out how the new <strong>organisational-design working group</strong> will consult the community on what departments, coordinators and the board actually are, in time for the Annual Leadership Meeting (ALM).</p>
+<h2>1. Event-dates vote: status</h2>
+<ul>
+<li>The asociado vote on 2027 event dates is open; the General Assembly at which it closes is <strong>Thursday 17 September</strong>, at the usual community-call time. Daniel T confirmed that no dedicated email announcing the GA had yet gone to asociados — it has been announced for some six weeks on the survey, the event-dates page and at community calls, and he closed the last community call by saying the next one would be the GA — and he will send the formal announcement this week.</li>
+<li>Daniel T set out the group's position on procedure: this first vote is in a grey area on some formal points (a member cannot currently change their vote before the assembly, which the rules appear to require; the announcement could have been more formal). For this decision, what matters is that the community has been engaged and the social side of the process has worked, and the board recognises the result. For a board election or a statute change every formal requirement must be met, and this vote is the opportunity to find and fix the gaps beforehand. Peter D is building a Humans voting module to that standard.</li>
+<li>Delivery of the vote email was checked on the call: Pablo V received it (11 September) and voted during the meeting; two apparent non-deliveries were explained (a changed address; a member who had already voted via the test link before the send). The system reports all emails sent.</li>
+<li>Item closed; remaining step is publishing the result.</li>
+</ul>
+<h2>2. Telling the whole community, not just asociados</h2>
+<ul>
+<li>Pablo V has been asked by several people — some who would qualify as asociados, some who would not — what is happening with the dates. He proposed a message to <strong>everyone, on every channel</strong> (email, Discord, Telegram, WhatsApp): what is being decided and when, thanks to those who have voted, who is eligible, and how to apply for the future. Many people do not follow community calls, and a message that is easy to forward could reach builders and others who have never applied.</li>
+<li>Celine V noted the timing: applications cannot be accepted for this vote — Daniel T added that the voting list is in principle fixed at the moment a vote opens — so the call to action is <em>"if you want to take part in decisions like this one in future, apply as an asociado"</em>, quoting the published eligibility criteria and linking the full regulation.</li>
+<li><strong>Agreed:</strong> Celine V drafts the message (adapted per channel); Pablo V sends it — he has posting rights on the official WhatsApp and Telegram channels and will handle email too, to keep the load off Daniel T. Daniel T, who is short on capacity at present, will post anything he is handed but asked not to be asked to compose.</li>
+<li>A separate newsletter explaining asociado vs colaborador (originally Peter K's suggestion) stays in the backlog as a general governance item.</li>
+</ul>
+<h2>3. Governance "department" vs governance working group</h2>
+<ul>
+<li>Celine V has submitted the registration of the governance working group (Ben D can approve it directly; it does not need a board vote). The old governance <em>team</em> on Humans still exists with a coordinator role attached, which Kate B has asked to step back from.</li>
+<li>Anna T explained the distinction now in use: <strong>teams/departments</strong> on Humans are about running the event (consent, welfare, Cantina and so on); <strong>working groups</strong>, as the board has defined them, form around a specific question, run for roughly two to six months between events, and hand a proposal to the community. Governance is association work, not event operations, so a governance "department" no longer makes sense. Celine V: the governance working group is also the seedbed from which narrower working groups are spun up (event dates was the first).</li>
+<li><strong>Agreed:</strong> the governance department is retired — once Peter D's working-group functionality in Humans is live (expected within a week or two), the working group is created there, with its own drive and mailing list, and the department is deleted. No rush to delete before then; no coordinator will be nominated for the department in the meantime. The definitions should be explained to the community at the ALM, where they are new to most people.</li>
+<li>Pablo V asked whether departments themselves have a definition yet. They do not — which is the organisational-design working group's job.</li>
+</ul>
+<h2>4. Organisational-design working group: how to consult</h2>
+<p>Anna T has set up a working group on organisational structure, with a working document listing the questions. The discussion was about <em>how to ask</em>, not what the answers are.</p>
+<ul>
+<li><strong>Anna T's framing:</strong> the group's task at this stage is to design the consultation, not to draft the roles. She does not want four people on a call defining the board and coordinator roles; she wants those definitions to emerge from talking to everyone in the community about what they need. The RAID-log task of "draft the board role and coordinator role" is premature.</li>
+<li><strong>Pablo V</strong> agreed and offered questions, not answers — how a coordinator is appointed, who decides a department's budget, what the removal process and default terms are. These things are tightly defined for a board member, entirely free-form for a working group, and a department needs something in between. He will add his questions to the document asynchronously (Anna T opened it for editing during the call).</li>
+<li><strong>Daniel T</strong> noted that the event-dates work has, unintentionally, piloted the methods: a survey that mixes quick multiple-choice questions with a free-text field (free-text answers were rich, and can be analysed at scale for themes and correlations); general community calls; a focused community call on the topic; and deeper working sessions with the people doing the work. No single method is enough; the same mix, iterated, is a reasonable starting pattern. For coordinators specifically, one coordinator-wide call rather than one-to-ones.</li>
+<li><strong>Celine V's proposal, adopted:</strong> first collect all the questions (organisational design — board, working groups, departments, the production coordinator's remit; and selection/deselection), bundle them by type, and for each bundle decide who to consult and how — some via survey, some by interviewing a sample of coordinators, some only at the ALM. Bring the data and the options to the ALM for the final round and a decision, so the outcome has acceptance. Daniel T added: put the questions themselves to the community and ask what else should be asked — a topic for the community call after the GA (Thursday 24 September).</li>
+<li><strong>What the ALM needs.</strong> Celine V: strong, thought-through proposals with one or two open questions each, then discussion and a vote — not open-ended debate. Anna T's ideal outcome: a written description of every role (coordinator, board, working group), the time commitment, and where decisions are made — possibly with a short "welcome to the organisation" video and diagrams for newcomers.</li>
+<li><strong>Coordinators: how many?</strong> Nobody knows. The coordinator title has multiplied on Humans (in one area all three leads carry it), so coordinator calls have become random. Daniel T: some central coordination is wanted — a group with a good overview of the event talking to each other, not necessarily hierarchical — and a meeting of more than eight to ten people becomes unwieldy, which argues for consolidating some departments (build/power/LNT/strike; ticketing/gates/greeters, for example — every grouping arguable). Anna T: departments differ in what they want — some areas want to be all equals, others have asked for a single lead because decisions were not being made — and that is their call; what is needed is visibility of how planning is going, to a system or a person, rather than the burden falling on one or two individuals. Daniel T floated that the coordinator layer may be where the production coordinator's current role disperses, with departments arranged under it. Anna T will establish, with Daniela, how many meta-lead-level roles the previous structure had, as the basis for how many coordinators to interview.</li>
+<li><strong>Other events.</strong> Consult comparable events and take advice (already in the working document); Peter D has offered documents on how Borderland organises itself — similar size, though reputedly slow and bureaucratic, so the aim is to stay lighter; Burning Man is a different kind of organisation, largely paid.</li>
+<li><strong>Next steps:</strong> Anna T and Celine V hold a working session this week to turn the question list into a table of <em>question → information needed → how collected → owner</em>, and present it at the group's next Monday meeting. The ALM is about five weeks away; consultation starts within two weeks. Anna T will also talk to Daniela and Frank (happy to be consulted; no capacity for calls or interviews). Celine V is supporting Daniela with the ALM agenda so that these sessions get enough time.</li>
+</ul>
+<h2>5. Selection and deselection — and the board role</h2>
+<ul>
+<li>Anna T's point: board members are the <em>clear</em> case — elected, with a defined process. The gap is every other role. Roles have changed hands informally, without the community being told the role exists or what it involves, and with no feedback process; she cited her own arrival as Participant &amp; Wellness coordinator ("I marched in and said 'should I?', and nobody said stop") as an example of a process that does not exist.</li>
+<li>Pablo V asked whether the group covers the next board election. Answer: the <em>election process</em> is fully specified in the statutes and does not need redefining, beyond a quorum tweak (§6). What is missing, as Daniel T put it, is a definition of what a board member actually does — responsibilities, workload — on which people hold very different views. Pablo V: not strictly required, but a published set of expectations would encourage more people to apply.</li>
+<li><strong>Agreed:</strong> the ALM takes organisational design (what the board, working groups and departments do) <em>before</em> selection/deselection, so that role definitions exist before any invitation to apply for a board seat. Anna T: this gives the work urgency — a future election should happen with candidates knowing what they are applying for. The role definitions cannot realistically land before the end of the ALM.</li>
+<li>Daniel T's framework for the group's work: two kinds of decision are being shepherded — the statutory/procedural kind (elections, role definitions, procedures), which must be rigorous, and the social layer, which decides whether people actually go along with a structure. Even strongly rule-bound systems follow the social layer when it moves (the Ethereum fork was his example), so community buy-in is a primary component, not an afterthought. Celine V: hence the ALM format — informed options, then democratic decisions on the points that are genuinely open (legal obligations of the board are not).</li>
+</ul>
+<h2>6. Quorum proposal (backlog)</h2>
+<ul>
+<li>Pablo V has drafted a statute tweak: with the board at or near its maximum of thirteen, "half plus one" makes quorum nearly unreachable and risks deadlock (the lawyers' earlier suggestion was that a third meeting after two inquorate ones needs no quorum; Daniel T's alternative is that the four named officers present together also constitute quorum). Daniel T: a single replacement election would not change the board's size; any statute change that enlarges the board should carry the quorum fix with it, and should follow the definition of the board role. <strong>Agreed:</strong> parked in the governance backlog; Pablo V will raise it again when the organisational-design work has progressed.</li>
+</ul>
+<hr />
+<h2>Decisions</h2>
+<ul>
+<li>Vote-status item closed; formal GA announcement to go out this week.</li>
+<li>All-channels message to the whole community about the dates decision and asociado eligibility: Celine V drafts, Pablo V sends.</li>
+<li>Governance department retired in favour of the governance working group, once the Humans working-group functionality is live.</li>
+<li>Organisational-design consultation designed per question (survey / coordinator interviews / ALM), with the ALM as the decision point; role definitions precede any board-seat invitation.</li>
+<li>Pablo V's quorum proposal parked in the backlog.</li>
+</ul>
+<h2>Action Items</h2>
+<div class="table-wrap"><table class="action-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Send the formal General Assembly announcement to asociados</td>
+<td>Daniel T</td>
+</tr>
+<tr>
+<td>Draft the all-channels community message (per channel)</td>
+<td>Celine V</td>
+</tr>
+<tr>
+<td>Send it (email, WhatsApp, Telegram, Discord)</td>
+<td>Pablo V</td>
+</tr>
+<tr>
+<td>Add questions to the organisational-design document</td>
+<td>Pablo V, all</td>
+</tr>
+<tr>
+<td>Establish the number of meta-lead-level roles in the previous structure (with Daniela)</td>
+<td>Anna T</td>
+</tr>
+<tr>
+<td>Working session: question → information → method → owner table; present next Monday</td>
+<td>Anna T, Celine V</td>
+</tr>
+<tr>
+<td>Put the consultation questions to the community call of 24 September</td>
+<td>Daniel T</td>
+</tr>
+<tr>
+<td>Create the governance working group in Humans when the module ships; then delete the governance department</td>
+<td>Peter D / Celine V</td>
+</tr>
+<tr>
+<td>Support the ALM agenda so the governance sessions get enough time</td>
+<td>Celine V</td>
+</tr>
+<tr>
+<td>Re-raise the quorum proposal when organisational design has progressed</td>
+<td>Pablo V</td>
+</tr>
+</tbody>
+</table></div>
+                    </div>
+                </div>
+
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
+
+
+
+                    <div class="attendees">
+                        <strong>Presentes (videollamada): Celine V (facilitadora), Daniel T, Anna T, Pablo V. Excusaron su ausencia: Peter K, Peter D.</strong>
+
+                    </div>
+
+                    <div class="meeting-content">
+<p>Quinta reunión de gobernanza, y la primera desde que el grupo se registró como grupo de trabajo bajo el marco de la junta. Pablo V se incorporó por primera vez, para ver qué está haciendo el grupo y evitar duplicar trabajo. La sesión cerró el ciclo de la votación sobre las fechas del evento, acordó un mensaje por todos los canales a la comunidad en su conjunto, resolvió qué ocurre con el antiguo «departamento» de gobernanza y — su contenido principal — definió cómo el nuevo <strong>grupo de trabajo sobre diseño organizativo</strong> consultará a la comunidad sobre qué son realmente los departamentos, los coordinadores y la junta, a tiempo para el Annual Leadership Meeting (ALM).</p>
+<h2>1. Votación sobre las fechas del evento: estado</h2>
+<ul>
+<li>La votación de los asociados sobre las fechas del evento de 2027 está abierta; la Asamblea General en la que se cierra es el <strong>jueves 17 de septiembre</strong>, en el horario habitual de la llamada comunitaria. Daniel T confirmó que todavía no se había enviado a los asociados ningún correo específico anunciando la AG — se ha anunciado durante unas seis semanas en la encuesta, en la página de las fechas del evento y en las llamadas comunitarias, y él cerró la última llamada comunitaria diciendo que la siguiente sería la AG — y enviará el anuncio formal esta semana.</li>
+<li>Daniel T expuso la posición del grupo sobre el procedimiento: esta primera votación está en una zona gris en algunos puntos formales (actualmente un miembro no puede cambiar su voto antes de la asamblea, cosa que las normas parecen exigir; el anuncio podría haber sido más formal). Para esta decisión, lo que importa es que la comunidad ha participado y la vertiente social del proceso ha funcionado, y la junta reconoce el resultado. Para una elección a la junta o una modificación de los estatutos debe cumplirse cada requisito formal, y esta votación es la oportunidad de detectar y corregir las lagunas de antemano. Peter D está construyendo un módulo de votación en Humans con ese estándar.</li>
+<li>La entrega del correo de la votación se comprobó durante la llamada: Pablo V lo recibió (11 de septiembre) y votó durante la reunión; se explicaron dos aparentes no entregas (una dirección cambiada; un miembro que ya había votado a través del enlace de prueba antes del envío). El sistema informa de que todos los correos se enviaron.</li>
+<li>Punto cerrado; el paso pendiente es publicar el resultado.</li>
+</ul>
+<h2>2. Informar a toda la comunidad, no solo a los asociados</h2>
+<ul>
+<li>Varias personas — algunas que cumplirían los requisitos para ser asociados, otras no — han preguntado a Pablo V qué está pasando con las fechas. Propuso un mensaje a <strong>todo el mundo, por todos los canales</strong> (correo electrónico, Discord, Telegram, WhatsApp): qué se está decidiendo y cuándo, agradecimiento a quienes han votado, quién puede votar y cómo solicitarlo para el futuro. Mucha gente no sigue las llamadas comunitarias, y un mensaje fácil de reenviar podría llegar a builders y a otras personas que nunca han presentado la solicitud.</li>
+<li>Celine V señaló la cuestión del calendario: no se pueden aceptar solicitudes para esta votación — Daniel T añadió que la lista de votantes queda fijada, en principio, en el momento en que se abre una votación —, así que la llamada a la acción es <em>«si quieres participar en decisiones como esta en el futuro, solicita ser asociado»</em>, citando los criterios de elegibilidad publicados y enlazando el reglamento completo.</li>
+<li><strong>Acordado:</strong> Celine V redacta el mensaje (adaptado a cada canal); Pablo V lo envía — tiene permisos de publicación en los canales oficiales de WhatsApp y Telegram y se encargará también del correo electrónico, para descargar de trabajo a Daniel T. Daniel T, que actualmente anda corto de capacidad, publicará lo que se le entregue, pero pidió que no se le pida redactar.</li>
+<li>Una newsletter aparte que explique la diferencia entre asociado y colaborador (originalmente sugerencia de Peter K) se mantiene en la lista de pendientes como punto general de gobernanza.</li>
+</ul>
+<h2>3. «Departamento» de gobernanza frente a grupo de trabajo de gobernanza</h2>
+<ul>
+<li>Celine V ha presentado el registro del grupo de trabajo de gobernanza (Ben D puede aprobarlo directamente; no necesita una votación de la junta). El antiguo <em>equipo</em> de gobernanza en Humans sigue existiendo con un rol de coordinación asociado, del que Kate B ha pedido retirarse.</li>
+<li>Anna T explicó la distinción ahora en uso: los <strong>equipos/departamentos</strong> en Humans tienen que ver con organizar el evento (consentimiento, bienestar, Cantina, etcétera); los <strong>grupos de trabajo</strong>, tal como los ha definido la junta, se forman en torno a una pregunta concreta, funcionan durante aproximadamente dos a seis meses entre eventos y entregan una propuesta a la comunidad. La gobernanza es trabajo de la asociación, no operación del evento, así que un «departamento» de gobernanza ya no tiene sentido. Celine V: el grupo de trabajo de gobernanza es también el semillero del que surgen grupos de trabajo más específicos (el de las fechas del evento fue el primero).</li>
+<li><strong>Acordado:</strong> el departamento de gobernanza se retira — una vez que la funcionalidad de grupos de trabajo de Peter D en Humans esté operativa (previsiblemente en una o dos semanas), el grupo de trabajo se crea allí, con su propio drive y lista de correo, y el departamento se elimina. No hay prisa por eliminarlo antes; mientras tanto no se nombrará ningún coordinador para el departamento. Las definiciones deberían explicarse a la comunidad en el ALM, donde son nuevas para la mayoría de la gente.</li>
+<li>Pablo V preguntó si los propios departamentos tienen ya una definición. No la tienen — y esa es la tarea del grupo de trabajo sobre diseño organizativo.</li>
+</ul>
+<h2>4. Grupo de trabajo sobre diseño organizativo: cómo consultar</h2>
+<p>Anna T ha creado un grupo de trabajo sobre la estructura organizativa, con un documento de trabajo que enumera las preguntas. El debate versó sobre <em>cómo preguntar</em>, no sobre cuáles son las respuestas.</p>
+<ul>
+<li><strong>El planteamiento de Anna T:</strong> la tarea del grupo en esta fase es diseñar la consulta, no redactar los roles. No quiere que cuatro personas en una llamada definan los roles de la junta y de coordinación; quiere que esas definiciones surjan de hablar con todas las personas de la comunidad sobre lo que necesitan. La tarea del registro RAID de «redactar el rol de la junta y el rol de coordinación» es prematura.</li>
+<li><strong>Pablo V</strong> estuvo de acuerdo y ofreció preguntas, no respuestas — cómo se nombra a un coordinador, quién decide el presupuesto de un departamento, cuáles son el proceso de destitución y las condiciones por defecto. Estas cosas están estrictamente definidas para un miembro de la junta, totalmente libres para un grupo de trabajo, y un departamento necesita algo intermedio. Añadirá sus preguntas al documento de forma asíncrona (Anna T lo abrió para edición durante la llamada).</li>
+<li><strong>Daniel T</strong> señaló que el trabajo sobre las fechas del evento ha servido, sin pretenderlo, de piloto de los métodos: una encuesta que combina preguntas rápidas de opción múltiple con un campo de texto libre (las respuestas de texto libre fueron ricas y pueden analizarse a escala para extraer temas y correlaciones); llamadas comunitarias generales; una llamada comunitaria centrada en el tema; y sesiones de trabajo más profundas con las personas que hacen el trabajo. Ningún método basta por sí solo; la misma combinación, iterada, es un patrón de partida razonable. Para los coordinadores en concreto, una llamada con todos los coordinadores en lugar de reuniones individuales.</li>
+<li><strong>Propuesta de Celine V, adoptada:</strong> primero recoger todas las preguntas (diseño organizativo — junta, grupos de trabajo, departamentos, el ámbito de la coordinación de producción; y selección/deselección), agruparlas por tipo y, para cada grupo, decidir a quién consultar y cómo — algunas mediante encuesta, otras entrevistando a una muestra de coordinadores, otras solo en el ALM. Llevar los datos y las opciones al ALM para la ronda final y una decisión, de modo que el resultado tenga aceptación. Daniel T añadió: plantear las propias preguntas a la comunidad y preguntar qué más habría que preguntar — un tema para la llamada comunitaria posterior a la AG (jueves 24 de septiembre).</li>
+<li><strong>Lo que necesita el ALM.</strong> Celine V: propuestas sólidas y bien pensadas con una o dos preguntas abiertas cada una, después debate y votación — no un debate abierto sin fin. El resultado ideal para Anna T: una descripción escrita de cada rol (coordinación, junta, grupo de trabajo), la dedicación de tiempo y dónde se toman las decisiones — posiblemente con un breve vídeo de «bienvenida a la organización» y diagramas para las personas recién llegadas.</li>
+<li><strong>Coordinadores: ¿cuántos?</strong> Nadie lo sabe. El título de coordinador se ha multiplicado en Humans (en un área lo llevan los tres leads), de modo que las llamadas de coordinadores se han vuelto aleatorias. Daniel T: se quiere cierta coordinación central — un grupo con una buena visión de conjunto del evento que hable entre sí, no necesariamente jerárquico — y una reunión de más de ocho o diez personas se vuelve inmanejable, lo que aboga por consolidar algunos departamentos (build/power/LNT/strike; ticketing/gates/greeters, por ejemplo — cualquier agrupación es discutible). Anna T: los departamentos difieren en lo que quieren — algunas áreas quieren que todos sean iguales, otras han pedido un único lead porque no se tomaban decisiones — y eso es decisión suya; lo que hace falta es visibilidad de cómo va la planificación, hacia un sistema o una persona, en lugar de que la carga recaiga en una o dos personas. Daniel T planteó que la capa de coordinación puede ser donde se disperse el rol actual de la coordinación de producción, con los departamentos organizados debajo. Anna T determinará, con Daniela, cuántos roles de nivel meta-lead tenía la estructura anterior, como base para decidir a cuántos coordinadores entrevistar.</li>
+<li><strong>Otros eventos.</strong> Consultar a eventos comparables y pedir consejo (ya está en el documento de trabajo); Peter D ha ofrecido documentos sobre cómo se organiza Borderland — de tamaño similar, aunque con fama de lento y burocrático, así que el objetivo es mantenerse más ligeros; Burning Man es un tipo de organización distinto, en gran parte remunerado.</li>
+<li><strong>Próximos pasos:</strong> Anna T y Celine V celebran esta semana una sesión de trabajo para convertir la lista de preguntas en una tabla de <em>pregunta → información necesaria → cómo se recoge → responsable</em>, y la presentan en la próxima reunión del lunes del grupo. Faltan unas cinco semanas para el ALM; la consulta empieza en un plazo de dos semanas. Anna T hablará también con Daniela y Frank (dispuesto a ser consultado; sin capacidad para llamadas ni entrevistas). Celine V está apoyando a Daniela con el programa del ALM para que estas sesiones tengan tiempo suficiente.</li>
+</ul>
+<h2>5. Selección y deselección — y el rol de la junta</h2>
+<ul>
+<li>El punto de Anna T: los miembros de la junta son el caso <em>claro</em> — elegidos, con un proceso definido. La laguna está en todos los demás roles. Los roles han cambiado de manos de manera informal, sin que se informara a la comunidad de que el rol existe o de lo que implica, y sin ningún proceso de retroalimentación; citó su propia llegada como coordinadora de Participantes y Bienestar («entré con paso firme y dije "¿lo hago yo?", y nadie dijo que parara») como ejemplo de un proceso que no existe.</li>
+<li>Pablo V preguntó si el grupo abarca la próxima elección a la junta. Respuesta: el <em>proceso electoral</em> está totalmente especificado en los estatutos y no necesita redefinirse, más allá de un ajuste del quórum (§6). Lo que falta, como lo expresó Daniel T, es una definición de lo que hace realmente un miembro de la junta — responsabilidades, carga de trabajo — sobre lo que la gente tiene opiniones muy distintas. Pablo V: no es estrictamente necesario, pero un conjunto publicado de expectativas animaría a más personas a presentarse.</li>
+<li><strong>Acordado:</strong> el ALM aborda el diseño organizativo (qué hacen la junta, los grupos de trabajo y los departamentos) <em>antes</em> que la selección/deselección, de modo que existan definiciones de los roles antes de cualquier invitación a presentarse a un puesto en la junta. Anna T: esto da urgencia al trabajo — una futura elección debería celebrarse con candidatos que sepan a qué se presentan. De forma realista, las definiciones de los roles no pueden estar listas antes del final del ALM.</li>
+<li>El marco de Daniel T para el trabajo del grupo: se están conduciendo dos tipos de decisión — el tipo estatutario/procedimental (elecciones, definiciones de roles, procedimientos), que debe ser riguroso, y la capa social, que decide si la gente realmente sigue una estructura. Incluso los sistemas fuertemente regidos por normas siguen a la capa social cuando esta se mueve (su ejemplo fue la bifurcación de Ethereum), así que el respaldo de la comunidad es un componente primario, no una idea de última hora. Celine V: de ahí el formato del ALM — opciones informadas y después decisiones democráticas sobre los puntos realmente abiertos (las obligaciones legales de la junta no lo son).</li>
+</ul>
+<h2>6. Propuesta sobre el quórum (pendientes)</h2>
+<ul>
+<li>Pablo V ha redactado un ajuste de los estatutos: con la junta en su máximo de trece miembros o cerca de él, «la mitad más uno» hace que el quórum sea casi inalcanzable y crea riesgo de bloqueo (la sugerencia anterior de los abogados era que una tercera reunión tras dos sin quórum no necesita quórum; la alternativa de Daniel T es que los cuatro cargos designados presentes conjuntamente constituyan también quórum). Daniel T: una única elección de sustitución no cambiaría el tamaño de la junta; cualquier modificación de los estatutos que amplíe la junta debería llevar consigo la corrección del quórum, y debería seguir a la definición del rol de la junta. <strong>Acordado:</strong> aparcado en la lista de pendientes de gobernanza; Pablo V lo volverá a plantear cuando el trabajo de diseño organizativo haya avanzado.</li>
+</ul>
+<hr />
+<h2>Decisiones</h2>
+<ul>
+<li>Punto sobre el estado de la votación cerrado; el anuncio formal de la AG se enviará esta semana.</li>
+<li>Mensaje por todos los canales a toda la comunidad sobre la decisión de las fechas y los requisitos para ser asociado: Celine V redacta, Pablo V envía.</li>
+<li>Departamento de gobernanza retirado en favor del grupo de trabajo de gobernanza, una vez que la funcionalidad de grupos de trabajo de Humans esté operativa.</li>
+<li>Consulta sobre diseño organizativo diseñada pregunta por pregunta (encuesta / entrevistas a coordinadores / ALM), con el ALM como punto de decisión; las definiciones de los roles preceden a cualquier invitación a presentarse a la junta.</li>
+<li>Propuesta de Pablo V sobre el quórum aparcada en la lista de pendientes.</li>
+</ul>
+<h2>Acciones</h2>
+<div class="table-wrap"><table class="action-table">
+<thead>
+<tr>
+<th>Acción</th>
+<th>Responsable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enviar el anuncio formal de la Asamblea General a los asociados</td>
+<td>Daniel T</td>
+</tr>
+<tr>
+<td>Redactar el mensaje comunitario por todos los canales (adaptado a cada canal)</td>
+<td>Celine V</td>
+</tr>
+<tr>
+<td>Enviarlo (correo electrónico, WhatsApp, Telegram, Discord)</td>
+<td>Pablo V</td>
+</tr>
+<tr>
+<td>Añadir preguntas al documento de diseño organizativo</td>
+<td>Pablo V, todos</td>
+</tr>
+<tr>
+<td>Determinar el número de roles de nivel meta-lead en la estructura anterior (con Daniela)</td>
+<td>Anna T</td>
+</tr>
+<tr>
+<td>Sesión de trabajo: tabla pregunta → información → método → responsable; presentarla el próximo lunes</td>
+<td>Anna T, Celine V</td>
+</tr>
+<tr>
+<td>Plantear las preguntas de la consulta en la llamada comunitaria del 24 de septiembre</td>
+<td>Daniel T</td>
+</tr>
+<tr>
+<td>Crear el grupo de trabajo de gobernanza en Humans cuando se publique el módulo; después eliminar el departamento de gobernanza</td>
+<td>Peter D / Celine V</td>
+</tr>
+<tr>
+<td>Apoyar el programa del ALM para que las sesiones de gobernanza tengan tiempo suficiente</td>
+<td>Celine V</td>
+</tr>
+<tr>
+<td>Volver a plantear la propuesta sobre el quórum cuando el diseño organizativo haya avanzado</td>
+<td>Pablo V</td>
+</tr>
+</tbody>
+</table></div>
+                    </div>
+                </div>
+
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaut.</div>
+
+
+                    <div class="attendees">
+                        <strong>Présents (appel vidéo) : Celine V (facilitatrice), Daniel T, Anna T, Pablo V. Excusés : Peter K, Peter D.</strong>
+
+                    </div>
+
+                    <div class="meeting-content">
+<p>Cinquième réunion sur la gouvernance, et la première depuis que le groupe s'est enregistré comme groupe de travail dans le cadre défini par le conseil. Pablo V y a participé pour la première fois, afin de voir ce que fait le groupe et d'éviter les doublons. La séance a clos le sujet du vote sur les dates de l'événement, a convenu d'un message sur tous les canaux à destination de la communauté élargie, a tranché le sort de l'ancien « département » gouvernance et — pour l'essentiel de sa substance — a défini la manière dont le nouveau <strong>groupe de travail sur la conception organisationnelle</strong> consultera la communauté sur ce que sont réellement les départements, les coordinateurs et le conseil, à temps pour l'Annual Leadership Meeting (ALM).</p>
+<h2>1. Vote sur les Dates de l'Événement : État des Lieux</h2>
+<ul>
+<li>Le vote des asociados sur les dates de l'événement 2027 est ouvert ; l'Assemblée générale lors de laquelle il sera clos se tient le <strong>jeudi 17 septembre</strong>, au créneau habituel de l'appel communautaire. Daniel T a confirmé qu'aucun courriel dédié annonçant l'AG n'avait encore été envoyé aux asociados — elle est annoncée depuis environ six semaines sur l'enquête, la page des dates de l'événement et lors des appels communautaires, et il a conclu le dernier appel communautaire en indiquant que le prochain serait l'AG — et il enverra l'annonce formelle cette semaine.</li>
+<li>Daniel T a exposé la position du groupe sur la procédure : ce premier vote se situe dans une zone grise sur certains points formels (un membre ne peut actuellement pas modifier son vote avant l'assemblée, ce que les règles semblent exiger ; l'annonce aurait pu être plus formelle). Pour cette décision, ce qui compte est que la communauté a été mobilisée, que le volet social du processus a fonctionné et que le conseil reconnaît le résultat. Pour une élection du conseil ou une modification des statuts, chaque exigence formelle devra être remplie, et ce vote est l'occasion de repérer et de corriger les lacunes au préalable. Peter D construit un module de vote Humans conforme à cette norme.</li>
+<li>La bonne réception du courriel de vote a été vérifiée pendant l'appel : Pablo V l'a reçu (11 septembre) et a voté pendant la réunion ; deux non-réceptions apparentes ont été expliquées (une adresse modifiée ; un membre ayant déjà voté via le lien de test avant l'envoi). Le système indique que tous les courriels ont été envoyés.</li>
+<li>Point clos ; il reste à publier le résultat.</li>
+</ul>
+<h2>2. Informer Toute la Communauté, Pas Seulement les Asociados</h2>
+<ul>
+<li>Plusieurs personnes — certaines qui rempliraient les conditions pour être asociados, d'autres non — ont demandé à Pablo V ce qui se passe au sujet des dates. Il a proposé un message à <strong>tout le monde, sur tous les canaux</strong> (courriel, Discord, Telegram, WhatsApp) : ce qui est en train d'être décidé et quand, des remerciements à ceux qui ont voté, qui est éligible, et comment faire une demande pour l'avenir. Beaucoup de gens ne suivent pas les appels communautaires, et un message facile à transférer pourrait atteindre des builders et d'autres personnes qui n'ont jamais fait de demande.</li>
+<li>Celine V a souligné la question du calendrier : les demandes ne peuvent pas être acceptées pour ce vote — Daniel T a ajouté que la liste des votants est en principe figée au moment de l'ouverture d'un vote — de sorte que l'appel à l'action est <em>« si vous voulez prendre part à des décisions comme celle-ci à l'avenir, faites une demande pour devenir asociado »</em>, en citant les critères d'éligibilité publiés et en renvoyant au règlement complet.</li>
+<li><strong>Accord :</strong> Celine V rédige le message (adapté à chaque canal) ; Pablo V l'envoie — il dispose des droits de publication sur les canaux officiels WhatsApp et Telegram et se chargera aussi du courriel, afin de décharger Daniel T. Daniel T, qui manque de capacité en ce moment, publiera tout ce qu'on lui remettra mais a demandé qu'on ne lui demande pas de rédiger.</li>
+<li>Une newsletter distincte expliquant la différence entre asociado et colaborador (suggestion initiale de Peter K) reste dans le backlog comme point de gouvernance générale.</li>
+</ul>
+<h2>3. « Département » Gouvernance vs Groupe de Travail Gouvernance</h2>
+<ul>
+<li>Celine V a déposé la demande d'enregistrement du groupe de travail gouvernance (Ben D peut l'approuver directement ; elle ne nécessite pas de vote du conseil). L'ancienne <em>équipe</em> gouvernance sur Humans existe toujours, avec un rôle de coordinateur qui lui est rattaché, dont Kate B a demandé à se retirer.</li>
+<li>Anna T a expliqué la distinction désormais en usage : les <strong>équipes/départements</strong> sur Humans concernent l'organisation de l'événement (consentement, welfare, Cantina, etc.) ; les <strong>groupes de travail</strong>, tels que le conseil les a définis, se forment autour d'une question précise, fonctionnent pendant environ deux à six mois entre les événements et remettent une proposition à la communauté. La gouvernance est un travail de l'association, non une opération de l'événement, si bien qu'un « département » gouvernance n'a plus de sens. Celine V : le groupe de travail gouvernance est aussi la pépinière d'où sont lancés des groupes de travail plus ciblés (les dates de l'événement ont été le premier).</li>
+<li><strong>Accord :</strong> le département gouvernance est supprimé — une fois que la fonctionnalité « groupes de travail » de Peter D dans Humans sera en service (attendue d'ici une à deux semaines), le groupe de travail y sera créé, avec son propre drive et sa propre liste de diffusion, et le département sera supprimé. Aucune urgence à supprimer avant cela ; aucun coordinateur ne sera nommé pour le département entre-temps. Les définitions devront être expliquées à la communauté lors de l'ALM, où elles seront nouvelles pour la plupart des gens.</li>
+<li>Pablo V a demandé si les départements eux-mêmes disposent déjà d'une définition. Ce n'est pas le cas — c'est la tâche du groupe de travail sur la conception organisationnelle.</li>
+</ul>
+<h2>4. Groupe de Travail sur la Conception Organisationnelle : Comment Consulter</h2>
+<p>Anna T a mis en place un groupe de travail sur la structure organisationnelle, avec un document de travail listant les questions. La discussion a porté sur <em>la manière de poser les questions</em>, non sur les réponses.</p>
+<ul>
+<li><strong>Le cadrage d'Anna T :</strong> à ce stade, la tâche du groupe est de concevoir la consultation, non de rédiger les rôles. Elle ne veut pas que quatre personnes en appel définissent les rôles du conseil et des coordinateurs ; elle veut que ces définitions émergent d'échanges avec l'ensemble de la communauté sur ce dont elle a besoin. La tâche du registre RAID « rédiger le rôle du conseil et le rôle de coordinateur » est prématurée.</li>
+<li><strong>Pablo V</strong> a approuvé et a proposé des questions, non des réponses — comment un coordinateur est nommé, qui décide du budget d'un département, quels sont le processus de révocation et les mandats par défaut. Ces éléments sont strictement définis pour un membre du conseil, entièrement libres pour un groupe de travail, et un département a besoin de quelque chose d'intermédiaire. Il ajoutera ses questions au document de manière asynchrone (Anna T l'a ouvert en édition pendant l'appel).</li>
+<li><strong>Daniel T</strong> a noté que le travail sur les dates de l'événement a, sans le vouloir, servi de pilote aux méthodes : une enquête mêlant des questions rapides à choix multiples et un champ de texte libre (les réponses en texte libre étaient riches et peuvent être analysées à grande échelle pour en dégager des thèmes et des corrélations) ; des appels communautaires généraux ; un appel communautaire ciblé sur le sujet ; et des sessions de travail plus approfondies avec les personnes qui font le travail. Aucune méthode ne suffit à elle seule ; la même combinaison, itérée, est un schéma de départ raisonnable. Pour les coordinateurs en particulier, un appel réunissant tous les coordinateurs plutôt que des entretiens individuels.</li>
+<li><strong>La proposition de Celine V, adoptée :</strong> recueillir d'abord toutes les questions (conception organisationnelle — conseil, groupes de travail, départements, périmètre de la coordinatrice de production ; et sélection/désélection), les regrouper par type, et pour chaque groupe décider qui consulter et comment — certaines par enquête, certaines en interrogeant un échantillon de coordinateurs, certaines uniquement lors de l'ALM. Apporter les données et les options à l'ALM pour le dernier tour et une décision, afin que le résultat soit accepté. Daniel T a ajouté : soumettre les questions elles-mêmes à la communauté et demander ce qui devrait encore être demandé — un sujet pour l'appel communautaire qui suivra l'AG (jeudi 24 septembre).</li>
+<li><strong>Ce dont l'ALM a besoin.</strong> Celine V : des propositions solides et réfléchies, chacune avec une ou deux questions ouvertes, puis discussion et vote — et non un débat sans fin. Le résultat idéal pour Anna T : une description écrite de chaque rôle (coordinateur, conseil, groupe de travail), le temps à y consacrer, et où les décisions sont prises — éventuellement avec une courte vidéo « bienvenue dans l'organisation » et des schémas pour les nouveaux arrivants.</li>
+<li><strong>Coordinateurs : combien ?</strong> Personne ne le sait. Le titre de coordinateur s'est multiplié sur Humans (dans un secteur, les trois leads le portent), de sorte que les appels de coordinateurs sont devenus aléatoires. Daniel T : une certaine coordination centrale est souhaitée — un groupe ayant une bonne vue d'ensemble de l'événement et qui se parle, pas nécessairement hiérarchique — et une réunion de plus de huit à dix personnes devient ingérable, ce qui plaide pour la consolidation de certains départements (build/power/LNT/strike ; ticketing/gates/greeters, par exemple — tout regroupement étant discutable). Anna T : les départements diffèrent dans ce qu'ils souhaitent — certains secteurs veulent que tous soient égaux, d'autres ont demandé un lead unique parce que les décisions n'étaient pas prises — et c'est leur choix ; ce qu'il faut, c'est une visibilité sur l'avancement de la planification, vers un système ou une personne, plutôt que de faire peser la charge sur une ou deux personnes. Daniel T a évoqué l'idée que la couche des coordinateurs pourrait être le lieu où se disperse le rôle actuel de la coordinatrice de production, avec les départements organisés en dessous. Anna T établira, avec Daniela, combien de rôles de niveau méta-lead comptait la structure précédente, comme base pour déterminer combien de coordinateurs interroger.</li>
+<li><strong>Autres événements.</strong> Consulter des événements comparables et prendre conseil (déjà dans le document de travail) ; Peter D a proposé des documents sur la manière dont Borderland s'organise — taille similaire, mais réputé lent et bureaucratique, l'objectif étant donc de rester plus léger ; Burning Man est un autre type d'organisation, en grande partie salariée.</li>
+<li><strong>Prochaines étapes :</strong> Anna T et Celine V tiennent une session de travail cette semaine pour transformer la liste de questions en un tableau <em>question → information nécessaire → mode de collecte → responsable</em>, et le présentent lors de la prochaine réunion du groupe lundi. L'ALM est dans environ cinq semaines ; la consultation démarre d'ici deux semaines. Anna T parlera également à Daniela et à Frank (heureux d'être consulté ; pas de capacité pour des appels ou des entretiens). Celine V soutient Daniela sur le programme de l'ALM afin que ces sessions disposent de suffisamment de temps.</li>
+</ul>
+<h2>5. Sélection et Désélection — et le Rôle du Conseil</h2>
+<ul>
+<li>Le point d'Anna T : les membres du conseil sont le cas <em>clair</em> — élus, selon un processus défini. La lacune concerne tous les autres rôles. Des rôles ont changé de mains de manière informelle, sans que la communauté soit informée de l'existence du rôle ni de ce qu'il implique, et sans processus de retour ; elle a cité sa propre arrivée comme coordinatrice Participant &amp; Wellness (« je suis arrivée en disant "est-ce que je devrais ?", et personne n'a dit stop ») comme exemple d'un processus qui n'existe pas.</li>
+<li>Pablo V a demandé si le groupe couvre la prochaine élection du conseil. Réponse : le <em>processus électoral</em> est entièrement spécifié dans les statuts et n'a pas besoin d'être redéfini, hormis un ajustement du quorum (§6). Ce qui manque, comme l'a formulé Daniel T, c'est une définition de ce que fait réellement un membre du conseil — responsabilités, charge de travail — sur laquelle les avis divergent fortement. Pablo V : ce n'est pas strictement nécessaire, mais un ensemble d'attentes publié encouragerait davantage de personnes à se porter candidates.</li>
+<li><strong>Accord :</strong> l'ALM traite la conception organisationnelle (ce que font le conseil, les groupes de travail et les départements) <em>avant</em> la sélection/désélection, afin que les définitions des rôles existent avant tout appel à candidatures pour un siège au conseil. Anna T : cela donne de l'urgence au travail — une future élection devrait se tenir avec des candidats sachant à quoi ils postulent. Les définitions des rôles ne pourront réalistement pas aboutir avant la fin de l'ALM.</li>
+<li>Le cadre de Daniel T pour le travail du groupe : deux types de décisions sont accompagnés — le type statutaire/procédural (élections, définitions des rôles, procédures), qui doit être rigoureux, et la couche sociale, qui décide si les gens adhèrent réellement à une structure. Même les systèmes fortement encadrés par des règles suivent la couche sociale lorsqu'elle bouge (le fork d'Ethereum était son exemple), de sorte que l'adhésion de la communauté est une composante primordiale, non une réflexion après coup. Celine V : d'où le format de l'ALM — des options éclairées, puis des décisions démocratiques sur les points réellement ouverts (les obligations légales du conseil ne le sont pas).</li>
+</ul>
+<h2>6. Proposition sur le Quorum (Backlog)</h2>
+<ul>
+<li>Pablo V a rédigé un ajustement des statuts : avec un conseil à son maximum de treize membres ou proche de celui-ci, « la moitié plus un » rend le quorum presque inatteignable et risque de provoquer un blocage (la suggestion antérieure des avocats était qu'une troisième réunion, après deux réunions sans quorum, n'en nécessite aucun ; l'alternative de Daniel T est que les quatre membres du bureau nommément désignés, présents ensemble, constituent également le quorum). Daniel T : une élection de remplacement unique ne changerait pas la taille du conseil ; toute modification des statuts qui agrandit le conseil devrait s'accompagner de la correction du quorum, et devrait suivre la définition du rôle du conseil. <strong>Accord :</strong> mis de côté dans le backlog gouvernance ; Pablo V le soulèvera à nouveau lorsque le travail de conception organisationnelle aura progressé.</li>
+</ul>
+<hr />
+<h2>Décisions</h2>
+<ul>
+<li>Point sur l'état du vote clos ; l'annonce formelle de l'AG sera envoyée cette semaine.</li>
+<li>Message sur tous les canaux à l'ensemble de la communauté concernant la décision sur les dates et l'éligibilité des asociados : Celine V rédige, Pablo V envoie.</li>
+<li>Département gouvernance supprimé au profit du groupe de travail gouvernance, une fois la fonctionnalité « groupes de travail » de Humans en service.</li>
+<li>Consultation sur la conception organisationnelle conçue question par question (enquête / entretiens avec les coordinateurs / ALM), l'ALM étant le point de décision ; les définitions des rôles précèdent tout appel à candidatures pour un siège au conseil.</li>
+<li>Proposition de Pablo V sur le quorum mise de côté dans le backlog.</li>
+</ul>
+<h2>Actions</h2>
+<div class="table-wrap"><table class="action-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Responsable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Envoyer l'annonce formelle de l'Assemblée générale aux asociados</td>
+<td>Daniel T</td>
+</tr>
+<tr>
+<td>Rédiger le message communautaire sur tous les canaux (adapté à chaque canal)</td>
+<td>Celine V</td>
+</tr>
+<tr>
+<td>L'envoyer (courriel, WhatsApp, Telegram, Discord)</td>
+<td>Pablo V</td>
+</tr>
+<tr>
+<td>Ajouter des questions au document de conception organisationnelle</td>
+<td>Pablo V, tous</td>
+</tr>
+<tr>
+<td>Établir le nombre de rôles de niveau méta-lead dans la structure précédente (avec Daniela)</td>
+<td>Anna T</td>
+</tr>
+<tr>
+<td>Session de travail : tableau question → information → méthode → responsable ; présentation lundi prochain</td>
+<td>Anna T, Celine V</td>
+</tr>
+<tr>
+<td>Soumettre les questions de la consultation à l'appel communautaire du 24 septembre</td>
+<td>Daniel T</td>
+</tr>
+<tr>
+<td>Créer le groupe de travail gouvernance dans Humans dès que le module sera livré ; supprimer ensuite le département gouvernance</td>
+<td>Peter D / Celine V</td>
+</tr>
+<tr>
+<td>Soutenir le programme de l'ALM afin que les sessions gouvernance disposent de suffisamment de temps</td>
+<td>Celine V</td>
+</tr>
+<tr>
+<td>Soulever à nouveau la proposition sur le quorum lorsque la conception organisationnelle aura progressé</td>
+<td>Pablo V</td>
+</tr>
+</tbody>
+</table></div>
+                    </div>
+                </div>
+
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanze tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+
+                    <div class="attendees">
+                        <strong>Presenti (videochiamata): Celine V (facilitatrice), Daniel T, Anna T, Pablo V. Hanno giustificato l'assenza: Peter K, Peter D.</strong>
+
+                    </div>
+
+                    <div class="meeting-content">
+<p>La quinta riunione sulla governance, e la prima da quando il gruppo si è registrato come gruppo di lavoro nel quadro del consiglio. Pablo V ha partecipato per la prima volta, per vedere di cosa si occupa il gruppo ed evitare duplicazioni di lavoro. La sessione ha chiuso il cerchio sul voto sulle date dell'evento, ha concordato un messaggio su tutti i canali alla comunità più ampia, ha risolto la questione del destino del vecchio «dipartimento» governance e — nella sua parte più sostanziale — ha definito come il nuovo <strong>gruppo di lavoro sul disegno organizzativo</strong> consulterà la comunità su che cosa siano effettivamente i dipartimenti, i coordinatori e il consiglio, in tempo per l'Annual Leadership Meeting (ALM).</p>
+<h2>1. Voto sulle date dell'evento: stato</h2>
+<ul>
+<li>Il voto degli asociados sulle date dell'evento 2027 è aperto; l'Assemblea Generale in cui si chiude è <strong>giovedì 17 settembre</strong>, nel consueto orario della community call. Daniel T ha confermato che nessuna email dedicata ad annunciare l'AG era ancora stata inviata agli asociados — è stata annunciata per circa sei settimane sul sondaggio, sulla pagina delle date dell'evento e durante le community call, e lui ha chiuso l'ultima community call dicendo che la successiva sarebbe stata l'AG — e invierà l'annuncio formale questa settimana.</li>
+<li>Daniel T ha esposto la posizione del gruppo sulla procedura: questo primo voto si trova in una zona grigia su alcuni punti formali (un socio attualmente non può modificare il proprio voto prima dell'assemblea, cosa che le regole sembrano richiedere; l'annuncio avrebbe potuto essere più formale). Per questa decisione, ciò che conta è che la comunità sia stata coinvolta e che la dimensione sociale del processo abbia funzionato, e il consiglio riconosce il risultato. Per un'elezione del consiglio o una modifica dello statuto ogni requisito formale deve essere soddisfatto, e questo voto è l'occasione per individuare e correggere le lacune in anticipo. Peter D sta sviluppando un modulo di voto su Humans conforme a questo standard.</li>
+<li>La consegna dell'email di voto è stata verificata durante la call: Pablo V l'ha ricevuta (11 settembre) e ha votato durante la riunione; due apparenti mancate consegne sono state spiegate (un indirizzo cambiato; un socio che aveva già votato tramite il link di prova prima dell'invio). Il sistema riporta tutte le email come inviate.</li>
+<li>Punto chiuso; il passo rimanente è la pubblicazione del risultato.</li>
+</ul>
+<h2>2. Informare tutta la comunità, non solo gli asociados</h2>
+<ul>
+<li>A Pablo V è stato chiesto da diverse persone — alcune che avrebbero i requisiti per diventare asociados, altre no — che cosa stia succedendo con le date. Ha proposto un messaggio a <strong>tutti, su tutti i canali</strong> (email, Discord, Telegram, WhatsApp): che cosa si sta decidendo e quando, un ringraziamento a chi ha votato, chi ha diritto di voto e come fare domanda per il futuro. Molte persone non seguono le community call, e un messaggio facile da inoltrare potrebbe raggiungere i builder e altri che non hanno mai fatto domanda.</li>
+<li>Celine V ha segnalato la questione dei tempi: non è possibile accettare domande per questo voto — Daniel T ha aggiunto che la lista dei votanti è in linea di principio fissata nel momento in cui un voto si apre — quindi l'invito all'azione è <em>«se vuoi partecipare in futuro a decisioni come questa, fai domanda come asociado»</em>, citando i criteri di ammissibilità pubblicati e con il link al regolamento completo.</li>
+<li><strong>Concordato:</strong> Celine V redige il messaggio (adattato per ciascun canale); Pablo V lo invia — ha i diritti di pubblicazione sui canali ufficiali WhatsApp e Telegram e si occuperà anche dell'email, per alleggerire il carico di Daniel T. Daniel T, che al momento ha poca capacità disponibile, pubblicherà qualsiasi cosa gli venga consegnata ma ha chiesto di non essere incaricato di redigere testi.</li>
+<li>Una newsletter separata che spieghi la differenza tra asociado e colaborador (originariamente un suggerimento di Peter K) resta nel backlog come punto generale di governance.</li>
+</ul>
+<h2>3. «Dipartimento» governance vs gruppo di lavoro sulla governance</h2>
+<ul>
+<li>Celine V ha presentato la registrazione del gruppo di lavoro sulla governance (Ben D può approvarla direttamente; non richiede un voto del consiglio). Il vecchio <em>team</em> governance su Humans esiste ancora, con un ruolo di coordinatore associato, dal quale Kate B ha chiesto di ritirarsi.</li>
+<li>Anna T ha spiegato la distinzione ora in uso: i <strong>team/dipartimenti</strong> su Humans riguardano l'organizzazione dell'evento (consenso, welfare, Cantina e così via); i <strong>gruppi di lavoro</strong>, come definiti dal consiglio, si formano attorno a una questione specifica, operano per circa due-sei mesi tra un evento e l'altro e consegnano una proposta alla comunità. La governance è lavoro dell'associazione, non operatività dell'evento, quindi un «dipartimento» governance non ha più senso. Celine V: il gruppo di lavoro sulla governance è anche il vivaio da cui nascono gruppi di lavoro più mirati (quello sulle date dell'evento è stato il primo).</li>
+<li><strong>Concordato:</strong> il dipartimento governance viene soppresso — una volta attiva la funzionalità per i gruppi di lavoro di Peter D su Humans (prevista entro una o due settimane), il gruppo di lavoro viene creato lì, con il proprio drive e la propria mailing list, e il dipartimento viene eliminato. Nessuna fretta di eliminarlo prima; nel frattempo non sarà nominato alcun coordinatore per il dipartimento. Le definizioni dovrebbero essere spiegate alla comunità all'ALM, dove sono nuove per la maggior parte delle persone.</li>
+<li>Pablo V ha chiesto se i dipartimenti stessi abbiano già una definizione. Non ce l'hanno — ed è questo il compito del gruppo di lavoro sul disegno organizzativo.</li>
+</ul>
+<h2>4. Gruppo di lavoro sul disegno organizzativo: come consultare</h2>
+<p>Anna T ha creato un gruppo di lavoro sulla struttura organizzativa, con un documento di lavoro che elenca le domande. La discussione ha riguardato <em>come chiedere</em>, non quali siano le risposte.</p>
+<ul>
+<li><strong>L'impostazione di Anna T:</strong> il compito del gruppo in questa fase è progettare la consultazione, non redigere i ruoli. Non vuole che quattro persone in una call definiscano i ruoli del consiglio e dei coordinatori; vuole che quelle definizioni emergano dal dialogo con tutti nella comunità su ciò di cui hanno bisogno. Il compito nel registro RAID «redigere il ruolo del consiglio e il ruolo del coordinatore» è prematuro.</li>
+<li><strong>Pablo V</strong> si è detto d'accordo e ha offerto domande, non risposte — come viene nominato un coordinatore, chi decide il budget di un dipartimento, quali sono il processo di rimozione e la durata predefinita degli incarichi. Questi aspetti sono rigorosamente definiti per un membro del consiglio, del tutto liberi per un gruppo di lavoro, e un dipartimento ha bisogno di qualcosa di intermedio. Aggiungerà le sue domande al documento in modo asincrono (Anna T lo ha aperto alla modifica durante la call).</li>
+<li><strong>Daniel T</strong> ha osservato che il lavoro sulle date dell'evento ha, involontariamente, sperimentato i metodi: un sondaggio che combina rapide domande a scelta multipla con un campo a testo libero (le risposte a testo libero sono state ricche, e possono essere analizzate su larga scala per temi e correlazioni); community call generali; una community call mirata sull'argomento; e sessioni di lavoro più approfondite con le persone che svolgono il lavoro. Nessun metodo da solo è sufficiente; la stessa combinazione, iterata, è un ragionevole schema di partenza. Per i coordinatori in particolare, una sola call con tutti i coordinatori anziché colloqui individuali.</li>
+<li><strong>Proposta di Celine V, adottata:</strong> prima raccogliere tutte le domande (disegno organizzativo — consiglio, gruppi di lavoro, dipartimenti, l'ambito della coordinatrice della produzione; e selezione/deselezione), raggrupparle per tipo e, per ciascun gruppo, decidere chi consultare e come — alcune tramite sondaggio, alcune intervistando un campione di coordinatori, alcune solo all'ALM. Portare i dati e le opzioni all'ALM per il giro finale e una decisione, affinché il risultato abbia accettazione. Daniel T ha aggiunto: sottoporre le domande stesse alla comunità e chiedere che cos'altro andrebbe chiesto — un argomento per la community call successiva all'AG (giovedì 24 settembre).</li>
+<li><strong>Di che cosa ha bisogno l'ALM.</strong> Celine V: proposte solide e ben ragionate, con una o due domande aperte ciascuna, quindi discussione e voto — non un dibattito senza fine. L'esito ideale per Anna T: una descrizione scritta di ogni ruolo (coordinatore, consiglio, gruppo di lavoro), l'impegno di tempo richiesto e dove vengono prese le decisioni — eventualmente con un breve video «benvenuti nell'organizzazione» e diagrammi per i nuovi arrivati.</li>
+<li><strong>Coordinatori: quanti?</strong> Nessuno lo sa. Il titolo di coordinatore si è moltiplicato su Humans (in un'area tutti e tre i leads lo portano), quindi le call dei coordinatori sono diventate casuali. Daniel T: si desidera un certo coordinamento centrale — un gruppo con una buona visione d'insieme dell'evento che dialoga al proprio interno, non necessariamente gerarchico — e una riunione con più di otto-dieci persone diventa ingestibile, il che depone a favore dell'accorpamento di alcuni dipartimenti (build/power/LNT/strike; ticketing/gates/greeters, per esempio — ogni raggruppamento è discutibile). Anna T: i dipartimenti differiscono in ciò che vogliono — alcune aree vogliono essere tutte alla pari, altre hanno chiesto un unico lead perché le decisioni non venivano prese — e questo spetta a loro; ciò che serve è visibilità sull'andamento della pianificazione, verso un sistema o una persona, anziché far ricadere l'onere su uno o due individui. Daniel T ha ipotizzato che il livello dei coordinatori possa essere il luogo in cui l'attuale ruolo della coordinatrice della produzione si disperde, con i dipartimenti organizzati al di sotto. Anna T stabilirà, con Daniela, quanti ruoli di livello meta-lead avesse la struttura precedente, come base per decidere quanti coordinatori intervistare.</li>
+<li><strong>Altri eventi.</strong> Consultare eventi comparabili e chiedere consiglio (già nel documento di lavoro); Peter D ha offerto documenti su come si organizza Borderland — dimensioni simili, sebbene abbia fama di essere lento e burocratico, quindi l'obiettivo è restare più leggeri; Burning Man è un tipo di organizzazione diverso, in gran parte retribuita.</li>
+<li><strong>Prossimi passi:</strong> Anna T e Celine V tengono una sessione di lavoro questa settimana per trasformare l'elenco delle domande in una tabella <em>domanda → informazioni necessarie → modalità di raccolta → responsabile</em>, e la presentano alla prossima riunione del lunedì del gruppo. L'ALM è a circa cinque settimane di distanza; la consultazione inizia entro due settimane. Anna T parlerà anche con Daniela e Frank (disponibile a essere consultato; nessuna capacità per call o interviste). Celine V sta supportando Daniela con il programma dell'ALM affinché queste sessioni abbiano tempo a sufficienza.</li>
+</ul>
+<h2>5. Selezione e deselezione — e il ruolo del consiglio</h2>
+<ul>
+<li>Il punto di Anna T: i membri del consiglio sono il caso <em>chiaro</em> — eletti, con un processo definito. La lacuna riguarda ogni altro ruolo. I ruoli sono passati di mano in modo informale, senza che alla comunità fosse comunicato che il ruolo esiste o in che cosa consiste, e senza alcun processo di feedback; ha citato il proprio arrivo come coordinatrice Participant &amp; Wellness («sono entrata e ho detto "dovrei?", e nessuno ha detto di fermarmi») come esempio di un processo che non esiste.</li>
+<li>Pablo V ha chiesto se il gruppo si occupi della prossima elezione del consiglio. Risposta: il <em>processo elettorale</em> è interamente specificato nello statuto e non ha bisogno di essere ridefinito, a parte un ritocco sul quorum (§6). Ciò che manca, come ha detto Daniel T, è una definizione di che cosa faccia effettivamente un membro del consiglio — responsabilità, carico di lavoro — su cui le persone hanno opinioni molto diverse. Pablo V: non strettamente necessario, ma un insieme pubblicato di aspettative incoraggerebbe più persone a candidarsi.</li>
+<li><strong>Concordato:</strong> l'ALM affronta il disegno organizzativo (che cosa fanno il consiglio, i gruppi di lavoro e i dipartimenti) <em>prima</em> della selezione/deselezione, in modo che le definizioni dei ruoli esistano prima di qualsiasi invito a candidarsi per un seggio nel consiglio. Anna T: questo dà urgenza al lavoro — una futura elezione dovrebbe svolgersi con candidati che sanno per che cosa si candidano. Le definizioni dei ruoli non possono realisticamente arrivare prima della fine dell'ALM.</li>
+<li>Lo schema di Daniel T per il lavoro del gruppo: si stanno accompagnando due tipi di decisione — quello statutario/procedurale (elezioni, definizioni dei ruoli, procedure), che deve essere rigoroso, e il livello sociale, che decide se le persone aderiscono effettivamente a una struttura. Anche i sistemi fortemente vincolati da regole seguono il livello sociale quando questo si muove (il fork di Ethereum è stato il suo esempio), quindi il consenso della comunità è una componente primaria, non un ripensamento. Celine V: da qui il formato dell'ALM — opzioni informate, poi decisioni democratiche sui punti realmente aperti (gli obblighi legali del consiglio non lo sono).</li>
+</ul>
+<h2>6. Proposta sul quorum (backlog)</h2>
+<ul>
+<li>Pablo V ha redatto un ritocco allo statuto: con il consiglio al massimo di tredici membri o vicino a esso, «la metà più uno» rende il quorum quasi irraggiungibile e rischia lo stallo (il suggerimento precedente degli avvocati era che una terza riunione dopo due senza quorum non richieda quorum; l'alternativa di Daniel T è che i quattro titolari delle cariche nominate, se presenti insieme, costituiscano anch'essi il quorum). Daniel T: una singola elezione sostitutiva non cambierebbe la dimensione del consiglio; qualsiasi modifica dello statuto che ampli il consiglio dovrebbe portare con sé la correzione del quorum, e dovrebbe seguire la definizione del ruolo del consiglio. <strong>Concordato:</strong> rinviata al backlog della governance; Pablo V la riproporrà quando il lavoro sul disegno organizzativo sarà progredito.</li>
+</ul>
+<hr />
+<h2>Decisioni</h2>
+<ul>
+<li>Punto sullo stato del voto chiuso; l'annuncio formale dell'AG sarà inviato questa settimana.</li>
+<li>Messaggio su tutti i canali a tutta la comunità sulla decisione sulle date e sui requisiti per diventare asociado: Celine V redige, Pablo V invia.</li>
+<li>Dipartimento governance soppresso a favore del gruppo di lavoro sulla governance, una volta attiva la funzionalità per i gruppi di lavoro su Humans.</li>
+<li>Consultazione sul disegno organizzativo progettata domanda per domanda (sondaggio / interviste ai coordinatori / ALM), con l'ALM come momento decisionale; le definizioni dei ruoli precedono qualsiasi invito a candidarsi per un seggio nel consiglio.</li>
+<li>Proposta sul quorum di Pablo V rinviata al backlog.</li>
+</ul>
+<h2>Azioni da intraprendere</h2>
+<div class="table-wrap"><table class="action-table">
+<thead>
+<tr>
+<th>Azione</th>
+<th>Responsabile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inviare l'annuncio formale dell'Assemblea Generale agli asociados</td>
+<td>Daniel T</td>
+</tr>
+<tr>
+<td>Redigere il messaggio alla comunità su tutti i canali (per ciascun canale)</td>
+<td>Celine V</td>
+</tr>
+<tr>
+<td>Inviarlo (email, WhatsApp, Telegram, Discord)</td>
+<td>Pablo V</td>
+</tr>
+<tr>
+<td>Aggiungere domande al documento sul disegno organizzativo</td>
+<td>Pablo V, tutti</td>
+</tr>
+<tr>
+<td>Stabilire il numero di ruoli di livello meta-lead nella struttura precedente (con Daniela)</td>
+<td>Anna T</td>
+</tr>
+<tr>
+<td>Sessione di lavoro: tabella domanda → informazioni → metodo → responsabile; presentare lunedì prossimo</td>
+<td>Anna T, Celine V</td>
+</tr>
+<tr>
+<td>Sottoporre le domande della consultazione alla community call del 24 settembre</td>
+<td>Daniel T</td>
+</tr>
+<tr>
+<td>Creare il gruppo di lavoro sulla governance su Humans quando il modulo sarà rilasciato; poi eliminare il dipartimento governance</td>
+<td>Peter D / Celine V</td>
+</tr>
+<tr>
+<td>Supportare il programma dell'ALM affinché le sessioni sulla governance abbiano tempo a sufficienza</td>
+<td>Celine V</td>
+</tr>
+<tr>
+<td>Riproporre la proposta sul quorum quando il disegno organizzativo sarà progredito</td>
+<td>Pablo V</td>
+</tr>
+</tbody>
+</table></div>
+                    </div>
+                </div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Bei Diskrepanzen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+
+                    <div class="attendees">
+                        <strong>Anwesend (Videokonferenz): Celine V (Moderatorin), Daniel T, Anna T, Pablo V. Entschuldigt: Peter K, Peter D.</strong>
+
+                    </div>
+
+                    <div class="meeting-content">
+<p>Die fünfte Governance-Sitzung und die erste, seit sich die Gruppe im Rahmen des Vorstands als Arbeitsgruppe registriert hat. Pablo V nahm zum ersten Mal teil, um zu sehen, was die Gruppe tut, und Doppelarbeit zu vermeiden. Die Sitzung schloss den Kreis zur Abstimmung über die Veranstaltungsdaten, vereinbarte eine Nachricht über alle Kanäle an die breitere Community, klärte, was mit der alten Governance-&bdquo;Abteilung&ldquo; geschieht, und erarbeitete &mdash; als ihren inhaltlichen Kern &mdash;, wie die neue <strong>Arbeitsgruppe Organisationsdesign</strong> die Community dazu befragen wird, was Abteilungen, Koordinatoren und der Vorstand eigentlich sind, rechtzeitig zum Annual Leadership Meeting (ALM).</p>
+<h2>1. Abstimmung über die Veranstaltungsdaten: Stand</h2>
+<ul>
+<li>Die Abstimmung der asociados über die Veranstaltungsdaten 2027 ist eröffnet; die Generalversammlung, bei der sie schließt, findet am <strong>Donnerstag, 17. September</strong> zur üblichen Zeit des Community-Calls statt. Daniel T bestätigte, dass noch keine eigene E-Mail zur Ankündigung der Generalversammlung an die asociados gegangen ist &mdash; sie ist seit etwa sechs Wochen in der Umfrage, auf der Seite zu den Veranstaltungsdaten und bei Community-Calls angekündigt, und er hatte den letzten Community-Call mit dem Hinweis geschlossen, der nächste werde die Generalversammlung sein &mdash; und er wird die förmliche Ankündigung diese Woche versenden.</li>
+<li>Daniel T legte die Position der Gruppe zum Verfahren dar: Diese erste Abstimmung befindet sich in einigen formalen Punkten in einer Grauzone (ein Mitglied kann seine Stimme derzeit nicht vor der Versammlung ändern, was die Regeln offenbar verlangen; die Ankündigung hätte förmlicher sein können). Für diese Entscheidung zählt, dass die Community eingebunden wurde, die soziale Seite des Prozesses funktioniert hat und der Vorstand das Ergebnis anerkennt. Bei einer Vorstandswahl oder einer Statutenänderung muss jede formale Anforderung erfüllt sein, und diese Abstimmung ist die Gelegenheit, die Lücken vorher zu finden und zu schließen. Peter D baut ein Humans-Abstimmungsmodul nach diesem Standard.</li>
+<li>Die Zustellung der Abstimmungs-E-Mail wurde in der Sitzung überprüft: Pablo V hat sie erhalten (11. September) und während der Sitzung abgestimmt; zwei scheinbare Nichtzustellungen wurden geklärt (eine geänderte Adresse; ein Mitglied, das bereits vor dem Versand über den Testlink abgestimmt hatte). Das System meldet alle E-Mails als versendet.</li>
+<li>Punkt abgeschlossen; der verbleibende Schritt ist die Veröffentlichung des Ergebnisses.</li>
+</ul>
+<h2>2. Die gesamte Community informieren, nicht nur die asociados</h2>
+<ul>
+<li>Pablo V ist von mehreren Menschen &mdash; einige davon würden die Voraussetzungen als asociados erfüllen, andere nicht &mdash; gefragt worden, was mit den Terminen geschieht. Er schlug eine Nachricht an <strong>alle, über jeden Kanal</strong> (E-Mail, Discord, Telegram, WhatsApp) vor: was entschieden wird und wann, Dank an diejenigen, die abgestimmt haben, wer berechtigt ist und wie man sich für die Zukunft bewerben kann. Viele Menschen verfolgen die Community-Calls nicht, und eine leicht weiterzuleitende Nachricht könnte Builder und andere erreichen, die sich nie beworben haben.</li>
+<li>Celine V wies auf den Zeitpunkt hin: Für diese Abstimmung können keine Anträge mehr angenommen werden &mdash; Daniel T ergänzte, dass die Wählerliste grundsätzlich in dem Moment feststeht, in dem eine Abstimmung eröffnet wird &mdash;, sodass der Aufruf lautet: <em>&bdquo;Wenn du dich künftig an Entscheidungen wie dieser beteiligen möchtest, bewirb dich als asociado&ldquo;</em>, unter Zitierung der veröffentlichten Zulassungskriterien und mit Link auf die vollständige Regelung.</li>
+<li><strong>Vereinbart:</strong> Celine V entwirft die Nachricht (je Kanal angepasst); Pablo V versendet sie &mdash; er hat Posting-Rechte in den offiziellen WhatsApp- und Telegram-Kanälen und wird auch die E-Mail übernehmen, um Daniel T zu entlasten. Daniel T, der derzeit wenig Kapazität hat, wird alles posten, was ihm übergeben wird, bat aber darum, nicht mit dem Verfassen beauftragt zu werden.</li>
+<li>Ein separater Newsletter, der asociado und colaborador erklärt (ursprünglich Peter Ks Vorschlag), bleibt als allgemeiner Governance-Punkt im Backlog.</li>
+</ul>
+<h2>3. Governance-&bdquo;Abteilung&ldquo; vs. Governance-Arbeitsgruppe</h2>
+<ul>
+<li>Celine V hat die Registrierung der Governance-Arbeitsgruppe eingereicht (Ben D kann sie direkt genehmigen; eine Vorstandsabstimmung ist nicht erforderlich). Das alte Governance-<em>Team</em> auf Humans existiert weiterhin mit einer daran geknüpften Koordinationsrolle, von der Kate B gebeten hat, zurücktreten zu dürfen.</li>
+<li>Anna T erläuterte die nun geltende Unterscheidung: <strong>Teams/Abteilungen</strong> auf Humans dienen der Durchführung der Veranstaltung (Consent, Welfare, Cantina und so weiter); <strong>Arbeitsgruppen</strong>, wie der Vorstand sie definiert hat, bilden sich um eine konkrete Frage, laufen etwa zwei bis sechs Monate zwischen den Veranstaltungen und übergeben der Community einen Vorschlag. Governance ist Vereinsarbeit, nicht Veranstaltungsbetrieb, sodass eine Governance-&bdquo;Abteilung&ldquo; keinen Sinn mehr ergibt. Celine V: Die Governance-Arbeitsgruppe ist auch die Keimzelle, aus der engere Arbeitsgruppen hervorgehen (die Veranstaltungsdaten waren die erste).</li>
+<li><strong>Vereinbart:</strong> Die Governance-Abteilung wird aufgelöst &mdash; sobald Peter Ds Arbeitsgruppen-Funktionalität in Humans live ist (voraussichtlich innerhalb von ein bis zwei Wochen), wird die Arbeitsgruppe dort angelegt, mit eigenem Drive und eigener Mailingliste, und die Abteilung wird gelöscht. Keine Eile mit der Löschung vorher; in der Zwischenzeit wird für die Abteilung kein Koordinator nominiert. Die Definitionen sollten der Community beim ALM erklärt werden, wo sie für die meisten neu sind.</li>
+<li>Pablo V fragte, ob Abteilungen selbst schon eine Definition haben. Das haben sie nicht &mdash; das ist die Aufgabe der Arbeitsgruppe Organisationsdesign.</li>
+</ul>
+<h2>4. Arbeitsgruppe Organisationsdesign: Wie befragen?</h2>
+<p>Anna T hat eine Arbeitsgruppe zur Organisationsstruktur eingerichtet, mit einem Arbeitsdokument, das die Fragen auflistet. Die Diskussion drehte sich darum, <em>wie gefragt wird</em>, nicht darum, was die Antworten sind.</p>
+<ul>
+<li><strong>Anna Ts Rahmung:</strong> Die Aufgabe der Gruppe in dieser Phase ist es, die Befragung zu gestalten, nicht die Rollen zu entwerfen. Sie möchte nicht, dass vier Personen in einem Call die Rollen von Vorstand und Koordinatoren definieren; sie möchte, dass diese Definitionen aus Gesprächen mit allen in der Community darüber entstehen, was sie brauchen. Die Aufgabe im RAID-Log &bdquo;Vorstandsrolle und Koordinatorenrolle entwerfen&ldquo; ist verfrüht.</li>
+<li><strong>Pablo V</strong> stimmte zu und bot Fragen an, keine Antworten &mdash; wie ein Koordinator ernannt wird, wer über das Budget einer Abteilung entscheidet, wie das Abberufungsverfahren und die Standardamtszeiten aussehen. Diese Dinge sind für ein Vorstandsmitglied eng definiert, für eine Arbeitsgruppe völlig frei, und eine Abteilung braucht etwas dazwischen. Er wird seine Fragen asynchron in das Dokument einfügen (Anna T hat es während des Calls zur Bearbeitung freigegeben).</li>
+<li><strong>Daniel T</strong> merkte an, dass die Arbeit zu den Veranstaltungsdaten unbeabsichtigt die Methoden erprobt hat: eine Umfrage, die schnelle Multiple-Choice-Fragen mit einem Freitextfeld kombiniert (die Freitextantworten waren ergiebig und lassen sich in großem Umfang auf Themen und Zusammenhänge auswerten); allgemeine Community-Calls; ein auf das Thema fokussierter Community-Call; und vertiefte Arbeitssitzungen mit den Menschen, die die Arbeit machen. Keine einzelne Methode reicht aus; dieselbe Mischung, iteriert, ist ein vernünftiges Ausgangsmuster. Speziell für Koordinatoren: ein Call mit allen Koordinatoren statt Einzelgespräche.</li>
+<li><strong>Celine Vs Vorschlag, angenommen:</strong> Zuerst alle Fragen sammeln (Organisationsdesign &mdash; Vorstand, Arbeitsgruppen, Abteilungen, der Aufgabenbereich der Produktionskoordinatorin; sowie Auswahl/Abwahl), sie nach Typ bündeln und für jedes Bündel entscheiden, wer wie befragt wird &mdash; manches per Umfrage, manches durch Interviews mit einer Auswahl von Koordinatoren, manches nur beim ALM. Die Daten und die Optionen zum ALM für die letzte Runde und eine Entscheidung mitbringen, damit das Ergebnis Akzeptanz findet. Daniel T ergänzte: die Fragen selbst der Community vorlegen und fragen, was noch gefragt werden sollte &mdash; ein Thema für den Community-Call nach der Generalversammlung (Donnerstag, 24. September).</li>
+<li><strong>Was das ALM braucht.</strong> Celine V: starke, durchdachte Vorschläge mit jeweils ein oder zwei offenen Fragen, dann Diskussion und Abstimmung &mdash; keine ergebnisoffene Debatte. Anna Ts ideales Ergebnis: eine schriftliche Beschreibung jeder Rolle (Koordinator, Vorstand, Arbeitsgruppe), des Zeitaufwands und der Orte, an denen Entscheidungen getroffen werden &mdash; möglicherweise mit einem kurzen Video &bdquo;Willkommen in der Organisation&ldquo; und Diagrammen für Neuankömmlinge.</li>
+<li><strong>Koordinatoren: wie viele?</strong> Niemand weiß es. Der Titel Koordinator hat sich auf Humans vervielfacht (in einem Bereich tragen ihn alle drei Leads), sodass Koordinatoren-Calls beliebig geworden sind. Daniel T: Eine gewisse zentrale Koordination ist erwünscht &mdash; eine Gruppe mit gutem Überblick über die Veranstaltung, die miteinander spricht, nicht unbedingt hierarchisch &mdash;, und eine Sitzung mit mehr als acht bis zehn Personen wird unhandlich, was für die Zusammenlegung einiger Abteilungen spricht (zum Beispiel Build/Power/LNT/Strike; Ticketing/Gates/Greeters &mdash; jede Gruppierung ist diskutabel). Anna T: Die Abteilungen unterscheiden sich darin, was sie wollen &mdash; einige Bereiche wollen alle gleichgestellt sein, andere haben um einen einzelnen Lead gebeten, weil Entscheidungen nicht getroffen wurden &mdash;, und das ist ihre Sache; gebraucht wird Sichtbarkeit darüber, wie die Planung läuft, gegenüber einem System oder einer Person, statt dass die Last auf ein oder zwei Einzelne fällt. Daniel T brachte den Gedanken ein, dass die Koordinatorenebene der Ort sein könnte, an dem sich die derzeitige Rolle der Produktionskoordinatorin verteilt, mit darunter angeordneten Abteilungen. Anna T wird mit Daniela ermitteln, wie viele Rollen auf Meta-Lead-Ebene die bisherige Struktur hatte, als Grundlage dafür, wie viele Koordinatoren interviewt werden.</li>
+<li><strong>Andere Veranstaltungen.</strong> Vergleichbare Veranstaltungen konsultieren und Rat einholen (bereits im Arbeitsdokument); Peter D hat Dokumente dazu angeboten, wie sich Borderland organisiert &mdash; ähnliche Größe, wenn auch dem Vernehmen nach langsam und bürokratisch, sodass das Ziel ist, leichter zu bleiben; Burning Man ist eine andere Art von Organisation, größtenteils bezahlt.</li>
+<li><strong>Nächste Schritte:</strong> Anna T und Celine V halten diese Woche eine Arbeitssitzung ab, um die Fragenliste in eine Tabelle <em>Frage → benötigte Information → Erhebungsmethode → Verantwortliche Person</em> zu überführen, und stellen sie bei der nächsten Montagssitzung der Gruppe vor. Das ALM ist etwa fünf Wochen entfernt; die Befragung beginnt innerhalb von zwei Wochen. Anna T wird außerdem mit Daniela und Frank sprechen (gern zu konsultieren; keine Kapazität für Calls oder Interviews). Celine V unterstützt Daniela bei der ALM-Tagesordnung, damit diese Sessions genügend Zeit erhalten.</li>
+</ul>
+<h2>5. Auswahl und Abwahl &mdash; und die Rolle des Vorstands</h2>
+<ul>
+<li>Anna Ts Punkt: Vorstandsmitglieder sind der <em>klare</em> Fall &mdash; gewählt, mit einem definierten Verfahren. Die Lücke ist jede andere Rolle. Rollen haben informell den Besitzer gewechselt, ohne dass der Community mitgeteilt wurde, dass die Rolle existiert oder was sie beinhaltet, und ohne Feedbackprozess; sie nannte ihren eigenen Einstieg als Koordinatorin für Participant &amp; Wellness (&bdquo;Ich bin hereinmarschiert und habe gesagt: ‚Soll ich?‘, und niemand hat Stopp gesagt&ldquo;) als Beispiel für ein Verfahren, das nicht existiert.</li>
+<li>Pablo V fragte, ob die Gruppe die nächste Vorstandswahl abdeckt. Antwort: Das <em>Wahlverfahren</em> ist in den Statuten vollständig festgelegt und muss nicht neu definiert werden, abgesehen von einer Anpassung des Quorums (§6). Was fehlt, ist, wie Daniel T es ausdrückte, eine Definition dessen, was ein Vorstandsmitglied tatsächlich tut &mdash; Verantwortlichkeiten, Arbeitsaufwand &mdash;, worüber die Ansichten sehr weit auseinandergehen. Pablo V: nicht zwingend erforderlich, aber veröffentlichte Erwartungen würden mehr Menschen zur Bewerbung ermutigen.</li>
+<li><strong>Vereinbart:</strong> Das ALM behandelt das Organisationsdesign (was Vorstand, Arbeitsgruppen und Abteilungen tun) <em>vor</em> Auswahl/Abwahl, damit Rollendefinitionen vorliegen, bevor zur Bewerbung um einen Vorstandssitz eingeladen wird. Anna T: Das verleiht der Arbeit Dringlichkeit &mdash; eine künftige Wahl sollte stattfinden, wenn die Kandidaten wissen, wofür sie sich bewerben. Die Rollendefinitionen können realistischerweise nicht vor dem Ende des ALM vorliegen.</li>
+<li>Daniel Ts Rahmen für die Arbeit der Gruppe: Es werden zwei Arten von Entscheidungen begleitet &mdash; die statutarisch-verfahrensbezogene Art (Wahlen, Rollendefinitionen, Verfahren), die rigoros sein muss, und die soziale Ebene, die darüber entscheidet, ob die Menschen eine Struktur tatsächlich mittragen. Selbst stark regelgebundene Systeme folgen der sozialen Ebene, wenn sie sich bewegt (der Ethereum-Fork war sein Beispiel), sodass der Rückhalt der Community ein primärer Bestandteil ist, kein nachträglicher Gedanke. Celine V: daher das ALM-Format &mdash; fundierte Optionen, dann demokratische Entscheidungen zu den Punkten, die wirklich offen sind (die rechtlichen Pflichten des Vorstands sind es nicht).</li>
+</ul>
+<h2>6. Quorum-Vorschlag (Backlog)</h2>
+<ul>
+<li>Pablo V hat eine Anpassung der Statuten entworfen: Mit einem Vorstand an oder nahe seiner Höchstgröße von dreizehn macht &bdquo;die Hälfte plus eins&ldquo; das Quorum nahezu unerreichbar und birgt die Gefahr einer Blockade (der frühere Vorschlag der Anwälte war, dass eine dritte Sitzung nach zwei beschlussunfähigen kein Quorum benötigt; Daniel Ts Alternative ist, dass die vier namentlich benannten Amtsträger gemeinsam anwesend ebenfalls das Quorum bilden). Daniel T: Eine einzelne Ersatzwahl würde die Größe des Vorstands nicht verändern; jede Statutenänderung, die den Vorstand vergrößert, sollte die Quorum-Korrektur mit sich führen und auf die Definition der Vorstandsrolle folgen. <strong>Vereinbart:</strong> im Governance-Backlog geparkt; Pablo V wird es erneut einbringen, wenn die Arbeit am Organisationsdesign vorangekommen ist.</li>
+</ul>
+<hr />
+<h2>Entscheidungen</h2>
+<ul>
+<li>Punkt zum Stand der Abstimmung abgeschlossen; die förmliche Ankündigung der Generalversammlung geht diese Woche hinaus.</li>
+<li>Nachricht über alle Kanäle an die gesamte Community zur Terminentscheidung und zur Berechtigung als asociado: Celine V entwirft, Pablo V versendet.</li>
+<li>Die Governance-Abteilung wird zugunsten der Governance-Arbeitsgruppe aufgelöst, sobald die Arbeitsgruppen-Funktionalität in Humans live ist.</li>
+<li>Die Befragung zum Organisationsdesign wird je Frage gestaltet (Umfrage / Koordinatoren-Interviews / ALM), mit dem ALM als Entscheidungspunkt; Rollendefinitionen gehen jeder Einladung zur Bewerbung um einen Vorstandssitz voraus.</li>
+<li>Pablo Vs Quorum-Vorschlag im Backlog geparkt.</li>
+</ul>
+<h2>Aufgaben</h2>
+<div class="table-wrap"><table class="action-table">
+<thead>
+<tr>
+<th>Aufgabe</th>
+<th>Verantwortlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Die förmliche Ankündigung der Generalversammlung an die asociados senden</td>
+<td>Daniel T</td>
+</tr>
+<tr>
+<td>Die Community-Nachricht für alle Kanäle entwerfen (je Kanal)</td>
+<td>Celine V</td>
+</tr>
+<tr>
+<td>Sie versenden (E-Mail, WhatsApp, Telegram, Discord)</td>
+<td>Pablo V</td>
+</tr>
+<tr>
+<td>Fragen in das Dokument zum Organisationsdesign einfügen</td>
+<td>Pablo V, alle</td>
+</tr>
+<tr>
+<td>Die Anzahl der Rollen auf Meta-Lead-Ebene in der bisherigen Struktur ermitteln (mit Daniela)</td>
+<td>Anna T</td>
+</tr>
+<tr>
+<td>Arbeitssitzung: Tabelle Frage → Information → Methode → Verantwortliche Person; am nächsten Montag vorstellen</td>
+<td>Anna T, Celine V</td>
+</tr>
+<tr>
+<td>Die Befragungsfragen beim Community-Call am 24. September vorlegen</td>
+<td>Daniel T</td>
+</tr>
+<tr>
+<td>Die Governance-Arbeitsgruppe in Humans anlegen, sobald das Modul verfügbar ist; danach die Governance-Abteilung löschen</td>
+<td>Peter D / Celine V</td>
+</tr>
+<tr>
+<td>Die ALM-Tagesordnung unterstützen, damit die Governance-Sessions genügend Zeit erhalten</td>
+<td>Celine V</td>
+</tr>
+<tr>
+<td>Den Quorum-Vorschlag erneut einbringen, wenn das Organisationsdesign vorangekommen ist</td>
+<td>Pablo V</td>
+</tr>
+</tbody>
+</table></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script src="../script.js"></script>
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>
