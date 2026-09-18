@@ -8,8 +8,8 @@
         .replaceAll('"', "&quot;")
         .replaceAll("'", "&#039;");
 
-    const evidenceVersion = "2026-09-08-data-refresh";
-    const napif2026End = "2026-09-08";
+    const evidenceVersion = "2026-09-18-data-refresh";
+    const napif2026End = "2026-09-18";
     const evidenceUrl = (path) => `${path}?v=${evidenceVersion}`;
     const numericValue = (value) => {
         const number = Number(value);
@@ -317,7 +317,7 @@
                 const barHeight = (value / ceiling) * plotHeight;
                 const x = groupLeft + levelIndex * (barWidth + gap);
                 const y = margin.top + plotHeight - barHeight;
-                const coverage = year === 2026 ? " (partial through 8 September)" : "";
+                const coverage = year === 2026 ? " (partial through 18 September)" : "";
                 return `<g${yearClass}>`
                     + `<rect x="${x}" y="${y}" width="${barWidth}" height="${barHeight}" rx="2" fill="${chartColors[level]}">`
                     + `<title>${year} ${label}: ${value} days${coverage}</title></rect>`
@@ -331,12 +331,12 @@
 
         target.innerHTML = `<svg class="evidence-chart" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="napif-total-title napif-total-desc">`
             + '<title id="napif-total-title">Alert-day totals by year and alert level</title>'
-            + '<desc id="napif-total-desc">Grouped bar chart comparing Green, Yellow, Orange, Red and Red Plus day totals for 2023 through 2026. The 2026 figures are partial through 8 September.</desc>'
+            + '<desc id="napif-total-desc">Grouped bar chart comparing Green, Yellow, Orange, Red and Red Plus day totals for 2023 through 2026. The 2026 figures are partial through 18 September.</desc>'
             + gridMarkup(ticks, ceiling, margin.left, margin.top, plotWidth, plotHeight)
             + `<line class="axis-line" x1="${margin.left}" y1="${margin.top + plotHeight}" x2="${margin.left + plotWidth}" y2="${margin.top + plotHeight}"></line>`
             + `<text class="axis-label" x="15" y="${margin.top + plotHeight / 2}" text-anchor="middle" transform="rotate(-90 15 ${margin.top + plotHeight / 2})">Published days</text>`
             + bars
-            + `<text x="${width - margin.right}" y="${height - 10}" text-anchor="end">* through 8 Sep</text>`
+            + `<text x="${width - margin.right}" y="${height - 10}" text-anchor="end">* through 18 Sep</text>`
             + "</svg>";
     }
 

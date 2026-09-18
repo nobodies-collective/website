@@ -42,7 +42,7 @@ NORMAL_START_YEAR = 1991
 NORMAL_END_YEAR = 2020
 NAPIF_START_MONTH_DAY = (6, 1)
 NAPIF_END_MONTH_DAY = (10, 15)
-NAPIF_PARTIAL_2026_END = dt.date(2026, 9, 8)
+NAPIF_PARTIAL_2026_END = dt.date(2026, 9, 18)
 OUTPUT_DIR = Path(__file__).resolve().parent.parent / "data" / "event-dates-2027"
 
 NAPIF_LEVEL_COLOURS = {
@@ -431,18 +431,32 @@ def napif_dates():
         yield from date_range(start, end)
 
 
-def build_napif_csvs(output_dir: Path, cache_dir: Path) -> None:
+def build_napif_csvs(output_dir: Path, cache_dir: Path, reuse_daily: bool = False) -> None:
     daily_rows = []
     levels = {}
 
     dates = list(napif_dates())
+    existing = {}
+    if reuse_daily:
+        with (output_dir / "napif-daily-2023-2026.csv").open(newline="") as source:
+            for row in csv.DictReader(source):
+                date = dt.date.fromisoformat(row["date"])
+                if date in existing or row["level"] not in NAPIF_LEVEL_COLOURS:
+                    raise ValueError(f"Invalid existing NAPIF row: {date}")
+                existing[date] = row["level"]
+    missing = [date for date in dates if date not in existing]
+    print(f"NAPIF: retaining {len(dates) - len(missing)} recorded days; fetching {len(missing)} reports.", flush=True)
     with ThreadPoolExecutor(max_workers=8) as executor:
-        classified = executor.map(
+        new_levels = dict(executor.map(
             lambda date: classify_napif_report(date, cache_dir),
-            dates,
-        )
+            missing,
+        ))
 
-    for date, level in classified:
+    # Complete all requested reports before replacing either CSV.
+    for date in dates:
+        level = existing[date] if date in existing else new_levels[date]
+        if date in new_levels:
+            print(f"{date}: {level}", flush=True)
         levels[date] = level
         daily_rows.append(
             {
@@ -566,12 +580,16 @@ def main() -> None:
     parser.add_argument(
         "--skip-napif", action="store_true", help="Do not rebuild NAPIF CSVs"
     )
+    parser.add_argument(
+        "--reuse-daily", action="store_true",
+        help="Keep existing daily classifications and fetch only missing reports",
+    )
     args = parser.parse_args()
 
     if not args.skip_climate:
         build_climate_csv(OUTPUT_DIR)
     if not args.skip_napif:
-        build_napif_csvs(OUTPUT_DIR, args.cache_dir)
+        build_napif_csvs(OUTPUT_DIR, args.cache_dir, args.reuse_daily)
 
 
 if __name__ == "__main__":

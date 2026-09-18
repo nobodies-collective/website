@@ -1,0 +1,2551 @@
+{
+  "title": "Elsewhere Event Dates 2027 - Asociado Vote",
+  "exportDate": "2026-09-18",
+  "method": "RankedPairs",
+  "privacy": "Ballot contents only. Response IDs, submission order, timestamps, language, input method and confirmation answers removed.",
+  "options": [
+    {
+      "id": "may-31",
+      "label": "31 May-6 June"
+    },
+    {
+      "id": "jun-7",
+      "label": "7-13 June"
+    },
+    {
+      "id": "jun-14",
+      "label": "14-20 June"
+    },
+    {
+      "id": "jul-5",
+      "label": "5-11 July"
+    },
+    {
+      "id": "sep-6",
+      "label": "6-12 September"
+    },
+    {
+      "id": "sep-13",
+      "label": "13-19 September"
+    },
+    {
+      "id": "sep-20",
+      "label": "20-26 September"
+    },
+    {
+      "id": "sep-27",
+      "label": "27 Sept-3 October"
+    }
+  ],
+  "ballots": [
+    {
+      "number": 1,
+      "groups": [
+        [
+          "jul-5"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 2,
+      "groups": [
+        [
+          "jul-5"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 3,
+      "groups": [
+        [
+          "jul-5"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "may-31",
+          "jun-7"
+        ],
+        [
+          "sep-6",
+          "sep-13",
+          "sep-20"
+        ]
+      ],
+      "rejected": [
+        "sep-27"
+      ]
+    },
+    {
+      "number": 4,
+      "groups": [
+        [
+          "jul-5"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "may-31"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 5,
+      "groups": [
+        [
+          "jul-5"
+        ],
+        [
+          "may-31",
+          "sep-6"
+        ],
+        [
+          "jun-7",
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ]
+      ],
+      "rejected": [
+        "jun-14",
+        "sep-27"
+      ]
+    },
+    {
+      "number": 6,
+      "groups": [
+        [
+          "jul-5"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "jun-7"
+        ]
+      ],
+      "rejected": [
+        "may-31"
+      ]
+    },
+    {
+      "number": 7,
+      "groups": [
+        [
+          "jul-5"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "may-31",
+          "sep-20"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "sep-27"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 8,
+      "groups": [
+        [
+          "jul-5"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ]
+      ],
+      "rejected": [
+        "may-31",
+        "jun-7",
+        "jun-14"
+      ]
+    },
+    {
+      "number": 9,
+      "groups": [
+        [
+          "jun-14",
+          "jul-5",
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "may-31",
+          "sep-20",
+          "sep-27"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 10,
+      "groups": [
+        [
+          "jun-14",
+          "jul-5"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "may-31"
+        ]
+      ],
+      "rejected": [
+        "sep-6",
+        "sep-13",
+        "sep-20",
+        "sep-27"
+      ]
+    },
+    {
+      "number": 11,
+      "groups": [
+        [
+          "jun-14",
+          "jul-5"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "sep-20",
+          "sep-27"
+        ]
+      ],
+      "rejected": [
+        "may-31",
+        "sep-6",
+        "sep-13"
+      ]
+    },
+    {
+      "number": 12,
+      "groups": [
+        [
+          "jun-14"
+        ],
+        [
+          "jul-5"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "sep-27"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 13,
+      "groups": [
+        [
+          "jun-14"
+        ],
+        [
+          "jun-7",
+          "jul-5"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-6"
+        ]
+      ],
+      "rejected": [
+        "sep-13",
+        "sep-20",
+        "sep-27"
+      ]
+    },
+    {
+      "number": 14,
+      "groups": [
+        [
+          "jun-14"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "jul-5"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-6",
+          "sep-13",
+          "sep-20",
+          "sep-27"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 15,
+      "groups": [
+        [
+          "jun-14"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "jul-5"
+        ],
+        [
+          "sep-20"
+        ]
+      ],
+      "rejected": [
+        "sep-6",
+        "sep-13",
+        "sep-27"
+      ]
+    },
+    {
+      "number": 16,
+      "groups": [
+        [
+          "jun-14"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "may-31"
+        ]
+      ],
+      "rejected": [
+        "jul-5",
+        "sep-6",
+        "sep-13",
+        "sep-20",
+        "sep-27"
+      ]
+    },
+    {
+      "number": 17,
+      "groups": [
+        [
+          "jun-14"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "jul-5"
+        ],
+        [
+          "sep-27"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 18,
+      "groups": [
+        [
+          "jun-14"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "jul-5"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 19,
+      "groups": [
+        [
+          "jun-14"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "jul-5"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-20"
+        ]
+      ],
+      "rejected": [
+        "sep-27"
+      ]
+    },
+    {
+      "number": 20,
+      "groups": [
+        [
+          "jun-14"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ]
+      ],
+      "rejected": [
+        "jul-5"
+      ]
+    },
+    {
+      "number": 21,
+      "groups": [
+        [
+          "jun-14"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "jul-5"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 22,
+      "groups": [
+        [
+          "jun-14"
+        ],
+        [
+          "jun-7"
+        ]
+      ],
+      "rejected": [
+        "may-31",
+        "jul-5",
+        "sep-6",
+        "sep-13",
+        "sep-20",
+        "sep-27"
+      ]
+    },
+    {
+      "number": 23,
+      "groups": [
+        [
+          "jun-14"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "jul-5"
+        ]
+      ],
+      "rejected": [
+        "may-31",
+        "jun-7",
+        "sep-6",
+        "sep-13"
+      ]
+    },
+    {
+      "number": 24,
+      "groups": [
+        [
+          "jun-14"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "jul-5"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "may-31"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 25,
+      "groups": [
+        [
+          "jun-14"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "jul-5"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 26,
+      "groups": [
+        [
+          "jun-7",
+          "jun-14",
+          "sep-6"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "jul-5",
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ]
+      ],
+      "rejected": [
+        "sep-27"
+      ]
+    },
+    {
+      "number": 27,
+      "groups": [
+        [
+          "jun-7",
+          "jun-14"
+        ],
+        [
+          "jul-5"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20",
+          "sep-27"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 28,
+      "groups": [
+        [
+          "jun-7",
+          "jun-14"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "jul-5"
+        ]
+      ],
+      "rejected": [
+        "sep-6",
+        "sep-13",
+        "sep-20",
+        "sep-27"
+      ]
+    },
+    {
+      "number": 29,
+      "groups": [
+        [
+          "jun-7",
+          "jun-14"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "sep-27"
+        ]
+      ],
+      "rejected": [
+        "jul-5"
+      ]
+    },
+    {
+      "number": 30,
+      "groups": [
+        [
+          "jun-7",
+          "sep-13"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "may-31",
+          "sep-27"
+        ],
+        [
+          "jun-14"
+        ]
+      ],
+      "rejected": [
+        "jul-5"
+      ]
+    },
+    {
+      "number": 31,
+      "groups": [
+        [
+          "jun-7",
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "jun-14",
+          "sep-27"
+        ],
+        [
+          "may-31"
+        ]
+      ],
+      "rejected": [
+        "jul-5"
+      ]
+    },
+    {
+      "number": 32,
+      "groups": [
+        [
+          "jun-7"
+        ],
+        [
+          "jul-5"
+        ],
+        [
+          "may-31",
+          "sep-13",
+          "sep-20"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "sep-27"
+        ]
+      ],
+      "rejected": [
+        "jun-14"
+      ]
+    },
+    {
+      "number": 33,
+      "groups": [
+        [
+          "jun-7"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "jul-5"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 34,
+      "groups": [
+        [
+          "jun-7"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ]
+      ],
+      "rejected": [
+        "jul-5",
+        "sep-6"
+      ]
+    },
+    {
+      "number": 35,
+      "groups": [
+        [
+          "jun-7"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "jul-5"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 36,
+      "groups": [
+        [
+          "jun-7"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ]
+      ],
+      "rejected": [
+        "sep-6"
+      ]
+    },
+    {
+      "number": 37,
+      "groups": [
+        [
+          "jun-7"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "jul-5"
+        ],
+        [
+          "sep-27"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 38,
+      "groups": [
+        [
+          "jun-7"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "jul-5"
+        ],
+        [
+          "sep-27"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 39,
+      "groups": [
+        [
+          "jun-7"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "jul-5"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "sep-6"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 40,
+      "groups": [
+        [
+          "jun-7"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "jul-5"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 41,
+      "groups": [
+        [
+          "jun-7"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "jul-5"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-13"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 42,
+      "groups": [
+        [
+          "jun-7"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "jul-5"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "may-31"
+        ]
+      ],
+      "rejected": [
+        "sep-6"
+      ]
+    },
+    {
+      "number": 43,
+      "groups": [
+        [
+          "jun-7"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "jul-5"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 44,
+      "groups": [
+        [
+          "jun-7"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "sep-27"
+        ]
+      ],
+      "rejected": [
+        "jul-5"
+      ]
+    },
+    {
+      "number": 45,
+      "groups": [
+        [
+          "jun-7"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "may-31",
+          "jun-14",
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ]
+      ],
+      "rejected": [
+        "jul-5"
+      ]
+    },
+    {
+      "number": 46,
+      "groups": [
+        [
+          "jun-7"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "jul-5"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 47,
+      "groups": [
+        [
+          "jun-7"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "may-31",
+          "jun-14",
+          "sep-20"
+        ]
+      ],
+      "rejected": [
+        "jul-5",
+        "sep-27"
+      ]
+    },
+    {
+      "number": 48,
+      "groups": [
+        [
+          "may-31",
+          "jun-7",
+          "jun-14"
+        ],
+        [
+          "jul-5"
+        ]
+      ],
+      "rejected": [
+        "sep-6",
+        "sep-13",
+        "sep-20",
+        "sep-27"
+      ]
+    },
+    {
+      "number": 49,
+      "groups": [
+        [
+          "may-31",
+          "jun-7"
+        ],
+        [
+          "jul-5"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "sep-6",
+          "sep-13",
+          "sep-20",
+          "sep-27"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 50,
+      "groups": [
+        [
+          "may-31",
+          "jun-7"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "sep-6",
+          "sep-13",
+          "sep-20"
+        ]
+      ],
+      "rejected": [
+        "jul-5"
+      ]
+    },
+    {
+      "number": 51,
+      "groups": [
+        [
+          "may-31",
+          "sep-13"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "sep-6"
+        ]
+      ],
+      "rejected": [
+        "jul-5"
+      ]
+    },
+    {
+      "number": 52,
+      "groups": [
+        [
+          "may-31",
+          "sep-27"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "jun-7",
+          "jun-14",
+          "sep-13"
+        ],
+        [
+          "sep-6"
+        ]
+      ],
+      "rejected": [
+        "jul-5"
+      ]
+    },
+    {
+      "number": 53,
+      "groups": [
+        [
+          "may-31",
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "jul-5"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 54,
+      "groups": [
+        [
+          "may-31"
+        ],
+        [
+          "jun-7",
+          "sep-20"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "jul-5"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 55,
+      "groups": [
+        [
+          "may-31"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "jul-5"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "sep-6"
+        ]
+      ],
+      "rejected": [
+        "sep-13",
+        "sep-20",
+        "sep-27"
+      ]
+    },
+    {
+      "number": 56,
+      "groups": [
+        [
+          "may-31"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "jul-5"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 57,
+      "groups": [
+        [
+          "may-31"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "jul-5"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 58,
+      "groups": [
+        [
+          "may-31"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "jun-14"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 59,
+      "groups": [
+        [
+          "may-31"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "jul-5"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 60,
+      "groups": [
+        [
+          "may-31"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "sep-27"
+        ]
+      ],
+      "rejected": [
+        "jun-14",
+        "jul-5",
+        "sep-6",
+        "sep-13",
+        "sep-20"
+      ]
+    },
+    {
+      "number": 61,
+      "groups": [
+        [
+          "sep-13",
+          "sep-20"
+        ],
+        [
+          "jun-7"
+        ]
+      ],
+      "rejected": [
+        "may-31",
+        "jun-14",
+        "jul-5",
+        "sep-6",
+        "sep-27"
+      ]
+    },
+    {
+      "number": 62,
+      "groups": [
+        [
+          "sep-13",
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "jun-14"
+        ]
+      ],
+      "rejected": [
+        "jul-5"
+      ]
+    },
+    {
+      "number": 63,
+      "groups": [
+        [
+          "sep-13"
+        ],
+        [
+          "jun-7",
+          "sep-20"
+        ],
+        [
+          "may-31",
+          "jun-14",
+          "sep-6"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "jul-5"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 64,
+      "groups": [
+        [
+          "sep-13"
+        ],
+        [
+          "jun-7",
+          "sep-6"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "jul-5"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-27"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 65,
+      "groups": [
+        [
+          "sep-13"
+        ],
+        [
+          "may-31",
+          "sep-6"
+        ],
+        [
+          "jun-7",
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "jun-14"
+        ]
+      ],
+      "rejected": [
+        "jul-5"
+      ]
+    },
+    {
+      "number": 66,
+      "groups": [
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "jun-7",
+          "sep-6"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "sep-27"
+        ]
+      ],
+      "rejected": [
+        "may-31",
+        "jul-5"
+      ]
+    },
+    {
+      "number": 67,
+      "groups": [
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "may-31"
+        ]
+      ],
+      "rejected": [
+        "jun-14",
+        "jul-5"
+      ]
+    },
+    {
+      "number": 68,
+      "groups": [
+        [
+          "sep-13"
+        ],
+        [
+          "sep-6",
+          "sep-20"
+        ],
+        [
+          "jun-7"
+        ]
+      ],
+      "rejected": [
+        "may-31",
+        "jun-14",
+        "jul-5",
+        "sep-27"
+      ]
+    },
+    {
+      "number": 69,
+      "groups": [
+        [
+          "sep-13"
+        ],
+        [
+          "sep-6",
+          "sep-20"
+        ],
+        [
+          "jun-7"
+        ]
+      ],
+      "rejected": [
+        "may-31",
+        "jun-14",
+        "jul-5",
+        "sep-27"
+      ]
+    },
+    {
+      "number": 70,
+      "groups": [
+        [
+          "sep-13"
+        ],
+        [
+          "sep-6",
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "jun-14"
+        ]
+      ],
+      "rejected": [
+        "may-31",
+        "jul-5"
+      ]
+    },
+    {
+      "number": 71,
+      "groups": [
+        [
+          "sep-13"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "jun-14"
+        ]
+      ],
+      "rejected": [
+        "may-31",
+        "jul-5",
+        "sep-20",
+        "sep-27"
+      ]
+    },
+    {
+      "number": 72,
+      "groups": [
+        [
+          "sep-20"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "jul-5"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 73,
+      "groups": [
+        [
+          "sep-20"
+        ],
+        [
+          "sep-13",
+          "sep-27"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "jun-7"
+        ]
+      ],
+      "rejected": [
+        "may-31",
+        "jun-14",
+        "jul-5"
+      ]
+    },
+    {
+      "number": 74,
+      "groups": [
+        [
+          "sep-20"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-6",
+          "sep-27"
+        ],
+        [
+          "jun-7",
+          "jun-14"
+        ],
+        [
+          "may-31",
+          "jul-5"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 75,
+      "groups": [
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "sep-6"
+        ]
+      ],
+      "rejected": [
+        "jul-5"
+      ]
+    },
+    {
+      "number": 76,
+      "groups": [
+        [
+          "sep-27"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "jun-7"
+        ]
+      ],
+      "rejected": [
+        "jun-14",
+        "jul-5"
+      ]
+    },
+    {
+      "number": 77,
+      "groups": [
+        [
+          "sep-27"
+        ],
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "may-31"
+        ]
+      ],
+      "rejected": [
+        "jun-14",
+        "jul-5"
+      ]
+    },
+    {
+      "number": 78,
+      "groups": [
+        [
+          "sep-6",
+          "sep-13",
+          "sep-20",
+          "sep-27"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "jul-5"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 79,
+      "groups": [
+        [
+          "sep-6",
+          "sep-13",
+          "sep-20"
+        ],
+        [
+          "may-31",
+          "sep-27"
+        ],
+        [
+          "jun-7",
+          "jun-14",
+          "jul-5"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 80,
+      "groups": [
+        [
+          "sep-6",
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "may-31",
+          "sep-27"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "jul-5"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 81,
+      "groups": [
+        [
+          "sep-6",
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "jun-7",
+          "jun-14"
+        ]
+      ],
+      "rejected": [
+        "jul-5"
+      ]
+    },
+    {
+      "number": 82,
+      "groups": [
+        [
+          "sep-6",
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "jul-5"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 83,
+      "groups": [
+        [
+          "sep-6"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "jul-5"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 84,
+      "groups": [
+        [
+          "sep-6"
+        ],
+        [
+          "jun-7",
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "jun-14"
+        ]
+      ],
+      "rejected": [
+        "may-31",
+        "jul-5",
+        "sep-27"
+      ]
+    },
+    {
+      "number": 85,
+      "groups": [
+        [
+          "sep-6"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "jul-5"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "jun-7"
+        ]
+      ],
+      "rejected": [
+        "jun-14"
+      ]
+    },
+    {
+      "number": 86,
+      "groups": [
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "jul-5",
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "may-31",
+          "jun-7"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 87,
+      "groups": [
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "jul-5"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "may-31",
+          "jun-7",
+          "jun-14",
+          "sep-27"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 88,
+      "groups": [
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "may-31"
+        ]
+      ],
+      "rejected": [
+        "jul-5",
+        "sep-20",
+        "sep-27"
+      ]
+    },
+    {
+      "number": 89,
+      "groups": [
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "jun-14"
+        ]
+      ],
+      "rejected": [
+        "jul-5"
+      ]
+    },
+    {
+      "number": 90,
+      "groups": [
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20",
+          "sep-27"
+        ],
+        [
+          "may-31",
+          "jun-7"
+        ],
+        [
+          "jun-14"
+        ]
+      ],
+      "rejected": [
+        "jul-5"
+      ]
+    },
+    {
+      "number": 91,
+      "groups": [
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "jul-5"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 92,
+      "groups": [
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "jul-5"
+        ]
+      ],
+      "rejected": [
+        "may-31",
+        "sep-27"
+      ]
+    },
+    {
+      "number": 93,
+      "groups": [
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "may-31"
+        ],
+        [
+          "jul-5"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 94,
+      "groups": [
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "may-31"
+        ]
+      ],
+      "rejected": [
+        "jul-5"
+      ]
+    },
+    {
+      "number": 95,
+      "groups": [
+        [
+          "sep-6"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "jul-5"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 96,
+      "groups": [
+        [
+          "sep-6"
+        ],
+        [
+          "sep-27"
+        ],
+        [
+          "sep-20"
+        ],
+        [
+          "sep-13"
+        ],
+        [
+          "jul-5"
+        ],
+        [
+          "jun-14"
+        ],
+        [
+          "jun-7"
+        ],
+        [
+          "may-31"
+        ]
+      ],
+      "rejected": []
+    },
+    {
+      "number": 97,
+      "groups": [
+        [
+          "sep-6"
+        ]
+      ],
+      "rejected": []
+    }
+  ]
+}

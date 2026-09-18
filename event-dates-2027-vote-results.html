@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Explore the 97 Asociado ballots on Elsewhere's 2027 dates: head-to-head comparisons, Ranked Pairs count, preferences and downloadable data.">
+    <title>2027 Event Dates — Asociado Vote Results | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="event-dates-vote.css">
+</head>
+<body>
+    <a class="vote-skip" href="#results">Skip to results</a>
+    <div id="shared-header"></div>
+    <main class="vote-page">
+        <header class="vote-hero">
+            <div class="vote-container">
+                <a class="vote-back" href="event-dates-2027.html">← The 2027 dates decision</a>
+                <p class="vote-eyebrow">Elsewhere 2027 · Asociado vote</p>
+                <h1>Eight dates.<br>97 voices.<br><em>One shared direction.</em></h1>
+                <p class="vote-deck">The vote, opened up. Explore the preferences behind the result, compare every date, and follow the count from ballot to outcome.</p>
+                <div class="vote-meta"><span>Export snapshot · 18 September 2026</span><span>Ranked Pairs · Equal ranks allowed</span></div>
+            </div>
+        </header>
+        <nav class="vote-jump" aria-label="Results sections"><div class="vote-container">
+            <a href="#results">The result</a><a href="#head-to-head">Head-to-head</a><a href="#preferences">Preferences</a><a href="#count">The count</a><a href="#ballots">Ballots</a><a href="#downloads">Downloads</a>
+        </div></nav>
+        <div class="vote-container vote-content">
+            <p class="vote-review">These results are calculated from the 18 September 2026 vote export. The winning week remains subject to the relevant authorities’ approval; the vote does not itself confirm the event dates.</p>
+            <div id="load-status" role="status">Loading and counting the ballots…</div>
+            <noscript><p>Interactive results require JavaScript. You can still <a href="data/event-dates-2027-vote/ballots.json" download>download the JSON</a> or <a href="data/event-dates-2027-vote/ballots.csv" download>download the CSV</a>.</p></noscript>
+            <div id="vote-app" hidden>
+                <section id="results" class="vote-section">
+                    <div class="vote-section-heading"><div><p class="vote-eyebrow">01 / The result</p><h2>A clear head-to-head winner</h2></div><a href="event-dates-2027-voting-method.html">Why this voting method? ↗</a></div>
+                    <div id="official-summary"></div>
+                    <details class="vote-scenario">
+                        <summary>Explore a scenario: what if a date is unavailable?</summary>
+                        <p>Untick dates to recalculate with the same 97 ballots. This is an exploratory scenario, not a change to the vote. At least two dates must remain. Ranked dates come first, then omitted dates tied together, then explicitly rejected dates tied last.</p>
+                        <fieldset><legend>Dates included in the scenario</legend><div id="candidate-controls"></div></fieldset>
+                        <button id="reset-scenario" type="button">Restore all eight dates</button>
+                    </details>
+                    <div id="scenario-status" role="status" aria-live="polite"></div>
+                    <div class="vote-toolbar"><h3>Finishing order</h3><label>Sort by <select id="ranking-sort"><option value="result">Ranked Pairs order</option><option value="calendar">Calendar order</option><option value="first">First-choice share</option><option value="rejected">Most rejected</option><option value="borda">Borda score</option></select></label></div>
+                    <div id="ranking"></div>
+                    <p class="vote-note">Head-to-head wins are not the ranking rule: cycles can leave dates with the same number of wins in different places. The order above follows the locked Ranked Pairs graph.</p>
+                </section>
+                <section id="head-to-head" class="vote-section">
+                    <p class="vote-eyebrow">02 / Every date against every other</p><h2>Where the consensus sits</h2>
+                    <p>Read across a row: <strong>53–39</strong> means 53 ballots prefer the row date and 39 prefer the column date. The rest express no preference between the two. Select a cell to inspect that comparison.</p>
+                    <div class="vote-toolbar"><div class="vote-legend"><span><i class="win"></i>Row wins</span><span><i class="loss"></i>Row loses</span><span><i class="neutral"></i>Tie</span><span>⋆ Cycle-skipped pair</span></div><label>Show <select id="matrix-mode"><option value="votes">Vote counts</option><option value="margin">Winning margin</option><option value="percent">Share expressing a preference</option></select></label></div>
+                    <div id="matrix" class="vote-table-scroll" tabindex="0" role="region" aria-label="Scrollable head-to-head matrix"></div>
+                    <div id="pair-detail" class="vote-pair-detail" aria-live="polite"></div>
+                    <div class="vote-toolbar"><h3>A date in detail</h3><label>Date <select id="focus-date"></select></label></div>
+                    <div id="matchups"></div>
+                </section>
+                <section id="preferences" class="vote-section">
+                    <p class="vote-eyebrow">03 / Beyond the winner</p><h2>Enthusiasm, compromise, and rejection</h2>
+                    <p>A high first-choice count and broad support are different things. These views describe the same ballots; they do not replace the selected counting method.</p>
+                    <div class="vote-toolbar"><label>View <select id="preference-mode"><option value="acceptance">Ranked / rejected / unranked</option><option value="first">First-choice share</option><option value="positions">Rank distribution</option><option value="borda">Borda scores (alternative method)</option></select></label><label>Values <select id="value-mode"><option value="count">Counts</option><option value="percent">Percentages</option></select></label></div>
+                    <p id="preference-explanation" class="vote-note"></p><div id="preference-chart"></div>
+                    <div id="preference-legend" class="vote-legend"></div>
+                </section>
+                <section id="count" class="vote-section">
+                    <p class="vote-eyebrow">04 / Show the working</p><h2>No black box</h2>
+                    <p>Each head-to-head victory is considered in order of strength. Lock it in unless it would create a loop. The date with no incoming locked defeats wins.</p>
+                    <div id="count-summary" class="vote-callout"></div>
+                    <details><summary>See every lock, in counting order</summary><div id="lock-table" class="vote-table-scroll" tabindex="0" role="region" aria-label="Ranked Pairs counting steps"></div></details>
+                    <details><summary>Counting rules and interpretation</summary>
+                        <ul class="vote-method">
+                            <li><strong>Equal ranks:</strong> dates in the same rank group contribute no vote against each other. Ranked dates beat omitted dates; omitted dates beat explicitly rejected dates. Omitted dates are tied with each other, and rejected dates are tied with each other at the bottom.</li>
+                            <li><strong>Victory strength:</strong> descending winning margin, then descending winning votes. Exact ties use the original option order, first the winner then the loser. This matches Humans’ <code>RankedChoiceCounter</code>.</li>
+                            <li><strong>Finishing order:</strong> repeatedly take a date with no incoming locked edge among the remaining dates. If multiple dates qualify, use original option order. The page reports when this fallback is needed.</li>
+                            <li><strong>Rejection is not a veto:</strong> it places a date at the bottom of that ballot. It does not remove the date from the election.</li>
+                            <li><strong>Percentages:</strong> general charts use all 97 ballots. Matrix percentage mode uses only ballots that distinguish the two dates. First-choice shares split one vote equally among tied first choices.</li>
+                            <li><strong>Scope:</strong> this export is the Asociado vote, not the earlier 948-response attendee survey. It does not contain the eligible electorate size, so no turnout percentage is inferred. The export alone does not establish whether voting was formally closed.</li>
+                        </ul>
+                    </details>
+                    <p class="vote-note"><strong>A distinction from the earlier explainer:</strong> the voting-method page describes omitted and rejected dates as tied. Humans’ implemented count distinguishes them as described above. This page follows that implementation and matches the supplied results matrix. The distinction changes 6–12 September vs 5–11 July from 64–25 to 64–26; it does not change the winner or finishing order.</p>
+                    <p class="vote-note">Context: <a href="event-dates-2027-survey-results.html">attendee survey results</a> · <a href="candidate-weeks-2027.html">candidate-week evidence</a> · <a href="event-dates-2027-voting-method.html">voting method</a></p>
+                </section>
+                <section id="ballots" class="vote-section">
+                    <p class="vote-eyebrow">05 / Look at the ballots</p><h2>Different paths to a preference</h2>
+                    <p>Each row is one ballot. “=” means equally ranked; “→” means preferred to. Numbers are local references assigned after sorting by ballot content, not response IDs or submission order. This view always shows the original eight-date ballots, even in scenario mode.</p>
+                    <div class="vote-toolbar vote-filters"><label>Date <select id="ballot-date"></select></label><label>Condition <select id="ballot-condition"><option value="any">Any ballot</option><option value="first">Ranked this date first (including ties)</option><option value="ranked">Ranked this date anywhere</option><option value="rejected">Explicitly rejected this date</option><option value="unranked">Left this date unranked</option></select></label><label>Ballot style <select id="ballot-style"><option value="all">All styles</option><option value="equal">Has an equal-rank group</option><option value="reject">Has a rejection</option></select></label></div>
+                    <p id="ballot-count" role="status"></p><div id="ballot-list"></div>
+                    <div class="vote-pagination"><button id="ballot-prev" type="button">← Previous</button><span id="ballot-page"></span><button id="ballot-next" type="button">Next →</button></div>
+                </section>
+            </div>
+            <section id="downloads" class="vote-section">
+                <p class="vote-eyebrow">06 / Take a closer look</p><h2>Your own analysis starts here</h2>
+                <p>Download all 97 ballots. These public copies retain the vote contents while removing response IDs, timestamps, submission order, language, input method, and confirmation answers. Ballot numbers match the explorer above.</p>
+                <div class="vote-downloads"><a href="data/event-dates-2027-vote/ballots.json" download><strong>↓ Ballots · JSON</strong><span>Options, tied rank groups, and rejections</span></a><a href="data/event-dates-2027-vote/ballots.csv" download><strong>↓ Ballots · CSV</strong><span>One row per ballot; rank groups stored as JSON</span></a></div>
+                <p class="vote-note">Both source exports were cross-checked ballot by ballot before generating these files. No names or user IDs were populated in the source CSV. Distinctive voting patterns can still be recognisable; metadata removal is not a guarantee of anonymity. Downloads always contain the full vote, not the current scenario or filtered view.</p>
+            </section>
+        </div>
+    </main>
+    <div id="shared-footer"></div>
+    <script src="header.js"></script><script src="footer.js"></script><script src="script.js"></script>
+    <script type="module" src="event-dates-vote.mjs"></script>
+</body>
+</html>
