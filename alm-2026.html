@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALM 2026 &mdash; All Leads Meeting | Nobodies Collective</title>
+    <meta name="description" content="The All Leads Meeting 2026: Vidalia, Cal Vidal (Puig-reig), 15&ndash;19 October. Dates, who can attend, getting there, accommodation, food and travel reimbursement.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .tr-page {
+            padding: 0 0 4rem;
+        }
+
+        /* Hero */
+        .tr-hero {
+            position: relative;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            background: #111;
+        }
+
+        .tr-hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('images/art/process.jpg') center/cover no-repeat;
+            opacity: 0.35;
+        }
+
+        .tr-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(17,17,17,0.2) 0%, rgba(17,17,17,0.8) 100%);
+        }
+
+        .tr-hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 10rem 2rem 5rem;
+            max-width: 760px;
+        }
+
+        .tr-hero-label {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+        }
+
+        .tr-hero-content h1 {
+            color: #fff;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+        }
+
+        .tr-hero-content p {
+            color: rgba(255,255,255,0.85);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            max-width: 580px;
+            margin: 0 auto;
+        }
+
+        /* Language note */
+        .lang-note-banner {
+            margin-top: 1.5rem;
+            padding: 0.9rem 1.25rem;
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+            border-left: 3px solid var(--color-accent);
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+        }
+
+        .lang-note-banner a {
+            font-weight: 600;
+        }
+
+        /* Back link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+        .back-link:hover { color: var(--color-accent); }
+        .back-link::before { content: '\2190'; }
+
+        /* Content */
+        .tr-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+
+        .tr-section {
+            margin-top: 3.5rem;
+        }
+
+        .tr-section h2 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin-bottom: 1rem;
+            color: var(--color-text);
+        }
+
+        .tr-section p,
+        .tr-section li {
+            color: var(--color-text-muted);
+            line-height: 1.7;
+        }
+
+        .tr-section p {
+            margin-bottom: 1rem;
+        }
+
+        .tr-section ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tr-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .tr-section li strong {
+            color: var(--color-text);
+        }
+
+        /* Highlight box */
+        .tr-highlight {
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+            padding: 2rem 2.5rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--color-accent);
+        }
+
+        .tr-highlight p {
+            color: var(--color-text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .tr-highlight p:last-child { margin-bottom: 0; }
+
+        .tr-highlight strong {
+            color: var(--color-text);
+        }
+
+        /* Tiers */
+        .tr-tiers {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.25rem;
+            margin: 2rem 0;
+        }
+
+        .tr-tier {
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 1.75rem;
+        }
+
+        .tr-tier-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 0.75rem;
+        }
+
+        .tr-tier h3 {
+            font-size: 1rem;
+            color: var(--color-text);
+            margin-bottom: 0.4rem;
+        }
+
+        .tr-tier-dates {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .tr-tier-amount {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--color-text);
+            line-height: 1;
+        }
+
+        .tr-tier-note {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            margin-top: 0.25rem;
+        }
+
+        /* Steps */
+        .tr-steps {
+            counter-reset: tr-step;
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .tr-steps li {
+            counter-increment: tr-step;
+            position: relative;
+            display: block;
+            padding-left: 3.25rem;
+            margin-bottom: 1.25rem;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
+
+        .tr-steps li::before {
+            content: counter(tr-step);
+            position: absolute;
+            left: 0;
+            top: 0.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background: var(--color-accent);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.85rem;
+            border-radius: 50%;
+        }
+
+        .tr-steps li strong {
+            color: var(--color-text);
+        }
+
+        /* Apply CTA */
+        .tr-apply {
+            text-align: center;
+            padding: 4rem 2rem;
+            margin-top: 4rem;
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+        }
+
+        .tr-apply h2 {
+            margin-bottom: 1rem;
+        }
+
+        .tr-apply p {
+            color: var(--color-text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tr-contact {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+        }
+
+        .tr-contact a {
+            font-weight: 600;
+        }
+
+        /* Scenario blocks */
+        .tr-scenario {
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 1.75rem 2rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .tr-scenario h3 {
+            font-size: 1.1rem;
+            color: var(--color-text);
+            margin-bottom: 0.75rem;
+        }
+
+        .tr-scenario .btn {
+            margin: 0.5rem 0 1rem;
+        }
+
+        @media (max-width: 600px) {
+            .tr-tiers {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .tr-section h3 {
+            font-size: 1.1rem;
+            color: var(--color-text);
+            margin: 1.5rem 0 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="shared-header"></div>
+    <script src="header.js"></script>
+
+    <main class="tr-page">
+
+        <!-- Hero -->
+        <section class="tr-hero">
+            <div class="tr-hero-bg"></div>
+            <div class="tr-hero-overlay"></div>
+            <div class="tr-hero-content">
+                <span class="tr-hero-label">Association</span>
+                <h1>ALM 2026 &mdash; All Leads Meeting</h1>
+                <p>Vidalia, Cal Vidal (Puig-reig, Barcelona) &middot; 15&ndash;19 October 2026</p>
+            </div>
+        </section>
+
+        <div class="tr-content">
+
+            <section class="tr-section">
+                <h2>What is the ALM?</h2>
+                <p>The All Leads Meeting is our end-of-year gathering for Elsewhere coordinators and leads. Three working days to turn our debrief of the event and shared learnings into working groups and projects that we carry forward into the next cycle. It&rsquo;s an internal working meeting, a space for honest conversations about what&rsquo;s sustainable, what we want Elsewhere to be in the next edition, and how we want the Association to be shaped onwards.</p>
+            </section>
+
+            <section class="tr-section">
+                <h2>Dates</h2>
+                <div class="tr-highlight">
+                    <p>The core programme runs <strong>Friday 16 &ndash; Sunday 18 October</strong>. Most people arrive Friday and leave Sunday.</p>
+                </div>
+                <p>Thursday 15 and Monday 19 are reserved for the setup and wrap crew (max ~15 people). Need to arrive earlier or leave later for travel reasons? Get in touch at <a href="mailto:alm@nobodies.team">alm@nobodies.team</a> and we&rsquo;ll see what we can do.</p>
+            </section>
+
+            <section class="tr-section">
+                <h2>Who can attend</h2>
+                <p>Open to Elsewhere 2026 coordinators and organisation leads. If you were heavily involved as a core volunteer and/or want to be heavily involved in the next edition, please join us. Get in touch via <strong>#🛖-alm-2026</strong> on Discord or <a href="mailto:alm@nobodies.team">alm@nobodies.team</a>. Capacity is capped at 50 people.</p>
+                <p>Remote participation is available for key sessions. Details to follow.</p>
+            </section>
+
+            <section class="tr-section">
+                <h2>Cost</h2>
+                <div class="tr-highlight">
+                    <p><strong>Stay and food are fully covered by NCA.</strong> You do not pay for accommodation or meals.</p>
+                </div>
+                <p>Travel is your own cost upfront, reimbursable afterwards up to &euro;250. Guidelines must be followed to guarantee reimbursement. See <a href="#travel-reimbursement">Travel reimbursement</a> below.</p>
+            </section>
+
+            <section class="tr-section">
+                <h2>Getting there</h2>
+                <p>Vidalia is about 1 hour north of Barcelona, near Puig-reig on the Llobregat.</p>
+                <p>📍 Pla&ccedil;a de la Pur&iacute;ssima, 08692 Cal Vidal, Barcelona &middot; <a href="https://www.google.com/maps/search/?api=1&amp;query=Pla%C3%A7a+de+la+Pur%C3%ADssima%2C+08692+Cal+Vidal%2C+Barcelona" target="_blank" rel="noopener noreferrer">Map</a></p>
+
+                <h3>By bus</h3>
+                <p>ALSA runs a Barcelona&ndash;Berga coach that stops outside the venue. Departs from Estaci&oacute; del Nord, also picks up at Passeig de Gr&agrave;cia. Book to Puig-reig at <a href="https://www.alsa.com" target="_blank" rel="noopener noreferrer">alsa.com</a>. Tell the driver: <em>&ldquo;Bajo en Cal Vidal.&rdquo;</em></p>
+
+                <h3>By car</h3>
+                <p>Coordinate a lift or offer your spare seats on the carpool board (link coming soon).</p>
+
+                <h3>By plane</h3>
+                <p>Fly into Barcelona El Prat, then take Rodalies R2 Nord to Passeig de Gr&agrave;cia and connect to the ALSA coach.</p>
+            </section>
+
+            <section class="tr-section">
+                <h2>Accommodation</h2>
+                <p>You will be assigned a bed based on your registration form. Assignments go out in early October.</p>
+                <p>Vidalia has a mix of dormitory-style bunk beds, private rooms, and a small number of apartment rooms in a separate building about 100m from the main house. Bathrooms are mostly shared. One private en-suite room is available and reserved for accessibility needs.</p>
+                <div class="tr-highlight">
+                    <p>October nights in the Llobregat valley are cold. Sheets are provided but there are not enough duvets for the full group. <strong>Bring a sleeping bag or a warm blanket.</strong></p>
+                </div>
+            </section>
+
+            <section class="tr-section">
+                <h2>Food</h2>
+                <p>Vidalia&rsquo;s kitchen team cooks all meals. Food is plant-based by default. They adapt to allergies and intolerances &mdash; declare yours in the registration form. Everyone helps out: sign up for a meal prep or cleanup shift via the master sheet.</p>
+            </section>
+
+            <section class="tr-section" id="travel-reimbursement">
+                <h2>Travel reimbursement</h2>
+                <p>NCA reimburses travel costs up to <strong>&euro;250 per person</strong> for ALM attendees.</p>
+                <p>This covers transport to and from the venue only (flights, trains, buses, car hire, fuel). Not food, drink, or other costs en route.</p>
+
+                <h3>How to apply</h3>
+                <ol class="tr-steps">
+                    <li>Fill in the travel reimbursement form:<br><a href="https://forms.gle/vU4YFRPh5n9EFBuY9" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top: 0.75rem;">Travel reimbursement form</a></li>
+                    <li>Keep all your receipts and request a proper invoice. Till receipts are accepted only when an invoice genuinely cannot be issued.</li>
+                    <li>Invoices must be addressed to:<br>
+                        <strong>Asociaci&oacute;n Nobodies Collective</strong><br>
+                        NIF: G26726299<br>
+                        Glorieta de Bilbao 1, 3&ordm; Derecha<br>
+                        28004 Madrid, Spain</li>
+                </ol>
+
+                <p class="tr-contact">Questions? Email <a href="mailto:alm@nobodies.team">alm@nobodies.team</a></p>
+            </section>
+
+        </div>
+    </main>
+
+    <div id="shared-footer"></div>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -47,6 +47,7 @@
                             '<li><a class="nav-subitem" href="' + prefix + '/event-dates-2027.html">Event Dates 2027</a></li>' +
                             '<li><a class="nav-subitem" href="' + prefix + '/transparency/wg/governance.html">Governance Meeting</a></li>' +
                             '<li><a href="' + prefix + '/resolutions.html">Resolutions</a></li>' +
+                            '<li><a href="' + prefix + '/alm-2026.html">ALM 2026</a></li>' +
                         '</ul>' +
                     '</li>' +
                     /* Hidden: updates link (stale) — was in a Transparency dropdown, removed when the activity feed went; restore as a dropdown if updates.html comes back: '<li><a href="' + prefix + '/updates.html">Updates</a></li>' */
