@@ -403,6 +403,52 @@
         .alm-more + .tr-toggle { margin-top: 0.5rem; }
 
         .tr-scenario ul { margin-bottom: 0; }
+
+        /* Layout: main column + sidebar */
+        .alm-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 280px;
+            gap: 3rem;
+            align-items: start;
+        }
+        .alm-side {
+            margin-top: 3.5rem;
+            position: sticky;
+            top: 6rem;
+        }
+        .alm-box {
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .alm-box h3 {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 0.75rem;
+        }
+        .alm-box ul { list-style: none; padding: 0; margin: 0; }
+        .alm-box li {
+            padding: 0.45rem 0;
+            border-bottom: 1px solid var(--color-border);
+            font-size: 0.92rem;
+            color: var(--color-text-muted);
+            line-height: 1.4;
+        }
+        .alm-box li:last-child { border-bottom: none; }
+        .alm-box li a { font-weight: 600; }
+        .alm-box .alm-role { display: block; font-size: 0.8rem; }
+        .alm-box .alm-soon { font-style: italic; font-size: 0.85rem; }
+        @media (max-width: 900px) {
+            .alm-layout { grid-template-columns: 1fr; gap: 0; }
+            .alm-side { display: contents; }
+            #links { order: -1; margin-top: 2.5rem; }
+            #contact { order: 1; margin-top: 3rem; }
+        }
     </style>
 </head>
 <body>
@@ -429,6 +475,8 @@
         </section>
 
         <div class="tr-content">
+        <div class="alm-layout">
+        <div class="alm-main">
 
             <section class="tr-section" id="what">
                 <h2>What is the ALM?</h2>
@@ -437,15 +485,18 @@
             </section>
 
             <section class="tr-section" id="dates">
-                <h2>Dates</h2>
-                <p>The core programme runs <strong>Friday 16 &ndash; Sunday 18 October</strong>. Most people arrive Friday and leave Sunday.</p>
+                <h2>Key dates</h2>
                 <table class="alm-dates">
-                    <tr><td>Core programme</td><td>Friday 16 &ndash; Sunday 18 October</td></tr>
-                    <tr><td>Setup crew</td><td>Thursday 15 October (max ~15 people)</td></tr>
-                    <tr><td>Wrap &amp; departures</td><td>Sunday 18 &ndash; Monday 19 October</td></tr>
+                    <tr><td>Registration closes</td><td>28 September 2026</td></tr>
+                    <tr><td>Room assignments sent</td><td>Early October</td></tr>
+                    <tr><td>Final info email</td><td>13 October</td></tr>
+                    <tr><td>Org team arrives</td><td>Thursday 15 October</td></tr>
+                    <tr><td>Core programme</td><td><strong>Friday 16 &ndash; Sunday 18 October</strong></td></tr>
+                    <tr><td>Wrap &amp; departures</td><td>Monday 19 October</td></tr>
+                    <tr><td>Weekly org check-in</td><td>Fridays 13:00 CEST (running through 23 October)</td></tr>
                 </table>
                 <div class="tr-highlight">
-                    <p>Thursday 15 and Monday 19 are reserved for the setup and wrap crew. Need to arrive earlier or leave later for travel reasons? Get in touch at <a href="mailto:alm@nobodies.team">alm@nobodies.team</a> or on <a href="https://discord.com/channels/1462886445583962245/1544620180561199104" target="_blank" rel="noopener noreferrer">#🛖-alm-2026</a> on Discord.</p>
+                    <p>Most people arrive Friday and leave Sunday. Thursday 15 and Monday 19 are reserved for the setup and wrap crew. Need to arrive earlier or leave later for travel reasons? Get in touch at <a href="mailto:alm@nobodies.team">alm@nobodies.team</a> or on <a href="https://discord.com/channels/1462886445583962245/1544620180561199104" target="_blank" rel="noopener noreferrer">#🛖-alm-2026</a> on Discord.</p>
                 </div>
             </section>
 
@@ -558,50 +609,37 @@
                 </div>
             </details>
 
-            <details class="tr-section tr-toggle" id="links">
-                <summary><h2>Key links</h2></summary>
-                <div class="tr-toggle-body">
+
+
+        </div>
+
+        <aside class="alm-side">
+            <div class="alm-box" id="links">
+                <h3>Quick links for attendees</h3>
                 <ul>
-                    <li><strong>Registration form:</strong> <a href="https://forms.gle/1yA3BFrmqXy4mC5Y7" target="_blank" rel="noopener noreferrer">forms.gle/1yA3BFrmqXy4mC5Y7</a></li>
-                    <li><strong>Rideshare:</strong> <a href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=299231524#gid=299231524" target="_blank" rel="noopener noreferrer">rideshare sheet</a></li>
-                    <li><strong>Shift sign-up:</strong> <a href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=1859621709#gid=1859621709" target="_blank" rel="noopener noreferrer">onsite shift tab</a></li>
-                    <li><strong>Survival guide:</strong> coming soon</li>
-                    <li><strong>Contact:</strong> <a href="mailto:alm@nobodies.team">alm@nobodies.team</a></li>
+                    <li><a href="https://forms.gle/1yA3BFrmqXy4mC5Y7" target="_blank" rel="noopener noreferrer">Attendance sign-up form</a></li>
+                    <li><a href="https://discord.com/channels/1462886445583962245/1544620180561199104" target="_blank" rel="noopener noreferrer">Discord #🛖-alm-2026</a></li>
+                    <li>ALM Google Calendar <span class="alm-soon">&mdash; invite link coming soon</span></li>
+                    <li><a href="https://t.me/+8PJcUJjxR5gxNDg0" target="_blank" rel="noopener noreferrer">Attendees Telegram group</a></li>
+                    <li><a href="https://chat.whatsapp.com/JvsdNfMzrNKBYvk4km3xR3" target="_blank" rel="noopener noreferrer">Attendees WhatsApp group</a></li>
+                    <li>Survival Guide <span class="alm-soon">&mdash; coming soon</span></li>
+                    <li><a href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=299231524#gid=299231524" target="_blank" rel="noopener noreferrer">Rideshare</a></li>
                 </ul>
-                </div>
-            </details>
+            </div>
+            <div class="alm-box" id="contact">
+                <h3>Contact</h3>
+                <ul>
+                    <li><span class="alm-role">General</span><a href="mailto:alm@nobodies.team">alm@nobodies.team</a></li>
+                    <li><span class="alm-role">Venue &amp; logistics</span><a href="mailto:doreen@nobodies.team">doreen@nobodies.team</a></li>
+                    <li><span class="alm-role">Comms &amp; attendee support</span><a href="mailto:leaf@nobodies.team">leaf@nobodies.team</a></li>
+                    <li><span class="alm-role">Programme &amp; facilitation</span><a href="mailto:celine@nobodies.team">celine@nobodies.team</a></li>
+                    <li><span class="alm-role">Tech &amp; equipment</span><a href="mailto:martian@nobodies.team">martian@nobodies.team</a></li>
+                    <li><span class="alm-role">Finance &amp; travel reimbursement</span><a href="mailto:cupcake@nobodies.team">cupcake@nobodies.team</a></li>
+                </ul>
+            </div>
+        </aside>
 
-            <!-- FAQ: standalone, not a toggle -->
-            <section class="tr-section" id="faq">
-                <h2>FAQ</h2>
-
-                <div class="tr-scenario">
-                    <h3>Do I need to pay for anything?</h3>
-                    <p>No. Stay and food are covered by NCA. You pay for travel upfront and claim it back afterwards, up to &euro;250. See <a href="#travel-reimbursement">Travel reimbursement</a>.</p>
-                </div>
-
-                <div class="tr-scenario">
-                    <h3>What&rsquo;s the deadline to register?</h3>
-                    <p>28 September 2026, or when the 50-person cap is reached.</p>
-                </div>
-
-                <div class="tr-scenario">
-                    <h3>Can I join online?</h3>
-                    <p>Yes, for key sessions. Details to follow closer to the date.</p>
-                </div>
-
-                <div class="tr-scenario">
-                    <h3>Who do I contact with questions?</h3>
-                    <ul>
-                        <li><strong>General:</strong> <a href="mailto:alm@nobodies.team">alm@nobodies.team</a> &middot; <a href="https://discord.com/channels/1462886445583962245/1544620180561199104" target="_blank" rel="noopener noreferrer">#🛖-alm-2026</a> on Discord &middot; <a href="https://t.me/+8PJcUJjxR5gxNDg0" target="_blank" rel="noopener noreferrer">Telegram</a> &middot; <a href="https://chat.whatsapp.com/JvsdNfMzrNKBYvk4km3xR3" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-                        <li><strong>Venue &amp; logistics:</strong> <a href="mailto:doreen@nobodies.team">doreen@nobodies.team</a></li>
-                        <li><strong>Comms &amp; attendee support:</strong> <a href="mailto:leaf@nobodies.team">leaf@nobodies.team</a></li>
-                        <li><strong>Programme &amp; facilitation:</strong> <a href="mailto:celine@nobodies.team">celine@nobodies.team</a></li>
-                        <li><strong>Tech &amp; equipment:</strong> <a href="mailto:martian@nobodies.team">martian@nobodies.team</a></li>
-                        <li><strong>Finance &amp; travel reimbursement:</strong> <a href="mailto:cupcake@nobodies.team">cupcake@nobodies.team</a></li>
-                    </ul>
-                </div>
-            </section>
+        </div>
 
         </div>
     </main>
