@@ -11,6 +11,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Page palette: navy + burgundy, matching the hero (per Daniela) */
+        body {
+            --color-bg: #f5f6fa;
+            --color-bg-alt: #e9ecf4;
+            --color-text: #1a2033;
+            --color-text-muted: #545c72;
+            --color-accent: #802034;
+            --color-accent-hover: #621827;
+            --color-pink: #1e3058;
+            --color-purple: #1e3058;
+            --color-purple-dark: #0e1830;
+            --color-yellow: #802034;
+            --color-border: #d6dbe6;
+        }
+
         .tr-page {
             padding: 0 0 4rem;
         }
@@ -507,9 +522,19 @@
         .research-table td:first-child { color: var(--color-text); }
         .research-table tr:last-child td { border-bottom: 0; }
         .research-table tr.is-current td {
-            background: rgba(194, 112, 62, 0.12);
+            background: rgba(128, 32, 52, 0.08);
             color: var(--color-text);
             font-weight: 500;
+        }
+
+        .tr-scenario .alm-payout, .alm-payout {
+            margin: 0.75rem 0 0;
+            padding: 0.75rem 1.1rem;
+            background: var(--color-bg-alt);
+            border-left: 3px solid var(--color-accent);
+            border-radius: var(--radius);
+            color: var(--color-accent);
+            font-weight: 700;
         }
 
         /* Reimbursement cards: big amount + two compact deadline cards */
@@ -632,11 +657,9 @@
                         <thead><tr><th>What</th><th>When</th></tr></thead>
                         <tbody>
                             <tr><td>Registration closes</td><td>28 September 2026</td></tr>
-                            <tr><td>Room assignments sent</td><td>Early October</td></tr>
                             <tr><td>Org team arrives</td><td>Thursday 15 October</td></tr>
                             <tr class="is-current"><td>Core programme</td><td>Friday 16 &ndash; Sunday 18 October</td></tr>
                             <tr><td>Wrap &amp; departures</td><td>Monday 19 October</td></tr>
-                            <tr><td>Weekly org check-in</td><td>Fridays 13:00 CEST (running through 23 October)</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -747,8 +770,9 @@
                         <li>Create a new expense report</li>
                         <li>Select category: <strong>Admin / ALM</strong></li>
                         <li>Add your expense lines and attach receipts</li>
-                        <li>Submit<br>You&rsquo;ll receive a SEPA bank transfer once approved</li>
+                        <li>Submit</li>
                     </ol>
+                    <p class="alm-payout">&rarr; You&rsquo;ll receive a SEPA bank transfer once approved</p>
                 </div>
 
 
