@@ -404,6 +404,143 @@
 
         .tr-scenario ul { margin-bottom: 0; }
 
+        /* Gradient hero (after event-dates-2027), navy with a burgundy glow */
+        .alm-hero {
+            padding: 10rem 0 4.5rem;
+            color: #fff;
+            background:
+                radial-gradient(circle at 82% 18%, rgba(128, 32, 52, 0.55), transparent 45%),
+                linear-gradient(135deg, rgba(14, 24, 48, 0.98), rgba(30, 48, 88, 0.94));
+        }
+        .alm-kicker {
+            display: inline-block;
+            margin-bottom: 1.25rem;
+            padding: 0.45rem 0.85rem;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 999px;
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+        .alm-hero h1 {
+            color: #fff;
+            margin-bottom: 1.25rem;
+            font-size: clamp(2.2rem, 4.6vw, 3.4rem);
+            white-space: nowrap;
+        }
+        .alm-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.75rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.05rem;
+        }
+        .alm-meta a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+        .alm-meta a:hover { color: rgba(255,255,255,0.8); }
+
+        .alm-inner { max-width: 900px; margin: 0 auto; padding: 0 var(--spacing); }
+
+        /* Button strip under the hero */
+        .alm-actions {
+            background: var(--color-bg-alt);
+            border-bottom: 1px solid var(--color-border);
+            padding: 1.25rem 0;
+        }
+        .alm-actions .alm-inner {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 0.75rem;
+        }
+        .alm-actions .btn { white-space: nowrap; }
+
+        @media (max-width: 760px) {
+            .alm-hero { padding: 9.5rem 0 3rem; }
+            .alm-hero h1 { white-space: normal; }
+            .alm-hero h1 span { display: block; }
+            .alm-hero h1 .alm-dash { display: none; }
+            .alm-actions .alm-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+            .alm-actions .btn { padding: 0.7rem 0.5rem; font-size: 0.85rem; text-align: center; justify-content: center; white-space: normal; }
+        }
+
+        /* Coloured intro box */
+        .alm-intro {
+            background: #e8edf6;
+            border: 1px solid #cdd6e6;
+            border-left: 4px solid #1e3058;
+            border-radius: var(--radius);
+            padding: 2rem 2.25rem;
+        }
+        .alm-intro p:last-child { margin-bottom: 0; }
+
+        /* Key dates table (after event-dates-2027 research-table) */
+        .table-wrap {
+            width: 100%;
+            margin: 1.25rem 0 1.75rem;
+            overflow-x: auto;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+        }
+        .research-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.2);
+            font-size: 0.91rem;
+        }
+        .research-table th,
+        .research-table td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid var(--color-border);
+            text-align: left;
+            vertical-align: top;
+            line-height: 1.5;
+        }
+        .research-table th {
+            background: var(--color-bg-alt);
+            color: var(--color-text);
+            font-size: 0.74rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        .research-table td { color: var(--color-text-muted); }
+        .research-table td:first-child { color: var(--color-text); }
+        .research-table tr:last-child td { border-bottom: 0; }
+        .research-table tr.is-current td {
+            background: rgba(194, 112, 62, 0.12);
+            color: var(--color-text);
+            font-weight: 500;
+        }
+
+        /* Reimbursement cards: big amount + two compact deadline cards */
+        .alm-reimb-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0 2rem;
+        }
+        .alm-deadline-pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .alm-deadline-pair .tr-tier { padding: 1rem 1.25rem; }
+        .alm-deadline-pair .tr-tier-label { margin-bottom: 0.3rem; }
+        .alm-deadline-pair .tr-tier-amount { font-size: 1.15rem; }
+        .alm-vat {
+            background: rgba(255,255,255,0.5);
+            border-left: 3px solid var(--color-text-muted);
+            border-radius: var(--radius);
+            padding: 0.85rem 1.25rem;
+            margin: 0.75rem 0 0;
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+        }
+        @media (max-width: 600px) {
+            .alm-deadline-pair .tr-tier { padding: 0.85rem 1rem; }
+            .alm-deadline-pair .tr-tier-amount { font-size: 1rem; }
+        }
+
         /* Layout: main column + sidebar */
         .alm-layout {
             display: grid;
@@ -444,7 +581,7 @@
         .alm-box .alm-role { display: block; font-size: 0.8rem; }
         .alm-box .alm-soon { font-style: italic; font-size: 0.85rem; }
         @media (max-width: 900px) {
-            .alm-layout { grid-template-columns: 1fr; gap: 0; }
+            .alm-layout { grid-template-columns: minmax(0, 1fr); gap: 0; }
             .alm-side { display: contents; }
             #links { order: -1; margin-top: 2.5rem; }
             #contact { order: 1; margin-top: 3rem; }
@@ -458,27 +595,31 @@
     <main class="tr-page">
 
         <!-- Hero -->
-        <section class="tr-hero">
-            <div class="tr-hero-bg"></div>
-            <div class="tr-hero-overlay"></div>
-            <div class="tr-hero-content">
-                <span class="tr-hero-label">Association &middot; Internal</span>
-                <h1>ALM 2026 &mdash; All Leads Meeting</h1>
-                <p><a href="https://maps.app.goo.gl/4bvLzec1aNNbAL7M7" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">📍 Vidalia, Cal Vidal &middot; Puig-reig, Barcelona</a> &middot; 15&ndash;19 October 2026</p>
-                <div class="tr-hero-actions">
-                    <a href="https://forms.gle/1yA3BFrmqXy4mC5Y7" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Register to attend</a>
-                    <a href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=1859621709#gid=1859621709" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Sign up for a shift</a>
-                    <a href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=299231524#gid=299231524" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Rideshare</a>
-                    <a href="#travel-reimbursement" class="btn btn-outline">Travel reimbursement</a>
+        <header class="alm-hero">
+            <div class="alm-inner">
+                <span class="alm-kicker">Association &middot; Internal</span>
+                <h1><span>ALM 2026</span><span class="alm-dash"> &mdash; </span><span>All Leads Meeting</span></h1>
+                <div class="alm-meta">
+                    <a href="https://maps.app.goo.gl/4bvLzec1aNNbAL7M7" target="_blank" rel="noopener noreferrer">📍 Vidalia, Cal Vidal &middot; Puig-reig, Barcelona</a>
+                    <span>15&ndash;19 October 2026</span>
                 </div>
             </div>
-        </section>
+        </header>
+
+        <div class="alm-actions">
+            <div class="alm-inner">
+                <a href="https://forms.gle/1yA3BFrmqXy4mC5Y7" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Register to attend</a>
+                <a href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=1859621709#gid=1859621709" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Sign up for a shift</a>
+                <a href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=299231524#gid=299231524" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Rideshare</a>
+                <a href="#travel-reimbursement" class="btn btn-outline">Travel reimbursement</a>
+            </div>
+        </div>
 
         <div class="tr-content">
         <div class="alm-layout">
         <div class="alm-main">
 
-            <section class="tr-section" id="what">
+            <section class="tr-section alm-intro" id="what">
                 <h2>What is the ALM?</h2>
                 <p>The All Leads Meeting is our end-of-year gathering for Elsewhere coordinators and leads. Three working days to turn our debrief of the event and shared learnings into working groups and projects that we carry forward into the next cycle.</p>
                 <p>It&rsquo;s an internal working meeting &mdash; a space for honest conversations about what&rsquo;s sustainable, what we want Elsewhere to be in the next edition, and how we want the Association to be shaped onwards.</p>
@@ -486,15 +627,19 @@
 
             <section class="tr-section" id="dates">
                 <h2>Key dates</h2>
-                <table class="alm-dates">
-                    <tr><td>Registration closes</td><td>28 September 2026</td></tr>
-                    <tr><td>Room assignments sent</td><td>Early October</td></tr>
-                    <tr><td>Final info email</td><td>13 October</td></tr>
-                    <tr><td>Org team arrives</td><td>Thursday 15 October</td></tr>
-                    <tr><td>Core programme</td><td><strong>Friday 16 &ndash; Sunday 18 October</strong></td></tr>
-                    <tr><td>Wrap &amp; departures</td><td>Monday 19 October</td></tr>
-                    <tr><td>Weekly org check-in</td><td>Fridays 13:00 CEST (running through 23 October)</td></tr>
-                </table>
+                <div class="table-wrap">
+                    <table class="research-table">
+                        <thead><tr><th>What</th><th>When</th></tr></thead>
+                        <tbody>
+                            <tr><td>Registration closes</td><td>28 September 2026</td></tr>
+                            <tr><td>Room assignments sent</td><td>Early October</td></tr>
+                            <tr><td>Org team arrives</td><td>Thursday 15 October</td></tr>
+                            <tr class="is-current"><td>Core programme</td><td>Friday 16 &ndash; Sunday 18 October</td></tr>
+                            <tr><td>Wrap &amp; departures</td><td>Monday 19 October</td></tr>
+                            <tr><td>Weekly org check-in</td><td>Fridays 13:00 CEST (running through 23 October)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
                 <div class="tr-highlight">
                     <p>Most people arrive Friday and leave Sunday. Thursday 15 and Monday 19 are reserved for the setup and wrap crew. Need to arrive earlier or leave later for travel reasons? Get in touch at <a href="mailto:alm@nobodies.team">alm@nobodies.team</a> or on <a href="https://discord.com/channels/1462886445583962245/1544620180561199104" target="_blank" rel="noopener noreferrer">#🛖-alm-2026</a> on Discord.</p>
                 </div>
@@ -549,7 +694,7 @@
             <details class="tr-section tr-toggle" id="food">
                 <summary><h2>Food</h2></summary>
                 <div class="tr-toggle-body">
-                <p>Vidalia&rsquo;s kitchen team cooks all meals. Food is plant-based by default. They adapt to allergies and intolerances &mdash; declare yours in the registration form.</p>
+                <p>Vidalia&rsquo;s kitchen team cooks all meals. Food is plant-based by default. They adapt to allergies and intolerances &mdash; <strong>declare yours in the registration form.</strong></p>
                 <p>Everyone helps out: sign up for a meal prep or cleanup shift via the <a href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=1859621709#gid=1859621709" target="_blank" rel="noopener noreferrer">onsite shift tab</a> in the master sheet.</p>
                 </div>
             </details>
@@ -558,26 +703,29 @@
                 <summary><h2>Travel reimbursement</h2></summary>
                 <div class="tr-toggle-body">
 
-                <div class="tr-tiers">
+                <div class="alm-reimb-cards">
                     <div class="tr-tier">
                         <span class="tr-tier-label">ALM attendees</span>
-                        <p class="tr-tier-dates">Travel to and from Vidalia: flights, trains, buses, car hire, fuel. Not food, drink or other costs en route.</p>
+                        <p class="tr-tier-dates">Travel to and from Vidalia: flights, trains, buses, car hire, fuel.<br>Not food, drink or other costs en route.</p>
                         <div class="tr-tier-amount">up to &euro;250</div>
                         <p class="tr-tier-note">per person</p>
                     </div>
-                    <div class="tr-tier">
-                        <span class="tr-tier-label">Submit claims by</span>
-                        <div class="tr-tier-amount" style="font-size: 1.4rem;">30 October 2026</div>
-                    </div>
-                    <div class="tr-tier">
-                        <span class="tr-tier-label">Payout by</span>
-                        <div class="tr-tier-amount" style="font-size: 1.4rem;">30 November 2026</div>
+                    <div class="alm-deadline-pair">
+                        <div class="tr-tier">
+                            <span class="tr-tier-label">Submit claims by</span>
+                            <div class="tr-tier-amount">30 October 2026</div>
+                        </div>
+                        <div class="tr-tier">
+                            <span class="tr-tier-label">Payout by</span>
+                            <div class="tr-tier-amount">30 November 2026</div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="tr-highlight">
                     <p><strong>No invoice, no reimbursement.</strong> Missing or incorrect invoices mean we can&rsquo;t process the reimbursement.</p>
-                    <p>Already purchased and don&rsquo;t have an invoice? It can be requested after purchase &mdash; please do so. When in doubt, ask us.</p>
+                    <p><strong>Already purchased and don&rsquo;t have an invoice?</strong> It can be requested after purchase &mdash; please do so.</p>
+                    <p>When in doubt, ask us.</p>
                 </div>
 
                 <div class="tr-scenario">
@@ -589,7 +737,7 @@
                         Glorieta de Bilbao 1, 3&ordm; Derecha<br>
                         28004 Madrid, Spain
                     </div>
-                    <p>For EU/international purchases, use VAT number <strong>ESG26726299</strong> instead of the NIF.</p>
+                    <div class="alm-vat">For EU/international purchases, use VAT number <strong>ESG26726299</strong> instead of the NIF.</div>
                 </div>
 
                 <div class="tr-scenario">
@@ -598,14 +746,13 @@
                         <li>Go to <a href="https://humans.nobodies.team/expenses" target="_blank" rel="noopener noreferrer">humans.nobodies.team/expenses</a></li>
                         <li>Create a new expense report</li>
                         <li>Select category: <strong>Admin / ALM</strong></li>
-                        <li>Add your expense lines and attach receipts to each line</li>
-                        <li>Submit &mdash; you&rsquo;ll receive a SEPA bank transfer once approved</li>
+                        <li>Add your expense lines and attach receipts</li>
+                        <li>Submit<br>You&rsquo;ll receive a SEPA bank transfer once approved</li>
                     </ol>
                 </div>
 
 
-                <p>For full details on invoices and what&rsquo;s accepted, see the <a href="expenses.html">Expense Reimbursement Guide</a>.</p>
-                <p class="tr-contact">Questions? Email <a href="mailto:alm@nobodies.team">alm@nobodies.team</a> or <a href="mailto:cupcake@nobodies.team">cupcake@nobodies.team</a> (finance &amp; travel reimbursement)</p>
+                <p class="tr-contact">Questions? Email <a href="mailto:alm@nobodies.team">alm@nobodies.team</a> or <a href="mailto:cupcake@nobodies.team">cupcake@nobodies.team</a></p>
                 </div>
             </details>
 
@@ -619,7 +766,7 @@
                 <ul>
                     <li><a href="https://forms.gle/1yA3BFrmqXy4mC5Y7" target="_blank" rel="noopener noreferrer">Attendance sign-up form</a></li>
                     <li><a href="https://discord.com/channels/1462886445583962245/1544620180561199104" target="_blank" rel="noopener noreferrer">Discord #🛖-alm-2026</a></li>
-                    <li>ALM Google Calendar <span class="alm-soon">&mdash; invite link coming soon</span></li>
+                    <li><a href="https://calendar.google.com/calendar/u/0?cid=Y19mNGVjMGY2ZWQ3ODYzMWY5YmIwMDU0YzA5ZGYwZDY1MjJkOTUxZGZlNWYxNDYxYTdmNzUwZWQxMjE3NWViN2M0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20" target="_blank" rel="noopener noreferrer">ALM Google Calendar</a></li>
                     <li><a href="https://t.me/+8PJcUJjxR5gxNDg0" target="_blank" rel="noopener noreferrer">Attendees Telegram group</a></li>
                     <li><a href="https://chat.whatsapp.com/JvsdNfMzrNKBYvk4km3xR3" target="_blank" rel="noopener noreferrer">Attendees WhatsApp group</a></li>
                     <li>Survival Guide <span class="alm-soon">&mdash; coming soon</span></li>
