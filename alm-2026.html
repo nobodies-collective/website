@@ -1,533 +1,578 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALM 2026 &mdash; All Leads Meeting | Nobodies Collective</title>
-    <meta name="description" content="The All Leads Meeting 2026: Vidalia, Cal Vidal (Puig-reig), 15&ndash;19 October. Dates, who can attend, getting there, accommodation, food, rideshare and travel reimbursement.">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .tr-page {
-            padding: 0 0 4rem;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ALM 2026 — All Leads Meeting · Nobodies Collective</title>
+<meta name="description" content="The All Leads Meeting 2026: Vidalia, Cal Vidal (Puig-reig), 15–19 October. Dates, who can attend, getting there, accommodation, food, rideshare and travel reimbursement.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  :root {
+    --bg: #f9f7f4;
+    --text: #1a1a1a;
+    --text-muted: #6b6b6b;
+    --accent: #3d5a3e;
+    --accent-light: #eef2ee;
+    --border: #d8d4ce;
+    --shade: #f0ede8;
+    --mono: "SF Mono", "Fira Mono", "Consolas", monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    --max: 680px;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+  }
 
-        /* Hero */
-        .tr-hero {
-            position: relative;
-            min-height: 50vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            overflow: hidden;
-            background: #111;
-        }
+  .site-nav {
+    border-bottom: 1px solid var(--border);
+    padding: 0.75rem 1.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+  .site-nav a { color: var(--accent); text-decoration: none; }
+  .site-nav a:hover { text-decoration: underline; }
 
-        .tr-hero-bg {
-            position: absolute;
-            inset: 0;
-            background: url('images/art/process.jpg') center/cover no-repeat;
-            opacity: 0.35;
-        }
+  .page {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+  }
 
-        .tr-hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to bottom, rgba(17,17,17,0.2) 0%, rgba(17,17,17,0.8) 100%);
-        }
+  .eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0 0 0.5rem;
+  }
 
-        .tr-hero-content {
-            position: relative;
-            z-index: 2;
-            padding: 10rem 2rem 5rem;
-            max-width: 760px;
-        }
+  .hero-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0 0 0.5rem;
+    color: var(--text);
+  }
 
-        .tr-hero-label {
-            display: inline-block;
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--color-accent);
-            margin-bottom: 1rem;
-        }
+  .hero-sub {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 0 0 2.5rem;
+  }
 
-        .tr-hero-content h1 {
-            color: #fff;
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            margin-bottom: 1rem;
-            text-shadow: 0 2px 20px rgba(0,0,0,0.4);
-        }
+  .action-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 3rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border);
+  }
 
-        .tr-hero-content p {
-            color: rgba(255,255,255,0.85);
-            font-size: 1.1rem;
-            line-height: 1.7;
-            max-width: 580px;
-            margin: 0 auto;
-        }
+  .btn {
+    display: inline-block;
+    padding: 0.55rem 1.1rem;
+    border-radius: 4px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+  .btn:hover { opacity: 0.82; }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-secondary { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
 
-        /* Language note */
-        .lang-note-banner {
-            margin-top: 1.5rem;
-            padding: 0.9rem 1.25rem;
-            background: var(--color-bg-alt);
-            border-radius: var(--radius);
-            border-left: 3px solid var(--color-accent);
-            font-size: 0.9rem;
-            color: var(--color-text-muted);
-        }
+  /* Static sections (no toggle) */
+  .section-static { margin-bottom: 2.75rem; }
 
-        .lang-note-banner a {
-            font-weight: 600;
-        }
+  /* Toggleable sections */
+  .section-toggle {
+    margin-bottom: 0;
+    border-top: 1px solid var(--border);
+  }
+  .section-toggle:last-child { border-bottom: 1px solid var(--border); }
 
-        /* Back link */
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-            color: var(--color-text-muted);
-            font-size: 0.9rem;
-        }
-        .back-link:hover { color: var(--color-accent); }
-        .back-link::before { content: '\2190'; }
+  .toggle-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.9rem 0;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+  }
+  .toggle-summary::-webkit-details-marker { display: none; }
+  .toggle-summary h2 {
+    font-size: 1.05rem;
+    font-weight: 650;
+    margin: 0;
+    color: var(--text);
+    border: none;
+    padding: 0;
+    display: block;
+  }
+  .toggle-summary::after {
+    content: '+';
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    flex-shrink: 0;
+    margin-left: 1rem;
+  }
+  details[open] > .toggle-summary::after { content: '−'; }
 
-        /* Content */
-        .tr-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 var(--spacing);
-        }
+  .toggle-body {
+    padding-bottom: 1.5rem;
+  }
 
-        .tr-section {
-            margin-top: 3.5rem;
-        }
+  /* Static h2 */
+  .section-static h2 {
+    font-size: 1.05rem;
+    font-weight: 650;
+    margin: 0 0 0.75rem;
+    color: var(--text);
+    padding-top: 0.25rem;
+    border-top: 2px solid var(--accent);
+    display: inline-block;
+  }
 
-        .tr-section h2 {
-            font-size: clamp(1.5rem, 4vw, 2rem);
-            margin-bottom: 1rem;
-            color: var(--color-text);
-        }
+  .toggles-heading {
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 2.5rem 0 0;
+    padding-bottom: 0.5rem;
+  }
 
-        .tr-section p,
-        .tr-section li {
-            color: var(--color-text-muted);
-            line-height: 1.7;
-        }
+  p {
+    margin: 0 0 0.9rem;
+    max-width: 66ch;
+  }
+  a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
 
-        .tr-section p {
-            margin-bottom: 1rem;
-        }
+  /* Dates table */
+  .dates-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin-bottom: 0.9rem;
+  }
+  .dates-table td {
+    padding: 0.5rem 0.6rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .dates-table td:first-child {
+    white-space: nowrap;
+    color: var(--text-muted);
+    width: 10rem;
+  }
+  .dates-table tr:last-child td { border-bottom: none; }
 
-        .tr-section ul {
-            padding-left: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
+  /* Shaded block */
+  .shaded {
+    background: var(--shade);
+    border-radius: 6px;
+    padding: 1rem 1.1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    max-width: 62ch;
+  }
+  .shaded p { margin: 0; }
+  .shaded p + p { margin-top: 0.5rem; }
 
-        .tr-section li {
-            margin-bottom: 0.5rem;
-        }
+  /* Address block */
+  .info-block {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    padding: 0.8rem 1rem;
+    margin: 0.5rem 0 0.75rem;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
 
-        .tr-section li strong {
-            color: var(--color-text);
-        }
+  /* Transport */
+  .transport { margin-bottom: 1rem; }
+  .transport-item {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr;
+    gap: 0 0.75rem;
+    font-size: 0.9rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border);
+    align-items: baseline;
+  }
+  .transport-item:last-child { border-bottom: none; }
+  .transport-label {
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding-top: 0.1rem;
+  }
 
-        /* Highlight box */
-        .tr-highlight {
-            background: var(--color-bg-alt);
-            border-radius: var(--radius);
-            padding: 2rem 2.5rem;
-            margin: 2rem 0;
-            border-left: 4px solid var(--color-accent);
-        }
+  /* Reimbursement prose steps */
+  .reimb-steps { margin: 0 0 1rem; max-width: 62ch; }
+  .reimb-step { margin-bottom: 1.1rem; }
+  .reimb-step-label {
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+  .reimb-step p { margin: 0 0 0.4rem; font-size: 0.9rem; }
 
-        .tr-highlight p {
-            color: var(--color-text-muted);
-            margin-bottom: 0.5rem;
-        }
+  /* Deadlines */
+  .deadlines {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .deadline-chip {
+    background: var(--accent-light);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.82rem;
+  }
+  .deadline-chip strong { display: block; font-size: 0.75rem; color: var(--text-muted); font-weight: 400; }
 
-        .tr-highlight p:last-child { margin-bottom: 0; }
+  /* Key links */
+  .links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.9rem;
+  }
+  .links-list li {
+    border-bottom: 1px solid var(--border);
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 62ch;
+    gap: 1rem;
+  }
+  .links-list li:first-child { border-top: 1px solid var(--border); }
+  .link-label { color: var(--text-muted); font-size: 0.82rem; }
 
-        .tr-highlight strong {
-            color: var(--color-text);
-        }
+  /* FAQ accordion */
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    max-width: 62ch;
+  }
+  .faq-item:first-of-type { border-top: 1px solid var(--border); }
+  .faq-summary {
+    padding: 0.75rem 0;
+    font-weight: 600;
+    font-size: 0.92rem;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+  .faq-summary::-webkit-details-marker { display: none; }
+  .faq-summary::after { content: '+'; font-size: 1.1rem; font-weight: 300; color: var(--text-muted); flex-shrink: 0; }
+  details.faq-item[open] .faq-summary::after { content: '−'; }
+  .faq-body { padding: 0 0 0.9rem; font-size: 0.9rem; }
+  .faq-body p { margin: 0 0 0.5rem; }
+  .faq-body ul { margin: 0; padding-left: 1.2rem; }
+  .faq-body li { margin-bottom: 0.3rem; }
 
-        /* Tiers */
-        .tr-tiers {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 1.25rem;
-            margin: 2rem 0;
-        }
+  /* Contact list */
+  .contact-section { margin-bottom: 1rem; }
+  .contact-group-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin: 0 0 0.4rem;
+    font-weight: 600;
+  }
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+  }
+  .contact-list li {
+    font-size: 0.88rem;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    max-width: 62ch;
+    gap: 1rem;
+  }
+  .contact-list li:first-child { border-top: 1px solid var(--border); }
+  .contact-role { color: var(--text-muted); font-size: 0.8rem; }
 
-        .tr-tier {
-            background: #fff;
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius);
-            padding: 1.75rem;
-        }
+  .site-footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 1.5rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-align: center;
+  }
 
-        .tr-tier-label {
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--color-accent);
-            margin-bottom: 0.75rem;
-        }
+  @media (max-width: 520px) {
+    .page { padding: 2rem 1rem 4rem; }
+    .action-strip { flex-direction: column; }
+    .btn { text-align: center; }
+    .transport-item { grid-template-columns: 3.5rem 1fr; }
+  }
 
-        .tr-tier h3 {
-            font-size: 1rem;
-            color: var(--color-text);
-            margin-bottom: 0.4rem;
-        }
-
-        .tr-tier-dates {
-            font-size: 0.9rem;
-            color: var(--color-text-muted);
-            margin-bottom: 1rem;
-        }
-
-        .tr-tier-amount {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--color-text);
-            line-height: 1;
-        }
-
-        .tr-tier-note {
-            font-size: 0.85rem;
-            color: var(--color-text-muted);
-            margin-top: 0.25rem;
-        }
-
-        /* Steps */
-        .tr-steps {
-            counter-reset: tr-step;
-            list-style: none;
-            padding: 0;
-            margin: 1.5rem 0;
-        }
-
-        .tr-steps li {
-            counter-increment: tr-step;
-            position: relative;
-            display: block;
-            padding-left: 3.25rem;
-            margin-bottom: 1.25rem;
-            color: var(--color-text-muted);
-            line-height: 1.6;
-        }
-
-        .tr-steps li::before {
-            content: counter(tr-step);
-            position: absolute;
-            left: 0;
-            top: 0.1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 2rem;
-            height: 2rem;
-            background: var(--color-accent);
-            color: #fff;
-            font-weight: 700;
-            font-size: 0.85rem;
-            border-radius: 50%;
-        }
-
-        .tr-steps li strong {
-            color: var(--color-text);
-        }
-
-        /* Apply CTA */
-        .tr-apply {
-            text-align: center;
-            padding: 4rem 2rem;
-            margin-top: 4rem;
-            background: var(--color-bg-alt);
-            border-radius: var(--radius);
-        }
-
-        .tr-apply h2 {
-            margin-bottom: 1rem;
-        }
-
-        .tr-apply p {
-            color: var(--color-text-muted);
-            font-size: 1.05rem;
-            margin-bottom: 2rem;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .tr-contact {
-            text-align: center;
-            margin-top: 1.5rem;
-            color: var(--color-text-muted);
-            font-size: 0.95rem;
-        }
-
-        .tr-contact a {
-            font-weight: 600;
-        }
-
-        /* Scenario blocks */
-        .tr-scenario {
-            background: #fff;
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius);
-            padding: 1.75rem 2rem;
-            margin-bottom: 1.25rem;
-        }
-
-        .tr-scenario h3 {
-            font-size: 1.1rem;
-            color: var(--color-text);
-            margin-bottom: 0.75rem;
-        }
-
-        .tr-scenario .btn {
-            margin: 0.5rem 0 1rem;
-        }
-
-        @media (max-width: 600px) {
-            .tr-tiers {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .tr-section h3 {
-            font-size: 1.1rem;
-            color: var(--color-text);
-            margin: 1.5rem 0 0.5rem;
-        }
-        /* Toggle sections */
-        .tr-toggle {
-            border-bottom: 1px solid var(--color-border);
-            margin-top: 0;
-        }
-        .tr-toggle > summary {
-            list-style: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-            padding: 1.5rem 0;
-        }
-        .tr-toggle > summary::-webkit-details-marker { display: none; }
-        .tr-toggle > summary h2 { margin: 0; }
-        .tr-toggle > summary::after {
-            content: '\25BE';
-            font-size: 1.4rem;
-            color: var(--color-accent);
-            transition: transform 0.2s ease;
-        }
-        .tr-toggle[open] > summary::after { transform: rotate(180deg); }
-        .tr-toggle-body { padding-bottom: 1.5rem; }
-        .tr-content > .tr-toggle:first-child { margin-top: 3rem; }
-    </style>
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141714; --text: #e8e8e3; --text-muted: #8a8a82;
+      --accent: #7aad7c; --accent-light: #1c221c; --border: #2e332e; --shade: #1a1d1a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141714; --text: #e8e8e3; --text-muted: #8a8a82;
+    --accent: #7aad7c; --accent-light: #1c221c; --border: #2e332e; --shade: #1a1d1a;
+  }
+</style>
+<style>
+  /* Site-shell compatibility (added around Daniela's page CSS, which is kept verbatim above).
+     Only fills properties her CSS doesn't set, so style.css can't leak into the page body,
+     and her global a/p rules can't restyle the shared header/footer. */
+  main.page { padding-top: calc(3rem + 72px); }
+  @media (max-width: 520px) { main.page { padding-top: calc(2rem + 88px); } }
+  :where(.page) :is(h1, h2) { font-family: inherit; letter-spacing: normal; line-height: inherit; }
+  :where(.page) a:not(.btn):hover { color: var(--accent); }
+  .page .btn { font-family: inherit; box-shadow: none; }
+  .page .btn:hover { transform: none; box-shadow: none; }
+  .header a, .footer a { text-decoration: none; }
+  .footer p { max-width: none; }
+</style>
 </head>
 <body>
-    <div id="shared-header"></div>
-    <script src="header.js"></script>
 
-    <main class="tr-page">
+<div id="shared-header"></div>
+<script src="header.js"></script>
 
-        <!-- Hero -->
-        <section class="tr-hero">
-            <div class="tr-hero-bg"></div>
-            <div class="tr-hero-overlay"></div>
-            <div class="tr-hero-content">
-                <span class="tr-hero-label">Association</span>
-                <h1>ALM 2026 &mdash; All Leads Meeting</h1>
-                <p>Vidalia, Cal Vidal (Puig-reig, Barcelona) &middot; 15&ndash;19 October 2026</p>
-            </div>
-        </section>
+<main class="page">
 
-        <div class="tr-content">
+  <p class="eyebrow">Association · Internal</p>
+  <h1 class="hero-title">ALM 2026<br>All Leads Meeting</h1>
+  <p class="hero-sub">Vidalia, Cal Vidal · Puig-reig, Barcelona · 15–19 October 2026</p>
 
-            <details class="tr-section tr-toggle" open>
-                <summary><h2>What is the ALM?</h2></summary>
-                <div class="tr-toggle-body">
-                <p>The All Leads Meeting is our end-of-year gathering for Elsewhere coordinators and leads. Three working days to turn our debrief of the event and shared learnings into working groups and projects that we carry forward into the next cycle. It&rsquo;s an internal working meeting, a space for honest conversations about what&rsquo;s sustainable, what we want Elsewhere to be in the next edition, and how we want the Association to be shaped onwards.</p>
-            </div>
-            </details>
+  <div class="action-strip">
+    <a class="btn btn-primary" href="https://forms.gle/1yA3BFrmqXy4mC5Y7">Register to attend</a>
+    <a class="btn btn-secondary" href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=1859621709#gid=1859621709">Sign up for a shift</a>
+    <a class="btn btn-secondary" href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=299231524#gid=299231524">Rideshare</a>
+  </div>
 
-            <details class="tr-section tr-toggle">
-                <summary><h2>Dates</h2></summary>
-                <div class="tr-toggle-body">
-                <div class="tr-highlight">
-                    <p>The core programme runs <strong>Friday 16 &ndash; Sunday 18 October</strong>. Most people arrive Friday and leave Sunday.</p>
-                </div>
-                <p>Thursday 15 and Monday 19 are reserved for the setup and wrap crew (max ~15 people). Need to arrive earlier or leave later for travel reasons? Get in touch at <a href="mailto:alm@nobodies.team">alm@nobodies.team</a> and we&rsquo;ll see what we can do.</p>
-            </div>
-            </details>
+  <!-- STATIC SECTIONS -->
 
-            <details class="tr-section tr-toggle">
-                <summary><h2>Who can attend</h2></summary>
-                <div class="tr-toggle-body">
-                <p>Open to Elsewhere 2026 coordinators and organisation leads. If you were heavily involved as a core volunteer and/or want to be heavily involved in the next edition, please join us. Get in touch via <strong>#🛖-alm-2026</strong> on Discord or <a href="mailto:alm@nobodies.team">alm@nobodies.team</a>. Capacity is capped at 50 people.</p>
-                <p>Remote participation is available for key sessions. Details to follow.</p>
-            </div>
-            </details>
+  <div class="section-static" id="what">
+    <h2>What is the ALM?</h2>
+    <p>The All Leads Meeting is our end-of-year gathering for Elsewhere coordinators and leads. Three working days to turn our debrief of the event and shared learnings into working groups and projects that we carry forward into the next cycle.</p>
+    <p>It's an internal working meeting — a space for honest conversations about what's sustainable, what we want Elsewhere to be in the next edition, and how we want the Association to be shaped onwards.</p>
+  </div>
 
-            <details class="tr-section tr-toggle">
-                <summary><h2>Cost</h2></summary>
-                <div class="tr-toggle-body">
-                <div class="tr-highlight">
-                    <p><strong>Stay and food are fully covered by NCA.</strong> You do not pay for accommodation or meals.</p>
-                </div>
-                <p>Travel is your own cost upfront, reimbursable afterwards up to &euro;250. Guidelines must be followed to guarantee reimbursement. See <a href="#travel-reimbursement">Travel reimbursement</a> below.</p>
-            </div>
-            </details>
+  <div class="section-static" id="dates">
+    <h2>Dates</h2>
+    <p>The core programme runs <strong>Friday 16 – Sunday 18 October</strong>. Most people arrive Friday and leave Sunday.</p>
+    <table class="dates-table">
+      <tr><td>Core programme</td><td>Friday 16 – Sunday 18 October</td></tr>
+      <tr><td>Setup crew</td><td>Thursday 15 October (max ~15 people)</td></tr>
+      <tr><td>Wrap &amp; departures</td><td>Sunday 18 – Monday 19 October</td></tr>
+    </table>
+    <div class="shaded">
+      <p>Thursday 15 and Monday 19 are reserved for the setup and wrap crew. Need to arrive earlier or leave later for travel reasons? Get in touch at <a href="mailto:alm@nobodies.team">alm@nobodies.team</a> or on <a href="https://discord.com/channels/1462886445583962245/1544620180561199104">#🛖-alm-2026</a> on Discord.</p>
+    </div>
+  </div>
 
-            <details class="tr-section tr-toggle">
-                <summary><h2>Getting there</h2></summary>
-                <div class="tr-toggle-body">
-                <p>Vidalia is about 1 hour north of Barcelona, near Puig-reig on the Llobregat.</p>
-                <p>📍 Pla&ccedil;a de la Pur&iacute;ssima, 08692 Cal Vidal, Barcelona &middot; <a href="https://maps.app.goo.gl/4bvLzec1aNNbAL7M7" target="_blank" rel="noopener noreferrer">Map</a></p>
+  <div class="section-static" id="who">
+    <h2>Who can attend</h2>
+    <p>Open to Elsewhere 2026 coordinators and organisation leads. If you were heavily involved as a core volunteer and/or want to be heavily involved in the next edition, please join us. Get in touch via <a href="https://discord.com/channels/1462886445583962245/1544620180561199104">#🛖-alm-2026</a> on Discord or <a href="mailto:alm@nobodies.team">alm@nobodies.team</a>. Capacity is capped at 50 people.</p>
+    <p>Remote participation is available for key sessions. Details to follow closer to the date.</p>
+  </div>
 
-                <h3>By bus</h3>
-                <p>ALSA runs a Barcelona&ndash;Berga coach that stops outside the venue. Departs from Estaci&oacute; del Nord, also picks up at Passeig de Gr&agrave;cia. Book to Puig-reig at <a href="https://www.alsa.com" target="_blank" rel="noopener noreferrer">alsa.com</a>. Tell the driver: <em>&ldquo;Bajo en Cal Vidal.&rdquo;</em></p>
+  <!-- TOGGLEABLE SECTIONS -->
+  <p class="toggles-heading">More info</p>
 
-                <h3>By car</h3>
-                <p>Coordinate a lift or offer your spare seats on the <a href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=299231524#gid=299231524" target="_blank" rel="noopener noreferrer">rideshare sheet</a>.</p>
+  <details class="section-toggle" id="cost">
+    <summary class="toggle-summary"><h2>Cost</h2></summary>
+    <div class="toggle-body">
+      <p><strong>Stay and food are fully covered by NCA.</strong> You do not pay for accommodation or meals.</p>
+      <p>Travel is your own cost upfront, reimbursable afterwards up to €250. Guidelines must be followed to guarantee reimbursement — see <a href="#travel-reimbursement">Travel reimbursement</a> below.</p>
+    </div>
+  </details>
 
-                <h3>By plane</h3>
-                <p>Fly into Barcelona El Prat, then take Rodalies R2 Nord to Passeig de Gr&agrave;cia and connect to the ALSA coach.</p>
-            </div>
-            </details>
+  <details class="section-toggle" id="getting-there">
+    <summary class="toggle-summary"><h2>Getting there</h2></summary>
+    <div class="toggle-body">
+      <p>Vidalia is about 1 hour north of Barcelona, near Puig-reig on the Llobregat.</p>
+      <p>📍 <a href="https://maps.app.goo.gl/4bvLzec1aNNbAL7M7">Plaça de la Puríssima, 08692 Cal Vidal, Barcelona</a></p>
+      <div class="transport">
+        <div class="transport-item">
+          <span class="transport-label">Bus</span>
+          <span>ALSA runs a Barcelona–Berga coach that stops outside the venue. Departs from Estació del Nord, also picks up at Passeig de Gràcia. Book to <strong>Puig-reig</strong> at <a href="https://www.alsa.com/">alsa.com</a>. Tell the driver: <em>"Bajo en Cal Vidal."</em></span>
+        </div>
+        <div class="transport-item">
+          <span class="transport-label">Car</span>
+          <span>Coordinate a lift or offer your spare seats on the <a href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=299231524#gid=299231524">rideshare sheet</a>.</span>
+        </div>
+        <div class="transport-item">
+          <span class="transport-label">Plane</span>
+          <span>Fly into Barcelona El Prat, then take Rodalies R2 Nord to Passeig de Gràcia and connect to the ALSA coach.</span>
+        </div>
+      </div>
+    </div>
+  </details>
 
-            <details class="tr-section tr-toggle">
-                <summary><h2>Accommodation</h2></summary>
-                <div class="tr-toggle-body">
-                <p>You will be assigned a bed based on your registration form. Assignments go out in early October.</p>
-                <p>Vidalia has a mix of dormitory-style bunk beds, private rooms, and a small number of apartment rooms in a separate building about 100m from the main house. Bathrooms are mostly shared. One private en-suite room is available and reserved for accessibility needs.</p>
-                <div class="tr-highlight">
-                    <p>October nights in the Llobregat valley are cold. Sheets are provided but there are not enough duvets for the full group. <strong>Bring a sleeping bag or a warm blanket.</strong></p>
-                </div>
-            </div>
-            </details>
+  <details class="section-toggle" id="accommodation">
+    <summary class="toggle-summary"><h2>Accommodation</h2></summary>
+    <div class="toggle-body">
+      <p>You will be assigned a bed based on your registration form. Assignments go out in early October.</p>
+      <p>Vidalia has a mix of dormitory-style bunk beds, private rooms, and a small number of apartment rooms in a separate building about 100m from the main house. Bathrooms are mostly shared. One private en-suite room is available and reserved for accessibility needs.</p>
+      <p>October nights in the Llobregat valley are cold. Sheets are provided but there are not enough duvets for the full group. <strong>Bring a sleeping bag or a warm blanket.</strong></p>
+    </div>
+  </details>
 
-            <details class="tr-section tr-toggle">
-                <summary><h2>Food</h2></summary>
-                <div class="tr-toggle-body">
-                <p>Vidalia&rsquo;s kitchen team cooks all meals. Food is plant-based by default. They adapt to allergies and intolerances &mdash; declare yours in the registration form. Everyone helps out: sign up for a meal prep or cleanup shift via the <a href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=1859621709#gid=1859621709" target="_blank" rel="noopener noreferrer">master sheet</a>.</p>
-            </div>
-            </details>
+  <details class="section-toggle" id="food">
+    <summary class="toggle-summary"><h2>Food</h2></summary>
+    <div class="toggle-body">
+      <p>Vidalia's kitchen team cooks all meals. Food is plant-based by default. They adapt to allergies and intolerances — declare yours in the registration form. Everyone helps out: sign up for a meal prep or cleanup shift via the <a href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=1859621709#gid=1859621709">onsite shift tab</a> in the master sheet.</p>
+    </div>
+  </details>
 
-            <details class="tr-section tr-toggle" id="travel-reimbursement">
-                <summary><h2>Travel reimbursement</h2></summary>
-                <div class="tr-toggle-body">
-                <p>NCA reimburses travel costs up to <strong>&euro;250 per person</strong> for ALM attendees.</p>
-                <p>This covers transport to and from the venue only (flights, trains, buses, car hire, fuel). Not food, drink, or other costs en route.</p>
+  <details class="section-toggle" id="travel-reimbursement">
+    <summary class="toggle-summary"><h2>Travel reimbursement</h2></summary>
+    <div class="toggle-body">
+      <p>NCA reimburses travel costs up to <strong>€250 per person</strong> for ALM attendees. This covers transport to and from the venue only — flights, trains, buses, car hire, fuel. Not food, drink, or other costs en route.</p>
 
-                <h3>How to apply</h3>
-                <ol class="tr-steps">
-                    <li>Keep all your receipts and request a proper invoice.
-                        <div class="tr-highlight" style="margin: 1rem 0 0; padding: 1.25rem 1.5rem;">
-                            <p><strong>No invoice, no reimbursement.</strong> Missing or incorrect invoices mean we can&rsquo;t process the reimbursement.</p>
-                            <p>Already purchased and don&rsquo;t have an invoice? It can be requested after purchase &mdash; please do so. When in doubt, ask us.</p>
-                        </div></li>
-                    <li>Invoices must be addressed to:<br>
-                        <strong>Asociaci&oacute;n Nobodies Collective</strong><br>
-                        NIF: G26726299<br>
-                        Glorieta de Bilbao 1, 3&ordm; Derecha<br>
-                        28004 Madrid, Spain<br>
-                        For EU/international purchases, use VAT number <strong>ESG26726299</strong> instead of the NIF.</li>
-                </ol>
+      <p><strong>How to apply</strong></p>
 
-                <h3>After the event</h3>
-                <p>Submit your receipts via the Humans app:</p>
-                <ol class="tr-steps">
-                    <li>Go to <a href="https://humans.nobodies.team/expenses" target="_blank" rel="noopener noreferrer">humans.nobodies.team/expenses</a></li>
-                    <li>Create a new expense report</li>
-                    <li>Select category: <strong>Admin / ALM</strong></li>
-                    <li>Add your expense lines and attach receipts to each line</li>
-                    <li>Submit &mdash; you&rsquo;ll receive a SEPA bank transfer once approved</li>
-                </ol>
+      <div class="reimb-steps">
+        <div class="reimb-step">
+          <span class="reimb-step-label">Step 1 — Get an invoice</span>
+          <p>Keep all your receipts and request a proper invoice. No invoice, no reimbursement — missing or incorrect invoices mean we cannot process the claim. Already purchased without one? It can be requested after purchase — please do so.</p>
+        </div>
+        <div class="reimb-step">
+          <span class="reimb-step-label">Step 2 — Invoice details</span>
+          <p>Invoices must be addressed to:</p>
+          <div class="info-block">
+            Asociación Nobodies Collective<br>
+            NIF: G26726299<br>
+            Glorieta de Bilbao 1, 3º Derecha<br>
+            28004 Madrid, Spain
+          </div>
+          <p>For EU/international purchases, use VAT number <strong>ESG26726299</strong> instead of the NIF.</p>
+        </div>
+        <div class="reimb-step">
+          <span class="reimb-step-label">Step 3 — Submit after the event</span>
+          <p>Go to <a href="https://humans.nobodies.team/expenses">humans.nobodies.team/expenses</a> → New expense report → Category: <strong>Admin / ALM</strong> → Add your expense lines and attach receipts to each line → Submit. You'll receive a SEPA bank transfer once approved.</p>
+        </div>
+      </div>
 
-                <h3>Deadlines</h3>
-                <div class="tr-highlight">
-                    <p>Submit claims by: <strong>30 October 2026</strong></p>
-                    <p>Payout by: <strong>30 November 2026</strong></p>
-                </div>
+      <div class="deadlines">
+        <div class="deadline-chip"><strong>Submit claims by</strong>30 October 2026</div>
+        <div class="deadline-chip"><strong>Payout by</strong>30 November 2026</div>
+      </div>
 
-                <p class="tr-contact">Questions? Email <a href="mailto:alm@nobodies.team">alm@nobodies.team</a></p>
-            </div>
-            </details>
+      <p>Questions? <a href="mailto:alm@nobodies.team">alm@nobodies.team</a></p>
+    </div>
+  </details>
 
-            <details class="tr-section tr-toggle" id="key-links">
-                <summary><h2>Key links</h2></summary>
-                <div class="tr-toggle-body">
-                <ul>
-                    <li><strong>Registration form:</strong> <a href="https://forms.gle/1yA3BFrmqXy4mC5Y7" target="_blank" rel="noopener noreferrer">forms.gle/1yA3BFrmqXy4mC5Y7</a></li>
-                    <li><strong>Rideshare:</strong> <a href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=299231524#gid=299231524" target="_blank" rel="noopener noreferrer">rideshare sheet</a></li>
-                    <li><strong>Info pack &mdash; how to get there, what to bring:</strong> coming soon</li>
-                    <li><strong>Onsite shift sign-up:</strong> <a href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=1859621709#gid=1859621709" target="_blank" rel="noopener noreferrer">shift sign-up sheet</a></li>
-                    <li><strong>Contact:</strong> <a href="mailto:alm@nobodies.team">alm@nobodies.team</a></li>
-                </ul>
-            </div>
-            </details>
+  <details class="section-toggle" id="links">
+    <summary class="toggle-summary"><h2>Key links</h2></summary>
+    <div class="toggle-body">
+      <ul class="links-list">
+        <li><span>Registration form</span><a href="https://forms.gle/1yA3BFrmqXy4mC5Y7">forms.gle/1yA3BFrmqXy4mC5Y7</a></li>
+        <li><span>Rideshare</span><a href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=299231524#gid=299231524">Rideshare sheet</a></li>
+        <li><span>Survival guide</span><span class="link-label">Coming soon</span></li>
+        <li><span>Shift sign-up</span><a href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=1859621709#gid=1859621709">Onsite shift tab</a></li>
+        <li><span>Contact</span><a href="mailto:alm@nobodies.team">alm@nobodies.team</a></li>
+      </ul>
+    </div>
+  </details>
 
-            <details class="tr-section tr-toggle" id="faq">
-                <summary><h2>FAQ</h2></summary>
-                <div class="tr-toggle-body">
+  <details class="section-toggle" id="faq">
+    <summary class="toggle-summary"><h2>FAQ</h2></summary>
+    <div class="toggle-body">
 
-                <div class="tr-scenario">
-                    <h3>Do I need to pay for anything?</h3>
-                    <p>No. Stay and food are covered by NCA. You pay for travel upfront and claim it back afterwards, up to &euro;250 (see <a href="#travel-reimbursement">guidelines</a>).</p>
-                </div>
+      <details class="faq-item">
+        <summary class="faq-summary">Do I need to pay for anything?</summary>
+        <div class="faq-body"><p>No. Stay and food are covered by NCA. You pay for travel upfront and claim it back afterwards, up to €250. See <a href="#travel-reimbursement">guidelines</a>.</p></div>
+      </details>
 
-                <div class="tr-scenario">
-                    <h3>What&rsquo;s the deadline to register?</h3>
-                    <p>28 September 2026, or when the 50-person cap is reached.</p>
-                </div>
+      <details class="faq-item">
+        <summary class="faq-summary">What's the deadline to register?</summary>
+        <div class="faq-body"><p>28 September 2026, or when the 50-person cap is reached.</p></div>
+      </details>
 
-                <div class="tr-scenario">
-                    <h3>Can I join online?</h3>
-                    <p>Yes, for key sessions. Details to follow closer to the date.</p>
-                </div>
+      <details class="faq-item">
+        <summary class="faq-summary">Can I join online?</summary>
+        <div class="faq-body"><p>Yes, for key sessions. Details to follow closer to the date.</p></div>
+      </details>
 
-                <div class="tr-scenario">
-                    <h3>Who do I contact with questions?</h3>
-                    <ul>
-                        <li><strong>General:</strong> <a href="mailto:alm@nobodies.team">alm@nobodies.team</a> or <strong>#🛖-alm-2026</strong> on Discord</li>
-                        <li><strong>Venue &amp; logistics:</strong> <a href="mailto:doreen@nobodies.team">doreen@nobodies.team</a></li>
-                        <li><strong>Communications &amp; attendee support:</strong> <a href="mailto:leaf@nobodies.team">leaf@nobodies.team</a></li>
-                        <li><strong>Programme &amp; facilitation:</strong> <a href="mailto:celine@nobodies.team">celine@nobodies.team</a></li>
-                        <li><strong>Tech &amp; equipment:</strong> <a href="mailto:martian@nobodies.team">martian@nobodies.team</a></li>
-                        <li><strong>Finance &amp; travel reimbursement:</strong> <a href="mailto:cupcake@nobodies.team">cupcake@nobodies.team</a></li>
-                    </ul>
-                </div>
-            </div>
-            </details>
+      <details class="faq-item">
+        <summary class="faq-summary">Who do I contact with questions?</summary>
+        <div class="faq-body">
+
+          <p class="contact-group-label" style="margin-top:0.25rem;">General</p>
+          <ul class="contact-list">
+            <li><span>Email</span><a href="mailto:alm@nobodies.team">alm@nobodies.team</a></li>
+            <li><span>Discord</span><a href="https://discord.com/channels/1462886445583962245/1544620180561199104">#🛖-alm-2026</a></li>
+            <li><span>Telegram</span><a href="https://t.me/+8PJcUJjxR5gxNDg0">ALM channel</a></li>
+            <li><span>WhatsApp</span><a href="https://chat.whatsapp.com/JvsdNfMzrNKBYvk4km3xR3">ALM channel</a></li>
+          </ul>
+
+          <p class="contact-group-label">Org team</p>
+          <ul class="contact-list">
+            <li><span class="contact-role">Venue &amp; logistics</span><a href="mailto:doreen@nobodies.team">doreen@nobodies.team</a></li>
+            <li><span class="contact-role">Comms &amp; attendee support</span><a href="mailto:leaf@nobodies.team">leaf@nobodies.team</a></li>
+            <li><span class="contact-role">Programme &amp; facilitation</span><a href="mailto:celine@nobodies.team">celine@nobodies.team</a></li>
+            <li><span class="contact-role">Tech &amp; equipment</span><a href="mailto:martian@nobodies.team">martian@nobodies.team</a></li>
+            <li><span class="contact-role">Finance &amp; travel reimbursement</span><a href="mailto:cupcake@nobodies.team">cupcake@nobodies.team</a></li>
+          </ul>
 
         </div>
-    </main>
+      </details>
 
-    <div id="shared-footer"></div>
-    <script src="footer.js"></script>
-    <script>
-        // Open a collapsed section when linked to by #anchor
-        function openFromHash() {
-            var el = location.hash && document.getElementById(location.hash.slice(1));
-            if (el && el.tagName === 'DETAILS') { el.open = true; el.scrollIntoView(); }
-        }
-        window.addEventListener('hashchange', openFromHash);
-        openFromHash();
-    </script>
-    <script src="script.js"></script>
+    </div>
+  </details>
+
+</main>
+
+<div id="shared-footer"></div>
+<script src="footer.js"></script>
+<script>
+  // Open a collapsed section when linked to by #anchor
+  function openFromHash() {
+    var el = location.hash && document.getElementById(location.hash.slice(1));
+    if (el && el.tagName === 'DETAILS') { el.open = true; el.scrollIntoView(); }
+  }
+  window.addEventListener('hashchange', openFromHash);
+  openFromHash();
+</script>
+<script src="script.js"></script>
 </body>
 </html>
