@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALM 2026 &mdash; All Leads Meeting | Nobodies Collective</title>
-    <meta name="description" content="The All Leads Meeting 2026: Vidalia, Cal Vidal (Puig-reig), 15&ndash;19 October. Dates, who can attend, getting there, accommodation, food and travel reimbursement.">
+    <meta name="description" content="The All Leads Meeting 2026: Vidalia, Cal Vidal (Puig-reig), 15&ndash;19 October. Dates, who can attend, getting there, accommodation, food, rideshare and travel reimbursement.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -311,6 +311,31 @@
             color: var(--color-text);
             margin: 1.5rem 0 0.5rem;
         }
+        /* Toggle sections */
+        .tr-toggle {
+            border-bottom: 1px solid var(--color-border);
+            margin-top: 0;
+        }
+        .tr-toggle > summary {
+            list-style: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1.5rem 0;
+        }
+        .tr-toggle > summary::-webkit-details-marker { display: none; }
+        .tr-toggle > summary h2 { margin: 0; }
+        .tr-toggle > summary::after {
+            content: '\25BE';
+            font-size: 1.4rem;
+            color: var(--color-accent);
+            transition: transform 0.2s ease;
+        }
+        .tr-toggle[open] > summary::after { transform: rotate(180deg); }
+        .tr-toggle-body { padding-bottom: 1.5rem; }
+        .tr-content > .tr-toggle:first-child { margin-top: 3rem; }
     </style>
 </head>
 <body>
@@ -332,70 +357,84 @@
 
         <div class="tr-content">
 
-            <section class="tr-section">
-                <h2>What is the ALM?</h2>
+            <details class="tr-section tr-toggle" open>
+                <summary><h2>What is the ALM?</h2></summary>
+                <div class="tr-toggle-body">
                 <p>The All Leads Meeting is our end-of-year gathering for Elsewhere coordinators and leads. Three working days to turn our debrief of the event and shared learnings into working groups and projects that we carry forward into the next cycle. It&rsquo;s an internal working meeting, a space for honest conversations about what&rsquo;s sustainable, what we want Elsewhere to be in the next edition, and how we want the Association to be shaped onwards.</p>
-            </section>
+            </div>
+            </details>
 
-            <section class="tr-section">
-                <h2>Dates</h2>
+            <details class="tr-section tr-toggle">
+                <summary><h2>Dates</h2></summary>
+                <div class="tr-toggle-body">
                 <div class="tr-highlight">
                     <p>The core programme runs <strong>Friday 16 &ndash; Sunday 18 October</strong>. Most people arrive Friday and leave Sunday.</p>
                 </div>
                 <p>Thursday 15 and Monday 19 are reserved for the setup and wrap crew (max ~15 people). Need to arrive earlier or leave later for travel reasons? Get in touch at <a href="mailto:alm@nobodies.team">alm@nobodies.team</a> and we&rsquo;ll see what we can do.</p>
-            </section>
+            </div>
+            </details>
 
-            <section class="tr-section">
-                <h2>Who can attend</h2>
+            <details class="tr-section tr-toggle">
+                <summary><h2>Who can attend</h2></summary>
+                <div class="tr-toggle-body">
                 <p>Open to Elsewhere 2026 coordinators and organisation leads. If you were heavily involved as a core volunteer and/or want to be heavily involved in the next edition, please join us. Get in touch via <strong>#🛖-alm-2026</strong> on Discord or <a href="mailto:alm@nobodies.team">alm@nobodies.team</a>. Capacity is capped at 50 people.</p>
                 <p>Remote participation is available for key sessions. Details to follow.</p>
-            </section>
+            </div>
+            </details>
 
-            <section class="tr-section">
-                <h2>Cost</h2>
+            <details class="tr-section tr-toggle">
+                <summary><h2>Cost</h2></summary>
+                <div class="tr-toggle-body">
                 <div class="tr-highlight">
                     <p><strong>Stay and food are fully covered by NCA.</strong> You do not pay for accommodation or meals.</p>
                 </div>
                 <p>Travel is your own cost upfront, reimbursable afterwards up to &euro;250. Guidelines must be followed to guarantee reimbursement. See <a href="#travel-reimbursement">Travel reimbursement</a> below.</p>
-            </section>
+            </div>
+            </details>
 
-            <section class="tr-section">
-                <h2>Getting there</h2>
+            <details class="tr-section tr-toggle">
+                <summary><h2>Getting there</h2></summary>
+                <div class="tr-toggle-body">
                 <p>Vidalia is about 1 hour north of Barcelona, near Puig-reig on the Llobregat.</p>
-                <p>📍 Pla&ccedil;a de la Pur&iacute;ssima, 08692 Cal Vidal, Barcelona &middot; <a href="https://www.google.com/maps/search/?api=1&amp;query=Pla%C3%A7a+de+la+Pur%C3%ADssima%2C+08692+Cal+Vidal%2C+Barcelona" target="_blank" rel="noopener noreferrer">Map</a></p>
+                <p>📍 Pla&ccedil;a de la Pur&iacute;ssima, 08692 Cal Vidal, Barcelona &middot; <a href="https://maps.app.goo.gl/4bvLzec1aNNbAL7M7" target="_blank" rel="noopener noreferrer">Map</a></p>
 
                 <h3>By bus</h3>
                 <p>ALSA runs a Barcelona&ndash;Berga coach that stops outside the venue. Departs from Estaci&oacute; del Nord, also picks up at Passeig de Gr&agrave;cia. Book to Puig-reig at <a href="https://www.alsa.com" target="_blank" rel="noopener noreferrer">alsa.com</a>. Tell the driver: <em>&ldquo;Bajo en Cal Vidal.&rdquo;</em></p>
 
                 <h3>By car</h3>
-                <p>Coordinate a lift or offer your spare seats on the carpool board (link coming soon).</p>
+                <p>Coordinate a lift or offer your spare seats on the <a href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=299231524#gid=299231524" target="_blank" rel="noopener noreferrer">rideshare sheet</a>.</p>
 
                 <h3>By plane</h3>
                 <p>Fly into Barcelona El Prat, then take Rodalies R2 Nord to Passeig de Gr&agrave;cia and connect to the ALSA coach.</p>
-            </section>
+            </div>
+            </details>
 
-            <section class="tr-section">
-                <h2>Accommodation</h2>
+            <details class="tr-section tr-toggle">
+                <summary><h2>Accommodation</h2></summary>
+                <div class="tr-toggle-body">
                 <p>You will be assigned a bed based on your registration form. Assignments go out in early October.</p>
                 <p>Vidalia has a mix of dormitory-style bunk beds, private rooms, and a small number of apartment rooms in a separate building about 100m from the main house. Bathrooms are mostly shared. One private en-suite room is available and reserved for accessibility needs.</p>
                 <div class="tr-highlight">
                     <p>October nights in the Llobregat valley are cold. Sheets are provided but there are not enough duvets for the full group. <strong>Bring a sleeping bag or a warm blanket.</strong></p>
                 </div>
-            </section>
+            </div>
+            </details>
 
-            <section class="tr-section">
-                <h2>Food</h2>
+            <details class="tr-section tr-toggle">
+                <summary><h2>Food</h2></summary>
+                <div class="tr-toggle-body">
                 <p>Vidalia&rsquo;s kitchen team cooks all meals. Food is plant-based by default. They adapt to allergies and intolerances &mdash; declare yours in the registration form. Everyone helps out: sign up for a meal prep or cleanup shift via the <a href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=1859621709#gid=1859621709" target="_blank" rel="noopener noreferrer">master sheet</a>.</p>
-            </section>
+            </div>
+            </details>
 
-            <section class="tr-section" id="travel-reimbursement">
-                <h2>Travel reimbursement</h2>
+            <details class="tr-section tr-toggle" id="travel-reimbursement">
+                <summary><h2>Travel reimbursement</h2></summary>
+                <div class="tr-toggle-body">
                 <p>NCA reimburses travel costs up to <strong>&euro;250 per person</strong> for ALM attendees.</p>
                 <p>This covers transport to and from the venue only (flights, trains, buses, car hire, fuel). Not food, drink, or other costs en route.</p>
 
                 <h3>How to apply</h3>
                 <ol class="tr-steps">
-                    <li>Fill in the travel reimbursement form:<br><a href="https://forms.gle/vU4YFRPh5n9EFBuY9" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top: 0.75rem;">Travel reimbursement form</a></li>
                     <li>Keep all your receipts and request a proper invoice. Till receipts are accepted only when an invoice genuinely cannot be issued.</li>
                     <li>Invoices must be addressed to:<br>
                         <strong>Asociaci&oacute;n Nobodies Collective</strong><br>
@@ -422,21 +461,25 @@
                 </div>
 
                 <p class="tr-contact">Questions? Email <a href="mailto:alm@nobodies.team">alm@nobodies.team</a></p>
-            </section>
+            </div>
+            </details>
 
-            <section class="tr-section" id="key-links">
-                <h2>Key links</h2>
+            <details class="tr-section tr-toggle" id="key-links">
+                <summary><h2>Key links</h2></summary>
+                <div class="tr-toggle-body">
                 <ul>
-                    <li><strong>Registration form:</strong> <a href="https://forms.gle/vU4YFRPh5n9EFBuY9" target="_blank" rel="noopener noreferrer">forms.gle/vU4YFRPh5n9EFBuY9</a></li>
-                    <li><strong>Carpool board:</strong> coming soon</li>
+                    <li><strong>Registration form:</strong> <a href="https://forms.gle/1yA3BFrmqXy4mC5Y7" target="_blank" rel="noopener noreferrer">forms.gle/1yA3BFrmqXy4mC5Y7</a></li>
+                    <li><strong>Rideshare:</strong> <a href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=299231524#gid=299231524" target="_blank" rel="noopener noreferrer">rideshare sheet</a></li>
                     <li><strong>Info pack &mdash; how to get there, what to bring:</strong> coming soon</li>
                     <li><strong>Onsite shift sign-up:</strong> <a href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=1859621709#gid=1859621709" target="_blank" rel="noopener noreferrer">shift sign-up sheet</a></li>
                     <li><strong>Contact:</strong> <a href="mailto:alm@nobodies.team">alm@nobodies.team</a></li>
                 </ul>
-            </section>
+            </div>
+            </details>
 
-            <section class="tr-section" id="faq">
-                <h2>FAQ</h2>
+            <details class="tr-section tr-toggle" id="faq">
+                <summary><h2>FAQ</h2></summary>
+                <div class="tr-toggle-body">
 
                 <div class="tr-scenario">
                     <h3>Do I need to pay for anything?</h3>
@@ -464,13 +507,23 @@
                         <li><strong>Finance &amp; travel reimbursement:</strong> <a href="mailto:cupcake@nobodies.team">cupcake@nobodies.team</a></li>
                     </ul>
                 </div>
-            </section>
+            </div>
+            </details>
 
         </div>
     </main>
 
     <div id="shared-footer"></div>
     <script src="footer.js"></script>
+    <script>
+        // Open a collapsed section when linked to by #anchor
+        function openFromHash() {
+            var el = location.hash && document.getElementById(location.hash.slice(1));
+            if (el && el.tagName === 'DETAILS') { el.open = true; el.scrollIntoView(); }
+        }
+        window.addEventListener('hashchange', openFromHash);
+        openFromHash();
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
