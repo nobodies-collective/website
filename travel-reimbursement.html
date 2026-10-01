@@ -176,6 +176,21 @@
 
         .tr-tier--wide {
             grid-column: 1 / -1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+
+        .tr-tier--wide .tr-tier-dates {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 600px) {
+            .tr-tier--wide {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
 
         .tr-tier-label {
@@ -369,9 +384,11 @@
                         <p class="tr-tier-note">travel reimbursement</p>
                     </div>
                     <div class="tr-tier tr-tier--wide">
-                        <span class="tr-tier-label">Came back for strike</span>
-                        <h3>Returned to site after 14 July</h3>
-                        <p class="tr-tier-dates">Helped bring the city down. Thank you.</p>
+                        <div>
+                            <span class="tr-tier-label">Came back for strike</span>
+                            <h3>Returned to site after 14 July</h3>
+                            <p class="tr-tier-dates">Helped bring the city down. Thank you.</p>
+                        </div>
                         <div class="tr-tier-amount" style="font-size: 1.25rem; line-height: 1.3;">travel reimbursement<br>+ 2027 ticket discount</div>
                     </div>
                 </div>
