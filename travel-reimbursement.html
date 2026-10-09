@@ -319,10 +319,35 @@
             margin: 0.5rem 0 1rem;
         }
 
+        .tr-payout {
+            margin: 0.75rem 0 0;
+            padding: 0.75rem 1.1rem;
+            background: var(--color-bg-alt);
+            border-left: 3px solid var(--color-accent);
+            border-radius: var(--radius);
+            color: var(--color-accent) !important;
+            font-weight: 700;
+        }
+
+        /* Deadlines: two compact cards side by side */
+        .tr-deadline-pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0 0;
+        }
+        .tr-deadline-pair .tr-tier { padding: 1rem 1.25rem; }
+        .tr-deadline-pair .tr-tier-label { margin-bottom: 0.3rem; }
+        .tr-deadline-pair .tr-tier-amount { font-size: 1.15rem; }
+        .tr-tier--wide .tr-tier-dates + .tr-tier-dates { margin-top: 0.6rem; }
+        .tr-tier--wide > .tr-tier-amount { flex-shrink: 0; white-space: nowrap; }
+
         @media (max-width: 600px) {
             .tr-tiers {
                 grid-template-columns: 1fr;
             }
+            .tr-deadline-pair .tr-tier { padding: 0.85rem 1rem; }
+            .tr-deadline-pair .tr-tier-amount { font-size: 1rem; }
         }
     </style>
 </head>
@@ -386,8 +411,9 @@
                     <div class="tr-tier tr-tier--wide">
                         <div>
                             <span class="tr-tier-label">Came back for strike</span>
-                            <h3>Returned to site after 14 July</h3>
-                            <p class="tr-tier-dates">Helped bring the city down. Thank you.</p>
+                            <h3>Returned to site after 14 July to help bring the city down? Thank you!</h3>
+                            <p class="tr-tier-dates">Email us at <a href="mailto:travelclaims@nobodies.team">travelclaims@nobodies.team</a> with your name and the dates you were on site. Submit your expense claim via the Humans app &mdash; we&rsquo;ll approve it once we&rsquo;ve confirmed your dates.</p>
+                            <p class="tr-tier-dates">You&rsquo;ll also receive a discount on your 2027 ticket &mdash; we&rsquo;ll be in touch about that separately.</p>
                         </div>
                         <div class="tr-tier-amount" style="font-size: 1.25rem; line-height: 1.3;">travel reimbursement<br>+ 2027 ticket discount</div>
                     </div>
@@ -397,45 +423,35 @@
             <!-- How to claim -->
             <section class="tr-section">
                 <h2>How to claim</h2>
-                <p>Find your situation below and follow the steps.</p>
                 <p>For full details on how to submit expenses, invoices, and what&rsquo;s accepted, see the <a href="expenses.html">Expense Reimbursement Guide</a>.</p>
 
+                <div class="tr-deadline-pair">
+                    <div class="tr-tier">
+                        <span class="tr-tier-label">Submit claims by</span>
+                        <div class="tr-tier-amount">30 October 2026</div>
+                    </div>
+                    <div class="tr-tier">
+                        <span class="tr-tier-label">Payout by</span>
+                        <div class="tr-tier-amount">30 November 2026</div>
+                    </div>
+                </div>
+
+                <div class="tr-highlight">
+                    <p><strong>No invoice, no reimbursement.</strong> Missing or incorrect invoices mean we can&rsquo;t process the reimbursement.</p>
+                    <p><strong>Already purchased and don&rsquo;t have an invoice?</strong> It can be requested after purchase &mdash; please do so.</p>
+                    <p>When in doubt, ask us.</p>
+                </div>
+
                 <div class="tr-scenario">
-                    <h3>Your application was approved before the event</h3>
-                    <p>You&rsquo;re good to go. Submit your travel receipts via the Humans app:</p>
+                    <h3>Submit your travel receipts via the Humans app</h3>
                     <ol class="tr-steps">
                         <li>Go to <a href="https://humans.nobodies.team/expenses" target="_blank" rel="noopener noreferrer">humans.nobodies.team/expenses</a></li>
                         <li>Create a new expense report</li>
                         <li>Select category: <strong>Admin / Travel Claims</strong></li>
-                        <li>Add your expense lines and attach receipts to each line</li>
-                        <li>Submit — you&rsquo;ll receive a SEPA bank transfer once approved</li>
+                        <li>Add your expense lines and attach receipts</li>
+                        <li>Submit</li>
                     </ol>
-                </div>
-
-                <div class="tr-scenario">
-                    <h3>You haven&rsquo;t received your application approval yet but Daniela approved it on site</h3>
-                    <p>If you&rsquo;ve filled in the form, then:</p>
-                    <ol class="tr-steps">
-                        <li>Go to <a href="https://humans.nobodies.team/expenses" target="_blank" rel="noopener noreferrer">humans.nobodies.team/expenses</a></li>
-                        <li>Create a new expense report</li>
-                        <li>Select category: <strong>Admin / Travel Claims</strong></li>
-                        <li>Add your expense lines and attach receipts to each line</li>
-                        <li>Submit — you&rsquo;ll receive a SEPA bank transfer once approved</li>
-                    </ol>
-                </div>
-
-                <div class="tr-scenario">
-                    <h3>You came back for strike after 14 July</h3>
-                    <p>First, fill in the form and select which tier you&rsquo;re applying for:</p>
-                    <p><a href="https://forms.gle/H45q53u2B7pfWVUW6" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Fill in the form</a></p>
-                    <p>Once you receive your approval, submit your travel receipts via <a href="https://humans.nobodies.team/expenses" target="_blank" rel="noopener noreferrer">humans.nobodies.team/expenses</a> — select <strong>Admin / Travel Claims</strong>.</p>
-                    <p>Volunteers who helped with strike after 14 July will receive a discount on their 2027 ticket. We&rsquo;ll be in touch about that separately.</p>
-                </div>
-
-                <div class="tr-scenario">
-                    <h3>You haven&rsquo;t been approved and haven&rsquo;t spoken to Daniela</h3>
-                    <p>Get in touch and tell us your situation — we&rsquo;ll take it from there.</p>
-                    <p><a href="mailto:travelclaims@nobodies.team">travelclaims@nobodies.team</a></p>
+                    <p class="tr-payout">&rarr; You&rsquo;ll receive a SEPA bank transfer once approved</p>
                 </div>
 
                 <p class="tr-contact">Questions? Email <a href="mailto:travelclaims@nobodies.team">travelclaims@nobodies.team</a></p>
