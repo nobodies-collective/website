@@ -260,7 +260,12 @@
         @media (max-width: 1000px) {
             .ex-content { max-width: calc(700px + 2 * var(--spacing)); }
             .ex-layout { grid-template-columns: minmax(0, 1fr); gap: 0; }
-            .ex-side { position: static; margin-top: 3rem; }
+            .ex-main, .ex-side { display: contents; }
+            .ex-main > *, .ex-side > * { order: 0; }
+            .ex-side > .ex-box { order: 1; }
+            .ex-side > .ex-box:first-child { margin-top: 2rem; }
+            .ex-main > details { order: 2; }
+            .ex-content .lead + .ex-toggle { margin-top: 1rem; }
         }
     </style>
 </head>
@@ -283,7 +288,8 @@
                 <summary><h2>Before you buy</h2></summary>
                 <div class="ex-toggle-body">
                 <div class="ex-highlight">
-                    <p><strong>Check your budget first.</strong> Make sure the expense is within your department's approved budget. If unsure, check with <a href="mailto:finance@nobodies.team">finance@nobodies.team</a> <em>before</em> purchasing &mdash; not after.</p>
+                    <p><strong>Coordinators: check your budget first.</strong> Make sure the expense is within your department's approved budget. If unsure, check with <a href="mailto:finance@nobodies.team">finance@nobodies.team</a> <em>before</em> purchasing &mdash; not after.</p>
+                    <p><strong>Leads &amp; volunteers: get approval first.</strong> Ask your coordinator to approve the expense <em>before</em> you buy anything.</p>
                 </div>
                 </div>
             </details>
