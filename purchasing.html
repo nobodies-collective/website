@@ -1,509 +1,491 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex, nofollow">
-<title>Purchasing &amp; Budget Guide — Elsewhere 2026</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Purchasing &amp; Budget Guide | Elsewhere &mdash; by Nobodies Collective</title>
+    <meta name="description" content="How coordinators and purchasing leads buy, invoice and track spend for Elsewhere 2026 — Nobodies Collective Association.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .ex-page {
+            padding: 8rem 0 4rem;
+        }
 
-:root {
-  --sand: #F5F2EB;
-  --sand-dark: #EAE5D8;
-  --ink: #1C1A17;
-  --ink-mid: #4A4640;
-  --ink-light: #8C8680;
-  --dust: #D4CFC6;
-  --accent: #C8964A;
-  --info-bg: #E4EFF5;
-  --info-fg: #1B4A5A;
-  --warn-bg: #FDF0DC;
-  --warn-fg: #7A5210;
-  --alert-bg: #F5E8E8;
-  --alert-fg: #7A1B1B;
-  --ok-bg: #E8F0E4;
-  --ok-fg: #2D5A1B;
-  --radius: 10px;
-  --radius-sm: 6px;
-}
+        .ex-content {
+            max-width: calc(700px + 3rem + 280px + 2 * var(--spacing));
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--sand);
-  color: var(--ink);
-  min-height: 100vh;
-  padding: 0;
-}
+        .ex-intro-label {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 0.75rem;
+        }
 
-header {
-  background: var(--ink);
-  color: var(--sand);
-  padding: 28px 40px 24px;
-}
+        .ex-content h1 {
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            margin-bottom: 1rem;
+        }
 
-header h1 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  line-height: 1.1;
-}
+        .ex-content .lead {
+            color: var(--color-text-muted);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
 
-header p {
-  font-size: 13px;
-  color: #A09A90;
-  margin-top: 4px;
-}
+        .ex-section {
+            margin-top: 3rem;
+        }
 
-main {
-  padding: 32px 40px 60px;
-  max-width: 760px;
-  margin: 0 auto;
-}
+        .ex-section h2 {
+            font-size: clamp(1.4rem, 4vw, 1.9rem);
+            margin-bottom: 1rem;
+            color: var(--color-text);
+        }
 
-.intro {
-  font-size: 15px;
-  line-height: 1.7;
-  color: var(--ink-mid);
-  margin-bottom: 32px;
-}
+        .ex-section p,
+        .ex-section li {
+            color: var(--color-text-muted);
+            line-height: 1.7;
+        }
 
-.section {
-  margin-bottom: 32px;
-}
+        .ex-section p {
+            margin-bottom: 1rem;
+        }
 
-.section-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: -0.3px;
-  margin-bottom: 12px;
-}
+        /* Collapsible sections (as on the ALM page) */
+        .ex-toggle {
+            border-bottom: 1px solid var(--color-border);
+            margin-top: 0;
+        }
+        .ex-toggle > summary {
+            list-style: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1.5rem 0;
+        }
+        .ex-toggle > summary::-webkit-details-marker { display: none; }
+        .ex-toggle > summary h2 { margin: 0; }
+        .ex-toggle > summary::after {
+            content: '\25BE';
+            font-size: 1.4rem;
+            color: var(--color-accent);
+            transition: transform 0.2s ease;
+        }
+        .ex-toggle[open] > summary::after { transform: rotate(180deg); }
+        .ex-toggle-body { padding-bottom: 1.5rem; }
+        .ex-content .lead + .ex-toggle { margin-top: 2rem; }
 
-.card {
-  background: #fff;
-  border: 1px solid var(--dust);
-  border-radius: var(--radius);
-  padding: 20px;
-  margin-bottom: 12px;
-  font-size: 14px;
-  line-height: 1.7;
-  color: var(--ink-mid);
-}
+        .ex-card {
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 1.75rem 2rem;
+            margin-bottom: 1.25rem;
+        }
 
-.card p + p {
-  margin-top: 10px;
-}
+        .ex-highlight {
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+            padding: 1.5rem 2rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--color-accent);
+        }
 
-.card strong {
-  color: var(--ink);
-  font-weight: 600;
-}
+        .ex-highlight p {
+            color: var(--color-text-muted);
+            margin-bottom: 0.5rem;
+        }
 
-.callout {
-  border-radius: var(--radius);
-  padding: 16px 20px;
-  font-size: 13px;
-  line-height: 1.6;
-  margin-bottom: 12px;
-}
+        .ex-highlight p:last-child { margin-bottom: 0; }
 
-.callout-warn {
-  background: var(--warn-bg);
-  color: var(--warn-fg);
-  border: 1px solid rgba(122, 82, 16, 0.15);
-}
+        .ex-highlight strong {
+            color: var(--color-text);
+        }
 
-.callout-alert {
-  background: var(--alert-bg);
-  color: var(--alert-fg);
-  border: 1px solid rgba(122, 27, 27, 0.15);
-}
+        .ex-invoice-block {
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0;
+            line-height: 1.6;
+        }
 
-.callout-info {
-  background: var(--info-bg);
-  color: var(--info-fg);
-  border: 1px solid rgba(27, 74, 90, 0.15);
-}
+        .ex-invoice-pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .ex-invoice-pair .ex-invoice-block { margin: 0; }
+        @media (max-width: 600px) {
+            .ex-invoice-pair { grid-template-columns: 1fr; }
+        }
 
-.callout-ok {
-  background: var(--ok-bg);
-  color: var(--ok-fg);
-  border: 1px solid rgba(45, 90, 27, 0.15);
-}
+        .ex-invoice-block .label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 0.5rem;
+        }
 
-.callout strong {
-  font-weight: 600;
-}
+        .ex-invoice-block .detail {
+            color: var(--color-text);
+            font-weight: 500;
+        }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 12px;
-  margin-bottom: 12px;
-}
+        /* Steps — same style as travel reimbursement page */
+        .ex-steps {
+            counter-reset: ex-step;
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0 0.5rem;
+        }
 
-.card-grid .card {
-  margin-bottom: 0;
-}
+        .ex-card > .ex-steps:first-child { margin-top: 0; }
 
-.card-grid .card-label {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ink-light);
-  margin-bottom: 4px;
-}
+        .ex-steps li {
+            counter-increment: ex-step;
+            position: relative;
+            display: block;
+            padding-left: 3.25rem;
+            margin-bottom: 1.25rem;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
 
-.card-grid .card-name {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--ink);
-  margin-bottom: 6px;
-}
+        .ex-steps li:last-child {
+            margin-bottom: 0;
+        }
 
-.card-grid .card-depts {
-  font-size: 13px;
-  color: var(--ink-mid);
-  line-height: 1.5;
-}
+        .ex-steps li::before {
+            content: counter(ex-step);
+            position: absolute;
+            left: 0;
+            top: 0.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background: var(--color-accent);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.85rem;
+            border-radius: 50%;
+        }
 
-.invoice-block {
-  background: var(--sand);
-  border-radius: var(--radius-sm);
-  padding: 14px 18px;
-  margin: 12px 0;
-  font-size: 13px;
-  line-height: 1.6;
-}
+        .ex-steps li strong {
+            color: var(--color-text);
+        }
 
-.invoice-block .label {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ink-light);
-  margin-bottom: 6px;
-}
+        .ex-payout {
+            margin: 1.25rem 0 0 !important;
+            padding: 0.75rem 1.1rem;
+            background: var(--color-bg-alt);
+            border-left: 3px solid var(--color-accent);
+            border-radius: var(--radius);
+            color: var(--color-accent) !important;
+            font-weight: 700;
+        }
 
-.invoice-block .detail {
-  color: var(--ink);
-  font-weight: 500;
-}
+        .ex-content .lead { max-width: 700px; }
 
-.shipping-block {
-  background: var(--sand);
-  border-radius: var(--radius-sm);
-  padding: 14px 18px;
-  margin: 12px 0;
-  font-size: 13px;
-  line-height: 1.6;
-}
-
-.shipping-block .label {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ink-light);
-  margin-bottom: 6px;
-}
-
-.shipping-block .detail {
-  color: var(--ink);
-  font-weight: 500;
-}
-
-.fee-table {
-  display: flex;
-  gap: 12px;
-  margin: 10px 0;
-}
-
-.fee-item {
-  background: var(--sand);
-  border-radius: var(--radius-sm);
-  padding: 10px 14px;
-  font-size: 13px;
-  flex: 1;
-}
-
-.fee-item .fee-amount {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  color: var(--ink);
-}
-
-.fee-item .fee-desc {
-  font-size: 12px;
-  color: var(--ink-light);
-  margin-top: 2px;
-}
-
-ul.checklist {
-  list-style: none;
-  padding: 0;
-}
-
-ul.checklist li {
-  padding: 8px 0;
-  border-bottom: 1px solid var(--sand-dark);
-  font-size: 14px;
-  line-height: 1.6;
-  color: var(--ink-mid);
-  padding-left: 24px;
-  position: relative;
-}
-
-ul.checklist li:last-child { border-bottom: none; }
-
-ul.checklist li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 13px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--dust);
-}
-
-.footer-note {
-  margin-top: 40px;
-  padding-top: 24px;
-  border-top: 1px solid var(--dust);
-  font-size: 13px;
-  color: var(--ink-light);
-  text-align: center;
-}
-
-.footer-note a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.footer-note a:hover {
-  text-decoration: underline;
-}
-
-@media print {
-  header { background: var(--ink) !important; -webkit-print-color-adjust: exact; }
-  .card, .callout { break-inside: avoid; }
-}
-
-@media (max-width: 600px) {
-  header { padding: 20px; }
-  main { padding: 20px 16px 40px; }
-  .card-grid { grid-template-columns: 1fr; }
-  .fee-table { flex-direction: column; }
-}
-</style>
+        /* Layout: main column + sticky side panel (as on the ALM page) */
+        .ex-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 700px) 280px;
+            gap: 3rem;
+            align-items: start;
+        }
+        .ex-side {
+            margin-top: 0;
+            position: sticky;
+            top: 6rem;
+        }
+        .ex-box {
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .ex-box--alert {
+            background: var(--color-bg-alt);
+            border: none;
+            border-left: 4px solid var(--color-accent);
+        }
+        .ex-box p {
+            color: var(--color-text-muted);
+            font-size: 0.92rem;
+            line-height: 1.55;
+            margin-bottom: 0.6rem;
+        }
+        .ex-box p:last-child { margin-bottom: 0; }
+        .ex-box p strong { display: block; color: var(--color-text); }
+        .ex-box h3 {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 0.75rem;
+        }
+        .ex-box ul { list-style: none; padding: 0; margin: 0; }
+        .ex-box li {
+            padding: 0.45rem 0;
+            border-bottom: 1px solid var(--color-border);
+            font-size: 0.92rem;
+            color: var(--color-text-muted);
+            line-height: 1.4;
+        }
+        .ex-box li:last-child { border-bottom: none; }
+        .ex-box li a { font-weight: 600; }
+        .ex-box .ex-role { display: block; font-size: 0.8rem; }
+        @media (max-width: 1000px) {
+            .ex-content { max-width: calc(700px + 2 * var(--spacing)); }
+            .ex-layout { grid-template-columns: minmax(0, 1fr); gap: 0; }
+            .ex-main, .ex-side { display: contents; }
+            .ex-main > *, .ex-side > * { order: 0; }
+            .ex-side > .ex-box { order: 1; }
+            .ex-side > .ex-box:first-child { margin-top: 2rem; }
+            .ex-main > details { order: 2; }
+            .ex-content .lead + .ex-toggle { margin-top: 1rem; }
+        }
+        .ex-list { padding-left: 1.25rem; margin: 0.5rem 0 1rem; }
+        .ex-list li { margin-bottom: 0.5rem; }
+        .ex-holder-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 0 0 1rem; }
+        .ex-holder-grid .ex-invoice-block { margin: 0; }
+        .ex-holder-depts { font-size: 0.9rem; color: var(--color-text-muted); margin-top: 0.4rem; line-height: 1.5; }
+        .ex-fee { font-size: 1.6rem; font-weight: 800; color: var(--color-text); line-height: 1.1; }
+        @media (max-width: 600px) { .ex-holder-grid { grid-template-columns: 1fr; } }
+    </style>
 </head>
 <body>
+    <div id="shared-header"></div>
+    <script src="header.js"></script>
 
-<header>
-  <h1>Purchasing &amp; Budget Guide</h1>
-  <p>Coordinators &amp; Purchasing Leads &middot; Elsewhere 2026 &middot; Nobodies Collective Association</p>
-</header>
+    <main class="ex-page">
+        <div class="ex-content">
 
-<main>
+            <div class="ex-layout">
+            <div class="ex-main">
 
-  <p class="intro">
-    This guide applies to all coordinators and purchasing leads. Purchasing is managed through
-    four cards, each covering a group of departments.
-  </p>
+            <span class="ex-intro-label">Coordinators &amp; Purchasing Leads &middot; Elsewhere 2026</span>
+            <h1>Purchasing &amp; Budget Guide</h1>
+            <p class="lead">This guide applies to all coordinators and purchasing leads. Purchasing is managed through four cards, each covering a group of departments.</p>
 
-  <div class="section">
-    <h2 class="section-title">Card holders</h2>
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-label">Production</div>
-        <div class="card-name">Daniela</div>
-        <div class="card-depts">City Planning, Comms, GGP, LNT, Participant Wellness, Inclusion, Welfare, Volunteer Coordination, NoInfo, and Production</div>
-      </div>
-      <div class="card">
-        <div class="card-label">Power</div>
-        <div class="card-name">Cupcake</div>
-        <div class="card-depts">Power, Infrastructure, and Barrio Support</div>
-      </div>
-      <div class="card">
-        <div class="card-label">Cantina</div>
-        <div class="card-name">Zak</div>
-        <div class="card-depts">Cantina, Fluff, and Werkhaus food &amp; drinks</div>
-      </div>
-      <div class="card">
-        <div class="card-label">Kunsthaus</div>
-        <div class="card-name">Deepak</div>
-        <div class="card-depts">Middle of Elsewhere, Decor &amp; Painting, Fire Arena, and Misc Expenses</div>
-      </div>
-    </div>
-    <div class="card">
-      <p>If your department is listed above, either you send your card holder the links and details and
-      they'll make the purchase for you, or you handle it yourself and they cover the payment. Either
-      way, the invoicing rules, budget tracking, and shipping process in this guide apply to everyone.</p>
-    </div>
-  </div>
+            <details class="ex-section ex-toggle">
+                <summary><h2>Card holders</h2></summary>
+                <div class="ex-toggle-body">
+                <div class="ex-card">
+                    <div class="ex-holder-grid">
+                        <div class="ex-invoice-block">
+                            <div class="label">Production</div>
+                            <div class="detail">Daniela</div>
+                            <div class="ex-holder-depts">City Planning, Comms, GGP, LNT, Participant Wellness, Inclusion, Welfare, Volunteer Coordination, NoInfo, and Production</div>
+                        </div>
+                        <div class="ex-invoice-block">
+                            <div class="label">Power</div>
+                            <div class="detail">Cupcake</div>
+                            <div class="ex-holder-depts">Power, Infrastructure, and Barrio Support</div>
+                        </div>
+                        <div class="ex-invoice-block">
+                            <div class="label">Cantina</div>
+                            <div class="detail">Zak</div>
+                            <div class="ex-holder-depts">Cantina, Fluff, and Werkhaus food &amp; drinks</div>
+                        </div>
+                        <div class="ex-invoice-block">
+                            <div class="label">Kunsthaus</div>
+                            <div class="detail">Deepak</div>
+                            <div class="ex-holder-depts">Middle of Elsewhere, Decor &amp; Painting, Fire Arena, and Misc Expenses</div>
+                        </div>
+                    </div>
+                    <p style="margin-bottom:0;">If your department is listed above, either you send your card holder the links and details and they'll make the purchase for you, or you handle it yourself and they cover the payment. Either way, the invoicing rules, budget tracking, and shipping process in this guide apply to everyone.</p>
+                </div>
+                </div>
+            </details>
 
-  <div class="section">
-    <h2 class="section-title">The workflow</h2>
-    <div class="card">
-      <p><strong>Buy what you need &rarr; get the invoice &rarr; upload it to Pleo immediately after purchase.</strong></p>
-      <p>The easiest way: Pleo will notify you automatically. As soon as you make a purchase with
-      your card, you'll get a push notification on your phone. Tap it, and the app takes you straight to
-      that transaction &mdash; attach a photo of your receipt right there.</p>
-      <p>You can also do it manually at any time:</p>
-      <ul class="checklist">
-        <li><strong>Mobile app</strong> &mdash; open Pleo &rarr; Transactions &rarr; find the purchase &rarr; attach receipt</li>
-        <li><strong>Web</strong> &mdash; log in at <strong>app.pleo.io</strong> &rarr; find the transaction &rarr; upload the file</li>
-      </ul>
-    </div>
-    <div class="callout callout-info">
-      That's it. No separate spreadsheet, no duplicate tracking. The receipt in Pleo is the record &mdash;
-      it later syncs to our accounting automatically. <strong>Please upload as you go</strong> &mdash; don't wait until the end of the event.
-    </div>
-  </div>
+            <details class="ex-section ex-toggle">
+                <summary><h2>The workflow</h2></summary>
+                <div class="ex-toggle-body">
+                <div class="ex-card">
+                    <p><strong>Buy what you need &rarr; get the invoice &rarr; upload it to Pleo immediately after purchase.</strong></p>
+                    <p>The easiest way: Pleo will notify you automatically. As soon as you make a purchase with your card, you'll get a push notification on your phone. Tap it, and the app takes you straight to that transaction &mdash; attach a photo of your receipt right there.</p>
+                    <p>You can also do it manually at any time:</p>
+                    <ul class="ex-list">
+                        <li><strong>Mobile app</strong> &mdash; open Pleo &rarr; Transactions &rarr; find the purchase &rarr; attach receipt</li>
+                        <li><strong>Web</strong> &mdash; log in at <strong>app.pleo.io</strong> &rarr; find the transaction &rarr; upload the file</li>
+                    </ul>
+                </div>
+                <div class="ex-highlight">
+                    <p>That's it. No separate spreadsheet, no duplicate tracking. The receipt in Pleo is the record &mdash; it later syncs to our accounting automatically. <strong>Please upload as you go</strong> &mdash; don't wait until the end of the event.</p>
+                </div>
+                </div>
+            </details>
 
-  <div class="section">
-    <h2 class="section-title">Every invoice must be addressed to the Association</h2>
-    <div class="card">
-      <div class="invoice-block">
-        <div class="label">Purchases within Spain</div>
-        <div class="detail">
-          Asociaci&oacute;n Nobodies Collective<br>
-          NIF: G26726299<br>
-          Glorieta de Bilbao 1, 3&ordm; Derecha<br>
-          28004 Madrid, Spain
+            <details class="ex-section ex-toggle">
+                <summary><h2>Every invoice must be addressed to the Association</h2></summary>
+                <div class="ex-toggle-body">
+                <div class="ex-card">
+                    <div class="ex-invoice-pair">
+                    <div class="ex-invoice-block">
+                        <div class="label">Purchases within Spain</div>
+                        <div class="detail">
+                            Asociaci&oacute;n Nobodies Collective<br>
+                            NIF: G26726299<br>
+                            Glorieta de Bilbao 1, 3&ordm; Derecha<br>
+                            28004 Madrid, Spain
+                        </div>
+                    </div>
+                    <div class="ex-invoice-block">
+                        <div class="label">EU / UK / International purchases</div>
+                        <div class="detail">
+                            Same details, but use<br>
+                            VAT Number: ESG26726299 <span style="color:var(--color-text-muted);font-weight:400;">(instead of the NIF)</span>
+                        </div>
+                    </div>
+                    </div>
+                    <p style="margin-bottom:0;">Tickets (till receipts) are accepted when no invoice is possible, but a proper invoice is always preferable &mdash; it lets us recover VAT and keeps our accounting clean.</p>
+                </div>
+                </div>
+            </details>
+
+            <details class="ex-section ex-toggle">
+                <summary><h2>Meals &amp; fuel</h2></summary>
+                <div class="ex-toggle-body">
+                <div class="ex-highlight">
+                    <p><strong>Association card only.</strong> Meals and fuel must be paid with an Association card &mdash; personal payment won't be reimbursed for these categories. If you need to cover these expenses before your card arrives, contact Daniela or Peter and they'll handle it.</p>
+                </div>
+                </div>
+            </details>
+
+            <details class="ex-section ex-toggle">
+                <summary><h2>Your purchasing lead</h2></summary>
+                <div class="ex-toggle-body">
+                <div class="ex-card">
+                    <p>Each department with a card needs a <strong>purchasing lead</strong> &mdash; the person responsible for making purchases, uploading invoices to Holded, and keeping track of spend. This can be the coordinator or someone on their team. They'll need to be added to the <strong>Finance &mdash; Purchases</strong> team in Humans.</p>
+                    <p style="margin-bottom:0;">If you don't yet have someone for this role, please let us know as soon as possible.</p>
+                </div>
+                </div>
+            </details>
+
+            <details class="ex-section ex-toggle">
+                <summary><h2>Tracking your budget</h2></summary>
+                <div class="ex-toggle-body">
+                <div class="ex-highlight">
+                    <p><strong>Check before you spend.</strong> Before making any purchase, check your department's allocated budget in <strong>Humans / Budget</strong>. Don't commit to spending beyond what's been allocated. If you think you need more, talk to Daniela or Peter before buying.</p>
+                </div>
+                <div class="ex-card">
+                    <p>Holded handles the financial record &mdash; you don't need a separate spreadsheet.</p>
+                    <p style="margin-bottom:0;">If you want to keep an internal list of what you need to buy and what's been purchased, we recommend using a simple doc or copying the on-site runner sheet. It can be as simple as a shared note or as detailed as a spreadsheet &mdash; whatever works for your team.</p>
+                </div>
+                </div>
+            </details>
+
+            <details class="ex-section ex-toggle">
+                <summary><h2>Shipping packages to site</h2></summary>
+                <div class="ex-toggle-body">
+                <div class="ex-card">
+                    <p>If you're ordering items to be delivered before the event, use this address:</p>
+                    <div class="ex-invoice-block">
+                        <div class="label">Delivery address &mdash; L&oacute;pez Mar&iacute;n</div>
+                        <div class="detail">
+                            SUMINISTROS LOPEZ MARIN SL<br>
+                            Avda Monegros S/N<br>
+                            22200 Sari&ntilde;ena, Huesca
+                        </div>
+                    </div>
+                    <p><strong>Always include your name and department on the delivery tag</strong> &mdash; this is how we know who the package is for when it arrives.</p>
+                    <div class="ex-invoice-pair">
+                        <div class="ex-invoice-block">
+                            <div class="ex-fee">&euro;2</div>
+                            <div class="ex-holder-depts">per small package</div>
+                        </div>
+                        <div class="ex-invoice-block">
+                            <div class="ex-fee">&euro;5</div>
+                            <div class="ex-holder-depts">per large package / pallet</div>
+                        </div>
+                    </div>
+                    <p>Delivery costs are charged to your department. Use your own phone number when placing the order so you receive tracking notifications directly.</p>
+                    <p style="margin-bottom:0;"><strong>Please keep a log</strong> of everything you send &mdash; item, order date, tracking number, cost &mdash; so we can reconcile billing at the end.</p>
+                </div>
+                </div>
+            </details>
+
+            <details class="ex-section ex-toggle">
+                <summary><h2>On-site purchases</h2></summary>
+                <div class="ex-toggle-body">
+                <div class="ex-card">
+                    <p>The same card and workflow applies on site. There are two ways to handle physical purchases in town:</p>
+                    <ul class="ex-list">
+                        <li><strong>Go with the runners</strong> &mdash; join a runner trip and pay with your card directly</li>
+                        <li><strong>Ask a runner to buy on your behalf</strong> &mdash; add your request to the on-site runner sheet with item details, quantity, and where to buy. The runner will bring back the invoice &mdash; it's your responsibility to upload it to Holded afterwards.</li>
+                    </ul>
+                    <p style="margin-bottom:0;">For online purchases, order directly and ship to L&oacute;pez Mar&iacute;n (see above).</p>
+                </div>
+                </div>
+            </details>
+
+            <details class="ex-section ex-toggle">
+                <summary><h2>Going through Production</h2></summary>
+                <div class="ex-toggle-body">
+                <div class="ex-card">
+                    <p>If your department doesn't have a card and you need something purchased, send Daniela:</p>
+                    <ul class="ex-list" style="margin-bottom:0;">
+                        <li>Item description</li>
+                        <li>Quantity</li>
+                        <li>Link or where to buy</li>
+                        <li>Your budget category</li>
+                    </ul>
+                </div>
+                <div class="ex-highlight">
+                    <p><strong>Urgent needs while cards are being set up:</strong> if you can pay personally, do so and submit an expense report in Humans later &mdash; we'll reimburse you. If you can't front the cost, contact Daniela or Peter directly and we'll sort it.</p>
+                </div>
+                </div>
+            </details>
+
+            </div>
+
+            <aside class="ex-side">
+                <div class="ex-box ex-box--alert">
+                    <p><strong>No invoice, no reimbursement.</strong> Missing or incorrect invoices mean we can&rsquo;t process the reimbursement.</p>
+                    <p><strong>Already purchased and don&rsquo;t have an invoice?</strong> It can be requested after purchase, please do so.</p>
+                    <p>When in doubt, ask us.</p>
+                </div>
+                <div class="ex-box">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><span class="ex-role">General</span><a href="mailto:finance@nobodies.team">finance@nobodies.team</a></li>
+                        <li><span class="ex-role">Departmental Purchases</span><a href="mailto:purchases@nobodies.team">purchases@nobodies.team</a></li>
+                        <li><span class="ex-role">Art Grants</span><a href="mailto:artgrants@nobodies.team">artgrants@nobodies.team</a></li>
+                        <li><span class="ex-role">Event Travel Reimbursements</span><a href="mailto:travelclaims@nobodies.team">travelclaims@nobodies.team</a></li>
+                        <li><span class="ex-role">ALM Travel Reimbursements</span><a href="mailto:alm@nobodies.team">alm@nobodies.team</a></li>
+                    </ul>
+                </div>
+            </aside>
+            </div>
+
         </div>
-      </div>
-      <div class="invoice-block">
-        <div class="label">EU / UK / International purchases</div>
-        <div class="detail">
-          Same details, but use<br>
-          VAT Number: ESG26726299 <span style="color:var(--ink-light);">(instead of the NIF)</span>
-        </div>
-      </div>
-      <p>Tickets (till receipts) are accepted when no invoice is possible, but a proper invoice is always
-      preferable &mdash; it lets us recover VAT and keeps our accounting clean.</p>
-    </div>
-  </div>
+    </main>
 
-  <div class="section">
-    <h2 class="section-title">Meals &amp; fuel</h2>
-    <div class="callout callout-alert">
-      <strong>Association card only.</strong> Meals and fuel must be paid with an Association card &mdash;
-      personal payment won't be reimbursed for these categories. If you need to cover these expenses before
-      your card arrives, contact Daniela or Peter and they'll handle it.
-    </div>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title">Your purchasing lead</h2>
-    <div class="card">
-      <p>Each department with a card needs a <strong>purchasing lead</strong> &mdash; the person responsible for making
-      purchases, uploading invoices to Holded, and keeping track of spend. This can be the
-      coordinator or someone on their team. They'll need to be added to the <strong>Finance &mdash; Purchases</strong>
-      team in Humans.</p>
-      <p>If you don't yet have someone for this role, please let us know as soon as possible.</p>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title">Tracking your budget</h2>
-    <div class="callout callout-warn">
-      <strong>Check before you spend.</strong> Before making any purchase, check your department's allocated budget in
-      <strong>Humans / Budget</strong>. Don't commit to spending beyond what's been allocated. If you think you need more,
-      talk to Daniela or Peter before buying.
-    </div>
-    <div class="card">
-      <p>Holded handles the financial record &mdash; you don't need a separate spreadsheet.</p>
-      <p>If you want to keep an internal list of what you need to buy and what's been purchased, we
-      recommend using a simple doc or copying the on-site runner sheet. It can be as simple as a
-      shared note or as detailed as a spreadsheet &mdash; whatever works for your team.</p>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title">Shipping packages to site</h2>
-    <div class="card">
-      <p>If you're ordering items to be delivered before the event, use this address:</p>
-      <div class="shipping-block">
-        <div class="label">Delivery address &mdash; L&oacute;pez Mar&iacute;n</div>
-        <div class="detail">
-          SUMINISTROS LOPEZ MARIN SL<br>
-          Avda Monegros S/N<br>
-          22200 Sari&ntilde;ena, Huesca
-        </div>
-      </div>
-      <p><strong>Always include your name and department on the delivery tag</strong> &mdash; this is how we know who
-      the package is for when it arrives.</p>
-    </div>
-    <div class="fee-table">
-      <div class="fee-item">
-        <div class="fee-amount">&euro;2</div>
-        <div class="fee-desc">per small package</div>
-      </div>
-      <div class="fee-item">
-        <div class="fee-amount">&euro;5</div>
-        <div class="fee-desc">per large package / pallet</div>
-      </div>
-    </div>
-    <div class="card">
-      <p>Delivery costs are charged to your department. Use your own phone number when placing the order
-      so you receive tracking notifications directly.</p>
-      <p><strong>Please keep a log</strong> of everything you send &mdash; item, order date, tracking number, cost &mdash; so we
-      can reconcile billing at the end.</p>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title">On-site purchases</h2>
-    <div class="card">
-      <p>The same card and workflow applies on site. There are two ways to handle physical purchases in town:</p>
-      <ul class="checklist">
-        <li><strong>Go with the runners</strong> &mdash; join a runner trip and pay with your card directly</li>
-        <li><strong>Ask a runner to buy on your behalf</strong> &mdash; add your request to the on-site runner sheet
-        with item details, quantity, and where to buy. The runner will bring back the invoice &mdash; it's
-        your responsibility to upload it to Holded afterwards.</li>
-      </ul>
-      <p>For online purchases, order directly and ship to L&oacute;pez Mar&iacute;n (see above).</p>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title">Going through Production</h2>
-    <div class="card">
-      <p>If your department doesn't have a card and you need something purchased, send Daniela:</p>
-      <ul class="checklist">
-        <li>Item description</li>
-        <li>Quantity</li>
-        <li>Link or where to buy</li>
-        <li>Your budget category</li>
-      </ul>
-    </div>
-    <div class="callout callout-info">
-      <strong>Urgent needs while cards are being set up:</strong> if you can pay personally, do so and submit
-      an expense report in Humans later &mdash; we'll reimburse you. If you can't front the cost, contact
-      Daniela or Peter directly and we'll sort it.
-    </div>
-  </div>
-
-  <div class="callout callout-alert">
-    <strong>No invoice, no reimbursement.</strong> Missing or incorrect invoices mean we can't process the
-    reimbursement. When in doubt, ask before you buy.
-  </div>
-
-  <div class="footer-note">
-    Questions? &rarr; <a href="mailto:purchases@nobodies.team">purchases@nobodies.team</a>
-  </div>
-
-</main>
-
+    <div id="shared-footer"></div>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
