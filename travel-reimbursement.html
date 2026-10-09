@@ -89,9 +89,17 @@
 
         /* Button strip under the hero (same as ALM page) */
         .tr-actions {
-            background: var(--color-bg-alt);
-            border-bottom: 1px solid var(--color-border);
+            background: var(--color-text);
             padding: 1.25rem 0;
+        }
+        .tr-actions .btn-outline {
+            color: #fff;
+            border-color: rgba(255, 255, 255, 0.85);
+        }
+        .tr-actions .btn-outline:hover {
+            background: #fff;
+            color: var(--color-text);
+            border-color: #fff;
         }
         .tr-actions-inner {
             max-width: 900px;
@@ -102,6 +110,11 @@
             gap: 0.75rem;
         }
         .tr-actions .btn { white-space: nowrap; }
+        .tr-actions .btn-primary {
+            background: var(--color-accent);
+            border: 2px solid var(--color-accent);
+        }
+        .tr-actions .btn-primary:hover { background: var(--color-accent-hover); border-color: var(--color-accent-hover); }
         .tr-section[id] { scroll-margin-top: 90px; }
         @media (max-width: 760px) {
             .tr-actions-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
@@ -394,7 +407,7 @@
             <div class="tr-actions-inner">
                 <a href="#what-was-this" class="btn btn-outline">What was this?</a>
                 <a href="#tiers" class="btn btn-outline">Reimbursement tiers</a>
-                <a href="#how-to-claim" class="btn btn-outline">How to claim</a>
+                <a href="#how-to-claim" class="btn btn-primary">How to claim</a>
                 <a href="expenses.html" class="btn btn-outline">Expense Reimbursement Guide</a>
             </div>
         </div>
