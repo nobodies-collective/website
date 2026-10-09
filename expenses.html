@@ -90,6 +90,17 @@
             color: var(--color-text);
         }
 
+        .ex-highlight-pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .ex-highlight-pair .ex-highlight { margin: 0; padding: 1.5rem 1.5rem; }
+        @media (max-width: 600px) {
+            .ex-highlight-pair { grid-template-columns: 1fr; }
+        }
+
         .ex-invoice-block {
             background: var(--color-bg-alt);
             border-radius: var(--radius);
@@ -130,6 +141,8 @@
             padding: 0;
             margin: 1.5rem 0 0.5rem;
         }
+
+        .ex-card > .ex-steps:first-child { margin-top: 0; }
 
         .ex-steps li {
             counter-increment: ex-step;
@@ -253,11 +266,6 @@
             <!-- Submitting -->
             <section class="ex-section">
                 <h2>Submitting your claim</h2>
-                <div class="ex-highlight">
-                    <p><strong>No invoice, no reimbursement.</strong> Missing or incorrect invoices mean we can&rsquo;t process the reimbursement.</p>
-                    <p><strong>Already purchased and don&rsquo;t have an invoice?</strong> It can be requested after purchase &mdash; please do so.</p>
-                    <p>When in doubt, ask us.</p>
-                </div>
                 <div class="ex-card">
                     <ol class="ex-steps">
                         <li>Go to <a href="https://humans.nobodies.team/expenses" target="_blank" rel="noopener noreferrer">humans.nobodies.team/expenses</a></li>
@@ -269,8 +277,15 @@
                     </ol>
                     <p class="ex-payout">&rarr; You&rsquo;ll receive a SEPA bank transfer once approved</p>
                 </div>
-                <div class="ex-highlight">
-                    <p>You can group multiple purchases in one report &mdash; but each invoice needs its own line. Keep it to <strong>one department per report</strong> &mdash; don't mix categories (e.g. Cantina and Radios in the same report). Made expenses for multiple categories? Fill one report per category.</p>
+                <div class="ex-highlight-pair">
+                    <div class="ex-highlight">
+                        <p><strong>No invoice, no reimbursement.</strong> Missing or incorrect invoices mean we can&rsquo;t process the reimbursement.</p>
+                        <p><strong>Already purchased and don&rsquo;t have an invoice?</strong> It can be requested after purchase &mdash; please do so.</p>
+                        <p>When in doubt, ask us.</p>
+                    </div>
+                    <div class="ex-highlight">
+                        <p>You can group multiple purchases in one report &mdash; but each invoice needs its own line. Keep it to <strong>one department per report</strong> &mdash; don't mix categories (e.g. Cantina and Radios in the same report). Made expenses for multiple categories? Fill one report per category.</p>
+                    </div>
                 </div>
             </section>
 
