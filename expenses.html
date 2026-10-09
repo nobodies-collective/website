@@ -98,6 +98,17 @@
             line-height: 1.6;
         }
 
+        .ex-invoice-pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .ex-invoice-pair .ex-invoice-block { margin: 0; }
+        @media (max-width: 600px) {
+            .ex-invoice-pair { grid-template-columns: 1fr; }
+        }
+
         .ex-invoice-block .label {
             font-size: 0.75rem;
             font-weight: 700;
@@ -204,6 +215,7 @@
                 <div class="ex-card">
                     <p>Always request a <strong>proper invoice</strong> (not just a till receipt). The invoice must be addressed to:</p>
 
+                    <div class="ex-invoice-pair">
                     <div class="ex-invoice-block">
                         <div class="label">Purchases within Spain</div>
                         <div class="detail">
@@ -220,6 +232,7 @@
                             Same details, but use<br>
                             VAT Number: ESG26726299 <span style="color:var(--color-text-muted);font-weight:400;">(instead of the NIF)</span>
                         </div>
+                    </div>
                     </div>
 
                     <p style="margin-bottom:0;">Tickets (till receipts) are accepted when no invoice is possible, but a proper invoice is always preferable &mdash; it lets us recover VAT and keeps our accounting clean.</p>
