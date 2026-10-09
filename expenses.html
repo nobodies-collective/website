@@ -90,17 +90,6 @@
             color: var(--color-text);
         }
 
-        .ex-highlight-pair {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-        .ex-highlight-pair .ex-highlight { margin: 0; padding: 1.5rem 1.5rem; }
-        @media (max-width: 600px) {
-            .ex-highlight-pair { grid-template-columns: 1fr; }
-        }
-
         .ex-invoice-block {
             background: var(--color-bg-alt);
             border-radius: var(--radius);
@@ -201,6 +190,30 @@
         .ex-contact a {
             font-weight: 600;
         }
+
+        .ex-contact-title {
+            color: var(--color-text);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .ex-contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .ex-contact-list li {
+            margin-bottom: 0.6rem;
+            line-height: 1.5;
+        }
+
+        .ex-contact-list span {
+            display: block;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
@@ -277,19 +290,26 @@
                     </ol>
                     <p class="ex-payout">&rarr; You&rsquo;ll receive a SEPA bank transfer once approved</p>
                 </div>
-                <div class="ex-highlight-pair">
-                    <div class="ex-highlight">
-                        <p><strong>No invoice, no reimbursement.</strong> Missing or incorrect invoices mean we can&rsquo;t process the reimbursement.</p>
-                        <p><strong>Already purchased and don&rsquo;t have an invoice?</strong> It can be requested after purchase &mdash; please do so.</p>
-                        <p>When in doubt, ask us.</p>
-                    </div>
-                    <div class="ex-highlight">
-                        <p>You can group multiple purchases in one report &mdash; but each invoice needs its own line. Keep it to <strong>one department per report</strong> &mdash; don't mix categories (e.g. Cantina and Radios in the same report). Made expenses for multiple categories? Fill one report per category.</p>
-                    </div>
+                <div class="ex-highlight">
+                    <p>You can group multiple purchases in one report &mdash; but each invoice needs its own line. Keep it to <strong>one department per report</strong> &mdash; don't mix categories (e.g. Cantina and Radios in the same report). Made expenses for multiple categories? Fill one report per category.</p>
+                </div>
+                <div class="ex-highlight">
+                    <p><strong>No invoice, no reimbursement.</strong> Missing or incorrect invoices mean we can&rsquo;t process the reimbursement.</p>
+                    <p><strong>Already purchased and don&rsquo;t have an invoice?</strong> It can be requested after purchase &mdash; please do so.</p>
+                    <p>When in doubt, ask us.</p>
                 </div>
             </section>
 
-            <p class="ex-contact">Questions? &rarr; <a href="mailto:purchases@nobodies.team">purchases@nobodies.team</a></p>
+            <div class="ex-contact">
+                <p class="ex-contact-title">Questions? Write to the right inbox:</p>
+                <ul class="ex-contact-list">
+                    <li><a href="mailto:finance@nobodies.team">finance@nobodies.team</a> <span>General questions about expense claims</span></li>
+                    <li><a href="mailto:purchases@nobodies.team">purchases@nobodies.team</a> <span>Volunteers who made purchases for their department (must have been approved by their coordinator)</span></li>
+                    <li><a href="mailto:artgrants@nobodies.team">artgrants@nobodies.team</a> <span>Art grants</span></li>
+                    <li><a href="mailto:travelclaims@nobodies.team">travelclaims@nobodies.team</a> <span>Set-up &amp; strike travel reimbursements</span></li>
+                    <li><a href="mailto:alm@nobodies.team">alm@nobodies.team</a> <span>ALM travel reimbursements</span></li>
+                </ul>
+            </div>
 
         </div>
     </main>
