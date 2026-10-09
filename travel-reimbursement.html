@@ -87,6 +87,27 @@
             font-weight: 600;
         }
 
+        /* Button strip under the hero (same as ALM page) */
+        .tr-actions {
+            background: var(--color-bg-alt);
+            border-bottom: 1px solid var(--color-border);
+            padding: 1.25rem 0;
+        }
+        .tr-actions-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 0.75rem;
+        }
+        .tr-actions .btn { white-space: nowrap; }
+        .tr-section[id] { scroll-margin-top: 90px; }
+        @media (max-width: 760px) {
+            .tr-actions-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+            .tr-actions .btn { padding: 0.7rem 0.5rem; font-size: 0.85rem; text-align: center; justify-content: center; white-space: normal; }
+        }
+
         /* Back link */
         .back-link {
             display: inline-flex;
@@ -369,12 +390,21 @@
             </div>
         </section>
 
+        <div class="tr-actions">
+            <div class="tr-actions-inner">
+                <a href="#what-was-this" class="btn btn-outline">What was this?</a>
+                <a href="#tiers" class="btn btn-outline">Reimbursement tiers</a>
+                <a href="#how-to-claim" class="btn btn-outline">How to claim</a>
+                <a href="expenses.html" class="btn btn-outline">Expense Reimbursement Guide</a>
+            </div>
+        </div>
+
         <div class="tr-content">
             <br>
             <a href="volunteering.html" class="back-link">Back to Volunteering</a>
 
             <!-- Intro -->
-            <section class="tr-section">
+            <section class="tr-section" id="what-was-this">
                 <h2>What was this?</h2>
                 <p>We offered travel expense reimbursements for volunteers who committed to early set-up or full strike. It was not a ticket discount — it was a reimbursement of actual travel costs, processed after the event. Places were limited and we prioritised volunteers for our most critical roles — infrastructure, build and cantina.</p>
                 <div class="tr-highlight">
@@ -383,7 +413,7 @@
             </section>
 
             <!-- Tiers -->
-            <section class="tr-section">
+            <section class="tr-section" id="tiers">
                 <h2>Reimbursement tiers</h2>
 
                 <div class="tr-tiers">
@@ -421,7 +451,7 @@
             </section>
 
             <!-- How to claim -->
-            <section class="tr-section">
+            <section class="tr-section" id="how-to-claim">
                 <h2>How to claim</h2>
                 <p>For full details on how to submit expenses, invoices, and what&rsquo;s accepted, see the <a href="expenses.html">Expense Reimbursement Guide</a>.</p>
 
