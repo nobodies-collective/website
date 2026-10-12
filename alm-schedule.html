@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALM 2026 &mdash; Schedule | Nobodies Collective</title>
+    <meta name="description" content="The All Leads Meeting 2026 schedule: Vidalia, Cal Vidal (Puig-reig), 15&ndash;19 October. Day by day, room by room.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Page palette: navy + burgundy, same as the ALM page */
+        body {
+            --color-bg: #f5f6fa;
+            --color-bg-alt: #e9ecf4;
+            --color-text: #1a2033;
+            --color-text-muted: #545c72;
+            --color-accent: #802034;
+            --color-accent-hover: #621827;
+            --color-pink: #1e3058;
+            --color-purple: #1e3058;
+            --color-purple-dark: #0e1830;
+            --color-yellow: #802034;
+            --color-border: #d6dbe6;
+            --navy: #1e3058;
+        }
+
+        .tr-page { padding: 0 0 4rem; }
+        .tr-content { max-width: 900px; margin: 0 auto; padding: 0 var(--spacing); }
+
+        /* Gradient hero, as on the ALM page */
+        .alm-hero {
+            padding: 10rem 0 4.5rem;
+            color: #fff;
+            background:
+                radial-gradient(circle at 82% 18%, rgba(128, 32, 52, 0.55), transparent 45%),
+                linear-gradient(135deg, rgba(14, 24, 48, 0.98), rgba(30, 48, 88, 0.94));
+        }
+        .alm-inner { max-width: 900px; margin: 0 auto; padding: 0 var(--spacing); }
+        .alm-kicker {
+            display: inline-block;
+            margin-bottom: 1.25rem;
+            padding: 0.45rem 0.85rem;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 999px;
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+        .alm-hero h1 {
+            color: #fff;
+            margin-bottom: 1.25rem;
+            font-size: clamp(2.2rem, 4.6vw, 3.4rem);
+        }
+        .alm-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.75rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.05rem;
+        }
+        .alm-meta a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+        .alm-meta a:hover { color: rgba(255,255,255,0.8); }
+
+        /* Button strip under the hero */
+        .alm-actions {
+            background: var(--color-bg-alt);
+            border-bottom: 1px solid var(--color-border);
+            padding: 1.25rem 0;
+        }
+        .alm-actions .alm-inner { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+        .alm-actions .btn { white-space: nowrap; }
+
+        /* Intro box */
+        .alm-intro {
+            margin-top: 3rem;
+            background: #e8edf6;
+            border: 1px solid #cdd6e6;
+            border-left: 4px solid var(--navy);
+            border-radius: var(--radius);
+            padding: 1.75rem 2.25rem;
+        }
+        .alm-intro p { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; }
+        .alm-intro p:last-child { margin-bottom: 0; }
+        .alm-intro a { font-weight: 600; }
+
+        /* Legend */
+        .sch-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.25rem;
+            margin: 1.5rem 0 0;
+            font-size: 0.82rem;
+            color: var(--color-text-muted);
+        }
+        .sch-legend span { display: inline-flex; align-items: center; gap: 0.45rem; }
+        .sch-legend i {
+            display: inline-block;
+            width: 14px; height: 14px;
+            border-radius: 4px;
+        }
+
+        /* Day tabs: pills */
+        .day-tab {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 2.5rem 0 1.75rem;
+        }
+        .day-btn {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 0.6rem 1.15rem;
+            border-radius: 999px;
+            border: 1px solid var(--color-border);
+            background: #fff;
+            color: var(--color-text);
+            cursor: pointer;
+            transition: background 0.15s, color 0.15s, border-color 0.15s;
+        }
+        .day-btn:hover { border-color: var(--color-accent); color: var(--color-accent); }
+        .day-btn.side {
+            font-weight: 500;
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            background: transparent;
+            border-style: dashed;
+        }
+        .day-btn.active,
+        .day-btn.active:hover {
+            background: var(--navy);
+            border-color: var(--navy);
+            border-style: solid;
+            color: #fff;
+        }
+
+        /* Day panels */
+        .day-panel { display: none; }
+        .day-panel.active { display: block; }
+
+        .section-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin: 2rem 0 0.75rem;
+        }
+        .day-panel > .section-label:first-child { margin-top: 0; }
+
+        /* Room headers */
+        .room-headers {
+            display: flex;
+            gap: 6px;
+            margin: 1rem 0 6px;
+            padding-left: 112px;
+        }
+        .room-header {
+            flex: 1;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--navy);
+            text-align: center;
+            padding: 0.4rem 0.25rem;
+            background: var(--color-bg-alt);
+            border-radius: 8px;
+        }
+
+        /* Slot rows */
+        .slot-row {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 6px;
+            align-items: stretch;
+            min-height: 42px;
+        }
+        .time-col {
+            width: 106px;
+            flex-shrink: 0;
+            font-size: 0.85rem;
+            font-weight: 600;
+            font-variant-numeric: tabular-nums;
+            color: var(--color-text);
+            padding-top: 0.7rem;
+            line-height: 1.2;
+        }
+        .slots { display: flex; gap: 6px; flex: 1; }
+        .slot {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0.6rem 0.8rem;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            line-height: 1.35;
+        }
+        .slot.full { flex: 3; }
+
+        .slot.meal {
+            background: transparent;
+            border: 1px solid var(--color-border);
+            color: var(--color-text-muted);
+            font-size: 0.85rem;
+        }
+        .slot.open {
+            background: transparent;
+            border: 1.5px dashed #b4bcce;
+            color: var(--color-text-muted);
+            font-size: 0.85rem;
+        }
+        .slot.empty { background: transparent; border: none; }
+        .slot.session {
+            background: #fff;
+            border: 1px solid #cdd6e6;
+            border-left: 4px solid var(--navy);
+            color: var(--color-text);
+            font-weight: 600;
+        }
+        .slot.plenary {
+            background: var(--color-accent);
+            color: #fff;
+            font-weight: 700;
+        }
+        .slot.setup,
+        .slot.checkin {
+            background: #f6ebd9;
+            border: 1px solid #ead6b4;
+            color: #6e4a12;
+            font-weight: 600;
+        }
+        .slot.checkin { font-weight: 500; }
+        .slot.social {
+            background: #e3efe6;
+            border: 1px solid #c6dccc;
+            color: #2f5a3a;
+            font-weight: 600;
+        }
+
+        /* Legend swatches reuse the slot colours */
+        .sch-legend .k-session { background: #fff; border: 1px solid #cdd6e6; border-left: 4px solid var(--navy); }
+        .sch-legend .k-plenary { background: var(--color-accent); }
+        .sch-legend .k-open { border: 1.5px dashed #b4bcce; }
+        .sch-legend .k-meal { border: 1px solid var(--color-border); }
+        .sch-legend .k-setup { background: #f6ebd9; border: 1px solid #ead6b4; }
+        .sch-legend .k-social { background: #e3efe6; border: 1px solid #c6dccc; }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 3rem;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+        .back-link:hover { color: var(--color-accent); }
+        .back-link::before { content: '\2190'; }
+
+        @media (max-width: 760px) {
+            .alm-hero { padding: 9.5rem 0 3rem; }
+            .alm-actions .alm-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+            .alm-actions .btn { padding: 0.7rem 0.5rem; font-size: 0.85rem; text-align: center; justify-content: center; white-space: normal; }
+            .alm-intro { padding: 1.5rem 1.4rem; }
+        }
+
+        /* Phones: parallel rooms stack, each slot carries its room name */
+        @media (max-width: 600px) {
+            .day-btn { font-size: 0.85rem; padding: 0.5rem 0.9rem; }
+            .day-btn.side { font-size: 0.78rem; }
+            .room-headers { display: none; }
+            .time-col { width: 74px; font-size: 0.78rem; padding-top: 0.6rem; }
+            .slots { flex-direction: column; }
+            .slot { font-size: 0.85rem; padding: 0.55rem 0.7rem; }
+            .slot.empty { display: none; }
+            .slot[data-room] { flex-direction: column; gap: 0.15rem; }
+            .slot[data-room]::before {
+                content: attr(data-room);
+                font-size: 0.66rem;
+                font-weight: 700;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                opacity: 0.7;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="shared-header"></div>
+    <script src="header.js"></script>
+
+    <main class="tr-page">
+
+        <header class="alm-hero">
+            <div class="alm-inner">
+                <span class="alm-kicker">ALM 2026 &middot; Schedule</span>
+                <h1>Schedule</h1>
+                <div class="alm-meta">
+                    <a href="https://maps.app.goo.gl/4bvLzec1aNNbAL7M7" target="_blank" rel="noopener noreferrer">📍 Vidalia, Cal Vidal &middot; Puig-reig, Barcelona</a>
+                    <span>15&ndash;19 October 2026</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="alm-actions">
+            <div class="alm-inner">
+                <a href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=1859621709#gid=1859621709" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Sign up for a shift</a>
+                <a href="alm-2026.html" class="btn btn-outline">ALM info page</a>
+            </div>
+        </div>
+
+        <div class="tr-content">
+
+            <section class="alm-intro">
+                <p>Click on each day tab to view the schedule. Each column corresponds to a room &mdash; some sessions run in parallel across rooms, others are for everyone and take place in Espai Comun. Dashed boxes are open spaces, self-organised on the day.</p>
+                <p>Sign up for shifts on the <a href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=1859621709#gid=1859621709" target="_blank" rel="noopener noreferrer">onsite shift tab</a> &mdash; make sure you&rsquo;ve signed up for at least 2. Shifts run alongside the programme throughout the weekend.</p>
+            </section>
+
+            <div class="sch-legend" aria-hidden="true">
+                <span><i class="k-plenary"></i>All together</span>
+                <span><i class="k-session"></i>Session</span>
+                <span><i class="k-open"></i>Open space</span>
+                <span><i class="k-meal"></i>Meals</span>
+                <span><i class="k-setup"></i>Setup &amp; check-in</span>
+                <span><i class="k-social"></i>Social</span>
+            </div>
+
+            <div class="day-tab" role="tablist">
+                <button class="day-btn side active" data-day="thu">Thu 15 &mdash; early arrivals</button>
+                <button class="day-btn main" data-day="fri">Fri 16</button>
+                <button class="day-btn main" data-day="sat">Sat 17</button>
+                <button class="day-btn main" data-day="sun">Sun 18</button>
+                <button class="day-btn side" data-day="mon">Mon 19 &mdash; late departures</button>
+            </div>
+
+            <!-- THU -->
+            <div id="thu" class="day-panel active">
+                <p class="section-label">Afternoon</p>
+                <div class="slot-row"><div class="time-col">14:00 →</div><div class="slots"><div class="slot setup full">Arrivals</div></div></div>
+                <p class="section-label">Evening</p>
+                <div class="slot-row"><div class="time-col">19:00–19:30</div><div class="slots"><div class="slot meal full">Dinner prep</div></div></div>
+                <div class="slot-row"><div class="time-col">19:30–21:00</div><div class="slots"><div class="slot meal full">Dinner</div></div></div>
+                <div class="slot-row"><div class="time-col">21:00–22:00</div><div class="slots"><div class="slot meal full">Dinner cleanup</div></div></div>
+            </div>
+
+            <!-- FRI -->
+            <div id="fri" class="day-panel">
+                <p class="section-label">Morning</p>
+                <div class="slot-row"><div class="time-col">07:30–08:00</div><div class="slots"><div class="slot meal full">Breakfast prep</div></div></div>
+                <div class="slot-row"><div class="time-col">08:00–09:00</div><div class="slots"><div class="slot meal full">Breakfast</div></div></div>
+                <div class="slot-row"><div class="time-col">09:00–10:00</div><div class="slots"><div class="slot meal full">Breakfast cleanup</div></div></div>
+                <p class="section-label">Afternoon</p>
+                <div class="slot-row"><div class="time-col">09:30–13:00</div><div class="slots"><div class="slot setup full">Setup (org team)</div></div></div>
+                <div class="slot-row"><div class="time-col">13:00–13:30</div><div class="slots"><div class="slot meal full">Lunch prep</div></div></div>
+                <div class="slot-row"><div class="time-col">13:30–14:30</div><div class="slots"><div class="slot meal full">Lunch</div></div></div>
+                <div class="slot-row"><div class="time-col">14:30–15:30</div><div class="slots"><div class="slot meal full">Lunch cleanup</div></div></div>
+                <div class="slot-row"><div class="time-col">14:00–20:00</div><div class="slots"><div class="slot checkin full">Check-in open</div></div></div>
+                <p class="section-label">Evening</p>
+                <div class="room-headers"><div class="room-header">Espai Comun</div><div class="room-header">Espai Polivalent</div><div class="room-header">Taller / Chapel</div></div>
+                <div class="slot-row"><div class="time-col">17:00–18:30</div><div class="slots"><div class="slot plenary full">⚡️ WGs speed dating — all together</div></div></div>
+                <div class="slot-row"><div class="time-col">18:30–19:30</div><div class="slots"><div class="slot open">Open space</div><div class="slot open">Open space</div><div class="slot open">Open space</div></div></div>
+                <div class="slot-row"><div class="time-col">19:00–19:30</div><div class="slots"><div class="slot meal full">Dinner prep</div></div></div>
+                <div class="slot-row"><div class="time-col">19:30–21:00</div><div class="slots"><div class="slot meal full">Dinner</div></div></div>
+                <div class="slot-row"><div class="time-col">21:00–22:00</div><div class="slots"><div class="slot meal full">Dinner cleanup</div></div></div>
+                <div class="slot-row"><div class="time-col">Evening</div><div class="slots"><div class="slot social full">Social time</div></div></div>
+            </div>
+
+            <!-- SAT -->
+            <div id="sat" class="day-panel">
+                <p class="section-label">Morning</p>
+                <div class="slot-row"><div class="time-col">07:30–08:00</div><div class="slots"><div class="slot meal full">Breakfast prep</div></div></div>
+                <div class="slot-row"><div class="time-col">08:00–09:00</div><div class="slots"><div class="slot meal full">Breakfast</div></div></div>
+                <div class="slot-row"><div class="time-col">09:00–10:00</div><div class="slots"><div class="slot meal full">Breakfast cleanup</div></div></div>
+                <div class="room-headers"><div class="room-header">Espai Comun</div><div class="room-header">Espai Polivalent</div><div class="room-header">Taller / Chapel</div></div>
+                <div class="slot-row"><div class="time-col">09:00–11:00</div><div class="slots"><div class="slot session">Annual Roadmap</div><div class="slot session">Event-Time Hub Blueprint</div><div class="slot open">Open space</div></div></div>
+                <div class="slot-row"><div class="time-col">09:30–11:00</div><div class="slots"><div class="slot open">Open space</div><div class="slot open">Open space</div><div class="slot open">Open space</div></div></div>
+                <p class="section-label">Afternoon</p>
+                <div class="slot-row"><div class="time-col">13:00–13:30</div><div class="slots"><div class="slot meal full">Lunch prep</div></div></div>
+                <div class="slot-row"><div class="time-col">13:30–14:30</div><div class="slots"><div class="slot meal full">Lunch</div></div></div>
+                <div class="slot-row"><div class="time-col">14:30–15:30</div><div class="slots"><div class="slot meal full">Lunch cleanup</div></div></div>
+                <div class="room-headers"><div class="room-header">Espai Comun</div><div class="room-header">Espai Polivalent</div><div class="room-header">Taller / Chapel</div></div>
+                <div class="slot-row"><div class="time-col">15:00–16:30</div><div class="slots"><div class="slot session">Org Structure Intro</div><div class="slot empty"></div><div class="slot empty"></div></div></div>
+                <div class="slot-row"><div class="time-col">17:00–18:30</div><div class="slots"><div class="slot session">Roles &amp; Selection</div><div class="slot session">Paid Roles &amp; Board</div><div class="slot session">Culture &amp; Mediation</div></div></div>
+                <div class="slot-row"><div class="time-col">18:30–19:30</div><div class="slots"><div class="slot open">Open space</div><div class="slot open">Open space</div><div class="slot open">Open space</div></div></div>
+                <p class="section-label">Evening</p>
+                <div class="slot-row"><div class="time-col">19:00–19:30</div><div class="slots"><div class="slot meal full">Dinner prep</div></div></div>
+                <div class="slot-row"><div class="time-col">19:30–21:00</div><div class="slots"><div class="slot meal full">Dinner</div></div></div>
+                <div class="slot-row"><div class="time-col">21:00–22:00</div><div class="slots"><div class="slot meal full">Dinner cleanup</div></div></div>
+                <div class="slot-row"><div class="time-col">Evening</div><div class="slots"><div class="slot social full">Social time</div></div></div>
+            </div>
+
+            <!-- SUN -->
+            <div id="sun" class="day-panel">
+                <p class="section-label">Morning</p>
+                <div class="slot-row"><div class="time-col">07:30–08:00</div><div class="slots"><div class="slot meal full">Breakfast prep</div></div></div>
+                <div class="slot-row"><div class="time-col">08:00–09:00</div><div class="slots"><div class="slot meal full">Breakfast</div></div></div>
+                <div class="slot-row"><div class="time-col">09:00–10:00</div><div class="slots"><div class="slot meal full">Breakfast cleanup</div></div></div>
+                <div class="room-headers"><div class="room-header">Espai Comun</div><div class="room-header">Espai Polivalent</div><div class="room-header">Taller / Chapel</div></div>
+                <div class="slot-row"><div class="time-col">09:00–11:00</div><div class="slots"><div class="slot session">Art Impermanence</div><div class="slot open">Open space</div><div class="slot session">Werkhaus Governance</div></div></div>
+                <div class="slot-row"><div class="time-col">11:30–13:00</div><div class="slots"><div class="slot plenary full">🎙 Outcome pitches — all together</div></div></div>
+                <p class="section-label">Afternoon</p>
+                <div class="slot-row"><div class="time-col">13:00–13:30</div><div class="slots"><div class="slot meal full">Lunch prep</div></div></div>
+                <div class="slot-row"><div class="time-col">13:30–14:30</div><div class="slots"><div class="slot meal full">Lunch</div></div></div>
+                <div class="slot-row"><div class="time-col">14:30–15:30</div><div class="slots"><div class="slot meal full">Lunch cleanup</div></div></div>
+                <div class="slot-row"><div class="time-col">15:00–16:30</div><div class="slots"><div class="slot open">Open space</div><div class="slot open">Open space</div><div class="slot open">Open space</div></div></div>
+                <div class="slot-row"><div class="time-col">17:00 →</div><div class="slots"><div class="slot checkin full">Check-out</div></div></div>
+                <p class="section-label">Evening</p>
+                <div class="slot-row"><div class="time-col">19:00–19:30</div><div class="slots"><div class="slot meal full">Dinner prep</div></div></div>
+                <div class="slot-row"><div class="time-col">19:30–21:00</div><div class="slots"><div class="slot meal full">Dinner (strike crew)</div></div></div>
+                <div class="slot-row"><div class="time-col">21:00–22:00</div><div class="slots"><div class="slot meal full">Dinner cleanup</div></div></div>
+            </div>
+
+            <!-- MON -->
+            <div id="mon" class="day-panel">
+                <p class="section-label">Morning</p>
+                <div class="slot-row"><div class="time-col">07:30–08:00</div><div class="slots"><div class="slot meal full">Breakfast prep</div></div></div>
+                <div class="slot-row"><div class="time-col">08:00–09:00</div><div class="slots"><div class="slot meal full">Breakfast</div></div></div>
+                <div class="slot-row"><div class="time-col">09:00–10:00</div><div class="slots"><div class="slot meal full">Breakfast cleanup</div></div></div>
+                <div class="slot-row"><div class="time-col">11:00 →</div><div class="slots"><div class="slot setup full">Departures</div></div></div>
+            </div>
+
+            <a href="alm-2026.html" class="back-link">Back to the ALM page</a>
+
+        </div>
+    </main>
+
+    <div id="shared-footer"></div>
+    <script src="footer.js"></script>
+    <script>
+        (function () {
+            // Label each parallel slot with its room, so rooms still read on phones
+            document.querySelectorAll('.room-headers').forEach(function (h) {
+                var rooms = Array.prototype.map.call(h.children, function (r) { return r.textContent.trim(); });
+                var el = h.nextElementSibling;
+                while (el && el.classList.contains('slot-row')) {
+                    var slots = el.querySelectorAll('.slot:not(.full)');
+                    if (slots.length === rooms.length) {
+                        slots.forEach(function (s, i) { s.setAttribute('data-room', rooms[i]); });
+                    }
+                    el = el.nextElementSibling;
+                }
+            });
+
+            var buttons = document.querySelectorAll('.day-btn');
+            function show(id) {
+                if (!document.getElementById(id)) return;
+                document.querySelectorAll('.day-panel').forEach(function (p) { p.classList.toggle('active', p.id === id); });
+                buttons.forEach(function (b) { b.classList.toggle('active', b.dataset.day === id); });
+            }
+            buttons.forEach(function (b) {
+                b.addEventListener('click', function () {
+                    show(b.dataset.day);
+                    history.replaceState(null, '', '#' + b.dataset.day);
+                });
+            });
+
+            // Open on #day if linked, otherwise on today during the ALM
+            var start = location.hash.slice(1);
+            if (!start) {
+                var now = new Date();
+                var days = { 15: 'thu', 16: 'fri', 17: 'sat', 18: 'sun', 19: 'mon' };
+                if (now.getFullYear() === 2026 && now.getMonth() === 9 && days[now.getDate()]) start = days[now.getDate()];
+            }
+            if (start) show(start);
+        })();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
