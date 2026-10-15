@@ -521,7 +521,25 @@
                 if (!document.getElementById(id)) return;
                 document.querySelectorAll('.day-panel').forEach(function (p) { p.classList.toggle('active', p.id === id); });
                 buttons.forEach(function (b) { b.classList.toggle('active', b.dataset.day === id); });
+                equalize();
             }
+
+            // Rows under the same room headers get the same height, so every session box is the same size
+            function equalize() {
+                document.querySelectorAll('.room-headers').forEach(function (h) {
+                    var rows = [], el = h.nextElementSibling;
+                    while (el && el.classList.contains('slot-row')) {
+                        if (el.querySelectorAll('.slot:not(.full)').length === h.children.length) rows.push(el);
+                        el = el.nextElementSibling;
+                    }
+                    rows.forEach(function (r) { r.style.minHeight = ''; });
+                    if (window.innerWidth <= 600) return;
+                    var max = 0;
+                    rows.forEach(function (r) { max = Math.max(max, r.offsetHeight); });
+                    if (max) rows.forEach(function (r) { r.style.minHeight = max + 'px'; });
+                });
+            }
+            window.addEventListener('resize', equalize);
             buttons.forEach(function (b) {
                 b.addEventListener('click', function () {
                     show(b.dataset.day);
@@ -536,7 +554,7 @@
                 var days = { 15: 'thu', 16: 'fri', 17: 'sat', 18: 'sun', 19: 'mon' };
                 if (now.getFullYear() === 2026 && now.getMonth() === 9 && days[now.getDate()]) start = days[now.getDate()];
             }
-            if (start) show(start);
+            if (start) show(start); else equalize();
         })();
     </script>
     <script src="script.js"></script>
