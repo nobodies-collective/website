@@ -527,6 +527,7 @@
                 document.querySelectorAll('.day-panel').forEach(function (p) { p.classList.toggle('active', p.id === id); });
                 buttons.forEach(function (b) { b.classList.toggle('active', b.dataset.day === id); });
                 equalize();
+                equalizePlenaries();
             }
 
             // Rows under the same room headers get the same height, so every session box is the same size
@@ -554,6 +555,19 @@
                 });
             }
             window.addEventListener('resize', equalize);
+
+            // Phones: the all-together (burgundy) boxes and single sessions in a day get the same height too
+            function equalizePlenaries() {
+                document.querySelectorAll('.day-panel').forEach(function (panel) {
+                    var boxes = panel.querySelectorAll('.slot.plenary, .slot.session.full');
+                    boxes.forEach(function (b) { b.style.minHeight = ''; });
+                    if (window.innerWidth > 600) return;
+                    var tallest = 0;
+                    boxes.forEach(function (b) { tallest = Math.max(tallest, b.offsetHeight); });
+                    if (tallest) boxes.forEach(function (b) { b.style.minHeight = tallest + 'px'; });
+                });
+            }
+            window.addEventListener('resize', equalizePlenaries);
             buttons.forEach(function (b) {
                 b.addEventListener('click', function () {
                     show(b.dataset.day);
@@ -568,7 +582,7 @@
                 var days = { 15: 'thu', 16: 'fri', 17: 'sat', 18: 'sun', 19: 'mon' };
                 if (now.getFullYear() === 2026 && now.getMonth() === 9 && days[now.getDate()]) start = days[now.getDate()];
             }
-            if (start) show(start); else equalize();
+            if (start) show(start); else { equalize(); equalizePlenaries(); }
         })();
     </script>
     <script src="script.js"></script>
