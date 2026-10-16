@@ -90,13 +90,60 @@
         .alm-intro p { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; }
         .alm-intro p:last-child { margin-bottom: 0; }
         .alm-intro a { font-weight: 600; }
-        .alm-welcome { margin-top: 3rem; color: var(--color-text-muted); line-height: 1.7; }
-        .alm-welcome p { font-size: 1.1rem; color: var(--color-text); margin-bottom: 0.6rem; }
-        .alm-welcome ul { padding-left: 1.2rem; margin: 0; }
-        .alm-welcome li { margin-bottom: 0.35rem; }
-        .alm-welcome strong { color: var(--color-text); }
-        .alm-welcome strong.here { color: var(--color-accent); }
-        .alm-welcome + .alm-intro { margin-top: 2rem; }
+        /* Intro + side boxes */
+        .alm-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 280px;
+            gap: 2rem;
+            align-items: start;
+        }
+        .alm-layout .alm-intro { margin-top: 3rem; }
+        .alm-side { margin-top: 3rem; }
+        .alm-box {
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .alm-box:last-child { margin-bottom: 0; }
+        .alm-box h3 {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 0.75rem;
+        }
+        .alm-box h4 {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-text-muted);
+            margin: 1rem 0 0.25rem;
+        }
+        .alm-box p { font-size: 0.92rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 0.5rem; }
+        .alm-box ul { list-style: none; padding: 0; margin: 0; }
+        .alm-box li {
+            padding: 0.45rem 0;
+            border-bottom: 1px solid var(--color-border);
+            font-size: 0.92rem;
+            color: var(--color-text-muted);
+            line-height: 1.4;
+        }
+        .alm-box li:last-child { border-bottom: none; }
+        .alm-box li a { font-weight: 600; }
+        .alm-box li strong { color: var(--color-text); }
+        .alm-box li strong.here { color: var(--color-accent); }
+        .alm-box .alm-role { display: block; font-size: 0.8rem; }
+        .alm-box .alm-name { font-weight: 600; color: var(--color-text); }
+        @media (max-width: 900px) {
+            .alm-layout { grid-template-columns: minmax(0, 1fr); gap: 0; }
+            .alm-side { display: contents; }
+            #welcome { order: -1; margin-top: 2.5rem; margin-bottom: 0; }
+            #onsite { order: 1; margin-top: 1.5rem; margin-bottom: 0; }
+        }
 
         /* Legend */
         .sch-legend {
@@ -376,21 +423,39 @@
 
         <div class="tr-content">
 
-            <section class="alm-welcome">
-                <p>Welcome to the ALM 2026! Everything you need for the weekend is here:</p>
-                <ul>
-                    <li><strong class="here">What&rsquo;s On</strong>: the schedule, when and where each session happens, room by room (this page)</li>
-                    <li><strong><a href="alm-programme.html">Programme</a></strong>: what each session is about and what you&rsquo;ll walk away with</li>
-                    <li><strong>Outcomes</strong>: what we decided, shared after the ALM</li>
-                </ul>
-            </section>
-
+            <div class="alm-layout">
             <section class="alm-intro">
                 <h2>When things are happening</h2>
                 <p>Click on each day tab to view the schedule. Each column corresponds to a room &mdash; some sessions run in parallel across rooms, others are for everyone and take place in Espai Comun. Dashed boxes are open spaces, self-organised on the day.</p>
                 <p>Hover over a session (or tap it on your phone) to see what it&rsquo;s about.</p>
                 <p>Sign up for shifts on the <a href="https://docs.google.com/spreadsheets/d/14WChLsea4mifEHq4UZI_WInDND-Qw-mINm4hcWkCOHo/edit?gid=1859621709#gid=1859621709" target="_blank" rel="noopener noreferrer">onsite shift tab</a> &mdash; make sure you&rsquo;ve signed up for at least 2. Shifts run alongside the programme throughout the weekend.</p>
             </section>
+        <aside class="alm-side">
+            <div class="alm-box" id="welcome">
+                <h3>Welcome to the ALM 2026!</h3>
+                <p>Everything you need for the weekend is here:</p>
+                <ul>
+                    <li><strong class="here">What&rsquo;s On</strong>: the schedule, when and where each session happens, room by room</li>
+                    <li><strong><a href="alm-programme.html">Programme</a></strong>: what each session is about and what you&rsquo;ll walk away with</li>
+                    <li><strong>Outcomes</strong>: what we decided, shared after the ALM</li>
+                </ul>
+            </div>
+            <div class="alm-box" id="onsite">
+                <h3>Onsite contact</h3>
+                <ul>
+                    <li><span class="alm-role">Venue &amp; logistics</span><span class="alm-name">Doreen</span></li>
+                    <li><span class="alm-role">Meals &amp; shifts</span><span class="alm-name">Yllza</span></li>
+                    <li><span class="alm-role">Programme &amp; facilitation</span><span class="alm-name">Celine</span></li>
+                    <li><span class="alm-role">Tech &amp; equipment</span><span class="alm-name">Yakir</span></li>
+                    <li><span class="alm-role">Finance &amp; travel reimbursement</span><span class="alm-name">Cupcake</span></li>
+                </ul>
+                <h4>Remote</h4>
+                <ul>
+                    <li><span class="alm-role">Comms &amp; attendee support</span><a href="mailto:leaf@nobodies.team">leaf@nobodies.team</a></li>
+                </ul>
+            </div>
+        </aside>
+            </div>
 
             <div class="sch-legend" aria-hidden="true">
                 <span><i class="k-plenary"></i>All together</span>
