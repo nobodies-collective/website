@@ -90,6 +90,12 @@
         .alm-intro p { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; }
         .alm-intro p:last-child { margin-bottom: 0; }
         .alm-intro a { font-weight: 600; }
+        .alm-welcome { margin-top: 3rem; color: var(--color-text-muted); line-height: 1.7; }
+        .alm-welcome p { font-size: 1.1rem; color: var(--color-text); margin-bottom: 0.6rem; }
+        .alm-welcome ul { padding-left: 1.2rem; margin: 0; }
+        .alm-welcome li { margin-bottom: 0.35rem; }
+        .alm-welcome strong { color: var(--color-text); }
+        .alm-welcome + .alm-intro { margin-top: 2rem; }
 
         /* Legend */
         .sch-legend {
@@ -361,13 +367,22 @@
         <div class="alm-actions">
             <div class="alm-inner">
                 <a href="alm-2026.html" class="btn btn-outline">ALM info page</a>
-                <a href="alm-whats-on.html" class="btn btn-primary" aria-current="page">Schedule</a>
+                <a href="alm-whats-on.html" class="btn btn-primary" aria-current="page">What&rsquo;s On</a>
                 <a href="alm-programme.html" class="btn btn-outline">Programme</a>
                 <a href="alm-outcomes.html" class="btn btn-outline btn-soon" aria-disabled="true" tabindex="-1" title="Coming soon">Outcomes</a>
             </div>
         </div>
 
         <div class="tr-content">
+
+            <section class="alm-welcome">
+                <p>Welcome to the ALM 2026! Everything you need for the weekend is here:</p>
+                <ul>
+                    <li><strong>What&rsquo;s On</strong>: the schedule, when and where each session happens, room by room (this page)</li>
+                    <li><strong><a href="alm-programme.html">Programme</a></strong>: what each session is about and what you&rsquo;ll walk away with</li>
+                    <li><strong>Outcomes</strong>: what we decided, shared after the ALM</li>
+                </ul>
+            </section>
 
             <section class="alm-intro">
                 <h2>When things are happening</h2>
