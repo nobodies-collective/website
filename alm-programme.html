@@ -208,6 +208,28 @@
         .back-link:hover { color: var(--color-accent); }
         .back-link::before { content: '\2190'; }
 
+        /* ── Agenda toggle ── */
+        .agenda-toggle-row { display: none; justify-content: flex-end; margin-top: 0.85rem; }
+        .agenda-toggle-row.has-agenda { display: flex; }
+        .agenda-toggle {
+            font: inherit;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.35rem 0.85rem;
+            border: 2px solid var(--color-text);
+            border-radius: 50px;
+            background: transparent;
+            color: var(--color-text);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .agenda-toggle:hover { background: var(--color-text); color: #fff; }
+        .session-agenda { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-border); color: var(--color-text-muted); font-size: 0.92rem; line-height: 1.7; }
+        .session-agenda h3 { font-size: 0.95rem; color: var(--color-text); margin: 1rem 0 0.4rem; }
+        .session-agenda h3:first-child { margin-top: 0; }
+        .session-agenda ul { padding-left: 1.2rem; margin-bottom: 0.6rem; }
+        .session-agenda p { margin-bottom: 0.6rem; }
+
         @media (max-width: 760px) {
             .alm-hero { padding: 9.5rem 0 3rem; }
             .alm-actions .alm-inner { grid-template-columns: 1fr 1fr; gap: 0.6rem; }
@@ -243,16 +265,16 @@
                 <a href="alm-2026.html" class="btn btn-outline">ALM info page</a>
                 <a href="alm-whats-on.html" class="btn btn-outline">Schedule</a>
                 <a href="alm-programme.html" class="btn btn-primary" aria-current="page">Programme</a>
-                <a href="alm-agenda.html" class="btn btn-outline btn-soon" aria-disabled="true" tabindex="-1" title="Coming soon">Agenda</a>
+                <a href="alm-outcomes.html" class="btn btn-outline btn-soon" aria-disabled="true" tabindex="-1" title="Coming soon">Outcomes</a>
             </div>
         </div>
 
         <div class="tr-content">
 
             <section class="alm-intro">
-                <h2>What each session is actually about</h2>
-                <p>The schedule shows you when things happen. This page tells you what they are — what each session is trying to decide, and what you should walk away with. For the room-by-room timetable, head to the <a href="alm-whats-on.html">Schedule</a> page.</p>
-                <p>Sessions marked ⚡ are for everyone. Parallel sessions run simultaneously — you'll need to choose one.</p>
+                <h2>What each session is about?</h2>
+                <p>This page tells you what each session will be working on, and what you should walk away with. For the room-by-room timetable, head to the <a href="alm-whats-on.html">Schedule</a> page.</p>
+                <p>Sessions marked ⚡️ are for everyone. Parallel sessions run simultaneously, so you&rsquo;ll need to choose one. All programmed sessions will be hybrid: the link to join the call will be shared in our channels, so join your preferred one via <a href="https://discord.com/channels/1462886445583962245/1544620180561199104" target="_blank" rel="noopener noreferrer">Discord</a>, <a href="https://t.me/+8PJcUJjxR5gxNDg0" target="_blank" rel="noopener noreferrer">Telegram</a> or <a href="https://chat.whatsapp.com/JvsdNfMzrNKBYvk4km3xR3" target="_blank" rel="noopener noreferrer">WhatsApp</a>.</p>
             </section>
 
             <!-- ═══ FRIDAY ═══ -->
@@ -272,6 +294,8 @@
                     <div class="session-footer">
                         <span><strong>Covers:</strong> Lessons learned · Icebreaker · Annual roadmap · Finance · Asset acquisition · Facilitation guidelines</span>
                     </div>
+                    <div class="session-agenda" id="agenda-welcome-and-year-in-review" hidden><!-- Agenda for: Welcome &amp; Year in Review --></div>
+                    <div class="agenda-toggle-row"><button type="button" class="agenda-toggle" aria-expanded="false" aria-controls="agenda-welcome-and-year-in-review">Agenda ↓</button></div>
                 </div>
 
                 <div class="session-card plenary">
@@ -287,6 +311,8 @@
                     <div class="session-footer">
                         <span><strong>You'll leave with:</strong> A clear picture of what's happening across all sessions so you can self-select</span>
                     </div>
+                    <div class="session-agenda" id="agenda-working-group-speed-dating" hidden><!-- Agenda for: Working Group Speed Dating --></div>
+                    <div class="agenda-toggle-row"><button type="button" class="agenda-toggle" aria-expanded="false" aria-controls="agenda-working-group-speed-dating">Agenda ↓</button></div>
                 </div>
 
             </div><!-- /friday sessions -->
@@ -310,6 +336,8 @@
                         <span><strong>Working group:</strong> Event-Time Ops</span>
                         <span><strong>You'll leave with:</strong> An agreed site layout and staffing model for the ops hub</span>
                     </div>
+                    <div class="session-agenda" id="agenda-event-time-ops-and-org-hub" hidden><!-- Agenda for: Event-Time Ops &amp; Org Hub --></div>
+                    <div class="agenda-toggle-row"><button type="button" class="agenda-toggle" aria-expanded="false" aria-controls="agenda-event-time-ops-and-org-hub">Agenda ↓</button></div>
                 </div>
 
                 <!-- Parallel block 10:45 -->
@@ -331,6 +359,8 @@
                                 <span><strong>Working group:</strong> Safehaus</span>
                                 <span><strong>You'll leave with:</strong> A crew rest model and a budget line to put forward for 2027</span>
                             </div>
+                    <div class="session-agenda" id="agenda-beyond-safehaus-what-should-crew-rest-lo" hidden><!-- Agenda for: Beyond Safehaus: What Should Crew Rest Look Like? --></div>
+                    <div class="agenda-toggle-row"><button type="button" class="agenda-toggle" aria-expanded="false" aria-controls="agenda-beyond-safehaus-what-should-crew-rest-lo">Agenda ↓</button></div>
                         </div>
 
                         <div class="session-card">
@@ -345,6 +375,8 @@
                                 <span><strong>Working group:</strong> Sound Policy</span>
                                 <span><strong>You'll leave with:</strong> A ratified sound policy with enforcement mechanisms</span>
                             </div>
+                    <div class="session-agenda" id="agenda-clearing-the-air-on-sound" hidden><!-- Agenda for: Clearing the Air on Sound --></div>
+                    <div class="agenda-toggle-row"><button type="button" class="agenda-toggle" aria-expanded="false" aria-controls="agenda-clearing-the-air-on-sound">Agenda ↓</button></div>
                         </div>
 
                         <div class="session-card open-space">
@@ -379,6 +411,8 @@
                                 <span><strong>Working group:</strong> Site Design</span>
                                 <span><strong>You'll leave with:</strong> A set of site design principles and a decision process for 2027</span>
                             </div>
+                    <div class="session-agenda" id="agenda-designing-our-site-org-footprint-structu" hidden><!-- Agenda for: Designing Our Site: Org Footprint, Structures and Spaces --></div>
+                    <div class="agenda-toggle-row"><button type="button" class="agenda-toggle" aria-expanded="false" aria-controls="agenda-designing-our-site-org-footprint-structu">Agenda ↓</button></div>
                         </div>
 
                         <div class="session-card">
@@ -393,6 +427,8 @@
                                 <span><strong>Working group:</strong> MoE/MoN</span>
                                 <span><strong>You'll leave with:</strong> A governance model and budget outline for MoE/MoN in 2027</span>
                             </div>
+                    <div class="session-agenda" id="agenda-moe-mon-what-are-we-building" hidden><!-- Agenda for: MoE/MoN: What Are We Building? --></div>
+                    <div class="agenda-toggle-row"><button type="button" class="agenda-toggle" aria-expanded="false" aria-controls="agenda-moe-mon-what-are-we-building">Agenda ↓</button></div>
                         </div>
 
                         <div class="session-card open-space">
@@ -428,6 +464,8 @@
                         <span><strong>Working group:</strong> Organisational Structure</span>
                         <span><strong>You'll leave with:</strong> A clear, agreed scope for each role tier — what's in and what's out</span>
                     </div>
+                    <div class="session-agenda" id="agenda-how-we-re-structured-roles-responsibilit" hidden><!-- Agenda for: How We're Structured: Roles, Responsibilities &amp; Reporting --></div>
+                    <div class="agenda-toggle-row"><button type="button" class="agenda-toggle" aria-expanded="false" aria-controls="agenda-how-we-re-structured-roles-responsibilit">Agenda ↓</button></div>
                 </div>
 
                 <div class="session-card plenary">
@@ -444,6 +482,8 @@
                         <span><strong>Working group:</strong> Organisational Structure</span>
                         <span><strong>You'll leave with:</strong> Agreed selection and deselection processes, ready to document</span>
                     </div>
+                    <div class="session-agenda" id="agenda-getting-into-and-out-of-roles" hidden><!-- Agenda for: Getting Into and Out of Roles --></div>
+                    <div class="agenda-toggle-row"><button type="button" class="agenda-toggle" aria-expanded="false" aria-controls="agenda-getting-into-and-out-of-roles">Agenda ↓</button></div>
                 </div>
 
                 <div class="session-card">
@@ -461,6 +501,8 @@
                         <span><strong>Lead:</strong> Rory</span>
                         <span><strong>You'll leave with:</strong> A Werkhaus governance model and a budget proposal for 2027</span>
                     </div>
+                    <div class="session-agenda" id="agenda-werkhaus-from-volunteer-camp-to-org-infr" hidden><!-- Agenda for: Werkhaus: From Volunteer Camp to Org Infrastructure --></div>
+                    <div class="agenda-toggle-row"><button type="button" class="agenda-toggle" aria-expanded="false" aria-controls="agenda-werkhaus-from-volunteer-camp-to-org-infr">Agenda ↓</button></div>
                 </div>
 
             </div><!-- /saturday afternoon sessions -->
@@ -484,6 +526,8 @@
                         <span><strong>Leads:</strong> Pablo / Ward</span>
                         <span><strong>You'll leave with:</strong> A department-by-department cost map and a clear list of what still needs quoting</span>
                     </div>
+                    <div class="session-agenda" id="agenda-new-site-purchase-and-infrastructure" hidden><!-- Agenda for: New Site: Purchase and Infrastructure --></div>
+                    <div class="agenda-toggle-row"><button type="button" class="agenda-toggle" aria-expanded="false" aria-controls="agenda-new-site-purchase-and-infrastructure">Agenda ↓</button></div>
                 </div>
 
                 <div class="session-card plenary">
@@ -500,6 +544,8 @@
                         <span><strong>All working groups</strong></span>
                         <span><strong>You'll leave with:</strong> A shared record of decisions, owners, and next steps from the whole weekend</span>
                     </div>
+                    <div class="session-agenda" id="agenda-what-we-re-taking-home-outcome-pitches" hidden><!-- Agenda for: What We're Taking Home: Outcome Pitches --></div>
+                    <div class="agenda-toggle-row"><button type="button" class="agenda-toggle" aria-expanded="false" aria-controls="agenda-what-we-re-taking-home-outcome-pitches">Agenda ↓</button></div>
                 </div>
 
             </div><!-- /sunday sessions -->
@@ -513,5 +559,18 @@
     <script src="footer.js"></script>
     <script src="script.js"></script>
 
+    <script>
+    document.querySelectorAll('.agenda-toggle').forEach(function (btn) {
+        var panel = document.getElementById(btn.getAttribute('aria-controls'));
+        if (!panel || !panel.textContent.trim() && !panel.children.length) return;
+        btn.parentNode.classList.add('has-agenda');
+        btn.addEventListener('click', function () {
+            var open = panel.hidden;
+            panel.hidden = !open;
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            btn.textContent = open ? 'Close ↑' : 'Agenda ↓';
+        });
+    });
+    </script>
 </body>
 </html>
