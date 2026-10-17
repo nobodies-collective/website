@@ -289,11 +289,20 @@
             border-top-color: var(--navy);
             z-index: 101;
         }
-        .slot[data-tip]:hover::after, .slot[data-tip]:hover::before,
+        /* Phones keep :hover stuck on the last tapped box, so only real mice use hover */
+        @media (hover: hover) {
+            .slot[data-tip]:hover::after, .slot[data-tip]:hover::before {
+                opacity: 1;
+                visibility: visible;
+            }
+            .slot[data-tip]:hover { z-index: 50; }
+        }
         .slot[data-tip].tip-open::after, .slot[data-tip].tip-open::before {
             opacity: 1;
             visibility: visible;
         }
+        /* The open box sits above its neighbours, so their room names can't show through the bubble */
+        .slot[data-tip].tip-open { z-index: 50; }
         .slot.session[data-tip]:hover { border-color: var(--navy); }
         .slot.plenary[data-tip]:hover { background: var(--color-accent-hover); }
 
@@ -333,7 +342,7 @@
             .slot { font-size: 0.85rem; padding: 0.55rem 0.7rem; }
             .slot.empty { display: none; }
             .slot[data-room] { flex-direction: column; gap: 0.15rem; }
-            .slot[data-tip][data-room]::before { opacity: 1; visibility: visible; position: static; transform: none; border: 0; }
+            .slot[data-tip][data-room]::before { opacity: 1; visibility: visible; position: static; transform: none; border: 0; z-index: auto; }
             .slot[data-room]::before {
                 content: attr(data-room);
                 font-size: 0.66rem;
