@@ -251,7 +251,7 @@
         /* Session purpose bubble: hover on desktop, tap on phones */
         .slot[data-href] { cursor: pointer; }
         @media (hover: none) {
-            .slot[data-tip][data-href]::after { content: attr(data-tip) " · Tap again for the full session →"; }
+            .slot[data-tip][data-href]::after { content: attr(data-tip) "\A\A Tap again for the full session →"; }
         }
         .slot[data-tip] { position: relative; cursor: pointer; }
         .slot[data-tip]::after,
