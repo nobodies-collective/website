@@ -228,6 +228,13 @@
             border-left-color: var(--navy);
             border-radius: calc(var(--radius) - 2px);
         }
+        /* Open spaces look like the dashed boxes on What's On */
+        .session-card.open-space,
+        .parallel-inner .session-card.open-space {
+            background: transparent;
+            border: 1.5px dashed #b4bcce;
+        }
+        .session-card.open-space .session-title { color: var(--color-text-muted); }
 
         .back-link {
             display: inline-flex;
@@ -511,7 +518,7 @@
                                 <span class="session-time">60 min</span>
                         <span class="session-room">📍 Espai Polivalent</span>
                     </div>
-                            <div class="session-title">Asset Acquisition</div>
+                            <div class="session-title">Asset Acquisition Q&amp;A</div>
                             <p class="session-purpose">Open space to answer all the questions that came up after the intro presentation.</p>
                     </div>
 
