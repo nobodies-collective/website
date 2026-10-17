@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+
+    <title>Community Meeting - October 1, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .resource-links { background: var(--color-bg-secondary); padding: 1.25rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .resource-links h3 { margin: 0 0 0.75rem 0; font-size: 1rem; }
+        .resource-links ul { list-style: none; padding: 0; margin: 0; }
+        .resource-links li { margin-bottom: 0.5rem; }
+        .resource-links a { color: var(--color-accent); font-weight: 500; }
+        .resource-links a:hover { text-decoration: underline; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 2rem; border-radius: 8px; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px; }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .key-points { background: var(--color-bg-alt); border-left: 4px solid var(--color-accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 1.25rem 1.5rem 0.5rem; margin: 1.5rem 0 2rem; }
+        .key-points h2 { margin-top: 0; font-size: 1.25rem; }
+        .key-points li { margin-bottom: 0.65rem; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>Community Meeting</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Thursday 1 October 2026, 20:00 CEST (~40 min, video call)</span>
+                    </div>
+                </div>
+
+                <!-- ==================== ENGLISH ==================== -->
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+
+                    <div class="attendees">
+                        <strong>With Ellen K (host), Pablo V, Peter D, Cocci, Paul vK, and around 15 community members on the call and in the chat</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Full Records</h3>
+                        <ul>
+                            <li><a href="2026-10-01-community-transcript.html">Full transcript (English only)</a></li>
+                            <li><a href="2026-09-17-general-assembly.html">General Assembly of 17 September</a> &mdash; the 2027 event-dates vote &middot; <a href="../working-groups.html">Working groups</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>A small, short call, hosted by Ellen K. Three parts: a round of working-group updates &mdash; the organisational-structure survey, the Annual Leadership Meeting, a full report from the Sound Policy group and the latest on the new site; a finance update from Peter D, including the new 2027 Finance working group and the end-of-October deadline for art expense reports; and an open invitation to suggest the big questions the leads should take on at the ALM.</p>
+
+                        <div class="key-points">
+                            <h2>Key points &mdash; at a glance</h2>
+                            <ul>
+                                <li><strong>Working groups are the way in.</strong> Groups on Discord cover the ALM, the new site, a temple and closing ceremony, sound policy, Middle of Elsewhere improvements, and governance and organisational structure. Nobody needs to be an expert to join, or to get a stalled group moving by calling a meeting.</li>
+                                <li><strong>Organisational-structure survey:</strong> the group has sent out a survey on how roles should work, from what the board is for to what a department coordinator is responsible for. The results are meant to feed the discussions at the ALM. <strong>If you received it, please fill it in.</strong></li>
+                                <li><strong>ALM (15&ndash;19 October):</strong> information has gone out by email. Ideas for topics, questions and debates for the leads are welcome, for example how big the event should be, or whether it should be an offline community.</li>
+                                <li><strong>Sound policy:</strong> complaints came from all over the site, including music reaching the green zone, no policy at all for the RV area, generators running at all hours, and too little difference between yellow, orange and red zones. Ideas under discussion: clearer separation between zones, a recognisable sound role, consequences for camps and art cars that ignore the policy, and rules for build. Everyone is welcome, whether you love sound or hate it.</li>
+                                <li><strong>New site:</strong> permit requests are filed for all the possible dates, with an answer expected before the end of the year. One part of the land is secured; the owner of the other part has not yet been reachable, and the mayor has been asked to help arrange a visit. Options will be put forward once there is a price for both parts.</li>
+                                <li><strong>Finance:</strong> September expense reports are being approved and barrio-store deposit credits have been processed; payouts come next. Reimbursements are well ahead of schedule. <strong>Art project expense reports go to the Creativity team by the end of October</strong>, after which the year&rsquo;s accounts close.</li>
+                                <li><strong>2027 Finance working group:</strong> it will work out ticket prices, the low-income allocation, the art budget and budget &ldquo;levers&rdquo; tied to ticket sales. Sign-up is on Humans, the first meeting is after the ALM, and the budget goes to the association for a vote before the end of the year.</li>
+                                <li><strong>Buying land is an option, not a plan.</strong> It only happens if the price makes sense against what the event pays in rent today. Possible routes were outlined. Peter D&rsquo;s expectation is that any purchase would very likely go to the association for a vote.</li>
+                                <li><strong>2027 dates:</strong> 7&ndash;13 June 2027 is the week chosen by the asociado vote, still subject to INAGA.</li>
+                            </ul>
+                        </div>
+
+                        <h2>1. Working Groups</h2>
+                        <p>Ellen K opened with an overview of the working groups now running on Discord: the ALM; the new site; a <strong>temple and closing ceremony</strong>, following a suggestion to have one; <strong>sound policy</strong>; <strong>Middle of Elsewhere improvements</strong>, both technical and practical, after this year&rsquo;s tent did not work and a few volunteers built a Middle of Elsewhere out of scrap; and <strong>governance and organisational structure</strong>.</p>
+                        <p>Her main message: if you are on this call because you care about the community and want to do more, joining a working group is the way to do it. You do not need to be a specialist or to hold a role to take part. If a group has gone quiet, setting up a call and checking in with people is a contribution in itself. Every extra pair of hands takes some load off the people who work on the event all year round.</p>
+                        <p>An update was given on storage and equipment; no decisions were taken.</p>
+
+                        <h3>Governance and organisational structure</h3>
+                        <p>No one from the group was on the call, so Ellen passed on their message. They have sent out a <strong>survey on how the community wants to structure roles and the organisation</strong>, for example what the board&rsquo;s role should be and what a department coordinator is responsible for. The aim is transparency and clearer structure. The group hopes to use the results in discussions at the ALM in October. If you received the survey, please fill it in.</p>
+
+                        <h3>Annual Leadership Meeting</h3>
+                        <p>The ALM is the October meeting for people who have taken on a lead role. It is a debrief on what went well and what did not, and a chance to plan the big topics for the coming year. The ALM team&rsquo;s update came as a haiku (&ldquo;the ALM team organises the ALM, more info soon&rdquo;), and Ellen confirmed that an information email has since gone out: <strong>if you are coming, check your email.</strong> She asked everyone, including those not attending, to suggest questions and debates for the leads. She gave two examples raised before: whether the event should grow (a 9,000-person event or a 2,000-person one?), and whether it should be an offline community during the event.</p>
+
+                        <h3>Sound Policy (Cocci)</h3>
+                        <p>Cocci summarised the group&rsquo;s discussions so far and invited anyone interested to join, since sound affects a lot of people. The starting point is that <strong>complaints about sound came from everywhere on site</strong>:</p>
+                        <ul>
+                            <li>music is still clearly audible in the <strong>green zone</strong>;</li>
+                            <li>the <strong>RV area has no policy at all</strong>, which covers not only music but also <strong>engines and generators</strong> running to charge batteries at any time of day;</li>
+                            <li>the current policy makes <strong>too little difference between yellow, orange and red zones</strong>: music can play loud and late in the yellow zone, and people in the green zone who expect quiet from a certain hour do not get it.</li>
+                        </ul>
+                        <p>The policy needs rethinking so that it is clearer and the zones are better separated, and music does not reach the green and blue zones. Ideas being discussed:</p>
+                        <ul>
+                            <li><strong>Enforcement.</strong> Asking a camp to turn it down is an uncomfortable position for volunteer nomads, and nobody wants to stop a party. One idea is a dedicated <strong>sound role, perhaps with a recognisable costume</strong>, so people know who is coming to their camp and why.</li>
+                            <li><strong>Camps and art cars that ignore the policy.</strong> Art cars also drew many complaints. The only proposal so far, which Cocci would gladly see replaced by something better, is that a camp or art car that does not act on complaints would lose its <strong>red-zone placement</strong> or its <strong>art-car music rights</strong> the following year.</li>
+                            <li><strong>Build.</strong> One suggestion has been no music at all during build. Cocci would prefer a rule that music is fine as long as it does not drown out a conversation next to the speaker. For a party during build, the first step is to talk to your neighbours; where agreement cannot be reached, there need to be rules that everyone accepted before coming to the event.</li>
+                        </ul>
+                        <p>Ellen: whether you like to complain about noise or about the sound policy, this is the group to join.</p>
+
+                        <h3>New site (Pablo V)</h3>
+                        <p>Pablo V gave the update. <strong>Daniel T has requested permits for all the possible dates</strong>; the answer is expected before the end of the year, which will also show which dates could work for the new site. Of the two parts of the land, one is secured. The owner of the other part has not been reachable, so the group has asked the mayor to help. The next step is a visit, which a community member had arranged once before and will try to arrange again. Progress is slower than hoped: the visit was scheduled weeks ago, and meeting in person seems the only way forward.</p>
+                        <p>There are two possible paths: rent the land earlier for a trial and then decide whether it suits the main event, or <strong>rent it directly for the main event in June</strong>. Pablo&rsquo;s own preference is the second, with a possible purchase afterwards. Options will be put to the community once there is a price for both parts.</p>
+                        <p><strong>Paul vK</strong>, who plans to visit the land, asked how it feels to those who have been. Pablo has been three times, and Ward D knows it well. He loves it: wide and quite flat, surrounded by mountains, easy to reach but intimate, with a higher area that could overlook the whole event. The current site has the sunrise mountain but open fields beside it, so it feels more exposed. Pablo finds the new site different, better in some ways and worse in others, and he likes it better overall. He suggested asking several people, as everyone notices something different. Ellen suggested sharing pictures and impressions at a future call after the next visit.</p>
+
+                        <h2>2. Finance Update (Peter D)</h2>
+                        <ul>
+                            <li><strong>Payments.</strong> September expense reports are being approved, so the process is working. Deposit credits for barrio-store deposits have been processed. The next step is sending money out: barrio-store refunds and expense-report reimbursements.</li>
+                            <li><strong>Reporting.</strong> With Q3 closed, the accountant needs everything that happened: about <strong>5,000 transactions</strong> across tickets, expense reports and invoices. At least one expense report had 125 lines, each with a receipt, which is why automation has been key. Daniela pointed out that <strong>this year is ahead of schedule</strong>. Next year, payments should be possible in the month after the event.</li>
+                            <li><strong>2027 Finance working group.</strong> It is about to start. It will work out the 2027 finances: ticket price, the allocation for low-income and other special tickets, how much goes to Creativity for art, and more. The result is a <strong>budgetary guideline</strong> with levers: what can be done once ticket sales reach certain levels, with a small plan for each scenario. Sign-up will be on <strong>Humans</strong>, with a first meeting after the ALM. The aim is to present the plan to the association <strong>before the end of the year, for a vote</strong> as the official 2027 budget. Open questions such as whether there will be new land make this more complex. People who like numbers and spreadsheets are very welcome.</li>
+                        </ul>
+
+                        <h3>Could the land be bought, and how?</h3>
+                        <p>Paul vK asked how a purchase might be funded. <strong>Peter D</strong>: buying land is an option, not a given. If the right price does not come along, it does not happen, and the association will not take on a mortgage it cannot afford. Several structures are possible. Peter thinks the land would most likely be best held by a <strong>separate company (SL) in which the association holds an equity stake</strong>. Donations could then pass through the association, and community members could lend directly to the company. This matters because the association cannot get a conventional bank loan. People in the community have expressed interest at levels in line with what would be needed, though nothing is certain until the money arrives. The key test is whether the yearly cost of owning compares reasonably with the rent paid today; a much larger commitment might still be doable, but that is a question for the association. In Peter&rsquo;s view the association would very likely have to vote on any land decision, possibly at short notice once a deal is on the table.</p>
+                        <p><strong>Pablo V</strong> added that the group is looking at ways to pay over several years rather than through a bank loan, so that payments match the potential savings. All of this depends on knowing a price, and the group will share modelling once it has one.</p>
+
+                        <h3>Who does finance?</h3>
+                        <p>Asked from the chat how many people are on the finance team: essentially Peter D, with Daniela handling much of the expenses work. Peter said the bottleneck right now is less the finance work itself than building the tooling in Humans. Anyone helping today would need to learn the accounting, billing, Stripe and ticketing systems, Humans and AI-assisted development faster than he could teach them. Next year, <strong>each department with a budget will have a designated person for its finances</strong>, as this year&rsquo;s load was not sustainable. The 2027 Finance working group is a good place to start. Ellen: there is room for more people here as things develop. Paul vK suggested a <strong>funding team</strong> alongside the finance team, and Ellen liked the idea as a possible group.</p>
+
+                        <h3>Art project expense reports: end of October</h3>
+                        <p>Creativity is one of the largest and most discretionary parts of the budget. The aim is to give artists more, not less, with less paperwork. <strong>Art project expense reports must be filed with the Creativity team by the end of October</strong> (artists should already have heard from the Creativity team). After that the accounts close, because the final report for the year cannot be done while payments are still going out. Next year&rsquo;s deadline will likely be the end of September, since payments in October fall into a new VAT quarter.</p>
+
+                        <h2>3. Topics for the ALM</h2>
+                        <p>Ellen asked again for big questions the leads should discuss, whether or not you are coming to the ALM, on the call or on Discord. Paul vK raised, with a smile, the question of how the community would handle contact with extraterrestrials, and agreed to set up a Discord channel for it. Ellen recalled two lively debates from earlier in the year: whether the event should become a <strong>9,000-person event</strong>, and whether it should be an <strong>offline community</strong> during the event (phones or no phones, or simply more chances to leave your phone behind).</p>
+                        <p>Asked from the chat when Elsewhere 2027 will take place: Pablo V and Ellen confirmed that <strong>7&ndash;13 June 2027</strong> is the week chosen by the asociado vote, still subject to INAGA. With no further topics, the call ended early.</p>
+
+                        <h2>Decisions</h2>
+                        <ul>
+                            <li><strong>No decisions were taken on this call.</strong></li>
+                        </ul>
+
+                        <h2>Action Items</h2>
+                        <table class="action-table">
+                            <tr><th>Action</th><th>Owner</th></tr>
+                            <tr><td>Fill in the organisational-structure survey before the ALM</td><td>Everyone who received it</td></tr>
+                            <tr><td>Suggest topics, questions and debates for the ALM (on Discord, or to Ellen K)</td><td>Anyone</td></tr>
+                            <tr><td>Arrange the visit with the remaining landowner (the mayor has been asked to help); put options to the community once there is a price for both parts</td><td>New-site WG (Pablo V)</td></tr>
+                            <tr><td>Send out barrio-store refunds and approved expense-report reimbursements</td><td>Peter D</td></tr>
+                            <tr><td>Open sign-up for the 2027 Finance WG on Humans; first meeting after the ALM; budget to the association for a vote before the end of the year</td><td>Peter D; anyone interested</td></tr>
+                            <tr><td>File art project expense reports with the Creativity team by the end of October</td><td>Art project leads</td></tr>
+                            <tr><td>Join the Sound Policy WG on Discord to help shape the next policy</td><td>Anyone interested</td></tr>
+                        </table>
+
+                        <p><em>Minutes prepared from the full transcript.</em></p>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="es">
+
+                    <div class="attendees">
+                        <strong>Con Ellen K (anfitriona), Pablo V, Peter D, Cocci, Paul vK, y alrededor de 15 miembros de la comunidad en la llamada y en el chat</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Actas completas</h3>
+                        <ul>
+                            <li><a href="2026-10-01-community-transcript.html">Transcripci&oacute;n completa (solo en ingl&eacute;s)</a></li>
+                            <li><a href="2026-09-17-general-assembly.html">Asamblea General del 17 de septiembre</a> &mdash; la votaci&oacute;n de las fechas del evento de 2027 &middot; <a href="../working-groups.html">Grupos de trabajo</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Una llamada breve y reducida, dirigida por Ellen K. Tres partes: una ronda de actualizaciones de los grupos de trabajo &mdash; la encuesta sobre la estructura organizativa, la Reuni&oacute;n Anual de Liderazgo, un informe completo del grupo de Pol&iacute;tica de Sonido y las &uacute;ltimas novedades sobre el nuevo terreno; una actualizaci&oacute;n financiera de Peter D, incluido el nuevo grupo de trabajo de Finanzas 2027 y el plazo de finales de octubre para los informes de gastos de arte; y una invitaci&oacute;n abierta a sugerir las grandes preguntas que los responsables deber&iacute;an abordar en la ALM.</p>
+
+                        <div class="key-points">
+                            <h2>Puntos clave &mdash; de un vistazo</h2>
+                            <ul>
+                                <li><strong>Los grupos de trabajo son la puerta de entrada.</strong> Los grupos en Discord cubren la ALM, el nuevo terreno, un templo y ceremonia de clausura, la pol&iacute;tica de sonido, las mejoras del Middle of Elsewhere, y la gobernanza y la estructura organizativa. Nadie necesita ser un experto para unirse, ni para reactivar un grupo estancado convocando una reuni&oacute;n.</li>
+                                <li><strong>Encuesta sobre la estructura organizativa:</strong> el grupo ha enviado una encuesta sobre c&oacute;mo deber&iacute;an funcionar los roles, desde para qu&eacute; sirve la junta hasta de qu&eacute; es responsable un coordinador de departamento. Los resultados est&aacute;n pensados para alimentar los debates en la ALM. <strong>Si la recibiste, por favor compl&eacute;tala.</strong></li>
+                                <li><strong>ALM (15&ndash;19 de octubre):</strong> la informaci&oacute;n se ha enviado por correo electr&oacute;nico. Se agradecen ideas de temas, preguntas y debates para los responsables, por ejemplo qu&eacute; tama&ntilde;o deber&iacute;a tener el evento, o si deber&iacute;a ser una comunidad offline.</li>
+                                <li><strong>Pol&iacute;tica de sonido:</strong> llegaron quejas de todo el recinto, incluyendo m&uacute;sica que llega a la zona verde, ninguna pol&iacute;tica en absoluto para la zona de autocaravanas (RV), generadores funcionando a cualquier hora, y muy poca diferencia entre las zonas amarilla, naranja y roja. Ideas en discusi&oacute;n: una separaci&oacute;n m&aacute;s clara entre zonas, un rol de sonido reconocible, consecuencias para los campamentos y art cars que ignoren la pol&iacute;tica, y normas para el montaje. Todos son bienvenidos, tanto si te encanta el sonido como si lo odias.</li>
+                                <li><strong>Nuevo terreno:</strong> se han presentado solicitudes de permiso para todas las fechas posibles, con una respuesta esperada antes de fin de a&ntilde;o. Una de las dos partes del terreno est&aacute; asegurada; no se ha podido contactar con el propietario de la otra parte, y se ha pedido al alcalde que ayude a organizar una visita. Se presentar&aacute;n opciones en cuanto haya un precio para ambas partes.</li>
+                                <li><strong>Finanzas:</strong> se est&aacute;n aprobando los informes de gastos de septiembre y se han procesado los cr&eacute;ditos de dep&oacute;sito de las tiendas de barrio; los pagos vienen despu&eacute;s. Los reembolsos van bien adelantados respecto al calendario. <strong>Los informes de gastos de proyectos art&iacute;sticos van al equipo de Creatividad antes de fin de octubre</strong>, tras lo cual se cierran las cuentas del a&ntilde;o.</li>
+                                <li><strong>Grupo de trabajo de Finanzas 2027:</strong> definir&aacute; los precios de las entradas, la asignaci&oacute;n para ingresos bajos, el presupuesto de arte y las &ldquo;palancas&rdquo; presupuestarias vinculadas a la venta de entradas. La inscripci&oacute;n est&aacute; en Humans, la primera reuni&oacute;n es despu&eacute;s de la ALM, y el presupuesto se somete a votaci&oacute;n de la asociaci&oacute;n antes de fin de a&ntilde;o.</li>
+                                <li><strong>Comprar terreno es una opci&oacute;n, no un plan.</strong> Solo ocurrir&aacute; si el precio tiene sentido frente a lo que el evento paga hoy en alquiler. Se esbozaron posibles v&iacute;as. La expectativa de Peter D es que cualquier compra muy probablemente se sometería a votaci&oacute;n de la asociaci&oacute;n.</li>
+                                <li><strong>Fechas de 2027:</strong> del 7 al 13 de junio de 2027 es la semana elegida por la votaci&oacute;n de los asociados, todav&iacute;a sujeta a INAGA.</li>
+                            </ul>
+                        </div>
+
+                        <h2>1. Grupos de trabajo</h2>
+                        <p>Ellen K comenz&oacute; con un resumen de los grupos de trabajo que funcionan actualmente en Discord: la ALM; el nuevo terreno; un <strong>templo y ceremonia de clausura</strong>, tras una sugerencia de tener uno; <strong>pol&iacute;tica de sonido</strong>; <strong>mejoras del Middle of Elsewhere</strong>, tanto t&eacute;cnicas como pr&aacute;cticas, despu&eacute;s de que la tienda de este a&ntilde;o no funcionara y unos pocos voluntarios construyeran un Middle of Elsewhere con materiales de desecho; y <strong>gobernanza y estructura organizativa</strong>.</p>
+                        <p>Su mensaje principal: si est&aacute;s en esta llamada porque te importa la comunidad y quieres hacer m&aacute;s, unirte a un grupo de trabajo es la forma de hacerlo. No necesitas ser un especialista ni ocupar un rol para participar. Si un grupo se ha quedado en silencio, organizar una llamada y hacer un seguimiento con la gente ya es en s&iacute; mismo una contribuci&oacute;n. Cada par de manos adicional alivia algo de la carga de quienes trabajan en el evento durante todo el a&ntilde;o.</p>
+                        <p>Se dio una actualizaci&oacute;n sobre almacenamiento y equipamiento; no se tomaron decisiones.</p>
+
+                        <h3>Gobernanza y estructura organizativa</h3>
+                        <p>Nadie del grupo estaba en la llamada, as&iacute; que Ellen transmiti&oacute; su mensaje. Han enviado una <strong>encuesta sobre c&oacute;mo quiere la comunidad estructurar los roles y la organizaci&oacute;n</strong>, por ejemplo cu&aacute;l deber&iacute;a ser el papel de la junta y de qu&eacute; es responsable un coordinador de departamento. El objetivo es la transparencia y una estructura m&aacute;s clara. El grupo espera usar los resultados en los debates de la ALM en octubre. Si recibiste la encuesta, por favor compl&eacute;tala.</p>
+
+                        <h3>Reuni&oacute;n Anual de Liderazgo</h3>
+                        <p>La ALM es la reuni&oacute;n de octubre para las personas que han asumido un rol de liderazgo. Es un balance de lo que fue bien y lo que no, y una oportunidad para planificar los grandes temas del pr&oacute;ximo a&ntilde;o. La actualizaci&oacute;n del equipo de la ALM lleg&oacute; en forma de haiku (&ldquo;el equipo de la ALM organiza la ALM, m&aacute;s informaci&oacute;n pronto&rdquo;), y Ellen confirm&oacute; que desde entonces se ha enviado un correo informativo: <strong>si vas a asistir, revisa tu correo.</strong> Pidi&oacute; a todos, incluidos quienes no asisten, que sugirieran preguntas y debates para los responsables. Dio dos ejemplos planteados anteriormente: si el evento deber&iacute;a crecer (&iquest;un evento de 9.000 personas o uno de 2.000?), y si deber&iacute;a ser una comunidad offline durante el evento.</p>
+
+                        <h3>Pol&iacute;tica de sonido (Cocci)</h3>
+                        <p>Cocci resumi&oacute; los debates del grupo hasta el momento e invit&oacute; a cualquier interesado a unirse, ya que el sonido afecta a mucha gente. El punto de partida es que <strong>llegaron quejas sobre el sonido de todas partes del recinto</strong>:</p>
+                        <ul>
+                            <li>la m&uacute;sica todav&iacute;a se oye claramente en la <strong>zona verde</strong>;</li>
+                            <li>la <strong>zona de autocaravanas (RV) no tiene ninguna pol&iacute;tica</strong>, lo que cubre no solo la m&uacute;sica sino tambi&eacute;n <strong>motores y generadores</strong> funcionando para cargar bater&iacute;as a cualquier hora del d&iacute;a;</li>
+                            <li>la pol&iacute;tica actual hace <strong>muy poca diferencia entre las zonas amarilla, naranja y roja</strong>: la m&uacute;sica puede sonar fuerte y hasta tarde en la zona amarilla, y la gente en la zona verde que espera silencio a partir de cierta hora no lo consigue.</li>
+                        </ul>
+                        <p>La pol&iacute;tica necesita repensarse para que sea m&aacute;s clara y las zonas est&eacute;n mejor separadas, y para que la m&uacute;sica no llegue a las zonas verde y azul. Ideas en discusi&oacute;n:</p>
+                        <ul>
+                            <li><strong>Aplicaci&oacute;n.</strong> Pedir a un campamento que bajen el volumen es una posici&oacute;n inc&oacute;moda para los n&oacute;madas voluntarios, y nadie quiere parar una fiesta. Una idea es un <strong>rol de sonido dedicado, quiz&aacute;s con un disfraz reconocible</strong>, para que la gente sepa qui&eacute;n llega a su campamento y por qu&eacute;.</li>
+                            <li><strong>Campamentos y art cars que ignoran la pol&iacute;tica.</strong> Los art cars tambi&eacute;n recibieron muchas quejas. La &uacute;nica propuesta hasta ahora, que a Cocci le encantar&iacute;a ver sustituida por algo mejor, es que un campamento o art car que no act&uacute;e ante las quejas perder&iacute;a su <strong>ubicaci&oacute;n en zona roja</strong> o sus <strong>derechos de m&uacute;sica del art car</strong> al a&ntilde;o siguiente.</li>
+                            <li><strong>Montaje.</strong> Una sugerencia ha sido no poner m&uacute;sica en absoluto durante el montaje. Cocci preferir&iacute;a una norma seg&uacute;n la cual la m&uacute;sica est&aacute; bien siempre que no ahogue una conversaci&oacute;n junto al altavoz. Para una fiesta durante el montaje, el primer paso es hablar con los vecinos; cuando no se pueda llegar a un acuerdo, deben existir normas que todos hayan aceptado antes de venir al evento.</li>
+                        </ul>
+                        <p>Ellen: tanto si te gusta quejarte del ruido como de la pol&iacute;tica de sonido, este es el grupo al que unirse.</p>
+
+                        <h3>Nuevo terreno (Pablo V)</h3>
+                        <p>Pablo V dio la actualizaci&oacute;n. <strong>Daniel T ha solicitado permisos para todas las fechas posibles</strong>; se espera una respuesta antes de fin de a&ntilde;o, lo que tambi&eacute;n mostrar&aacute; qu&eacute; fechas podr&iacute;an funcionar para el nuevo terreno. De las dos partes del terreno, una est&aacute; asegurada. No se ha podido contactar con el propietario de la otra parte, as&iacute; que el grupo ha pedido ayuda al alcalde. El siguiente paso es una visita, que un miembro de la comunidad hab&iacute;a organizado una vez antes y que intentar&aacute; organizar de nuevo. El progreso es m&aacute;s lento de lo esperado: la visita se program&oacute; hace semanas, y reunirse en persona parece la &uacute;nica v&iacute;a posible.</p>
+                        <p>Hay dos caminos posibles: alquilar el terreno antes para una prueba y luego decidir si es adecuado para el evento principal, o <strong>alquilarlo directamente para el evento principal en junio</strong>. La preferencia personal de Pablo es la segunda, con una posible compra despu&eacute;s. Se presentar&aacute;n opciones a la comunidad en cuanto haya un precio para ambas partes.</p>
+                        <p><strong>Paul vK</strong>, que planea visitar el terreno, pregunt&oacute; c&oacute;mo se siente para quienes ya han estado. Pablo ha estado tres veces, y Ward D lo conoce bien. Le encanta: amplio y bastante llano, rodeado de monta&ntilde;as, f&aacute;cil de llegar pero &iacute;ntimo, con una zona m&aacute;s elevada que podr&iacute;a dominar visualmente todo el evento. El recinto actual tiene la monta&ntilde;a del amanecer pero campos abiertos junto a ella, por lo que resulta m&aacute;s expuesto. Pablo encuentra el nuevo terreno distinto, mejor en algunos aspectos y peor en otros, y en general le gusta m&aacute;s. Sugiri&oacute; preguntar a varias personas, ya que cada uno nota algo diferente. Ellen propuso compartir fotos e impresiones en una futura llamada despu&eacute;s de la pr&oacute;xima visita.</p>
+
+                        <h2>2. Actualizaci&oacute;n financiera (Peter D)</h2>
+                        <ul>
+                            <li><strong>Pagos.</strong> Se est&aacute;n aprobando los informes de gastos de septiembre, as&iacute; que el proceso funciona. Se han procesado los cr&eacute;ditos de dep&oacute;sito de las tiendas de barrio. El siguiente paso es enviar el dinero: reembolsos de las tiendas de barrio y reembolsos de informes de gastos.</li>
+                            <li><strong>Informes.</strong> Con el tercer trimestre cerrado, el contable necesita todo lo que ha ocurrido: unas <strong>5.000 transacciones</strong> entre entradas, informes de gastos y facturas. Al menos un informe de gastos ten&iacute;a 125 l&iacute;neas, cada una con su recibo, por lo que la automatizaci&oacute;n ha sido clave. Daniela se&ntilde;al&oacute; que <strong>este a&ntilde;o va adelantado respecto al calendario</strong>. El a&ntilde;o que viene, los pagos deber&iacute;an poder hacerse en el mes siguiente al evento.</li>
+                            <li><strong>Grupo de trabajo de Finanzas 2027.</strong> Est&aacute; a punto de comenzar. Definir&aacute; las finanzas de 2027: el precio de las entradas, la asignaci&oacute;n para entradas de ingresos bajos y otras entradas especiales, cu&aacute;nto va a Creatividad para arte, y m&aacute;s. El resultado es una <strong>directriz presupuestaria</strong> con palancas: qu&eacute; se puede hacer una vez que la venta de entradas alcance ciertos niveles, con un peque&ntilde;o plan para cada escenario. La inscripci&oacute;n estar&aacute; en <strong>Humans</strong>, con una primera reuni&oacute;n despu&eacute;s de la ALM. El objetivo es presentar el plan a la asociaci&oacute;n <strong>antes de fin de a&ntilde;o, para votaci&oacute;n</strong>, como el presupuesto oficial de 2027. Preguntas abiertas como si habr&aacute; nuevo terreno hacen esto m&aacute;s complejo. Las personas a las que les gustan los n&uacute;meros y las hojas de c&aacute;lculo son muy bienvenidas.</li>
+                        </ul>
+
+                        <h3>&iquest;Se podr&iacute;a comprar el terreno, y c&oacute;mo?</h3>
+                        <p>Paul vK pregunt&oacute; c&oacute;mo podr&iacute;a financiarse una compra. <strong>Peter D</strong>: comprar terreno es una opci&oacute;n, no algo seguro. Si no aparece el precio adecuado, no ocurre, y la asociaci&oacute;n no asumir&aacute; una hipoteca que no pueda permitirse. Son posibles varias estructuras. Peter piensa que lo m&aacute;s probable es que el terreno se mantenga mejor en una <strong>sociedad separada (SL) en la que la asociaci&oacute;n tenga una participaci&oacute;n</strong>. Las donaciones podr&iacute;an entonces pasar a trav&eacute;s de la asociaci&oacute;n, y los miembros de la comunidad podr&iacute;an prestar directamente a la sociedad. Esto importa porque la asociaci&oacute;n no puede obtener un pr&eacute;stamo bancario convencional. Personas de la comunidad han expresado inter&eacute;s a niveles acordes con lo que se necesitar&iacute;a, aunque nada es seguro hasta que el dinero llegue. La prueba clave es si el coste anual de la propiedad se compara razonablemente con el alquiler que se paga hoy; un compromiso mucho mayor todav&iacute;a podr&iacute;a ser viable, pero esa es una cuesti&oacute;n para la asociaci&oacute;n. En opini&oacute;n de Peter, la asociaci&oacute;n muy probablemente tendr&iacute;a que votar cualquier decisi&oacute;n sobre el terreno, posiblemente con poco margen de tiempo una vez que haya un acuerdo sobre la mesa.</p>
+                        <p><strong>Pablo V</strong> a&ntilde;adi&oacute; que el grupo est&aacute; estudiando formas de pagar a lo largo de varios a&ntilde;os en lugar de mediante un pr&eacute;stamo bancario, para que los pagos coincidan con el ahorro potencial. Todo esto depende de conocer un precio, y el grupo compartir&aacute; modelos en cuanto tenga uno.</p>
+
+                        <h3>&iquest;Qui&eacute;n se encarga de las finanzas?</h3>
+                        <p>Preguntado desde el chat cu&aacute;ntas personas hay en el equipo de finanzas: esencialmente Peter D, con Daniela encarg&aacute;ndose de gran parte del trabajo de gastos. Peter dijo que el cuello de botella ahora es menos el trabajo financiero en s&iacute; que construir las herramientas en Humans. Cualquiera que ayudara hoy necesitar&iacute;a aprender los sistemas de contabilidad, facturaci&oacute;n, Stripe y venta de entradas, Humans y el desarrollo asistido por IA m&aacute;s r&aacute;pido de lo que &eacute;l podr&iacute;a ense&ntilde;&aacute;rselo. El a&ntilde;o que viene, <strong>cada departamento con presupuesto tendr&aacute; una persona designada para sus finanzas</strong>, ya que la carga de este a&ntilde;o no ha sido sostenible. El grupo de trabajo de Finanzas 2027 es un buen lugar para empezar. Ellen: hay espacio para m&aacute;s gente aqu&iacute; a medida que las cosas avancen. Paul vK sugiri&oacute; un <strong>equipo de financiaci&oacute;n</strong> junto al equipo de finanzas, y a Ellen le gust&oacute; la idea como posible grupo.</p>
+
+                        <h3>Informes de gastos de proyectos art&iacute;sticos: fin de octubre</h3>
+                        <p>Creatividad es una de las partes m&aacute;s grandes y m&aacute;s discrecionales del presupuesto. El objetivo es dar a los artistas m&aacute;s, no menos, con menos papeleo. <strong>Los informes de gastos de proyectos art&iacute;sticos deben presentarse al equipo de Creatividad antes de fin de octubre</strong> (los artistas ya deber&iacute;an haber recibido noticias del equipo de Creatividad). Despu&eacute;s de eso se cierran las cuentas, porque el informe final del a&ntilde;o no se puede hacer mientras los pagos todav&iacute;a est&aacute;n saliendo. El plazo del a&ntilde;o que viene probablemente ser&aacute; a fin de septiembre, ya que los pagos en octubre caen en un nuevo trimestre de IVA.</p>
+
+                        <h2>3. Temas para la ALM</h2>
+                        <p>Ellen pidi&oacute; de nuevo grandes preguntas que los responsables deber&iacute;an debatir, tanto si vas a la ALM como si no, en la llamada o en Discord. Paul vK plante&oacute;, con una sonrisa, la cuesti&oacute;n de c&oacute;mo manejar&iacute;a la comunidad el contacto con extraterrestres, y se ofreci&oacute; a crear un canal de Discord para ello. Ellen record&oacute; dos debates animados de principios de a&ntilde;o: si el evento deber&iacute;a convertirse en un <strong>evento de 9.000 personas</strong>, y si deber&iacute;a ser una <strong>comunidad offline</strong> durante el evento (con o sin tel&eacute;fonos, o simplemente m&aacute;s ocasiones para dejar el tel&eacute;fono atr&aacute;s).</p>
+                        <p>Preguntado desde el chat cu&aacute;ndo tendr&aacute; lugar Elsewhere 2027: Pablo V y Ellen confirmaron que <strong>del 7 al 13 de junio de 2027</strong> es la semana elegida por la votaci&oacute;n de los asociados, todav&iacute;a sujeta a INAGA. Sin m&aacute;s temas, la llamada termin&oacute; antes de lo previsto.</p>
+
+                        <h2>Decisiones</h2>
+                        <ul>
+                            <li><strong>No se tomaron decisiones en esta llamada.</strong></li>
+                        </ul>
+
+                        <h2>Elementos de acci&oacute;n</h2>
+                        <table class="action-table">
+                            <tr><th>Acci&oacute;n</th><th>Responsable</th></tr>
+                            <tr><td>Completar la encuesta sobre la estructura organizativa antes de la ALM</td><td>Todos los que la recibieron</td></tr>
+                            <tr><td>Sugerir temas, preguntas y debates para la ALM (en Discord, o a Ellen K)</td><td>Cualquiera</td></tr>
+                            <tr><td>Organizar la visita con el propietario restante del terreno (se ha pedido ayuda al alcalde); presentar opciones a la comunidad en cuanto haya un precio para ambas partes</td><td>Grupo de trabajo de nuevo terreno (Pablo V)</td></tr>
+                            <tr><td>Enviar los reembolsos de las tiendas de barrio y los reembolsos de informes de gastos aprobados</td><td>Peter D</td></tr>
+                            <tr><td>Abrir la inscripci&oacute;n al grupo de trabajo de Finanzas 2027 en Humans; primera reuni&oacute;n despu&eacute;s de la ALM; presupuesto a votaci&oacute;n de la asociaci&oacute;n antes de fin de a&ntilde;o</td><td>Peter D; cualquier interesado</td></tr>
+                            <tr><td>Presentar los informes de gastos de proyectos art&iacute;sticos al equipo de Creatividad antes de fin de octubre</td><td>Responsables de proyectos art&iacute;sticos</td></tr>
+                            <tr><td>Unirse al grupo de trabajo de Pol&iacute;tica de Sonido en Discord para ayudar a definir la pr&oacute;xima pol&iacute;tica</td><td>Cualquier interesado</td></tr>
+                        </table>
+
+                        <p><em>Acta preparada a partir de la transcripci&oacute;n completa.</em></p>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaut.</div>
+
+                    <div class="attendees">
+                        <strong>Avec Ellen K (h&ocirc;te), Pablo V, Peter D, Cocci, Paul vK, et environ 15 membres de la communaut&eacute; sur l'appel et dans le chat</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Documents complets</h3>
+                        <ul>
+                            <li><a href="2026-10-01-community-transcript.html">Transcription compl&egrave;te (en anglais uniquement)</a></li>
+                            <li><a href="2026-09-17-general-assembly.html">Assembl&eacute;e g&eacute;n&eacute;rale du 17 septembre</a> &mdash; le vote des dates de l'&eacute;v&eacute;nement 2027 &middot; <a href="../working-groups.html">Groupes de travail</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Un appel court et restreint, anim&eacute; par Ellen K. Trois parties : un tour des mises &agrave; jour des groupes de travail &mdash; l'enqu&ecirc;te sur la structure organisationnelle, la R&eacute;union annuelle des responsables, un rapport complet du groupe Politique sonore et les derni&egrave;res nouvelles sur le nouveau terrain ; une mise &agrave; jour financi&egrave;re de Peter D, incluant le nouveau groupe de travail Finances 2027 et l'&eacute;ch&eacute;ance de fin octobre pour les notes de frais artistiques ; et une invitation ouverte &agrave; sugg&eacute;rer les grandes questions que les responsables devraient aborder lors de l'ALM.</p>
+
+                        <div class="key-points">
+                            <h2>Points cl&eacute;s &mdash; en un coup d'&oelig;il</h2>
+                            <ul>
+                                <li><strong>Les groupes de travail sont la porte d'entr&eacute;e.</strong> Les groupes sur Discord couvrent l'ALM, le nouveau terrain, un temple et une c&eacute;r&eacute;monie de cl&ocirc;ture, la politique sonore, les am&eacute;liorations du Middle of Elsewhere, et la gouvernance et la structure organisationnelle. Nul besoin d'&ecirc;tre expert pour rejoindre un groupe, ni pour relancer un groupe en panne en organisant une r&eacute;union.</li>
+                                <li><strong>Enqu&ecirc;te sur la structure organisationnelle :</strong> le groupe a envoy&eacute; une enqu&ecirc;te sur la fa&ccedil;on dont les r&ocirc;les devraient fonctionner, de l'utilit&eacute; du conseil d'administration &agrave; la responsabilit&eacute; d'un coordinateur de d&eacute;partement. Les r&eacute;sultats sont cens&eacute;s alimenter les discussions lors de l'ALM. <strong>Si vous l'avez re&ccedil;ue, merci de la remplir.</strong></li>
+                                <li><strong>ALM (15&ndash;19 octobre) :</strong> les informations ont &eacute;t&eacute; envoy&eacute;es par e-mail. Les id&eacute;es de sujets, questions et d&eacute;bats pour les responsables sont les bienvenues, par exemple quelle taille l'&eacute;v&eacute;nement devrait avoir, ou s'il devrait &ecirc;tre une communaut&eacute; hors ligne.</li>
+                                <li><strong>Politique sonore :</strong> des plaintes sont arriv&eacute;es de partout sur le site, notamment de la musique atteignant la zone verte, aucune politique du tout pour la zone des camping-cars, des g&eacute;n&eacute;rateurs fonctionnant &agrave; toute heure, et trop peu de diff&eacute;rence entre les zones jaune, orange et rouge. Id&eacute;es en discussion : une s&eacute;paration plus claire entre les zones, un r&ocirc;le sonore reconnaissable, des cons&eacute;quences pour les camps et art cars qui ignorent la politique, et des r&egrave;gles pour le montage. Tout le monde est bienvenu, que vous aimiez le son ou que vous le d&eacute;testiez.</li>
+                                <li><strong>Nouveau terrain :</strong> des demandes de permis ont &eacute;t&eacute; d&eacute;pos&eacute;es pour toutes les dates possibles, avec une r&eacute;ponse attendue avant la fin de l'ann&eacute;e. Une partie du terrain est s&eacute;curis&eacute;e ; le propri&eacute;taire de l'autre partie n'a pas encore pu &ecirc;tre contact&eacute;, et le maire a &eacute;t&eacute; sollicit&eacute; pour aider &agrave; organiser une visite. Des options seront propos&eacute;es d&egrave;s qu'un prix sera fix&eacute; pour les deux parties.</li>
+                                <li><strong>Finances :</strong> les notes de frais de septembre sont en cours d'approbation et les cr&eacute;dits de d&eacute;p&ocirc;t des boutiques de barrio ont &eacute;t&eacute; trait&eacute;s ; les versements viennent ensuite. Les remboursements sont bien en avance sur le calendrier. <strong>Les notes de frais des projets artistiques doivent parvenir &agrave; l'&eacute;quipe Cr&eacute;ativit&eacute; avant la fin octobre</strong>, apr&egrave;s quoi les comptes de l'ann&eacute;e se cl&ocirc;turent.</li>
+                                <li><strong>Groupe de travail Finances 2027 :</strong> il d&eacute;terminera les prix des billets, l'allocation pour les revenus modestes, le budget artistique et les &laquo; leviers &raquo; budg&eacute;taires li&eacute;s aux ventes de billets. L'inscription se fait sur Humans, la premi&egrave;re r&eacute;union aura lieu apr&egrave;s l'ALM, et le budget sera soumis au vote de l'association avant la fin de l'ann&eacute;e.</li>
+                                <li><strong>Acheter du terrain est une option, pas un plan.</strong> Cela ne se produira que si le prix est raisonnable par rapport &agrave; ce que l'&eacute;v&eacute;nement paie aujourd'hui en location. Des pistes possibles ont &eacute;t&eacute; esquiss&eacute;es. L'attente de Peter D est que tout achat serait tr&egrave;s probablement soumis au vote de l'association.</li>
+                                <li><strong>Dates 2027 :</strong> du 7 au 13 juin 2027 est la semaine choisie par le vote des asociados, encore soumise &agrave; l'INAGA.</li>
+                            </ul>
+                        </div>
+
+                        <h2>1. Groupes de travail</h2>
+                        <p>Ellen K a commenc&eacute; par un aper&ccedil;u des groupes de travail actifs sur Discord : l'ALM ; le nouveau terrain ; un <strong>temple et une c&eacute;r&eacute;monie de cl&ocirc;ture</strong>, suite &agrave; une suggestion d'en avoir un ; la <strong>politique sonore</strong> ; les <strong>am&eacute;liorations du Middle of Elsewhere</strong>, tant techniques que pratiques, apr&egrave;s que la tente de cette ann&eacute;e n'a pas fonctionn&eacute; et que quelques volontaires ont construit un Middle of Elsewhere &agrave; partir de mat&eacute;riaux de r&eacute;cup&eacute;ration ; et la <strong>gouvernance et la structure organisationnelle</strong>.</p>
+                        <p>Son message principal : si vous &ecirc;tes sur cet appel parce que vous tenez &agrave; la communaut&eacute; et voulez en faire plus, rejoindre un groupe de travail est la fa&ccedil;on de le faire. Vous n'avez pas besoin d'&ecirc;tre sp&eacute;cialiste ni d'occuper un r&ocirc;le pour participer. Si un groupe est devenu silencieux, organiser un appel et prendre des nouvelles des gens est en soi une contribution. Chaque paire de mains suppl&eacute;mentaire all&egrave;ge la charge de ceux qui travaillent sur l'&eacute;v&eacute;nement toute l'ann&eacute;e.</p>
+                        <p>Une mise &agrave; jour a &eacute;t&eacute; donn&eacute;e sur le stockage et l'&eacute;quipement ; aucune d&eacute;cision n'a &eacute;t&eacute; prise.</p>
+
+                        <h3>Gouvernance et structure organisationnelle</h3>
+                        <p>Personne du groupe n'&eacute;tait pr&eacute;sent sur l'appel, Ellen a donc transmis leur message. Ils ont envoy&eacute; une <strong>enqu&ecirc;te sur la fa&ccedil;on dont la communaut&eacute; souhaite structurer les r&ocirc;les et l'organisation</strong>, par exemple quel devrait &ecirc;tre le r&ocirc;le du conseil d'administration et de quoi un coordinateur de d&eacute;partement est responsable. L'objectif est la transparence et une structure plus claire. Le groupe esp&egrave;re utiliser les r&eacute;sultats dans les discussions de l'ALM en octobre. Si vous avez re&ccedil;u l'enqu&ecirc;te, merci de la remplir.</p>
+
+                        <h3>R&eacute;union annuelle des responsables</h3>
+                        <p>L'ALM est la r&eacute;union d'octobre pour les personnes qui ont assum&eacute; un r&ocirc;le de responsable. C'est un bilan de ce qui a bien fonctionn&eacute; et de ce qui n'a pas fonctionn&eacute;, et une occasion de planifier les grands sujets de l'ann&eacute;e &agrave; venir. La mise &agrave; jour de l'&eacute;quipe de l'ALM est arriv&eacute;e sous forme de ha&iuml;ku (&laquo; l'&eacute;quipe de l'ALM organise l'ALM, plus d'infos bient&ocirc;t &raquo;), et Ellen a confirm&eacute; qu'un e-mail d'information a depuis &eacute;t&eacute; envoy&eacute; : <strong>si vous venez, v&eacute;rifiez votre e-mail.</strong> Elle a demand&eacute; &agrave; tous, y compris ceux qui ne participent pas, de sugg&eacute;rer des questions et des d&eacute;bats pour les responsables. Elle a donn&eacute; deux exemples d&eacute;j&agrave; &eacute;voqu&eacute;s : si l'&eacute;v&eacute;nement devrait grandir (un &eacute;v&eacute;nement de 9 000 personnes ou de 2 000 ?), et s'il devrait &ecirc;tre une communaut&eacute; hors ligne pendant l'&eacute;v&eacute;nement.</p>
+
+                        <h3>Politique sonore (Cocci)</h3>
+                        <p>Cocci a r&eacute;sum&eacute; les discussions du groupe jusqu'&agrave; pr&eacute;sent et a invit&eacute; toute personne int&eacute;ress&eacute;e &agrave; rejoindre, le son concernant beaucoup de monde. Le point de d&eacute;part est que <strong>des plaintes sur le son sont arriv&eacute;es de partout sur le site</strong> :</p>
+                        <ul>
+                            <li>la musique est encore clairement audible dans la <strong>zone verte</strong> ;</li>
+                            <li>la <strong>zone des camping-cars n'a aucune politique du tout</strong>, ce qui couvre non seulement la musique mais aussi les <strong>moteurs et g&eacute;n&eacute;rateurs</strong> fonctionnant pour recharger des batteries &agrave; toute heure du jour ;</li>
+                            <li>la politique actuelle fait <strong>trop peu de diff&eacute;rence entre les zones jaune, orange et rouge</strong> : la musique peut jouer fort et tard dans la zone jaune, et les personnes dans la zone verte qui attendent du calme &agrave; partir d'une certaine heure ne l'obtiennent pas.</li>
+                        </ul>
+                        <p>La politique doit &ecirc;tre repens&eacute;e pour &ecirc;tre plus claire et pour que les zones soient mieux s&eacute;par&eacute;es, et pour que la musique n'atteigne pas les zones verte et bleue. Id&eacute;es en discussion :</p>
+                        <ul>
+                            <li><strong>Application.</strong> Demander &agrave; un camp de baisser le son est une position inconfortable pour des nomades volontaires, et personne ne veut arr&ecirc;ter une f&ecirc;te. Une id&eacute;e est un <strong>r&ocirc;le sonore d&eacute;di&eacute;, peut-&ecirc;tre avec un costume reconnaissable</strong>, pour que les gens sachent qui vient &agrave; leur camp et pourquoi.</li>
+                            <li><strong>Camps et art cars qui ignorent la politique.</strong> Les art cars ont aussi suscit&eacute; de nombreuses plaintes. La seule proposition &agrave; ce jour, que Cocci verrait volontiers remplac&eacute;e par quelque chose de mieux, est qu'un camp ou un art car qui ne r&eacute;agit pas aux plaintes perdrait son <strong>emplacement en zone rouge</strong> ou ses <strong>droits de musique pour l'art car</strong> l'ann&eacute;e suivante.</li>
+                            <li><strong>Montage.</strong> Une suggestion a &eacute;t&eacute; de ne pas avoir de musique du tout pendant le montage. Cocci pr&eacute;f&eacute;rerait une r&egrave;gle selon laquelle la musique est acceptable tant qu'elle n'&eacute;touffe pas une conversation pr&egrave;s de l'enceinte. Pour une f&ecirc;te pendant le montage, la premi&egrave;re &eacute;tape est de parler &agrave; ses voisins ; lorsqu'un accord ne peut &ecirc;tre trouv&eacute;, il doit exister des r&egrave;gles accept&eacute;es par tous avant de venir &agrave; l'&eacute;v&eacute;nement.</li>
+                        </ul>
+                        <p>Ellen : que vous aimiez vous plaindre du bruit ou de la politique sonore, c'est le groupe &agrave; rejoindre.</p>
+
+                        <h3>Nouveau terrain (Pablo V)</h3>
+                        <p>Pablo V a donn&eacute; la mise &agrave; jour. <strong>Daniel T a demand&eacute; des permis pour toutes les dates possibles</strong> ; la r&eacute;ponse est attendue avant la fin de l'ann&eacute;e, ce qui montrera aussi quelles dates pourraient convenir pour le nouveau terrain. Sur les deux parties du terrain, une est s&eacute;curis&eacute;e. Le propri&eacute;taire de l'autre partie n'a pas pu &ecirc;tre contact&eacute;, le groupe a donc demand&eacute; l'aide du maire. La prochaine &eacute;tape est une visite, qu'un membre de la communaut&eacute; avait d&eacute;j&agrave; organis&eacute;e une fois et essaiera d'organiser &agrave; nouveau. Les progr&egrave;s sont plus lents qu'esp&eacute;r&eacute; : la visite a &eacute;t&eacute; programm&eacute;e il y a des semaines, et se rencontrer en personne semble la seule voie possible.</p>
+                        <p>Il existe deux voies possibles : louer le terrain plus t&ocirc;t pour un essai puis d&eacute;cider s'il convient &agrave; l'&eacute;v&eacute;nement principal, ou <strong>le louer directement pour l'&eacute;v&eacute;nement principal en juin</strong>. La pr&eacute;f&eacute;rence personnelle de Pablo va &agrave; la seconde option, avec un &eacute;ventuel achat par la suite. Des options seront propos&eacute;es &agrave; la communaut&eacute; d&egrave;s qu'un prix sera fix&eacute; pour les deux parties.</p>
+                        <p><strong>Paul vK</strong>, qui pr&eacute;voit de visiter le terrain, a demand&eacute; ce qu'en pensent ceux qui y sont d&eacute;j&agrave; all&eacute;s. Pablo y est all&eacute; trois fois, et Ward D le conna&icirc;t bien. Il l'adore : vaste et assez plat, entour&eacute; de montagnes, facile d'acc&egrave;s mais intime, avec une zone plus &eacute;lev&eacute;e qui pourrait surplomber tout l'&eacute;v&eacute;nement. Le site actuel a la montagne du lever du soleil mais des champs ouverts &agrave; c&ocirc;t&eacute;, ce qui le rend plus expos&eacute;. Pablo trouve le nouveau terrain diff&eacute;rent, meilleur &agrave; certains &eacute;gards et moins bon &agrave; d'autres, et dans l'ensemble il le pr&eacute;f&egrave;re. Il a sugg&eacute;r&eacute; de demander &agrave; plusieurs personnes, chacun remarquant quelque chose de diff&eacute;rent. Ellen a propos&eacute; de partager des photos et des impressions lors d'un futur appel apr&egrave;s la prochaine visite.</p>
+
+                        <h2>2. Mise &agrave; jour financi&egrave;re (Peter D)</h2>
+                        <ul>
+                            <li><strong>Paiements.</strong> Les notes de frais de septembre sont en cours d'approbation, donc le processus fonctionne. Les cr&eacute;dits de d&eacute;p&ocirc;t des boutiques de barrio ont &eacute;t&eacute; trait&eacute;s. La prochaine &eacute;tape est l'envoi des fonds : remboursements des boutiques de barrio et remboursements de notes de frais.</li>
+                            <li><strong>Rapports.</strong> Le T3 &eacute;tant clos, le comptable a besoin de tout ce qui s'est pass&eacute; : environ <strong>5 000 transactions</strong> entre billets, notes de frais et factures. Au moins une note de frais comptait 125 lignes, chacune avec un re&ccedil;u, ce qui explique pourquoi l'automatisation a &eacute;t&eacute; essentielle. Daniela a soulign&eacute; que <strong>cette ann&eacute;e est en avance sur le calendrier</strong>. L'ann&eacute;e prochaine, les paiements devraient &ecirc;tre possibles dans le mois suivant l'&eacute;v&eacute;nement.</li>
+                            <li><strong>Groupe de travail Finances 2027.</strong> Il est sur le point de d&eacute;marrer. Il d&eacute;terminera les finances de 2027 : le prix des billets, l'allocation pour les billets &agrave; revenus modestes et autres billets sp&eacute;ciaux, la part allant &agrave; Cr&eacute;ativit&eacute; pour l'art, et plus encore. Le r&eacute;sultat est une <strong>ligne directrice budg&eacute;taire</strong> avec des leviers : ce qui peut &ecirc;tre fait une fois que les ventes de billets atteignent certains niveaux, avec un petit plan pour chaque sc&eacute;nario. L'inscription se fera sur <strong>Humans</strong>, avec une premi&egrave;re r&eacute;union apr&egrave;s l'ALM. L'objectif est de pr&eacute;senter le plan &agrave; l'association <strong>avant la fin de l'ann&eacute;e, pour un vote</strong>, comme budget officiel 2027. Des questions ouvertes telles que l'existence &eacute;ventuelle d'un nouveau terrain compliquent les choses. Les personnes qui aiment les chiffres et les tableurs sont tr&egrave;s bienvenues.</li>
+                        </ul>
+
+                        <h3>Le terrain pourrait-il &ecirc;tre achet&eacute;, et comment ?</h3>
+                        <p>Paul vK a demand&eacute; comment un achat pourrait &ecirc;tre financ&eacute;. <strong>Peter D</strong> : acheter du terrain est une option, pas une certitude. Si le bon prix ne se pr&eacute;sente pas, cela n'aura pas lieu, et l'association ne prendra pas d'hypoth&egrave;que qu'elle ne pourrait pas assumer. Plusieurs structures sont possibles. Peter pense que le terrain serait tr&egrave;s probablement mieux d&eacute;tenu par une <strong>soci&eacute;t&eacute; distincte (SL) dont l'association d&eacute;tiendrait une participation</strong>. Les dons pourraient alors passer par l'association, et les membres de la communaut&eacute; pourraient pr&ecirc;ter directement &agrave; la soci&eacute;t&eacute;. Cela compte parce que l'association ne peut pas obtenir de pr&ecirc;t bancaire classique. Des personnes de la communaut&eacute; ont exprim&eacute; un int&eacute;r&ecirc;t &agrave; des niveaux correspondant &agrave; ce qui serait n&eacute;cessaire, bien que rien ne soit certain avant que l'argent n'arrive. Le test cl&eacute; est de savoir si le co&ucirc;t annuel de la propri&eacute;t&eacute; se compare raisonnablement au loyer pay&eacute; aujourd'hui ; un engagement bien plus important pourrait encore &ecirc;tre envisageable, mais c'est une question pour l'association. Selon Peter, l'association devrait tr&egrave;s probablement voter sur toute d&eacute;cision concernant le terrain, peut-&ecirc;tre dans un d&eacute;lai court une fois un accord sur la table.</p>
+                        <p><strong>Pablo V</strong> a ajout&eacute; que le groupe &eacute;tudie des fa&ccedil;ons de payer sur plusieurs ann&eacute;es plut&ocirc;t que par un pr&ecirc;t bancaire, afin que les paiements correspondent aux &eacute;conomies potentielles. Tout cela d&eacute;pend de conna&icirc;tre un prix, et le groupe partagera des mod&eacute;lisations d&egrave;s qu'il en aura un.</p>
+
+                        <h3>Qui s'occupe des finances ?</h3>
+                        <p>Interrog&eacute; depuis le chat sur le nombre de personnes dans l'&eacute;quipe finance : essentiellement Peter D, Daniela s'occupant d'une grande partie du travail sur les notes de frais. Peter a dit que le goulot d'&eacute;tranglement actuel est moins le travail financier en lui-m&ecirc;me que la construction des outils dans Humans. Toute personne aidant aujourd'hui devrait apprendre les syst&egrave;mes de comptabilit&eacute;, de facturation, Stripe et de billetterie, Humans et le d&eacute;veloppement assist&eacute; par IA plus vite qu'il ne pourrait le lui enseigner. L'ann&eacute;e prochaine, <strong>chaque d&eacute;partement disposant d'un budget aura une personne d&eacute;sign&eacute;e pour ses finances</strong>, la charge de cette ann&eacute;e n'ayant pas &eacute;t&eacute; soutenable. Le groupe de travail Finances 2027 est un bon point de d&eacute;part. Ellen : il y a de la place pour davantage de personnes ici &agrave; mesure que les choses &eacute;voluent. Paul vK a sugg&eacute;r&eacute; une <strong>&eacute;quipe de financement</strong> aux c&ocirc;t&eacute;s de l'&eacute;quipe finance, et Ellen a aim&eacute; l'id&eacute;e comme groupe possible.</p>
+
+                        <h3>Notes de frais des projets artistiques : fin octobre</h3>
+                        <p>Cr&eacute;ativit&eacute; est l'un des postes les plus importants et les plus discr&eacute;tionnaires du budget. L'objectif est de donner plus aux artistes, pas moins, avec moins de paperasse. <strong>Les notes de frais des projets artistiques doivent &ecirc;tre d&eacute;pos&eacute;es auprès de l'&eacute;quipe Cr&eacute;ativit&eacute; avant la fin octobre</strong> (les artistes devraient d&eacute;j&agrave; avoir re&ccedil;u des nouvelles de l'&eacute;quipe Cr&eacute;ativit&eacute;). Apr&egrave;s cela, les comptes se cl&ocirc;turent, car le rapport final de l'ann&eacute;e ne peut pas &ecirc;tre fait tant que des paiements sont encore en cours. L'&eacute;ch&eacute;ance de l'ann&eacute;e prochaine sera probablement fin septembre, car les paiements d'octobre tombent dans un nouveau trimestre de TVA.</p>
+
+                        <h2>3. Sujets pour l'ALM</h2>
+                        <p>Ellen a de nouveau demand&eacute; les grandes questions que les responsables devraient aborder, que vous veniez ou non &agrave; l'ALM, lors de l'appel ou sur Discord. Paul vK a soulev&eacute;, avec un sourire, la question de savoir comment la communaut&eacute; g&eacute;rerait un contact avec des extraterrestres, et a accept&eacute; de cr&eacute;er un canal Discord pour cela. Ellen s'est souvenue de deux d&eacute;bats anim&eacute;s plus t&ocirc;t dans l'ann&eacute;e : si l'&eacute;v&eacute;nement devrait devenir un <strong>&eacute;v&eacute;nement de 9 000 personnes</strong>, et s'il devrait &ecirc;tre une <strong>communaut&eacute; hors ligne</strong> pendant l'&eacute;v&eacute;nement (t&eacute;l&eacute;phones ou pas de t&eacute;l&eacute;phones, ou simplement plus d'occasions de laisser son t&eacute;l&eacute;phone derri&egrave;re soi).</p>
+                        <p>Interrog&eacute; depuis le chat sur la date d'Elsewhere 2027 : Pablo V et Ellen ont confirm&eacute; que la semaine du <strong>7 au 13 juin 2027</strong> est celle choisie par le vote des asociados, encore soumise &agrave; l'INAGA. En l'absence d'autres sujets, l'appel s'est termin&eacute; plus t&ocirc;t que pr&eacute;vu.</p>
+
+                        <h2>D&eacute;cisions</h2>
+                        <ul>
+                            <li><strong>Aucune d&eacute;cision n'a &eacute;t&eacute; prise lors de cet appel.</strong></li>
+                        </ul>
+
+                        <h2>Actions &agrave; mener</h2>
+                        <table class="action-table">
+                            <tr><th>Action</th><th>Responsable</th></tr>
+                            <tr><td>Remplir l'enqu&ecirc;te sur la structure organisationnelle avant l'ALM</td><td>Toute personne l'ayant re&ccedil;ue</td></tr>
+                            <tr><td>Sugg&eacute;rer des sujets, questions et d&eacute;bats pour l'ALM (sur Discord, ou &agrave; Ellen K)</td><td>Tout le monde</td></tr>
+                            <tr><td>Organiser la visite avec le propri&eacute;taire restant (le maire a &eacute;t&eacute; sollicit&eacute; pour aider) ; proposer des options &agrave; la communaut&eacute; d&egrave;s qu'un prix sera fix&eacute; pour les deux parties</td><td>Groupe de travail Nouveau terrain (Pablo V)</td></tr>
+                            <tr><td>Envoyer les remboursements des boutiques de barrio et les remboursements de notes de frais approuv&eacute;es</td><td>Peter D</td></tr>
+                            <tr><td>Ouvrir l'inscription au groupe de travail Finances 2027 sur Humans ; premi&egrave;re r&eacute;union apr&egrave;s l'ALM ; budget soumis au vote de l'association avant la fin de l'ann&eacute;e</td><td>Peter D ; toute personne int&eacute;ress&eacute;e</td></tr>
+                            <tr><td>D&eacute;poser les notes de frais des projets artistiques auprès de l'&eacute;quipe Cr&eacute;ativit&eacute; avant la fin octobre</td><td>Responsables de projets artistiques</td></tr>
+                            <tr><td>Rejoindre le groupe de travail Politique sonore sur Discord pour aider &agrave; fa&ccedil;onner la prochaine politique</td><td>Toute personne int&eacute;ress&eacute;e</td></tr>
+                        </table>
+
+                        <p><em>Proc&egrave;s-verbal pr&eacute;par&eacute; &agrave; partir de la transcription compl&egrave;te.</em></p>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanze tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Con Ellen K (conduttrice), Pablo V, Peter D, Cocci, Paul vK, e circa 15 membri della comunit&agrave; in chiamata e in chat</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Documenti completi</h3>
+                        <ul>
+                            <li><a href="2026-10-01-community-transcript.html">Trascrizione completa (solo in inglese)</a></li>
+                            <li><a href="2026-09-17-general-assembly.html">Assemblea Generale del 17 settembre</a> &mdash; il voto sulle date dell'evento 2027 &middot; <a href="../working-groups.html">Gruppi di lavoro</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Una chiamata breve e ridotta, condotta da Ellen K. Tre parti: un giro di aggiornamenti dei gruppi di lavoro &mdash; il sondaggio sulla struttura organizzativa, l'Annual Leadership Meeting, un resoconto completo del gruppo Politica del suono e le ultime novit&agrave; sul nuovo terreno; un aggiornamento finanziario da Peter D, incluso il nuovo gruppo di lavoro Finanze 2027 e la scadenza di fine ottobre per le note spese artistiche; e un invito aperto a suggerire le grandi domande che i responsabili dovrebbero affrontare all'ALM.</p>
+
+                        <div class="key-points">
+                            <h2>Punti chiave &mdash; in breve</h2>
+                            <ul>
+                                <li><strong>I gruppi di lavoro sono la porta d'ingresso.</strong> I gruppi su Discord coprono l'ALM, il nuovo terreno, un tempio e una cerimonia di chiusura, la politica del suono, i miglioramenti del Middle of Elsewhere, e la governance e la struttura organizzativa. Nessuno deve essere un esperto per partecipare, n&eacute; per far ripartire un gruppo fermo convocando una riunione.</li>
+                                <li><strong>Sondaggio sulla struttura organizzativa:</strong> il gruppo ha inviato un sondaggio su come dovrebbero funzionare i ruoli, da a cosa serve il board a di cosa &egrave; responsabile un coordinatore di dipartimento. I risultati dovrebbero alimentare le discussioni all'ALM. <strong>Se lo avete ricevuto, compilatelo.</strong></li>
+                                <li><strong>ALM (15&ndash;19 ottobre):</strong> le informazioni sono state inviate via email. Sono ben accette idee su temi, domande e dibattiti per i responsabili, ad esempio quanto grande dovrebbe essere l'evento, o se dovrebbe essere una comunit&agrave; offline.</li>
+                                <li><strong>Politica del suono:</strong> sono arrivate lamentele da tutto il sito, tra cui musica che arriva nella zona verde, nessuna politica per l'area camper (RV), generatori in funzione a qualsiasi ora, e troppo poca differenza tra le zone gialla, arancione e rossa. Idee in discussione: una separazione pi&ugrave; netta tra le zone, un ruolo dedicato al suono riconoscibile, conseguenze per campi e art car che ignorano la politica, e regole per il montaggio. Tutti sono benvenuti, sia che amiate il suono sia che lo detestiate.</li>
+                                <li><strong>Nuovo terreno:</strong> sono state presentate richieste di permesso per tutte le date possibili, con una risposta attesa entro fine anno. Una delle due parti del terreno &egrave; assicurata; non &egrave; stato ancora possibile contattare il proprietario dell'altra parte, e al sindaco &egrave; stato chiesto di aiutare a organizzare una visita. Le opzioni saranno proposte non appena ci sar&agrave; un prezzo per entrambe le parti.</li>
+                                <li><strong>Finanze:</strong> le note spese di settembre sono in fase di approvazione e i crediti di deposito dei negozi di barrio sono stati elaborati; i pagamenti arriveranno dopo. I rimborsi sono ben in anticipo sulla tabella di marcia. <strong>Le note spese dei progetti artistici vanno al team Creativit&agrave; entro fine ottobre</strong>, dopo di che si chiudono i conti dell'anno.</li>
+                                <li><strong>Gruppo di lavoro Finanze 2027:</strong> definir&agrave; i prezzi dei biglietti, l'allocazione per i redditi bassi, il budget artistico e le &laquo;leve&raquo; di budget legate alla vendita dei biglietti. L'iscrizione &egrave; su Humans, la prima riunione &egrave; dopo l'ALM, e il budget sar&agrave; sottoposto al voto dell'associazione prima della fine dell'anno.</li>
+                                <li><strong>Comprare terreno &egrave; un'opzione, non un piano.</strong> Accadr&agrave; solo se il prezzo ha senso rispetto a ci&ograve; che l'evento paga oggi in affitto. Sono state tracciate possibili strade. L'aspettativa di Peter D &egrave; che qualsiasi acquisto molto probabilmente andrebbe al voto dell'associazione.</li>
+                                <li><strong>Date 2027:</strong> dal 7 al 13 giugno 2027 &egrave; la settimana scelta dal voto degli asociados, ancora soggetta a INAGA.</li>
+                            </ul>
+                        </div>
+
+                        <h2>1. Gruppi di lavoro</h2>
+                        <p>Ellen K ha aperto con una panoramica dei gruppi di lavoro attualmente attivi su Discord: l'ALM; il nuovo terreno; un <strong>tempio e cerimonia di chiusura</strong>, in seguito a un suggerimento di averne uno; la <strong>politica del suono</strong>; i <strong>miglioramenti del Middle of Elsewhere</strong>, sia tecnici che pratici, dopo che la tenda di quest'anno non ha funzionato e alcuni volontari hanno costruito un Middle of Elsewhere con materiali di recupero; e la <strong>governance e struttura organizzativa</strong>.</p>
+                        <p>Il suo messaggio principale: se siete in questa chiamata perch&eacute; vi importa della comunit&agrave; e volete fare di pi&ugrave;, unirsi a un gruppo di lavoro &egrave; il modo per farlo. Non &egrave; necessario essere uno specialista o avere un ruolo per partecipare. Se un gruppo &egrave; rimasto silenzioso, organizzare una chiamata e fare il punto con le persone &egrave; gi&agrave; di per s&eacute; un contributo. Ogni paio di mani in pi&ugrave; alleggerisce il carico di chi lavora all'evento tutto l'anno.</p>
+                        <p>&Egrave; stato fornito un aggiornamento su stoccaggio e attrezzature; non sono state prese decisioni.</p>
+
+                        <h3>Governance e struttura organizzativa</h3>
+                        <p>Nessuno del gruppo era presente alla chiamata, quindi Ellen ha trasmesso il loro messaggio. Hanno inviato un <strong>sondaggio su come la comunit&agrave; vuole strutturare i ruoli e l'organizzazione</strong>, ad esempio quale dovrebbe essere il ruolo del board e di cosa &egrave; responsabile un coordinatore di dipartimento. L'obiettivo &egrave; la trasparenza e una struttura pi&ugrave; chiara. Il gruppo spera di usare i risultati nelle discussioni all'ALM di ottobre. Se avete ricevuto il sondaggio, compilatelo.</p>
+
+                        <h3>Annual Leadership Meeting</h3>
+                        <p>L'ALM &egrave; la riunione di ottobre per le persone che hanno assunto un ruolo di responsabile. &Egrave; un bilancio di ci&ograve; che ha funzionato e ci&ograve; che non ha funzionato, e un'occasione per pianificare i grandi temi dell'anno a venire. L'aggiornamento del team ALM &egrave; arrivato sotto forma di haiku (&laquo;il team dell'ALM organizza l'ALM, pi&ugrave; informazioni a breve&raquo;), ed Ellen ha confermato che da allora &egrave; stata inviata un'email informativa: <strong>se parteciperete, controllate la vostra email.</strong> Ha chiesto a tutti, compresi quelli che non partecipano, di suggerire domande e dibattiti per i responsabili. Ha dato due esempi gi&agrave; discussi: se l'evento dovrebbe crescere (un evento da 9.000 persone o da 2.000?), e se dovrebbe essere una comunit&agrave; offline durante l'evento.</p>
+
+                        <h3>Politica del suono (Cocci)</h3>
+                        <p>Cocci ha riassunto le discussioni del gruppo fino ad ora e ha invitato chiunque fosse interessato a partecipare, poich&eacute; il suono riguarda molte persone. Il punto di partenza &egrave; che <strong>sono arrivate lamentele sul suono da tutte le parti del sito</strong>:</p>
+                        <ul>
+                            <li>la musica &egrave; ancora chiaramente udibile nella <strong>zona verde</strong>;</li>
+                            <li>l'<strong>area camper (RV) non ha alcuna politica</strong>, il che riguarda non solo la musica ma anche <strong>motori e generatori</strong> in funzione per caricare le batterie a qualsiasi ora del giorno;</li>
+                            <li>la politica attuale fa <strong>troppo poca differenza tra le zone gialla, arancione e rossa</strong>: la musica pu&ograve; suonare forte e fino a tardi nella zona gialla, e le persone nella zona verde che si aspettano silenzio da una certa ora non lo ottengono.</li>
+                        </ul>
+                        <p>La politica deve essere riconsiderata affinch&eacute; sia pi&ugrave; chiara e le zone siano meglio separate, e la musica non raggiunga le zone verde e blu. Idee in discussione:</p>
+                        <ul>
+                            <li><strong>Applicazione.</strong> Chiedere a un campo di abbassare il volume &egrave; una posizione scomoda per i nomadi volontari, e nessuno vuole fermare una festa. Un'idea &egrave; un <strong>ruolo dedicato al suono, forse con un costume riconoscibile</strong>, cos&igrave; le persone sanno chi arriva al loro campo e perch&eacute;.</li>
+                            <li><strong>Campi e art car che ignorano la politica.</strong> Anche le art car hanno attirato molte lamentele. L'unica proposta finora, che Cocci vedrebbe volentieri sostituita da qualcosa di meglio, &egrave; che un campo o un'art car che non agisce sulle lamentele perderebbe la propria <strong>collocazione in zona rossa</strong> o i propri <strong>diritti musicali per l'art car</strong> l'anno successivo.</li>
+                            <li><strong>Montaggio.</strong> Un suggerimento &egrave; stato di non avere musica durante il montaggio. Cocci preferirebbe una regola secondo cui la musica va bene purch&eacute; non soffochi una conversazione vicino alla cassa. Per una festa durante il montaggio, il primo passo &egrave; parlare con i vicini; dove non si riesce a raggiungere un accordo, devono esserci regole che tutti hanno accettato prima di venire all'evento.</li>
+                        </ul>
+                        <p>Ellen: sia che vi piaccia lamentarvi del rumore sia della politica del suono, questo &egrave; il gruppo da unire.</p>
+
+                        <h3>Nuovo terreno (Pablo V)</h3>
+                        <p>Pablo V ha fornito l'aggiornamento. <strong>Daniel T ha richiesto i permessi per tutte le date possibili</strong>; la risposta &egrave; attesa entro fine anno, il che mostrer&agrave; anche quali date potrebbero funzionare per il nuovo terreno. Delle due parti del terreno, una &egrave; assicurata. Il proprietario dell'altra parte non &egrave; stato contattabile, quindi il gruppo ha chiesto l'aiuto del sindaco. Il passo successivo &egrave; una visita, che un membro della comunit&agrave; aveva gi&agrave; organizzato una volta e cercher&agrave; di organizzare di nuovo. I progressi sono pi&ugrave; lenti del previsto: la visita era stata programmata settimane fa, e incontrarsi di persona sembra l'unica via possibile.</p>
+                        <p>Ci sono due possibili percorsi: affittare il terreno prima per una prova e poi decidere se &egrave; adatto all'evento principale, oppure <strong>affittarlo direttamente per l'evento principale di giugno</strong>. La preferenza personale di Pablo &egrave; per la seconda, con un possibile acquisto in seguito. Le opzioni saranno proposte alla comunit&agrave; non appena ci sar&agrave; un prezzo per entrambe le parti.</p>
+                        <p><strong>Paul vK</strong>, che intende visitare il terreno, ha chiesto come lo percepiscono quelli che ci sono gi&agrave; stati. Pablo ci &egrave; stato tre volte, e Ward D lo conosce bene. Gli piace molto: ampio e piuttosto pianeggiante, circondato da montagne, facile da raggiungere ma intimo, con una zona pi&ugrave; alta che potrebbe dominare l'intero evento. Il sito attuale ha la montagna dell'alba ma campi aperti accanto, il che lo rende pi&ugrave; esposto. Pablo trova il nuovo terreno diverso, migliore in alcuni aspetti e peggiore in altri, e nel complesso gli piace di pi&ugrave;. Ha suggerito di chiedere a pi&ugrave; persone, poich&eacute; ognuno nota qualcosa di diverso. Ellen ha proposto di condividere foto e impressioni in una futura chiamata dopo la prossima visita.</p>
+
+                        <h2>2. Aggiornamento finanziario (Peter D)</h2>
+                        <ul>
+                            <li><strong>Pagamenti.</strong> Le note spese di settembre sono in fase di approvazione, quindi il processo funziona. I crediti di deposito dei negozi di barrio sono stati elaborati. Il passo successivo &egrave; l'invio del denaro: rimborsi dei negozi di barrio e rimborsi delle note spese.</li>
+                            <li><strong>Rendicontazione.</strong> Con il Q3 chiuso, il contabile ha bisogno di tutto ci&ograve; che &egrave; accaduto: circa <strong>5.000 transazioni</strong> tra biglietti, note spese e fatture. Almeno una nota spese aveva 125 righe, ciascuna con una ricevuta, motivo per cui l'automazione &egrave; stata fondamentale. Daniela ha fatto notare che <strong>quest'anno si &egrave; in anticipo sulla tabella di marcia</strong>. L'anno prossimo, i pagamenti dovrebbero essere possibili nel mese successivo all'evento.</li>
+                            <li><strong>Gruppo di lavoro Finanze 2027.</strong> Sta per iniziare. Definir&agrave; le finanze del 2027: il prezzo dei biglietti, l'allocazione per i biglietti a reddito basso e altri biglietti speciali, quanto va a Creativit&agrave; per l'arte, e altro. Il risultato &egrave; una <strong>linea guida di budget</strong> con leve: cosa si pu&ograve; fare una volta che le vendite di biglietti raggiungono determinati livelli, con un piccolo piano per ogni scenario. L'iscrizione sar&agrave; su <strong>Humans</strong>, con una prima riunione dopo l'ALM. L'obiettivo &egrave; presentare il piano all'associazione <strong>prima della fine dell'anno, per il voto</strong>, come budget ufficiale 2027. Domande aperte, come se ci sar&agrave; un nuovo terreno, rendono tutto pi&ugrave; complesso. Le persone a cui piacciono i numeri e i fogli di calcolo sono molto benvenute.</li>
+                        </ul>
+
+                        <h3>Si potrebbe comprare il terreno, e come?</h3>
+                        <p>Paul vK ha chiesto come potrebbe essere finanziato un acquisto. <strong>Peter D</strong>: comprare terreno &egrave; un'opzione, non una certezza. Se il prezzo giusto non si presenta, non accade, e l'associazione non si assumer&agrave; un mutuo che non pu&ograve; permettersi. Sono possibili diverse strutture. Peter pensa che il terreno sarebbe molto probabilmente meglio detenuto da una <strong>societ&agrave; separata (SL) in cui l'associazione detiene una partecipazione</strong>. Le donazioni potrebbero quindi passare attraverso l'associazione, e i membri della comunit&agrave; potrebbero prestare direttamente alla societ&agrave;. Questo conta perch&eacute; l'associazione non pu&ograve; ottenere un prestito bancario convenzionale. Persone della comunit&agrave; hanno espresso interesse a livelli coerenti con quanto sarebbe necessario, sebbene nulla sia certo finch&eacute; il denaro non arriva. Il test chiave &egrave; se il costo annuale della propriet&agrave; si confronta ragionevolmente con l'affitto pagato oggi; un impegno molto pi&ugrave; grande potrebbe comunque essere fattibile, ma &egrave; una questione per l'associazione. Secondo Peter, l'associazione dovrebbe molto probabilmente votare su qualsiasi decisione relativa al terreno, possibilmente con breve preavviso una volta che un accordo &egrave; sul tavolo.</p>
+                        <p><strong>Pablo V</strong> ha aggiunto che il gruppo sta valutando modi per pagare nell'arco di diversi anni piuttosto che tramite un prestito bancario, in modo che i pagamenti corrispondano ai risparmi potenziali. Tutto questo dipende dal conoscere un prezzo, e il gruppo condivider&agrave; i modelli non appena ne avr&agrave; uno.</p>
+
+                        <h3>Chi si occupa delle finanze?</h3>
+                        <p>Alla domanda dalla chat su quante persone ci siano nel team finanze: essenzialmente Peter D, con Daniela che gestisce gran parte del lavoro sulle spese. Peter ha detto che il collo di bottiglia ora &egrave; meno il lavoro finanziario in s&eacute; che la costruzione degli strumenti in Humans. Chiunque aiutasse oggi dovrebbe imparare i sistemi di contabilit&agrave;, fatturazione, Stripe e biglietteria, Humans e lo sviluppo assistito dall'IA pi&ugrave; velocemente di quanto lui potrebbe insegnarglieli. L'anno prossimo, <strong>ogni dipartimento con un budget avr&agrave; una persona designata per le proprie finanze</strong>, poich&eacute; il carico di quest'anno non &egrave; stato sostenibile. Il gruppo di lavoro Finanze 2027 &egrave; un buon punto di partenza. Ellen: c'&egrave; spazio per pi&ugrave; persone qui man mano che le cose si sviluppano. Paul vK ha suggerito un <strong>team di finanziamento</strong> accanto al team finanze, e a Ellen &egrave; piaciuta l'idea come possibile gruppo.</p>
+
+                        <h3>Note spese dei progetti artistici: fine ottobre</h3>
+                        <p>Creativit&agrave; &egrave; una delle parti pi&ugrave; grandi e pi&ugrave; discrezionali del budget. L'obiettivo &egrave; dare agli artisti di pi&ugrave;, non di meno, con meno burocrazia. <strong>Le note spese dei progetti artistici devono essere presentate al team Creativit&agrave; entro fine ottobre</strong> (gli artisti dovrebbero gi&agrave; aver sentito il team Creativit&agrave;). Dopo di che si chiudono i conti, perch&eacute; il rendiconto finale dell'anno non pu&ograve; essere fatto mentre i pagamenti sono ancora in corso. La scadenza dell'anno prossimo sar&agrave; probabilmente fine settembre, poich&eacute; i pagamenti di ottobre cadono in un nuovo trimestre IVA.</p>
+
+                        <h2>3. Temi per l'ALM</h2>
+                        <p>Ellen ha chiesto di nuovo grandi domande che i responsabili dovrebbero discutere, che si partecipi o no all'ALM, in chiamata o su Discord. Paul vK ha sollevato, con un sorriso, la questione di come la comunit&agrave; gestirebbe il contatto con gli extraterrestri, e ha accettato di creare un canale Discord per questo. Ellen ha ricordato due dibattiti animati di inizio anno: se l'evento dovrebbe diventare un <strong>evento da 9.000 persone</strong>, e se dovrebbe essere una <strong>comunit&agrave; offline</strong> durante l'evento (con o senza telefoni, o semplicemente pi&ugrave; occasioni per lasciare il telefono da parte).</p>
+                        <p>Alla domanda dalla chat su quando si terr&agrave; Elsewhere 2027: Pablo V ed Ellen hanno confermato che <strong>dal 7 al 13 giugno 2027</strong> &egrave; la settimana scelta dal voto degli asociados, ancora soggetta a INAGA. Senza ulteriori temi, la chiamata &egrave; terminata in anticipo.</p>
+
+                        <h2>Decisioni</h2>
+                        <ul>
+                            <li><strong>Non sono state prese decisioni in questa chiamata.</strong></li>
+                        </ul>
+
+                        <h2>Elementi d'azione</h2>
+                        <table class="action-table">
+                            <tr><th>Azione</th><th>Responsabile</th></tr>
+                            <tr><td>Compilare il sondaggio sulla struttura organizzativa prima dell'ALM</td><td>Chiunque lo abbia ricevuto</td></tr>
+                            <tr><td>Suggerire temi, domande e dibattiti per l'ALM (su Discord, o a Ellen K)</td><td>Chiunque</td></tr>
+                            <tr><td>Organizzare la visita con il proprietario rimanente del terreno (al sindaco &egrave; stato chiesto di aiutare); proporre opzioni alla comunit&agrave; non appena ci sar&agrave; un prezzo per entrambe le parti</td><td>Gruppo di lavoro Nuovo terreno (Pablo V)</td></tr>
+                            <tr><td>Inviare i rimborsi dei negozi di barrio e i rimborsi delle note spese approvate</td><td>Peter D</td></tr>
+                            <tr><td>Aprire le iscrizioni al gruppo di lavoro Finanze 2027 su Humans; prima riunione dopo l'ALM; budget al voto dell'associazione prima della fine dell'anno</td><td>Peter D; chiunque interessato</td></tr>
+                            <tr><td>Presentare le note spese dei progetti artistici al team Creativit&agrave; entro fine ottobre</td><td>Responsabili dei progetti artistici</td></tr>
+                            <tr><td>Unirsi al gruppo di lavoro Politica del suono su Discord per contribuire a definire la prossima politica</td><td>Chiunque interessato</td></tr>
+                        </table>
+
+                        <p><em>Verbale redatto a partire dalla trascrizione completa.</em></p>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Bei Diskrepanzen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Mit Ellen K (Gastgeberin), Pablo V, Peter D, Cocci, Paul vK und rund 15 Community-Mitgliedern im Call und im Chat</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Vollst&auml;ndige Unterlagen</h3>
+                        <ul>
+                            <li><a href="2026-10-01-community-transcript.html">Vollst&auml;ndiges Transkript (nur auf Englisch)</a></li>
+                            <li><a href="2026-09-17-general-assembly.html">Generalversammlung vom 17. September</a> &mdash; die Abstimmung &uuml;ber die Veranstaltungstermine 2027 &middot; <a href="../working-groups.html">Arbeitsgruppen</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Ein kurzer, knapper Call, geleitet von Ellen K. Drei Teile: eine Runde von Updates der Arbeitsgruppen &mdash; die Umfrage zur Organisationsstruktur, das Annual Leadership Meeting, ein vollst&auml;ndiger Bericht der Sound-Policy-Gruppe und der neueste Stand zum neuen Gel&auml;nde; ein Finanzupdate von Peter D, einschlie&szlig;lich der neuen Finance-Arbeitsgruppe 2027 und der Frist Ende Oktober f&uuml;r Kunst-Spesenabrechnungen; und eine offene Einladung, die gro&szlig;en Fragen vorzuschlagen, mit denen sich die Leads beim ALM befassen sollten.</p>
+
+                        <div class="key-points">
+                            <h2>Die wichtigsten Punkte &mdash; auf einen Blick</h2>
+                            <ul>
+                                <li><strong>Arbeitsgruppen sind der Einstieg.</strong> Gruppen auf Discord decken das ALM, das neue Gel&auml;nde, einen Tempel und eine Abschlusszeremonie, die Sound-Policy, Verbesserungen am Middle of Elsewhere sowie Governance und Organisationsstruktur ab. Niemand muss Experte sein, um mitzumachen, oder um eine stillstehende Gruppe durch Einberufen eines Treffens wieder in Bewegung zu bringen.</li>
+                                <li><strong>Umfrage zur Organisationsstruktur:</strong> Die Gruppe hat eine Umfrage dazu verschickt, wie Rollen funktionieren sollten, von der Frage, wof&uuml;r der Vorstand da ist, bis dahin, wof&uuml;r ein Abteilungskoordinator verantwortlich ist. Die Ergebnisse sollen in die Diskussionen beim ALM einflie&szlig;en. <strong>Wenn ihr sie erhalten habt, f&uuml;llt sie bitte aus.</strong></li>
+                                <li><strong>ALM (15.&ndash;19. Oktober):</strong> Informationen sind per E-Mail verschickt worden. Ideen f&uuml;r Themen, Fragen und Debatten f&uuml;r die Leads sind willkommen, zum Beispiel wie gro&szlig; die Veranstaltung sein sollte oder ob sie eine Offline-Community sein sollte.</li>
+                                <li><strong>Sound-Policy:</strong> Beschwerden kamen von &uuml;berall auf dem Gel&auml;nde, darunter Musik, die bis in die gr&uuml;ne Zone reicht, &uuml;berhaupt keine Regelung f&uuml;r den Wohnmobilbereich, Generatoren, die zu jeder Tageszeit laufen, und zu wenig Unterschied zwischen gelber, orangener und roter Zone. Diskutierte Ideen: klarere Trennung zwischen den Zonen, eine erkennbare Sound-Rolle, Konsequenzen f&uuml;r Camps und Art Cars, die die Regelung ignorieren, und Regeln f&uuml;r den Aufbau. Alle sind willkommen, egal ob man Sound liebt oder hasst.</li>
+                                <li><strong>Neues Gel&auml;nde:</strong> Genehmigungsantr&auml;ge sind f&uuml;r alle m&ouml;glichen Termine eingereicht, eine Antwort wird vor Jahresende erwartet. Einer der beiden Grundst&uuml;cksteile ist gesichert; der Eigent&uuml;mer des anderen Teils war bisher nicht erreichbar, und der B&uuml;rgermeister wurde gebeten, bei der Organisation eines Besuchs zu helfen. Optionen werden vorgelegt, sobald es einen Preis f&uuml;r beide Teile gibt.</li>
+                                <li><strong>Finanzen:</strong> Die Spesenabrechnungen f&uuml;r September werden genehmigt, und die Depot-Gutschriften der Barrio-L&auml;den wurden verarbeitet; Auszahlungen folgen als N&auml;chstes. Die Erstattungen liegen deutlich vor dem Zeitplan. <strong>Spesenabrechnungen f&uuml;r Kunstprojekte gehen bis Ende Oktober an das Creativity-Team</strong>, danach schlie&szlig;t die Buchhaltung des Jahres.</li>
+                                <li><strong>Finance-Arbeitsgruppe 2027:</strong> Sie wird Ticketpreise, die Zuteilung f&uuml;r Menschen mit niedrigem Einkommen, das Kunstbudget und budget&auml;re &bdquo;Stellhebel&ldquo;, die an den Ticketverkauf gekoppelt sind, ausarbeiten. Die Anmeldung l&auml;uft &uuml;ber Humans, das erste Treffen findet nach dem ALM statt, und das Budget geht vor Jahresende zur Abstimmung an die Vereinigung.</li>
+                                <li><strong>Landkauf ist eine Option, kein Plan.</strong> Er geschieht nur, wenn der Preis im Verh&auml;ltnis zu dem sinnvoll ist, was die Veranstaltung heute an Miete zahlt. M&ouml;gliche Wege wurden skizziert. Peter D erwartet, dass ein etwaiger Kauf sehr wahrscheinlich zur Abstimmung an die Vereinigung ginge.</li>
+                                <li><strong>Termine 2027:</strong> 7.&ndash;13. Juni 2027 ist die von der Abstimmung der asociados gew&auml;hlte Woche, noch vorbehaltlich INAGA.</li>
+                            </ul>
+                        </div>
+
+                        <h2>1. Arbeitsgruppen</h2>
+                        <p>Ellen K begann mit einem &Uuml;berblick &uuml;ber die derzeit auf Discord aktiven Arbeitsgruppen: das ALM; das neue Gel&auml;nde; einen <strong>Tempel und eine Abschlusszeremonie</strong>, nach einem Vorschlag, einen solchen zu haben; die <strong>Sound-Policy</strong>; <strong>Verbesserungen am Middle of Elsewhere</strong>, sowohl technisch als auch praktisch, nachdem das Zelt dieses Jahr nicht funktioniert hat und einige Freiwillige ein Middle of Elsewhere aus Restmaterial gebaut haben; und <strong>Governance und Organisationsstruktur</strong>.</p>
+                        <p>Ihre Hauptbotschaft: Wer in diesem Call ist, weil ihm die Community am Herzen liegt und er mehr tun m&ouml;chte, f&uuml;r den ist der Beitritt zu einer Arbeitsgruppe der richtige Weg. Man muss kein Spezialist sein oder eine Rolle innehaben, um mitzumachen. Wenn eine Gruppe still geworden ist, ist es schon ein Beitrag, einen Call anzusetzen und sich bei den Leuten zu melden. Jedes zus&auml;tzliche Paar H&auml;nde nimmt denjenigen, die das ganze Jahr &uuml;ber an der Veranstaltung arbeiten, etwas Last ab.</p>
+                        <p>Es gab ein Update zu Lagerung und Ausr&uuml;stung; es wurden keine Entscheidungen getroffen.</p>
+
+                        <h3>Governance und Organisationsstruktur</h3>
+                        <p>Niemand aus der Gruppe war im Call, daher gab Ellen deren Botschaft weiter. Sie haben eine <strong>Umfrage dazu verschickt, wie die Community Rollen und die Organisation strukturieren m&ouml;chte</strong>, zum Beispiel, welche Rolle der Vorstand haben sollte und wof&uuml;r ein Abteilungskoordinator verantwortlich ist. Das Ziel ist Transparenz und eine klarere Struktur. Die Gruppe hofft, die Ergebnisse in die Diskussionen beim ALM im Oktober einflie&szlig;en zu lassen. Wenn ihr die Umfrage erhalten habt, f&uuml;llt sie bitte aus.</p>
+
+                        <h3>Annual Leadership Meeting</h3>
+                        <p>Das ALM ist das Oktobertreffen f&uuml;r Personen, die eine Lead-Rolle &uuml;bernommen haben. Es ist eine Nachbesprechung dazu, was gut gelaufen ist und was nicht, und eine Gelegenheit, die gro&szlig;en Themen f&uuml;r das kommende Jahr zu planen. Das Update des ALM-Teams kam als Haiku (&bdquo;das ALM-Team organisiert das ALM, mehr Infos folgen bald&ldquo;), und Ellen best&auml;tigte, dass seitdem eine Informations-E-Mail verschickt wurde: <strong>Wer teilnimmt, sollte seine E-Mails pr&uuml;fen.</strong> Sie bat alle, auch diejenigen, die nicht teilnehmen, Fragen und Debatten f&uuml;r die Leads vorzuschlagen. Sie nannte zwei bereits zuvor aufgeworfene Beispiele: ob die Veranstaltung wachsen sollte (eine Veranstaltung mit 9.000 Personen oder mit 2.000?), und ob sie w&auml;hrend der Veranstaltung eine Offline-Community sein sollte.</p>
+
+                        <h3>Sound-Policy (Cocci)</h3>
+                        <p>Cocci fasste die bisherigen Diskussionen der Gruppe zusammen und lud alle Interessierten ein, mitzumachen, da Sound viele Menschen betrifft. Ausgangspunkt ist, dass <strong>Beschwerden &uuml;ber Sound von &uuml;berall auf dem Gel&auml;nde kamen</strong>:</p>
+                        <ul>
+                            <li>Musik ist in der <strong>gr&uuml;nen Zone</strong> immer noch deutlich zu h&ouml;ren;</li>
+                            <li>der <strong>Wohnmobilbereich hat &uuml;berhaupt keine Regelung</strong>, was nicht nur Musik betrifft, sondern auch <strong>Motoren und Generatoren</strong>, die zu jeder Tageszeit laufen, um Batterien zu laden;</li>
+                            <li>die aktuelle Regelung macht <strong>zu wenig Unterschied zwischen gelber, orangener und roter Zone</strong>: In der gelben Zone kann Musik laut und bis sp&auml;t laufen, und Menschen in der gr&uuml;nen Zone, die ab einer bestimmten Stunde Ruhe erwarten, bekommen sie nicht.</li>
+                        </ul>
+                        <p>Die Regelung muss &uuml;berarbeitet werden, damit sie klarer ist und die Zonen besser getrennt sind, und damit Musik nicht in die gr&uuml;ne und blaue Zone reicht. Diskutierte Ideen:</p>
+                        <ul>
+                            <li><strong>Durchsetzung.</strong> Ein Camp zu bitten, leiser zu sein, ist f&uuml;r freiwillige Nomaden eine unangenehme Position, und niemand will eine Party stoppen. Eine Idee ist eine eigene <strong>Sound-Rolle, vielleicht mit einem erkennbaren Kost&uuml;m</strong>, damit die Leute wissen, wer zu ihrem Camp kommt und warum.</li>
+                            <li><strong>Camps und Art Cars, die die Regelung ignorieren.</strong> Auch Art Cars zogen viele Beschwerden auf sich. Der bisher einzige Vorschlag, den Cocci gerne durch etwas Besseres ersetzt s&auml;he, ist, dass ein Camp oder ein Art Car, das auf Beschwerden nicht reagiert, im folgenden Jahr seinen <strong>Platz in der roten Zone</strong> oder seine <strong>Musikrechte als Art Car</strong> verlieren w&uuml;rde.</li>
+                            <li><strong>Aufbau.</strong> Ein Vorschlag war, w&auml;hrend des Aufbaus &uuml;berhaupt keine Musik zuzulassen. Cocci w&uuml;rde eine Regel bevorzugen, nach der Musik in Ordnung ist, solange sie ein Gespr&auml;ch direkt neben dem Lautsprecher nicht &uuml;bert&ouml;nt. Bei einer Party w&auml;hrend des Aufbaus ist der erste Schritt, mit den Nachbarn zu sprechen; wo keine Einigung erreicht werden kann, braucht es Regeln, denen alle zugestimmt haben, bevor sie zur Veranstaltung kommen.</li>
+                        </ul>
+                        <p>Ellen: Ob man sich lieber &uuml;ber L&auml;rm oder &uuml;ber die Sound-Policy beschwert, dies ist die Gruppe, der man beitreten sollte.</p>
+
+                        <h3>Neues Gel&auml;nde (Pablo V)</h3>
+                        <p>Pablo V gab das Update. <strong>Daniel T hat Genehmigungen f&uuml;r alle m&ouml;glichen Termine beantragt</strong>; die Antwort wird vor Jahresende erwartet, was auch zeigen wird, welche Termine f&uuml;r das neue Gel&auml;nde passen k&ouml;nnten. Von den beiden Grundst&uuml;cksteilen ist einer gesichert. Der Eigent&uuml;mer des anderen Teils war nicht erreichbar, daher hat die Gruppe den B&uuml;rgermeister um Hilfe gebeten. Der n&auml;chste Schritt ist ein Besuch, den ein Community-Mitglied schon einmal organisiert hatte und erneut zu organisieren versuchen wird. Der Fortschritt ist langsamer als erhofft: Der Besuch wurde vor Wochen angesetzt, und ein pers&ouml;nliches Treffen scheint der einzige Weg nach vorn zu sein.</p>
+                        <p>Es gibt zwei m&ouml;gliche Wege: das Gel&auml;nde zun&auml;chst zur Probe mieten und dann entscheiden, ob es sich f&uuml;r die Hauptveranstaltung eignet, oder <strong>es direkt f&uuml;r die Hauptveranstaltung im Juni mieten</strong>. Pablos eigene Pr&auml;ferenz ist die zweite Option, mit einem m&ouml;glichen anschlie&szlig;enden Kauf. Optionen werden der Community vorgelegt, sobald es einen Preis f&uuml;r beide Teile gibt.</p>
+                        <p><strong>Paul vK</strong>, der das Gel&auml;nde besuchen m&ouml;chte, fragte, wie es sich f&uuml;r diejenigen anf&uuml;hlt, die schon dort waren. Pablo war dreimal dort, und Ward D kennt es gut. Er liebt es: weitl&auml;ufig und recht flach, von Bergen umgeben, leicht zu erreichen, aber intim, mit einem h&ouml;her gelegenen Bereich, der die ganze Veranstaltung &uuml;berblicken k&ouml;nnte. Das jetzige Gel&auml;nde hat den Sonnenaufgangsberg, aber offene Felder daneben, wodurch es sich exponierter anf&uuml;hlt. Pablo findet das neue Gel&auml;nde anders, in mancher Hinsicht besser und in anderer schlechter, und insgesamt gef&auml;llt es ihm besser. Er schlug vor, mehrere Leute zu fragen, da jedem etwas anderes auff&auml;llt. Ellen schlug vor, nach dem n&auml;chsten Besuch in einem k&uuml;nftigen Call Fotos und Eindr&uuml;cke zu teilen.</p>
+
+                        <h2>2. Finanzupdate (Peter D)</h2>
+                        <ul>
+                            <li><strong>Zahlungen.</strong> Die Spesenabrechnungen f&uuml;r September werden genehmigt, der Prozess funktioniert also. Depot-Gutschriften der Barrio-L&auml;den wurden verarbeitet. Der n&auml;chste Schritt ist der Geldausgang: R&uuml;ckerstattungen der Barrio-L&auml;den und Erstattungen aus Spesenabrechnungen.</li>
+                            <li><strong>Berichtswesen.</strong> Da Q3 abgeschlossen ist, braucht der Buchhalter alles, was passiert ist: etwa <strong>5.000 Transaktionen</strong> aus Tickets, Spesenabrechnungen und Rechnungen. Mindestens eine Spesenabrechnung hatte 125 Zeilen, jede mit Beleg, weshalb Automatisierung entscheidend war. Daniela wies darauf hin, dass <strong>dieses Jahr dem Zeitplan voraus ist</strong>. N&auml;chstes Jahr sollten Zahlungen im Monat nach der Veranstaltung m&ouml;glich sein.</li>
+                            <li><strong>Finance-Arbeitsgruppe 2027.</strong> Sie steht kurz vor dem Start. Sie wird die Finanzen f&uuml;r 2027 ausarbeiten: Ticketpreis, die Zuteilung f&uuml;r Tickets mit niedrigem Einkommen und andere Sondertickets, wie viel an Creativity f&uuml;r Kunst geht, und mehr. Das Ergebnis ist eine <strong>Budgetleitlinie</strong> mit Stellhebeln: was getan werden kann, sobald die Ticketverk&auml;ufe bestimmte Niveaus erreichen, mit einem kleinen Plan f&uuml;r jedes Szenario. Die Anmeldung erfolgt &uuml;ber <strong>Humans</strong>, mit einem ersten Treffen nach dem ALM. Ziel ist es, den Plan der Vereinigung <strong>vor Jahresende zur Abstimmung</strong> als offizielles Budget f&uuml;r 2027 vorzulegen. Offene Fragen wie die, ob es neues Gel&auml;nde geben wird, machen dies komplexer. Menschen, die Zahlen und Tabellen m&ouml;gen, sind sehr willkommen.</li>
+                        </ul>
+
+                        <h3>K&ouml;nnte das Gel&auml;nde gekauft werden, und wie?</h3>
+                        <p>Paul vK fragte, wie ein Kauf finanziert werden k&ouml;nnte. <strong>Peter D</strong>: Landkauf ist eine Option, keine Gewissheit. Wenn der richtige Preis nicht zustande kommt, passiert es nicht, und die Vereinigung wird keine Hypothek aufnehmen, die sie sich nicht leisten kann. Mehrere Strukturen sind m&ouml;glich. Peter denkt, das Land w&uuml;rde h&ouml;chstwahrscheinlich am besten von einer <strong>separaten Gesellschaft (SL) gehalten, an der die Vereinigung eine Beteiligung h&auml;lt</strong>. Spenden k&ouml;nnten dann &uuml;ber die Vereinigung laufen, und Community-Mitglieder k&ouml;nnten der Gesellschaft direkt Geld leihen. Das ist wichtig, weil die Vereinigung keinen klassischen Bankkredit erhalten kann. Mitglieder der Community haben Interesse in einer H&ouml;he bekundet, die dem entspricht, was n&ouml;tig w&auml;re, obwohl nichts sicher ist, bevor das Geld tats&auml;chlich eingeht. Der entscheidende Test ist, ob die j&auml;hrlichen Kosten des Eigentums angemessen mit der heute gezahlten Miete vergleichbar sind; ein deutlich gr&ouml;&szlig;eres Engagement k&ouml;nnte dennoch machbar sein, aber das ist eine Frage f&uuml;r die Vereinigung. Peters Einsch&auml;tzung nach m&uuml;sste die Vereinigung sehr wahrscheinlich &uuml;ber jede Entscheidung zum Gel&auml;nde abstimmen, m&ouml;glicherweise kurzfristig, sobald ein Angebot auf dem Tisch liegt.</p>
+                        <p><strong>Pablo V</strong> f&uuml;gte hinzu, dass die Gruppe nach M&ouml;glichkeiten sucht, &uuml;ber mehrere Jahre zu zahlen statt &uuml;ber einen Bankkredit, sodass die Zahlungen zu den m&ouml;glichen Einsparungen passen. All das h&auml;ngt davon ab, einen Preis zu kennen, und die Gruppe wird Modellrechnungen teilen, sobald sie einen hat.</p>
+
+                        <h3>Wer macht die Finanzen?</h3>
+                        <p>Auf die Frage aus dem Chat, wie viele Personen im Finance-Team sind: im Wesentlichen Peter D, wobei Daniela einen Gro&szlig;teil der Spesenarbeit erledigt. Peter sagte, der Engpass liege derzeit weniger in der Finanzarbeit selbst als im Aufbau der Tools in Humans. Wer heute mithelfen w&uuml;rde, m&uuml;sste die Buchhaltungs-, Rechnungsstellungs-, Stripe- und Ticketing-Systeme, Humans und KI-gest&uuml;tzte Entwicklung schneller lernen, als er es ihm beibringen k&ouml;nnte. N&auml;chstes Jahr wird <strong>jede Abteilung mit Budget eine benannte Person f&uuml;r ihre Finanzen haben</strong>, da die Last dieses Jahres nicht tragf&auml;hig war. Die Finance-Arbeitsgruppe 2027 ist ein guter Ausgangspunkt. Ellen: Hier ist Platz f&uuml;r mehr Leute, je weiter sich die Dinge entwickeln. Paul vK schlug ein <strong>Funding-Team</strong> neben dem Finance-Team vor, und Ellen gefiel die Idee als m&ouml;gliche Gruppe.</p>
+
+                        <h3>Spesenabrechnungen f&uuml;r Kunstprojekte: Ende Oktober</h3>
+                        <p>Creativity ist einer der gr&ouml;&szlig;ten und am st&auml;rksten diskretion&auml;ren Teile des Budgets. Das Ziel ist, den K&uuml;nstlern mehr zu geben, nicht weniger, mit weniger Papierkram. <strong>Spesenabrechnungen f&uuml;r Kunstprojekte m&uuml;ssen bis Ende Oktober beim Creativity-Team eingereicht werden</strong> (K&uuml;nstler sollten bereits vom Creativity-Team geh&ouml;rt haben). Danach schlie&szlig;t die Buchhaltung, weil der Jahresabschlussbericht nicht erstellt werden kann, w&auml;hrend Zahlungen noch laufen. Die Frist im n&auml;chsten Jahr wird wahrscheinlich Ende September sein, da Zahlungen im Oktober in ein neues Mehrwertsteuerquartal fallen.</p>
+
+                        <h2>3. Themen f&uuml;r das ALM</h2>
+                        <p>Ellen bat erneut um gro&szlig;e Fragen, mit denen sich die Leads befassen sollten, egal ob man zum ALM kommt oder nicht, im Call oder auf Discord. Paul vK warf mit einem L&auml;cheln die Frage auf, wie die Community mit Kontakt zu Au&szlig;erirdischen umgehen w&uuml;rde, und erkl&auml;rte sich bereit, daf&uuml;r einen Discord-Kanal einzurichten. Ellen erinnerte an zwei lebhafte Debatten aus fr&uuml;her im Jahr: ob die Veranstaltung eine <strong>Veranstaltung mit 9.000 Personen</strong> werden sollte, und ob sie w&auml;hrend der Veranstaltung eine <strong>Offline-Community</strong> sein sollte (mit oder ohne Telefone, oder einfach mehr Gelegenheiten, das Telefon beiseitezulegen).</p>
+                        <p>Auf die Frage aus dem Chat, wann Elsewhere 2027 stattfinden wird: Pablo V und Ellen best&auml;tigten, dass die Woche vom <strong>7.&ndash;13. Juni 2027</strong> die von der Abstimmung der asociados gew&auml;hlte ist, noch vorbehaltlich INAGA. Da es keine weiteren Themen gab, endete der Call fr&uuml;hzeitig.</p>
+
+                        <h2>Entscheidungen</h2>
+                        <ul>
+                            <li><strong>In diesem Call wurden keine Entscheidungen getroffen.</strong></li>
+                        </ul>
+
+                        <h2>Ma&szlig;nahmen</h2>
+                        <table class="action-table">
+                            <tr><th>Ma&szlig;nahme</th><th>Verantwortlich</th></tr>
+                            <tr><td>Die Umfrage zur Organisationsstruktur vor dem ALM ausf&uuml;llen</td><td>Alle, die sie erhalten haben</td></tr>
+                            <tr><td>Themen, Fragen und Debatten f&uuml;r das ALM vorschlagen (auf Discord oder an Ellen K)</td><td>Jede/r</td></tr>
+                            <tr><td>Den Besuch mit dem verbleibenden Grundst&uuml;ckseigent&uuml;mer organisieren (der B&uuml;rgermeister wurde um Hilfe gebeten); der Community Optionen vorlegen, sobald es einen Preis f&uuml;r beide Teile gibt</td><td>Arbeitsgruppe Neues Gel&auml;nde (Pablo V)</td></tr>
+                            <tr><td>R&uuml;ckerstattungen der Barrio-L&auml;den und genehmigte Erstattungen aus Spesenabrechnungen auszahlen</td><td>Peter D</td></tr>
+                            <tr><td>Anmeldung f&uuml;r die Finance-Arbeitsgruppe 2027 auf Humans er&ouml;ffnen; erstes Treffen nach dem ALM; Budget vor Jahresende zur Abstimmung an die Vereinigung</td><td>Peter D; alle Interessierten</td></tr>
+                            <tr><td>Spesenabrechnungen f&uuml;r Kunstprojekte bis Ende Oktober beim Creativity-Team einreichen</td><td>Leitungen der Kunstprojekte</td></tr>
+                            <tr><td>Der Sound-Policy-Arbeitsgruppe auf Discord beitreten, um an der n&auml;chsten Regelung mitzuwirken</td><td>Alle Interessierten</td></tr>
+                        </table>
+
+                        <p><em>Protokoll erstellt auf Grundlage des vollst&auml;ndigen Transkripts.</em></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script src="../script.js"></script>
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>

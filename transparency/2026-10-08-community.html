@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+
+    <title>Community Meeting - October 8, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .resource-links { background: var(--color-bg-secondary); padding: 1.25rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .resource-links h3 { margin: 0 0 0.75rem 0; font-size: 1rem; }
+        .resource-links ul { list-style: none; padding: 0; margin: 0; }
+        .resource-links li { margin-bottom: 0.5rem; }
+        .resource-links a { color: var(--color-accent); font-weight: 500; }
+        .resource-links a:hover { text-decoration: underline; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 2rem; border-radius: 8px; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px; }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .key-points { background: var(--color-bg-alt); border-left: 4px solid var(--color-accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 1.25rem 1.5rem 0.5rem; margin: 1.5rem 0 2rem; }
+        .key-points h2 { margin-top: 0; font-size: 1.25rem; }
+        .key-points li { margin-bottom: 0.65rem; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>Community Meeting</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Thursday 8 October 2026, 20:00 CEST (~68 min, video call)</span>
+                    </div>
+                </div>
+
+                <!-- ==================== ENGLISH ==================== -->
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+
+                    <div class="attendees">
+                        <strong>With Ellen K (host), Daniel T, Anna T, Pablo V, Katia S and Heather W</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Full Records</h3>
+                        <ul>
+                            <li><a href="2026-10-08-community-transcript.html">Full transcript (English only)</a></li>
+                            <li><a href="2026-10-08-community-chat.html">Chat log</a></li>
+                            <li><a href="../alm-2026.html">Annual Leadership Meeting 2026</a> &middot; <a href="../barrio-guide-en.html">Barrio guide</a> &middot; <a href="../consent.html">Consent</a> &middot; <a href="../inaga-monegros-bird-nesting.html">INAGA and bird nesting</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>A small, informal call with no set agenda &mdash; Ellen K had announced it as a chance to say hello. Six people over the hour. The conversation ranged over the organisational-design survey, where AI does and does not belong in volunteer work, preparation for the Annual Leadership Meeting, a proposal for handling inactivity in roles, the state of the INAGA environmental consultation, turning the barrio guide into something searchable, themes for future community calls, build techniques from this year, and the idea of a temple that is buried rather than burned.</p>
+
+                        <div class="key-points">
+                            <h2>Key points &mdash; at a glance</h2>
+                            <ul>
+                                <li><strong>Organisational-design survey:</strong> the Organisational Structure working group&rsquo;s questionnaire takes a good 15 minutes and there is space at the end to set out your own vision. <strong>Deadline: 12 October.</strong></li>
+                                <li><strong>Inactivity in roles:</strong> Daniel T suggested an objective rule &mdash; for example, a coordinator absent without notice for three consecutive meetings, or with notice for six (about three months), is considered inactive and the role can be re-filled. The numbers were explicitly a starting point. Pablo V raised whether persistently absent board members should stop counting towards quorum; that would need a statute amendment by the General Assembly. <strong>No decision.</strong></li>
+                                <li><strong>INAGA:</strong> the environmental consultation has had a response noting that the site lies within the lesser kestrel protection plan and asking for the supporting details, which had already been submitted. Daniela is following this up. The 2027 dates chosen by the asociado vote (7&ndash;13 June 2027) remain <strong>subject to INAGA</strong>.</li>
+                                <li><strong>ALM (15&ndash;19 October):</strong> workshop proposals go to the ALM email address or the ALM Discord channel. Facilitation guidelines drawing on nonviolent-communication tools are being prepared to make it easier for everyone to speak.</li>
+                                <li><strong>Barrio guide:</strong> Ellen K would like the 75-page guide to become something searchable, with a timeline of what barrios need to think about when. Daniel T offered to set up an agent-maintained site before the ALM, possibly with a Discord bot that answers questions from it; Pablo V shared his own single-page approach.</li>
+                                <li><strong>Future calls:</strong> Ellen K plans a schedule of community-call themes, including barrio presentations (Pulpo, Jam House, Glitch) and slots for participant-wellness teams before the event.</li>
+                                <li><strong>Temple:</strong> both June and September fall within the fire season, so burning is unlikely. A Discord discussion started by Tank proposes a biodegradable temple buried in a mound with a closing ceremony; Heather W will join it.</li>
+                            </ul>
+                        </div>
+
+                        <h2>1. Organisational-Design Survey</h2>
+                        <p>Anna T asked those present to fill in the Organisational Structure working group&rsquo;s questionnaire (a Google Form). Daniel T had completed it the day before: it takes a good 15 minutes and asks questions that need thought. If the questions don&rsquo;t fit how you see things, there are open questions at the end where you can describe your own vision. Ellen K noted that the <strong>deadline is 12 October</strong>. Pablo V and Ellen K both said they would complete it.</p>
+
+                        <h2>2. AI, Volunteer Work and Discord</h2>
+                        <p>An informal exchange; Ellen K mentioned that a fuller discussion on AI is planned for a later call (she referred to the 28th).</p>
+                        <ul>
+                            <li><strong>Daniel T</strong> described how capable recent AI models have become at software work, citing a talk at this year&rsquo;s Rails World conference arguing that few people will be writing code by hand before long. His view for a volunteer organisation: there are tasks people do because someone has to (assigning drive permissions, say) and tasks people do because they love them (he would not want a robot building the Garden of Joy). As far as possible, people should be on the second kind.</li>
+                            <li><strong>Ellen K</strong> agreed that AI is useful for tedious necessary jobs, but cautioned that a hard day where everything goes wrong and you overcome it anyway is part of what makes building at a burn rewarding.</li>
+                            <li><strong>Long AI-generated posts on Discord.</strong> Ellen K reported that some newer contributors had posted long AI summaries that had not been thought through, which annoyed people: if you haven&rsquo;t put time into something, why should others put time into reading it? Daniel T and Pablo V agreed that long, unprompted posts land badly whoever writes them, human or AI. Pablo V&rsquo;s name for it: a &ldquo;slop grenade&rdquo;, easy to throw and costly to receive.</li>
+                        </ul>
+
+                        <h2>3. Annual Leadership Meeting</h2>
+                        <p>Anna T, who has not been to an ALM before, asked about the format so she can prepare workshops for her working group: one workshop at a time or several in parallel, and how the day is divided.</p>
+                        <ul>
+                            <li><strong>Ellen K</strong>: she doesn&rsquo;t yet know how workshops will run this year. A few people, Daniela among them, are working on the facilitation outline. Anyone who wants to propose a workshop should write to the ALM email address or post in the ALM Discord channel. Pablo V and Anna T have already put suggestions forward.</li>
+                            <li><strong>Facilitation guidelines.</strong> Ellen K said a working group had discussed communication tools modelled on nonviolent communication, to lower the barriers that make it harder for less privileged groups to speak in collective settings. Facilitators will have guidelines with simple tools, such as &ldquo;one point at a time&rdquo; or &ldquo;speak only for yourself&rdquo;, which help even well-meaning people who can dominate a conversation without meaning to.</li>
+                            <li>Anna T pointed to the practical information already on the website: there is no programme yet, but there is an <a href="../alm-2026.html">ALM page</a> with a survival guide.</li>
+                        </ul>
+
+                        <h2>4. Consent and Winter Burns</h2>
+                        <p>Pablo V has put the consent team of a small (around 300-person) winter burn in Hamburg in touch with Anna T, since some of them are doing this for the first time. Anna T said that helping other burns is something the team has done a lot. She has been focused on publishing all of the event&rsquo;s consent processes and guides on the <a href="../consent.html">consent pages</a>, so that the community has oversight and can question anything, and other burns can use them as a starter kit, adapting for scale. She is happy to be contacted with questions.</p>
+
+                        <h2>5. Inactivity in Roles and Board Quorum</h2>
+                        <p><strong>Daniel T</strong> had suggested in the survey, and explained on the call, an objective process for when someone stops turning up. If a person is absent without notice for a number of consecutive meetings (his rule of thumb: three, with meetings every two weeks), the team or coordinator may treat them as inactive and move on. If they give a reason but are absent for six consecutive meetings (about three months), they are also considered inactive. If they come back later, they can be selected for the role again. The point is not punishment. It is that the people setting up a multi-thousand-person event should not have to spend energy navigating an awkward situation by hand, and an official process makes it impersonal. He stressed that the numbers were a finger in the air.</p>
+                        <p><strong>Ellen K</strong> urged care with anything that feels like punishment in this community. She said the barrio support team had met this situation in practice this year: roles became unclear until the team reorganised itself, and the situation was resolved during the event.</p>
+                        <p><strong>Pablo V</strong> said something similar would help for board quorum: members who repeatedly miss meetings could stop counting towards it. Daniel T noted that under the statutes only the General Assembly can remove board members, and changing how quorum is counted would also need a statute amendment. He thought that was entirely manageable, given that the association has just run the event-dates vote. Pablo V agreed that some amendment should be brought forward. <strong>No decision was taken.</strong></p>
+
+                        <h2>6. INAGA Update</h2>
+                        <p>Heather W asked where things stand. The asociado vote chose <strong>7&ndash;13 June 2027</strong>, and the date remains subject to INAGA. Daniel T: INAGA has responded to the application. Its response notes that the site lies within the lesser kestrel protection plan (already known from the association&rsquo;s own <a href="../inaga-monegros-bird-nesting.html">research</a>) and asks for the supporting details, which the association had already provided. Daniela is following up, and Daniel T said he would check with her for the latest. There is no date yet for an answer.</p>
+
+                        <h2>7. The Barrio Guide &mdash; From 75 Pages to Something Searchable</h2>
+                        <p><strong>Ellen K</strong> has already cut the <a href="../barrio-guide-en.html">barrio guide</a> from over 100 pages to about 75, but it is still too dense to be read. Her aim for this year is something barrios can search and browse, with a timeline of what happens when and what they should be thinking about. The longer-term dream is a resource hub that people can contribute to, from barrio governance to how to build a good structure. It is needed this spring: much of barrio support&rsquo;s work is pointing people to the right part of the guide.</p>
+                        <ul>
+                            <li><strong>Daniel T</strong> described how the nobodies.team website is maintained: people ask an AI agent (Lume) to make changes, and the agent edits the site. He suggested the same approach for the guide, perhaps on its own subdomain. In his view the age of the content-management system is over: an agent can update, restructure and translate a site on request. As people contribute more material, the hard part becomes finding it, so the agent could also be made available on Discord to answer questions from the barrio knowledge base.</li>
+                            <li><strong>Pablo V</strong> showed a single-page site he maintains the same way for a working group, built around vision, roadmap and a timeline (&ldquo;here we are, here&rsquo;s what&rsquo;s next, here are the dependencies&rdquo;) with expandable detail and calendar reminders. He suggested keeping it independent of the main site so nothing can break. He also pointed to the &ldquo;one text box&rdquo; model of government websites where you simply ask a question. He offered to make a test site if Ellen K sends him the guide.</li>
+                            <li><strong>Keeping it correct.</strong> Ellen K wants answers drawn only from the association&rsquo;s own material. Daniel T noted that citing sources doesn&rsquo;t help if the source is out of date, which much existing guidance is. Someone has to care enough to tell the agent when something has changed; that takes awareness rather than technical skill.</li>
+                            <li><strong>Water safety.</strong> In passing, Ellen K reported a success this year: no major stomach problems on site. Water was chlorinated by the volunteers on the water truck while it filled, using a syringe marked with the dosages. Precise chlorine tests are planned for next year.</li>
+                            <li><strong>Daniel T offered to set up an agent-maintained site for the guide before the ALM</strong>, possibly with a Discord bot. Ellen K welcomed it.</li>
+                        </ul>
+
+                        <h2>8. Future Community Calls</h2>
+                        <p>Ellen K would like a timeline for these calls, a table showing which date will cover what. Anna T added that participant-wellness teams (the consent team, for example) would like dedicated slots before the event, and a plan would make sure everyone gets one. Several barrios have offered thematic updates: <strong>Pulpo</strong> on going from a trash barrio to a spa, <strong>Jam House</strong> on their plumbing (to be confirmed), and <strong>Glitch</strong> on their board system, which worked well. Heather W added how much she valued Glitch&rsquo;s structures this year.</p>
+
+                        <h2>9. Build Techniques from This Year</h2>
+                        <ul>
+                            <li><strong>Ellen K</strong>&rsquo;s camp has an environmental commitment: bio-sourced and second-hand materials only, solar cooking, no grid power, and rope rather than zip ties or ratchet straps. It works, but it is hard work. This year was the first time they dug post holes with electric augers rather than by hand.</li>
+                            <li><strong>Heather W</strong>: at the Garden of Joy, a ventilation system of shade sheets lifted with rope and rocks held up in the wind far better than she expected.</li>
+                            <li><strong>Daniel T</strong>: the Garden of Joy replaced rebar, hammered in and dug out by hand, with lag bolts driven by a high-torque drill, which made build and strike far easier. Ellen K&rsquo;s camp also moved from dead-man anchors to lag bolts this year, though driven by hand. Daniel T offered to lend the drill to barrio support.</li>
+                        </ul>
+
+                        <h2>10. A Temple Without Fire?</h2>
+                        <p><strong>Heather W</strong> had just come back from a burner event in Italy where a small temple was built and burned. She asked whether burning would be possible in June or September. Daniel T&rsquo;s understanding is that both fall within the fire season, so probably not. Heather W suggested building a temple anyway, for people to place things on, and having a group take it to a decompression event where it could be burned more safely.</p>
+                        <p>Ellen K pointed to a discussion on Discord started by <strong>Tank</strong>: a <strong>biodegradable temple that is buried</strong> rather than burned, with a ceremony, as the closing moment the event is missing. He shared images inspired by burial mounds. Ellen K pictured a community effort through the week, with a pit and shovels and everyone helping to dig. Heather W said a ceremony of burial, given with intention and work, can be as powerful as one with fire. Anna T posted the Discord link in the chat, and the Discord is linked from the top of the nobodies.team homepage. Heather W will get in touch with Tank there.</p>
+
+                        <h2>Decisions</h2>
+                        <ul>
+                            <li><strong>No decisions were taken on this call.</strong> The inactivity and quorum ideas, the barrio-guide format and the temple are open discussions.</li>
+                        </ul>
+
+                        <h2>Action Items</h2>
+                        <table class="action-table">
+                            <tr><th>Action</th><th>Owner</th></tr>
+                            <tr><td>Complete the organisational-design survey by 12 October</td><td>Everyone (Pablo V and Ellen K said they would)</td></tr>
+                            <tr><td>Check with Daniela on the latest from INAGA</td><td>Daniel T</td></tr>
+                            <tr><td>Put up a schedule of community-call dates and themes, including barrio presentations and participant-wellness slots</td><td>Ellen K</td></tr>
+                            <tr><td>Send ALM workshop proposals to the ALM email address or the ALM Discord channel</td><td>Anyone</td></tr>
+                            <tr><td>Join the temple discussion on Discord and get in touch with Tank</td><td>Heather W; anyone interested</td></tr>
+                        </table>
+
+                        <p><em>The Annual Leadership Meeting runs 15&ndash;19 October 2026.</em></p>
+                        <p><em>Minutes prepared from the Google Meet transcript and chat log.</em></p>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="es">
+
+                    <div class="attendees">
+                        <strong>Con Ellen K (anfitriona), Daniel T, Anna T, Pablo V, Katia S y Heather W</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Registros completos</h3>
+                        <ul>
+                            <li><a href="2026-10-08-community-transcript.html">Transcripción completa (solo en inglés)</a></li>
+                            <li><a href="2026-10-08-community-chat.html">Registro del chat</a></li>
+                            <li><a href="../alm-2026.html">Reunión Anual de Liderazgo 2026</a> &middot; <a href="../barrio-guide-en.html">Guía de barrios</a> &middot; <a href="../consent.html">Consentimiento</a> &middot; <a href="../inaga-monegros-bird-nesting.html">INAGA y la nidificación de aves</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Una llamada pequeña e informal, sin orden del día fijo &mdash; Ellen K la había anunciado como una ocasión para saludarse. Seis personas a lo largo de la hora. La conversación abarcó la encuesta de diseño organizativo, dónde tiene y dónde no tiene cabida la IA en el trabajo voluntario, la preparación del ALM, una propuesta para gestionar la inactividad en los roles, el estado de la consulta ambiental de INAGA, convertir la guía de barrios en algo buscable, los temas de las próximas llamadas comunitarias, las técnicas de construcción de este año, y la idea de un templo enterrado en lugar de quemado.</p>
+
+                        <div class="key-points">
+                            <h2>Puntos clave &mdash; de un vistazo</h2>
+                            <ul>
+                                <li><strong>Encuesta de diseño organizativo:</strong> el cuestionario del grupo de trabajo de Estructura Organizativa lleva unos buenos 15 minutos, y al final hay espacio para exponer tu propia visión. <strong>Plazo: 12 de octubre.</strong></li>
+                                <li><strong>Inactividad en los roles:</strong> Daniel T propuso una regla objetiva &mdash; por ejemplo, un coordinador ausente sin aviso durante tres reuniones consecutivas, o con aviso durante seis (unos tres meses), se considera inactivo y el rol puede volver a cubrirse. Las cifras eran explícitamente un punto de partida. Pablo V planteó si los miembros de la junta directiva repetidamente ausentes deberían dejar de contar para el quorum; eso requeriría una modificación de los estatutos por parte de la Asamblea General. <strong>Sin decisión.</strong></li>
+                                <li><strong>INAGA:</strong> la consulta ambiental ha recibido una respuesta que señala que el terreno se encuentra dentro del plan de protección del cernícalo primilla y que pide la documentación de apoyo, que ya se había presentado. Daniela le está haciendo seguimiento. Las fechas de 2027 elegidas por la votación de los asociados (del 7 al 13 de junio de 2027) siguen <strong>sujetas a INAGA</strong>.</li>
+                                <li><strong>ALM (del 15 al 19 de octubre):</strong> las propuestas de talleres se envían a la dirección de correo electrónico del ALM o al canal de Discord del ALM. Se están preparando pautas de facilitación basadas en herramientas de comunicación no violenta para que a todos les resulte más fácil hablar.</li>
+                                <li><strong>Guía de barrios:</strong> Ellen K querría que la guía de 75 páginas se convirtiera en algo buscable, con un cronograma de lo que los barrios deben plantearse y cuándo. Daniel T se ofreció a montar un sitio mantenido por un agente antes del ALM, posiblemente con un bot de Discord que responda preguntas a partir de él; Pablo V compartió su propio enfoque de página única.</li>
+                                <li><strong>Próximas llamadas:</strong> Ellen K planea un calendario de temas para las llamadas comunitarias, incluyendo presentaciones de barrios (Pulpo, Jam House, Glitch) y franjas para los equipos de bienestar de participantes antes del evento.</li>
+                                <li><strong>Templo:</strong> tanto junio como septiembre caen dentro de la temporada de incendios, así que quemarlo es poco probable. Una conversación en Discord iniciada por Tank propone un templo biodegradable enterrado en un montículo con una ceremonia de cierre; Heather W se unirá a ella.</li>
+                            </ul>
+                        </div>
+
+                        <h2>1. Encuesta de diseño organizativo</h2>
+                        <p>Anna T pidió a los presentes que rellenaran el cuestionario del grupo de trabajo de Estructura Organizativa (un formulario de Google). Daniel T lo había completado el día anterior: lleva unos buenos 15 minutos y plantea preguntas que requieren reflexión. Si las preguntas no encajan con tu forma de ver las cosas, al final hay preguntas abiertas donde puedes describir tu propia visión. Ellen K señaló que el <strong>plazo es el 12 de octubre</strong>. Pablo V y Ellen K dijeron que lo completarían.</p>
+
+                        <h2>2. IA, trabajo voluntario y Discord</h2>
+                        <p>Un intercambio informal; Ellen K mencionó que está previsto un debate más completo sobre la IA en una llamada posterior (se refirió al día 28).</p>
+                        <ul>
+                            <li><strong>Daniel T</strong> describió lo capaces que se han vuelto los modelos de IA recientes en el trabajo de software, citando una charla de la conferencia Rails World de este año que sostiene que dentro de poco pocas personas escribirán código a mano. Su opinión para una organización voluntaria: hay tareas que la gente hace porque alguien tiene que hacerlas (asignar permisos de acceso a un drive, por ejemplo) y tareas que la gente hace porque las ama (él no querría que un robot construyera el Garden of Joy). En la medida de lo posible, la gente debería dedicarse al segundo tipo.</li>
+                            <li><strong>Ellen K</strong> coincidió en que la IA es útil para tareas tediosas pero necesarias, aunque advirtió que un día difícil en el que todo sale mal y aun así lo superas es parte de lo que hace gratificante construir en un burn.</li>
+                            <li><strong>Publicaciones largas generadas por IA en Discord.</strong> Ellen K relató que algunos colaboradores más nuevos habían publicado largos resúmenes de IA que no se habían pensado bien, lo cual molestó a la gente: si tú no le has dedicado tiempo a algo, ¿por qué deberían los demás dedicar tiempo a leerlo? Daniel T y Pablo V coincidieron en que las publicaciones largas y no solicitadas caen mal sea quien sea quien las escriba, humano o IA. El nombre que le dio Pablo V: una &laquo;granada de slop&raquo;, fácil de lanzar y costosa de recibir.</li>
+                        </ul>
+
+                        <h2>3. Reunión Anual de Liderazgo</h2>
+                        <p>Anna T, que nunca ha estado en un ALM, preguntó sobre el formato para poder preparar talleres para su grupo de trabajo: un taller a la vez o varios en paralelo, y cómo se divide el día.</p>
+                        <ul>
+                            <li><strong>Ellen K</strong>: todavía no sabe cómo se desarrollarán los talleres este año. Algunas personas, entre ellas Daniela, están trabajando en el esquema de facilitación. Quien quiera proponer un taller debe escribir a la dirección de correo electrónico del ALM o publicarlo en el canal de Discord del ALM. Pablo V y Anna T ya han presentado propuestas.</li>
+                            <li><strong>Pautas de facilitación.</strong> Ellen K dijo que un grupo de trabajo había debatido herramientas de comunicación basadas en la comunicación no violenta, para rebajar las barreras que dificultan que los grupos menos privilegiados hablen en espacios colectivos. Los facilitadores tendrán pautas con herramientas sencillas, como &laquo;un punto cada vez&raquo; o &laquo;habla solo por ti mismo&raquo;, que ayudan incluso a las personas bienintencionadas que pueden dominar una conversación sin pretenderlo.</li>
+                            <li>Anna T señaló la información práctica que ya está en el sitio web: todavía no hay programa, pero hay una <a href="../alm-2026.html">página del ALM</a> con una guía de supervivencia.</li>
+                        </ul>
+
+                        <h2>4. Consentimiento y burns de invierno</h2>
+                        <p>Pablo V ha puesto en contacto al equipo de consentimiento de un burn de invierno pequeño (de unas 300 personas) en Hamburgo con Anna T, ya que algunos de ellos lo hacen por primera vez. Anna T dijo que ayudar a otros burns es algo que el equipo ha hecho mucho. Se ha centrado en publicar todos los procesos y guías de consentimiento del evento en las <a href="../consent.html">páginas de consentimiento</a>, para que la comunidad tenga supervisión y pueda preguntar cualquier cosa, y para que otros burns puedan usarlas como kit de inicio, adaptándolas a su escala. Está encantada de que la contacten con preguntas.</p>
+
+                        <h2>5. Inactividad en los roles y quorum de la junta</h2>
+                        <p><strong>Daniel T</strong> había propuesto en la encuesta, y explicó en la llamada, un proceso objetivo para cuando alguien deja de presentarse. Si una persona está ausente sin aviso durante un número de reuniones consecutivas (su regla general: tres, con reuniones cada dos semanas), el equipo o coordinador puede considerarla inactiva y seguir adelante. Si da un motivo pero está ausente durante seis reuniones consecutivas (unos tres meses), también se la considera inactiva. Si vuelve más adelante, puede volver a ser elegida para el rol. La cuestión no es el castigo. Es que quienes organizan un evento de varios miles de personas no deberían tener que dedicar energía a navegar a mano una situación incómoda, y un proceso oficial lo hace impersonal. Subrayó que las cifras eran una estimación aproximada.</p>
+                        <p><strong>Ellen K</strong> pidió cuidado con cualquier cosa que se sienta como un castigo en esta comunidad. Dijo que el equipo de apoyo a los barrios se había encontrado con esta situación en la práctica este año: los roles se volvieron confusos hasta que el equipo se reorganizó, y la situación se resolvió durante el evento.</p>
+                        <p><strong>Pablo V</strong> dijo que algo parecido ayudaría para el quorum de la junta: los miembros que faltan repetidamente a las reuniones podrían dejar de contar para él. Daniel T señaló que, según los estatutos, solo la Asamblea General puede destituir a miembros de la junta, y que cambiar cómo se cuenta el quorum también requeriría una modificación de los estatutos. Pensó que eso era perfectamente manejable, dado que la asociación acaba de celebrar la votación de las fechas del evento. Pablo V coincidió en que debería presentarse alguna modificación. <strong>No se tomó ninguna decisión.</strong></p>
+
+                        <h2>6. Actualización de INAGA</h2>
+                        <p>Heather W preguntó cómo iban las cosas. La votación de los asociados eligió el <strong>7&ndash;13 de junio de 2027</strong>, y la fecha sigue sujeta a INAGA. Daniel T: INAGA ha respondido a la solicitud. Su respuesta señala que el terreno se encuentra dentro del plan de protección del cernícalo primilla (ya conocido por la propia <a href="../inaga-monegros-bird-nesting.html">investigación</a> de la asociación) y pide la documentación de apoyo, que la asociación ya había aportado. Daniela le está haciendo seguimiento, y Daniel T dijo que le preguntaría las últimas novedades. Todavía no hay fecha para una respuesta.</p>
+
+                        <h2>7. La guía de barrios &mdash; de 75 páginas a algo buscable</h2>
+                        <p><strong>Ellen K</strong> ya ha recortado la <a href="../barrio-guide-en.html">guía de barrios</a> de más de 100 páginas a unas 75, pero sigue siendo demasiado densa para leerla. Su objetivo para este año es algo que los barrios puedan buscar y hojear, con un cronograma de qué ocurre cuándo y en qué deberían pensar. El sueño a más largo plazo es un centro de recursos al que la gente pueda contribuir, desde la gobernanza de los barrios hasta cómo construir una buena estructura. Hace falta esta primavera: buena parte del trabajo de apoyo a los barrios consiste en señalar a la gente la parte correcta de la guía.</p>
+                        <ul>
+                            <li><strong>Daniel T</strong> describió cómo se mantiene el sitio web de nobodies.team: la gente le pide a un agente de IA (Lume) que haga cambios, y el agente edita el sitio. Propuso el mismo enfoque para la guía, quizá en su propio subdominio. En su opinión, la era del sistema de gestión de contenidos ha terminado: un agente puede actualizar, reestructurar y traducir un sitio a petición. A medida que la gente aporta más material, la parte difícil pasa a ser encontrarlo, así que el agente también podría estar disponible en Discord para responder preguntas a partir de la base de conocimiento de los barrios.</li>
+                            <li><strong>Pablo V</strong> mostró un sitio de una sola página que mantiene de la misma manera para un grupo de trabajo, construido en torno a una visión, una hoja de ruta y un cronograma (&laquo;aquí estamos, esto es lo que sigue, estas son las dependencias&raquo;) con detalle desplegable y recordatorios de calendario. Sugirió mantenerlo independiente del sitio principal para que nada pudiera romperse. También señaló el modelo de &laquo;una sola casilla de texto&raquo; de las webs gubernamentales, donde simplemente haces una pregunta. Se ofreció a montar un sitio de prueba si Ellen K le envía la guía.</li>
+                            <li><strong>Mantenerla correcta.</strong> Ellen K quiere que las respuestas se extraigan únicamente del propio material de la asociación. Daniel T señaló que citar fuentes no ayuda si la fuente está desactualizada, que es el caso de buena parte de las indicaciones existentes. Alguien tiene que preocuparse lo suficiente como para avisar al agente cuando algo haya cambiado; eso requiere atención, no habilidad técnica.</li>
+                            <li><strong>Seguridad del agua.</strong> De pasada, Ellen K relató un éxito este año: no hubo problemas estomacales importantes en el recinto. El agua se cloró con los voluntarios del camión cisterna mientras se llenaba, usando una jeringa marcada con las dosis. Para el próximo año se prevén pruebas de cloro precisas.</li>
+                            <li><strong>Daniel T se ofreció a montar un sitio mantenido por un agente para la guía antes del ALM</strong>, posiblemente con un bot de Discord. Ellen K lo acogió con agrado.</li>
+                        </ul>
+
+                        <h2>8. Próximas llamadas comunitarias</h2>
+                        <p>Ellen K querría un cronograma para estas llamadas, una tabla que muestre qué cubrirá cada fecha. Anna T añadió que los equipos de bienestar de participantes (el equipo de consentimiento, por ejemplo) querrían franjas dedicadas antes del evento, y que un plan aseguraría que todos tuvieran una. Varios barrios han ofrecido actualizaciones temáticas: <strong>Pulpo</strong> sobre pasar de barrio de basura a spa, <strong>Jam House</strong> sobre su fontanería (por confirmar), y <strong>Glitch</strong> sobre su sistema de pizarras, que funcionó bien. Heather W añadió lo mucho que valoró las estructuras de Glitch este año.</p>
+
+                        <h2>9. Técnicas de construcción de este año</h2>
+                        <ul>
+                            <li>El campamento de <strong>Ellen K</strong> tiene un compromiso medioambiental: solo materiales de origen biológico y de segunda mano, cocina solar, sin energía de red, y cuerda en lugar de bridas o correas de trinquete. Funciona, pero es mucho trabajo. Este año fue la primera vez que cavaron los agujeros de los postes con barrenas eléctricas en lugar de a mano.</li>
+                            <li><strong>Heather W</strong>: en el Garden of Joy, un sistema de ventilación con lonas de sombra levantadas con cuerda y piedras aguantó el viento mucho mejor de lo que esperaba.</li>
+                            <li><strong>Daniel T</strong>: el Garden of Joy sustituyó las varillas de refuerzo, clavadas y desenterradas a mano, por tirafondos accionados con un taladro de alto par, lo que facilitó mucho el montaje y el desmontaje. El campamento de Ellen K también pasó este año de anclajes de muerto a tirafondos, aunque accionados a mano. Daniel T se ofreció a prestar el taladro al equipo de apoyo a los barrios.</li>
+                        </ul>
+
+                        <h2>10. &iquest;Un templo sin fuego?</h2>
+                        <p><strong>Heather W</strong> acababa de volver de un evento burner en Italia donde se construyó y quemó un pequeño templo. Preguntó si sería posible quemarlo en junio o septiembre. Según entiende Daniel T, ambos meses caen dentro de la temporada de incendios, así que probablemente no. Heather W propuso construir un templo de todos modos, para que la gente deposite cosas en él, y que un grupo lo lleve a un evento de descompresión donde pudiera quemarse con más seguridad.</p>
+                        <p>Ellen K señaló una conversación en Discord iniciada por <strong>Tank</strong>: un <strong>templo biodegradable que se entierra</strong> en lugar de quemarse, con una ceremonia, como el momento de cierre que le falta al evento. Compartió imágenes inspiradas en túmulos funerarios. Ellen K imaginó un esfuerzo comunitario a lo largo de la semana, con un foso, palas y todos ayudando a cavar. Heather W dijo que una ceremonia de entierro, hecha con intención y trabajo, puede ser tan poderosa como una con fuego. Anna T publicó el enlace de Discord en el chat, y el Discord está enlazado en la parte superior de la página de inicio de nobodies.team. Heather W se pondrá en contacto con Tank allí.</p>
+
+                        <h2>Decisiones</h2>
+                        <ul>
+                            <li><strong>No se tomó ninguna decisión en esta llamada.</strong> Las ideas sobre inactividad y quorum, el formato de la guía de barrios y el templo son debates abiertos.</li>
+                        </ul>
+
+                        <h2>Tareas pendientes</h2>
+                        <table class="action-table">
+                            <tr><th>Tarea</th><th>Responsable</th></tr>
+                            <tr><td>Completar la encuesta de diseño organizativo antes del 12 de octubre</td><td>Todos (Pablo V y Ellen K dijeron que lo harían)</td></tr>
+                            <tr><td>Consultar a Daniela las últimas novedades de INAGA</td><td>Daniel T</td></tr>
+                            <tr><td>Publicar un calendario de fechas y temas de las llamadas comunitarias, incluyendo presentaciones de barrios y franjas de bienestar de participantes</td><td>Ellen K</td></tr>
+                            <tr><td>Enviar propuestas de talleres del ALM a la dirección de correo electrónico del ALM o al canal de Discord del ALM</td><td>Cualquiera</td></tr>
+                            <tr><td>Unirse al debate sobre el templo en Discord y ponerse en contacto con Tank</td><td>Heather W; quien esté interesado</td></tr>
+                        </table>
+
+                        <p><em>La Reunión Anual de Liderazgo se celebra del 15 al 19 de octubre de 2026.</em></p>
+                        <p><em>Acta preparada a partir de la transcripción y el registro de chat de Google Meet.</em></p>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="fr">
+<div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaut.</div>
+
+                    <div class="attendees">
+                        <strong>Avec Ellen K (hôtesse), Daniel T, Anna T, Pablo V, Katia S et Heather W</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Documents complets</h3>
+                        <ul>
+                            <li><a href="2026-10-08-community-transcript.html">Transcription complète (en anglais uniquement)</a></li>
+                            <li><a href="2026-10-08-community-chat.html">Journal du chat</a></li>
+                            <li><a href="../alm-2026.html">Réunion annuelle des dirigeants 2026</a> &middot; <a href="../barrio-guide-en.html">Guide des barrios</a> &middot; <a href="../consent.html">Consentement</a> &middot; <a href="../inaga-monegros-bird-nesting.html">INAGA et la nidification des oiseaux</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Un petit appel informel, sans ordre du jour fixe &mdash; Ellen K l&rsquo;avait annoncé comme une occasion de se dire bonjour. Six personnes au cours de l&rsquo;heure. La conversation a porté sur l&rsquo;enquête de conception organisationnelle, la place que l&rsquo;IA a ou n&rsquo;a pas dans le travail bénévole, la préparation de l&rsquo;ALM, une proposition pour gérer l&rsquo;inactivité dans les rôles, l&rsquo;état de la consultation environnementale de l&rsquo;INAGA, la transformation du guide des barrios en quelque chose de consultable, les thèmes des futurs appels communautaires, les techniques de construction de cette année, et l&rsquo;idée d&rsquo;un temple enterré plutôt que brûlé.</p>
+
+                        <div class="key-points">
+                            <h2>Points clés &mdash; en un coup d&rsquo;&oelig;il</h2>
+                            <ul>
+                                <li><strong>Enquête de conception organisationnelle&nbsp;:</strong> le questionnaire du groupe de travail Structure organisationnelle prend un bon quart d&rsquo;heure, et il y a de la place à la fin pour exposer sa propre vision. <strong>Date limite&nbsp;: 12 octobre.</strong></li>
+                                <li><strong>Inactivité dans les rôles&nbsp;:</strong> Daniel T a proposé une règle objective &mdash; par exemple, un coordinateur absent sans préavis pendant trois réunions consécutives, ou avec préavis pendant six (environ trois mois), est considéré comme inactif et le rôle peut être pourvu à nouveau. Les chiffres étaient explicitement un point de départ. Pablo V a soulevé la question de savoir si les membres du conseil d&rsquo;administration persistamment absents devraient cesser de compter pour le quorum&nbsp;; cela nécessiterait une modification des statuts par l&rsquo;Assemblée générale. <strong>Aucune décision.</strong></li>
+                                <li><strong>INAGA&nbsp;:</strong> la consultation environnementale a reçu une réponse notant que le site se trouve dans le plan de protection du faucon crécerellette et demandant les justificatifs, qui avaient déjà été transmis. Daniela assure le suivi. Les dates de 2027 choisies par le vote des asociados (du 7 au 13 juin 2027) restent <strong>soumises à l&rsquo;INAGA</strong>.</li>
+                                <li><strong>ALM (du 15 au 19 octobre)&nbsp;:</strong> les propositions d&rsquo;ateliers sont à envoyer à l&rsquo;adresse e-mail de l&rsquo;ALM ou sur le canal Discord de l&rsquo;ALM. Des consignes de facilitation inspirées d&rsquo;outils de communication non violente sont en préparation pour faciliter la prise de parole de chacun.</li>
+                                <li><strong>Guide des barrios&nbsp;:</strong> Ellen K aimerait que le guide de 75 pages devienne quelque chose de consultable, avec un calendrier de ce à quoi les barrios doivent réfléchir et quand. Daniel T a proposé de mettre en place un site maintenu par un agent avant l&rsquo;ALM, peut-être avec un bot Discord répondant aux questions à partir de celui-ci&nbsp;; Pablo V a présenté sa propre approche en une seule page.</li>
+                                <li><strong>Futurs appels&nbsp;:</strong> Ellen K prévoit un calendrier de thèmes pour les appels communautaires, avec des présentations de barrios (Pulpo, Jam House, Glitch) et des créneaux pour les équipes de bien-être des participants avant l&rsquo;événement.</li>
+                                <li><strong>Temple&nbsp;:</strong> juin comme septembre tombent dans la saison des incendies, donc le brûler est peu probable. Une discussion sur Discord lancée par Tank propose un temple biodégradable enterré dans un monticule avec une cérémonie de clôture&nbsp;; Heather W s&rsquo;y joindra.</li>
+                            </ul>
+                        </div>
+
+                        <h2>1. Enquête de conception organisationnelle</h2>
+                        <p>Anna T a demandé aux personnes présentes de remplir le questionnaire du groupe de travail Structure organisationnelle (un formulaire Google). Daniel T l&rsquo;avait rempli la veille&nbsp;: cela prend un bon quart d&rsquo;heure et pose des questions qui demandent réflexion. Si les questions ne correspondent pas à votre façon de voir les choses, il y a des questions ouvertes à la fin où vous pouvez décrire votre propre vision. Ellen K a rappelé que <strong>la date limite est le 12 octobre</strong>. Pablo V et Ellen K ont tous deux dit qu&rsquo;ils le rempliraient.</p>
+
+                        <h2>2. IA, travail bénévole et Discord</h2>
+                        <p>Un échange informel&nbsp;; Ellen K a mentionné qu&rsquo;une discussion plus approfondie sur l&rsquo;IA est prévue pour un appel ultérieur (elle a évoqué le 28).</p>
+                        <ul>
+                            <li><strong>Daniel T</strong> a décrit à quel point les modèles d&rsquo;IA récents sont devenus performants pour le travail logiciel, citant une conférence donnée au Rails World de cette année selon laquelle peu de gens écriront encore du code à la main avant longtemps. Son point de vue pour une organisation bénévole&nbsp;: il y a des tâches que l&rsquo;on fait parce qu&rsquo;il le faut bien (attribuer des droits d&rsquo;accès sur un drive, par exemple) et des tâches que l&rsquo;on fait parce qu&rsquo;on les aime (il ne voudrait pas qu&rsquo;un robot construise le Garden of Joy). Dans la mesure du possible, les gens devraient se consacrer au second type.</li>
+                            <li><strong>Ellen K</strong> a convenu que l&rsquo;IA est utile pour les tâches nécessaires mais fastidieuses, tout en avertissant qu&rsquo;une journée difficile où tout va mal et que l&rsquo;on surmonte quand même fait partie de ce qui rend la construction d&rsquo;un burn gratifiante.</li>
+                            <li><strong>Longs messages générés par IA sur Discord.</strong> Ellen K a rapporté que certains nouveaux contributeurs avaient publié de longs résumés d&rsquo;IA mal réfléchis, ce qui avait agacé les gens&nbsp;: si vous n&rsquo;y avez pas consacré de temps vous-même, pourquoi les autres devraient-ils en consacrer à le lire&nbsp;? Daniel T et Pablo V ont convenu que les longs messages non sollicités passent mal, qu&rsquo;ils soient écrits par un humain ou par une IA. Le nom que lui a donné Pablo V&nbsp;: une &laquo;&nbsp;grenade de slop&nbsp;&raquo;, facile à lancer et coûteuse à recevoir.</li>
+                        </ul>
+
+                        <h2>3. Réunion annuelle des dirigeants</h2>
+                        <p>Anna T, qui n&rsquo;est jamais allée à un ALM auparavant, a demandé des précisions sur le format afin de pouvoir préparer des ateliers pour son groupe de travail&nbsp;: un atelier à la fois ou plusieurs en parallèle, et comment la journée est divisée.</p>
+                        <ul>
+                            <li><strong>Ellen K</strong>&nbsp;: elle ne sait pas encore comment se dérouleront les ateliers cette année. Quelques personnes, dont Daniela, travaillent sur le plan de facilitation. Quiconque souhaite proposer un atelier doit écrire à l&rsquo;adresse e-mail de l&rsquo;ALM ou publier un message sur le canal Discord de l&rsquo;ALM. Pablo V et Anna T ont déjà soumis des suggestions.</li>
+                            <li><strong>Consignes de facilitation.</strong> Ellen K a indiqué qu&rsquo;un groupe de travail avait discuté d&rsquo;outils de communication inspirés de la communication non violente, afin de réduire les barrières qui rendent plus difficile la prise de parole des groupes moins privilégiés dans les espaces collectifs. Les facilitateurs disposeront de consignes avec des outils simples, comme &laquo;&nbsp;un point à la fois&nbsp;&raquo; ou &laquo;&nbsp;ne parler que pour soi-même&nbsp;&raquo;, qui aident même les personnes bien intentionnées qui peuvent dominer une conversation sans le vouloir.</li>
+                            <li>Anna T a signalé les informations pratiques déjà présentes sur le site&nbsp;: il n&rsquo;y a pas encore de programme, mais il existe une <a href="../alm-2026.html">page de l&rsquo;ALM</a> avec un guide de survie.</li>
+                        </ul>
+
+                        <h2>4. Consentement et burns d&rsquo;hiver</h2>
+                        <p>Pablo V a mis en contact l&rsquo;équipe de consentement d&rsquo;un petit burn d&rsquo;hiver (environ 300 personnes) à Hambourg avec Anna T, certains d&rsquo;entre eux le faisant pour la première fois. Anna T a dit qu&rsquo;aider d&rsquo;autres burns était quelque chose que l&rsquo;équipe faisait souvent. Elle s&rsquo;est concentrée sur la publication de tous les processus et guides de consentement de l&rsquo;événement sur les <a href="../consent.html">pages consentement</a>, afin que la communauté dispose d&rsquo;un droit de regard et puisse remettre en question n&rsquo;importe quoi, et que d&rsquo;autres burns puissent les utiliser comme kit de démarrage, en les adaptant à leur échelle. Elle se dit heureuse d&rsquo;être contactée pour toute question.</p>
+
+                        <h2>5. Inactivité dans les rôles et quorum du conseil d&rsquo;administration</h2>
+                        <p><strong>Daniel T</strong> avait proposé dans l&rsquo;enquête, et expliqué lors de l&rsquo;appel, un processus objectif pour les cas où quelqu&rsquo;un cesse de se présenter. Si une personne est absente sans préavis pendant un certain nombre de réunions consécutives (sa règle empirique&nbsp;: trois, avec des réunions toutes les deux semaines), l&rsquo;équipe ou le coordinateur peut la considérer comme inactive et passer à autre chose. Si elle donne une raison mais est absente pendant six réunions consécutives (environ trois mois), elle est également considérée comme inactive. Si elle revient plus tard, elle peut être désignée à nouveau pour le rôle. Il ne s&rsquo;agit pas d&rsquo;une punition. L&rsquo;idée est que les personnes qui organisent un événement de plusieurs milliers de participants ne devraient pas avoir à dépenser de l&rsquo;énergie à gérer une situation délicate au cas par cas, et qu&rsquo;un processus officiel la rend impersonnelle. Il a souligné que les chiffres étaient donnés au doigt mouillé.</p>
+                        <p><strong>Ellen K</strong> a appelé à la prudence avec tout ce qui ressemble à une punition dans cette communauté. Elle a indiqué que l&rsquo;équipe de soutien aux barrios avait rencontré cette situation en pratique cette année&nbsp;: les rôles sont devenus flous jusqu&rsquo;à ce que l&rsquo;équipe se réorganise, et la situation s&rsquo;est résolue pendant l&rsquo;événement.</p>
+                        <p><strong>Pablo V</strong> a dit qu&rsquo;une mesure similaire serait utile pour le quorum du conseil&nbsp;: les membres qui manquent répétitivement les réunions pourraient cesser de compter pour celui-ci. Daniel T a fait remarquer que, selon les statuts, seule l&rsquo;Assemblée générale peut révoquer des membres du conseil, et que modifier la façon dont le quorum est compté nécessiterait également une modification des statuts. Il a estimé que c&rsquo;était tout à fait gérable, étant donné que l&rsquo;association venait de faire voter les dates de l&rsquo;événement. Pablo V a convenu qu&rsquo;une modification devrait être proposée. <strong>Aucune décision n&rsquo;a été prise.</strong></p>
+
+                        <h2>6. Point sur l&rsquo;INAGA</h2>
+                        <p>Heather W a demandé où en étaient les choses. Le vote des asociados a retenu le <strong>7&ndash;13 juin 2027</strong>, et la date reste soumise à l&rsquo;INAGA. Daniel T&nbsp;: l&rsquo;INAGA a répondu à la demande. Sa réponse indique que le site se trouve dans le plan de protection du faucon crécerellette (déjà connu grâce aux propres <a href="../inaga-monegros-bird-nesting.html">recherches</a> de l&rsquo;association) et demande les justificatifs, que l&rsquo;association avait déjà fournis. Daniela assure le suivi, et Daniel T a dit qu&rsquo;il lui demanderait les dernières nouvelles. Il n&rsquo;y a pas encore de date pour une réponse.</p>
+
+                        <h2>7. Le guide des barrios &mdash; de 75 pages à quelque chose de consultable</h2>
+                        <p><strong>Ellen K</strong> a déjà réduit le <a href="../barrio-guide-en.html">guide des barrios</a> de plus de 100 pages à environ 75, mais il reste trop dense pour être lu. Son objectif cette année est de proposer quelque chose que les barrios puissent rechercher et parcourir, avec un calendrier de ce qui se passe quand et à quoi ils devraient réfléchir. Le rêve à plus long terme est un centre de ressources auquel les gens peuvent contribuer, de la gouvernance des barrios à la façon de construire une bonne structure. C&rsquo;est nécessaire dès ce printemps&nbsp;: une grande partie du travail du soutien aux barrios consiste à orienter les gens vers la bonne partie du guide.</p>
+                        <ul>
+                            <li><strong>Daniel T</strong> a décrit comment le site nobodies.team est maintenu&nbsp;: les gens demandent à un agent d&rsquo;IA (Lume) de faire des modifications, et l&rsquo;agent modifie le site. Il a proposé la même approche pour le guide, peut-être sur son propre sous-domaine. À son avis, l&rsquo;ère du système de gestion de contenu est révolue&nbsp;: un agent peut mettre à jour, restructurer et traduire un site sur demande. À mesure que les gens apportent davantage de contenu, la difficulté devient de le retrouver, de sorte que l&rsquo;agent pourrait aussi être rendu disponible sur Discord pour répondre aux questions à partir de la base de connaissances des barrios.</li>
+                            <li><strong>Pablo V</strong> a montré un site d&rsquo;une seule page qu&rsquo;il entretient de la même manière pour un groupe de travail, organisé autour d&rsquo;une vision, d&rsquo;une feuille de route et d&rsquo;un calendrier (&laquo;&nbsp;voici où nous en sommes, voici ce qui vient ensuite, voici les dépendances&nbsp;&raquo;) avec des détails déployables et des rappels de calendrier. Il a suggéré de le garder indépendant du site principal pour que rien ne puisse casser. Il a aussi évoqué le modèle de la &laquo;&nbsp;case de texte unique&nbsp;&raquo; des sites gouvernementaux, où l&rsquo;on pose simplement une question. Il a proposé de créer un site de test si Ellen K lui envoie le guide.</li>
+                            <li><strong>Garder les choses exactes.</strong> Ellen K veut que les réponses soient tirées uniquement du propre contenu de l&rsquo;association. Daniel T a fait remarquer que citer des sources n&rsquo;aide pas si la source est obsolète, ce qui est le cas d&rsquo;une grande partie des documents existants. Il faut que quelqu&rsquo;un se soucie suffisamment des choses pour signaler à l&rsquo;agent qu&rsquo;un changement a eu lieu&nbsp;; cela demande de l&rsquo;attention, pas des compétences techniques.</li>
+                            <li><strong>Sécurité de l&rsquo;eau.</strong> En passant, Ellen K a signalé une réussite cette année&nbsp;: pas de problèmes gastriques majeurs sur le site. L&rsquo;eau a été chlorée par les bénévoles du camion-citerne pendant qu&rsquo;il se remplissait, à l&rsquo;aide d&rsquo;une seringue marquée des dosages. Des tests de chlore précis sont prévus pour l&rsquo;année prochaine.</li>
+                            <li><strong>Daniel T a proposé de mettre en place un site maintenu par un agent pour le guide avant l&rsquo;ALM</strong>, peut-être avec un bot Discord. Ellen K a accueilli l&rsquo;idée favorablement.</li>
+                        </ul>
+
+                        <h2>8. Futurs appels communautaires</h2>
+                        <p>Ellen K aimerait un calendrier pour ces appels, un tableau montrant ce que chaque date couvrira. Anna T a ajouté que les équipes de bien-être des participants (l&rsquo;équipe de consentement, par exemple) aimeraient des créneaux dédiés avant l&rsquo;événement, et qu&rsquo;un plan garantirait que chacun en ait un. Plusieurs barrios ont proposé des mises à jour thématiques&nbsp;: <strong>Pulpo</strong> sur le passage d&rsquo;un barrio-poubelle à un spa, <strong>Jam House</strong> sur leur plomberie (à confirmer), et <strong>Glitch</strong> sur leur système de tableaux, qui a bien fonctionné. Heather W a ajouté à quel point elle avait apprécié les structures de Glitch cette année.</p>
+
+                        <h2>9. Techniques de construction de cette année</h2>
+                        <ul>
+                            <li>Le camp d&rsquo;<strong>Ellen K</strong> a un engagement environnemental&nbsp;: uniquement des matériaux biosourcés et de seconde main, cuisine solaire, pas d&rsquo;alimentation sur réseau, et de la corde plutôt que des colliers de serrage ou des sangles à cliquet. Cela fonctionne, mais c&rsquo;est un travail difficile. Cette année a été la première fois qu&rsquo;ils ont creusé les trous de poteaux à la tarière électrique plutôt qu&rsquo;à la main.</li>
+                            <li><strong>Heather W</strong>&nbsp;: au Garden of Joy, un système de ventilation fait de bâches d&rsquo;ombrage suspendues avec de la corde et des pierres a beaucoup mieux résisté au vent qu&rsquo;elle ne s&rsquo;y attendait.</li>
+                            <li><strong>Daniel T</strong>&nbsp;: au Garden of Joy, les fers à béton, plantés et retirés à la main, ont été remplacés par des tire-fond posés avec une perceuse à fort couple, ce qui a grandement facilité le montage et le démontage. Le camp d&rsquo;Ellen K est lui aussi passé cette année des ancrages à corps mort aux tire-fond, bien que posés à la main. Daniel T a proposé de prêter la perceuse au soutien aux barrios.</li>
+                        </ul>
+
+                        <h2>10. Un temple sans feu&nbsp;?</h2>
+                        <p><strong>Heather W</strong> revenait tout juste d&rsquo;un événement burner en Italie où un petit temple avait été construit puis brûlé. Elle a demandé si brûler serait possible en juin ou en septembre. Selon Daniel T, ces deux mois tombent dans la saison des incendies, donc probablement pas. Heather W a proposé de construire un temple quand même, pour que les gens y déposent des objets, puis qu&rsquo;un groupe l&rsquo;emmène à un événement de décompression où il pourrait être brûlé plus en sécurité.</p>
+                        <p>Ellen K a évoqué une discussion sur Discord lancée par <strong>Tank</strong>&nbsp;: un <strong>temple biodégradable que l&rsquo;on enterre</strong> plutôt que de le brûler, avec une cérémonie, comme le moment de clôture qui manque à l&rsquo;événement. Il a partagé des images inspirées des tumulus. Ellen K a imaginé un effort communautaire tout au long de la semaine, avec une fosse, des pelles et tout le monde aidant à creuser. Heather W a dit qu&rsquo;une cérémonie d&rsquo;enterrement, menée avec intention et travail, peut être aussi puissante qu&rsquo;une cérémonie avec le feu. Anna T a publié le lien Discord dans le chat, et le Discord est accessible en haut de la page d&rsquo;accueil de nobodies.team. Heather W contactera Tank là-bas.</p>
+
+                        <h2>Décisions</h2>
+                        <ul>
+                            <li><strong>Aucune décision n&rsquo;a été prise lors de cet appel.</strong> Les idées sur l&rsquo;inactivité et le quorum, le format du guide des barrios et le temple restent des discussions ouvertes.</li>
+                        </ul>
+
+                        <h2>Actions à mener</h2>
+                        <table class="action-table">
+                            <tr><th>Action</th><th>Responsable</th></tr>
+                            <tr><td>Remplir l&rsquo;enquête de conception organisationnelle avant le 12 octobre</td><td>Tout le monde (Pablo V et Ellen K ont dit qu&rsquo;ils le feraient)</td></tr>
+                            <tr><td>Demander à Daniela les dernières nouvelles de l&rsquo;INAGA</td><td>Daniel T</td></tr>
+                            <tr><td>Publier un calendrier des dates et thèmes des appels communautaires, avec les présentations de barrios et les créneaux de bien-être des participants</td><td>Ellen K</td></tr>
+                            <tr><td>Envoyer les propositions d&rsquo;ateliers de l&rsquo;ALM à l&rsquo;adresse e-mail de l&rsquo;ALM ou sur le canal Discord de l&rsquo;ALM</td><td>Tout le monde</td></tr>
+                            <tr><td>Rejoindre la discussion sur le temple sur Discord et prendre contact avec Tank</td><td>Heather W&nbsp;; toute personne intéressée</td></tr>
+                        </table>
+
+                        <p><em>La Réunion annuelle des dirigeants se tient du 15 au 19 octobre 2026.</em></p>
+                        <p><em>Compte rendu préparé à partir de la transcription et du journal du chat de Google Meet.</em></p>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="it">
+<div class="lang-note">In caso di discrepanze tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Con Ellen K (ospite), Daniel T, Anna T, Pablo V, Katia S e Heather W</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Registrazioni complete</h3>
+                        <ul>
+                            <li><a href="2026-10-08-community-transcript.html">Trascrizione completa (solo in inglese)</a></li>
+                            <li><a href="2026-10-08-community-chat.html">Registro della chat</a></li>
+                            <li><a href="../alm-2026.html">Riunione Annuale della Leadership 2026</a> &middot; <a href="../barrio-guide-en.html">Guida dei barrios</a> &middot; <a href="../consent.html">Consenso</a> &middot; <a href="../inaga-monegros-bird-nesting.html">INAGA e la nidificazione degli uccelli</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Una call piccola e informale, senza un ordine del giorno fisso &mdash; Ellen K l&rsquo;aveva annunciata come un&rsquo;occasione per salutarsi. Sei persone nel corso dell&rsquo;ora. La conversazione ha toccato il sondaggio sulla progettazione organizzativa, dove l&rsquo;IA ha e dove non ha posto nel lavoro volontario, la preparazione dell&rsquo;ALM, una proposta per gestire l&rsquo;inattività nei ruoli, lo stato della consultazione ambientale dell&rsquo;INAGA, la trasformazione della guida dei barrios in qualcosa di ricercabile, i temi delle prossime community call, le tecniche di costruzione di quest&rsquo;anno, e l&rsquo;idea di un tempio sepolto anziché bruciato.</p>
+
+                        <div class="key-points">
+                            <h2>Punti chiave &mdash; in breve</h2>
+                            <ul>
+                                <li><strong>Sondaggio sulla progettazione organizzativa:</strong> il questionario del gruppo di lavoro Struttura Organizzativa richiede una buona quindicina di minuti, e alla fine c&rsquo;è spazio per esporre la propria visione. <strong>Scadenza: 12 ottobre.</strong></li>
+                                <li><strong>Inattività nei ruoli:</strong> Daniel T ha proposto una regola oggettiva &mdash; per esempio, un coordinatore assente senza preavviso per tre riunioni consecutive, oppure con preavviso per sei (circa tre mesi), è considerato inattivo e il ruolo può essere ricoperto di nuovo. I numeri erano esplicitamente un punto di partenza. Pablo V ha sollevato la questione se i membri del consiglio direttivo persistentemente assenti dovrebbero smettere di contare ai fini del quorum; ciò richiederebbe una modifica dello statuto da parte dell&rsquo;Assemblea Generale. <strong>Nessuna decisione.</strong></li>
+                                <li><strong>INAGA:</strong> la consultazione ambientale ha ricevuto una risposta che segnala come il sito si trovi all&rsquo;interno del piano di protezione del grillaio e che chiede la documentazione di supporto, già presentata in precedenza. Daniela sta seguendo la questione. Le date del 2027 scelte dal voto degli asociados (dal 7 al 13 giugno 2027) restano <strong>subordinate all&rsquo;INAGA</strong>.</li>
+                                <li><strong>ALM (dal 15 al 19 ottobre):</strong> le proposte di workshop vanno inviate all&rsquo;indirizzo email dell&rsquo;ALM o al canale Discord dell&rsquo;ALM. Sono in preparazione linee guida di facilitazione basate su strumenti di comunicazione non violenta, per rendere più facile a tutti prendere parola.</li>
+                                <li><strong>Guida dei barrios:</strong> Ellen K vorrebbe che la guida di 75 pagine diventasse qualcosa di ricercabile, con una tabella temporale di ciò a cui i barrios devono pensare e quando. Daniel T si è offerto di allestire un sito mantenuto da un agente prima dell&rsquo;ALM, forse con un bot Discord che risponda alle domande a partire da esso; Pablo V ha condiviso il proprio approccio a pagina singola.</li>
+                                <li><strong>Prossime call:</strong> Ellen K prevede un calendario di temi per le community call, comprese presentazioni dei barrios (Pulpo, Jam House, Glitch) e fasce orarie per i team di benessere dei partecipanti prima dell&rsquo;evento.</li>
+                                <li><strong>Tempio:</strong> sia giugno sia settembre rientrano nella stagione degli incendi, quindi bruciarlo è improbabile. Una discussione su Discord avviata da Tank propone un tempio biodegradabile sepolto in un tumulo con una cerimonia di chiusura; Heather W vi parteciperà.</li>
+                            </ul>
+                        </div>
+
+                        <h2>1. Sondaggio sulla progettazione organizzativa</h2>
+                        <p>Anna T ha chiesto ai presenti di compilare il questionario del gruppo di lavoro Struttura Organizzativa (un modulo Google). Daniel T lo aveva completato il giorno prima: richiede una buona quindicina di minuti e pone domande che richiedono riflessione. Se le domande non corrispondono al proprio modo di vedere le cose, alla fine ci sono domande aperte in cui si può descrivere la propria visione. Ellen K ha ricordato che <strong>la scadenza è il 12 ottobre</strong>. Pablo V ed Ellen K hanno entrambi detto che lo avrebbero completato.</p>
+
+                        <h2>2. IA, lavoro volontario e Discord</h2>
+                        <p>Uno scambio informale; Ellen K ha menzionato che una discussione più approfondita sull&rsquo;IA è prevista per una call successiva (ha fatto riferimento al giorno 28).</p>
+                        <ul>
+                            <li><strong>Daniel T</strong> ha descritto quanto siano diventati capaci i modelli di IA recenti nel lavoro sul software, citando un intervento alla conferenza Rails World di quest&rsquo;anno secondo cui tra non molto poche persone scriveranno ancora codice a mano. Il suo punto di vista per un&rsquo;organizzazione di volontari: ci sono compiti che le persone svolgono perché qualcuno deve farlo (assegnare permessi su un drive, per esempio) e compiti che le persone svolgono perché li amano (non vorrebbe che un robot costruisse il Garden of Joy). Per quanto possibile, le persone dovrebbero dedicarsi al secondo tipo.</li>
+                            <li><strong>Ellen K</strong> ha concordato che l&rsquo;IA è utile per i lavori necessari ma noiosi, mettendo però in guardia sul fatto che una giornata difficile in cui tutto va storto e la si supera comunque fa parte di ciò che rende gratificante costruire a un burn.</li>
+                            <li><strong>Lunghi post generati dall&rsquo;IA su Discord.</strong> Ellen K ha riferito che alcuni collaboratori più recenti avevano pubblicato lunghi riassunti di IA non ben ponderati, il che aveva infastidito le persone: se non ci hai messo tempo tu, perché gli altri dovrebbero mettercene per leggerlo? Daniel T e Pablo V hanno concordato che i post lunghi e non richiesti vengono percepiti male chiunque li scriva, umano o IA. Il nome coniato da Pablo V: una &laquo;granata di slop&raquo;, facile da lanciare e costosa da ricevere.</li>
+                        </ul>
+
+                        <h2>3. Riunione Annuale della Leadership</h2>
+                        <p>Anna T, che non è mai stata a un ALM prima d&rsquo;ora, ha chiesto informazioni sul formato per poter preparare workshop per il proprio gruppo di lavoro: un workshop alla volta o diversi in parallelo, e come è suddivisa la giornata.</p>
+                        <ul>
+                            <li><strong>Ellen K</strong>: non sa ancora come si svolgeranno i workshop quest&rsquo;anno. Alcune persone, tra cui Daniela, stanno lavorando alla bozza di facilitazione. Chiunque voglia proporre un workshop dovrebbe scrivere all&rsquo;indirizzo email dell&rsquo;ALM o pubblicare un messaggio sul canale Discord dell&rsquo;ALM. Pablo V e Anna T hanno già avanzato proposte.</li>
+                            <li><strong>Linee guida di facilitazione.</strong> Ellen K ha detto che un gruppo di lavoro aveva discusso strumenti di comunicazione ispirati alla comunicazione non violenta, per abbassare le barriere che rendono più difficile ai gruppi meno privilegiati prendere parola in contesti collettivi. I facilitatori avranno linee guida con strumenti semplici, come &laquo;un punto alla volta&raquo; o &laquo;parla solo per te stesso&raquo;, che aiutano anche le persone ben intenzionate che possono dominare una conversazione senza volerlo.</li>
+                            <li>Anna T ha segnalato le informazioni pratiche già presenti sul sito: non c&rsquo;è ancora un programma, ma esiste una <a href="../alm-2026.html">pagina dell&rsquo;ALM</a> con una guida di sopravvivenza.</li>
+                        </ul>
+
+                        <h2>4. Consenso e burn invernali</h2>
+                        <p>Pablo V ha messo in contatto il team di consenso di un piccolo burn invernale (circa 300 persone) ad Amburgo con Anna T, dato che alcuni di loro lo fanno per la prima volta. Anna T ha detto che aiutare altri burn è qualcosa che il team ha fatto spesso. Si è concentrata sulla pubblicazione di tutti i processi e le guide di consenso dell&rsquo;evento sulle <a href="../consent.html">pagine del consenso</a>, in modo che la comunità abbia visibilità e possa mettere in discussione qualsiasi cosa, e perché altri burn possano usarle come kit di partenza, adattandole alla propria scala. È lieta di essere contattata con domande.</p>
+
+                        <h2>5. Inattività nei ruoli e quorum del consiglio direttivo</h2>
+                        <p><strong>Daniel T</strong> aveva proposto nel sondaggio, e spiegato durante la call, un processo oggettivo per quando qualcuno smette di presentarsi. Se una persona è assente senza preavviso per un certo numero di riunioni consecutive (la sua regola empirica: tre, con riunioni ogni due settimane), il team o il coordinatore può considerarla inattiva e andare avanti. Se fornisce una motivazione ma è assente per sei riunioni consecutive (circa tre mesi), viene comunque considerata inattiva. Se torna più avanti, può essere scelta di nuovo per il ruolo. Il punto non è la punizione. È che chi organizza un evento di diverse migliaia di persone non dovrebbe dover spendere energie per gestire a mano una situazione imbarazzante, e un processo ufficiale la rende impersonale. Ha sottolineato che i numeri erano una stima approssimativa.</p>
+                        <p><strong>Ellen K</strong> ha invitato alla cautela con tutto ciò che sembra una punizione in questa comunità. Ha detto che il team di supporto ai barrios ha incontrato questa situazione nella pratica quest&rsquo;anno: i ruoli sono diventati poco chiari finché il team non si è riorganizzato, e la situazione si è risolta durante l&rsquo;evento.</p>
+                        <p><strong>Pablo V</strong> ha detto che qualcosa di simile aiuterebbe per il quorum del consiglio: i membri che mancano ripetutamente alle riunioni potrebbero smettere di contare ai suoi fini. Daniel T ha fatto notare che, secondo lo statuto, solo l&rsquo;Assemblea Generale può rimuovere membri del consiglio, e che cambiare il modo in cui viene calcolato il quorum richiederebbe anch&rsquo;esso una modifica dello statuto. Ha ritenuto che fosse del tutto gestibile, dato che l&rsquo;associazione ha appena svolto il voto sulle date dell&rsquo;evento. Pablo V ha concordato che una modifica dovrebbe essere proposta. <strong>Non è stata presa alcuna decisione.</strong></p>
+
+                        <h2>6. Aggiornamento INAGA</h2>
+                        <p>Heather W ha chiesto a che punto fossero le cose. Il voto degli asociados ha scelto il <strong>7&ndash;13 giugno 2027</strong>, e la data resta subordinata all&rsquo;INAGA. Daniel T: l&rsquo;INAGA ha risposto alla domanda. La risposta segnala che il sito si trova all&rsquo;interno del piano di protezione del grillaio (già noto dalla <a href="../inaga-monegros-bird-nesting.html">ricerca</a> svolta dall&rsquo;associazione stessa) e chiede la documentazione di supporto, che l&rsquo;associazione aveva già fornito. Daniela sta seguendo la questione, e Daniel T ha detto che le avrebbe chiesto le ultime novità. Non c&rsquo;è ancora una data per una risposta.</p>
+
+                        <h2>7. La guida dei barrios &mdash; da 75 pagine a qualcosa di ricercabile</h2>
+                        <p><strong>Ellen K</strong> ha già ridotto la <a href="../barrio-guide-en.html">guida dei barrios</a> da oltre 100 pagine a circa 75, ma resta troppo densa da leggere. Il suo obiettivo per quest&rsquo;anno è qualcosa che i barrios possano cercare e consultare, con una tabella temporale di cosa succede quando e a cosa dovrebbero pensare. Il sogno a lungo termine è un centro di risorse a cui le persone possano contribuire, dalla governance dei barrios a come costruire una buona struttura. Serve già questa primavera: buona parte del lavoro del supporto ai barrios consiste nell&rsquo;indirizzare le persone verso la parte giusta della guida.</p>
+                        <ul>
+                            <li><strong>Daniel T</strong> ha descritto come viene mantenuto il sito nobodies.team: le persone chiedono a un agente IA (Lume) di apportare modifiche, e l&rsquo;agente modifica il sito. Ha suggerito lo stesso approccio per la guida, magari su un proprio sottodominio. A suo avviso, l&rsquo;era del sistema di gestione dei contenuti è finita: un agente può aggiornare, ristrutturare e tradurre un sito su richiesta. Man mano che le persone contribuiscono con più materiale, la parte difficile diventa trovarlo, quindi l&rsquo;agente potrebbe essere reso disponibile anche su Discord per rispondere a domande a partire dalla base di conoscenza dei barrios.</li>
+                            <li><strong>Pablo V</strong> ha mostrato un sito a pagina singola che mantiene allo stesso modo per un gruppo di lavoro, costruito intorno a visione, roadmap e tabella temporale (&laquo;ecco dove siamo, ecco cosa viene dopo, ecco le dipendenze&raquo;) con dettagli espandibili e promemoria sul calendario. Ha suggerito di mantenerlo indipendente dal sito principale affinché nulla possa rompersi. Ha anche citato il modello della &laquo;casella di testo unica&raquo; dei siti governativi, dove si fa semplicemente una domanda. Si è offerto di creare un sito di prova se Ellen K gli invia la guida.</li>
+                            <li><strong>Mantenerla corretta.</strong> Ellen K vuole che le risposte siano tratte solo dal materiale dell&rsquo;associazione stessa. Daniel T ha fatto notare che citare le fonti non aiuta se la fonte è superata, cosa che vale per buona parte delle indicazioni esistenti. Qualcuno deve preoccuparsene abbastanza da avvisare l&rsquo;agente quando qualcosa è cambiato; ciò richiede attenzione, non competenza tecnica.</li>
+                            <li><strong>Sicurezza dell&rsquo;acqua.</strong> Di passaggio, Ellen K ha riferito un successo di quest&rsquo;anno: nessun problema gastrico rilevante sul sito. L&rsquo;acqua è stata clorata dai volontari sull&rsquo;autobotte mentre si riempiva, usando una siringa segnata con i dosaggi. Per il prossimo anno sono previsti test del cloro precisi.</li>
+                            <li><strong>Daniel T si è offerto di allestire un sito mantenuto da un agente per la guida prima dell&rsquo;ALM</strong>, forse con un bot Discord. Ellen K ha accolto con favore la proposta.</li>
+                        </ul>
+
+                        <h2>8. Prossime community call</h2>
+                        <p>Ellen K vorrebbe una tabella temporale per queste call, una tabella che mostri quale data coprirà quali temi. Anna T ha aggiunto che i team di benessere dei partecipanti (il team di consenso, per esempio) vorrebbero fasce orarie dedicate prima dell&rsquo;evento, e un piano assicurerebbe che tutti ne abbiano una. Diversi barrios hanno offerto aggiornamenti tematici: <strong>Pulpo</strong> sul passaggio da barrio della spazzatura a spa, <strong>Jam House</strong> sul proprio impianto idraulico (da confermare), e <strong>Glitch</strong> sul proprio sistema di lavagne, che ha funzionato bene. Heather W ha aggiunto quanto abbia apprezzato le strutture di Glitch quest&rsquo;anno.</p>
+
+                        <h2>9. Tecniche di costruzione di quest&rsquo;anno</h2>
+                        <ul>
+                            <li>Il campo di <strong>Ellen K</strong> ha un impegno ambientale: solo materiali di origine biologica e di seconda mano, cucina solare, niente alimentazione da rete, e corda invece di fascette o cinghie a cricchetto. Funziona, ma è un lavoro duro. Quest&rsquo;anno è stata la prima volta che hanno scavato i buchi dei pali con trivelle elettriche anziché a mano.</li>
+                            <li><strong>Heather W</strong>: al Garden of Joy, un sistema di ventilazione fatto di teli ombreggianti sollevati con corda e pietre ha retto al vento molto meglio di quanto si aspettasse.</li>
+                            <li><strong>Daniel T</strong>: al Garden of Joy, i tondini di ferro, piantati e tolti a mano, sono stati sostituiti da tirafondi inseriti con un trapano ad alta coppia, il che ha reso molto più semplici montaggio e smontaggio. Anche il campo di Ellen K è passato quest&rsquo;anno dagli ancoraggi a corpo morto ai tirafondi, anche se inseriti a mano. Daniel T si è offerto di prestare il trapano al supporto ai barrios.</li>
+                        </ul>
+
+                        <h2>10. Un tempio senza fuoco?</h2>
+                        <p><strong>Heather W</strong> era appena tornata da un evento burner in Italia dove era stato costruito e bruciato un piccolo tempio. Ha chiesto se bruciarlo sarebbe possibile a giugno o settembre. Secondo quanto comprende Daniel T, entrambi i mesi rientrano nella stagione degli incendi, quindi probabilmente no. Heather W ha proposto di costruire comunque un tempio, su cui le persone possano posare oggetti, e far sì che un gruppo lo porti a un evento di decompressione dove potrebbe essere bruciato in modo più sicuro.</p>
+                        <p>Ellen K ha segnalato una discussione su Discord avviata da <strong>Tank</strong>: un <strong>tempio biodegradabile che viene sepolto</strong> anziché bruciato, con una cerimonia, come il momento di chiusura che manca all&rsquo;evento. Ha condiviso immagini ispirate ai tumuli funerari. Ellen K ha immaginato uno sforzo comunitario lungo tutta la settimana, con una fossa, delle pale e tutti ad aiutare a scavare. Heather W ha detto che una cerimonia di sepoltura, fatta con intenzione e lavoro, può essere potente quanto una con il fuoco. Anna T ha pubblicato il link Discord nella chat, e il Discord è collegato in cima alla homepage di nobodies.team. Heather W contatterà Tank lì.</p>
+
+                        <h2>Decisioni</h2>
+                        <ul>
+                            <li><strong>In questa call non è stata presa alcuna decisione.</strong> Le idee su inattività e quorum, il formato della guida dei barrios e il tempio restano discussioni aperte.</li>
+                        </ul>
+
+                        <h2>Azioni da svolgere</h2>
+                        <table class="action-table">
+                            <tr><th>Azione</th><th>Responsabile</th></tr>
+                            <tr><td>Completare il sondaggio sulla progettazione organizzativa entro il 12 ottobre</td><td>Tutti (Pablo V ed Ellen K hanno detto che lo avrebbero fatto)</td></tr>
+                            <tr><td>Chiedere a Daniela le ultime novità sull&rsquo;INAGA</td><td>Daniel T</td></tr>
+                            <tr><td>Pubblicare un calendario di date e temi delle community call, comprese presentazioni dei barrios e fasce orarie di benessere dei partecipanti</td><td>Ellen K</td></tr>
+                            <tr><td>Inviare le proposte di workshop dell&rsquo;ALM all&rsquo;indirizzo email dell&rsquo;ALM o al canale Discord dell&rsquo;ALM</td><td>Chiunque</td></tr>
+                            <tr><td>Partecipare alla discussione sul tempio su Discord e mettersi in contatto con Tank</td><td>Heather W; chiunque sia interessato</td></tr>
+                        </table>
+
+                        <p><em>La Riunione Annuale della Leadership si svolge dal 15 al 19 ottobre 2026.</em></p>
+                        <p><em>Verbale preparato a partire dalla trascrizione e dal registro chat di Google Meet.</em></p>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="de">
+<div class="lang-note">Bei Diskrepanzen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Mit Ellen K (Gastgeberin), Daniel T, Anna T, Pablo V, Katia S und Heather W</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Vollständige Unterlagen</h3>
+                        <ul>
+                            <li><a href="2026-10-08-community-transcript.html">Vollständiges Transkript (nur auf Englisch)</a></li>
+                            <li><a href="2026-10-08-community-chat.html">Chat-Protokoll</a></li>
+                            <li><a href="../alm-2026.html">Jahrestreffen der Führungskräfte 2026</a> &middot; <a href="../barrio-guide-en.html">Barrio-Leitfaden</a> &middot; <a href="../consent.html">Einwilligung</a> &middot; <a href="../inaga-monegros-bird-nesting.html">INAGA und die Vogelbrut</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Ein kleiner, informeller Call ohne feste Tagesordnung &mdash; Ellen K hatte ihn als Gelegenheit zum Hallosagen angekündigt. Sechs Personen im Laufe der Stunde. Das Gespräch reichte von der Umfrage zur Organisationsgestaltung über die Frage, wo KI in der Freiwilligenarbeit ihren Platz hat und wo nicht, die Vorbereitung des ALM, einen Vorschlag zum Umgang mit Inaktivität in Rollen, den Stand des Umweltverträglichkeitsverfahrens bei der INAGA, die Umwandlung des Barrio-Leitfadens in etwas Durchsuchbares, Themen für künftige Community Calls, Baumethoden dieses Jahres, bis hin zur Idee eines Tempels, der vergraben statt verbrannt wird.</p>
+
+                        <div class="key-points">
+                            <h2>Wichtigste Punkte &mdash; auf einen Blick</h2>
+                            <ul>
+                                <li><strong>Umfrage zur Organisationsgestaltung:</strong> der Fragebogen der Arbeitsgruppe Organisationsstruktur dauert gut 15 Minuten, und am Ende gibt es Raum, die eigene Vision darzulegen. <strong>Frist: 12. Oktober.</strong></li>
+                                <li><strong>Inaktivität in Rollen:</strong> Daniel T schlug eine objektive Regel vor &mdash; zum Beispiel gilt eine Koordinatorin oder ein Koordinator, die bzw. der ohne Ankündigung drei aufeinanderfolgende Treffen fehlt, oder mit Ankündigung sechs (etwa drei Monate), als inaktiv, und die Rolle kann neu besetzt werden. Die Zahlen waren ausdrücklich nur ein Ausgangspunkt. Pablo V warf die Frage auf, ob dauerhaft abwesende Vorstandsmitglieder nicht mehr zum Quorum zählen sollten; das würde eine Satzungsänderung durch die Generalversammlung erfordern. <strong>Keine Entscheidung.</strong></li>
+                                <li><strong>INAGA:</strong> das Umweltverträglichkeitsverfahren hat eine Antwort erhalten, die darauf hinweist, dass das Gelände innerhalb des Schutzplans für den Rötelfalken liegt, und um die unterstützenden Unterlagen bittet, die bereits eingereicht worden waren. Daniela bleibt an der Sache dran. Die von den asociados gewählten Termine für 2027 (7.&ndash;13. Juni 2027) bleiben <strong>abhängig von der INAGA</strong>.</li>
+                                <li><strong>ALM (15.&ndash;19. Oktober):</strong> Workshop-Vorschläge gehen an die E-Mail-Adresse des ALM oder an den ALM-Discord-Kanal. Es werden Moderationsrichtlinien vorbereitet, die sich an Werkzeugen der gewaltfreien Kommunikation orientieren, damit es allen leichter fällt, zu Wort zu kommen.</li>
+                                <li><strong>Barrio-Leitfaden:</strong> Ellen K würde gern den 75-seitigen Leitfaden in etwas Durchsuchbares verwandeln, mit einem Zeitplan dessen, worüber sich Barrios wann Gedanken machen müssen. Daniel T bot an, vor dem ALM eine von einem Agenten gepflegte Website aufzusetzen, möglicherweise mit einem Discord-Bot, der daraus Fragen beantwortet; Pablo V stellte seinen eigenen Ein-Seiten-Ansatz vor.</li>
+                                <li><strong>Künftige Calls:</strong> Ellen K plant einen Zeitplan mit Themen für Community Calls, einschließlich Barrio-Präsentationen (Pulpo, Jam House, Glitch) und Zeitfenstern für die Teams für das Wohlergehen der Teilnehmenden vor dem Event.</li>
+                                <li><strong>Tempel:</strong> sowohl Juni als auch September fallen in die Brandsaison, ein Verbrennen ist daher unwahrscheinlich. Eine von Tank gestartete Discord-Diskussion schlägt einen biologisch abbaubaren Tempel vor, der in einem Hügel vergraben wird, mit einer Abschlusszeremonie; Heather W wird sich daran beteiligen.</li>
+                            </ul>
+                        </div>
+
+                        <h2>1. Umfrage zur Organisationsgestaltung</h2>
+                        <p>Anna T bat die Anwesenden, den Fragebogen der Arbeitsgruppe Organisationsstruktur auszufüllen (ein Google-Formular). Daniel T hatte ihn am Tag zuvor ausgefüllt: Es dauert gut 15 Minuten und enthält Fragen, über die man nachdenken muss. Wenn die Fragen nicht zur eigenen Sichtweise passen, gibt es am Ende offene Fragen, in denen man die eigene Vision beschreiben kann. Ellen K wies darauf hin, dass die <strong>Frist der 12. Oktober</strong> ist. Pablo V und Ellen K sagten beide, sie würden ihn ausfüllen.</p>
+
+                        <h2>2. KI, Freiwilligenarbeit und Discord</h2>
+                        <p>Ein informeller Austausch; Ellen K erwähnte, dass eine ausführlichere Diskussion über KI für einen späteren Call geplant ist (sie erwähnte den 28.).</p>
+                        <ul>
+                            <li><strong>Daniel T</strong> beschrieb, wie leistungsfähig aktuelle KI-Modelle bei Softwarearbeit geworden sind, und verwies auf einen Vortrag auf der diesjährigen Rails-World-Konferenz, der argumentiert, dass bald nur noch wenige Menschen Code von Hand schreiben werden. Seine Sicht für eine Freiwilligenorganisation: Es gibt Aufgaben, die man erledigt, weil sie irgendjemand erledigen muss (etwa das Vergeben von Laufwerksberechtigungen), und Aufgaben, die man erledigt, weil man sie liebt (er wollte nicht, dass ein Roboter den Garden of Joy baut). Soweit möglich sollten sich Menschen der zweiten Art widmen.</li>
+                            <li><strong>Ellen K</strong> stimmte zu, dass KI für mühsame, aber notwendige Arbeiten nützlich ist, warnte aber, dass ein harter Tag, an dem alles schiefgeht und man ihn trotzdem übersteht, Teil dessen ist, was das Bauen auf einem Burn lohnend macht.</li>
+                            <li><strong>Lange KI-generierte Discord-Beiträge.</strong> Ellen K berichtete, dass manche neueren Mitwirkenden lange, nicht durchdachte KI-Zusammenfassungen gepostet hätten, was Leute geärgert habe: Wenn man selbst keine Zeit in etwas gesteckt hat, warum sollten andere Zeit investieren, es zu lesen? Daniel T und Pablo V waren sich einig, dass lange, ungefragte Beiträge egal von wem &ndash; Mensch oder KI &ndash; schlecht ankommen. Der Name, den Pablo V dafür prägte: eine &bdquo;Slop-Granate&ldquo;, leicht zu werfen und teuer zu empfangen.</li>
+                        </ul>
+
+                        <h2>3. Jahrestreffen der Führungskräfte</h2>
+                        <p>Anna T, die noch nie bei einem ALM war, fragte nach dem Format, um Workshops für ihre Arbeitsgruppe vorbereiten zu können: ein Workshop nach dem anderen oder mehrere parallel, und wie der Tag aufgeteilt ist.</p>
+                        <ul>
+                            <li><strong>Ellen K</strong>: Sie weiß noch nicht, wie die Workshops dieses Jahr ablaufen werden. Einige Leute, darunter Daniela, arbeiten am Moderationskonzept. Wer einen Workshop vorschlagen möchte, sollte an die E-Mail-Adresse des ALM schreiben oder im ALM-Discord-Kanal posten. Pablo V und Anna T haben bereits Vorschläge eingereicht.</li>
+                            <li><strong>Moderationsrichtlinien.</strong> Ellen K sagte, eine Arbeitsgruppe habe Kommunikationswerkzeuge nach dem Vorbild der gewaltfreien Kommunikation besprochen, um die Hürden zu senken, die es weniger privilegierten Gruppen erschweren, in gemeinschaftlichen Runden zu Wort zu kommen. Moderatorinnen und Moderatoren erhalten Richtlinien mit einfachen Werkzeugen wie &bdquo;ein Punkt nach dem anderen&ldquo; oder &bdquo;nur für sich selbst sprechen&ldquo;, die auch wohlmeinenden Menschen helfen, die ein Gespräch ungewollt dominieren können.</li>
+                            <li>Anna T verwies auf die praktischen Informationen, die bereits auf der Website stehen: Es gibt noch kein Programm, aber es gibt eine <a href="../alm-2026.html">ALM-Seite</a> mit einem Überlebensratgeber.</li>
+                        </ul>
+
+                        <h2>4. Einwilligung und Winter-Burns</h2>
+                        <p>Pablo V hat das Einwilligungsteam eines kleinen (rund 300-köpfigen) Winter-Burns in Hamburg mit Anna T in Kontakt gebracht, da einige von ihnen dies zum ersten Mal machen. Anna T sagte, dass anderen Burns zu helfen etwas sei, das das Team schon oft getan habe. Sie hat sich darauf konzentriert, alle Einwilligungsprozesse und -Leitfäden des Events auf den <a href="../consent.html">Einwilligungsseiten</a> zu veröffentlichen, damit die Community Einblick hat und alles hinterfragen kann, und damit andere Burns sie als Starter-Kit nutzen können, angepasst an ihre eigene Größenordnung. Sie freut sich über Fragen.</p>
+
+                        <h2>5. Inaktivität in Rollen und Vorstandsquorum</h2>
+                        <p><strong>Daniel T</strong> hatte in der Umfrage vorgeschlagen und im Call erläutert, einen objektiven Prozess für Fälle einzuführen, in denen jemand nicht mehr erscheint. Wenn eine Person ohne Ankündigung eine bestimmte Anzahl aufeinanderfolgender Treffen fehlt (seine Faustregel: drei, bei Treffen alle zwei Wochen), kann das Team oder die koordinierende Person sie als inaktiv betrachten und weitermachen. Gibt die Person einen Grund an, ist aber sechs aufeinanderfolgende Treffen (etwa drei Monate) abwesend, gilt sie ebenfalls als inaktiv. Kommt sie später zurück, kann sie erneut für die Rolle ausgewählt werden. Es gehe nicht um Bestrafung. Es gehe darum, dass Menschen, die eine Veranstaltung mit mehreren Tausend Teilnehmenden organisieren, nicht ihre Energie darauf verwenden müssen, eine unangenehme Situation von Hand zu klären, und ein offizieller Prozess macht es unpersönlich. Er betonte, dass die Zahlen über den Daumen gepeilt waren.</p>
+                        <p><strong>Ellen K</strong> mahnte zur Vorsicht bei allem, was sich in dieser Community wie Bestrafung anfühlt. Sie sagte, das Barrio-Support-Team sei dieses Jahr in der Praxis auf diese Situation gestoßen: Rollen seien unklar geworden, bis sich das Team neu organisiert habe, und die Situation habe sich während des Events gelöst.</p>
+                        <p><strong>Pablo V</strong> sagte, etwas Ähnliches würde beim Vorstandsquorum helfen: Mitglieder, die wiederholt Sitzungen verpassen, könnten aufhören, dafür zu zählen. Daniel T merkte an, dass laut Satzung nur die Generalversammlung Vorstandsmitglieder abberufen kann und dass auch eine Änderung der Quorumsberechnung eine Satzungsänderung erfordern würde. Er hielt das für durchaus machbar, da der Verein gerade erst die Abstimmung über die Eventtermine durchgeführt habe. Pablo V stimmte zu, dass eine Änderung eingebracht werden sollte. <strong>Es wurde keine Entscheidung getroffen.</strong></p>
+
+                        <h2>6. INAGA-Update</h2>
+                        <p>Heather W fragte nach dem aktuellen Stand. Die Abstimmung der asociados wählte den <strong>7.&ndash;13. Juni 2027</strong>, und der Termin bleibt von der INAGA abhängig. Daniel T: Die INAGA hat auf den Antrag geantwortet. Ihre Antwort weist darauf hin, dass das Gelände innerhalb des Schutzplans für den Rötelfalken liegt (bereits aus der eigenen <a href="../inaga-monegros-bird-nesting.html">Recherche</a> des Vereins bekannt) und bittet um die unterstützenden Unterlagen, die der Verein bereits eingereicht hatte. Daniela bleibt an der Sache dran, und Daniel T sagte, er werde sie nach den neuesten Entwicklungen fragen. Für eine Antwort gibt es noch keinen Termin.</p>
+
+                        <h2>7. Der Barrio-Leitfaden &mdash; von 75 Seiten zu etwas Durchsuchbarem</h2>
+                        <p><strong>Ellen K</strong> hat den <a href="../barrio-guide-en.html">Barrio-Leitfaden</a> bereits von über 100 Seiten auf etwa 75 gekürzt, doch er ist immer noch zu dicht, um gelesen zu werden. Ihr Ziel für dieses Jahr ist etwas, das Barrios durchsuchen und durchblättern können, mit einem Zeitplan dessen, was wann passiert und worüber sie nachdenken sollten. Der langfristige Traum ist ein Ressourcen-Hub, zu dem Menschen beitragen können, von der Barrio-Governance bis hin dazu, wie man eine gute Struktur baut. Gebraucht wird es schon in diesem Frühjahr: Ein Großteil der Arbeit des Barrio-Supports besteht darin, Leute auf den richtigen Teil des Leitfadens hinzuweisen.</p>
+                        <ul>
+                            <li><strong>Daniel T</strong> beschrieb, wie die Website nobodies.team gepflegt wird: Menschen bitten einen KI-Agenten (Lume), Änderungen vorzunehmen, und der Agent bearbeitet die Website. Er schlug denselben Ansatz für den Leitfaden vor, vielleicht auf einer eigenen Subdomain. Seiner Ansicht nach ist die Ära des Content-Management-Systems vorbei: Ein Agent kann eine Website auf Anfrage aktualisieren, umstrukturieren und übersetzen. Je mehr Material Menschen beisteuern, desto schwieriger wird es, es wiederzufinden, sodass der Agent auch auf Discord verfügbar gemacht werden könnte, um Fragen aus der Barrio-Wissensbasis zu beantworten.</li>
+                            <li><strong>Pablo V</strong> zeigte eine Ein-Seiten-Website, die er auf dieselbe Weise für eine Arbeitsgruppe pflegt, aufgebaut um Vision, Roadmap und Zeitplan (&bdquo;hier stehen wir, das kommt als Nächstes, das sind die Abhängigkeiten&ldquo;) mit aufklappbaren Details und Kalendererinnerungen. Er schlug vor, sie unabhängig von der Hauptwebsite zu halten, damit nichts kaputtgehen kann. Er verwies auch auf das Modell des &bdquo;einen Textfelds&ldquo; mancher Regierungswebsites, bei dem man einfach eine Frage stellt. Er bot an, eine Testwebsite zu erstellen, falls Ellen K ihm den Leitfaden schickt.</li>
+                            <li><strong>Korrekt halten.</strong> Ellen K möchte, dass Antworten ausschließlich aus dem eigenen Material des Vereins stammen. Daniel T merkte an, dass das Zitieren von Quellen nicht hilft, wenn die Quelle veraltet ist, was auf viele bestehende Hinweise zutrifft. Jemand muss sich genug kümmern, um dem Agenten mitzuteilen, wenn sich etwas geändert hat; das erfordert Aufmerksamkeit, keine technischen Fähigkeiten.</li>
+                            <li><strong>Wassersicherheit.</strong> Nebenbei berichtete Ellen K von einem Erfolg dieses Jahr: keine größeren Magenprobleme auf dem Gelände. Das Wasser wurde von den Freiwilligen am Wassertankwagen gechlort, während er befüllt wurde, mithilfe einer mit Dosierungen markierten Spritze. Für nächstes Jahr sind genaue Chlortests geplant.</li>
+                            <li><strong>Daniel T bot an, vor dem ALM eine von einem Agenten gepflegte Website für den Leitfaden aufzusetzen</strong>, möglicherweise mit einem Discord-Bot. Ellen K begrüßte das.</li>
+                        </ul>
+
+                        <h2>8. Künftige Community Calls</h2>
+                        <p>Ellen K hätte gern einen Zeitplan für diese Calls, eine Tabelle, die zeigt, welches Datum welches Thema abdeckt. Anna T ergänzte, dass die Teams für das Wohlergehen der Teilnehmenden (zum Beispiel das Einwilligungsteam) gern eigene Zeitfenster vor dem Event hätten, und ein Plan würde sicherstellen, dass jedes Team eines bekommt. Mehrere Barrios haben thematische Updates angeboten: <strong>Pulpo</strong> darüber, wie aus einem Müll-Barrio ein Spa wurde, <strong>Jam House</strong> über ihre Sanitärinstallation (noch zu bestätigen), und <strong>Glitch</strong> über ihr Tafelsystem, das gut funktioniert hat. Heather W fügte hinzu, wie sehr sie die Strukturen von Glitch dieses Jahr geschätzt habe.</p>
+
+                        <h2>9. Baumethoden dieses Jahres</h2>
+                        <ul>
+                            <li>Das Camp von <strong>Ellen K</strong> hat eine Umweltverpflichtung: nur biobasierte und gebrauchte Materialien, Solarkochen, keine Netzstromversorgung, und Seil statt Kabelbinder oder Ratschenspanngurte. Es funktioniert, ist aber harte Arbeit. Dieses Jahr gruben sie die Pfostenlöcher erstmals mit elektrischen Erdbohrern statt von Hand.</li>
+                            <li><strong>Heather W</strong>: Beim Garden of Joy hielt ein Belüftungssystem aus mit Seil und Steinen hochgezogenen Sonnensegeln dem Wind viel besser stand, als sie erwartet hatte.</li>
+                            <li><strong>Daniel T</strong>: Beim Garden of Joy wurden Bewehrungsstäbe, die von Hand eingeschlagen und wieder herausgezogen wurden, durch Schraubanker ersetzt, die mit einem hochdrehmomentigen Akkuschrauber eingedreht wurden, was Auf- und Abbau viel leichter machte. Auch das Camp von Ellen K wechselte dieses Jahr von Deadman-Ankern zu Schraubankern, wenn auch von Hand eingedreht. Daniel T bot an, dem Barrio-Support den Akkuschrauber zu leihen.</li>
+                        </ul>
+
+                        <h2>10. Ein Tempel ohne Feuer?</h2>
+                        <p><strong>Heather W</strong> war gerade von einem Burner-Event in Italien zurückgekommen, bei dem ein kleiner Tempel gebaut und verbrannt wurde. Sie fragte, ob ein Verbrennen im Juni oder September möglich wäre. Nach dem Verständnis von Daniel T fallen beide Monate in die Brandsaison, also wahrscheinlich nicht. Heather W schlug vor, trotzdem einen Tempel zu bauen, auf dem Menschen Dinge ablegen können, und ihn von einer Gruppe zu einem Decompression-Event bringen zu lassen, wo er sicherer verbrannt werden könnte.</p>
+                        <p>Ellen K verwies auf eine von <strong>Tank</strong> gestartete Discord-Diskussion: einen <strong>biologisch abbaubaren Tempel, der vergraben</strong> statt verbrannt wird, mit einer Zeremonie als dem Abschlussmoment, der dem Event fehlt. Er teilte Bilder, die von Grabhügeln inspiriert waren. Ellen K stellte sich eine gemeinschaftliche Anstrengung über die ganze Woche vor, mit einer Grube, Schaufeln und allen, die beim Graben helfen. Heather W sagte, eine Begräbniszeremonie, mit Absicht und Arbeit ausgeführt, könne ebenso kraftvoll sein wie eine mit Feuer. Anna T postete den Discord-Link im Chat, und der Discord-Link ist oben auf der Startseite von nobodies.team verlinkt. Heather W wird sich dort mit Tank in Verbindung setzen.</p>
+
+                        <h2>Entscheidungen</h2>
+                        <ul>
+                            <li><strong>Bei diesem Call wurden keine Entscheidungen getroffen.</strong> Die Ideen zu Inaktivität und Quorum, das Format des Barrio-Leitfadens und der Tempel sind offene Diskussionen.</li>
+                        </ul>
+
+                        <h2>Maßnahmen</h2>
+                        <table class="action-table">
+                            <tr><th>Maßnahme</th><th>Verantwortlich</th></tr>
+                            <tr><td>Umfrage zur Organisationsgestaltung bis zum 12. Oktober ausfüllen</td><td>Alle (Pablo V und Ellen K sagten, sie würden es tun)</td></tr>
+                            <tr><td>Bei Daniela nach dem neuesten Stand bei der INAGA nachfragen</td><td>Daniel T</td></tr>
+                            <tr><td>Einen Zeitplan mit Terminen und Themen der Community Calls veröffentlichen, einschließlich Barrio-Präsentationen und Zeitfenstern für das Wohlergehen der Teilnehmenden</td><td>Ellen K</td></tr>
+                            <tr><td>ALM-Workshop-Vorschläge an die E-Mail-Adresse des ALM oder den ALM-Discord-Kanal senden</td><td>Alle</td></tr>
+                            <tr><td>Sich an der Tempel-Diskussion auf Discord beteiligen und Tank kontaktieren</td><td>Heather W; alle Interessierten</td></tr>
+                        </table>
+
+                        <p><em>Das Jahrestreffen der Führungskräfte findet vom 15. bis 19. Oktober 2026 statt.</em></p>
+                        <p><em>Protokoll erstellt anhand des Google-Meet-Transkripts und des Chat-Protokolls.</em></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script src="../script.js"></script>
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>
