@@ -541,20 +541,23 @@
                 equalizePlenaries();
             }
 
-            // Rows under the same room headers get the same height, so every session box is the same size
+            // Parallel rows in the same day get the same height, so every session box is the same size
             function equalize() {
-                document.querySelectorAll('.room-headers').forEach(function (h) {
-                    var rows = [], el = h.nextElementSibling;
-                    while (el && el.classList.contains('slot-row')) {
-                        if (el.querySelectorAll('.slot:not(.full)').length === h.children.length) rows.push(el);
-                        el = el.nextElementSibling;
-                    }
+                document.querySelectorAll('.day-panel').forEach(function (panel) {
+                    var rows = [];
+                    panel.querySelectorAll('.room-headers').forEach(function (h) {
+                        var el = h.nextElementSibling;
+                        while (el && el.classList.contains('slot-row')) {
+                            if (el.querySelectorAll('.slot:not(.full)').length === h.children.length) rows.push(el);
+                            el = el.nextElementSibling;
+                        }
+                    });
                     rows.forEach(function (r) { r.style.minHeight = ''; });
                     var boxes = [];
                     rows.forEach(function (r) { boxes.push.apply(boxes, r.querySelectorAll('.slot:not(.full)')); });
                     boxes.forEach(function (b) { b.style.minHeight = ''; });
                     if (window.innerWidth <= 600) {
-                        // Phones: rooms stack, so give every session box in the group the same height
+                        // Phones: rooms stack, so give every session box in the day the same height
                         var tallest = 0;
                         boxes.forEach(function (b) { tallest = Math.max(tallest, b.offsetHeight); });
                         if (tallest) boxes.forEach(function (b) { b.style.minHeight = tallest + 'px'; });
