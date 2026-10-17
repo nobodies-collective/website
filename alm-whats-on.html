@@ -249,6 +249,10 @@
         }
 
         /* Session purpose bubble: hover on desktop, tap on phones */
+        .slot[data-href] { cursor: pointer; }
+        @media (hover: none) {
+            .slot[data-tip][data-href]::after { content: attr(data-tip) " · Tap again for the full session →"; }
+        }
         .slot[data-tip] { position: relative; cursor: pointer; }
         .slot[data-tip]::after,
         .slot[data-tip]::before {
@@ -412,10 +416,10 @@
 
                 <p class="section-label">Evening &mdash; programme</p>
                 <div class="slot-row"><div class="time-col">17:00–18:30</div><div class="slots">
-                    <div class="slot plenary full" data-tip="Lessons Learned (Céline)&#10;Ice Breaker (Céline)&#10;Annual Roadmap (Daniela)&#10;Finance (Peter)&#10;Asset Acquisition (Ellen)&#10;Facilitation Guidelines (Ellen/Cupcake)">⚡️ Welcome &amp; Year in Review &mdash; all together in Espai Comun</div>
+                    <div class="slot plenary full" data-tip="Lessons Learned (Céline)&#10;Ice Breaker (Céline)&#10;Annual Roadmap (Daniela)&#10;Finance (Peter)&#10;Asset Acquisition (Ellen)&#10;Facilitation Guidelines (Ellen/Cupcake)" data-href="alm-programme.html#s-welcome-year-in-review">⚡️ Welcome &amp; Year in Review &mdash; all together in Espai Comun</div>
                 </div></div>
                 <div class="slot-row"><div class="time-col">18:30–19:30</div><div class="slots">
-                    <div class="slot plenary full" data-tip="A fast-paced opening round where each working group pitches their topic in 30–60 seconds. The goal is to give everyone a quick map of what’s being worked on across the weekend so they can self-select into the sessions that matter most to them.">⚡️ Working Group Speed Dating &mdash; all together in Espai Comun</div>
+                    <div class="slot plenary full" data-tip="A fast-paced opening round where each working group pitches their topic in 30–60 seconds. The goal is to give everyone a quick map of what’s being worked on across the weekend so they can self-select into the sessions that matter most to them." data-href="alm-programme.html#s-working-group-speed-dating">⚡️ Working Group Speed Dating &mdash; all together in Espai Comun</div>
                 </div></div>
                 <div class="slot-row"><div class="time-col">20:00–21:00</div><div class="slots"><div class="slot meal full">Dinner</div></div></div>
                 <div class="slot-row"><div class="time-col">21:00–23:00</div><div class="slots"><div class="slot social full">Social time</div></div></div>
@@ -427,36 +431,36 @@
                 <div class="slot-row"><div class="time-col">08:00–09:00</div><div class="slots"><div class="slot meal full">Breakfast</div></div></div>
 
                 <div class="slot-row"><div class="time-col">09:30–10:30</div><div class="slots">
-                    <div class="slot plenary full" data-tip="Designing the on-site nerve centre for event week: layout, shift structure, radio handover, and the ops board that answers the question “who do I actually call?”">⚡️ Event-Time Ops &amp; Org Hub &mdash; all together in Espai Comun</div>
+                    <div class="slot plenary full" data-tip="Designing the on-site nerve centre for event week: layout, shift structure, radio handover, and the ops board that answers the question “who do I actually call?”" data-href="alm-programme.html#s-event-time-ops-org-hub">⚡️ Event-Time Ops &amp; Org Hub &mdash; all together in Espai Comun</div>
                 </div></div>
 
                 <div class="room-headers"><div class="room-header">Espai Comun</div><div class="room-header">Espai Polivalent</div><div class="room-header">Taller / Chapel</div></div>
                 <div class="slot-row"><div class="time-col">10:45–11:45</div><div class="slots">
-                    <div class="slot session" data-tip="AC cabins covered the heat, people who decompressed off-site came back to strike energised, the second Safehaus never showed up: and we made it. This session decides what we actually want our crew rest model to look like next year: what we book, what we budget, and how we bust the myth that leaving site means leaving for good.">Beyond Safehaus: What Should Crew Rest Look Like?</div>
-                    <div class="slot session">Asset Acquisition</div>
-                    <div class="slot session" data-tip="Review the updated zone framework and mobile sound rules, agree on consequences for non-compliance, and leave Vidalia with a policy the community can be held to.">Clearing the Air on Sound</div>
+                    <div class="slot session" data-tip="AC cabins covered the heat, people who decompressed off-site came back to strike energised, the second Safehaus never showed up: and we made it. This session decides what we actually want our crew rest model to look like next year: what we book, what we budget, and how we bust the myth that leaving site means leaving for good." data-href="alm-programme.html#s-beyond-safehaus-what-should-crew-rest-lo">Beyond Safehaus: What Should Crew Rest Look Like?</div>
+                    <div class="slot session" data-href="alm-programme.html#s-asset-acquisition">Asset Acquisition</div>
+                    <div class="slot session" data-tip="Review the updated zone framework and mobile sound rules, agree on consequences for non-compliance, and leave Vidalia with a policy the community can be held to." data-href="alm-programme.html#s-clearing-the-air-on-sound">Clearing the Air on Sound</div>
                 </div></div>
 
                 <div class="slot-row"><div class="time-col">12:00–13:00</div><div class="slots">
-                    <div class="slot session" data-tip="From toilet design to sleeping cabins, our physical site reflects choices about who we're building for. This session looks at how we make those decisions: what gets built, why, and how the site can work better for everyone on it.">Designing Our Site: Org Footprint, Structures and Spaces</div>
-                    <div class="slot session" data-tip="This session looks at MoE/MoN as a living part of Elsewhere: how it's organised, what it needs to thrive, and what we want it to become. We'll align on a budget approach, a team structure, and a plan for 2027.">MoE/MoN: What Are We Building?</div>
-                    <div class="slot open" data-tip="Self-organised sessions where attendees bring their own topics and find others to work on them with. No fixed agenda or lead. Just a room, a time slot, and whoever shows up.">Open space</div>
+                    <div class="slot session" data-tip="From toilet design to sleeping cabins, our physical site reflects choices about who we're building for. This session looks at how we make those decisions: what gets built, why, and how the site can work better for everyone on it." data-href="alm-programme.html#s-designing-our-site-org-footprint-structu">Designing Our Site: Org Footprint, Structures and Spaces</div>
+                    <div class="slot session" data-tip="This session looks at MoE/MoN as a living part of Elsewhere: how it's organised, what it needs to thrive, and what we want it to become. We'll align on a budget approach, a team structure, and a plan for 2027." data-href="alm-programme.html#s-moe-mon-what-are-we-building">MoE/MoN: What Are We Building?</div>
+                    <div class="slot open" data-tip="Self-organised sessions where attendees bring their own topics and find others to work on them with. No fixed agenda or lead. Just a room, a time slot, and whoever shows up." data-href="alm-programme.html#s-open-space">Open space</div>
                 </div></div>
 
                 <p class="section-label">Afternoon</p>
                 <div class="slot-row"><div class="time-col">13:00–15:00</div><div class="slots"><div class="slot meal full">Lunch</div></div></div>
 
                 <div class="slot-row"><div class="time-col">15:00–16:30</div><div class="slots">
-                    <div class="slot plenary full" data-tip="Board, coordinator and department roles: what each is responsible for, what each is explicitly not, and what the organisation needs from every department in exchange for maximum autonomy.">⚡️ How We're Structured: Roles, Responsibilities &amp; Reporting &mdash; all together in Espai Comun</div>
+                    <div class="slot plenary full" data-tip="Board, coordinator and department roles: what each is responsible for, what each is explicitly not, and what the organisation needs from every department in exchange for maximum autonomy." data-href="alm-programme.html#s-how-we-re-structured-roles-responsibilit">⚡️ How We're Structured: Roles, Responsibilities &amp; Reporting &mdash; all together in Espai Comun</div>
                 </div></div>
 
                 <div class="slot-row"><div class="time-col">17:00–18:30</div><div class="slots">
-                    <div class="slot plenary full" data-tip="Selection culture, fixed terms, shadowing and succession; and a care-first approach to deselection covering inactivity, performance, conflict and consent reports.">⚡️ Getting Into and Out of Roles &mdash; all together in Espai Comun</div>
+                    <div class="slot plenary full" data-tip="Selection culture, fixed terms, shadowing and succession; and a care-first approach to deselection covering inactivity, performance, conflict and consent reports." data-href="alm-programme.html#s-getting-into-and-out-of-roles">⚡️ Getting Into and Out of Roles &mdash; all together in Espai Comun</div>
                 </div></div>
 
                 <p class="section-label">Evening</p>
                 <div class="slot-row"><div class="time-col">19:00–20:00</div><div class="slots">
-                    <div class="slot session full" data-tip="Werkhaus is core to how the event functions — but it's been held together by last-minute goodwill. This session decides what it actually looks like as a properly governed system: how leads are selected, what the budget model is, and where it sits within the org.">Werkhaus: From Volunteer Camp to Org Infrastructure</div>
+                    <div class="slot session full" data-tip="Werkhaus is core to how the event functions — but it's been held together by last-minute goodwill. This session decides what it actually looks like as a properly governed system: how leads are selected, what the budget model is, and where it sits within the org." data-href="alm-programme.html#s-werkhaus-from-volunteer-camp-to-org-infr">Werkhaus: From Volunteer Camp to Org Infrastructure</div>
                 </div></div>
                 <div class="slot-row"><div class="time-col">20:00–21:00</div><div class="slots"><div class="slot meal full">Dinner</div></div></div>
                 <div class="slot-row"><div class="time-col">21:00–23:00</div><div class="slots"><div class="slot social full">Social time</div></div></div>
@@ -468,11 +472,11 @@
                 <div class="slot-row"><div class="time-col">08:00–09:00</div><div class="slots"><div class="slot meal full">Breakfast</div></div></div>
 
                 <div class="slot-row"><div class="time-col">09:30–11:00</div><div class="slots">
-                    <div class="slot plenary full" data-tip="A structured input session to map what each department can confirm, estimate, or still needs to quote so the business case has real numbers before any decisions are made.">⚡️ New Site: Purchase and Infrastructure &mdash; all together in Espai Comun</div>
+                    <div class="slot plenary full" data-tip="A structured input session to map what each department can confirm, estimate, or still needs to quote so the business case has real numbers before any decisions are made." data-href="alm-programme.html#s-new-site-purchase-and-infrastructure">⚡️ New Site: Purchase and Infrastructure &mdash; all together in Espai Comun</div>
                 </div></div>
 
                 <div class="slot-row"><div class="time-col">11:30–13:00</div><div class="slots">
-                    <div class="slot plenary full" data-tip="Each working group takes 5–10 minutes to present what they produced over the weekend: the decision made, the plan agreed, or the question they’re taking forward. No new discussions: just clear outputs, owners, and next steps so everyone leaves knowing what happens after Vidalia.">🎙 What We're Taking Home: Outcome Pitches &mdash; all together in Espai Comun</div>
+                    <div class="slot plenary full" data-tip="Each working group takes 5–10 minutes to present what they produced over the weekend: the decision made, the plan agreed, or the question they’re taking forward. No new discussions: just clear outputs, owners, and next steps so everyone leaves knowing what happens after Vidalia." data-href="alm-programme.html#s-what-we-re-taking-home-outcome-pitches">🎙 What We're Taking Home: Outcome Pitches &mdash; all together in Espai Comun</div>
                 </div></div>
 
                 <p class="section-label">Afternoon</p>
@@ -516,7 +520,11 @@
 
             // Tap a session to show its purpose (phones have no hover)
             document.addEventListener('click', function (e) {
+                // Computers: click goes to the session in the Programme. Phones: first tap shows the purpose, second tap goes.
+                var link = e.target.closest('.slot[data-href]');
                 var t = e.target.closest('.slot[data-tip]');
+                var hover = window.matchMedia('(hover: hover)').matches;
+                if (link && (hover || !t || t.classList.contains('tip-open'))) { location.href = link.dataset.href; return; }
                 document.querySelectorAll('.slot.tip-open').forEach(function (s) { if (s !== t) s.classList.remove('tip-open'); });
                 if (t) t.classList.toggle('tip-open');
             });

@@ -154,6 +154,9 @@
             color: var(--color-text-muted);
             font-variant-numeric: tabular-nums;
         }
+        .session-room { font-size: 0.8rem; font-weight: 600; color: var(--color-text); flex-basis: 100%; }
+        .session-card:target { box-shadow: 0 0 0 3px var(--color-accent); scroll-margin-top: 90px; }
+        .session-card { scroll-margin-top: 90px; }
         .session-meta-sep { color: var(--color-border); font-size: 0.8rem; }
 
         .pill {
@@ -316,13 +319,14 @@
             <summary class="section-label">Friday 16 October — Evening</summary>
             <div class="sessions">
 
-                <div class="session-card plenary">
+                <div class="session-card plenary" id="s-welcome-year-in-review">
                     <div class="session-meta">
                         <span class="session-time">17:00 – 18:30</span>
                         <span class="session-meta-sep">·</span>
                         <span class="pill pill-plenary">⚡ All together</span>
                         <span class="pill pill-onsite">On-site only</span>
                         <span class="session-time">90 min</span>
+                        <span class="session-room">📍 Espai Comun</span>
                     </div>
                     <div class="session-title">Welcome &amp; Year in Review</div>
                     <p class="session-purpose">Lessons Learned (Céline) · Ice Breaker (Céline) · Annual Roadmap (Daniela) · Finance (Peter) · Asset Acquisition (Ellen) · Facilitation Guidelines (Ellen/Cupcake)</p>
@@ -330,13 +334,14 @@
                     <div class="agenda-toggle-row"><button type="button" class="agenda-toggle" aria-expanded="false" aria-controls="agenda-welcome-and-year-in-review">Agenda ↓</button></div>
                 </div>
 
-                <div class="session-card plenary">
+                <div class="session-card plenary" id="s-working-group-speed-dating">
                     <div class="session-meta">
                         <span class="session-time">18:30 – 19:30</span>
                         <span class="session-meta-sep">·</span>
                         <span class="pill pill-plenary">⚡ All together</span>
                         <span class="pill pill-hybrid">Hybrid</span>
                         <span class="session-time">60 min</span>
+                        <span class="session-room">📍 Espai Comun</span>
                     </div>
                     <div class="session-title">Working Group Speed Dating</div>
                     <p class="session-purpose">A fast-paced opening round where each working group pitches their topic in 30–60 seconds. The goal is to give everyone a quick map of what’s being worked on across the weekend so they can self-select into the sessions that matter most to them.</p>
@@ -355,13 +360,14 @@
             <summary class="section-label">Saturday 17 October — Morning</summary>
             <div class="sessions">
 
-                <div class="session-card plenary">
+                <div class="session-card plenary" id="s-event-time-ops-org-hub">
                     <div class="session-meta">
                         <span class="session-time">09:30 – 10:30</span>
                         <span class="session-meta-sep">·</span>
                         <span class="pill pill-plenary">⚡ All together</span>
                         <span class="pill pill-hybrid">Hybrid</span>
                         <span class="session-time">60 min</span>
+                        <span class="session-room">📍 Espai Comun</span>
                     </div>
                     <div class="session-title">Event-Time Ops &amp; Org Hub</div>
                     <p class="session-purpose">Designing the on-site nerve centre for event week: layout, shift structure, radio handover, and the ops board that answers the question “who do I actually call?”</p>
@@ -409,12 +415,13 @@
                     </div>
                     <div class="parallel-inner">
 
-                        <div class="session-card">
+                        <div class="session-card" id="s-beyond-safehaus-what-should-crew-rest-lo">
                             <div class="session-meta">
                                 <span class="pill pill-parallel">Parallel</span>
                                 <span class="pill pill-hybrid">Hybrid</span>
                                 <span class="session-time">60 min</span>
-                            </div>
+                        <span class="session-room">📍 Espai Comun</span>
+                    </div>
                             <div class="session-title">Beyond Safehaus: What Should Crew Rest Look Like?</div>
                             <p class="session-purpose">AC cabins covered the heat, people who decompressed off-site came back to strike energised, the second Safehaus never showed up: and we made it. This session decides what we actually want our crew rest model to look like next year: what we book, what we budget, and how we bust the myth that leaving site means leaving for good.</p>
                     <div class="session-footer">
@@ -447,12 +454,13 @@
                     <div class="agenda-toggle-row"><button type="button" class="agenda-toggle" aria-expanded="false" aria-controls="agenda-beyond-safehaus-what-should-crew-rest-lo">Agenda ↓</button></div>
                         </div>
 
-                        <div class="session-card">
+                        <div class="session-card" id="s-clearing-the-air-on-sound">
                             <div class="session-meta">
                                 <span class="pill pill-parallel">Parallel</span>
                                 <span class="pill pill-hybrid">Hybrid</span>
                                 <span class="session-time">60 min</span>
-                            </div>
+                        <span class="session-room">📍 Taller / Chapel</span>
+                    </div>
                             <div class="session-title">Clearing the Air on Sound</div>
                             <p class="session-purpose">Review the updated zone framework and mobile sound rules, agree on consequences for non-compliance, and leave Vidalia with a policy the community can be held to.</p>
                     <div class="session-footer">
@@ -463,11 +471,12 @@
                     <div class="agenda-toggle-row"><button type="button" class="agenda-toggle" aria-expanded="false" aria-controls="agenda-clearing-the-air-on-sound">Agenda ↓</button></div>
                         </div>
 
-                        <div class="session-card">
+                        <div class="session-card" id="s-asset-acquisition">
                             <div class="session-meta">
                                 <span class="pill pill-parallel">Parallel</span>
                                 <span class="session-time">60 min</span>
-                            </div>
+                        <span class="session-room">📍 Espai Polivalent</span>
+                    </div>
                             <div class="session-title">Asset Acquisition</div>
                     </div>
 
@@ -481,12 +490,13 @@
                     </div>
                     <div class="parallel-inner">
 
-                        <div class="session-card">
+                        <div class="session-card" id="s-designing-our-site-org-footprint-structu">
                             <div class="session-meta">
                                 <span class="pill pill-parallel">Parallel</span>
                                 <span class="pill pill-hybrid">Hybrid</span>
                                 <span class="session-time">60 min</span>
-                            </div>
+                        <span class="session-room">📍 Espai Comun</span>
+                    </div>
                             <div class="session-title">Designing Our Site: Org Footprint, Structures and Spaces</div>
                             <p class="session-purpose">From toilet design to sleeping cabins, our physical site reflects choices about who we're building for. This session looks at how we make those decisions: what gets built, why, and how the site can work better for everyone on it.</p>
                     <div class="session-footer">
@@ -497,12 +507,13 @@
                     <div class="agenda-toggle-row"><button type="button" class="agenda-toggle" aria-expanded="false" aria-controls="agenda-designing-our-site-org-footprint-structu">Agenda ↓</button></div>
                         </div>
 
-                        <div class="session-card">
+                        <div class="session-card" id="s-moe-mon-what-are-we-building">
                             <div class="session-meta">
                                 <span class="pill pill-parallel">Parallel</span>
                                 <span class="pill pill-hybrid">Hybrid</span>
                                 <span class="session-time">60 min</span>
-                            </div>
+                        <span class="session-room">📍 Espai Polivalent</span>
+                    </div>
                             <div class="session-title">MoE/MoN: What Are We Building?</div>
                             <p class="session-purpose">This session looks at MoE/MoN as a living part of Elsewhere: how it's organised, what it needs to thrive, and what we want it to become. We'll align on a budget approach, a team structure, and a plan for 2027.</p>
                     <div class="session-footer">
@@ -513,12 +524,13 @@
                     <div class="agenda-toggle-row"><button type="button" class="agenda-toggle" aria-expanded="false" aria-controls="agenda-moe-mon-what-are-we-building">Agenda ↓</button></div>
                         </div>
 
-                        <div class="session-card open-space">
+                        <div class="session-card open-space" id="s-open-space">
                             <div class="session-meta">
                                 <span class="pill pill-open">Open space</span>
                                 <span class="pill pill-onsite">On-site only</span>
                                 <span class="session-time">60 min</span>
-                            </div>
+                        <span class="session-room">📍 Taller / Chapel</span>
+                    </div>
                             <div class="session-title">Open Space</div>
                             <p class="session-purpose">Self-organised sessions where attendees bring their own topics and find others to work on them with. No fixed agenda or lead. Just a room, a time slot, and whoever shows up.</p>
                     </div>
@@ -534,13 +546,14 @@
             <summary class="section-label">Saturday 17 October — Afternoon &amp; Evening</summary>
             <div class="sessions">
 
-                <div class="session-card plenary">
+                <div class="session-card plenary" id="s-how-we-re-structured-roles-responsibilit">
                     <div class="session-meta">
                         <span class="session-time">15:00 – 16:30</span>
                         <span class="session-meta-sep">·</span>
                         <span class="pill pill-plenary">⚡ All together</span>
                         <span class="pill pill-hybrid">Hybrid</span>
                         <span class="session-time">90 min</span>
+                        <span class="session-room">📍 Espai Comun</span>
                     </div>
                     <div class="session-title">How We're Structured: Roles, Responsibilities &amp; Reporting</div>
                     <p class="session-purpose">Board, coordinator and department roles: what each is responsible for, what each is explicitly not, and what the organisation needs from every department in exchange for maximum autonomy.</p>
@@ -552,13 +565,14 @@
                     <div class="agenda-toggle-row"><button type="button" class="agenda-toggle" aria-expanded="false" aria-controls="agenda-how-we-re-structured-roles-responsibilit">Agenda ↓</button></div>
                 </div>
 
-                <div class="session-card plenary">
+                <div class="session-card plenary" id="s-getting-into-and-out-of-roles">
                     <div class="session-meta">
                         <span class="session-time">17:00 – 18:30</span>
                         <span class="session-meta-sep">·</span>
                         <span class="pill pill-plenary">⚡ All together</span>
                         <span class="pill pill-hybrid">Hybrid</span>
                         <span class="session-time">90 min</span>
+                        <span class="session-room">📍 Espai Comun</span>
                     </div>
                     <div class="session-title">Getting Into and Out of Roles</div>
                     <p class="session-purpose">Selection culture, fixed terms, shadowing and succession; and a care-first approach to deselection covering inactivity, performance, conflict and consent reports.</p>
@@ -570,7 +584,7 @@
                     <div class="agenda-toggle-row"><button type="button" class="agenda-toggle" aria-expanded="false" aria-controls="agenda-getting-into-and-out-of-roles">Agenda ↓</button></div>
                 </div>
 
-                <div class="session-card">
+                <div class="session-card" id="s-werkhaus-from-volunteer-camp-to-org-infr">
                     <div class="session-meta">
                         <span class="session-time">19:00 – 20:00</span>
                         <span class="session-meta-sep">·</span>
@@ -597,13 +611,14 @@
             <summary class="section-label">Sunday 18 October — Morning</summary>
             <div class="sessions">
 
-                <div class="session-card plenary">
+                <div class="session-card plenary" id="s-new-site-purchase-and-infrastructure">
                     <div class="session-meta">
                         <span class="session-time">09:30 – 11:00</span>
                         <span class="session-meta-sep">·</span>
                         <span class="pill pill-plenary">⚡ All together</span>
                         <span class="pill pill-hybrid">Hybrid</span>
                         <span class="session-time">90 min</span>
+                        <span class="session-room">📍 Espai Comun</span>
                     </div>
                     <div class="session-title">New Site: Purchase and Infrastructure</div>
                     <p class="session-purpose">A structured input session to map what each department can confirm, estimate, or still needs to quote so the business case has real numbers before any decisions are made.</p>
@@ -616,13 +631,14 @@
                     <div class="agenda-toggle-row"><button type="button" class="agenda-toggle" aria-expanded="false" aria-controls="agenda-new-site-purchase-and-infrastructure">Agenda ↓</button></div>
                 </div>
 
-                <div class="session-card plenary">
+                <div class="session-card plenary" id="s-what-we-re-taking-home-outcome-pitches">
                     <div class="session-meta">
                         <span class="session-time">11:30 – 13:00</span>
                         <span class="session-meta-sep">·</span>
                         <span class="pill pill-plenary">⚡ All together</span>
                         <span class="pill pill-hybrid">Hybrid</span>
                         <span class="session-time">90 min</span>
+                        <span class="session-room">📍 Espai Comun</span>
                     </div>
                     <div class="session-title">What We're Taking Home: Outcome Pitches</div>
                     <p class="session-purpose">Each working group takes 5–10 minutes to present what they produced over the weekend: the decision made, the plan agreed, or the question they’re taking forward. No new discussions: just clear outputs, owners, and next steps so everyone leaves knowing what happens after Vidalia.</p>
@@ -658,6 +674,21 @@
             btn.textContent = open ? 'Close ↑' : 'Agenda ↓';
         });
     });
+    </script>
+    <script>
+        // Linked from What's On: open the day that holds the session, then scroll to it
+        (function () {
+            function reveal() {
+                var id = location.hash.slice(1);
+                var el = id && document.getElementById(id);
+                if (!el) return;
+                var d = el.closest('details');
+                if (d && !d.open) d.open = true;
+                el.scrollIntoView({ block: 'start' });
+            }
+            window.addEventListener('hashchange', reveal);
+            window.addEventListener('load', reveal);
+        })();
     </script>
 </body>
 </html>
