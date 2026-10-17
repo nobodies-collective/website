@@ -16,16 +16,12 @@
                         '<a role="button" tabindex="0" aria-haspopup="true">Event <svg class="nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>' +
                         '<ul class="nav-dropdown-menu">' +
                             '<li><a href="' + prefix + '/event-dates-2027.html">2027 Dates<span class="nav-badge">In progress</span></a></li>' +
-                            '<li><a href="' + prefix + '/art-grants.html">Art Grants</a></li>' +
-                            '<li><a href="' + prefix + '/barrios.html">Join a Barrio / Camp</a></li>' +
-                            '<li><a href="' + prefix + '/survival-guide.html">Survival Guide</a></li>' +
-                            '<li><a href="' + prefix + '/getting-there.html">Getting There</a></li>' +
-                            '<li><a href="' + prefix + '/bus-tickets.html">Bus Tickets</a></li>' +
+                            '<li><a href="' + prefix + '/2026-archive.html">Elsewhere 2026 Archive</a></li>' +
+                            '<li><a href="' + prefix + '/barrios.html">2026 Barrios / Camps</a></li>' +
+                            '<li><a href="' + prefix + '/survival-guide.html">2026 Survival Guide</a></li>' +
                             '<li><a href="' + prefix + '/volunteering.html">Volunteering</a></li>' +
-                            '<li><a href="' + prefix + '/werkhaus.html">Werkhaus</a></li>' +
                             '<li><a href="' + prefix + '/travel-reimbursement.html">Travel Reimbursement</a></li>' +
                             '<li><a href="' + prefix + '/speaking-about-elsewhere.html">Speaking About Elsewhere</a></li>' +
-                            '<li><a href="' + prefix + '/weather-alerts.html">Weather Alerts</a></li>' +
                         '</ul>' +
                     '</li>' +
                     '<li class="nav-dropdown">' +

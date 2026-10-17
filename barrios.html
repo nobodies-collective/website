@@ -246,6 +246,9 @@
     <script src="header.js" defer></script>
 
     <main>
+<!-- edition-notice:start -->
+<aside class="edition-notice" style="margin:6rem auto 1.5rem;padding:1.25rem;max-width:1100px;border:2px solid #945124;border-radius:8px;background:#fff5df;color:#24201b;font:1rem/1.6 Inter,sans-serif"><strong>2026 archive — the event has ended</strong><p>This page and its linked 2026 guides and PDFs are historical reference, not current applications, bookings or instructions for a future event. Future arrangements are not confirmed here.</p><a href="2026-archive.html" style="color:#713b17;text-decoration:underline">Browse the Elsewhere 2026 archive</a></aside>
+<!-- edition-notice:end -->
         <section class="guide-page">
             <div class="container">
                 <div class="guide-header">
@@ -268,11 +271,11 @@
 
                     <h2>How to create your own barrio</h2>
 
-                    <p>We&rsquo;ve put together a guide that walks you through everything you need to know to start and run a barrio at Elsewhere. Read it online in your language, or download the printable PDF.</p>
+                    <p>Our 2026 guide is retained as a reference for starting and running a barrio. Its registration process, deadlines and event services are not confirmed for the next event. Read it online in your language, or download the 2026 PDF.</p>
 
                     <div class="guide-cta-row">
-                        <a href="barrio-guide-en.html" class="btn btn-primary">Read the Barrio Guide</a>
-                        <a href="Barrio_Guide_2026.pdf" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Download PDF</a>
+                        <a href="barrio-guide-en.html" class="btn btn-primary">Read the 2026 Barrio Guide</a>
+                        <a href="Barrio_Guide_2026.pdf" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Download 2026 PDF</a>
                     </div>
 
                     <p class="barrio-guide-langs">Read online in:
@@ -288,16 +291,16 @@
                         <p>You can also communicate and collaborate with the barrios organizers on <a href="https://discord.gg/Xmj6YbFwSM" target="_blank" rel="noopener noreferrer">Discord</a>.</p>
                     </div>
 
-                    <h2>Join a barrio</h2>
+                    <h2>2026 barrio directory</h2>
 
-                    <p>Ready to find your people for the week? Explore the barrios on Humans, apply to one, and see which one feels like home.</p>
+                    <p>Explore the barrios listed for Elsewhere 2026 as a historical reference. These listings are not a confirmed directory or an invitation to apply for the next event.</p>
 
                     <div class="guide-cta-row">
-                        <a href="https://humans.nobodies.team/Barrios" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Join a Barrio Now!</a>
+                        <a href="https://humans.nobodies.team/Barrios" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View barrios on Humans</a>
                     </div>
 
                     <div class="barrios-grid-wrapper">
-                        <p class="barrios-grid-status" id="barrios-grid-status">Loading barrios&hellip;</p>
+                        <p class="barrios-grid-status" id="barrios-grid-status">Loading 2026 barrio directory&hellip;</p>
                         <div class="barrios-grid" id="barrios-grid"></div>
                     </div>
 
@@ -338,11 +341,11 @@
 
             var badges = '';
             if (b.acceptingMembers === 'Yes') {
-                badges += '<span class="barrio-badge barrio-badge--accepting">Accepting members</span>';
+                badges += '<span class="barrio-badge barrio-badge--accepting">2026: accepting members</span>';
             } else if (b.acceptingMembers === 'Maybe') {
-                badges += '<span class="barrio-badge barrio-badge--maybe">Maybe accepting</span>';
+                badges += '<span class="barrio-badge barrio-badge--maybe">2026: maybe accepting</span>';
             } else {
-                badges += '<span class="barrio-badge barrio-badge--closed">Full</span>';
+                badges += '<span class="barrio-badge barrio-badge--closed">2026: full</span>';
             }
             if (b.kidsWelcome === 'Yes') {
                 badges += '<span class="barrio-badge barrio-badge--kids">Kids welcome</span>';
@@ -387,11 +390,11 @@
                     if (ar !== br) return ar - br;
                     return a.name.localeCompare(b.name);
                 });
-                status.textContent = barrios.length + ' barrios at Elsewhere 2026. Click a card to learn more on Humans.';
+                status.textContent = barrios.length + ' barrios listed for Elsewhere 2026 — reference only, not next-event availability. Click a card to learn more on Humans.';
                 grid.innerHTML = barrios.map(renderCard).join('');
             })
             .catch(function(err) {
-                status.textContent = 'Could not load barrios. Explore them directly on Humans.';
+                status.textContent = 'Could not load the 2026 directory. Historical listings may be available on Humans.';
                 console.error('barrios load failed', err);
             });
     })();

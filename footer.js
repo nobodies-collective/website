@@ -68,11 +68,10 @@
                     '</div>' +
                     '<div class="footer-links">' +
                         '<h4>Other</h4>' +
-                        '<a href="' + prefix + '/barrios.html">Barrios</a>' +
-                        '<a href="' + prefix + '/getting-there.html">Getting There</a>' +
-                        '<a href="' + prefix + '/bus-tickets.html">Bus Tickets</a>' +
+                        '<a href="' + prefix + '/2026-archive.html">Elsewhere 2026 Archive</a>' +
+                        '<a href="' + prefix + '/barrios.html">2026 Barrios</a>' +
                         '<a href="' + prefix + '/consent.html">Consent</a>' +
-                        '<a href="' + prefix + '/survival-guide.html">Survival Guide</a>' +
+                        '<a href="' + prefix + '/survival-guide.html">2026 Survival Guide</a>' +
                         '<a href="' + prefix + '/speaking-about-elsewhere.html">Speaking about Elsewhere</a>' +
                         '<a href="' + prefix + '/#about">About</a>' +
                         '<a href="' + prefix + '/#principles">Principles</a>' +

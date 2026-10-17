@@ -6,57 +6,57 @@ var USEFUL_LINKS_CATEGORIES = [
             {
                 icon: 'person',
                 title: 'Humans',
-                description: 'Your backstage pass. Register, join teams, apply to roles, soon volunteering system.',
+                description: 'Our ongoing community platform. Create an account to stay connected and hear about future opportunities; old event listings are not current openings.',
                 url: 'https://humans.nobodies.team/',
                 accent: '#c2703e'
             },
             {
                 icon: 'ticket',
-                title: 'Tickets',
-                description: 'Your way in. No ticket, no dust. Low-income tickets coming soon!',
-                url: 'https://tickets.nobodies.team/events/nobodiescollective/2089167',
+                title: '2026 Archive',
+                description: 'The 2026 edition has finished. Ticket sales and applications are closed; explore its historical information.',
+                url: '2026-archive.html',
                 accent: '#c9922a'
             },
             {
                 icon: 'car',
                 title: 'Getting There',
-                description: 'How to reach Elsewhere by car, train, plane or rideshare. Where the site is.',
+                description: 'Archived travel information for the completed 2026 edition, not directions to a future event.',
                 url: 'getting-there.html',
                 accent: '#8CAAB5'
             },
             {
                 icon: 'bus',
                 title: 'Bus Tickets',
-                description: 'Coaches between Barcelona and the site. Schedule, prices, and how to book.',
+                description: 'Archived 2026 Barcelona coach schedule and prices. Booking is closed.',
                 url: 'bus-tickets.html',
                 accent: '#5B9BC5'
             },
             {
                 icon: 'person',
                 title: 'Art Grants',
-                description: 'Bring art to the desert. Apply for funding to make your vision real.',
+                description: 'How the 2026 art programme supported creative projects. That application round is closed.',
                 url: 'art-grants.html',
                 accent: '#D4A843'
             },
             {
                 icon: 'volunteer',
                 title: 'Volunteering Guide',
-                description: 'Everything you need to know about volunteering: how to sign up, what to expect, and how to help build Elsewhere.',
+                description: 'Learn how volunteering works and stay connected for the next event. Future roles and benefits will be confirmed separately.',
                 url: '/volunteering.html',
                 accent: '#C47A3E'
             },
             {
                 icon: 'person',
-                title: 'Apply for a Camp',
-                description: 'Register your barrio or camp through the Humans app.',
-                url: 'https://humans.nobodies.team/Barrios',
+                title: '2026 Barrios',
+                description: '2026 camp registration is closed. Visit the archive for historical information.',
+                url: '2026-archive.html',
                 accent: '#7BA68C'
             },
             {
                 icon: 'person',
                 title: 'Barrios Guide',
-                description: 'Everything you need to know about barrios: running one, joining one, and what to expect on site.',
-                url: 'Barrio_Guide_2026.pdf',
+                description: 'The 2026 barrio guide, retained as a historical reference rather than current application instructions.',
+                url: 'barrio-guide-en.html',
                 accent: '#A68B5C'
             },
             {
@@ -123,7 +123,7 @@ var USEFUL_LINKS_CATEGORIES = [
             {
                 icon: 'drive',
                 title: 'Drive',
-                description: 'Docs, files, shared chaos. Join the NCA or apply to a team and we\'ll give you access.',
+                description: 'Shared working documents for the community. Ask the relevant team about access.',
                 url: null,
                 accent: '#6B8EC5'
             }
