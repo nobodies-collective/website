@@ -99,6 +99,21 @@
         .alm-intro p { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; }
         .alm-intro p:last-child { margin-bottom: 0; }
 
+        .day-section > summary.section-label {
+            list-style: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .day-section > summary.section-label::-webkit-details-marker { display: none; }
+        .day-section > summary.section-label::after {
+            content: "▾";
+            font-size: 0.9rem;
+            transition: transform 0.15s;
+        }
+        .day-section:not([open]) > summary.section-label::after { transform: rotate(-90deg); }
+
         .section-label {
             font-size: 0.8rem;
             font-weight: 700;
@@ -297,7 +312,8 @@
             </section>
 
             <!-- ═══ FRIDAY ═══ -->
-            <p class="section-label">Friday 16 October — Evening</p>
+            <details class="day-section">
+            <summary class="section-label">Friday 16 October — Evening</summary>
             <div class="sessions">
 
                 <div class="session-card plenary">
@@ -332,9 +348,11 @@
                 </div>
 
             </div><!-- /friday sessions -->
+            </details>
 
             <!-- ═══ SATURDAY MORNING ═══ -->
-            <p class="section-label">Saturday 17 October — Morning</p>
+            <details class="day-section" open>
+            <summary class="section-label">Saturday 17 October — Morning</summary>
             <div class="sessions">
 
                 <div class="session-card plenary">
@@ -509,9 +527,11 @@
                 </div><!-- /parallel 12:00 -->
 
             </div><!-- /saturday morning sessions -->
+            </details>
 
             <!-- ═══ SATURDAY AFTERNOON ═══ -->
-            <p class="section-label">Saturday 17 October — Afternoon &amp; Evening</p>
+            <details class="day-section" open>
+            <summary class="section-label">Saturday 17 October — Afternoon &amp; Evening</summary>
             <div class="sessions">
 
                 <div class="session-card plenary">
@@ -570,9 +590,11 @@
                 </div>
 
             </div><!-- /saturday afternoon sessions -->
+            </details>
 
             <!-- ═══ SUNDAY ═══ -->
-            <p class="section-label">Sunday 18 October — Morning</p>
+            <details class="day-section" open>
+            <summary class="section-label">Sunday 18 October — Morning</summary>
             <div class="sessions">
 
                 <div class="session-card plenary">
@@ -613,6 +635,7 @@
                 </div>
 
             </div><!-- /sunday sessions -->
+            </details>
 
             <a href="alm-2026.html" class="back-link">Back to the ALM page</a>
 
