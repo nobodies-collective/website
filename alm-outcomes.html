@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALM 2026 — Outcomes | Nobodies Collective</title>
+    <meta name="description" content="What came out of each ALM 2026 session: what happened, and what was decided.">
+    <link rel="icon" type="image/svg+xml" href="https://nobodies.team/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            --color-bg: #f5f6fa;
+            --color-bg-alt: #e9ecf4;
+            --color-text: #1a2033;
+            --color-text-muted: #545c72;
+            --color-accent: #802034;
+            --color-accent-hover: #621827;
+            --color-pink: #1e3058;
+            --color-purple: #1e3058;
+            --color-purple-dark: #0e1830;
+            --color-yellow: #802034;
+            --color-border: #d6dbe6;
+            --navy: #1e3058;
+        }
+
+        .tr-page { padding: 0 0 4rem; }
+        .tr-content { max-width: 900px; margin: 0 auto; padding: 0 var(--spacing); }
+
+        .alm-hero {
+            padding: 10rem 0 4.5rem;
+            color: #fff;
+            background:
+                radial-gradient(circle at 82% 18%, rgba(128, 32, 52, 0.55), transparent 45%),
+                linear-gradient(135deg, rgba(14, 24, 48, 0.98), rgba(30, 48, 88, 0.94));
+        }
+        .alm-inner { max-width: 900px; margin: 0 auto; padding: 0 var(--spacing); }
+        .alm-kicker {
+            display: inline-block;
+            margin-bottom: 1.25rem;
+            padding: 0.45rem 0.85rem;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 999px;
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+        .alm-hero h1 {
+            color: #fff;
+            margin-bottom: 1.25rem;
+            font-size: clamp(2.2rem, 4.6vw, 3.4rem);
+        }
+        .alm-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.75rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.05rem;
+        }
+        .alm-meta a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+        .alm-meta a:hover { color: rgba(255,255,255,0.8); }
+
+        .alm-actions {
+            background: var(--color-bg-alt);
+            border-bottom: 1px solid var(--color-border);
+            padding: 1.25rem 0;
+        }
+        .alm-actions .alm-inner { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
+        .alm-actions .btn { justify-content: center; text-align: center; white-space: nowrap; }
+        .alm-actions .btn-soon { opacity: 0.4; cursor: default; pointer-events: none; }
+
+        .alm-intro {
+            margin-top: 3rem;
+            background: #e8edf6;
+            border: 1px solid #cdd6e6;
+            border-left: 4px solid var(--navy);
+            border-radius: var(--radius);
+            padding: 1.75rem 2.25rem;
+        }
+        .alm-intro h2 { font-size: clamp(1.5rem, 4vw, 2rem); margin-bottom: 1rem; color: var(--color-text); }
+        .alm-intro a { font-weight: 600; }
+        .alm-howto {
+            margin-top: 1.5rem;
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 1.75rem 2.25rem;
+        }
+        .alm-howto h2 { font-size: clamp(1.5rem, 4vw, 2rem); margin-bottom: 1rem; color: var(--color-text); }
+        .alm-howto p { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; }
+        .alm-howto p:last-child { margin-bottom: 0; }
+        .alm-howto a { font-weight: 600; }
+        .alm-howto strong { color: var(--color-text); }
+        @media (max-width: 900px) { .alm-howto { padding: 1.5rem 1.4rem; } }
+        .alm-intro p { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 0.75rem; }
+        .alm-intro p:last-child { margin-bottom: 0; }
+
+        .day-section > summary.section-label {
+            list-style: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .day-section > summary.section-label::-webkit-details-marker { display: none; }
+        .day-section > summary.section-label::after {
+            content: "▾";
+            font-size: 0.9rem;
+            transition: transform 0.15s;
+        }
+        .day-section:not([open]) > summary.section-label::after { transform: rotate(-90deg); }
+
+        .section-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin: 2.5rem 0 1rem;
+        }
+
+        /* ── Session cards ── */
+        .sessions { display: flex; flex-direction: column; gap: 1rem; }
+
+        .session-card {
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-left: 4px solid var(--navy);
+            border-radius: var(--radius);
+            padding: 1.5rem 1.75rem;
+        }
+        .session-card.plenary { border-left-color: var(--color-accent); }
+        .session-card.open-space {
+            background: var(--color-bg);
+            border-style: dashed;
+            border-left-style: solid;
+            border-left-color: #b4bcce;
+        }
+
+        .session-meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.4rem 0.6rem;
+            margin-bottom: 0.65rem;
+        }
+        .session-time {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--color-text-muted);
+            font-variant-numeric: tabular-nums;
+        }
+        .session-room { font-size: 0.8rem; font-weight: 600; color: var(--color-text); flex-basis: 100%; }
+        .session-card:target { box-shadow: 0 0 0 3px var(--color-accent); scroll-margin-top: 90px; }
+        .session-card { scroll-margin-top: 90px; }
+        .session-meta-sep { color: var(--color-border); font-size: 0.8rem; }
+
+        .pill {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+        }
+        .pill-plenary { background: rgba(128,32,52,0.1); color: var(--color-accent); }
+        .pill-parallel { background: rgba(30,48,88,0.1); color: var(--navy); }
+        .pill-open { background: rgba(180,188,206,0.25); color: var(--color-text-muted); }
+        .pill-hybrid { background: #dde8f5; color: #1e4080; }
+        .pill-onsite { background: #ede9f5; color: #3d2080; }
+
+        .session-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--color-text);
+            margin-bottom: 0.5rem;
+            line-height: 1.35;
+        }
+        .session-card.plenary .session-title { color: var(--color-accent); }
+
+        .session-purpose {
+            font-size: 0.92rem;
+            color: var(--color-text-muted);
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+        }
+        .session-purpose:last-child { margin-bottom: 0; }
+
+        .session-footer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem 1.25rem;
+            font-size: 0.8rem;
+            color: var(--color-text-muted);
+            margin-top: 0.85rem;
+            padding-top: 0.85rem;
+            border-top: 1px solid var(--color-border);
+        }
+        .session-footer strong { color: var(--color-text); font-weight: 600; }
+
+        /* parallel group wrapper */
+        .parallel-group {
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+        .parallel-label {
+            background: var(--color-bg-alt);
+            border-bottom: 1px solid var(--color-border);
+            padding: 0.6rem 1.25rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            color: var(--color-text-muted);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .parallel-label .ptime { color: var(--color-text); font-variant-numeric: tabular-nums; }
+        .parallel-inner { padding: 0.75rem; display: flex; flex-direction: column; gap: 0.6rem; }
+        .parallel-inner .session-card {
+            border-left-color: var(--navy);
+            border-radius: calc(var(--radius) - 2px);
+        }
+        /* Open spaces look like the dashed boxes on What's On */
+        .session-card.open-space,
+        .parallel-inner .session-card.open-space {
+            background: transparent;
+            border: 1.5px dashed #b4bcce;
+        }
+        .session-card.open-space .session-title { color: var(--color-text-muted); }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 3rem;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+        .back-link:hover { color: var(--color-accent); }
+        .back-link::before { content: '\2190'; }
+
+        /* ── Agenda toggle ── */
+        .agenda-toggle-row { display: none; justify-content: flex-end; margin-top: 0.85rem; }
+        .agenda-toggle-row.has-agenda { display: flex; }
+        .agenda-toggle {
+            font: inherit;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.35rem 0.85rem;
+            border: 2px solid var(--color-text);
+            border-radius: 50px;
+            background: transparent;
+            color: var(--color-text);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .agenda-toggle:hover { background: var(--color-text); color: #fff; }
+        .session-agenda { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-border); color: var(--color-text-muted); font-size: 0.92rem; line-height: 1.7; }
+        .session-agenda h3 { font-size: 0.95rem; color: var(--color-text); margin: 1rem 0 0.4rem; }
+        .session-agenda h3:first-child { margin-top: 0; }
+        .session-agenda ul { padding-left: 1.2rem; margin-bottom: 0.6rem; }
+        .session-agenda ol { padding-left: 1.4rem; margin-bottom: 0.6rem; list-style: decimal; }
+        .session-agenda p { margin-bottom: 0.6rem; }
+
+        @media (max-width: 760px) {
+            .alm-hero { padding: 9.5rem 0 3rem; }
+            .alm-actions .alm-inner { grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+            .alm-actions .btn { padding: 0.7rem 0.5rem; font-size: 0.85rem; white-space: normal; }
+            .alm-intro { padding: 1.5rem 1.4rem; }
+        }
+        @media (max-width: 500px) {
+            .session-card { padding: 1.1rem 1.1rem; }
+            .parallel-inner { padding: 0.5rem; }
+        }
+
+        /* ── Outcome cards ── */
+        .outcome-card {
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-left: 4px solid var(--navy);
+            border-radius: var(--radius);
+            scroll-margin-top: 90px;
+        }
+        .outcome-card.plenary { border-left-color: var(--color-accent); }
+        .outcome-card.open-space { background: transparent; border: 1.5px dashed #b4bcce; }
+        .outcome-card > summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 1.25rem 1.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        .outcome-card > summary::-webkit-details-marker { display: none; }
+        .outcome-card > summary::after {
+            content: "▾";
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+            transition: transform 0.15s;
+            flex-shrink: 0;
+        }
+        .outcome-card:not([open]) > summary::after { transform: rotate(-90deg); }
+        .outcome-card .session-title { margin-bottom: 0.25rem; }
+        .outcome-card.plenary .session-title { color: var(--color-accent); }
+        .outcome-card.open-space .session-title { color: var(--color-text-muted); }
+        .outcome-sub { font-size: 0.8rem; font-weight: 600; color: var(--color-text-muted); }
+        .outcome-card.soon > summary { cursor: default; }
+        .outcome-card.soon > summary::after { content: "Coming soon"; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; transform: none; }
+        .outcome-card.soon .session-title, .outcome-card.soon .outcome-sub { opacity: 0.55; }
+        .outcome-body {
+            padding: 0 1.75rem 1.5rem;
+            color: var(--color-text-muted);
+            font-size: 0.92rem;
+            line-height: 1.7;
+        }
+        .outcome-body h3 { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); margin: 1.5rem 0 0.5rem; padding-top: 1.25rem; border-top: 1px solid var(--color-border); }
+        .outcome-body h3:first-child { margin-top: 0; }
+        .outcome-body h4 { font-size: 0.95rem; color: var(--color-text); margin: 1rem 0 0.3rem; }
+        .outcome-body p { margin-bottom: 0.6rem; }
+        .outcome-body ul { padding-left: 1.2rem; margin-bottom: 0.6rem; }
+        .outcome-body li { margin-bottom: 0.3rem; }
+        @media (max-width: 500px) {
+            .outcome-card > summary { padding: 1.1rem 1.1rem; }
+            .outcome-body { padding: 0 1.1rem 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="shared-header" data-prefix="https://nobodies.team"></div>
+    <script src="header.js"></script>
+
+    <main class="tr-page">
+
+        <header class="alm-hero">
+            <div class="alm-inner">
+                <span class="alm-kicker">ALM 2026 · Outcomes</span>
+                <h1>Outcomes</h1>
+                <div class="alm-meta">
+                    <span>What happened in each session, and what we decided.</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="alm-actions">
+            <div class="alm-inner">
+                <a href="alm-2026.html" class="btn btn-outline">ALM info page</a>
+                <a href="alm-whats-on.html" class="btn btn-outline">What&rsquo;s On</a>
+                <a href="alm-programme.html" class="btn btn-outline">Programme</a>
+                <a href="alm-outcomes.html" class="btn btn-primary" aria-current="page">Outcomes</a>
+            </div>
+        </div>
+
+        <div class="tr-content">
+
+            <p class="section-label">Friday 16 October</p>
+            <div class="sessions">
+                <details class="outcome-card plenary" id="o-welcome-year-in-review">
+                    <summary><div><div class="session-title">Welcome &amp; Year in Review</div><div class="outcome-sub">Friday 16 October | Plenary | Vidalia, Barcelona</div></div></summary>
+                    <div class="outcome-body">
+                        <h3>What this session was</h3>
+                        <p>The opening session of ALM 2026 — a welcome, a practical briefing, and a warm-up to get everyone oriented before the working weekend began.</p>
+
+                        <h3>What happened</h3>
+                        <h4>Welcome</h4>
+                        <p>Daniela welcomed attendees and introduced the org team: Doreen (venue), Yllza (meals &amp; shifts), Jakir and Martian (equipment &amp; tech), Céline and Daniela (programme), and Cupcake (ALM finance and travel reimbursements). Doreen ran through house rules for the Vidalia space.</p>
+                        <h4>Lessons Learned</h4>
+                        <p>Céline opened a short lessons-learned round, drawing on the Discord channel and inviting the room to share experiences from 2026. Stories ranged from “emergency mud baths” and lost Jeep keys to sound policy breaches by a certain Trojan horse; setting a candid, energetic tone for the weekend.</p>
+                        <h4>Annual Roadmap framework</h4>
+                        <p>Daniela then presented the proposed Annual Roadmap framework: a film-industry-inspired production stage model (Development → Pre-production → On-site → Post-event) with hard milestones: event dates confirmed and budget voted by December, tickets on sale in January, barrio placement moving earlier in the year. This generated good discussion, particularly around how early barrio leads could realistically engage and how earlier ticket sales would help cash flow.</p>
+                        <h4>Finance Overview</h4>
+                        <p>Peter gave a Finance Overview of the 2026 cycle: ~5,000 transactions, a 20% margin in the first year as a new entity, and a cash flow crunch caused by Stripe holding a significant portion of revenue until after the event. A new automated finance system (expense reports → approval → accounting → bank) is now in place for 2027. The Finance Working Group kicks off the following Monday, open to anyone who wants a say in the budget.</p>
+                        <h4>Asset Acquisition Working Group</h4>
+                        <p>Ellen briefed the room on the Asset Acquisition Working Group: NCA leased the containers for the 2026 event; the goal now is to separate the event-time line from the acquisition process. Next steps would be putting in place a lease for the material assets for the 2027 event, and to complete a dossier for GNSL as the first step toward formal acquisition. All communications go through the working group; single point of contact with GNSL is Ben Ford.</p>
+                        <h4>Facilitation Guidelines briefing</h4>
+                        <p>Cupcake and Ellen closed with a Facilitation Guidelines briefing for the weekend’s sessions: roles (facilitator, secretary/timekeeper, hybrid guardian), five principles (autonomy, speak with intention, one point per person, speak for yourself, be for not against), hand signals for speaking order, clarifications, disagreement, and temperature checks, plus a consensus model (agree / agree with reservations / block) rather than majority voting.</p>
+
+                        <h3>Outcomes / decisions</h3>
+                        <ul>
+                            <li>Annual Roadmap stage framework proposed; turned into a Gantt chart post-ALM</li>
+                            <li>Finance Working Group confirmed, starting Monday 19 October, open to all</li>
+                            <li>Asset Acquisition Working Group update shared; next step is GNSL dossier</li>
+                            <li>Facilitation framework distributed to all session leads for the weekend</li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="outcome-card plenary soon" id="o-working-group-speed-dating">
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Working Group Speed Dating</div><div class="outcome-sub">Friday 16 October | Plenary | Vidalia, Barcelona</div></div></summary>
+                </details>
+            </div>
+
+            <p class="section-label">Saturday 17 October</p>
+            <div class="sessions">
+                <details class="outcome-card plenary soon" id="o-event-time-ops-org-hub">
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Event-Time Ops &amp; Org Hub</div><div class="outcome-sub">Saturday 17 October | Plenary | Vidalia, Barcelona</div></div></summary>
+                </details>
+                <details class="outcome-card session soon" id="o-beyond-safehaus-what-should-crew-rest-lo">
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Beyond Safehaus: What Should Crew Rest Look Like?</div><div class="outcome-sub">Saturday 17 October | Parallel session | Vidalia, Barcelona</div></div></summary>
+                </details>
+                <details class="outcome-card session soon" id="o-clearing-the-air-on-sound">
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Clearing the Air on Sound</div><div class="outcome-sub">Saturday 17 October | Parallel session | Vidalia, Barcelona</div></div></summary>
+                </details>
+                <details class="outcome-card open-space soon" id="o-asset-acquisition">
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Asset Acquisition Q&amp;A</div><div class="outcome-sub">Saturday 17 October | Open space | Vidalia, Barcelona</div></div></summary>
+                </details>
+                <details class="outcome-card session soon" id="o-designing-our-site-org-footprint-structu">
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Designing Our Site: Org Footprint, Structures and Spaces</div><div class="outcome-sub">Saturday 17 October | Parallel session | Vidalia, Barcelona</div></div></summary>
+                </details>
+                <details class="outcome-card session soon" id="o-moe-mon-what-are-we-building">
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">MoE/MoN: What Are We Building?</div><div class="outcome-sub">Saturday 17 October | Parallel session | Vidalia, Barcelona</div></div></summary>
+                </details>
+                <details class="outcome-card open-space soon" id="o-open-space">
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Policy around Politics: Working Group proposal</div><div class="outcome-sub">Saturday 17 October | Open space | Vidalia, Barcelona</div></div></summary>
+                </details>
+                <details class="outcome-card plenary soon" id="o-how-we-re-structured-roles-responsibilit">
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">How We're Structured: Roles, Responsibilities &amp; Reporting</div><div class="outcome-sub">Saturday 17 October | Plenary | Vidalia, Barcelona</div></div></summary>
+                </details>
+                <details class="outcome-card plenary soon" id="o-getting-into-and-out-of-roles">
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Getting Into and Out of Roles</div><div class="outcome-sub">Saturday 17 October | Plenary | Vidalia, Barcelona</div></div></summary>
+                </details>
+                <details class="outcome-card session soon" id="o-werkhaus-from-volunteer-camp-to-org-infr">
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Werkhaus: From Volunteer Camp to Org Infrastructure</div><div class="outcome-sub">Saturday 17 October | Parallel session | Vidalia, Barcelona</div></div></summary>
+                </details>
+                <details class="outcome-card open-space soon" id="o-families-working-group">
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Families Working Group</div><div class="outcome-sub">Saturday 17 October | Open space | Vidalia, Barcelona</div></div></summary>
+                </details>
+                <details class="outcome-card open-space soon" id="o-event-identity">
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Event Identity</div><div class="outcome-sub">Saturday 17 October | Open space | Vidalia, Barcelona</div></div></summary>
+                </details>
+            </div>
+
+            <p class="section-label">Sunday 18 October</p>
+            <div class="sessions">
+                <details class="outcome-card plenary soon" id="o-new-site-purchase-and-infrastructure">
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">New Site: Purchase and Infrastructure</div><div class="outcome-sub">Sunday 18 October | Plenary | Vidalia, Barcelona</div></div></summary>
+                </details>
+                <details class="outcome-card plenary soon" id="o-what-we-re-taking-home-outcome-pitches">
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">What We're Taking Home: Outcome Pitches</div><div class="outcome-sub">Sunday 18 October | Plenary | Vidalia, Barcelona</div></div></summary>
+                </details>
+                <details class="outcome-card open-space soon" id="o-ticketing">
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Ticketing</div><div class="outcome-sub">Sunday 18 October | Open space | Vidalia, Barcelona</div></div></summary>
+                </details>
+            </div>
+
+            <a href="alm-2026.html" class="back-link">Back to the ALM page</a>
+
+        </div><!-- /tr-content -->
+    </main>
+
+    <div id="shared-footer" data-prefix="https://nobodies.team"></div>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // A link to #o-... opens that session
+        (function () {
+            function reveal() {
+                var el = document.getElementById(location.hash.slice(1));
+                if (el && el.tagName === 'DETAILS' && !el.classList.contains('soon')) { el.open = true; el.scrollIntoView({ block: 'start' }); }
+            }
+            window.addEventListener('hashchange', reveal);
+            window.addEventListener('load', reveal);
+        })();
+    </script>
+</body>
+</html>
