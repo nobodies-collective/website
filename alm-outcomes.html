@@ -312,7 +312,7 @@
         .outcome-card .session-title { margin-bottom: 0.25rem; }
         .outcome-card.plenary .session-title { color: var(--color-accent); }
         .outcome-card.open-space .session-title { color: var(--color-text-muted); }
-        .outcome-sub { font-size: 0.8rem; font-weight: 600; color: var(--color-text-muted); }
+        .outcome-sub { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem 0.5rem; margin-top: 0.35rem; font-size: 0.8rem; font-weight: 600; color: var(--color-text-muted); }
         .outcome-card.soon > summary { cursor: default; }
         .outcome-card.soon > summary::after { content: "Coming soon"; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; transform: none; }
         .outcome-card.soon .session-title, .outcome-card.soon .outcome-sub { opacity: 0.55; }
@@ -347,6 +347,7 @@
                 <h1>Outcomes</h1>
                 <div class="alm-meta">
                     <span>What happened in each session, and what we decided.</span>
+                    <span>Vidalia, Barcelona · 16–18 October</span>
                 </div>
             </div>
         </header>
@@ -365,7 +366,7 @@
             <p class="section-label">Friday 16 October</p>
             <div class="sessions">
                 <details class="outcome-card plenary" id="o-welcome-year-in-review">
-                    <summary><div><div class="session-title">Welcome &amp; Year in Review</div><div class="outcome-sub">Friday 16 October | Plenary | Vidalia, Barcelona</div></div></summary>
+                    <summary><div><div class="session-title">Welcome &amp; Year in Review</div><div class="outcome-sub"><span class="pill pill-plenary">⚡ All together</span><span>Friday 16 October</span></div></div></summary>
                     <div class="outcome-body">
                         <h3>What this session was</h3>
                         <p>The opening session of ALM 2026 — a welcome, a practical briefing, and a warm-up to get everyone oriented before the working weekend began.</p>
@@ -394,60 +395,60 @@
                     </div>
                 </details>
                 <details class="outcome-card plenary soon" id="o-working-group-speed-dating">
-                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Working Group Speed Dating</div><div class="outcome-sub">Friday 16 October | Plenary | Vidalia, Barcelona</div></div></summary>
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Working Group Speed Dating</div><div class="outcome-sub"><span class="pill pill-plenary">⚡ All together</span><span>Friday 16 October</span></div></div></summary>
                 </details>
             </div>
 
             <p class="section-label">Saturday 17 October</p>
             <div class="sessions">
                 <details class="outcome-card plenary soon" id="o-event-time-ops-org-hub">
-                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Event-Time Ops &amp; Org Hub</div><div class="outcome-sub">Saturday 17 October | Plenary | Vidalia, Barcelona</div></div></summary>
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Event-Time Ops &amp; Org Hub</div><div class="outcome-sub"><span class="pill pill-plenary">⚡ All together</span><span>Saturday 17 October</span></div></div></summary>
                 </details>
                 <details class="outcome-card session soon" id="o-beyond-safehaus-what-should-crew-rest-lo">
-                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Beyond Safehaus: What Should Crew Rest Look Like?</div><div class="outcome-sub">Saturday 17 October | Parallel session | Vidalia, Barcelona</div></div></summary>
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Beyond Safehaus: What Should Crew Rest Look Like?</div><div class="outcome-sub"><span class="pill pill-parallel">Parallel</span><span>Saturday 17 October</span></div></div></summary>
                 </details>
                 <details class="outcome-card session soon" id="o-clearing-the-air-on-sound">
-                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Clearing the Air on Sound</div><div class="outcome-sub">Saturday 17 October | Parallel session | Vidalia, Barcelona</div></div></summary>
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Clearing the Air on Sound</div><div class="outcome-sub"><span class="pill pill-parallel">Parallel</span><span>Saturday 17 October</span></div></div></summary>
                 </details>
                 <details class="outcome-card open-space soon" id="o-asset-acquisition">
-                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Asset Acquisition Q&amp;A</div><div class="outcome-sub">Saturday 17 October | Open space | Vidalia, Barcelona</div></div></summary>
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Asset Acquisition Q&amp;A</div><div class="outcome-sub"><span class="pill pill-open">Open space</span><span>Saturday 17 October</span></div></div></summary>
                 </details>
                 <details class="outcome-card session soon" id="o-designing-our-site-org-footprint-structu">
-                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Designing Our Site: Org Footprint, Structures and Spaces</div><div class="outcome-sub">Saturday 17 October | Parallel session | Vidalia, Barcelona</div></div></summary>
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Designing Our Site: Org Footprint, Structures and Spaces</div><div class="outcome-sub"><span class="pill pill-parallel">Parallel</span><span>Saturday 17 October</span></div></div></summary>
                 </details>
                 <details class="outcome-card session soon" id="o-moe-mon-what-are-we-building">
-                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">MoE/MoN: What Are We Building?</div><div class="outcome-sub">Saturday 17 October | Parallel session | Vidalia, Barcelona</div></div></summary>
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">MoE/MoN: What Are We Building?</div><div class="outcome-sub"><span class="pill pill-parallel">Parallel</span><span>Saturday 17 October</span></div></div></summary>
                 </details>
                 <details class="outcome-card open-space soon" id="o-open-space">
-                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Policy around Politics: Working Group proposal</div><div class="outcome-sub">Saturday 17 October | Open space | Vidalia, Barcelona</div></div></summary>
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Policy around Politics: Working Group proposal</div><div class="outcome-sub"><span class="pill pill-open">Open space</span><span>Saturday 17 October</span></div></div></summary>
                 </details>
                 <details class="outcome-card plenary soon" id="o-how-we-re-structured-roles-responsibilit">
-                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">How We're Structured: Roles, Responsibilities &amp; Reporting</div><div class="outcome-sub">Saturday 17 October | Plenary | Vidalia, Barcelona</div></div></summary>
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">How We're Structured: Roles, Responsibilities &amp; Reporting</div><div class="outcome-sub"><span class="pill pill-plenary">⚡ All together</span><span>Saturday 17 October</span></div></div></summary>
                 </details>
                 <details class="outcome-card plenary soon" id="o-getting-into-and-out-of-roles">
-                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Getting Into and Out of Roles</div><div class="outcome-sub">Saturday 17 October | Plenary | Vidalia, Barcelona</div></div></summary>
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Getting Into and Out of Roles</div><div class="outcome-sub"><span class="pill pill-plenary">⚡ All together</span><span>Saturday 17 October</span></div></div></summary>
                 </details>
                 <details class="outcome-card session soon" id="o-werkhaus-from-volunteer-camp-to-org-infr">
-                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Werkhaus: From Volunteer Camp to Org Infrastructure</div><div class="outcome-sub">Saturday 17 October | Parallel session | Vidalia, Barcelona</div></div></summary>
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Werkhaus: From Volunteer Camp to Org Infrastructure</div><div class="outcome-sub"><span class="pill pill-parallel">Parallel</span><span>Saturday 17 October</span></div></div></summary>
                 </details>
                 <details class="outcome-card open-space soon" id="o-families-working-group">
-                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Families Working Group</div><div class="outcome-sub">Saturday 17 October | Open space | Vidalia, Barcelona</div></div></summary>
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Families Working Group</div><div class="outcome-sub"><span class="pill pill-open">Open space</span><span>Saturday 17 October</span></div></div></summary>
                 </details>
                 <details class="outcome-card open-space soon" id="o-event-identity">
-                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Event Identity</div><div class="outcome-sub">Saturday 17 October | Open space | Vidalia, Barcelona</div></div></summary>
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Event Identity</div><div class="outcome-sub"><span class="pill pill-open">Open space</span><span>Saturday 17 October</span></div></div></summary>
                 </details>
             </div>
 
             <p class="section-label">Sunday 18 October</p>
             <div class="sessions">
                 <details class="outcome-card plenary soon" id="o-new-site-purchase-and-infrastructure">
-                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">New Site: Purchase and Infrastructure</div><div class="outcome-sub">Sunday 18 October | Plenary | Vidalia, Barcelona</div></div></summary>
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">New Site: Purchase and Infrastructure</div><div class="outcome-sub"><span class="pill pill-plenary">⚡ All together</span><span>Sunday 18 October</span></div></div></summary>
                 </details>
                 <details class="outcome-card plenary soon" id="o-what-we-re-taking-home-outcome-pitches">
-                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">What We're Taking Home: Outcome Pitches</div><div class="outcome-sub">Sunday 18 October | Plenary | Vidalia, Barcelona</div></div></summary>
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">What We're Taking Home: Outcome Pitches</div><div class="outcome-sub"><span class="pill pill-plenary">⚡ All together</span><span>Sunday 18 October</span></div></div></summary>
                 </details>
                 <details class="outcome-card open-space soon" id="o-ticketing">
-                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Ticketing</div><div class="outcome-sub">Sunday 18 October | Open space | Vidalia, Barcelona</div></div></summary>
+                    <summary tabindex="-1" onclick="return false"><div><div class="session-title">Ticketing</div><div class="outcome-sub"><span class="pill pill-open">Open space</span><span>Sunday 18 October</span></div></div></summary>
                 </details>
             </div>
 
