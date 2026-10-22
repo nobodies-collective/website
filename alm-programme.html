@@ -263,6 +263,8 @@
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .agenda-toggle:hover { background: var(--color-text); color: #fff; }
+        .agenda-toggle-row.has-links { display: flex; gap: 0.5rem; }
+        a.agenda-toggle { text-decoration: none; display: inline-block; }
         .session-agenda { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-border); color: var(--color-text-muted); font-size: 0.92rem; line-height: 1.7; }
         .session-agenda h3 { font-size: 0.95rem; color: var(--color-text); margin: 1rem 0 0.4rem; }
         .session-agenda h3:first-child { margin-top: 0; }
@@ -879,12 +881,32 @@
     });
     </script>
     <script>
+    // Each session links to its outcomes
+    document.querySelectorAll('.session-card[id^="s-"]').forEach(function (card) {
+        var row = card.querySelector('.agenda-toggle-row');
+        if (!row) { row = document.createElement('div'); row.className = 'agenda-toggle-row'; card.appendChild(row); }
+        var a = document.createElement('a');
+        a.className = 'agenda-toggle';
+        a.href = 'alm-outcomes.html#o-' + card.id.slice(2);
+        a.textContent = 'Outcomes →';
+        row.appendChild(a);
+        row.classList.add('has-links');
+    });
+    </script>
+    <script>
         // Linked from What's On: open the day that holds the session, then scroll to it
         (function () {
             function reveal() {
                 var id = location.hash.slice(1);
                 var el = id && document.getElementById(id);
                 if (!el) return;
+                // Linked from Outcomes to an agenda: open the panel and scroll to its session
+                if (el.classList.contains('session-agenda')) {
+                    el.hidden = false;
+                    var b = document.querySelector('.agenda-toggle[aria-controls="' + id + '"]');
+                    if (b) { b.setAttribute('aria-expanded', 'true'); b.textContent = 'Close ↑'; }
+                    el = el.closest('.session-card') || el;
+                }
                 var d = el.closest('details');
                 if (d && !d.open) d.open = true;
                 el.scrollIntoView({ block: 'start' });
