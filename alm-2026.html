@@ -490,6 +490,18 @@
         }
         .alm-intro p:last-child { margin-bottom: 0; }
 
+        /* Burgundy "ALM is over" box, same shape as the intro box */
+        .alm-over {
+            background: #f5e9ec;
+            border: 1px solid #e6c9d0;
+            border-left: 4px solid #802034;
+            border-radius: var(--radius);
+            padding: 1.5rem 2.25rem;
+        }
+        .alm-over h3 { color: #802034; font-size: 1.15rem; margin-bottom: 0.5rem; }
+        .alm-over p { margin-bottom: 0; }
+        .alm-over + .alm-intro { margin-top: 1.5rem; }
+
         /* Key dates table (after event-dates-2027 research-table) */
         .table-wrap {
             width: 100%;
@@ -586,8 +598,6 @@
             padding: 1.5rem;
             margin-bottom: 1.25rem;
         }
-        .alm-over p { margin-bottom: 0.6rem; }
-        .alm-over p:last-child { margin-bottom: 0; }
         .alm-box h3 {
             font-size: 0.75rem;
             font-weight: 700;
@@ -654,12 +664,10 @@
         <div class="alm-layout">
         <div class="alm-main">
 
-            <div class="alm-box alm-over" id="alm-over">
+            <section class="tr-section alm-over" id="alm-over">
                 <h3>The ALM is over. Thank you!</h3>
-                <p>Thanks to everyone who came to Vidalia, in person or online. You can read what each session decided or set in motion on the <a href="alm-outcomes.html">Outcomes</a> page.</p>
-                <p><strong>Travel reimbursement:</strong> submit your claim in Humans by <strong>30 October 2026</strong>. <a href="#travel-reimbursement">Details below</a>.</p>
                 <p><strong>Tell us how it went:</strong> we&rsquo;d love your feedback on the weekend, both what worked and what didn&rsquo;t. <a href="https://forms.gle/BVCWTxhhFyGwxFuD8" target="_blank" rel="noopener noreferrer">Share your feedback &rarr;</a></p>
-            </div>
+            </section>
 
             <section class="tr-section alm-intro" id="what">
                 <h2>What is the ALM?</h2>
