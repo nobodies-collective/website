@@ -38,12 +38,19 @@
                         '<a role="button" tabindex="0" aria-haspopup="true">Association <svg class="nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>' +
                         '<ul class="nav-dropdown-menu">' +
                             '<li><a href="' + prefix + '/transparency.html">Meetings</a></li>' +
-                            '<li><a href="' + prefix + '/working-groups.html">Working Groups</a></li>' +
-                            '<li><a class="nav-subitem" href="https://elsitio.kimi.page/" target="_blank" rel="noopener noreferrer">ElSitio</a></li>' +
-                            '<li><a class="nav-subitem" href="' + prefix + '/event-dates-2027.html">Event Dates 2027</a></li>' +
-                            '<li><a class="nav-subitem" href="' + prefix + '/transparency/wg/governance.html">Governance Meeting</a></li>' +
                             '<li><a href="' + prefix + '/resolutions.html">Resolutions</a></li>' +
-                            '<li><a href="' + prefix + '/alm-2026.html">ALM 2026</a></li>' +
+                            '<li><a href="' + prefix + '/working-groups.html">Working Groups</a></li>' +
+                            '<li><a class="nav-subitem" href="' + prefix + '/alm-2026.html">ALM 2026</a></li>' +
+                            '<li><a class="nav-subitem" href="' + prefix + '/transparency/wg/assets.html">Assets</a></li>' +
+                            '<li><a class="nav-subitem" href="' + prefix + '/transparency/wg/elections.html">Elections</a></li>' +
+                            '<li><a class="nav-subitem" href="' + prefix + '/transparency/wg/event-dates.html">Event Dates 2027</a></li>' +
+                            '<li><a class="nav-subitem" href="' + prefix + '/transparency/wg/finance.html">Finance 2027</a></li>' +
+                            '<li><a class="nav-subitem" href="' + prefix + '/transparency/wg/governance.html">Governance</a></li>' +
+                            '<li><a class="nav-subitem" href="' + prefix + '/transparency/wg/moe-improvements.html">MoE Improvements</a></li>' +
+                            '<li><a class="nav-subitem" href="https://elsitio.kimi.page/" target="_blank" rel="noopener noreferrer">New Site (ElSitio)</a></li>' +
+                            '<li><a class="nav-subitem" href="' + prefix + '/transparency/wg/org-structure.html">Organisational Structure</a></li>' +
+                            '<li><a class="nav-subitem" href="' + prefix + '/transparency/wg/sound-policy.html">Sound Policy</a></li>' +
+                            '<li><a class="nav-subitem" href="' + prefix + '/transparency/wg/temple.html">Temple</a></li>' +
                         '</ul>' +
                     '</li>' +
                     /* Hidden: updates link (stale) — was in a Transparency dropdown, removed when the activity feed went; restore as a dropdown if updates.html comes back: '<li><a href="' + prefix + '/updates.html">Updates</a></li>' */
