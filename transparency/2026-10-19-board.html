@@ -31,9 +31,12 @@
         .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
         .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); vertical-align: top; }
         .action-table th { font-weight: 600; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
         .lang-content { display: none; }
         .lang-content.active { display: block; }
-        .draft-banner { background: #fff3cd; color: #6b4e00; border: 1px solid #ffe08a; padding: 0.75rem 1.25rem; border-radius: 8px; margin-bottom: 1.5rem; font-weight: 500; max-width: 800px; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -52,7 +55,17 @@
                     </div>
                 </div>
 
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
                 <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
 
                     <div class="attendees">
                         <strong>Board present: Daniel T (president), Ben D (secretary, facilitating), Chris O, Peter D (treasurer), Victor P, Pablo V (vice-president; joined during item 3), Ward D (joined during item 3) &middot; Absent: Michelle</strong>
@@ -145,6 +158,388 @@
 </table></div>
                     </div>
                 </div>
+
+                <div class="lang-content" data-lang="es">
+
+                    <div class="attendees">
+                        <strong>Junta presente: Daniel T (presidente), Ben D (secretario, facilitando), Chris O, Peter D (tesorero), Victor P, Pablo V (vicepresidente; se incorporó durante el punto 3), Ward D (se incorporó durante el punto 3) &middot; Ausente: Michelle</strong>
+                        Asistieron siete de los ocho miembros de la junta, por lo que hubo quórum. Victor P había añadido puntos del orden del día con antelación (aspectos destacados del ALM; composición de la junta).
+                    </div>
+
+                    <div class="meeting-content">
+
+<h2>1. Check-in y orden del día</h2>
+<ul>
+<li>Check-in realizado. La reunión tuvo lugar el último día de la Annual Leadership Meeting (ALM, 15&ndash;19 de octubre).</li>
+<li>Orden del día: aspectos destacados del ALM; composición de la junta y la próxima elección; funciones de secretaría; solicitudes de asociación pendientes; otros asuntos.</li>
+</ul>
+<h2>2. Aspectos destacados del ALM</h2>
+<ul>
+<li><strong>Calidad del debate.</strong> Daniel T informó de que las pautas de facilitación introducidas al principio por Ellen K y Cupcake hicieron que los talleres fueran notablemente más productivos, y que cada punto del orden del día produjo algo útil.</li>
+<li><strong>Grupos de trabajo.</strong> Se espera que surjan al menos media docena de grupos de trabajo del ALM, cada uno con un punto de partida tangible.</li>
+<li><strong>Participación.</strong> Ben D destacó la amplia variedad de personas que propusieron y facilitaron sesiones, y la profundidad del compromiso de la comunidad.</li>
+<li><strong>Coste.</strong> Peter D planteó el coste por participante como algo a revisar para el próximo ALM. Se debatieron opciones de local y catering; se consideró que la comida con catering merecía la pena para que los participantes pudieran concentrarse en el trabajo. No se confirmó ninguna cifra ni se tomó ninguna decisión.</li>
+</ul>
+<h2>3. Composición de la junta y la próxima elección</h2>
+<ul>
+<li><strong>Dimisiones anunciadas.</strong> Ben D y Victor P anunciaron que dimitirán de la junta. Victor P enviará su dimisión por escrito después de la reunión; Ben D enviará la suya más adelante en la semana, una vez que el traspaso de la secretaría esté en orden (véase el punto 4).</li>
+<li><strong>Michelle.</strong> La junta aprobó una moción, <strong>por unanimidad</strong>, para aceptar el aviso de dimisión que Michelle entregó por escrito al vicepresidente, Pablo V, el 5 de septiembre de 2026, como su dimisión formal. Si Michelle indica lo contrario dentro de siete días, se reconsiderará la aceptación. Ben D se pondrá en contacto con ella durante ese tiempo. Una vez que esto surta efecto, la junta tendrá siete miembros y el quórum será de cuatro.</li>
+<li><strong>Efecto de una dimisión.</strong> Según los estatutos, una dimisión surte efecto de inmediato; las funciones del miembro saliente son asumidas por los demás miembros de la junta o delegadas en uno de ellos designado por el presidente. Debe entonces convocarse una elección dentro de un plazo de 45 a 60 días.</li>
+<li><strong>Una sola elección.</strong> Se acordó que es mejor celebrar <strong>una sola elección para todos los puestos vacantes</strong> que varias elecciones separadas, por lo que se pidió a cualquiera que tuviera intención de dimitir que lo hiciera dentro de un breve intervalo respecto a los demás. Se señaló que, según los estatutos actuales, las elecciones solo pueden celebrarse para cubrir puestos que hayan quedado vacantes.</li>
+<li><strong>Candidatos.</strong> Se espera que el grupo de trabajo de estructura organizativa publique una descripción de en qué consisten los roles de la junta. Se animó a los miembros de la junta a contactar activamente con personas que consideren que serían buenos miembros de la junta, incluidas personas que normalmente no se plantearían presentarse, y a usar sus preguntas para elaborar el material previo a la elección.</li>
+<li><strong>Modificación de los estatutos.</strong> Peter D planteó una posible modificación de los estatutos sobre la duración del mandato de los nuevos miembros de la junta elegidos. Se acordó tratarlo como un tema separado; la elección no depende de ello.</li>
+</ul>
+<h2>4. Funciones de secretaría</h2>
+<ul>
+<li>Daniel T, como presidente, designó a <strong>Chris O</strong> para asumir las funciones de secretaría, <strong>con efecto desde el final de esta reunión</strong>, con el apoyo de Pablo V y Ben D. Las principales funciones son tramitar las solicitudes de asociación dentro de los plazos requeridos y dar el visto bueno a las actas.</li>
+<li>Ben D hará el traspaso a Chris O antes de presentar su dimisión.</li>
+</ul>
+<h2>5. Solicitudes de asociación</h2>
+<ul>
+<li>La junta revisó las solicitudes de asociación pendientes.</li>
+</ul>
+<h2>6. Otros asuntos</h2>
+<ul>
+<li><strong>Miembros salientes.</strong> Ben D y Victor P son bienvenidos a unirse al inicio de una o dos próximas reuniones, en caso de que se les necesite durante el traspaso. Ben D dijo que estaría disponible.</li>
+<li><strong>Declaración de interés.</strong> Por transparencia, Ben D declaró un interés en posibles futuros roles remunerados en captación y retención, o en marketing y comunicación, áreas mencionadas en el ALM como candidatas a roles remunerados. No hubo debate al respecto.</li>
+<li><strong>Comunicación de los cambios.</strong> Victor P pidió que los cambios en la junta se comunicaran con claridad a la comunidad. Ben D publicará un mensaje en Discord sobre su decisión; se invitó a los demás miembros salientes a hacer lo mismo.</li>
+</ul>
+<h2>7. Checkout</h2>
+<ul>
+<li>Checkout realizado. Los miembros de la junta agradecieron a Ben D y Victor P su trabajo en la junta este año, y también agradecieron a Michelle.</li>
+</ul>
+<hr />
+<h2>Decisiones</h2>
+<ul>
+<li><strong>Moción aprobada por unanimidad:</strong> el aviso de dimisión por escrito de Michelle del 5 de septiembre de 2026 se acepta como su dimisión formal, a menos que ella indique lo contrario dentro de siete días.</li>
+<li><strong>Funciones de secretaría</strong> designadas por el presidente a Chris O, con efecto desde el final de la reunión.</li>
+<li><strong>Acordado:</strong> se celebrará una sola elección para todos los puestos vacantes, dentro del plazo estatutario de 45&ndash;60 días.</li>
+</ul>
+<h2>Elementos de acción</h2>
+<div class="table-wrap"><table class="action-table">
+<thead>
+<tr>
+<th>Acción</th>
+<th>Responsable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Contactar con Michelle para confirmar la aceptación de su aviso de dimisión, dentro de siete días</td>
+<td>Ben D</td>
+</tr>
+<tr>
+<td>Traspasar las funciones y la documentación de secretaría a Chris O</td>
+<td>Ben D</td>
+</tr>
+<tr>
+<td>Notificar a los solicitantes el resultado de sus solicitudes de asociación</td>
+<td>Ben D</td>
+</tr>
+<tr>
+<td>Enviar la dimisión por escrito a la junta</td>
+<td>Victor P, Ben D</td>
+</tr>
+<tr>
+<td>Convocar una sola elección para los puestos vacantes de la junta dentro del plazo estatutario de 45&ndash;60 días</td>
+<td>Junta (responsable por confirmar)</td>
+</tr>
+<tr>
+<td>Publicar un mensaje en Discord sobre los cambios en la junta</td>
+<td>Ben D</td>
+</tr>
+</tbody>
+</table></div>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="fr">
+
+<div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaut.</div>
+
+                    <div class="attendees">
+                        <strong>Conseil présent : Daniel T (président), Ben D (secrétaire, facilitateur), Chris O, Peter D (trésorier), Victor P, Pablo V (vice-président ; arrivé pendant le point 3), Ward D (arrivé pendant le point 3) &middot; Absente : Michelle</strong>
+                        Sept des huit membres du conseil étaient présents, le quorum était donc atteint. Des points avaient été ajoutés à l'ordre du jour au préalable par Victor P (temps forts de l'ALM ; composition du conseil).
+                    </div>
+
+                    <div class="meeting-content">
+
+<h2>1. Tour de table et ordre du jour</h2>
+<ul>
+<li>Tour de table effectué. La réunion s'est tenue le dernier jour de l'Annual Leadership Meeting (ALM, du 15 au 19 octobre).</li>
+<li>Ordre du jour : temps forts de l'ALM ; composition du conseil et prochaine élection ; fonctions de secrétariat ; demandes d'adhésion en attente ; questions diverses.</li>
+</ul>
+<h2>2. Temps forts de l'ALM</h2>
+<ul>
+<li><strong>Qualité des échanges.</strong> Daniel T a indiqué que les consignes de facilitation introduites au départ par Ellen K et Cupcake avaient rendu les ateliers nettement plus productifs, et que chaque point de l'ordre du jour avait donné lieu à quelque chose d'utile.</li>
+<li><strong>Groupes de travail.</strong> Au moins une demi-douzaine de groupes de travail devraient émerger de l'ALM, chacun avec un point de départ concret.</li>
+<li><strong>Participation.</strong> Ben D a souligné la diversité des personnes ayant proposé et facilité des sessions, ainsi que la profondeur de l'engagement de la communauté.</li>
+<li><strong>Coût.</strong> Peter D a soulevé la question du coût par participant comme un point à examiner pour le prochain ALM. Les options de lieu et de restauration ont été discutées ; la restauration a été jugée utile pour permettre aux participants de se concentrer sur le travail. Aucun chiffre n'a été confirmé et aucune décision n'a été prise.</li>
+</ul>
+<h2>3. Composition du conseil et prochaine élection</h2>
+<ul>
+<li><strong>Démissions annoncées.</strong> Ben D et Victor P ont annoncé qu'ils démissionneraient du conseil. Victor P enverra sa démission par écrit après la réunion ; Ben D enverra la sienne plus tard dans la semaine, une fois la transmission des fonctions de secrétariat réglée (voir point 4).</li>
+<li><strong>Michelle.</strong> Le conseil a adopté une motion, <strong>à l'unanimité</strong>, pour accepter l'avis de démission que Michelle a remis par écrit au vice-président, Pablo V, le 5 septembre 2026, comme sa démission formelle. Si Michelle indique le contraire dans un délai de sept jours, l'acceptation sera reconsidérée. Ben D la contactera pendant ce délai. Une fois cela effectif, le conseil comptera sept membres et le quorum sera de quatre.</li>
+<li><strong>Effet d'une démission.</strong> Selon les statuts, une démission prend effet immédiatement ; les fonctions du membre sortant sont assumées par les membres restants du conseil ou déléguées à l'un d'eux désigné par le président. Une élection doit alors être organisée dans un délai de 45 à 60 jours.</li>
+<li><strong>Une seule élection.</strong> Il a été convenu qu'il est préférable d'organiser <strong>une seule élection pour tous les sièges vacants</strong> plutôt que plusieurs élections séparées ; il a donc été demandé à toute personne ayant l'intention de démissionner de le faire dans un court intervalle par rapport aux autres. Il a été noté que, en vertu des statuts actuels, des élections ne peuvent actuellement être organisées que pour pourvoir des sièges devenus vacants.</li>
+<li><strong>Candidatures.</strong> Le groupe de travail sur la structure organisationnelle devrait publier une description de ce qu'impliquent les rôles au conseil. Les membres du conseil ont été encouragés à approcher activement des personnes qu'ils pensent être de bons membres potentiels du conseil, y compris des personnes qui ne songeraient pas habituellement à se présenter, et à utiliser leurs questions pour éclairer le matériel préélectoral.</li>
+<li><strong>Modification des statuts.</strong> Peter D a soulevé une éventuelle modification des statuts concernant la durée du mandat des nouveaux membres élus du conseil. Il a été convenu de traiter cela comme un sujet distinct ; l'élection n'en dépend pas.</li>
+</ul>
+<h2>4. Fonctions de secrétariat</h2>
+<ul>
+<li>Daniel T, en tant que président, a désigné <strong>Chris O</strong> pour assumer les fonctions de secrétariat, <strong>avec effet à la fin de cette réunion</strong>, avec le soutien de Pablo V et Ben D. Les principales fonctions consistent à traiter les demandes d'adhésion dans les délais requis et à valider les comptes rendus.</li>
+<li>Ben D transmettra les fonctions à Chris O avant de présenter sa démission.</li>
+</ul>
+<h2>5. Demandes d'adhésion</h2>
+<ul>
+<li>Le conseil a examiné les demandes d'adhésion en attente.</li>
+</ul>
+<h2>6. Questions diverses</h2>
+<ul>
+<li><strong>Membres sortants.</strong> Ben D et Victor P sont les bienvenus pour rejoindre le début d'une ou deux prochaines réunions, au cas où leur présence serait nécessaire pendant la transition. Ben D a indiqué qu'il serait disponible.</li>
+<li><strong>Déclaration d'intérêt.</strong> Par souci de transparence, Ben D a déclaré un intérêt pour d'éventuels futurs rôles rémunérés dans le recrutement et la fidélisation, ou dans le marketing et la communication, des domaines mentionnés lors de l'ALM comme candidats à des rôles rémunérés. Aucune discussion n'a suivi.</li>
+<li><strong>Communication des changements.</strong> Victor P a demandé que les changements au conseil soient communiqués clairement à la communauté. Ben D publiera un message sur Discord à propos de sa décision ; les autres membres sortants ont été invités à faire de même.</li>
+</ul>
+<h2>7. Clôture</h2>
+<ul>
+<li>Clôture effectuée. Les membres du conseil ont remercié Ben D et Victor P pour leur travail au conseil cette année, et ont également remercié Michelle.</li>
+</ul>
+<hr />
+<h2>Décisions</h2>
+<ul>
+<li><strong>Motion adoptée à l'unanimité :</strong> l'avis de démission écrit de Michelle du 5 septembre 2026 est accepté comme sa démission formelle, sauf si elle indique le contraire dans un délai de sept jours.</li>
+<li><strong>Fonctions de secrétariat</strong> désignées par le président à Chris O, avec effet à la fin de la réunion.</li>
+<li><strong>Convenu :</strong> une seule élection sera organisée pour tous les sièges vacants, dans le délai statutaire de 45&ndash;60 jours.</li>
+</ul>
+<h2>Actions à mener</h2>
+<div class="table-wrap"><table class="action-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Responsable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Contacter Michelle pour confirmer l'acceptation de son avis de démission, dans un délai de sept jours</td>
+<td>Ben D</td>
+</tr>
+<tr>
+<td>Transmettre les fonctions et la documentation de secrétariat à Chris O</td>
+<td>Ben D</td>
+</tr>
+<tr>
+<td>Informer les candidats du résultat de leur demande d'adhésion</td>
+<td>Ben D</td>
+</tr>
+<tr>
+<td>Envoyer la démission par écrit au conseil</td>
+<td>Victor P, Ben D</td>
+</tr>
+<tr>
+<td>Organiser une seule élection pour les sièges vacants du conseil dans le délai statutaire de 45&ndash;60 jours</td>
+<td>Conseil (responsable à confirmer)</td>
+</tr>
+<tr>
+<td>Publier un message sur Discord à propos des changements au conseil</td>
+<td>Ben D</td>
+</tr>
+</tbody>
+</table></div>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="it">
+
+<div class="lang-note">In caso di discrepanze tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Consiglio presente: Daniel T (presidente), Ben D (segretario, facilitatore), Chris O, Peter D (tesoriere), Victor P, Pablo V (vicepresidente; si è unito durante il punto 3), Ward D (si è unito durante il punto 3) &middot; Assente: Michelle</strong>
+                        Erano presenti sette degli otto membri del consiglio, quindi il quorum era raggiunto. I punti all'ordine del giorno erano stati aggiunti in anticipo da Victor P (punti salienti dell'ALM; composizione del consiglio).
+                    </div>
+
+                    <div class="meeting-content">
+
+<h2>1. Check-in e ordine del giorno</h2>
+<ul>
+<li>Check-in effettuato. La riunione si è svolta nell'ultimo giorno dell'Annual Leadership Meeting (ALM, 15&ndash;19 ottobre).</li>
+<li>Ordine del giorno: punti salienti dell'ALM; composizione del consiglio e prossima elezione; funzioni di segreteria; domande di adesione in sospeso; eventuali altre questioni.</li>
+</ul>
+<h2>2. Punti salienti dell'ALM</h2>
+<ul>
+<li><strong>Qualità della discussione.</strong> Daniel T ha riferito che le linee guida di facilitazione introdotte all'inizio da Ellen K e Cupcake hanno reso i workshop notevolmente più produttivi, e che ogni punto all'ordine del giorno ha prodotto qualcosa di utile.</li>
+<li><strong>Gruppi di lavoro.</strong> Si prevede che dall'ALM emergano almeno una mezza dozzina di gruppi di lavoro, ciascuno con un punto di partenza concreto.</li>
+<li><strong>Partecipazione.</strong> Ben D ha evidenziato l'ampia varietà di persone che hanno proposto e facilitato sessioni, e la profondità del coinvolgimento della comunità.</li>
+<li><strong>Costo.</strong> Peter D ha posto la questione del costo per partecipante come un aspetto da considerare per il prossimo ALM. Sono state discusse opzioni di sede e catering; il catering è stato considerato utile affinché i partecipanti potessero concentrarsi sul lavoro. Non sono state confermate cifre né prese decisioni.</li>
+</ul>
+<h2>3. Composizione del consiglio e prossima elezione</h2>
+<ul>
+<li><strong>Dimissioni annunciate.</strong> Ben D e Victor P hanno annunciato che si dimetteranno dal consiglio. Victor P invierà le sue dimissioni per scritto dopo la riunione; Ben D invierà le sue più avanti nella settimana, una volta che il passaggio di consegne della segreteria sarà in ordine (vedi punto 4).</li>
+<li><strong>Michelle.</strong> Il consiglio ha approvato una mozione, <strong>all'unanimità</strong>, per accettare l'avviso di dimissioni che Michelle ha presentato per scritto alla vicepresidente, Pablo V, il 5 settembre 2026, come sue dimissioni formali. Se Michelle indica il contrario entro sette giorni, l'accettazione sarà riconsiderata. Ben D la contatterà durante questo periodo. Una volta che ciò avrà effetto, il consiglio avrà sette membri e il quorum sarà di quattro.</li>
+<li><strong>Effetto delle dimissioni.</strong> Secondo lo statuto, le dimissioni hanno effetto immediato; le funzioni del membro uscente sono assunte dai restanti membri del consiglio o delegate a uno di essi designato dal presidente. Un'elezione deve quindi essere tenuta entro 45&ndash;60 giorni.</li>
+<li><strong>Un'unica elezione.</strong> È stato concordato che è meglio tenere <strong>un'unica elezione per tutti i seggi resisi vacanti</strong> piuttosto che diverse elezioni separate, pertanto a chiunque intendesse dimettersi è stato chiesto di farlo entro un breve intervallo dagli altri. È stato osservato che, secondo lo statuto attuale, le elezioni possono attualmente essere tenute solo per riempire seggi resisi vacanti.</li>
+<li><strong>Candidature.</strong> Il gruppo di lavoro sulla struttura organizzativa dovrebbe pubblicare una descrizione di ciò che comportano i ruoli nel consiglio. I membri del consiglio sono stati incoraggiati a contattare attivamente persone che ritengono sarebbero buoni membri del consiglio, incluse persone che normalmente non considererebbero di candidarsi, e a usare le loro domande per informare il materiale pre-elettorale.</li>
+<li><strong>Modifica dello statuto.</strong> Peter D ha posto una possibile modifica dello statuto sulla durata del mandato dei nuovi membri eletti del consiglio. È stato concordato di trattarlo come un argomento separato; l'elezione non dipende da esso.</li>
+</ul>
+<h2>4. Funzioni di segreteria</h2>
+<ul>
+<li>Daniel T, in qualità di presidente, ha designato <strong>Chris O</strong> per assumere le funzioni di segreteria, <strong>con effetto dalla fine di questa riunione</strong>, con il supporto di Pablo V e Ben D. Le principali funzioni consistono nel gestire le domande di adesione entro i termini richiesti e firmare i verbali.</li>
+<li>Ben D effettuerà il passaggio di consegne a Chris O prima di presentare le sue dimissioni.</li>
+</ul>
+<h2>5. Domande di adesione</h2>
+<ul>
+<li>Il consiglio ha esaminato le domande di adesione in sospeso.</li>
+</ul>
+<h2>6. Eventuali altre questioni</h2>
+<ul>
+<li><strong>Membri uscenti.</strong> Ben D e Victor P sono i benvenuti a partecipare all'inizio di una o due prossime riunioni, nel caso in cui fossero necessari durante il passaggio di consegne. Ben D ha detto che sarebbe stato disponibile.</li>
+<li><strong>Dichiarazione di interesse.</strong> Per trasparenza, Ben D ha dichiarato un interesse in possibili futuri ruoli retribuiti nel reclutamento e nella fidelizzazione, o nel marketing e nella comunicazione, aree menzionate all'ALM come candidate a ruoli retribuiti. Non è seguita alcuna discussione.</li>
+<li><strong>Comunicazione dei cambiamenti.</strong> Victor P ha chiesto che i cambiamenti nel consiglio fossero comunicati chiaramente alla comunità. Ben D pubblicherà un messaggio su Discord riguardo alla sua decisione; gli altri membri uscenti sono stati invitati a fare lo stesso.</li>
+</ul>
+<h2>7. Checkout</h2>
+<ul>
+<li>Checkout effettuato. I membri del consiglio hanno ringraziato Ben D e Victor P per il loro lavoro nel consiglio quest'anno, e hanno anche ringraziato Michelle.</li>
+</ul>
+<hr />
+<h2>Decisioni</h2>
+<ul>
+<li><strong>Mozione approvata all'unanimità:</strong> l'avviso di dimissioni scritto di Michelle del 5 settembre 2026 è accettato come sue dimissioni formali, salvo che indichi il contrario entro sette giorni.</li>
+<li><strong>Funzioni di segreteria</strong> designate dal presidente a Chris O, con effetto dalla fine della riunione.</li>
+<li><strong>Concordato:</strong> un'unica elezione sarà tenuta per tutti i seggi resisi vacanti, entro il termine statutario di 45&ndash;60 giorni.</li>
+</ul>
+<h2>Azioni da svolgere</h2>
+<div class="table-wrap"><table class="action-table">
+<thead>
+<tr>
+<th>Azione</th>
+<th>Responsabile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Contattare Michelle per confermare l'accettazione del suo avviso di dimissioni, entro sette giorni</td>
+<td>Ben D</td>
+</tr>
+<tr>
+<td>Effettuare il passaggio di consegne delle funzioni e della documentazione di segreteria a Chris O</td>
+<td>Ben D</td>
+</tr>
+<tr>
+<td>Informare i richiedenti dell'esito delle loro domande di adesione</td>
+<td>Ben D</td>
+</tr>
+<tr>
+<td>Inviare le dimissioni per scritto al consiglio</td>
+<td>Victor P, Ben D</td>
+</tr>
+<tr>
+<td>Convocare un'unica elezione per i seggi resisi vacanti del consiglio entro il termine statutario di 45&ndash;60 giorni</td>
+<td>Consiglio (responsabile da confermare)</td>
+</tr>
+<tr>
+<td>Pubblicare un messaggio su Discord riguardo ai cambiamenti nel consiglio</td>
+<td>Ben D</td>
+</tr>
+</tbody>
+</table></div>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="de">
+
+<div class="lang-note">Bei Diskrepanzen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Vorstand anwesend: Daniel T (Präsident), Ben D (Sekretär, Moderation), Chris O, Peter D (Schatzmeister), Victor P, Pablo V (Vizepräsident; kam während Punkt 3 hinzu), Ward D (kam während Punkt 3 hinzu) &middot; Abwesend: Michelle</strong>
+                        Sieben der acht Vorstandsmitglieder waren anwesend, somit war das Quorum erreicht. Tagesordnungspunkte waren im Voraus von Victor P hinzugefügt worden (ALM-Highlights; Vorstandszusammensetzung).
+                    </div>
+
+                    <div class="meeting-content">
+
+<h2>1. Check-in und Tagesordnung</h2>
+<ul>
+<li>Check-in durchgeführt. Das Treffen fand am letzten Tag des Annual Leadership Meeting (ALM, 15.&ndash;19. Oktober) statt.</li>
+<li>Tagesordnung: ALM-Highlights; Vorstandszusammensetzung und die nächste Wahl; Aufgaben des Sekretariats; ausstehende Mitgliedschaftsanträge; Sonstiges.</li>
+</ul>
+<h2>2. ALM-Highlights</h2>
+<ul>
+<li><strong>Qualität der Diskussion.</strong> Daniel T berichtete, dass die zu Beginn von Ellen K und Cupcake eingeführten Moderationsrichtlinien die Workshops merklich produktiver gemacht hätten und dass jeder Tagesordnungspunkt etwas Nützliches hervorgebracht habe.</li>
+<li><strong>Arbeitsgruppen.</strong> Es wird erwartet, dass mindestens ein halbes Dutzend Arbeitsgruppen aus dem ALM hervorgehen, jede mit einem konkreten Ausgangspunkt.</li>
+<li><strong>Beteiligung.</strong> Ben D hob die große Vielfalt an Personen hervor, die Sitzungen vorgeschlagen und moderiert hatten, sowie die Tiefe des Engagements der Community.</li>
+<li><strong>Kosten.</strong> Peter D brachte die Kosten pro Teilnehmer als Punkt zur Prüfung für das nächste ALM ein. Optionen für Veranstaltungsort und Catering wurden erörtert; Catering wurde als sinnvoll angesehen, damit sich die Teilnehmer auf die Arbeit konzentrieren können. Es wurden keine Zahlen bestätigt und keine Entscheidungen getroffen.</li>
+</ul>
+<h2>3. Vorstandszusammensetzung und die nächste Wahl</h2>
+<ul>
+<li><strong>Angekündigte Rücktritte.</strong> Ben D und Victor P kündigten an, dass sie vom Vorstand zurücktreten werden. Victor P wird seinen Rücktritt nach dem Treffen schriftlich einreichen; Ben D wird seinen später in der Woche einreichen, sobald die Übergabe des Sekretariats geregelt ist (siehe Punkt 4).</li>
+<li><strong>Michelle.</strong> Der Vorstand verabschiedete <strong>einstimmig</strong> einen Antrag, die Rücktrittsmitteilung, die Michelle der Vizepräsidentin Pablo V am 5. September 2026 schriftlich übermittelt hatte, als ihren formellen Rücktritt zu akzeptieren. Wenn Michelle innerhalb von sieben Tagen etwas anderes angibt, wird die Annahme erneut geprüft. Ben D wird sie während dieser Zeit kontaktieren. Sobald dies wirksam wird, wird der Vorstand sieben Mitglieder haben und das Quorum wird vier betragen.</li>
+<li><strong>Wirkung eines Rücktritts.</strong> Gemäß der Satzung wird ein Rücktritt sofort wirksam; die Aufgaben des ausscheidenden Mitglieds werden von den verbleibenden Vorstandsmitgliedern übernommen oder an eines von ihnen delegiert, das vom Präsidenten bestimmt wird. Eine Wahl muss dann innerhalb von 45 bis 60 Tagen abgehalten werden.</li>
+<li><strong>Eine Wahl.</strong> Es wurde vereinbart, dass es besser ist, <strong>eine einzige Wahl für alle frei gewordenen Sitze</strong> abzuhalten als mehrere getrennte Wahlen, daher wurde jede Person, die einen Rücktritt beabsichtigte, gebeten, dies innerhalb eines kurzen Zeitabstands von den anderen zu tun. Es wurde festgestellt, dass gemäß der derzeitigen Satzung Wahlen derzeit nur zur Besetzung frei gewordener Sitze abgehalten werden können.</li>
+<li><strong>Kandidaturen.</strong> Die Arbeitsgruppe für organisatorische Struktur wird voraussichtlich eine Beschreibung dessen veröffentlichen, was die Vorstandsrollen beinhalten. Vorstandsmitglieder wurden ermutigt, aktiv auf Personen zuzugehen, die sie für gute Vorstandsmitglieder halten, einschließlich Personen, die normalerweise nicht in Erwägung ziehen würden zu kandidieren, und ihre Fragen zu nutzen, um das Material vor der Wahl zu gestalten.</li>
+<li><strong>Satzungsänderung.</strong> Peter D brachte eine mögliche Satzungsänderung zur Amtszeit neu gewählter Vorstandsmitglieder ein. Es wurde vereinbart, dies als separates Thema zu behandeln; die Wahl hängt nicht davon ab.</li>
+</ul>
+<h2>4. Aufgaben des Sekretariats</h2>
+<ul>
+<li>Daniel T bestimmte als Präsident <strong>Chris O</strong>, die Aufgaben des Sekretariats zu übernehmen, <strong>mit Wirkung vom Ende dieses Treffens</strong>, mit Unterstützung von Pablo V und Ben D. Die Hauptaufgaben bestehen darin, Mitgliedschaftsanträge innerhalb der erforderlichen Fristen zu bearbeiten und Protokolle abzuzeichnen.</li>
+<li>Ben D wird vor Einreichung seines Rücktritts an Chris O übergeben.</li>
+</ul>
+<h2>5. Mitgliedschaftsanträge</h2>
+<ul>
+<li>Der Vorstand überprüfte ausstehende Mitgliedschaftsanträge.</li>
+</ul>
+<h2>6. Sonstiges</h2>
+<ul>
+<li><strong>Ausscheidende Mitglieder.</strong> Ben D und Victor P sind willkommen, sich zu Beginn einer oder zwei kommender Sitzungen einzufinden, falls sie während der Übergabe benötigt werden. Ben D sagte, er werde verfügbar sein.</li>
+<li><strong>Interessenerklärung.</strong> Aus Gründen der Transparenz erklärte Ben D ein Interesse an möglichen künftigen bezahlten Rollen in den Bereichen Gewinnung und Bindung sowie Marketing und Kommunikation, Bereiche, die beim ALM als Kandidaten für bezahlte Rollen genannt wurden. Es folgte keine Diskussion.</li>
+<li><strong>Kommunikation der Änderungen.</strong> Victor P bat darum, dass die Veränderungen im Vorstand der Community klar mitgeteilt werden. Ben D wird eine Nachricht auf Discord zu seiner Entscheidung veröffentlichen; die anderen ausscheidenden Mitglieder wurden eingeladen, dasselbe zu tun.</li>
+</ul>
+<h2>7. Abschluss</h2>
+<ul>
+<li>Abschluss durchgeführt. Die Vorstandsmitglieder dankten Ben D und Victor P für ihre Arbeit im Vorstand in diesem Jahr und dankten auch Michelle.</li>
+</ul>
+<hr />
+<h2>Entscheidungen</h2>
+<ul>
+<li><strong>Einstimmig verabschiedeter Antrag:</strong> Michelles schriftliche Rücktrittsmitteilung vom 5. September 2026 wird als ihr formeller Rücktritt akzeptiert, sofern sie nicht innerhalb von sieben Tagen etwas anderes angibt.</li>
+<li><strong>Aufgaben des Sekretariats</strong> vom Präsidenten an Chris O übertragen, mit Wirkung vom Ende des Treffens.</li>
+<li><strong>Vereinbart:</strong> Es wird eine einzige Wahl für alle frei gewordenen Sitze innerhalb der satzungsgemäßen 45&ndash;60 Tage abgehalten.</li>
+</ul>
+<h2>Maßnahmen</h2>
+<div class="table-wrap"><table class="action-table">
+<thead>
+<tr>
+<th>Maßnahme</th>
+<th>Verantwortlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Michelle kontaktieren, um die Annahme ihrer Rücktrittsmitteilung innerhalb von sieben Tagen zu bestätigen</td>
+<td>Ben D</td>
+</tr>
+<tr>
+<td>Aufgaben und Unterlagen des Sekretariats an Chris O übergeben</td>
+<td>Ben D</td>
+</tr>
+<tr>
+<td>Antragstellende über das Ergebnis ihrer Mitgliedschaftsanträge informieren</td>
+<td>Ben D</td>
+</tr>
+<tr>
+<td>Rücktritt schriftlich an den Vorstand senden</td>
+<td>Victor P, Ben D</td>
+</tr>
+<tr>
+<td>Eine einzige Wahl für die frei gewordenen Vorstandssitze innerhalb der satzungsgemäßen 45&ndash;60 Tage ausrufen</td>
+<td>Vorstand (Verantwortlicher noch zu bestätigen)</td>
+</tr>
+<tr>
+<td>Eine Nachricht auf Discord zu den Vorstandsänderungen veröffentlichen</td>
+<td>Ben D</td>
+</tr>
+</tbody>
+</table></div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -153,5 +548,17 @@
     <script src="../footer.js"></script>
 
     <script src="../script.js"></script>
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>

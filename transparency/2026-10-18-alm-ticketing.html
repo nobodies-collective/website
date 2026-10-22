@@ -27,9 +27,12 @@
         .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
         .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
         .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
         .lang-content { display: none; }
         .lang-content.active { display: block; }
-        .draft-banner { background: #fff3cd; color: #6b4e00; border: 1px solid #ffe08a; padding: 0.75rem 1.25rem; border-radius: 8px; margin-bottom: 1.5rem; font-weight: 500; max-width: 800px; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -48,7 +51,17 @@
                     </div>
                 </div>
 
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
                 <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
                     <div class="attendees">
                         <strong>With: Daniel T (president, facilitating), Daniela (Production, timekeeper), Peter D (treasurer), Chris O, Ant H, and other ALM participants</strong>
                         An open-space session at the Annual Leadership Meeting (ALM, 15&ndash;19 October 2026), filed under the Finance 2027 working group. It is an open discussion, not a decision-making body. The ideas, prices and numbers below were raised for discussion; none of them is a decision. They have been handed on to the Finance 2027 working group, which will develop them with the community.
@@ -158,6 +171,453 @@
                         <p><em>Notes prepared from the session recording and transcript. Sanitised for publication.</em></p>
                     </div>
                 </div>
+
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Con: Daniel T (presidente, facilitando), Daniela (Producción, cronometradora), Peter D (tesorero), Chris O, Ant H, y otros participantes del ALM</strong>
+                        Una sesión de espacio abierto en el Annual Leadership Meeting (ALM, 15&ndash;19 de octubre de 2026), archivada bajo el grupo de trabajo de Finanzas 2027. Es una conversación abierta, no un órgano de decisión. Las ideas, precios y cifras que aparecen a continuación se plantearon para debatir; ninguna de ellas es una decisión. Se han trasladado al grupo de trabajo de Finanzas 2027, que las desarrollará con la comunidad.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Una sesión poco estructurada sobre cómo recauda la asociación el dinero para celebrar su evento: entradas, y posiblemente otros modelos. Comenzó con una ronda en la que cualquiera con una idea tenía dos minutos, seguida de una conversación abierta. Los temas principales fueron el <strong>acceso para rentas bajas</strong>, los <strong>reembolsos y las transferencias</strong>, las entradas para <strong>proveedores, artistas, equipos y personas que trabajan en el evento</strong>, los <strong>modelos basados en membresía</strong>, formas de <strong>bajar el precio de la entrada con el tiempo</strong>, el <strong>crecimiento</strong>, y un posible <strong>descuento para participantes más jóvenes</strong>. La sesión terminó remitiendo al grupo de trabajo de Finanzas 2027, que se reúne semanalmente a partir del lunes 19 de octubre.</p>
+
+                        <h2>1. Planteamiento</h2>
+                        <ul>
+                            <li>Daniel T abrió la sesión. La asociación tendrá que recaudar dinero de la comunidad para celebrar su evento, ya sea mediante entradas u otro modelo, como las membresías. Con una cuenta bancaria ya disponible y más tiempo que este año, puede diseñar un sistema mejor que el que tuvo que improvisar en 2026.</li>
+                            <li>Daniel T dijo que muchas de las limitaciones de este año venían de la incertidumbre. Se usaron oleadas de entradas para adelantar ingresos y poder contratar a los proveedores. Si el evento agota siempre un número de entradas fijado de antemano, esa previsibilidad facilitaría mucho decidir, por ejemplo, cuántas entradas de renta baja ofrecer y cómo liberarlas.</li>
+                        </ul>
+
+                        <h2>2. Acceso y precio para rentas bajas</h2>
+                        <ul>
+                            <li><strong>Más entradas de renta baja.</strong> Varios participantes dijeron que hay muchas menos entradas de renta baja que solicitudes, y que personas que contribuyen mucho durante el año no habían podido venir. Algunos también pidieron que se tuvieran en cuenta los salarios más bajos de quienes viven en España.</li>
+                            <li><strong>Un precio de renta baja algo más alto, si eso significa más entradas.</strong> Un participante sugirió que el precio de renta baja podría subir en línea con el precio completo, lo que financiaría más entradas de ese tipo; personas que usan entradas de renta baja, preguntadas por este participante, lo habían encontrado razonable. Otros estuvieron de acuerdo. Un participante sugirió un precio de renta baja de alrededor de 1,5 veces el actual. Peter D lo recibió con agrado: había supuesto que el objetivo era mantener el precio bajo, pero si puede subir con la inflación, se podría ofrecer a más personas.</li>
+                            <li><strong>Donación.</strong> Entre las ideas, que quienes puedan pagar más financien la entrada de renta baja de otra persona, y micromecenazgo comunitario para regalar una entrada gratuita a colaboradores que se hayan quemado, como muestra de agradecimiento.</li>
+                            <li><strong>El calendario como cuestión de inclusión.</strong> Varios participantes dijeron que el plazo de solicitud de renta baja era muy temprano, y que no todo el mundo puede planificar o ahorrar con meses de antelación. Peter D explicó que la ventana de renta baja fue corta este año porque el calendario estaba comprimido. El límite también fue más bajo de lo previsto porque todavía no había dinero tan al principio del año. La intención es alargar la ventana e incluir más entradas de renta baja en el objetivo.</li>
+                            <li><strong>Entradas de renta baja tardías.</strong> Ant H propuso reservar un pequeño número de entradas de renta baja (se mencionaron entre seis y diez) para que estuvieran disponibles después del plazo, por ejemplo para miembros del equipo de infraestructura que solo se comprometen pocas semanas antes del evento. Un participante pidió lo mismo para artistas con una beca artística que no pueden permitirse una entrada a precio completo.</li>
+                            <li><strong>Elegibilidad.</strong> Un participante dijo que un cuestionario adecuado, como el usado este año, es más justo que una pregunta de sí/no basada en la confianza, que la gente puede responder con falsedad, y también pidió algo de flexibilidad para situaciones individuales. Peter D dijo que la asignación usa actualmente una lotería con un sistema de puntos.</li>
+                            <li><strong>Un modelo alternativo.</strong> Un participante describió un modelo de venta de entradas desarrollado con otras personas de la comunidad. Basaría las contribuciones en lo que la gente puede permitirse realmente (teniendo en cuenta, por ejemplo, el coste de cuidar a familiares) en lugar de solo en los ingresos o el patrimonio, mediante una autoevaluación, y lo vincularía al presupuesto: cuántas entradas, a qué precio medio, financian qué. No hubo tiempo de presentarlo por completo; Daniel T sugirió presentarlo al grupo de trabajo de Finanzas 2027.</li>
+                            <li>Peter D sugirió que servicios de pago a plazos (se mencionó Klarna) podrían ayudar a quienes necesitan repartir el coste de una entrada comprada con antelación.</li>
+                        </ul>
+
+                        <h2>3. Reembolsos y transferencias</h2>
+                        <ul>
+                            <li>Un participante planteó que las entradas de renta baja no se pueden transferir, lo que deja sin recuperar su dinero a quienes ya no pueden venir.</li>
+                            <li>Peter D: las entradas vendidas con descuento probablemente no serán transferibles, pero <strong>los reembolsos son la intención plena de cara al futuro</strong>. La idea es una cola de reembolso: quien quiera un reembolso se une a la cola, y cada nueva entrada vendida reembolsa a la siguiente persona de la cola, mientras sigan vendiéndose entradas. La cola probablemente se cerraría alrededor de una semana antes del evento.</li>
+                            <li>Ant H sugirió una entrega directa dentro de ese sistema: la persona que renuncia a una entrada envía un enlace a una amistad, que la compra y así activa el reembolso. Peter D lo consideró razonable.</li>
+                            <li>Daniel T dijo que un fondo de reembolso de este tipo haría que la web fuera el único lugar donde comprar una entrada. También permitiría comprar con antelación con la seguridad de no perder el dinero, lo que adelanta ingresos sin excluir a nadie.</li>
+                        </ul>
+
+                        <h2>4. Proveedores, artistas, equipos y personas que trabajan en el evento</h2>
+                        <ul>
+                            <li><strong>Proveedores.</strong> Daniela dijo que le gustaría un enfoque estándar para las entradas de proveedores. Algunos proveedores locales conocen bien la comunidad y participan en su cultura. Este año les dio códigos locales, algo que se hacía por primera vez. Dos razones para estandarizarlo: legal (la asociación necesita saber quién está en su evento) y cultural (las personas presentes deberían conocer y respetar las formas del evento, para que los participantes se sientan cómodos).</li>
+                            <li><strong>Asignaciones separadas en lugar de renta baja.</strong> Peter D preferiría que los departamentos o equipos (por ejemplo infraestructura, producción o el equipo artístico) tuvieran un presupuesto de entradas para asignar a su gente, en bolsas separadas de la renta baja, que es &laquo;una sola cosa&raquo;. Esto es más limpio desde el punto de vista contable.</li>
+                            <li><strong>Criterios objetivos.</strong> Chris O dijo que, siempre que se asignen entradas a grupos concretos, debe haber criterios objetivos sobre quién las recibe, para evitar cualquier riesgo de favoritismo.</li>
+                            <li><strong>Personas que trabajan en el evento.</strong> Daniela planteó cómo gestionar las entradas de las personas que trabajan en el evento, como el equipo al que se puede pagar por el montaje y el desmontaje y que luego se queda para el evento, y los coordinadores. ¿Son sus entradas diferentes, y pueden además solicitar renta baja? Lo describió como una zona gris que necesita conversación.</li>
+                            <li><strong>Equipo de desmontaje.</strong> Un participante mencionó el precio de entrada reducido para el equipo de desmontaje que se había planteado este año. Peter D aclaró que, por razones legales, no se puede hacer como un descuento de entrada a cambio de trabajo. Se está elaborando una forma distinta de reconocer al equipo de desmontaje.</li>
+                        </ul>
+
+                        <h2>5. Ideas basadas en membresía</h2>
+                        <ul>
+                            <li><strong>Pagos mensuales hacia una entrada.</strong> Ant H propuso que la gente pudiera pagar una pequeña cantidad mensual a la asociación (se puso como ejemplo veinte euros al mes), acumulando hasta una entrada. Comprar una entrada también podría contar como un año de membresía. Esto repartiría los ingresos a lo largo del año y haría el coste manejable para personas con rentas bajas.</li>
+                            <li><strong>Membresía anual con derecho a comprar una entrada.</strong> Un participante describió otros burns regionales donde una pequeña cuota anual (de alrededor de diez a veinticuatro euros) da derecho a comprar una entrada.</li>
+                            <li><strong>Una entrada &laquo;de por vida&raquo; única.</strong> Un participante sugirió ofrecer, a quienes lo quisieran, entradas de por vida por un gran pago único (se mencionaron cinco mil euros), como forma de recaudar fondos en cualquier momento del año. Otro participante añadió que debería estar condicionada a mantener una buena conducta, incluido el respeto al consentimiento.</li>
+                            <li><strong>Puntos planteados en respuesta.</strong> Daniel T señaló que los estatutos de la asociación prevén cuotas de membresía. Peter D dijo que así es, pero que no las introduciría para 2027: muchas transacciones pequeñas suponen una carga contable considerable, y hay un aspecto de responsabilidad legal. Un participante señaló que las cuotas de membresía solo podrían aplicarse a los <em>asociados</em> y deberían ser iguales para todos, por lo que no podrían ser opcionales; una donación voluntaria podría existir junto a ellas. Peter D añadió que no se puede dar nada a cambio de una donación.</li>
+                            <li><strong>Acceso anticipado.</strong> Daniel T recordó que este año las personas que se habían registrado en Humans tuvieron acceso anticipado a la venta. Si la demanda llegara a superar la oferta, la primera semana de ventas podría, por ejemplo, reservarse para personas con roles o que se hayan ofrecido como voluntarias, para que quienes construyen el evento puedan conseguir entradas. Él y Peter D no esperaban que el evento se agotara en minutos en 2027.</li>
+                        </ul>
+
+                        <h2>6. Bajar el precio de la entrada con el tiempo</h2>
+                        <ul>
+                            <li>Chris O dijo que el precio general de la entrada importa tanto como las entradas de renta baja: el evento no es barato para nadie. Bajar el precio, o al menos no subirlo mientras la inflación se iguala, es probablemente un <strong>proyecto de varios años</strong>, empezando por una buena gestión y manteniendo los costes razonables. Un precio más bajo también podría dejar más margen para que la gente dé un poco más.</li>
+                            <li>Peter D dijo que el evento de 2026 cerró con algo de dinero sobrante tras recortar costes, lo que da un margen. Bajar los precios de las entradas es un uso posible, pero esa es una decisión del grupo de trabajo. Su propia estimación aproximada era que el <strong>precio medio podría bajar quizá en torno a un 10%</strong> para 2027, sin dejar de ampliar la renta baja, y posiblemente de nuevo al año siguiente.</li>
+                            <li>Peter D describió el presupuesto como un conjunto de <strong>palancas</strong>: el precio de la entrada, el número de entradas de renta baja, el precio de renta baja y otras. Subir una significa bajar otra, y algunas dependen de prever la asistencia. Algunas palancas pueden moverse durante la venta; por ejemplo, se puede destinar más a creatividad una vez vendidas más entradas.</li>
+                        </ul>
+
+                        <h2>7. Crecimiento y tamaño del evento</h2>
+                        <ul>
+                            <li>Un participante dijo que la venta de entradas también es una conversación sobre el crecimiento, y se mostró a favor de crecer con suavidad.</li>
+                            <li>Chris O dijo que, si las entradas se pueden vender, el evento podría crecer más rápido durante el próximo año o dos. Mucha gente que comparte la cultura no asistió en 2026 y podría venir en 2027, así que un crecimiento más rápido ahora no tendría por qué amenazar la cultura; después podría seguir un crecimiento más suave. Operativamente, le parecía que se podría sostener un evento considerablemente más grande.</li>
+                            <li>Peter D señaló que las conversaciones de planificación han supuesto alrededor de 3.000 participantes, y que no espera que el evento se agote por encima de esa cifra en 2027.</li>
+                            <li>Un participante describió otro burn regional que vincula el tamaño del evento al número de voluntarios. Las oleadas adicionales de entradas solo se liberan cuando se cubren los roles de voluntariado.</li>
+                            <li>Daniel T: agotar las entradas de forma fiable es la clave de las demás palancas. Como la asociación puede adaptar sus propias herramientas de venta, el software no es el límite; cuántas entradas se venden depende de la identidad del evento y de la comunicación. Añadió que, si el evento se agota, hay que planificarlo para que las personas que contribuyen de forma esencial (infraestructura, responsables, coordinadores) puedan seguir consiguiendo entradas.</li>
+                            <li>Peter D dijo que le gustaría compartir una proyección interna de dónde es probable que terminen las ventas (con márgenes de error), y cómo cambia con el tiempo durante la venta, para ayudar a la planificación.</li>
+                        </ul>
+
+                        <h2>8. Un descuento para participantes más jóvenes</h2>
+                        <ul>
+                            <li>Peter D planteó la idea de un descuento para personas menores de 26 años (un umbral europeo habitual), por <strong>sostenibilidad de la comunidad</strong>: una comunidad cuya edad media sigue subiendo acabará teniendo dificultades para construir el evento. Añadir alrededor de 150 participantes más jóvenes supondría una diferencia, y algunos volverían y traerían amistades. Otras ideas fueron que los barrios &laquo;adoptaran&raquo; a participantes más jóvenes y que se incorporara gente joven al equipo de comunicación.</li>
+                            <li>Un participante preguntó cuántos menores de 26 años ya asisten, para juzgar cuánto del descuento iría a participantes ya existentes y cuánto atraería a nuevos. Peter D dijo que eso es una pregunta para el censo, y que le gustaría que los datos del censo se guardaran en Humans. Un participante también preguntó por el porcentaje de participantes que asisten por primera vez; esos datos todavía no están disponibles, pero el censo podría tenerlos.</li>
+                        </ul>
+
+                        <h2>9. Comunicación y difusión</h2>
+                        <ul>
+                            <li>Un participante señaló que vender entradas depende de la calidad de la comunicación. Daniel T remitió a la sesión del día anterior sobre la identidad del evento. Comunicación es un departamento; el trabajo de identidad del evento, incluido el plan de difusión, es un proyecto. Parte de su objetivo es crear material que la gente pueda compartir, para que el boca a boca llegue más lejos. Las personas implicadas son conscientes de que el éxito financiero del evento depende en parte de ello.</li>
+                            <li>Sobre las redes sociales, Daniela dijo que le gustaría saber cuál es la postura del equipo de comunicación respecto a plataformas con las que algunos miembros de la comunidad no se sienten cómodos. La opinión de Daniel T era que cualquiera del equipo de comunicación que quiera construir presencia en una plataforma, de una forma acorde con la identidad del evento, debería poder hacerlo; quienes no quieran una plataforma no tienen por qué usarla, pero no deberían impedir que otros lo hagan. Otro participante sugirió que el equipo de comunicación decida conjuntamente, y que cada canal apunte a comunidades afines a la cultura, como los espacios de makers.</li>
+                        </ul>
+
+                        <h2>10. Cómo se tomarán las decisiones</h2>
+                        <ul>
+                            <li>Daniel T dijo que estas decisiones no las tomará la junta. Se tomarán a través del grupo de trabajo de Finanzas 2027, que está abierto a cualquiera, dialogará con la comunidad (incluso en las llamadas comunitarias) y trabajará de forma abierta. Que miembros de la junta participen en un grupo de trabajo no convierte eso en una decisión de la junta.</li>
+                            <li>Peter D dijo que su papel principal es asegurarse de que las cuentas salgan. Construirá un modelo que muestre qué tiene que cambiar si se mueve una palanca, y facilitará la conversación, pero no quiere ser quien decida qué palancas mover.</li>
+                            <li>Preguntados sobre dónde encaja la conversación sobre posibles roles remunerados, los participantes dijeron que el quién y el qué (los roles en sí) corresponden al grupo de trabajo de estructura organizativa. El grupo de trabajo de finanzas estudiaría cuánto del presupuesto podría destinarse a roles remunerados.</li>
+                        </ul>
+
+                        <hr />
+                        <h2>Resultados</h2>
+                        <ul>
+                            <li>Una conversación abierta; <strong>no se tomó ninguna decisión</strong>. Los precios y las cifras mencionados son solo ideas.</li>
+                            <li>Amplio acuerdo en que <strong>se necesitan más entradas de renta baja</strong>, y apertura entre los participantes a un precio de renta baja algo más alto si eso significa más entradas. Muchos también quieren una ventana de solicitud más larga y algunas entradas de renta baja tardías o reservadas.</li>
+                            <li>Apoyo a una <strong>cola de reembolso</strong> a través de la venta oficial como forma de gestionar a quienes no pueden venir, en lugar de la reventa.</li>
+                            <li>Las entradas para proveedores, equipos, artistas y personas que trabajan en el evento deberían gestionarse como <strong>asignaciones separadas con criterios objetivos</strong>, distintas de la renta baja.</li>
+                            <li>Agotar las entradas de forma fiable se vio como la clave de la previsibilidad; si la demanda crece, hay que planificar el acceso de quienes contribuyen de forma esencial.</li>
+                            <li>Todo lo anterior se <strong>traslada al grupo de trabajo de Finanzas 2027</strong>: el precio general de la entrada, el número y el precio de la renta baja, los reembolsos y las transferencias, las asignaciones por grupo, los modelos basados en membresía, un descuento para menores de 26 años, el tamaño y el crecimiento del evento, y el margen del presupuesto para roles remunerados.</li>
+                        </ul>
+
+                        <h2>Próximos pasos</h2>
+                        <ul>
+                            <li>El grupo de trabajo de Finanzas 2027 se reúne semanalmente los lunes a las 18:00, antes de la reunión de la junta, a partir del lunes 19 de octubre. Cualquiera interesado en la venta de entradas y las finanzas es bienvenido a unirse &mdash; Peter D.</li>
+                            <li>Se invitó al participante que describió el modelo alternativo de venta de entradas a presentarlo en el grupo de trabajo.</li>
+                            <li>Las preguntas sobre los roles en sí, incluidos los posibles roles remunerados, se dirigen al grupo de trabajo de estructura organizativa.</li>
+                        </ul>
+
+                        <p><em>Notas preparadas a partir de la grabación y la transcripción de la sesión. Depuradas para su publicación.</em></p>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaut.</div>
+                    <div class="attendees">
+                        <strong>Avec : Daniel T (président, facilitation), Daniela (Production, chronométrage), Peter D (trésorier), Chris O, Ant H, et d'autres participants à l'ALM</strong>
+                        Une session en espace ouvert lors de l'Annual Leadership Meeting (ALM, 15&ndash;19 octobre 2026), classée sous le groupe de travail Finances 2027. C'est une discussion ouverte, pas un organe de décision. Les idées, prix et chiffres ci-dessous ont été soulevés pour la discussion ; aucun d'entre eux n'est une décision. Ils ont été transmis au groupe de travail Finances 2027, qui les développera avec la communauté.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Une session peu structurée sur la façon dont l'association recueille l'argent nécessaire pour organiser son événement : billets, et éventuellement d'autres modèles. Elle a commencé par un tour de table où toute personne ayant une idée disposait de deux minutes, suivi d'une conversation ouverte. Les thèmes principaux étaient l'<strong>accès pour les revenus modestes</strong>, les <strong>remboursements et transferts</strong>, les billets pour les <strong>fournisseurs, artistes, équipes et personnes travaillant sur l'événement</strong>, les <strong>modèles fondés sur l'adhésion</strong>, les façons de <strong>faire baisser le prix du billet avec le temps</strong>, la <strong>croissance</strong>, et une éventuelle <strong>réduction pour les participants plus jeunes</strong>. La session s'est terminée par un renvoi vers le groupe de travail Finances 2027, qui se réunit chaque semaine à partir du lundi 19 octobre.</p>
+
+                        <h2>1. Cadrage</h2>
+                        <ul>
+                            <li>Daniel T a ouvert la session. L'association devra recueillir de l'argent auprès de la communauté pour organiser son événement, que ce soit par les billets ou un autre modèle, comme des adhésions. Avec un compte bancaire désormais en place et plus de temps que cette année, elle peut concevoir un meilleur système que celui qu'elle a dû improviser en 2026.</li>
+                            <li>Daniel T a dit que beaucoup des contraintes de cette année venaient de l'incertitude. Des vagues de billets ont été utilisées pour avancer les recettes afin de pouvoir réserver les fournisseurs. Si l'événement affiche complet de façon fiable sur un nombre fixé à l'avance, cette prévisibilité faciliterait beaucoup la décision, par exemple, du nombre de billets à revenu modeste à proposer et de la manière de les libérer.</li>
+                        </ul>
+
+                        <h2>2. Accès et tarification pour les revenus modestes</h2>
+                        <ul>
+                            <li><strong>Plus de billets à revenu modeste.</strong> Plusieurs participants ont dit qu'il y a bien moins de billets à revenu modeste que de demandes, et que des personnes qui contribuent énormément pendant l'année n'avaient pas pu venir. Certains ont aussi demandé que les salaires plus bas des personnes vivant en Espagne soient pris en compte.</li>
+                            <li><strong>Un prix à revenu modeste un peu plus élevé, si cela permet plus de billets.</strong> Un participant a suggéré que le prix à revenu modeste pourrait augmenter en même temps que le prix plein, ce qui financerait davantage de ces billets ; des personnes utilisant des billets à revenu modeste, interrogées par ce participant, avaient trouvé cela raisonnable. D'autres ont été d'accord. Un participant a suggéré un prix à revenu modeste d'environ 1,5 fois le prix actuel. Peter D a accueilli cela favorablement : il avait supposé que l'objectif était de garder le prix bas, mais si celui-ci peut augmenter avec l'inflation, on pourrait en proposer à davantage de personnes.</li>
+                            <li><strong>Dons.</strong> Parmi les idées : permettre à ceux qui peuvent payer plus de financer le billet à revenu modeste d'une autre personne, et un financement participatif communautaire pour offrir un billet gratuit aux contributeurs épuisés, en signe de reconnaissance.</li>
+                            <li><strong>Le calendrier comme enjeu d'inclusion.</strong> Plusieurs participants ont dit que la date limite de demande pour les revenus modestes était très précoce, et que tout le monde ne peut pas planifier ou économiser des mois à l'avance. Peter D a expliqué que la fenêtre pour les revenus modestes a été courte cette année parce que le calendrier était comprimé. Le seuil était aussi plus bas que prévu car il n'y avait pas encore d'argent aussi tôt dans l'année. L'intention est d'allonger la fenêtre et d'inclure davantage de billets à revenu modeste dans l'objectif.</li>
+                            <li><strong>Billets à revenu modeste tardifs.</strong> Ant H a proposé de réserver un petit nombre de billets à revenu modeste (de six à dix ont été mentionnés) pour qu'ils soient disponibles après la date limite, par exemple pour les membres de l'équipe infrastructure qui ne s'engagent que quelques semaines avant l'événement. Un participant a demandé la même chose pour les artistes bénéficiant d'une bourse artistique qui ne peuvent pas se permettre un billet à prix plein.</li>
+                            <li><strong>Éligibilité.</strong> Un participant a dit qu'un questionnaire en bonne et due forme, comme celui utilisé cette année, est plus juste qu'une question de confiance de type oui/non, à laquelle les gens peuvent répondre de façon mensongère, et a aussi demandé une certaine flexibilité pour les situations individuelles. Peter D a dit que l'attribution utilise actuellement une loterie avec un système de points.</li>
+                            <li><strong>Un modèle alternatif.</strong> Un participant a décrit un modèle de billetterie développé avec d'autres membres de la communauté. Il fonderait les contributions sur ce que les gens peuvent réellement se permettre (en tenant compte, par exemple, du coût de la prise en charge de membres de la famille) plutôt que sur le seul revenu ou patrimoine, à l'aide d'une auto-évaluation, et le relierait au budget : combien de billets, à quel prix moyen, financent quoi. Il n'y a pas eu le temps de le présenter entièrement ; Daniel T a suggéré de le présenter au groupe de travail Finances 2027.</li>
+                            <li>Peter D a suggéré que des services de paiement en plusieurs fois (Klarna a été mentionné) pourraient aider les personnes qui ont besoin d'étaler le coût d'un billet acheté tôt.</li>
+                        </ul>
+
+                        <h2>3. Remboursements et transferts</h2>
+                        <ul>
+                            <li>Un participant a soulevé que les billets à revenu modeste ne peuvent pas être transférés, ce qui laisse les personnes qui ne peuvent plus venir perdre leur argent.</li>
+                            <li>Peter D : les billets vendus à prix réduit ne seront probablement pas transférables, mais <strong>les remboursements sont pleinement l'intention pour l'avenir</strong>. L'idée est une file d'attente de remboursement : quiconque veut un remboursement rejoint la file, et chaque nouveau billet vendu remboursera la personne suivante dans la file, aussi longtemps que des billets continuent de se vendre. La file se fermerait probablement environ une semaine avant l'événement.</li>
+                            <li>Ant H a suggéré une remise directe au sein de ce système : la personne qui renonce à un billet envoie un lien à un ami, qui l'achète et déclenche ainsi le remboursement. Peter D a trouvé cela raisonnable.</li>
+                            <li>Daniel T a dit qu'un tel fonds de remboursement ferait du site web le seul endroit où acheter un billet. Cela permettrait aussi d'acheter tôt avec la garantie de ne pas perdre son argent, ce qui avance les recettes sans exclure personne.</li>
+                        </ul>
+
+                        <h2>4. Fournisseurs, artistes, équipes et personnes travaillant sur l'événement</h2>
+                        <ul>
+                            <li><strong>Fournisseurs.</strong> Daniela a dit qu'elle aimerait une approche standard pour les billets des fournisseurs. Certains fournisseurs locaux connaissent bien la communauté et participent à sa culture. Cette année, elle leur a donné des codes locaux, une première. Deux raisons de standardiser : légale (l'association doit savoir qui est présent à son événement) et culturelle (les personnes présentes sur place devraient connaître et respecter les usages de l'événement, afin que les participants se sentent à l'aise).</li>
+                            <li><strong>Des allocations séparées plutôt que le revenu modeste.</strong> Peter D préférerait que les départements ou équipes (par exemple infrastructure, production ou l'équipe artistique) disposent d'un budget de billets à répartir parmi leurs membres, dans des enveloppes distinctes du revenu modeste, qui est « une seule chose ». C'est plus net d'un point de vue comptable.</li>
+                            <li><strong>Critères objectifs.</strong> Chris O a dit que, chaque fois que des billets sont attribués à des groupes particuliers, il doit y avoir des critères objectifs sur qui les reçoit, afin d'éviter tout risque de favoritisme.</li>
+                            <li><strong>Personnes travaillant sur l'événement.</strong> Daniela a soulevé la question de la gestion des billets pour les personnes travaillant sur l'événement, comme les équipes qui peuvent être payées pour le montage et le démontage et qui restent ensuite pour l'événement, et les coordinateurs. Leurs billets sont-ils différents, et peuvent-ils tout de même demander un billet à revenu modeste ? Elle a décrit cela comme une zone grise qui nécessite une discussion.</li>
+                            <li><strong>Équipe de démontage.</strong> Un participant a mentionné le prix de billet réduit pour l'équipe de démontage qui avait été évoqué cette année. Peter D a précisé que, pour des raisons légales, cela ne peut pas se faire comme une réduction de billet en échange de travail. Une autre façon de reconnaître l'équipe de démontage est en cours d'élaboration.</li>
+                        </ul>
+
+                        <h2>5. Idées fondées sur l'adhésion</h2>
+                        <ul>
+                            <li><strong>Paiements mensuels vers un billet.</strong> Ant H a proposé que les gens puissent payer un petit montant mensuel à l'association (vingt euros par mois a été donné comme exemple), s'accumulant vers un billet. L'achat d'un billet pourrait aussi compter comme une année d'adhésion. Cela étalerait les revenus sur l'année et rendrait le coût gérable pour les personnes à revenu modeste.</li>
+                            <li><strong>Adhésion annuelle avec droit d'acheter un billet.</strong> Un participant a décrit d'autres burns régionaux où une petite cotisation annuelle (d'environ dix à vingt-quatre euros) donne le droit d'acheter un billet.</li>
+                            <li><strong>Un billet « à vie » ponctuel.</strong> Un participant a suggéré de proposer, à ceux qui le souhaitent, des billets à vie contre un important paiement unique (cinq mille euros ont été mentionnés), comme moyen de lever des fonds à tout moment de l'année. Un autre participant a ajouté que cela devrait être conditionné à une bonne conduite continue, y compris le respect du consentement.</li>
+                            <li><strong>Points soulevés en réponse.</strong> Daniel T a noté que les statuts de l'association prévoient des cotisations d'adhésion. Peter D a dit que c'est le cas, mais qu'il ne les introduirait pas pour 2027 : de nombreuses petites transactions représentent une charge comptable importante, et il y a un aspect de responsabilité. Un participant a noté que les cotisations d'adhésion ne pourraient s'appliquer qu'aux <em>asociados</em> et devraient être identiques pour tout le monde, donc ne pourraient pas être optionnelles ; un don volontaire pourrait exister à côté. Peter D a ajouté que rien ne peut être donné en contrepartie d'un don.</li>
+                            <li><strong>Accès anticipé.</strong> Daniel T a rappelé que cette année, les personnes inscrites sur Humans ont eu un accès anticipé à la vente. Si la demande venait à dépasser l'offre, la première semaine de vente pourrait, par exemple, être réservée aux personnes ayant des rôles ou s'étant portées volontaires, afin que les personnes qui construisent l'événement puissent obtenir des billets. Lui et Peter D ne s'attendaient pas à ce que l'événement affiche complet en quelques minutes en 2027.</li>
+                        </ul>
+
+                        <h2>6. Faire baisser le prix du billet avec le temps</h2>
+                        <ul>
+                            <li>Chris O a dit que le prix général du billet compte autant que les billets à revenu modeste : l'événement n'est pas bon marché pour personne. Faire baisser le prix, ou au moins ne pas l'augmenter tant que l'inflation rattrape, est probablement un <strong>projet pluriannuel</strong>, en commençant par une bonne gestion et en maintenant des coûts raisonnables. Un prix plus bas pourrait aussi laisser davantage de marge aux gens pour donner un peu plus.</li>
+                            <li>Peter D a dit que l'événement de 2026 s'est clôturé avec un peu d'argent restant après la réduction des coûts, ce qui donne une marge. Faire baisser les prix des billets en est un usage possible, mais c'est une décision qui revient au groupe de travail. Sa propre estimation approximative était que le <strong>prix moyen pourrait peut-être baisser d'environ 10 %</strong> pour 2027, tout en continuant d'élargir le revenu modeste, et possiblement encore l'année suivante.</li>
+                            <li>Peter D a décrit le budget comme un ensemble de <strong>leviers</strong> : le prix du billet, le nombre de billets à revenu modeste, le prix du revenu modeste et d'autres. Faire monter l'un signifie faire baisser un autre, et certains dépendent des prévisions de fréquentation. Certains leviers peuvent bouger pendant la vente ; par exemple, davantage peut être consacré à la créativité une fois que davantage de billets ont été vendus.</li>
+                        </ul>
+
+                        <h2>7. Croissance et taille de l'événement</h2>
+                        <ul>
+                            <li>Un participant a dit que la billetterie est aussi une conversation sur la croissance, et s'est prononcé en faveur d'une croissance douce.</li>
+                            <li>Chris O a dit que, si les billets peuvent se vendre, l'événement pourrait croître plus rapidement pendant un an ou deux. De nombreuses personnes qui partagent la culture n'ont pas assisté à l'événement en 2026 et pourraient venir en 2027, donc une croissance plus rapide maintenant ne menacerait pas forcément la culture ; une croissance plus douce pourrait suivre. Sur le plan opérationnel, il estimait qu'un événement considérablement plus grand pourrait être soutenu.</li>
+                            <li>Peter D a noté que les discussions de planification ont supposé environ 3 000 participants, et qu'il ne s'attend pas à ce que l'événement affiche complet au-delà de ce chiffre en 2027.</li>
+                            <li>Un participant a décrit un autre burn régional qui lie la taille de l'événement au nombre de bénévoles. Des vagues supplémentaires de billets ne sont libérées que lorsque les rôles de bénévolat sont pourvus.</li>
+                            <li>Daniel T : afficher complet de façon fiable est la clé des autres leviers. Comme l'association peut adapter ses propres outils de billetterie, le logiciel n'est pas la limite ; le nombre de billets vendus dépend de l'identité de l'événement et de la communication. Il a ajouté que si l'événement affiche complet, il doit être planifié de sorte que les contributeurs essentiels (infrastructure, responsables, coordinateurs) puissent encore obtenir des billets.</li>
+                            <li>Peter D a dit qu'il aimerait partager une projection interne de l'endroit où les ventes sont susceptibles d'aboutir (avec des marges d'erreur), et de la façon dont cela évolue avec le temps pendant la vente, pour aider à la planification.</li>
+                        </ul>
+
+                        <h2>8. Une réduction pour les participants plus jeunes</h2>
+                        <ul>
+                            <li>Peter D a soulevé l'idée d'une réduction pour les personnes de moins de 26 ans (un seuil européen courant), pour la <strong>durabilité de la communauté</strong> : une communauté dont l'âge moyen continue d'augmenter finira par avoir du mal à construire l'événement. Ajouter environ 150 participants plus jeunes ferait une différence, et certains reviendraient et amèneraient des amis. D'autres idées étaient que les barrios « adoptent » des participants plus jeunes et que des jeunes rejoignent l'équipe communication.</li>
+                            <li>Un participant a demandé combien de moins de 26 ans assistent déjà à l'événement, pour juger quelle part d'une réduction irait aux participants existants et quelle part en amènerait de nouveaux. Peter D a dit que c'est une question pour le recensement, et qu'il aimerait que les données du recensement soient conservées dans Humans. Un participant a aussi demandé la part des participants venant pour la première fois ; ces données ne sont pas encore disponibles, mais le recensement pourrait les avoir.</li>
+                        </ul>
+
+                        <h2>9. Communication et sensibilisation</h2>
+                        <ul>
+                            <li>Un participant a noté que vendre des billets dépend de la qualité de la communication. Daniel T a renvoyé à la session de la veille sur l'identité de l'événement. Communication est un département ; le travail sur l'identité de l'événement, y compris le plan de sensibilisation, est un projet. Une partie de son objectif est de créer du matériel que les gens peuvent partager, afin que le bouche-à-oreille se propage plus loin. Les personnes impliquées savent que le succès financier de l'événement en dépend en partie.</li>
+                            <li>Sur les réseaux sociaux, Daniela a dit qu'elle aimerait savoir où se situe l'équipe communication sur les plateformes avec lesquelles certains membres de la communauté ne sont pas à l'aise. Le point de vue de Daniel T était que toute personne de l'équipe communication qui veut bâtir une présence sur une plateforme, d'une manière qui correspond à l'identité de l'événement, devrait pouvoir le faire ; les personnes qui n'aiment pas une plateforme n'ont pas besoin de l'utiliser, mais ne devraient pas empêcher les autres. Un autre participant a suggéré que l'équipe communication décide ensemble, et vise chaque canal vers des communautés proches de la culture, comme les makerspaces.</li>
+                        </ul>
+
+                        <h2>10. Comment les décisions seront prises</h2>
+                        <ul>
+                            <li>Daniel T a dit que ces décisions ne seront pas prises par le conseil. Elles seront prises par le groupe de travail Finances 2027, qui est ouvert à tous, dialoguera avec la communauté (y compris lors des appels communautaires), et travaillera de façon ouverte. Que des membres du conseil participent à un groupe de travail n'en fait pas une décision du conseil.</li>
+                            <li>Peter D a dit que son rôle principal est de s'assurer que les comptes sont justes. Il construira un modèle montrant ce qui doit changer si un levier est actionné, et facilitera la conversation, mais il ne veut pas décider quels leviers actionner.</li>
+                            <li>Interrogés sur la place de la discussion sur les éventuels rôles rémunérés, les participants ont dit que le qui et le quoi (les rôles eux-mêmes) relèvent du groupe de travail sur la structure organisationnelle. Le groupe de travail finances examinerait quelle part du budget pourrait aller à des rôles rémunérés.</li>
+                        </ul>
+
+                        <hr />
+                        <h2>Résultats</h2>
+                        <ul>
+                            <li>Une discussion ouverte ; <strong>aucune décision n'a été prise</strong>. Les prix et chiffres mentionnés ne sont que des idées.</li>
+                            <li>Large accord sur le fait que <strong>davantage de billets à revenu modeste sont nécessaires</strong>, et ouverture parmi les participants à un prix à revenu modeste un peu plus élevé si cela permet plus de billets. Beaucoup souhaitent aussi une fenêtre de demande plus longue et des billets à revenu modeste tardifs ou réservés.</li>
+                            <li>Soutien à une <strong>file d'attente de remboursement</strong> via la vente officielle comme façon de gérer les personnes qui ne peuvent pas venir, plutôt que la revente.</li>
+                            <li>Les billets pour les fournisseurs, équipes, artistes et personnes travaillant sur l'événement devraient être gérés comme des <strong>allocations séparées avec des critères objectifs</strong>, distinctes du revenu modeste.</li>
+                            <li>Afficher complet de façon fiable a été vu comme la clé de la prévisibilité ; si la demande augmente, l'accès des contributeurs essentiels doit être planifié.</li>
+                            <li>Tout ce qui précède est <strong>transmis au groupe de travail Finances 2027</strong> : le prix général du billet, le nombre et le prix des billets à revenu modeste, les remboursements et transferts, les allocations par groupe, les modèles fondés sur l'adhésion, une réduction pour les moins de 26 ans, la taille et la croissance de l'événement, et l'enveloppe budgétaire pour les rôles rémunérés.</li>
+                        </ul>
+
+                        <h2>Prochaines étapes</h2>
+                        <ul>
+                            <li>Le groupe de travail Finances 2027 se réunit chaque semaine le lundi à 18h00, avant la réunion du conseil, à partir du lundi 19 octobre. Toute personne intéressée par la billetterie et les finances est la bienvenue &mdash; Peter D.</li>
+                            <li>Le participant qui a décrit le modèle alternatif de billetterie a été invité à le présenter au groupe de travail.</li>
+                            <li>Les questions sur les rôles eux-mêmes, y compris les éventuels rôles rémunérés, relèvent du groupe de travail sur la structure organisationnelle.</li>
+                        </ul>
+
+                        <p><em>Notes préparées à partir de l'enregistrement et de la transcription de la session. Expurgées pour publication.</em></p>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanze tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+                    <div class="attendees">
+                        <strong>Con: Daniel T (presidente, facilitatore), Daniela (Produzione, cronometrista), Peter D (tesoriere), Chris O, Ant H, e altri partecipanti all'ALM</strong>
+                        Una sessione in spazio aperto durante l'Annual Leadership Meeting (ALM, 15&ndash;19 ottobre 2026), archiviata sotto il gruppo di lavoro Finanze 2027. È una discussione aperta, non un organo decisionale. Le idee, i prezzi e i numeri riportati di seguito sono stati sollevati per la discussione; nessuno di essi è una decisione. Sono stati trasmessi al gruppo di lavoro Finanze 2027, che li svilupperà con la comunità.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Una sessione poco strutturata su come l'associazione raccoglie il denaro per organizzare il suo evento: biglietti, e forse altri modelli. È iniziata con un giro in cui chiunque avesse un'idea aveva due minuti, seguito da una conversazione aperta. I temi principali sono stati l'<strong>accesso per i redditi bassi</strong>, i <strong>rimborsi e i trasferimenti</strong>, i biglietti per <strong>fornitori, artisti, squadre e persone che lavorano all'evento</strong>, i <strong>modelli basati sull'adesione</strong>, i modi per <strong>abbassare il prezzo del biglietto nel tempo</strong>, la <strong>crescita</strong>, e un possibile <strong>sconto per i partecipanti più giovani</strong>. La sessione si è chiusa con un rimando al gruppo di lavoro Finanze 2027, che si riunisce settimanalmente a partire da lunedì 19 ottobre.</p>
+
+                        <h2>1. Inquadramento</h2>
+                        <ul>
+                            <li>Daniel T ha aperto la sessione. L'associazione dovrà raccogliere denaro dalla comunità per organizzare il suo evento, sia tramite i biglietti sia con un altro modello, come le adesioni. Con un conto bancario ora disponibile e più tempo di quest'anno, può progettare un sistema migliore di quello che ha dovuto improvvisare nel 2026.</li>
+                            <li>Daniel T ha detto che molti dei vincoli di quest'anno derivavano dall'incertezza. Le ondate di biglietti sono state usate per anticipare le entrate in modo da poter prenotare i fornitori. Se l'evento esaurisce in modo affidabile un numero fissato in anticipo, questa prevedibilità renderebbe molto più facile decidere, ad esempio, quanti biglietti a reddito basso offrire e come rilasciarli.</li>
+                        </ul>
+
+                        <h2>2. Accesso e prezzi per i redditi bassi</h2>
+                        <ul>
+                            <li><strong>Più biglietti a reddito basso.</strong> Diversi partecipanti hanno detto che ci sono molti meno biglietti a reddito basso che domande, e che persone che contribuiscono molto durante l'anno non erano state in grado di venire. Alcuni hanno anche chiesto che si tenesse conto degli stipendi più bassi di chi vive in Spagna.</li>
+                            <li><strong>Un prezzo a reddito basso un po' più alto, se significa più biglietti.</strong> Un partecipante ha suggerito che il prezzo a reddito basso potrebbe aumentare in linea con il prezzo pieno, il che finanzierebbe più biglietti di questo tipo; persone che usano biglietti a reddito basso, interrogate da questo partecipante, lo avevano trovato ragionevole. Altri hanno concordato. Un partecipante ha suggerito un prezzo a reddito basso di circa 1,5 volte quello attuale. Peter D ha accolto favorevolmente l'idea: aveva supposto che l'obiettivo fosse mantenere basso il prezzo, ma se questo può aumentare con l'inflazione, se ne potrebbero offrire di più alle persone.</li>
+                            <li><strong>Donazioni.</strong> Tra le idee, far sì che chi può pagare di più finanzi il biglietto a reddito basso di un'altra persona, e un crowdfunding comunitario per regalare un biglietto gratuito a collaboratori che si sono esauriti, come segno di apprezzamento.</li>
+                            <li><strong>I tempi come questione di inclusione.</strong> Diversi partecipanti hanno detto che la scadenza per la domanda a reddito basso era molto anticipata, e che non tutti possono pianificare o risparmiare con mesi di anticipo. Peter D ha spiegato che la finestra per il reddito basso è stata breve quest'anno perché il calendario era compresso. Anche la soglia era più bassa del previsto perché non c'erano ancora soldi così presto nell'anno. L'intenzione è allungare la finestra e includere più biglietti a reddito basso nell'obiettivo.</li>
+                            <li><strong>Biglietti a reddito basso tardivi.</strong> Ant H ha proposto di riservare un piccolo numero di biglietti a reddito basso (sono stati menzionati da sei a dieci) da rendere disponibili dopo la scadenza, ad esempio per i membri della squadra infrastrutture che si impegnano solo poche settimane prima dell'evento. Un partecipante ha chiesto lo stesso per gli artisti con una borsa artistica che non possono permettersi un biglietto a prezzo pieno.</li>
+                            <li><strong>Ammissibilità.</strong> Un partecipante ha detto che un questionario appropriato, come quello usato quest'anno, è più equo di una domanda sì/no basata sulla fiducia, a cui le persone possono rispondere in modo non veritiero, e ha anche chiesto una certa flessibilità per le situazioni individuali. Peter D ha detto che l'assegnazione usa attualmente una lotteria con un sistema a punti.</li>
+                            <li><strong>Un modello alternativo.</strong> Un partecipante ha descritto un modello di biglietteria sviluppato con altri membri della comunità. Baserebbe i contributi su quello che le persone possono realmente permettersi (tenendo conto, ad esempio, del costo della cura di familiari) piuttosto che solo sul reddito o sul patrimonio, usando un'autovalutazione, e lo collegherebbe al budget: quanti biglietti, a che prezzo medio, finanziano cosa. Non c'è stato tempo per presentarlo per intero; Daniel T ha suggerito di presentarlo al gruppo di lavoro Finanze 2027.</li>
+                            <li>Peter D ha suggerito che servizi di pagamento a rate (è stato menzionato Klarna) potrebbero aiutare chi ha bisogno di distribuire il costo di un biglietto acquistato in anticipo.</li>
+                        </ul>
+
+                        <h2>3. Rimborsi e trasferimenti</h2>
+                        <ul>
+                            <li>Un partecipante ha fatto notare che i biglietti a reddito basso non possono essere trasferiti, il che lascia senza rimborso chi non può più venire.</li>
+                            <li>Peter D: i biglietti venduti a prezzo scontato probabilmente non saranno trasferibili, ma <strong>i rimborsi sono l'intenzione piena per il futuro</strong>. L'idea è una coda di rimborso: chiunque voglia un rimborso si unisce alla coda, e ogni nuovo biglietto venduto rimborsa la persona successiva in coda, finché i biglietti continuano a vendersi. La coda probabilmente si chiuderebbe circa una settimana prima dell'evento.</li>
+                            <li>Ant H ha suggerito un passaggio diretto all'interno di quel sistema: la persona che rinuncia a un biglietto invia un link a un amico, che lo acquista e così attiva il rimborso. Peter D ha ritenuto ragionevole l'idea.</li>
+                            <li>Daniel T ha detto che un simile fondo di rimborso farebbe del sito web l'unico posto dove acquistare un biglietto. Permetterebbe anche di comprare in anticipo con la sicurezza di non perdere i propri soldi, il che anticipa le entrate senza escludere nessuno.</li>
+                        </ul>
+
+                        <h2>4. Fornitori, artisti, squadre e persone che lavorano all'evento</h2>
+                        <ul>
+                            <li><strong>Fornitori.</strong> Daniela ha detto che vorrebbe un approccio standard per i biglietti dei fornitori. Alcuni fornitori locali conoscono bene la comunità e partecipano alla sua cultura. Quest'anno ha dato loro codici locali, una novità assoluta. Due motivi per standardizzare: legale (l'associazione deve sapere chi è presente al suo evento) e culturale (le persone presenti dovrebbero conoscere e rispettare le modalità dell'evento, affinché i partecipanti si sentano a proprio agio).</li>
+                            <li><strong>Assegnazioni separate invece del reddito basso.</strong> Peter D preferirebbe che i dipartimenti o le squadre (ad esempio infrastrutture, produzione o il team artistico) avessero un budget di biglietti da assegnare alle proprie persone, in gruppi distinti dal reddito basso, che è &laquo;una cosa sola&raquo;. Questo è più chiaro dal punto di vista contabile.</li>
+                            <li><strong>Criteri oggettivi.</strong> Chris O ha detto che, ogni volta che i biglietti vengono assegnati a gruppi particolari, devono esserci criteri oggettivi su chi li riceve, per evitare qualsiasi rischio di favoritismo.</li>
+                            <li><strong>Persone che lavorano all'evento.</strong> Daniela ha posto la questione di come gestire i biglietti per le persone che lavorano all'evento, come le squadre che possono essere pagate per il montaggio e lo smontaggio e poi rimangono per l'evento, e i coordinatori. I loro biglietti sono diversi, e possono comunque fare domanda per il reddito basso? Lo ha descritto come un'area grigia che richiede una conversazione.</li>
+                            <li><strong>Squadra di smontaggio.</strong> Un partecipante ha menzionato il prezzo del biglietto ridotto per la squadra di smontaggio che era stato ipotizzato quest'anno. Peter D ha chiarito che, per motivi legali, non si può fare come uno sconto sul biglietto in cambio di lavoro. Si sta elaborando un modo diverso di riconoscere la squadra di smontaggio.</li>
+                        </ul>
+
+                        <h2>5. Idee basate sull'adesione</h2>
+                        <ul>
+                            <li><strong>Pagamenti mensili verso un biglietto.</strong> Ant H ha proposto che le persone possano pagare un piccolo importo mensile all'associazione (venti euro al mese è stato l'esempio), accumulando verso un biglietto. Acquistare un biglietto potrebbe anche contare come un anno di adesione. Questo distribuirebbe le entrate durante l'anno e renderebbe il costo gestibile per le persone a reddito basso.</li>
+                            <li><strong>Adesione annuale con diritto di acquistare un biglietto.</strong> Un partecipante ha descritto altri burn regionali dove una piccola quota annuale (circa da dieci a ventiquattro euro) dà diritto ad acquistare un biglietto.</li>
+                            <li><strong>Un biglietto &laquo;a vita&raquo; unico.</strong> Un partecipante ha suggerito di offrire, a chi lo desidera, biglietti a vita in cambio di un grande pagamento unico (sono stati menzionati cinquemila euro), come modo per raccogliere fondi in qualsiasi momento dell'anno. Un altro partecipante ha aggiunto che dovrebbe essere condizionato a una buona condotta continuativa, incluso il rispetto del consenso.</li>
+                            <li><strong>Punti sollevati in risposta.</strong> Daniel T ha osservato che lo statuto dell'associazione prevede quote di adesione. Peter D ha detto che è così, ma che non le introdurrebbe per il 2027: molte piccole transazioni rappresentano un carico contabile significativo, e c'è un aspetto di responsabilità. Un partecipante ha osservato che le quote di adesione potrebbero applicarsi solo agli <em>asociados</em> e dovrebbero essere le stesse per tutti, quindi non potrebbero essere facoltative; una donazione volontaria potrebbe affiancarle. Peter D ha aggiunto che non si può dare nulla in cambio di una donazione.</li>
+                            <li><strong>Accesso anticipato.</strong> Daniel T ha ricordato che quest'anno le persone iscritte su Humans hanno avuto un accesso anticipato alla vendita. Se la domanda dovesse mai superare l'offerta, la prima settimana di vendite potrebbe, ad esempio, essere riservata a persone con ruoli o che si sono offerte come volontarie, affinché le persone che costruiscono l'evento possano ottenere i biglietti. Lui e Peter D non si aspettavano che l'evento si esaurisse in pochi minuti nel 2027.</li>
+                        </ul>
+
+                        <h2>6. Abbassare il prezzo del biglietto nel tempo</h2>
+                        <ul>
+                            <li>Chris O ha detto che il prezzo generale del biglietto conta tanto quanto i biglietti a reddito basso: l'evento non è economico per nessuno. Far scendere il prezzo, o almeno non aumentarlo mentre l'inflazione recupera, è probabilmente un <strong>progetto pluriennale</strong>, a partire da una buona gestione e mantenendo i costi ragionevoli. Un prezzo più basso potrebbe anche lasciare più spazio alle persone per dare un po' di più.</li>
+                            <li>Peter D ha detto che l'evento del 2026 si è chiuso con un po' di denaro rimasto dopo il taglio dei costi, il che offre un margine. Abbassare i prezzi dei biglietti è un uso possibile, ma è una decisione che spetta al gruppo di lavoro. La sua stima approssimativa era che il <strong>prezzo medio potrebbe forse scendere di circa il 10%</strong> per il 2027, continuando comunque ad ampliare il reddito basso, e possibilmente di nuovo l'anno successivo.</li>
+                            <li>Peter D ha descritto il budget come un insieme di <strong>leve</strong>: il prezzo del biglietto, il numero di biglietti a reddito basso, il prezzo del reddito basso e altre. Alzarne una significa abbassarne un'altra, e alcune dipendono dalla previsione delle presenze. Alcune leve possono muoversi durante la vendita; ad esempio, una volta venduti più biglietti, si può destinare di più alla creatività.</li>
+                        </ul>
+
+                        <h2>7. Crescita e dimensione dell'evento</h2>
+                        <ul>
+                            <li>Un partecipante ha detto che la biglietteria è anche una conversazione sulla crescita, e si è detto favorevole a una crescita graduale.</li>
+                            <li>Chris O ha detto che, se i biglietti possono essere venduti, l'evento potrebbe crescere più rapidamente nel prossimo anno o due. Molte persone che condividono la cultura non hanno partecipato nel 2026 e potrebbero venire nel 2027, quindi una crescita più rapida ora non dovrebbe necessariamente minacciare la cultura; potrebbe seguire una crescita più graduale. Dal punto di vista operativo, riteneva che si potesse sostenere un evento considerevolmente più grande.</li>
+                            <li>Peter D ha osservato che le discussioni di pianificazione hanno ipotizzato circa 3.000 partecipanti, e che non si aspetta che l'evento si esaurisca oltre quella cifra nel 2027.</li>
+                            <li>Un partecipante ha descritto un altro burn regionale che collega la dimensione dell'evento al numero di volontari. Ondate aggiuntive di biglietti vengono rilasciate solo quando i ruoli di volontariato sono coperti.</li>
+                            <li>Daniel T: esaurire i biglietti in modo affidabile è la chiave per le altre leve. Poiché l'associazione può adattare i propri strumenti di biglietteria, il software non è il limite; quanti biglietti si vendono dipende dall'identità dell'evento e dalla comunicazione. Ha aggiunto che, se l'evento si esaurisce, deve essere pianificato in modo che i contributori principali (infrastrutture, responsabili, coordinatori) possano comunque ottenere i biglietti.</li>
+                            <li>Peter D ha detto che vorrebbe condividere una proiezione interna di dove le vendite probabilmente finiranno (con margini di errore), e di come cambia nel tempo durante la vendita, per aiutare la pianificazione.</li>
+                        </ul>
+
+                        <h2>8. Uno sconto per i partecipanti più giovani</h2>
+                        <ul>
+                            <li>Peter D ha posto l'idea di uno sconto per le persone sotto i 26 anni (una soglia europea comune), per la <strong>sostenibilità della comunità</strong>: una comunità la cui età media continua a salire finirà per avere difficoltà a costruire l'evento. Aggiungere circa 150 partecipanti più giovani farebbe la differenza, e alcuni tornerebbero portando amici. Altre idee erano che i barrios &laquo;adottassero&raquo; partecipanti più giovani e che si portassero giovani nel team comunicazione.</li>
+                            <li>Un partecipante ha chiesto quanti under 26 già partecipano, per valutare quanto di uno sconto andrebbe ai partecipanti esistenti e quanto ne porterebbe di nuovi. Peter D ha detto che è una domanda per il censimento, e che vorrebbe che i dati del censimento fossero conservati in Humans. Un partecipante ha anche chiesto la quota dei partecipanti per la prima volta; quei dati non sono ancora disponibili, ma il censimento potrebbe averli.</li>
+                        </ul>
+
+                        <h2>9. Comunicazione e sensibilizzazione</h2>
+                        <ul>
+                            <li>Un partecipante ha osservato che vendere biglietti dipende dalla qualità della comunicazione. Daniel T ha fatto riferimento alla sessione del giorno precedente sull'identità dell'evento. Comunicazione è un dipartimento; il lavoro sull'identità dell'evento, incluso il piano di sensibilizzazione, è un progetto. Parte del suo scopo è creare materiale che le persone possano condividere, affinché il passaparola si diffonda più lontano. Le persone coinvolte sono consapevoli che il successo finanziario dell'evento dipende in parte da questo.</li>
+                            <li>Sui social media, Daniela ha detto che le piacerebbe sapere a che punto è il team comunicazione riguardo alle piattaforme con cui alcuni membri della comunità non si sentono a proprio agio. Il punto di vista di Daniel T era che chiunque nel team comunicazione voglia costruire una presenza su una piattaforma, in un modo che si adatti all'identità dell'evento, dovrebbe poterlo fare; chi non apprezza una piattaforma non deve usarla, ma non dovrebbe impedire agli altri di farlo. Un altro partecipante ha suggerito che il team comunicazione decida insieme, e che ogni canale sia indirizzato verso comunità vicine alla cultura, come i makerspace.</li>
+                        </ul>
+
+                        <h2>10. Come verranno prese le decisioni</h2>
+                        <ul>
+                            <li>Daniel T ha detto che queste decisioni non saranno prese dal consiglio. Saranno prese tramite il gruppo di lavoro Finanze 2027, che è aperto a chiunque, si confronterà con la comunità (anche nelle chiamate comunitarie), e lavorerà in modo aperto. Il fatto che membri del consiglio partecipino a un gruppo di lavoro non ne fa una decisione del consiglio.</li>
+                            <li>Peter D ha detto che il suo ruolo principale è assicurarsi che i conti siano in ordine. Costruirà un modello che mostra cosa deve cambiare se si sposta una leva, e faciliterà la conversazione, ma non vuole essere lui a decidere quali leve muovere.</li>
+                            <li>Interrogati su dove si collochi la discussione sui possibili ruoli retribuiti, i partecipanti hanno detto che il chi e il cosa (i ruoli stessi) spettano al gruppo di lavoro sulla struttura organizzativa. Il gruppo di lavoro finanze esaminerebbe quanta parte del budget potrebbe andare a ruoli retribuiti.</li>
+                        </ul>
+
+                        <hr />
+                        <h2>Risultati</h2>
+                        <ul>
+                            <li>Una discussione aperta; <strong>non è stata presa alcuna decisione</strong>. I prezzi e i numeri menzionati sono solo idee.</li>
+                            <li>Ampio accordo sul fatto che <strong>servono più biglietti a reddito basso</strong>, e apertura tra i partecipanti verso un prezzo a reddito basso un po' più alto se ciò significa più biglietti. Molti vogliono anche una finestra di domanda più lunga e alcuni biglietti a reddito basso tardivi o riservati.</li>
+                            <li>Sostegno a una <strong>coda di rimborso</strong> tramite la vendita ufficiale come modo di gestire le persone che non possono venire, piuttosto che la rivendita.</li>
+                            <li>I biglietti per fornitori, squadre, artisti e persone che lavorano all'evento dovrebbero essere gestiti come <strong>assegnazioni separate con criteri oggettivi</strong>, distinte dal reddito basso.</li>
+                            <li>Esaurire i biglietti in modo affidabile è stato visto come la chiave della prevedibilità; se la domanda cresce, bisogna pianificare l'accesso dei contributori principali.</li>
+                            <li>Tutto quanto sopra è <strong>trasmesso al gruppo di lavoro Finanze 2027</strong>: il prezzo generale del biglietto, il numero e il prezzo dei biglietti a reddito basso, i rimborsi e i trasferimenti, le assegnazioni di gruppo, i modelli basati sull'adesione, uno sconto per gli under 26, la dimensione e la crescita dell'evento, e il margine di budget per i ruoli retribuiti.</li>
+                        </ul>
+
+                        <h2>Prossimi passi</h2>
+                        <ul>
+                            <li>Il gruppo di lavoro Finanze 2027 si riunisce settimanalmente il lunedì alle 18:00, prima della riunione del consiglio, a partire da lunedì 19 ottobre. Chiunque sia interessato alla biglietteria e alle finanze è invitato a partecipare &mdash; Peter D.</li>
+                            <li>Il partecipante che ha descritto il modello alternativo di biglietteria è stato invitato a presentarlo al gruppo di lavoro.</li>
+                            <li>Le domande sui ruoli stessi, inclusi i possibili ruoli retribuiti, vanno al gruppo di lavoro sulla struttura organizzativa.</li>
+                        </ul>
+
+                        <p><em>Note preparate a partire dalla registrazione e dalla trascrizione della sessione. Depurate per la pubblicazione.</em></p>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Bei Diskrepanzen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+                    <div class="attendees">
+                        <strong>Mit: Daniel T (Präsident, Moderation), Daniela (Produktion, Zeitnahme), Peter D (Schatzmeister), Chris O, Ant H und weiteren ALM-Teilnehmenden</strong>
+                        Eine Open-Space-Session beim Annual Leadership Meeting (ALM, 15.&ndash;19. Oktober 2026), eingeordnet unter die Arbeitsgruppe Finanzen 2027. Es handelt sich um eine offene Diskussion, kein Entscheidungsgremium. Die Ideen, Preise und Zahlen unten wurden zur Diskussion gestellt; keine davon ist eine Entscheidung. Sie wurden an die Arbeitsgruppe Finanzen 2027 weitergegeben, die sie mit der Community weiterentwickeln wird.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Eine locker strukturierte Session darüber, wie der Verein das Geld für die Durchführung seines Events aufbringt: Tickets, und möglicherweise andere Modelle. Sie begann mit einer Runde, in der jede Person mit einer Idee zwei Minuten hatte, gefolgt von einem offenen Gespräch. Die Hauptthemen waren <strong>Zugang für Menschen mit niedrigem Einkommen</strong>, <strong>Erstattungen und Übertragungen</strong>, Tickets für <strong>Anbieter, Künstler, Crews und Personen, die beim Event arbeiten</strong>, <strong>mitgliedschaftsbasierte Modelle</strong>, Wege, den <strong>Ticketpreis über die Zeit zu senken</strong>, <strong>Wachstum</strong>, und ein möglicher <strong>Rabatt für jüngere Teilnehmende</strong>. Die Session endete mit einem Verweis auf die Arbeitsgruppe Finanzen 2027, die wöchentlich ab Montag, 19. Oktober, tagt.</p>
+
+                        <h2>1. Einordnung</h2>
+                        <ul>
+                            <li>Daniel T eröffnete die Session. Der Verein wird Geld aus der Community sammeln müssen, um sein Event durchzuführen, sei es über Tickets oder ein anderes Modell wie Mitgliedschaften. Mit einem Bankkonto, das nun vorhanden ist, und mehr Zeit als dieses Jahr kann er ein besseres System entwerfen als jenes, das 2026 improvisiert werden musste.</li>
+                            <li>Daniel T sagte, dass viele der diesjährigen Einschränkungen aus Unsicherheit entstanden seien. Ticketwellen wurden genutzt, um Einnahmen vorzuziehen, damit Lieferanten gebucht werden konnten. Wenn das Event verlässlich eine im Voraus festgelegte Anzahl ausverkauft, würde diese Vorhersehbarkeit es deutlich leichter machen zu entscheiden, zum Beispiel wie viele Tickets für niedriges Einkommen angeboten werden und wie sie freigegeben werden.</li>
+                        </ul>
+
+                        <h2>2. Zugang und Preisgestaltung für niedriges Einkommen</h2>
+                        <ul>
+                            <li><strong>Mehr Tickets für niedriges Einkommen.</strong> Mehrere Teilnehmende sagten, dass es weit weniger Tickets für niedriges Einkommen gebe als Anträge, und dass Menschen, die während des Jahres viel beitragen, nicht hätten kommen können. Einige bitten außerdem darum, die niedrigeren Gehälter von Menschen, die in Spanien leben, zu berücksichtigen.</li>
+                            <li><strong>Ein etwas höherer Preis für niedriges Einkommen, wenn das mehr Tickets bedeutet.</strong> Ein Teilnehmer schlug vor, dass der Preis für niedriges Einkommen im Gleichschritt mit dem vollen Preis steigen könnte, was mehr solcher Tickets finanzieren würde; Personen, die Tickets für niedriges Einkommen nutzen und von diesem Teilnehmer befragt wurden, hatten das für vertretbar gehalten. Andere stimmten zu. Ein Teilnehmer schlug einen Preis für niedriges Einkommen von etwa dem 1,5-Fachen des aktuellen vor. Peter D begrüßte das: Er sei davon ausgegangen, dass das Ziel sei, den Preis niedrig zu halten, aber wenn er mit der Inflation steigen kann, könnte man ihn mehr Menschen anbieten.</li>
+                            <li><strong>Schenken.</strong> Zu den Ideen gehörten, dass Menschen, die mehr zahlen können, das Ticket einer anderen Person mit niedrigem Einkommen finanzieren, sowie Community-Crowdfunding, um ausgebrannten Mitwirkenden als Zeichen der Wertschätzung ein kostenloses Ticket zu schenken.</li>
+                            <li><strong>Zeitplanung als Inklusionsfrage.</strong> Mehrere Teilnehmende sagten, die Antragsfrist für niedriges Einkommen sei sehr früh gewesen, und nicht jeder könne Monate im Voraus planen oder sparen. Peter D erklärte, dass das Zeitfenster für niedriges Einkommen dieses Jahr kurz war, weil der Zeitplan gedrängt war. Die Grenze lag auch niedriger als beabsichtigt, weil so früh im Jahr noch kein Geld vorhanden war. Die Absicht ist, das Zeitfenster zu verlängern und mehr Tickets für niedriges Einkommen in das Ziel aufzunehmen.</li>
+                            <li><strong>Späte Tickets für niedriges Einkommen.</strong> Ant H schlug vor, eine kleine Anzahl von Tickets für niedriges Einkommen (sechs bis zehn wurden genannt) zu reservieren, die nach der Frist verfügbar wären, zum Beispiel für Mitglieder der Infrastruktur-Crew, die sich erst wenige Wochen vor dem Event verpflichten. Ein Teilnehmer bat um dasselbe für Künstler mit einem Kunststipendium, die sich kein Ticket zum vollen Preis leisten können.</li>
+                            <li><strong>Anspruchsberechtigung.</strong> Ein Teilnehmer sagte, ein ordentlicher Fragebogen, wie der in diesem Jahr verwendete, sei fairer als eine vertrauensbasierte Ja/Nein-Frage, die Menschen unwahr beantworten können, und bat außerdem um etwas Flexibilität für individuelle Situationen. Peter D sagte, die Zuteilung erfolge derzeit über eine Lotterie mit einem Punktesystem.</li>
+                            <li><strong>Ein alternatives Modell.</strong> Ein Teilnehmer beschrieb ein mit anderen aus der Community entwickeltes Ticketing-Modell. Es würde die Beiträge darauf stützen, was Menschen sich tatsächlich leisten können (unter Berücksichtigung zum Beispiel der Kosten für die Pflege von Familienmitgliedern) statt allein auf Einkommen oder Vermögen, mittels einer Selbsteinschätzung, und es mit dem Budget verknüpfen: wie viele Tickets, zu welchem Durchschnittspreis, finanzieren was. Es gab keine Zeit, es vollständig vorzustellen; Daniel T schlug vor, es der Arbeitsgruppe Finanzen 2027 zu präsentieren.</li>
+                            <li>Peter D schlug vor, dass Ratenzahlungsdienste (Klarna wurde genannt) Menschen helfen könnten, die die Kosten eines früh gekauften Tickets verteilen müssen.</li>
+                        </ul>
+
+                        <h2>3. Erstattungen und Übertragungen</h2>
+                        <ul>
+                            <li>Ein Teilnehmer brachte vor, dass Tickets für niedriges Einkommen nicht übertragen werden können, wodurch Menschen, die nicht mehr kommen können, auf ihren Kosten sitzen bleiben.</li>
+                            <li>Peter D: Zu einem ermäßigten Preis verkaufte Tickets werden wahrscheinlich nicht übertragbar sein, aber <strong>Erstattungen sind die volle Absicht für die Zukunft</strong>. Die Idee ist eine Erstattungswarteschlange: Wer eine Erstattung möchte, tritt der Warteschlange bei, und jedes neu verkaufte Ticket erstattet der nächsten Person in der Warteschlange, solange noch Tickets verkauft werden. Die Warteschlange würde wahrscheinlich etwa eine Woche vor dem Event schließen.</li>
+                            <li>Ant H schlug eine direkte Übergabe innerhalb dieses Systems vor: Die Person, die ein Ticket aufgibt, schickt einen Link an eine befreundete Person, die es kauft und damit die Erstattung auslöst. Peter D hielt das für vertretbar.</li>
+                            <li>Daniel T sagte, ein solcher Erstattungspool würde die Website zum einzigen Ort machen, an dem man ein Ticket kaufen kann. Er würde es den Menschen auch erlauben, früh zu kaufen, mit der Sicherheit, ihr Geld nicht zu verlieren, was Einnahmen vorzieht, ohne jemanden auszuschließen.</li>
+                        </ul>
+
+                        <h2>4. Anbieter, Künstler, Crews und Personen, die beim Event arbeiten</h2>
+                        <ul>
+                            <li><strong>Anbieter.</strong> Daniela sagte, sie würde sich einen einheitlichen Ansatz für Tickets von Anbietern wünschen. Manche lokalen Anbieter kennen die Community gut und nehmen an ihrer Kultur teil. Dieses Jahr gab sie ihnen lokale Codes, was eine Premiere war. Zwei Gründe für eine Standardisierung: rechtlich (der Verein muss wissen, wer bei seinem Event anwesend ist) und kulturell (Menschen vor Ort sollten die Gewohnheiten des Events kennen und respektieren, damit sich Teilnehmende wohlfühlen).</li>
+                            <li><strong>Getrennte Zuteilungen statt niedriges Einkommen.</strong> Peter D würde es bevorzugen, dass Abteilungen oder Teams (zum Beispiel Infrastruktur, Produktion oder das Kunstteam) ein Ticketbudget zur Verteilung an ihre Leute erhalten, in Töpfen getrennt vom niedrigen Einkommen, das &bdquo;eine Sache&ldquo; ist. Das ist aus buchhalterischer Sicht sauberer.</li>
+                            <li><strong>Objektive Kriterien.</strong> Chris O sagte, dass es immer, wenn Tickets an bestimmte Gruppen zugeteilt werden, objektive Kriterien dafür geben müsse, wer sie erhält, um jedes Risiko von Günstlingswirtschaft zu vermeiden.</li>
+                            <li><strong>Personen, die beim Event arbeiten.</strong> Daniela brachte zur Sprache, wie mit Tickets für Personen umzugehen ist, die beim Event arbeiten, etwa Crewmitglieder, die für Aufbau und Abbau bezahlt werden und dann für das Event bleiben, sowie Koordinatoren. Sind ihre Tickets anders, und können sie sich trotzdem für niedriges Einkommen bewerben? Sie beschrieb das als eine Grauzone, die ein Gespräch braucht.</li>
+                            <li><strong>Abbau-Crew.</strong> Ein Teilnehmer erwähnte den ermäßigten Ticketpreis für die Abbau-Crew, der dieses Jahr vorgeschlagen worden war. Peter D stellte klar, dass dies aus rechtlichen Gründen nicht als Ticketrabatt im Austausch für Arbeit erfolgen kann. Eine andere Art, die Abbau-Crew anzuerkennen, wird erarbeitet.</li>
+                        </ul>
+
+                        <h2>5. Mitgliedschaftsbasierte Ideen</h2>
+                        <ul>
+                            <li><strong>Monatliche Zahlungen auf ein Ticket.</strong> Ant H schlug vor, dass Menschen einen kleinen monatlichen Betrag an den Verein zahlen könnten (zwanzig Euro pro Monat war das Beispiel), der sich zu einem Ticket aufbaut. Der Kauf eines Tickets könnte auch als ein Jahr Mitgliedschaft gelten. Das würde die Einnahmen über das Jahr verteilen und die Kosten für Menschen mit niedrigem Einkommen tragbar machen.</li>
+                            <li><strong>Jahresmitgliedschaft mit Kaufrecht für ein Ticket.</strong> Ein Teilnehmer beschrieb andere regionale Burns, bei denen eine kleine Jahresgebühr (etwa zehn bis vierundzwanzig Euro) das Recht gibt, ein Ticket zu kaufen.</li>
+                            <li><strong>Ein einmaliges &bdquo;Lebenszeit&ldquo;-Ticket.</strong> Ein Teilnehmer schlug vor, denen, die es möchten, Tickets auf Lebenszeit gegen eine große Einmalzahlung anzubieten (fünftausend Euro wurden genannt), als eine Möglichkeit, zu jeder Zeit des Jahres Geld einzunehmen. Ein anderer Teilnehmer fügte hinzu, dies sollte an fortgesetztes gutes Verhalten geknüpft sein, einschließlich der Achtung von Einvernehmlichkeit.</li>
+                            <li><strong>In Reaktion vorgebrachte Punkte.</strong> Daniel T wies darauf hin, dass die Satzung des Vereins Mitgliedsbeiträge vorsieht. Peter D sagte, das sei richtig, er würde sie aber für 2027 nicht einführen: Viele kleine Transaktionen bedeuten einen erheblichen buchhalterischen Aufwand, und es gibt einen Haftungsaspekt. Ein Teilnehmer wies darauf hin, dass Mitgliedsbeiträge nur für <em>asociados</em> gelten könnten und für alle gleich sein müssten, also nicht freiwillig sein könnten; eine freiwillige Spende könnte daneben bestehen. Peter D fügte hinzu, dass für eine Spende nichts im Gegenzug gegeben werden kann.</li>
+                            <li><strong>Früher Zugang.</strong> Daniel T erinnerte daran, dass Menschen, die sich dieses Jahr bei Humans angemeldet hatten, frühen Zugang zum Verkauf erhielten. Sollte die Nachfrage das Angebot jemals übersteigen, könnte die erste Verkaufswoche zum Beispiel Menschen mit Rollen oder Freiwilligen vorbehalten sein, damit die Menschen, die das Event aufbauen, Tickets bekommen können. Er und Peter D erwarteten nicht, dass das Event 2027 innerhalb von Minuten ausverkauft sein würde.</li>
+                        </ul>
+
+                        <h2>6. Den Ticketpreis über die Zeit senken</h2>
+                        <ul>
+                            <li>Chris O sagte, der allgemeine Ticketpreis zähle genauso wie Tickets für niedriges Einkommen: Das Event ist für niemanden billig. Den Preis zu senken, oder ihn zumindest nicht anzuheben, während die Inflation aufholt, ist wahrscheinlich ein <strong>mehrjähriges Projekt</strong>, das mit guter Haushaltsführung beginnt und die Kosten angemessen hält. Ein niedrigerer Preis könnte den Menschen auch mehr Spielraum lassen, etwas mehr zu geben.</li>
+                            <li>Peter D sagte, das Event 2026 habe mit etwas übrig gebliebenem Geld abgeschlossen, nachdem Kosten gekürzt wurden, was einen Puffer gibt. Die Senkung der Ticketpreise ist eine mögliche Verwendung, aber das ist eine Entscheidung der Arbeitsgruppe. Seine eigene grobe Schätzung war, dass der <strong>Durchschnittspreis für 2027 vielleicht um etwa 10 % sinken könnte</strong>, während das niedrige Einkommen weiter ausgebaut wird, und möglicherweise im Jahr danach erneut.</li>
+                            <li>Peter D beschrieb das Budget als eine Reihe von <strong>Stellschrauben</strong>: Ticketpreis, Anzahl der Tickets für niedriges Einkommen, der Preis für niedriges Einkommen und andere. Eine nach oben zu bewegen bedeutet, eine andere nach unten zu bewegen, und manche hängen von der Teilnahmeprognose ab. Manche Stellschrauben können sich während des Verkaufs bewegen; zum Beispiel kann mehr in Kreativität fließen, sobald mehr Tickets verkauft wurden.</li>
+                        </ul>
+
+                        <h2>7. Wachstum und Größe des Events</h2>
+                        <ul>
+                            <li>Ein Teilnehmer sagte, Ticketing sei auch ein Gespräch über Wachstum, und sprach sich für sanftes Wachstum aus.</li>
+                            <li>Chris O sagte, wenn die Tickets verkauft werden können, könnte das Event im nächsten Jahr oder in den nächsten zwei Jahren schneller wachsen. Viele Menschen, die die Kultur teilen, waren 2026 nicht dabei und könnten 2027 kommen, sodass schnelleres Wachstum jetzt die Kultur nicht unbedingt gefährden müsste; sanfteres Wachstum könnte darauf folgen. Operativ, so fühlte er, könnte ein deutlich größeres Event getragen werden.</li>
+                            <li>Peter D merkte an, dass Planungsgespräche von rund 3.000 Teilnehmenden ausgegangen seien, und dass er nicht erwarte, dass das Event 2027 darüber hinaus ausverkauft sei.</li>
+                            <li>Ein Teilnehmer beschrieb einen anderen regionalen Burn, der die Eventgröße an die Anzahl der Freiwilligen koppelt. Zusätzliche Ticketwellen werden erst freigegeben, wenn die Freiwilligenrollen besetzt sind.</li>
+                            <li>Daniel T: Verlässliches Ausverkaufen ist der Schlüssel zu den anderen Stellschrauben. Da der Verein seine eigenen Ticketing-Werkzeuge anpassen kann, ist Software nicht die Grenze; wie viele Tickets verkauft werden, hängt von der Identität des Events und der Kommunikation ab. Er fügte hinzu, dass, falls das Event tatsächlich ausverkauft ist, so geplant werden muss, dass Kernmitwirkende (Infrastruktur, Leads, Koordinatoren) weiterhin Tickets bekommen können.</li>
+                            <li>Peter D sagte, er würde gerne eine interne Prognose darüber teilen, wo die Verkäufe voraussichtlich enden (mit Fehlerbalken), und wie sich das während des Verkaufs über die Zeit verändert, um bei der Planung zu helfen.</li>
+                        </ul>
+
+                        <h2>8. Ein Rabatt für jüngere Teilnehmende</h2>
+                        <ul>
+                            <li>Peter D brachte die Idee eines Rabatts für Personen unter 26 Jahren (eine gängige europäische Schwelle) auf, aus Gründen der <strong>Nachhaltigkeit der Community</strong>: Eine Community, deren Durchschnittsalter immer weiter steigt, wird es irgendwann schwer haben, das Event aufzubauen. Rund 150 zusätzliche jüngere Teilnehmende hinzuzufügen würde einen Unterschied machen, und manche würden zurückkehren und Freunde mitbringen. Weitere Ideen waren, dass barrios jüngere Teilnehmende &bdquo;adoptieren&ldquo; und jüngere Menschen ins Comms-Team holen.</li>
+                            <li>Ein Teilnehmer fragte, wie viele unter 26-Jährige bereits teilnehmen, um einschätzen zu können, wie viel von einem Rabatt an bestehende Teilnehmende ginge und wie viel neue anziehen würde. Peter D sagte, das sei eine Frage für den Zensus, und er hätte gerne, dass Zensusdaten in Humans gespeichert würden. Ein Teilnehmer fragte außerdem nach dem Anteil der Erstteilnehmenden; diese Daten seien noch nicht verfügbar, aber der Zensus könnte sie haben.</li>
+                        </ul>
+
+                        <h2>9. Kommunikation und Außenwirkung</h2>
+                        <ul>
+                            <li>Ein Teilnehmer merkte an, dass der Ticketverkauf von der Qualität der Kommunikation abhängt. Daniel T verwies auf die Session vom Vortag zur Eventidentität. Comms ist eine Abteilung; die Arbeit an der Eventidentität, einschließlich des Outreach-Plans, ist ein Projekt. Ein Teil ihres Ziels ist es, Material zu schaffen, das Menschen teilen können, damit sich Mund-zu-Mund-Propaganda weiter verbreitet. Die Beteiligten sind sich bewusst, dass der finanzielle Erfolg des Events teilweise davon abhängt.</li>
+                            <li>Zu sozialen Medien sagte Daniela, sie würde gerne wissen, wie das Comms-Team zu Plattformen steht, mit denen sich manche Community-Mitglieder nicht wohlfühlen. Daniel Ts Ansicht war, dass jede Person im Comms-Team, die auf einer Plattform Präsenz aufbauen möchte, auf eine Weise, die zur Identität des Events passt, dies auch tun sollte; Menschen, die eine Plattform nicht mögen, müssen sie nicht nutzen, sollten aber andere nicht daran hindern. Ein anderer Teilnehmer schlug vor, dass das Comms-Team gemeinsam entscheidet und jeden Kanal auf Communitys ausrichtet, die der Kultur nahestehen, etwa Makerspaces.</li>
+                        </ul>
+
+                        <h2>10. Wie Entscheidungen getroffen werden</h2>
+                        <ul>
+                            <li>Daniel T sagte, diese Entscheidungen würden nicht vom Vorstand getroffen. Sie würden über die Arbeitsgruppe Finanzen 2027 getroffen, die allen offensteht, sich mit der Community austauschen wird (auch in Community-Calls) und offen arbeiten wird. Dass Vorstandsmitglieder an einer Arbeitsgruppe teilnehmen, macht daraus keine Vorstandsentscheidung.</li>
+                            <li>Peter D sagte, seine Hauptaufgabe sei es, sicherzustellen, dass die Zahlen aufgehen. Er werde ein Modell erstellen, das zeigt, was sich ändern muss, wenn eine Stellschraube bewegt wird, und das Gespräch moderieren, wolle aber nicht entscheiden, welche Stellschrauben bewegt werden.</li>
+                            <li>Auf die Frage, wo die Diskussion über mögliche bezahlte Rollen hingehört, sagten die Teilnehmenden, dass das Wer und das Was (die Rollen selbst) bei der Arbeitsgruppe Organisationsstruktur liegen. Die Arbeitsgruppe Finanzen würde prüfen, wie viel vom Budget für bezahlte Rollen aufgewendet werden könnte.</li>
+                        </ul>
+
+                        <hr />
+                        <h2>Ergebnisse</h2>
+                        <ul>
+                            <li>Eine offene Diskussion; <strong>es wurden keine Entscheidungen getroffen</strong>. Genannte Preise und Zahlen sind nur Ideen.</li>
+                            <li>Breite Übereinstimmung, dass <strong>mehr Tickets für niedriges Einkommen benötigt werden</strong>, und Offenheit unter den Teilnehmenden für einen etwas höheren Preis für niedriges Einkommen, wenn das mehr Tickets bedeutet. Viele wünschen sich außerdem ein längeres Antragsfenster und einige späte oder reservierte Tickets für niedriges Einkommen.</li>
+                            <li>Unterstützung für eine <strong>Erstattungswarteschlange</strong> über den offiziellen Verkauf als Weg, mit Menschen umzugehen, die nicht kommen können, statt Weiterverkauf.</li>
+                            <li>Tickets für Anbieter, Crews, Künstler und Personen, die beim Event arbeiten, sollten als <strong>getrennte Zuteilungen mit objektiven Kriterien</strong> behandelt werden, getrennt vom niedrigen Einkommen.</li>
+                            <li>Verlässliches Ausverkaufen wurde als Schlüssel zur Vorhersehbarkeit angesehen; wenn die Nachfrage wächst, muss der Zugang von Kernmitwirkenden geplant werden.</li>
+                            <li>All das oben Genannte wird <strong>an die Arbeitsgruppe Finanzen 2027 weitergegeben</strong>: der allgemeine Ticketpreis, Anzahl und Preis für niedriges Einkommen, Erstattungen und Übertragungen, Gruppenzuteilungen, mitgliedschaftsbasierte Modelle, ein Rabatt für unter 26-Jährige, Eventgröße und Wachstum sowie der Budgetrahmen für bezahlte Rollen.</li>
+                        </ul>
+
+                        <h2>Nächste Schritte</h2>
+                        <ul>
+                            <li>Die Arbeitsgruppe Finanzen 2027 trifft sich wöchentlich montags um 18:00 Uhr, vor der Vorstandssitzung, beginnend am Montag, 19. Oktober. Wer sich für Ticketing und Finanzen interessiert, ist herzlich eingeladen mitzumachen &mdash; Peter D.</li>
+                            <li>Die Person, die das alternative Ticketing-Modell beschrieben hat, wurde eingeladen, es in der Arbeitsgruppe vorzustellen.</li>
+                            <li>Fragen zu den Rollen selbst, einschließlich möglicher bezahlter Rollen, gehen an die Arbeitsgruppe Organisationsstruktur.</li>
+                        </ul>
+
+                        <p><em>Notizen, erstellt aus der Aufzeichnung und dem Transkript der Session. Für die Veröffentlichung bereinigt.</em></p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -166,5 +626,17 @@
     <script src="../footer.js"></script>
 
     <script src="../script.js"></script>
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>

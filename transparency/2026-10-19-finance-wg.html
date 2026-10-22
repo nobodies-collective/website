@@ -27,9 +27,11 @@
         .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
         .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
         .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
         .lang-content { display: none; }
         .lang-content.active { display: block; }
-        .draft-banner { background: #fff3cd; color: #6b4e00; border: 1px solid #ffe08a; padding: 0.75rem 1.25rem; border-radius: 8px; margin-bottom: 1.5rem; font-weight: 500; max-width: 800px; }
         .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
@@ -53,7 +55,17 @@
 
                 <!-- ==================== ENGLISH ==================== -->
 
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
                 <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
 
                     <div class="attendees">
                         <strong>Present: Peter D (convenor), Daniel T, Daniela (Production), Cocci</strong>
@@ -128,6 +140,308 @@
                     </div>
                 </div>
 
+                <div class="lang-content" data-lang="es">
+
+                    <div class="attendees">
+                        <strong>Presentes: Peter D (convocante), Daniel T, Daniela (Producción), Cocci</strong>
+                        La primera sesión del grupo de trabajo Finanzas 2027, celebrada el día después de la Reunión Anual de Liderazgo (ALM). El grupo de trabajo prepara una propuesta; no decide. Las ideas y los precios de ejemplo que figuran a continuación son propuestas y opciones para debate, no decisiones. Cualquier recomendación presupuestaria se somete a votación en una Asamblea General de la asociación.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Una primera sesión de alcance. Peter D expuso lo que pretende que el grupo produzca y para cuándo: un presupuesto recomendado para 2027, que se presentará a una Asamblea General a mediados de diciembre. La mayor parte de la llamada trató sobre hasta qué punto la venta de entradas forma parte del trabajo del grupo, cómo involucrar a la comunidad en general en poco tiempo, y un primer intercambio de ideas sobre el precio de las entradas: un control deslizante de pago según posibilidades, un precio inicial bajo que sube con el tiempo, un fondo de reembolsos, y vincular las entradas de renta baja y las mejoras de todo el evento a cómo van las ventas. No se tomaron decisiones sobre precios ni cifras presupuestarias.</p>
+
+                        <h2>1. Finalidad, resultado y calendario</h2>
+                        <ul>
+                            <li><strong>La intención de Peter D para el grupo</strong> (que el propio grupo puede modificar): termina a mediados de diciembre en una Asamblea General, con un <strong>presupuesto recomendado para 2027</strong>, y entonces el grupo concluye. En cualquier caso, hay que presentar un presupuesto a la Asamblea General una vez al año. El ejercicio podría repetirse cada año para el año siguiente.</li>
+                            <li>El presupuesto no es una lista fija de costes. Peter D lo describió como un modelo de las &ldquo;palancas&rdquo; disponibles: costes fijos del evento (gastos operativos), mejoras de capital, precios de las entradas, el número de entradas de renta baja, con descuento o gratuitas (por ejemplo, para proveedores locales), una posible entrada más barata para residentes en España, y gastos que pueden ajustarse, como la creatividad. Las ventas de entradas se pueden prever pero no controlar, por lo que el plan debería funcionar como un <strong>árbol de decisión</strong>: se abren más opciones a medida que se venden más entradas, con una fecha de decisión de seguir o no, como este año.</li>
+                            <li><strong>Las mejoras de capital</strong> deben identificarse relativamente pronto. Peter D esperaba que las mejoras que requieren una decisión temprana tuvieran menos probabilidades de llevarse a cabo, y que las que pueden esperar hasta que se vendan más entradas tuvieran más.</li>
+                            <li><strong>Aportaciones de otros trabajos.</strong> Daniela señaló que el presupuesto depende de las aportaciones de otros proyectos y departamentos, y que el ALM acordó cambios sustanciales con impacto presupuestario, en particular la inversión en voluntarios. Calculó que esbozar ideas para partidas nuevas que no están en el presupuesto de este año llevaría al menos dos semanas, y que esto era optimista.</li>
+                            <li><strong>Tiempo disponible.</strong> Peter D señaló que hay aproximadamente ocho semanas, realistamente seis o siete para preparar una propuesta, que la Asamblea General todavía no se ha programado, y que, al caer la Navidad en viernes, el 17 de diciembre aproximadamente es realistamente el último momento de diciembre para una votación. El calendario se seguirá debatiendo en la próxima reunión.</li>
+                        </ul>
+
+                        <h2>2. Las cuentas de este año</h2>
+                        <ul>
+                            <li>Daniela propuso publicar las finanzas de este año como un informe interactivo que la gente pueda explorar. Peter D estuvo de acuerdo. Ya está en marcha el trabajo sobre una presentación visual; él lo considera independiente de este grupo de trabajo, que puede dar su opinión sobre ello. Podrá terminarse una vez que entren los últimos gastos (del fin de semana del ALM y las partidas de barrio restantes) y se cierre el año.</li>
+                        </ul>
+
+                        <h2>3. Alcance: ¿forma parte la venta de entradas de este grupo?</h2>
+                        <ul>
+                            <li>Daniel T dijo que le gustaría que el grupo elaborara un plan concreto de venta de entradas (precios, reembolsos y cómo funcionan, como se planteó en una lluvia de ideas en el ALM) que cuente con el apoyo de una parte suficiente de la comunidad, mediante un proceso de consulta similar al de la votación de las fechas del evento. Incluso quienes no estén de acuerdo con el resultado deberían poder ver que se consultó a la comunidad, en lugar de que un grupo de finanzas les imponga un plan.</li>
+                            <li>Peter D no creía que hubiera tiempo para un proceso completo e independiente, pero confirmó que <strong>los precios de las entradas están dentro del alcance de este grupo</strong>: la estrategia de venta de entradas es la parte de ingresos del presupuesto, y las dos no se pueden separar. En su opinión, mecánicas como un único fondo de entradas, los reembolsos para entradas restringidas y la venta a la siguiente persona de la cola ya están en gran medida acordadas, y los detalles de cómo funcionan las ventas, los reembolsos y los cambios de nombre importan menos para los ingresos que los tramos de precios. No es a esto a lo que se refiere aquí cuando se habla de condiciones de venta de entradas.</li>
+                            <li>Daniela había entendido que &ldquo;Finanzas 2027&rdquo; abarcaba todos los temas financieros, y preguntó si esto es, en efecto, un grupo de trabajo de presupuesto. Con la aclaración de Peter D de que aquí se trata el precio de las entradas, quedó conforme. Sugirió involucrar al equipo de venta de entradas.</li>
+                            <li><strong>Los grupos de trabajo y la votación.</strong> Daniel T señaló que los grupos de trabajo proponen en lugar de decidir, y argumentó que una propuesta debería ofrecer varias opciones válidas en lugar de una única opción de tómalo o déjalo. Peter D dijo que el propio presupuesto se somete a la Asamblea General como una única votación de sí o no, por lo que la estrategia de venta de entradas y el presupuesto tienen que ser una sola propuesta; dentro de ella, el árbol de decisión puede cubrir una gama de resultados (un evento más &ldquo;sobrio&rdquo; o más &ldquo;elaborado&rdquo; según los ingresos). Daniel T estuvo de acuerdo en que ambas cosas van juntas, ya que una estrategia de venta de entradas determina el grado de certeza del presupuesto.</li>
+                        </ul>
+
+                        <h2>4. Participación de la comunidad</h2>
+                        <ul>
+                            <li>Daniel T se ofreció a encargarse de la parte de participación de la comunidad del trabajo del grupo &mdash; llamadas comunitarias y otras formas de recoger opiniones sobre la estrategia de venta de entradas &mdash; y dio la bienvenida a la ayuda. El dinero importa a todos y es un tema polémico; la gente puede aceptar no obtener su opción preferida si siente que se la escucha y el proceso es transparente.</li>
+                            <li>Peter D estuvo de acuerdo, con una advertencia: las preguntas deben formularse con cuidado (no simplemente &ldquo;¿cuánto debería costar la entrada?&rdquo;), y la encuesta sobre las fechas del evento había demostrado el valor de hacer las preguntas de categorización adecuadas. Las encuestas son posibles, pero el tiempo es escaso. Daniel T señaló que la votación de las fechas del evento se realizó en unas seis semanas.</li>
+                        </ul>
+
+                        <h2>5. Ideas sobre el precio de las entradas (para debate, sin decisiones)</h2>
+                        <ul>
+                            <li><strong>Pago según posibilidades con transparencia (Cocci).</strong> Cocci presentó un concepto con dos partes. Primero, mostrar a todos el presupuesto del evento: costes fijos, costes que varían con el número de asistentes, y qué permitirían distintos precios medios, desde un evento &ldquo;sobrio&rdquo; hasta uno &ldquo;elaborado&rdquo;. Segundo, dejar que la gente elija su precio en un control deslizante por encima de un mínimo, con la imagen cambiando a medida que lo mueven (lo que el evento puede o no permitirse en cada nivel). Una autoevaluación breve y opcional, teniendo en cuenta la renta disponible y el coste de vida en distintos países, sugeriría un precio justo. Ella usa un enfoque similar para el presupuesto de su barrio, donde los miembros tienden a dar más de lo pedido. Sugirió probarlo antes de que se abran las ventas, y señaló que podría ser demasiado tarde para hacerlo bien este año. También podría ofrecerse solo a los asociados, con ventas normales para el resto.</li>
+                            <li><strong>Llegar más allá de la comunidad principal (Daniel T).</strong> Daniel T pensaba que el modelo funciona bien dentro de un grupo cercano y comprometido, pero puede no llegar a personas más alejadas del núcleo, o a quienes asisten por primera vez, porque las comunicaciones de la asociación no les llegan de forma fiable. Sugirió mantenerla como una de las ideas principales y presentarla en la consulta a la comunidad.</li>
+                            <li><strong>Riesgo (Peter D).</strong> Peter D se mostró cauteloso sobre experimentar a la escala de todo el presupuesto del evento, ya que dar dinero de entrada es psicológicamente distinto de aceptar dejar dinero con una organización, y esquemas similares en otros eventos han tenido resultados desiguales. Veía partes de la idea como viables: en la práctica, un precio mínimo de entrada más una donación visible por encima.</li>
+                            <li><strong>Precio inicial bajo, que sube con el tiempo, con un fondo de reembolsos (Daniel T).</strong> Las entradas empezarían a un precio relativamente bajo en enero (Daniel T mencionó alrededor de 175&ndash;200&euro; como ejemplo, no como propuesta de un precio concreto) y subirían para los compradores posteriores. Quien no pueda asistir devuelve su entrada a un fondo; la compra del siguiente comprador le reembolsa, de modo que la mayoría de las personas que decidan un par de semanas antes del evento recuperarían su dinero. Los derechos de reembolso legales seguirían aplicándose. Peter D propuso combinar esto con el control deslizante: un mínimo que sube mes a mes, recompensando a los compradores tempranos, y cualquier cantidad por encima tratada como donación. Un precio medio de entrada más bajo también mejoraría la accesibilidad.</li>
+                            <li><strong>Pago a plazos.</strong> Daniel T transmitió una idea de la comunidad: permitir que la gente pague su entrada mensualmente, ya que una pequeña cantidad mensual puede ser más fácil de gestionar que un único pago mayor. Si esto puede funcionar legal y prácticamente está por determinar.</li>
+                            <li><strong>Mostrar el progreso sin publicar las cifras de ventas.</strong> Si las cifras de ventas de entradas siguen sin publicarse, Daniel T sugirió una proyección con un rango que muestre cómo la contribución de una persona mueve el resultado probable. Peter D sugirió un gráfico de ingresos a lo largo del tiempo, mostrando los ingresos base de entradas y las donaciones por encima, con hitos vinculados a los ingresos en lugar de al número de entradas vendidas.</li>
+                            <li><strong>Mejoras clasificadas por la comunidad.</strong> Daniel T sugirió pedir a los miembros, o a la comunidad en general, que clasifiquen un listado de mejoras para todo el evento (por ejemplo, una actualización del equipo de sonido), financiadas en ese orden a medida que se alcanzan los hitos de ingresos. Peter D dijo que esto coincidía con su forma de pensar: <strong>las mejoras de capital las propone la comunidad, el grupo comprueba que el coste sea razonable, y la comunidad las prioriza</strong>.</li>
+                            <li><strong>Entradas de renta baja.</strong> Peter D planteó una contribución aparte y opcional a un fondo de renta baja, de modo que cada cantidad fija financie una plaza más de renta baja. Daniel T sugirió liberar las entradas de renta baja en proporción a las entradas vendidas, en tramos, con una ventana corta para usar cada código. Peter D señaló que el proceso de renta baja de este año implicó mucho emparejamiento manual que no debería repetirse, y que un fondo de reembolsos integrado también resolvería el problema de la gente que compra una entrada normal mientras espera una de renta baja.</li>
+                            <li><strong>Donar parte de un reembolso.</strong> Cocci sugirió que alguien que devuelva una entrada también podría elegir, con un control deslizante, cuánto quiere que se le reembolse. Peter D y Daniel T estuvieron de acuerdo en que esto podría construirse una vez que exista un control deslizante.</li>
+                            <li>Peter D dijo que, a partir de su investigación sobre sistemas de venta de entradas, no esperaba que ninguna de estas opciones estuviera técnicamente fuera de alcance.</li>
+                        </ul>
+
+                        <hr />
+                        <h2>Resultados</h2>
+                        <ul>
+                            <li>Objetivo de trabajo (fijado por Peter D, que el grupo puede modificar): un <strong>presupuesto recomendado para 2027</strong>, elaborado como un árbol de decisión vinculado a las ventas de entradas, para presentarse a una <strong>Asamblea General a mediados de diciembre</strong>. La fecha de la Asamblea General todavía no está fijada.</li>
+                            <li><strong>El precio de las entradas está dentro del alcance de este grupo</strong>, como la parte de ingresos del presupuesto.</li>
+                            <li>Dirección de trabajo: las mejoras de capital las propone la comunidad, el grupo las comprueba y la comunidad las prioriza.</li>
+                            <li>Las ideas sobre el precio de las entradas (control deslizante, precio creciente, fondo de reembolsos, pago a plazos, entradas de renta baja vinculadas) siguen siendo opciones para debate. No se acordaron precios ni cifras presupuestarias.</li>
+                            <li>La publicación de las cuentas de este año en formato interactivo se está trabajando por separado; el grupo puede dar su opinión.</li>
+                        </ul>
+
+                        <h2>Próximos pasos</h2>
+                        <ul>
+                            <li>Publicar en el canal de venta de entradas que el grupo de trabajo Finanzas 2027 es donde se fijan los precios de las entradas del próximo año &mdash; Peter D.</li>
+                            <li>Redactar la sesión como un plan paso a paso, y anunciar la próxima sesión más ampliamente &mdash; Peter D.</li>
+                            <li>Liderar la participación de la comunidad sobre la estrategia de venta de entradas (llamadas comunitarias y otras formas de recoger opiniones) &mdash; Daniel T, con ayuda bienvenida.</li>
+                            <li>Debatir el calendario y la fecha de la Asamblea General en la próxima sesión.</li>
+                            <li>Próxima sesión: lunes 26 de octubre, a la misma hora.</li>
+                        </ul>
+
+                        <p><em>Acta preparada a partir de la grabación y la transcripción de la reunión. Depurada para su publicación.</em></p>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="fr">
+<div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaut.</div>
+
+                    <div class="attendees">
+                        <strong>Présents : Peter D (convocateur), Daniel T, Daniela (Production), Cocci</strong>
+                        La première séance du groupe de travail Finances 2027, tenue le lendemain de la Réunion annuelle de direction (ALM). Le groupe de travail prépare une proposition ; il ne décide pas. Les idées et les prix donnés à titre d'exemple ci-dessous sont des propositions et des options de discussion, pas des décisions. Toute recommandation budgétaire est soumise au vote d'une Assemblée générale de l'association.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Une première séance de cadrage. Peter D a exposé ce qu'il souhaite que le groupe produise et pour quand : un budget recommandé pour 2027, à soumettre à une Assemblée générale à la mi-décembre. La majeure partie de l'appel a porté sur la mesure dans laquelle la billetterie relève du travail du groupe, sur la manière d'impliquer la communauté au sens large en peu de temps, et sur un premier échange d'idées concernant le prix des billets : un curseur de paiement selon ses moyens, un prix de départ bas qui augmente avec le temps, un fonds de remboursement, et le fait de lier les billets à revenu modeste et les améliorations à l'échelle de l'événement à l'évolution des ventes. Aucune décision sur les prix ou les chiffres budgétaires n'a été prise.</p>
+
+                        <h2>1. Objectif, résultat et calendrier</h2>
+                        <ul>
+                            <li><strong>L'intention de Peter D pour le groupe</strong> (que le groupe lui-même peut modifier) : il se termine à la mi-décembre lors d'une Assemblée générale, avec un <strong>budget recommandé pour 2027</strong>, puis le groupe est dissous. Un budget doit de toute façon être présenté à l'Assemblée générale une fois par an. L'exercice pourrait être répété chaque année pour l'année suivante.</li>
+                            <li>Le budget n'est pas une liste fixe de coûts. Peter D l'a décrit comme un modèle des &laquo; leviers &raquo; disponibles : coûts fixes de l'événement (frais de fonctionnement), améliorations d'immobilisations, prix des billets, nombre de billets à revenu modeste, à tarif réduit ou gratuits (par exemple pour les fournisseurs locaux), un billet éventuellement moins cher pour les résidents d'Espagne, et des dépenses pouvant varier, comme la créativité. Les ventes de billets peuvent être prévues mais pas contrôlées, le plan doit donc fonctionner comme un <strong>arbre de décision</strong> : davantage d'options s'ouvrent à mesure que plus de billets sont vendus, avec une date de décision go/no-go, comme cette année.</li>
+                            <li><strong>Les améliorations d'immobilisations</strong> doivent être identifiées relativement tôt. Peter D s'attendait à ce que les améliorations nécessitant une décision précoce aient moins de chances d'être réalisées, et que celles pouvant attendre que davantage de billets soient vendus en aient davantage.</li>
+                            <li><strong>Contributions d'autres travaux.</strong> Daniela a noté que le budget dépend des contributions d'autres projets et départements, et que l'ALM a approuvé des changements substantiels ayant un impact budgétaire, notamment l'investissement dans les bénévoles. Elle a estimé que des idées approximatives pour de nouveaux postes non prévus dans le budget de cette année prendraient au moins deux semaines, et que c'était optimiste.</li>
+                            <li><strong>Temps disponible.</strong> Peter D a noté qu'il reste environ huit semaines, six ou sept de manière réaliste pour préparer une proposition, que l'Assemblée générale n'a pas encore été programmée, et que, Noël tombant un vendredi, le 17 décembre environ est réalistement le dernier moment de décembre pour un vote. Le calendrier doit être discuté plus en détail lors de la prochaine réunion.</li>
+                        </ul>
+
+                        <h2>2. Les comptes de cette année</h2>
+                        <ul>
+                            <li>Daniela a proposé de publier les finances de cette année sous la forme d'un rapport interactif que les gens peuvent explorer. Peter D a approuvé. Le travail sur une présentation visuelle est déjà en cours ; il le considère comme distinct de ce groupe de travail, qui peut donner son avis à ce sujet. Il pourra être terminé une fois que les dernières dépenses (du week-end de l'ALM et des postes de barrio restants) seront enregistrées et que l'année sera clôturée.</li>
+                        </ul>
+
+                        <h2>3. Périmètre : la billetterie fait-elle partie de ce groupe ?</h2>
+                        <ul>
+                            <li>Daniel T a dit qu'il souhaiterait que le groupe produise un plan de billetterie concret (prix, remboursements et leur fonctionnement, tels qu'imaginés lors d'un brainstorming à l'ALM) qu'une partie suffisante de la communauté soutienne, via un processus de consultation similaire au vote sur les dates de l'événement. Même les personnes en désaccord avec le résultat devraient pouvoir constater que la communauté a été consultée, plutôt que de se voir imposer un plan par un groupe de finances.</li>
+                            <li>Peter D ne pensait pas qu'il y ait le temps pour un processus complet et distinct, mais a confirmé que <strong>les prix des billets relèvent du périmètre de ce groupe</strong> : la stratégie de billetterie constitue le volet recettes du budget, et les deux ne peuvent pas être séparés. À son avis, des mécanismes tels qu'un pool unique de billets, les remboursements pour les billets restreints et la vente à la personne suivante dans la file d'attente sont déjà globalement convenus, et les détails du fonctionnement des ventes, des remboursements et des changements de nom importent moins pour les recettes que les paliers de prix. Ce n'est pas des conditions générales de billetterie qu'il est question ici.</li>
+                            <li>Daniela avait compris que &laquo; Finances 2027 &raquo; couvrait tous les sujets financiers, et a demandé si cela constitue en fait un groupe de travail budgétaire. Avec la clarification de Peter D selon laquelle le prix des billets est abordé ici, elle s'est déclarée satisfaite. Elle a suggéré d'impliquer l'équipe de billetterie.</li>
+                            <li><strong>Les groupes de travail et le vote.</strong> Daniel T a noté que les groupes de travail proposent plutôt qu'ils ne décident, et a soutenu qu'une proposition devrait offrir plusieurs options valables plutôt qu'une seule option à prendre ou à laisser. Peter D a dit que le budget lui-même est soumis à l'Assemblée générale sous forme d'un vote unique oui/non, de sorte que la stratégie de billetterie et le budget doivent constituer une seule proposition ; en son sein, l'arbre de décision peut couvrir une gamme de résultats (un événement plus &laquo; sobre &raquo; ou plus &laquo; chic &raquo; selon les recettes). Daniel T a convenu que les deux vont de pair, puisqu'une stratégie de billetterie détermine le degré de certitude du budget.</li>
+                        </ul>
+
+                        <h2>4. Engagement de la communauté</h2>
+                        <ul>
+                            <li>Daniel T a proposé de prendre en charge le volet engagement communautaire du travail du groupe &mdash; appels communautaires et autres moyens de recueillir des avis sur la stratégie de billetterie &mdash; et a accueilli toute aide. L'argent compte pour tout le monde et est source de controverse ; les gens peuvent accepter de ne pas obtenir l'option qu'ils préfèrent s'ils se sentent écoutés et si le processus est transparent.</li>
+                            <li>Peter D a approuvé, avec une mise en garde : les questions doivent être formulées avec soin (pas simplement &laquo; combien le billet devrait-il coûter ? &raquo;), et l'enquête sur les dates de l'événement avait montré l'intérêt de poser les bonnes questions de catégorisation. Des enquêtes sont possibles, mais le temps est compté. Daniel T a souligné que le vote sur les dates de l'événement avait été mené en environ six semaines.</li>
+                        </ul>
+
+                        <h2>5. Idées sur le prix des billets (à discuter, aucune décision)</h2>
+                        <ul>
+                            <li><strong>Paiement selon ses moyens avec transparence (Cocci).</strong> Cocci a présenté un concept en deux parties. D'abord, montrer à tout le monde le budget de l'événement : coûts fixes, coûts qui varient selon le nombre de participants, et ce que différents prix moyens permettraient, d'un événement &laquo; sobre &raquo; à un événement &laquo; chic &raquo;. Ensuite, laisser les gens choisir leur prix sur un curseur au-dessus d'un minimum, l'image changeant à mesure qu'ils le déplacent (ce que l'événement peut ou ne peut pas se permettre à chaque niveau). Une brève auto-évaluation facultative, tenant compte du revenu disponible et du coût de la vie selon les pays, suggérerait un prix équitable. Elle utilise une approche similaire pour le budget de son barrio, où les membres ont tendance à donner plus que demandé. Elle a suggéré de le tester avant l'ouverture des ventes, et a noté qu'il pourrait être trop tard pour bien le faire cette année. Cela pourrait aussi être proposé uniquement aux asociados, avec des ventes classiques pour tous les autres.</li>
+                            <li><strong>Atteindre au-delà de la communauté centrale (Daniel T).</strong> Daniel T pensait que le modèle fonctionne bien au sein d'un groupe proche et engagé, mais pourrait ne pas atteindre les personnes plus éloignées du noyau, ou les nouveaux venus, car les communications de l'association ne les atteignent pas de façon fiable. Il a suggéré de la garder comme l'une des idées principales et de la présenter lors de la consultation communautaire.</li>
+                            <li><strong>Risque (Peter D).</strong> Peter D s'est montré prudent quant à l'expérimentation à l'échelle de tout le budget de l'événement, car donner de l'argent au départ est psychologiquement différent d'accepter de laisser de l'argent à une organisation, et des dispositifs similaires lors d'autres événements ont donné des résultats mitigés. Il voyait certaines parties de l'idée comme réalisables : en pratique, un prix minimum de billet plus un don visible en plus.</li>
+                            <li><strong>Prix de départ bas, augmentant avec le temps, avec un fonds de remboursement (Daniel T).</strong> Les billets commenceraient à un prix relativement bas en janvier (Daniel T a donné environ 175 à 200 &euro; à titre d'exemple, pas comme proposition d'un prix précis) et augmenteraient pour les acheteurs ultérieurs. Toute personne ne pouvant venir remet son billet dans un fonds ; l'achat de l'acheteur suivant la rembourse, de sorte que la plupart des personnes décidant deux semaines avant l'événement récupéreraient leur argent. Les droits de remboursement légaux continueraient de s'appliquer. Peter D a suggéré de combiner cela avec le curseur : un minimum qui augmente mois après mois, récompensant les acheteurs précoces, tout montant au-dessus étant traité comme un don. Un prix moyen de billet plus bas améliorerait aussi l'accessibilité.</li>
+                            <li><strong>Paiement en plusieurs fois.</strong> Daniel T a transmis une idée venant de la communauté : permettre aux gens de payer leur billet mensuellement, car un petit montant mensuel peut être plus facile à gérer qu'un seul paiement plus important. Reste à voir si cela peut fonctionner légalement et pratiquement.</li>
+                            <li><strong>Montrer la progression sans publier les chiffres de vente.</strong> Si les chiffres de vente des billets continuent de ne pas être publiés, Daniel T a suggéré une projection avec une fourchette montrant comment la contribution d'un individu déplace le résultat probable. Peter D a suggéré un graphique des recettes dans le temps, montrant les recettes de base des billets et les dons en plus, avec des jalons liés aux recettes plutôt qu'au nombre de billets vendus.</li>
+                            <li><strong>Améliorations classées par la communauté.</strong> Daniel T a suggéré de demander aux membres, ou à la communauté au sens large, de classer une liste d'améliorations à l'échelle de l'événement (par exemple une mise à niveau du matériel de sonorisation), financées dans cet ordre à mesure que les jalons de recettes sont atteints. Peter D a dit que cela correspondait à sa réflexion : <strong>les améliorations d'immobilisations sont proposées par la communauté, vérifiées par le groupe quant à leur coût raisonnable, et classées par ordre de priorité par la communauté</strong>.</li>
+                            <li><strong>Billets à revenu modeste.</strong> Peter D a évoqué une contribution distincte et facultative à un fonds pour les revenus modestes, afin que chaque montant fixe finance une place supplémentaire à revenu modeste. Daniel T a suggéré de libérer les billets à revenu modeste proportionnellement aux billets vendus, par tranches, avec une courte fenêtre pour utiliser chaque code. Peter D a noté que le processus de cette année pour les revenus modestes impliquait beaucoup de mise en correspondance manuelle qui ne devrait pas se reproduire, et qu'un fonds de remboursement intégré résoudrait aussi le problème des personnes achetant un billet normal en attendant un billet à revenu modeste.</li>
+                            <li><strong>Faire don d'une partie d'un remboursement.</strong> Cocci a suggéré que la personne restituant un billet puisse aussi choisir, avec un curseur, quelle part lui être remboursée. Peter D et Daniel T ont convenu que cela pourrait être mis en place une fois qu'un curseur existe.</li>
+                            <li>Peter D a dit que, d'après ses recherches sur les systèmes de billetterie, il ne s'attendait à ce qu'aucune de ces options soit techniquement hors de portée.</li>
+                        </ul>
+
+                        <hr />
+                        <h2>Résultats</h2>
+                        <ul>
+                            <li>Objectif de travail (fixé par Peter D, modifiable par le groupe) : un <strong>budget recommandé pour 2027</strong>, élaboré comme un arbre de décision lié aux ventes de billets, à soumettre à une <strong>Assemblée générale à la mi-décembre</strong>. La date de l'Assemblée générale n'est pas encore fixée.</li>
+                            <li><strong>Le prix des billets relève du périmètre de ce groupe</strong>, en tant que volet recettes du budget.</li>
+                            <li>Orientation de travail : les améliorations d'immobilisations sont proposées par la communauté, vérifiées par le groupe et classées par ordre de priorité par la communauté.</li>
+                            <li>Les idées sur le prix des billets (curseur, prix croissant, fonds de remboursement, paiement en plusieurs fois, billets à revenu modeste liés) restent des options de discussion. Aucun prix ni chiffre budgétaire n'a été convenu.</li>
+                            <li>La publication des comptes de cette année sous une forme interactive est travaillée séparément ; le groupe peut donner son avis.</li>
+                        </ul>
+
+                        <h2>Prochaines étapes</h2>
+                        <ul>
+                            <li>Publier dans le canal billetterie que le groupe de travail Finances 2027 est l'endroit où les prix des billets de l'année prochaine sont fixés &mdash; Peter D.</li>
+                            <li>Rédiger la séance sous forme de plan étape par étape, et annoncer la prochaine séance plus largement &mdash; Peter D.</li>
+                            <li>Diriger l'engagement communautaire sur la stratégie de billetterie (appels communautaires et autres moyens de recueillir des avis) &mdash; Daniel T, toute aide étant bienvenue.</li>
+                            <li>Discuter du calendrier et de la date de l'Assemblée générale lors de la prochaine séance.</li>
+                            <li>Prochaine séance : lundi 26 octobre, à la même heure.</li>
+                        </ul>
+
+                        <p><em>Compte rendu établi à partir de l'enregistrement et de la transcription de la réunion. Expurgé pour publication.</em></p>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="it">
+<div class="lang-note">In caso di discrepanze tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Presenti: Peter D (convocatore), Daniel T, Daniela (Produzione), Cocci</strong>
+                        La prima sessione del gruppo di lavoro Finanze 2027, tenutasi il giorno dopo l'Annual Leadership Meeting (ALM). Il gruppo di lavoro prepara una proposta; non decide. Le idee e i prezzi di esempio riportati di seguito sono proposte e opzioni di discussione, non decisioni. Qualsiasi raccomandazione di bilancio viene sottoposta al voto di un'Assemblea Generale dell'associazione.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Una prima sessione di definizione dell'ambito. Peter D ha illustrato cosa intende far produrre al gruppo ed entro quando: un bilancio consigliato per il 2027, da sottoporre a un'Assemblea Generale a metà dicembre. La maggior parte della chiamata ha riguardato quanto la biglietteria rientri nel lavoro del gruppo, come coinvolgere la comunità più ampia in poco tempo, e un primo scambio di idee sul prezzo dei biglietti: un cursore di pagamento secondo le proprie possibilità, un prezzo iniziale basso che aumenta nel tempo, un fondo di rimborso, e il collegamento dei biglietti a reddito basso e dei miglioramenti a livello di evento all'andamento delle vendite. Non sono state prese decisioni su prezzi o cifre di bilancio.</p>
+
+                        <h2>1. Finalità, risultato e tempistica</h2>
+                        <ul>
+                            <li><strong>L'intenzione di Peter D per il gruppo</strong> (che il gruppo stesso può modificare): si conclude a metà dicembre con un'Assemblea Generale, con un <strong>bilancio consigliato per il 2027</strong>, dopodiché il gruppo termina la sua attività. In ogni caso, un bilancio deve essere presentato all'Assemblea Generale una volta all'anno. L'esercizio potrebbe essere ripetuto ogni anno per l'anno successivo.</li>
+                            <li>Il bilancio non è un elenco fisso di costi. Peter D lo ha descritto come un modello delle &laquo;leve&raquo; disponibili: costi fissi dell'evento (spese operative), miglioramenti patrimoniali, prezzi dei biglietti, il numero di biglietti a reddito basso, scontati o gratuiti (ad esempio per i fornitori locali), un possibile biglietto più economico per i residenti in Spagna, e spese che possono variare, come la creatività. Le vendite dei biglietti si possono prevedere ma non controllare, quindi il piano dovrebbe funzionare come un <strong>albero decisionale</strong>: si aprono più opzioni man mano che si vendono più biglietti, con una data di decisione go/no-go, come quest'anno.</li>
+                            <li><strong>I miglioramenti patrimoniali</strong> devono essere individuati relativamente presto. Peter D si aspettava che i miglioramenti che richiedono una decisione anticipata avessero meno probabilità di essere realizzati, e che quelli che possono attendere la vendita di più biglietti ne avessero di più.</li>
+                            <li><strong>Contributi da altri lavori.</strong> Daniela ha osservato che il bilancio dipende dai contributi di altri progetti e reparti, e che l'ALM ha concordato cambiamenti sostanziali con impatto sul bilancio, in particolare l'investimento nei volontari. Ha stimato che idee di base per nuove voci non presenti nel bilancio di quest'anno richiederebbero almeno due settimane, e che questa era una stima ottimistica.</li>
+                            <li><strong>Tempo disponibile.</strong> Peter D ha osservato che ci sono circa otto settimane, realisticamente sei o sette per preparare una proposta, che l'Assemblea Generale non è ancora stata programmata, e che, cadendo il Natale di venerdì, il 17 dicembre circa è realisticamente l'ultimo momento di dicembre per un voto. La tempistica sarà discussa ulteriormente alla prossima riunione.</li>
+                        </ul>
+
+                        <h2>2. I conti di quest'anno</h2>
+                        <ul>
+                            <li>Daniela ha proposto di pubblicare le finanze di quest'anno come un rapporto interattivo che le persone possano esplorare. Peter D ha concordato. Il lavoro su una presentazione visiva è già in corso; lo considera separato da questo gruppo di lavoro, che può fornire un riscontro in merito. Potrà essere completato una volta registrate le ultime spese (dal weekend dell'ALM e dalle restanti voci di barrio) e chiuso l'anno.</li>
+                        </ul>
+
+                        <h2>3. Ambito: la biglietteria fa parte di questo gruppo?</h2>
+                        <ul>
+                            <li>Daniel T ha detto che vorrebbe che il gruppo producesse un piano di biglietteria concreto (prezzi, rimborsi e relativo funzionamento, come emerso in un brainstorming all'ALM) sostenuto da una parte sufficiente della comunità, attraverso un processo di consultazione simile al voto sulle date dell'evento. Anche chi non è d'accordo con il risultato dovrebbe poter constatare che la comunità è stata consultata, piuttosto che vedersi imporre un piano da un gruppo finanziario.</li>
+                            <li>Peter D non pensava che ci fosse tempo per un processo completo e separato, ma ha confermato che <strong>i prezzi dei biglietti rientrano nell'ambito di questo gruppo</strong>: la strategia di biglietteria è il lato delle entrate del bilancio, e le due cose non si possono separare. A suo avviso, meccanismi come un unico pool di biglietti, i rimborsi per i biglietti vincolati e la vendita alla persona successiva in coda sono già ampiamente concordati, e i dettagli su come funzionano vendite, rimborsi e cambi di nome contano meno per le entrate rispetto alle fasce di prezzo. Non sono i termini e le condizioni di biglietteria ciò di cui si parla qui.</li>
+                            <li>Daniela aveva capito che &laquo;Finanze 2027&raquo; coprisse tutti i temi finanziari, e ha chiesto se questo sia di fatto un gruppo di lavoro sul bilancio. Con la precisazione di Peter D che qui si discute il prezzo dei biglietti, si è detta soddisfatta. Ha suggerito di coinvolgere il team di biglietteria.</li>
+                            <li><strong>I gruppi di lavoro e il voto.</strong> Daniel T ha osservato che i gruppi di lavoro propongono piuttosto che decidere, e ha sostenuto che una proposta dovrebbe offrire diverse opzioni valide piuttosto che un'unica opzione prendere-o-lasciare. Peter D ha detto che il bilancio stesso viene sottoposto all'Assemblea Generale come un unico voto sì/no, quindi la strategia di biglietteria e il bilancio devono costituire un'unica proposta; al suo interno, l'albero decisionale può coprire una gamma di esiti (un evento più &laquo;sobrio&raquo; o più &laquo;elaborato&raquo; in base alle entrate). Daniel T ha concordato che le due cose vanno insieme, poiché una strategia di biglietteria determina quanto sia certo il bilancio.</li>
+                        </ul>
+
+                        <h2>4. Coinvolgimento della comunità</h2>
+                        <ul>
+                            <li>Daniel T si è offerto di occuparsi del coinvolgimento della comunità nel lavoro del gruppo &mdash; chiamate comunitarie e altri modi per raccogliere opinioni sulla strategia di biglietteria &mdash; e ha accolto favorevolmente ogni aiuto. Il denaro conta per tutti ed è un tema controverso; le persone possono accettare di non ottenere l'opzione preferita se si sentono ascoltate e il processo è trasparente.</li>
+                            <li>Peter D ha concordato, con un avvertimento: le domande devono essere formulate con attenzione (non semplicemente &laquo;quanto dovrebbe costare il biglietto?&raquo;), e il sondaggio sulle date dell'evento aveva dimostrato il valore di porre le giuste domande di categorizzazione. I sondaggi sono possibili, ma il tempo è poco. Daniel T ha fatto notare che il voto sulle date dell'evento si è svolto in circa sei settimane.</li>
+                        </ul>
+
+                        <h2>5. Idee sul prezzo dei biglietti (per discussione, nessuna decisione)</h2>
+                        <ul>
+                            <li><strong>Pagamento secondo le proprie possibilità con trasparenza (Cocci).</strong> Cocci ha presentato un concetto in due parti. Primo, mostrare a tutti il bilancio dell'evento: costi fissi, costi che variano con il numero di partecipanti, e cosa permetterebbero diversi prezzi medi, da un evento &laquo;sobrio&raquo; a uno &laquo;elaborato&raquo;. Secondo, lasciare che le persone scelgano il proprio prezzo su un cursore sopra un minimo, con il quadro che cambia man mano che lo spostano (ciò che l'evento può o non può permettersi a ogni livello). Un'autovalutazione breve e opzionale, che tenga conto del reddito disponibile e del costo della vita nei diversi paesi, suggerirebbe un prezzo equo. Lei usa un approccio simile per il bilancio del suo barrio, dove i membri tendono a dare più di quanto richiesto. Ha suggerito di testarlo prima dell'apertura delle vendite, osservando che potrebbe essere troppo tardi per farlo bene quest'anno. Potrebbe anche essere offerto solo agli asociados, con vendite normali per tutti gli altri.</li>
+                            <li><strong>Raggiungere oltre la comunità centrale (Daniel T).</strong> Daniel T pensava che il modello funzioni bene all'interno di un gruppo ristretto e impegnato, ma potrebbe non raggiungere le persone più lontane dal nucleo, o chi partecipa per la prima volta, perché le comunicazioni dell'associazione non le raggiungono in modo affidabile. Ha suggerito di mantenerla come una delle idee principali e di presentarla nella consultazione della comunità.</li>
+                            <li><strong>Rischio (Peter D).</strong> Peter D è stato cauto riguardo a sperimentare su scala dell'intero bilancio dell'evento, poiché dare denaro in prima battuta è psicologicamente diverso dall'accettare di lasciare denaro a un'organizzazione, e schemi simili in altri eventi hanno avuto risultati contrastanti. Vedeva alcune parti dell'idea come praticabili: in pratica, un prezzo minimo del biglietto più una donazione visibile sopra.</li>
+                            <li><strong>Prezzo iniziale basso, in aumento nel tempo, con un fondo di rimborso (Daniel T).</strong> I biglietti partirebbero a un prezzo relativamente basso a gennaio (Daniel T ha indicato circa 175&ndash;200&euro; come esempio, non come proposta di un prezzo specifico) e aumenterebbero per gli acquirenti successivi. Chi non può venire restituisce il biglietto a un fondo; l'acquisto del compratore successivo lo rimborsa, cosicché la maggior parte delle persone che decidono un paio di settimane prima dell'evento riavrebbe i propri soldi. I diritti di rimborso di legge continuerebbero ad applicarsi. Peter D ha suggerito di combinare questo con il cursore: un minimo che sale mese per mese, premiando chi acquista presto, con qualsiasi importo superiore trattato come donazione. Un prezzo medio del biglietto più basso migliorerebbe anche l'accessibilità.</li>
+                            <li><strong>Pagamento a rate.</strong> Daniel T ha riportato un'idea della comunità: permettere alle persone di pagare il biglietto mensilmente, poiché un piccolo importo mensile può essere più facile da gestire di un unico pagamento più grande. Se ciò possa funzionare legalmente e praticamente resta da vedere.</li>
+                            <li><strong>Mostrare i progressi senza pubblicare i numeri di vendita.</strong> Se le cifre di vendita dei biglietti continuano a non essere pubblicate, Daniel T ha suggerito una proiezione con un intervallo che mostri come il contributo di una persona sposta il risultato probabile. Peter D ha suggerito un grafico delle entrate nel tempo, che mostri le entrate di base dei biglietti e le donazioni sopra, con traguardi legati alle entrate piuttosto che al numero di biglietti venduti.</li>
+                            <li><strong>Miglioramenti classificati dalla comunità.</strong> Daniel T ha suggerito di chiedere ai membri, o alla comunità più ampia, di classificare un elenco di miglioramenti a livello di evento (ad esempio un aggiornamento dell'impianto audio), finanziati in quell'ordine man mano che si raggiungono i traguardi di entrate. Peter D ha detto che questo corrispondeva al suo modo di pensare: <strong>i miglioramenti patrimoniali sono proposti dalla comunità, verificati dal gruppo per un costo ragionevole, e prioritizzati dalla comunità</strong>.</li>
+                            <li><strong>Biglietti a reddito basso.</strong> Peter D ha proposto un contributo separato e facoltativo a un fondo per il reddito basso, in modo che ogni importo fisso finanzi un posto in più a reddito basso. Daniel T ha suggerito di rilasciare i biglietti a reddito basso in proporzione ai biglietti venduti, a tranche, con una breve finestra per usare ciascun codice. Peter D ha osservato che il processo di quest'anno per il reddito basso ha comportato molto abbinamento manuale che non dovrebbe ripetersi, e che un fondo di rimborso integrato risolverebbe anche il problema di chi acquista un biglietto normale mentre attende uno a reddito basso.</li>
+                            <li><strong>Donare parte di un rimborso.</strong> Cocci ha suggerito che chi restituisce un biglietto possa anche scegliere, con un cursore, quanto farsi rimborsare. Peter D e Daniel T hanno concordato che questo potrebbe essere realizzato una volta che esiste un cursore.</li>
+                            <li>Peter D ha detto che, dalla sua ricerca sui sistemi di biglietteria, non si aspettava che nessuna di queste opzioni fosse tecnicamente fuori portata.</li>
+                        </ul>
+
+                        <hr />
+                        <h2>Risultati</h2>
+                        <ul>
+                            <li>Obiettivo di lavoro (fissato da Peter D, modificabile dal gruppo): un <strong>bilancio consigliato per il 2027</strong>, costruito come un albero decisionale legato alle vendite dei biglietti, da sottoporre a un'<strong>Assemblea Generale a metà dicembre</strong>. La data dell'Assemblea Generale non è ancora fissata.</li>
+                            <li><strong>Il prezzo dei biglietti rientra nell'ambito di questo gruppo</strong>, come lato delle entrate del bilancio.</li>
+                            <li>Direzione di lavoro: i miglioramenti patrimoniali sono proposti dalla comunità, verificati dal gruppo e prioritizzati dalla comunità.</li>
+                            <li>Le idee sul prezzo dei biglietti (cursore, prezzo crescente, fondo di rimborso, pagamento a rate, biglietti a reddito basso collegati) restano opzioni di discussione. Non sono stati concordati prezzi o cifre di bilancio.</li>
+                            <li>La pubblicazione dei conti di quest'anno in forma interattiva è in lavorazione separatamente; il gruppo può fornire un riscontro.</li>
+                        </ul>
+
+                        <h2>Prossimi passi</h2>
+                        <ul>
+                            <li>Pubblicare nel canale biglietteria che il gruppo di lavoro Finanze 2027 è dove vengono fissati i prezzi dei biglietti dell'anno prossimo &mdash; Peter D.</li>
+                            <li>Scrivere la sessione come un piano passo dopo passo, e pubblicizzare la prossima sessione più ampiamente &mdash; Peter D.</li>
+                            <li>Guidare il coinvolgimento della comunità sulla strategia di biglietteria (chiamate comunitarie e altri modi per raccogliere opinioni) &mdash; Daniel T, con aiuto benvenuto.</li>
+                            <li>Discutere la tempistica e la data dell'Assemblea Generale alla prossima sessione.</li>
+                            <li>Prossima sessione: lunedì 26 ottobre, alla stessa ora.</li>
+                        </ul>
+
+                        <p><em>Verbale redatto a partire dalla registrazione e dalla trascrizione della riunione. Ripulito per la pubblicazione.</em></p>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="de">
+<div class="lang-note">Bei Diskrepanzen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesend: Peter D (Einberufer), Daniel T, Daniela (Produktion), Cocci</strong>
+                        Die erste Sitzung der Arbeitsgruppe Finanzen 2027, die am Tag nach dem Annual Leadership Meeting (ALM) stattfand. Die Arbeitsgruppe erarbeitet einen Vorschlag; sie entscheidet nicht. Die unten aufgeführten Ideen und Beispielpreise sind Vorschläge und Diskussionsoptionen, keine Entscheidungen. Jede Budgetempfehlung wird einer Generalversammlung des Vereins zur Abstimmung vorgelegt.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Eine erste Sondierungssitzung. Peter D legte dar, was die Gruppe seiner Absicht nach erarbeiten soll und bis wann: ein empfohlenes Budget für 2027, das Mitte Dezember einer Generalversammlung vorgelegt werden soll. Der größte Teil des Gesprächs drehte sich darum, inwieweit das Ticketing zur Arbeit der Gruppe gehört, wie die breitere Community in kurzer Zeit einbezogen werden kann, und um einen ersten Ideenaustausch zur Ticketpreisgestaltung: einen Zahl-was-du-kannst-Regler, einen niedrigen Startpreis, der mit der Zeit steigt, einen Rückerstattungspool, und die Kopplung von Tickets für Menschen mit geringem Einkommen sowie eventweiten Verbesserungen an den Verkaufsverlauf. Es wurden keine Entscheidungen zu Preisen oder Budgetzahlen getroffen.</p>
+
+                        <h2>1. Zweck, Ergebnis und Zeitplan</h2>
+                        <ul>
+                            <li><strong>Peter Ds Absicht für die Gruppe</strong> (die die Gruppe selbst ändern kann): Sie endet Mitte Dezember mit einer Generalversammlung und einem <strong>empfohlenen Budget für 2027</strong>, danach ist die Gruppe fertig. Ein Budget muss der Generalversammlung ohnehin einmal im Jahr vorgelegt werden. Die Übung könnte jedes Jahr für das Folgejahr wiederholt werden.</li>
+                            <li>Das Budget ist keine feste Kostenliste. Peter D beschrieb es als Modell der verfügbaren &bdquo;Stellschrauben&ldquo;: feste Veranstaltungskosten (Betriebskosten), Investitionsverbesserungen, Ticketpreise, die Anzahl der Tickets für Menschen mit geringem Einkommen, vergünstigte oder kostenlose Tickets (zum Beispiel für lokale Lieferanten), ein möglicherweise günstigeres Ticket für Einwohner Spaniens, und Ausgaben, die flexibel sein können, wie etwa Kreativität. Ticketverkäufe lassen sich vorhersagen, aber nicht steuern, daher sollte der Plan als <strong>Entscheidungsbaum</strong> funktionieren: Mit mehr verkauften Tickets eröffnen sich mehr Optionen, mit einem Go/No-Go-Termin, wie in diesem Jahr.</li>
+                            <li><strong>Investitionsverbesserungen</strong> müssen relativ früh identifiziert werden. Peter D erwartete, dass Verbesserungen, die eine frühe Entscheidung erfordern, eher nicht umgesetzt würden, und solche, die warten können, bis mehr Tickets verkauft sind, eher schon.</li>
+                            <li><strong>Beiträge aus anderen Arbeitsbereichen.</strong> Daniela stellte fest, dass das Budget von Beiträgen anderer Projekte und Abteilungen abhängt, und dass das ALM wesentliche Änderungen mit Budgetauswirkungen vereinbart hat, insbesondere Investitionen in Freiwillige. Sie schätzte, dass grobe Ideen für neue Posten, die nicht im diesjährigen Budget enthalten sind, mindestens zwei Wochen dauern würden, und dass dies optimistisch sei.</li>
+                            <li><strong>Verfügbare Zeit.</strong> Peter D stellte fest, dass es ungefähr acht Wochen gibt, realistisch sechs oder sieben, um einen Vorschlag vorzubereiten, dass die Generalversammlung noch nicht terminiert ist, und dass, da Weihnachten auf einen Freitag fällt, etwa der 17. Dezember realistisch der späteste Zeitpunkt im Dezember für eine Abstimmung ist. Der Zeitplan wird in der nächsten Sitzung weiter besprochen.</li>
+                        </ul>
+
+                        <h2>2. Die Jahresabrechnung dieses Jahres</h2>
+                        <ul>
+                            <li>Daniela schlug vor, die diesjährigen Finanzen als interaktiven Bericht zu veröffentlichen, den man selbst erkunden kann. Peter D stimmte zu. An einer visuellen Darstellung wird bereits gearbeitet; er sieht das als getrennt von dieser Arbeitsgruppe, die dazu Feedback geben kann. Sie kann fertiggestellt werden, sobald die letzten Ausgaben (vom ALM-Wochenende und den verbleibenden Barrio-Posten) vorliegen und das Jahr abgeschlossen ist.</li>
+                        </ul>
+
+                        <h2>3. Zuständigkeit: Gehört das Ticketing zu dieser Gruppe?</h2>
+                        <ul>
+                            <li>Daniel T sagte, er wünsche sich, dass die Gruppe einen konkreten Ticketing-Plan (Preise, Rückerstattungen und deren Funktionsweise, wie beim ALM in einem Brainstorming entwickelt) erarbeitet, den ein ausreichender Teil der Community unterstützt, durch einen Konsultationsprozess ähnlich der Abstimmung über die Veranstaltungstermine. Selbst Menschen, die mit dem Ergebnis nicht einverstanden sind, sollten erkennen können, dass die Community konsultiert wurde, statt dass ihnen ein Plan von einer Finanzgruppe auferlegt wird.</li>
+                            <li>Peter D glaubte nicht, dass Zeit für einen vollständig separaten Prozess bleibt, bestätigte aber, dass <strong>Ticketpreise in den Zuständigkeitsbereich dieser Gruppe fallen</strong>: Die Ticketing-Strategie ist die Einnahmenseite des Budgets, und die beiden lassen sich nicht trennen. Seiner Ansicht nach sind Mechaniken wie ein einziger Ticket-Pool, Rückerstattungen für eingeschränkte Tickets und der Verkauf an die nächste Person in der Warteschlange bereits weitgehend vereinbart, und die Details, wie Verkäufe, Rückerstattungen und Namensänderungen funktionieren, sind für die Einnahmen weniger wichtig als die Preisstufen. Allgemeine Ticketbedingungen sind hier nicht gemeint.</li>
+                            <li>Daniela hatte &bdquo;Finanzen 2027&ldquo; so verstanden, dass es alle Finanzthemen abdeckt, und fragte, ob dies faktisch eine Budget-Arbeitsgruppe sei. Mit Peter Ds Klarstellung, dass hier die Ticketpreisgestaltung besprochen wird, war sie zufrieden. Sie schlug vor, das Ticketing-Team einzubeziehen.</li>
+                            <li><strong>Arbeitsgruppen und die Abstimmung.</strong> Daniel T stellte fest, dass Arbeitsgruppen vorschlagen statt entscheiden, und argumentierte, ein Vorschlag solle mehrere gültige Optionen bieten statt einer einzigen Alles-oder-nichts-Option. Peter D sagte, das Budget selbst gehe als einzige Ja-oder-Nein-Abstimmung an die Generalversammlung, daher müssten Ticketing-Strategie und Budget ein einziger Vorschlag sein; innerhalb dessen könne der Entscheidungsbaum eine Bandbreite von Ergebnissen abdecken (ein eher &bdquo;nüchternes&ldquo; oder ein eher &bdquo;aufwendiges&ldquo; Event je nach Einnahmen). Daniel T stimmte zu, dass beides zusammengehört, da eine Ticketing-Strategie bestimmt, wie sicher das Budget ist.</li>
+                        </ul>
+
+                        <h2>4. Einbindung der Community</h2>
+                        <ul>
+                            <li>Daniel T bot an, den Teil der Community-Einbindung in der Arbeit der Gruppe zu übernehmen &mdash; Community-Calls und andere Wege, Rückmeldungen zur Ticketing-Strategie einzuholen &mdash; und begrüßte jede Unterstützung. Geld ist für alle wichtig und umstritten; Menschen können es akzeptieren, ihre bevorzugte Option nicht zu bekommen, wenn sie sich gehört fühlen und der Prozess transparent ist.</li>
+                            <li>Peter D stimmte zu, mit einer Einschränkung: Fragen müssen sorgfältig formuliert werden (nicht einfach &bdquo;Was sollte das Ticket kosten?&ldquo;), und die Umfrage zu den Veranstaltungsterminen hatte den Wert der richtigen kategorisierenden Fragen gezeigt. Umfragen sind möglich, aber die Zeit ist knapp. Daniel T wies darauf hin, dass die Abstimmung über die Veranstaltungstermine in etwa sechs Wochen durchgeführt wurde.</li>
+                        </ul>
+
+                        <h2>5. Ideen zur Ticketpreisgestaltung (zur Diskussion, keine Entscheidungen)</h2>
+                        <ul>
+                            <li><strong>Zahl-was-du-kannst mit Transparenz (Cocci).</strong> Cocci stellte ein zweiteiliges Konzept vor. Erstens, allen das Budget der Veranstaltung zeigen: feste Kosten, Kosten, die mit der Teilnehmerzahl variieren, und was verschiedene Durchschnittspreise ermöglichen würden, von einem &bdquo;nüchternen&ldquo; bis zu einem &bdquo;aufwendigen&ldquo; Event. Zweitens, Menschen ihren Preis auf einem Regler oberhalb eines Minimums wählen lassen, wobei sich das Bild ändert, während sie ihn bewegen (was das Event auf jeder Stufe leisten kann oder nicht). Eine kurze, optionale Selbsteinschätzung, die verfügbares Einkommen und Lebenshaltungskosten in verschiedenen Ländern berücksichtigt, würde einen fairen Preis vorschlagen. Sie nutzt einen ähnlichen Ansatz für das Budget ihres Barrios, wo Mitglieder tendenziell mehr geben als verlangt. Sie schlug vor, es vor Verkaufsstart zu testen, und merkte an, dass es dieses Jahr dafür zu spät sein könnte, es richtig zu machen. Es könnte auch nur den Asociados angeboten werden, mit regulärem Verkauf für alle anderen.</li>
+                            <li><strong>Über die Kerngemeinschaft hinaus erreichen (Daniel T).</strong> Daniel T meinte, das Modell funktioniere gut innerhalb einer engen, engagierten Gruppe, erreiche aber möglicherweise nicht Menschen, die weiter vom Kern entfernt sind, oder Erstteilnehmer, weil die Kommunikation des Vereins sie nicht zuverlässig erreicht. Er schlug vor, sie als eine der Hauptideen zu behalten und sie in der Community-Konsultation vorzustellen.</li>
+                            <li><strong>Risiko (Peter D).</strong> Peter D war vorsichtig beim Experimentieren auf der Ebene des gesamten Veranstaltungsbudgets, da Geld von vornherein zu geben psychologisch etwas anderes ist, als zuzustimmen, Geld bei einer Organisation zu lassen, und ähnliche Modelle bei anderen Veranstaltungen hatten gemischte Ergebnisse. Er hielt Teile der Idee für machbar: im Grunde einen Mindestticketpreis plus eine sichtbare Spende obendrauf.</li>
+                            <li><strong>Niedriger Startpreis, der mit der Zeit steigt, mit einem Rückerstattungspool (Daniel T).</strong> Tickets würden im Januar zu einem relativ niedrigen Preis starten (Daniel T nannte etwa 175&ndash;200&euro; als Beispiel, nicht als Vorschlag für einen bestimmten Preis) und für spätere Käufer steigen. Wer nicht kommen kann, gibt sein Ticket zurück in einen Pool; der Kauf des nächsten Käufers erstattet es, sodass die meisten Menschen, die sich ein paar Wochen vor der Veranstaltung entscheiden, ihr Geld zurückbekämen. Gesetzliche Rückerstattungsrechte würden weiterhin gelten. Peter D schlug vor, dies mit dem Regler zu kombinieren: ein Minimum, das Monat für Monat steigt und frühe Käufer belohnt, wobei jeder Betrag darüber als Spende behandelt wird. Ein niedrigerer durchschnittlicher Ticketpreis würde zudem die Zugänglichkeit verbessern.</li>
+                            <li><strong>Ratenzahlung.</strong> Daniel T gab eine Idee aus der Community weiter: Menschen monatlich auf ihr Ticket einzahlen lassen, da ein kleiner monatlicher Betrag leichter zu handhaben sein kann als eine größere Einmalzahlung. Ob dies rechtlich und praktisch funktionieren kann, ist noch offen.</li>
+                            <li><strong>Fortschritt zeigen, ohne Verkaufszahlen zu veröffentlichen.</strong> Falls die Ticketverkaufszahlen weiterhin nicht veröffentlicht werden, schlug Daniel T eine Projektion mit einer Spanne vor, die zeigt, wie der Beitrag einer einzelnen Person das wahrscheinliche Ergebnis verschiebt. Peter D schlug ein Einnahmendiagramm über die Zeit vor, das die Basis-Ticketeinnahmen und die Spenden darüber zeigt, mit Meilensteinen, die an die Einnahmen und nicht an die Zahl der verkauften Tickets gekoppelt sind.</li>
+                            <li><strong>Von der Community eingestufte Verbesserungen.</strong> Daniel T schlug vor, Mitglieder oder die breitere Community zu bitten, eine Liste eventweiter Verbesserungen (zum Beispiel ein Upgrade der Tonanlage) zu priorisieren, die in dieser Reihenfolge finanziert werden, sobald Einnahmenmeilensteine erreicht werden. Peter D sagte, das entspreche seinem Gedanken: <strong>Investitionsverbesserungen werden von der Community vorgeschlagen, von der Gruppe auf angemessene Kosten geprüft und von der Community priorisiert</strong>.</li>
+                            <li><strong>Tickets für Menschen mit geringem Einkommen.</strong> Peter D brachte einen separaten, optionalen Beitrag zu einem Pool für geringes Einkommen ins Spiel, sodass jeder feste Betrag einen weiteren Platz für geringes Einkommen finanziert. Daniel T schlug vor, Tickets für geringes Einkommen proportional zu den verkauften Tickets in Tranchen freizugeben, mit einem kurzen Zeitfenster zur Nutzung jedes Codes. Peter D merkte an, dass der diesjährige Prozess für geringes Einkommen viel manuellen Abgleich erforderte, der sich nicht wiederholen sollte, und dass ein eingebauter Rückerstattungspool auch das Problem lösen würde, dass Menschen ein reguläres Ticket kaufen, während sie auf ein Ticket für geringes Einkommen warten.</li>
+                            <li><strong>Einen Teil einer Rückerstattung spenden.</strong> Cocci schlug vor, dass jemand, der ein Ticket zurückgibt, mit einem Regler auch wählen könnte, wie viel davon erstattet werden soll. Peter D und Daniel T stimmten zu, dass dies umgesetzt werden könnte, sobald ein Regler existiert.</li>
+                            <li>Peter D sagte, dass er aufgrund seiner Recherche zu Ticketing-Systemen keine dieser Optionen für technisch unerreichbar hielt.</li>
+                        </ul>
+
+                        <hr />
+                        <h2>Ergebnisse</h2>
+                        <ul>
+                            <li>Arbeitsziel (von Peter D festgelegt, von der Gruppe änderbar): ein <strong>empfohlenes Budget für 2027</strong>, aufgebaut als Entscheidungsbaum, der an die Ticketverkäufe gekoppelt ist, das einer <strong>Generalversammlung Mitte Dezember</strong> vorgelegt werden soll. Der Termin der Generalversammlung steht noch nicht fest.</li>
+                            <li><strong>Ticketpreise fallen in den Zuständigkeitsbereich dieser Gruppe</strong>, als Einnahmenseite des Budgets.</li>
+                            <li>Arbeitsrichtung: Investitionsverbesserungen werden von der Community vorgeschlagen, von der Gruppe geprüft und von der Community priorisiert.</li>
+                            <li>Die Ideen zur Ticketpreisgestaltung (Regler, steigender Preis, Rückerstattungspool, Ratenzahlung, verknüpfte Tickets für geringes Einkommen) bleiben Diskussionsoptionen. Es wurden keine Preise oder Budgetzahlen vereinbart.</li>
+                            <li>An der Veröffentlichung der diesjährigen Jahresabrechnung in interaktiver Form wird separat gearbeitet; die Gruppe kann dazu Feedback geben.</li>
+                        </ul>
+
+                        <h2>Nächste Schritte</h2>
+                        <ul>
+                            <li>Im Ticketing-Kanal veröffentlichen, dass die Arbeitsgruppe Finanzen 2027 der Ort ist, an dem die Ticketpreise für nächstes Jahr festgelegt werden &mdash; Peter D.</li>
+                            <li>Die Sitzung als Schritt-für-Schritt-Plan ausarbeiten und die nächste Sitzung breiter bekannt machen &mdash; Peter D.</li>
+                            <li>Die Community-Einbindung zur Ticketing-Strategie leiten (Community-Calls und andere Wege, Rückmeldungen zu sammeln) &mdash; Daniel T, Unterstützung willkommen.</li>
+                            <li>Den Zeitplan und den Termin der Generalversammlung in der nächsten Sitzung besprechen.</li>
+                            <li>Nächste Sitzung: Montag, 26. Oktober, zur gleichen Zeit.</li>
+                        </ul>
+
+                        <p><em>Protokoll erstellt auf Grundlage der Sitzungsaufzeichnung und des Transkripts. F&uuml;r die Ver&ouml;ffentlichung bereinigt.</em></p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -136,5 +450,17 @@
     <script src="../footer.js"></script>
 
     <script src="../script.js"></script>
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>
