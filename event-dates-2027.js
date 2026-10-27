@@ -8,8 +8,7 @@
         .replaceAll('"', "&quot;")
         .replaceAll("'", "&#039;");
 
-    const evidenceVersion = "2026-09-18-data-refresh";
-    const napif2026End = "2026-09-18";
+    const evidenceVersion = "2026-10-16-data-refresh";
     const evidenceUrl = (path) => `${path}?v=${evidenceVersion}`;
     const numericValue = (value) => {
         const number = Number(value);
@@ -108,18 +107,13 @@
             + "</span>";
     }
 
-    function noDataCell(row, year) {
-        const historicalWeekStart = row.week_start_2027.replace("2027-", "2026-");
-        const futureIn2026 = year === 2026 && historicalWeekStart > napif2026End;
-        const reason = futureIn2026
-            ? "No data available yet."
-            : "No comparable daily series.";
-        return tooltipValue("n/a", reason, "data-na");
+    function noDataCell() {
+        return tooltipValue("n/a", "No comparable daily series.", "data-na");
     }
 
     function alertCell(row, year) {
         const available = Number(row[`${year}_days_available`]);
-        if (!available) return noDataCell(row, year);
+        if (!available) return noDataCell();
 
         const levels = ["green", "yellow", "orange", "red", "red_plus"];
         const counts = levels.map((level) => numericValue(row[`${year}_${level}`]));
@@ -137,7 +131,6 @@
     }
 
     function envelopeCell(row) {
-        const available = Number(row["2026_operating_envelope_days_available"]);
         const envelopeStart = row["2026_operating_envelope_start"];
         const envelopeEnd = row["2026_operating_envelope_end"];
         const range = `${longDate.format(dateFromIso(envelopeStart))}–${longDate.format(dateFromIso(envelopeEnd))}`;
@@ -151,42 +144,31 @@
                 "data-na"
             );
         }
-        const estimated = Number(row["2026_operating_envelope_estimated"]);
-        const red = Number(
-            estimated
-                ? row["2026_operating_envelope_estimated_red"]
-                : row["2026_operating_envelope_red"]
-        );
-        const redPlus = Number(
-            estimated
-                ? row["2026_operating_envelope_estimated_red_plus"]
-                : row["2026_operating_envelope_red_plus"]
-        );
-        const proxyDays = Number(row["2026_operating_envelope_proxy_days"]);
+        const red = Number(row["2026_operating_envelope_red"]);
+        const redPlus = Number(row["2026_operating_envelope_red_plus"]);
         const outsideSeasonDays = Number(
             row["2026_operating_envelope_outside_season_days"]
         );
         let note = `${range}: ${red} Red and ${redPlus} Red Plus days.`;
-        if (estimated) {
-            const proxyLabel = proxyDays === 1 ? "day" : "days";
-            note += ` Estimate uses ${available} actual 2026 days and `
-                + `${proxyDays} matching calendar ${proxyLabel} from 2025.`;
-        } else {
-            note += " All alert days use the published 2026 record.";
-        }
+        note += " All alert days use the published 2026 record.";
         if (outsideSeasonDays) {
-            note += ` ${outsideSeasonDays} days after 15 October fall outside `
-                + "the regular fire-danger season.";
+            note += ` ${outsideSeasonDays} days after 16 October have no report `
+                + "in this comparison; they are not observed zero-risk days.";
         }
-        const estimateLabel = estimated ? " Est" : "";
         return tooltipValue(
-            `${red + redPlus} days (${redPlus} R+)${estimateLabel}`,
+            `${red + redPlus} days (${redPlus} R+)`,
             note,
             "alert-counts"
         );
     }
 
-    function renderNapif(rows) {
+    function commonPeriodTotals(dailyRows, year, level) {
+        return dailyRows.filter((row) => row.date.startsWith(`${year}-`)
+            && row.date.slice(5) >= "06-01" && row.date.slice(5) <= "10-15"
+            && row.level === level).length;
+    }
+
+    function renderNapif(rows, dailyRows) {
         const body = document.querySelector("#napif-weekly-body");
         if (!body) return;
         const weeklyRows = rows.map((row) => {
@@ -203,13 +185,10 @@
 
         const levels = ["green", "yellow", "orange", "red", "red_plus"];
         const totalCell = (year) => levels
-            .map((level) => rows.reduce(
-                (total, row) => total + numericValue(row[`${year}_${level}`]),
-                0
-            ))
+            .map((level) => commonPeriodTotals(dailyRows, year, level))
             .join("/");
         const totals = `<tr class="total-row">`
-            + "<td><strong>Total published days</strong></td>"
+            + "<td><strong>Total, 1 June–15 October</strong></td>"
             + `<td><span class="alert-counts">${totalCell(2023)}</span></td>`
             + `<td><span class="alert-counts">${totalCell(2024)}</span></td>`
             + `<td><span class="alert-counts">${totalCell(2025)}</span></td>`
@@ -242,7 +221,6 @@
         orange: "#dd6b20",
         red: "#c53030",
         red_plus: "#701a1a",
-        future: "#cbd5e1",
         outside_season: "#cbd5e1",
         unavailable: "#cbd5e1",
     };
@@ -267,7 +245,7 @@
         }).join("");
     }
 
-    function renderTotalChart(rows) {
+    function renderTotalChart(dailyRows) {
         const target = document.querySelector("#napif-total-chart");
         if (!target) return;
 
@@ -281,9 +259,7 @@
         ];
         const totals = years.map((year) => Object.fromEntries(levels.map(([level]) => [
             level,
-            rows.reduce((sum, row) => (
-                sum + numericValue(row[`${year}_${level}`])
-            ), 0),
+            commonPeriodTotals(dailyRows, year, level),
         ])));
         const largest = Math.max(...totals.flatMap((total) => levels.map(([level]) => total[level])));
         const { ceiling, ticks } = chartTicks(largest);
@@ -311,32 +287,29 @@
 
         const bars = years.map((year, yearIndex) => {
             const groupLeft = margin.left + yearIndex * groupWidth + (groupWidth - barsWidth) / 2;
-            const yearClass = year === 2026 ? ' class="is-partial"' : "";
             const columns = levels.map(([level, label], levelIndex) => {
                 const value = totals[yearIndex][level];
                 const barHeight = (value / ceiling) * plotHeight;
                 const x = groupLeft + levelIndex * (barWidth + gap);
                 const y = margin.top + plotHeight - barHeight;
-                const coverage = year === 2026 ? " (partial through 18 September)" : "";
-                return `<g${yearClass}>`
+                return "<g>"
                     + `<rect x="${x}" y="${y}" width="${barWidth}" height="${barHeight}" rx="2" fill="${chartColors[level]}">`
-                    + `<title>${year} ${label}: ${value} days${coverage}</title></rect>`
+                    + `<title>${year} ${label}: ${value} days (1 June–15 October)</title></rect>`
                     + `<text class="value-label" x="${x + barWidth / 2}" y="${Math.max(y - 6, 12)}" text-anchor="middle">${value}</text>`
                     + "</g>";
             }).join("");
-            const yearLabel = year === 2026 ? "2026*" : year;
             return columns
-                + `<text class="axis-label" x="${margin.left + yearIndex * groupWidth + groupWidth / 2}" y="${height - 35}" text-anchor="middle">${yearLabel}</text>`;
+                + `<text class="axis-label" x="${margin.left + yearIndex * groupWidth + groupWidth / 2}" y="${height - 35}" text-anchor="middle">${year}</text>`;
         }).join("");
 
         target.innerHTML = `<svg class="evidence-chart" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="napif-total-title napif-total-desc">`
             + '<title id="napif-total-title">Alert-day totals by year and alert level</title>'
-            + '<desc id="napif-total-desc">Grouped bar chart comparing Green, Yellow, Orange, Red and Red Plus day totals for 2023 through 2026. The 2026 figures are partial through 18 September.</desc>'
+            + '<desc id="napif-total-desc">Grouped bar chart comparing Green, Yellow, Orange, Red and Red Plus day totals for 2023 through 2026. Each year covers 1 June through 15 October.</desc>'
             + gridMarkup(ticks, ceiling, margin.left, margin.top, plotWidth, plotHeight)
             + `<line class="axis-line" x1="${margin.left}" y1="${margin.top + plotHeight}" x2="${margin.left + plotWidth}" y2="${margin.top + plotHeight}"></line>`
             + `<text class="axis-label" x="15" y="${margin.top + plotHeight / 2}" text-anchor="middle" transform="rotate(-90 15 ${margin.top + plotHeight / 2})">Published days</text>`
             + bars
-            + `<text x="${width - margin.right}" y="${height - 10}" text-anchor="end">* through 18 Sep</text>`
+            + `<text x="${width - margin.right}" y="${height - 10}" text-anchor="end">1 June–15 October, all years</text>`
             + "</svg>";
     }
 
@@ -369,9 +342,7 @@
                     const date = historicalDate.toISOString().slice(0, 10);
                     const publishedLevel = dailyByDate.get(date);
                     let level = publishedLevel;
-                    if (!level && year === 2026 && date > napif2026End) {
-                        level = "future";
-                    } else if (!level && date.slice(5) > "10-15") {
+                    if (!level && date.slice(5) > "10-15") {
                         level = "outside_season";
                     } else if (!level) {
                         level = "unavailable";
@@ -413,8 +384,7 @@
             orange: "Orange",
             red: "Red",
             red_plus: "Red Plus",
-            future: "No data available yet",
-            outside_season: "Outside the regular daily publication series",
+            outside_season: "No report in this comparison after the recorded series",
             unavailable: "No comparable data",
         };
         const slots = value.days.map((day, index) => {
@@ -856,9 +826,9 @@
         const napifRows = parseCsv(napif);
         const napifDailyRows = parseCsv(napifDaily);
         const climateRows = parseCsv(climate);
-        renderNapif(napifRows);
+        renderNapif(napifRows, napifDailyRows);
         labelResponsiveTables();
-        renderTotalChart(napifRows);
+        renderTotalChart(napifDailyRows);
         renderWeeklyChart(napifRows, napifDailyRows);
         renderClimate(climateRows);
         labelResponsiveTables();
@@ -871,7 +841,7 @@
                 const width = document.querySelector("#napif-total-chart")?.clientWidth;
                 if (!width || width === previousWidth) return;
                 previousWidth = width;
-                renderTotalChart(napifRows);
+                renderTotalChart(napifDailyRows);
                 renderWeeklyChart(napifRows, napifDailyRows);
                 renderClimateCharts(climateRows);
             }, 120);

@@ -1,6 +1,6 @@
-// Run against a local static server. Uses the existing parent-directory Playwright install.
+// Run against a local static server. PLAYWRIGHT_MODULE may name a local install.
 // node scripts/test-event-date-votes-browser.mjs http://127.0.0.1:8773
-import {chromium} from 'playwright';
+const {chromium} = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 import {strict as assert} from 'node:assert';
 const base=process.argv[2] || 'http://127.0.0.1:8773';
 const browser=await chromium.launch({headless:true});
@@ -14,8 +14,36 @@ try {
     assert.equal(await page.locator('.dates-result-card').count(),3);
     assert.ok(await page.evaluate(()=>Boolean(document.querySelector('#vote-results')
         .compareDocumentPosition(document.querySelector('#historical-review')) & Node.DOCUMENT_POSITION_FOLLOWING)));
-    assert.match(await page.locator('#napif-total-chart').textContent(),/18 September/);
-    assert.match(await page.locator('#napif-weekly-body').textContent(),/September 15, 2026/);
+    assert.match(await page.locator('#napif-total-chart').textContent(),/1 June–15 October, all years/);
+    assert.doesNotMatch(await page.locator('#napif-total-chart').textContent(),/partial|2026\*|18 Sep/);
+    const totalCells=await page.locator('#napif-weekly-body .total-row td').allTextContents();
+    for(const counts of totalCells.slice(1,5)) {
+        assert.equal(counts.split('/').map(Number).reduce((sum,n)=>sum+n,0),137);
+    }
+    const weekly2026=await page.locator('#napif-weekly-body tr:not(.total-row) td:nth-child(5)').allTextContents();
+    assert.equal(weekly2026.reduce((sum,cell)=>{
+        const counts=cell.match(/^\d+\/\d+\/\d+\/\d+\/\d+/);
+        return sum+(counts ? counts[0].split('/').map(Number).reduce((a,b)=>a+b,0) : 0);
+    },0),138);
+    const finalWeek=page.locator('#napif-weekly-body tr').filter({hasText:'11 Oct–17 Oct'});
+    assert.match(await finalWeek.locator('td').nth(4).textContent(),/\(6\/7 days\)/);
+    assert.match(await finalWeek.locator('td').nth(5).textContent(),/11 days after 16 October/);
+    assert.doesNotMatch(await page.locator('#napif-weekly-body').textContent(),/ Est|Estimate uses|No data available yet/);
+    for(const year of [2023,2024,2025,2026]) {
+        const lastDay=page.locator(`#napif-week-chart rect[aria-label*="15 October ${year}:"]`);
+        assert.equal(await lastDay.count(),1);
+        assert.doesNotMatch(await lastDay.getAttribute('aria-label'),/No comparable|Outside|yet/);
+        for(const day of (year===2026 ? [17] : [16,17])) {
+            const outside=page.locator(`#napif-week-chart rect[aria-label*="${day} October ${year}:"]`);
+            assert.equal(await outside.count(),1);
+            assert.match(await outside.getAttribute('aria-label'),/No report in this comparison/);
+        }
+    }
+    assert.match(await page.locator('#napif-week-chart rect[aria-label*="16 October 2026:"]').getAttribute('aria-label'),/: Green$/);
+    const septemberWeek=page.locator('#napif-weekly-body tr').filter({hasText:'20 Sep–26 Sep'});
+    assert.doesNotMatch(await septemberWeek.locator('td').nth(5).textContent(),/n\/a|Est/);
+    const juneWeek=page.locator('#napif-weekly-body tr').filter({hasText:'7 Jun–13 Jun'});
+    assert.match(await juneWeek.locator('td').nth(5).textContent(),/n\/a/);
     for(const width of [1440,390,320]) {
         await page.setViewportSize({width,height:900});
         await page.waitForTimeout(200);

@@ -42,7 +42,7 @@ NORMAL_START_YEAR = 1991
 NORMAL_END_YEAR = 2020
 NAPIF_START_MONTH_DAY = (6, 1)
 NAPIF_END_MONTH_DAY = (10, 15)
-NAPIF_PARTIAL_2026_END = dt.date(2026, 9, 18)
+NAPIF_2026_END = dt.date(2026, 10, 16)
 OUTPUT_DIR = Path(__file__).resolve().parent.parent / "data" / "event-dates-2027"
 
 NAPIF_LEVEL_COLOURS = {
@@ -398,7 +398,7 @@ def download_napif_pdf(date: dt.date, cache_dir: Path) -> Path:
     subprocess.run(
         [
             "curl",
-            "-kLfsS",
+            "-LfsS",
             "--max-time",
             "120",
             NAPIF_URL.format(date=date.isoformat()),
@@ -424,7 +424,7 @@ def napif_dates():
     for year in (2023, 2024, 2025, 2026):
         start = dt.date(year, *NAPIF_START_MONTH_DAY)
         end = (
-            NAPIF_PARTIAL_2026_END
+            NAPIF_2026_END
             if year == 2026
             else dt.date(year, *NAPIF_END_MONTH_DAY)
         )
@@ -516,15 +516,9 @@ def build_napif_csvs(output_dir: Path, cache_dir: Path, reuse_daily: bool = Fals
         for date in envelope_dates:
             if date in levels:
                 continue
-            if date > NAPIF_PARTIAL_2026_END:
-                if (date.month, date.day) > NAPIF_END_MONTH_DAY:
-                    outside_season_dates.append(date)
-                    continue
-                proxy_date = same_month_day(date, 2025)
-                if proxy_date in levels:
-                    proxy_dates.append(date)
-                    estimated_levels.append(levels[proxy_date])
-                    continue
+            if date > NAPIF_2026_END:
+                outside_season_dates.append(date)
+                continue
             unavailable_dates.append(date)
 
         estimated_counts = Counter(estimated_levels)
