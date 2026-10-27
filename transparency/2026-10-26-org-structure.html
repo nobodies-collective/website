@@ -27,8 +27,12 @@
         .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
         .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
         .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
         .lang-content { display: none; }
         .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -47,7 +51,17 @@
                     </div>
                 </div>
 
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
                 <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
 
                     <div class="attendees">
                         <strong>Present: C&eacute;line S (facilitator), Anna T, Cupcake, Daniel T, Daniela (Production)</strong>
@@ -129,6 +143,341 @@
                         <p><em>Minutes prepared from the meeting recording and transcript. Sanitised for publication.</em></p>
                     </div>
                 </div>
+
+                <div class="lang-content" data-lang="es">
+
+                    <div class="attendees">
+                        <strong>Presentes: Céline S (facilitadora), Anna T, Cupcake, Daniel T, Daniela (Production)</strong>
+                        Una sesión de trabajo del grupo de trabajo de gobernanza sobre la estructura organizativa, la primera después de la Reunión Anual de Liderazgo (ALM). No es un órgano de decisión: las opciones que se presentan a continuación son borradores en preparación, que se someterán a los asociados.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>La primera llamada después del ALM. Se abrió con un repaso de las dos sesiones de gobernanza celebradas allí, y pasó a tratar qué validez tienen sus resultados y cómo convertirlos en propuestas que los asociados puedan decidir. La mayor parte de la llamada se dedicó a la única cuestión que el ALM dejó abierta: si cada departamento tiene un/a coordinador/a y un/a suplente elegidos mediante un proceso que involucra a personas externas al departamento, o si se organiza en torno a una lista acordada de tareas. El grupo acordó redactar las opciones como propuestas escritas, con el objetivo de una votación de los asociados a finales de noviembre.</p>
+
+                        <h2>1. Repaso de las sesiones de gobernanza del ALM</h2>
+                        <ul>
+                            <li>Céline S repasó el resumen que compartió al final del ALM (véanse los resultados sobre <a href="../alm-outcomes.html#o-how-we-re-structured-roles-responsibilit">roles y responsabilidades</a> y sobre <a href="../alm-outcomes.html#o-getting-into-and-out-of-roles">cómo se entra y se sale de los roles</a>): un/a coordinador/a y un/a suplente por departamento; informes comunes, adaptados a cada departamento y basados en el calendario de eventos preliminar presentado por Daniela; descripciones de los roles de coordinador/a y de la junta; todos los roles anunciados públicamente; y una verificación de consentimiento antes de que alguien asuma un rol.</li>
+                            <li>Pendiente del ALM: <strong>la selección de coordinadores/as, su cese y los roles remunerados</strong>.</li>
+                            <li>Céline S también preguntó quién se asegurará de que los roles se anuncien siempre de hecho. Esto no se resolvió en la llamada.</li>
+                        </ul>
+
+                        <h2>2. Qué validez tienen los resultados del ALM</h2>
+                        <ul>
+                            <li>Cupcake dijo que creía que el ALM había acordado seguir un proceso de toma de decisiones por consenso, y consideró que algunas de las sesiones sobre estructura no lo habían seguido, por lo que sería cauteloso a la hora de tratar sus resultados como decisiones.</li>
+                            <li>Daniela estuvo de acuerdo. Había registrado los resultados como una toma de temperatura de la sala, ya que varias de las votaciones estuvieron muy repartidas, y espera que la gente esté a la espera de una propuesta completa en lugar de tomar los resultados del ALM como definitivos.</li>
+                            <li>Céline S señaló que el grupo de trabajo ya sabía esto antes del ALM: todavía no existe un proceso definido sobre quién toma qué decisiones, y las votaciones del ALM no eran vinculantes.</li>
+                            <li>Daniel T señaló la decisión sobre las fechas de eventos, que se percibe ampliamente como respaldada por la comunidad: participación mediante llamadas comunitarias, el ALM y reuniones documentadas y con acta, seguidas de una votación de los asociados. Propuso lo mismo aquí: una votación de los asociados, no necesariamente vinculante ni necesariamente una Asamblea General, como colofón que convierte el resultado en una decisión comunitaria. Cupcake estuvo de acuerdo, añadiendo que lo que hizo funcionar la votación sobre las fechas fue la discusión e información exhaustivas de antemano.</li>
+                        </ul>
+
+                        <h2>3. Calendario</h2>
+                        <ul>
+                            <li>Daniela preguntó si las propuestas deberían ir a la votación prevista para diciembre junto con el presupuesto. Daniel T dijo que diciembre necesitará una Asamblea General para el presupuesto y la elección de la junta, y que la elección debe celebrarse entre el 3 y el 18 de diciembre. En su opinión, sería mejor construir un ritmo más ligero y regular de votaciones de los asociados, por ejemplo un conjunto mensual de decisiones, en lugar de llevar muchos puntos a una sola votación de diciembre. Sugirió que noviembre podría funcionar.</li>
+                            <li>Céline S propuso trabajar hacia un <strong>visto bueno a finales de noviembre</strong>: la propuesta debería prepararse de antemano, recogiendo aportaciones a través de las llamadas de coordinadores/as y de personas con conocimientos relevantes, de modo que la votación en sí sea un visto bueno. Anna T no vio ningún problema con ese calendario para las propuestas de departamentos.</li>
+                            <li>Anna T señaló que la <strong>descripción del rol de la junta</strong> necesita un plazo más corto: con la elección de la junta acercándose, las personas que se presenten deben saber a qué se comprometen y a qué no.</li>
+                            <li>Daniela añadió que estas decisiones son para el próximo año y pueden revisarse cada año a la luz de la experiencia.</li>
+                        </ul>
+
+                        <h2>4. Dos modelos para coordinar un departamento</h2>
+                        <ul>
+                            <li><strong>Lo que está acordado.</strong> Se acordó en términos generales que la lista de tareas que cada departamento debe cubrir no está en disputa, y que los informes deberían ser visibles para todos, estructurados en torno a un calendario de producción compartido. Cada departamento necesita un punto de contacto y responsabilidad sobre sus tareas. Daniel T propuso tratar estos requisitos como una base común que queda fuera de ambas opciones, del mismo modo que todos los departamentos tramitan los gastos a través del mismo sistema. Anna T estuvo de acuerdo en que este es el punto de partida para cualquier propuesta.</li>
+                            <li><strong>Opción A: coordinador/a y suplente.</strong> Como la planteó Anna T: cada departamento tiene un/a coordinador/a y un/a suplente, seleccionados mediante un proceso que involucra a partes interesadas más allá del departamento (por ejemplo, la junta y otros/as coordinadores/as). Pueden delegar, pero siguen siendo responsables de que las tareas se realicen.</li>
+                            <li><strong>Opción B: el departamento se organiza por sí mismo.</strong> Como la planteó Cupcake: expectativas claras a nivel de departamento (cómo invita el departamento a la gente a participar, los informes, la información de contacto), con el departamento libre para decidir cómo cumplirlas. Las tareas pueden repartirse entre distintas personas, de modo que el punto de contacto no tiene que ser la persona que se asegura de que las tareas estén cubiertas ni la que elabora los informes. No hay ningún proceso de selección desde fuera del departamento.</li>
+                            <li>Daniel T resumió la diferencia como si la coordinación se asigna mediante un <strong>proceso de selección externo o interno</strong>. Las tareas en sí no están en disputa.</li>
+                            <li>La opinión de Anna T era que las dos no pueden coexistir, por lo que deberían presentarse a la comunidad como propuestas separadas. Daniela añadió que cada opción es un paquete completo que afecta a las descripciones de roles, la captación, la selección y el cese, y que estos aspectos no pueden decidirse por separado.</li>
+                        </ul>
+
+                        <h3>Argumentos planteados</h3>
+                        <ul>
+                            <li><strong>Rendición de cuentas.</strong> Daniel T dijo que la selección dentro de un departamento es un bucle de retroalimentación cerrado: funciona mientras el departamento sirve a la comunidad, pero tiene que haber un canal externo a través del cual la comunidad (idealmente más que la junta) pueda redirigir un departamento. La selección de coordinadores/as es uno de esos canales, aunque quizá no el único.</li>
+                            <li><strong>Apertura.</strong> Cupcake dijo que los departamentos deben estar siempre abiertos: convocatorias abiertas claras y publicadas, y maneras visibles de asumir tareas, de modo que cualquiera que quiera involucrarse pueda hacerlo y tenga voz. La votación anual del presupuesto es el control de toda la comunidad sobre lo que hacen los departamentos. No todo lo que hace un departamento necesita una votación. Cupcake también está trabajando en una herramienta para hacer visibles las carencias y lanzar invitaciones abiertas a la comunidad cuando se necesite ayuda. En opinión de Cupcake, el problema mayor hoy en día es la falta de visibilidad, más que la falta de una persona responsable.</li>
+                            <li><strong>Dónde termina el poder.</strong> Anna T preguntó qué ocurre en cada modelo cuando un departamento no hace lo necesario, y quién se encarga entonces de ello. Preguntó si, sin coordinadores/as, la toma de decisiones podría trasladarse a un rol designado por la junta (por ejemplo, un rol remunerado de captación) o a Production. Ambas propuestas deberían pensar bien esto.</li>
+                            <li><strong>Límites de los departamentos.</strong> Daniela señaló que los departamentos están limitados por lo que decide la comunidad, el presupuesto sobre todo. Se mostró a favor de dejar claro cómo puede la gente incorporarse a los departamentos, y propuso organizar parte del trabajo como proyectos a los que la gente pueda unirse sin comprometerse con un departamento entero durante todo el año.</li>
+                            <li><strong>Desacuerdos.</strong> Daniel T preguntó cómo podría cambiar la dirección de un departamento bajo la opción B si personas de fuera estuvieran en desacuerdo. Cupcake respondió que las inquietudes se dirigirían al punto de contacto del departamento y a sus convocatorias abiertas, y que unos canales claros para esto serían un gran avance porque hoy no existe ninguno. Daniel T pidió que las propuestas planteen escenarios de ejemplo para desacuerdos dentro de un departamento, entre departamentos, y entre un departamento y la comunidad en general. Señaló que toda opción tiene ventajas e inconvenientes, y que las elecciones son un inconveniente real para algunas personas.</li>
+                            <li><strong>Captación y roles remunerados.</strong> Anna T planteó dos cuestiones que ninguna de las dos opciones cubre todavía: si debería haber una función de captación/RR. HH. que apoye a todos los departamentos (con, por ejemplo, el alta en Humans), y si eso sería un departamento de voluntariado o un rol remunerado. Dijo que estas cuestiones cambian dónde se toman las decisiones y que corresponde a la comunidad decidirlas. Céline S pidió que se tuvieran en cuenta en las propuestas en la medida de lo posible.</li>
+                        </ul>
+
+                        <h2>5. Cómo se prepararán las propuestas</h2>
+                        <ul>
+                            <li>Céline S planteó la tarea del grupo como la preparación de propuestas que cubran los mismos puntos, de modo que los asociados puedan comparar cosas comparables.</li>
+                            <li>Hubo dos opiniones sobre cómo empezar. Una era que cada participante aportara su propia visión la semana siguiente y que el grupo elaborara las opciones a partir de ahí. La otra, sostenida por Anna T y Daniel T, era que el ALM y la encuesta ya habían producido dos opciones distintas que redactar. Anna T dijo que le importaba que las propuestas se construyeran a partir de las aportaciones de la comunidad (la encuesta y el ALM), y no de las opiniones personales de las personas presentes en la llamada. Daniela dijo que sus conversaciones con coordinadores/as a lo largo del año también son aportaciones que deberían contar, más allá de la encuesta. Daniel T estuvo de acuerdo en que las aportaciones nunca estarán completas, que es precisamente para lo que sirve la votación de los asociados.</li>
+                            <li><strong>Acordado al cierre:</strong> las opciones se redactan como propuestas escritas y se comparten en el Discord del grupo, donde todos pueden comentar cada una de ellas. Daniela y Cupcake lideran la opción dirigida por el departamento (B). Daniel T redacta la opción de coordinador/a y suplente (A), con la ayuda de Anna T en la medida de su tiempo disponible. Es posible una tercera propuesta, pero el objetivo es no pasar de tres.</li>
+                            <li>Céline S enviará las notas de esta llamada, y el grupo se reúne de nuevo a la misma hora la semana que viene.</li>
+                        </ul>
+
+                        <hr />
+                        <h2>Resultados</h2>
+                        <ul>
+                            <li>Los resultados de gobernanza del ALM se tratan como aportaciones y una toma de temperatura de la sala, no como decisiones definitivas. Los puntos pendientes (selección de coordinadores/as, cese y roles remunerados) se presentarán a los asociados como propuestas.</li>
+                            <li>Objetivo de trabajo: una <strong>votación de los asociados a finales de noviembre</strong> sobre el modelo de departamentos. Las propuestas se preparan de antemano para que la votación sea un visto bueno.</li>
+                            <li>Dos opciones sobre cómo se coordinan los departamentos: <strong>(A) un/a coordinador/a y un/a suplente seleccionados mediante un proceso que incluye a personas externas al departamento</strong>, o <strong>(B) el departamento se organiza por sí mismo</strong> en torno a una lista acordada de tareas, con un punto de contacto. Los requisitos comunes de informes y la lista de tareas quedan fuera de ambas opciones, como base común.</li>
+                            <li>La descripción del rol de la junta debe estar lista antes, con vistas a la elección de la junta en diciembre.</li>
+                            <li>El grupo se reúne semanalmente por ahora.</li>
+                        </ul>
+
+                        <h2>Próximos pasos</h2>
+                        <ul>
+                            <li>Redactar la opción dirigida por el departamento (B) &mdash; Daniela, Cupcake.</li>
+                            <li>Redactar la opción de coordinador/a y suplente (A) &mdash; Daniel T, con la ayuda de Anna T.</li>
+                            <li>Compartir los borradores en el Discord del grupo para comentarios &mdash; todas las personas redactoras.</li>
+                            <li>Enviar las notas de esta llamada; trasladar la llamada al calendario de Google de la asociación y configurar una serie semanal &mdash; Céline S.</li>
+                            <li>Próxima llamada: misma hora la semana que viene (lunes 2 de noviembre).</li>
+                        </ul>
+
+                        <p><em>Acta preparada a partir de la grabación y la transcripción de la reunión. Depurada para su publicación.</em></p>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="fr">
+<div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaut.</div>
+
+                    <div class="attendees">
+                        <strong>Présents : Céline S (facilitatrice), Anna T, Cupcake, Daniel T, Daniela (Production)</strong>
+                        Une séance de travail du groupe de travail sur la gouvernance consacrée à la structure organisationnelle, la première après la Réunion annuelle de direction (ALM). Ce n’est pas un organe de décision : les options présentées ci-dessous sont des brouillons en préparation, qui seront soumis aux asociados.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>La première réunion après l’ALM. Elle a commencé par un récapitulatif des deux séances de gouvernance qui s’y sont tenues, puis s’est tournée vers la portée de leurs résultats et la manière de les transformer en propositions que les asociados peuvent trancher. La plus grande partie de la réunion a porté sur l’unique question laissée ouverte par l’ALM : si chaque département dispose d’un·e coordinateur·rice et d’un·e adjoint·e choisis par un processus impliquant des personnes extérieures au département, ou s’il s’organise autour d’une liste de tâches convenue. Le groupe a convenu de rédiger les options sous forme de propositions écrites, dans l’objectif d’un vote des asociados fin novembre.</p>
+
+                        <h2>1. Récapitulatif des séances de gouvernance de l’ALM</h2>
+                        <ul>
+                            <li>Céline S a repris le résumé qu’elle avait partagé à la fin de l’ALM (voir les résultats sur les <a href="../alm-outcomes.html#o-how-we-re-structured-roles-responsibilit">rôles et responsabilités</a> et sur <a href="../alm-outcomes.html#o-getting-into-and-out-of-roles">la façon d’entrer dans un rôle et d’en sortir</a>) : un·e coordinateur·rice et un·e adjoint·e par département ; des rapports communs, adaptés à chaque département et fondés sur le calendrier d’événements provisoire présenté par Daniela ; des descriptions de poste pour les coordinateur·rice·s et pour le conseil ; tous les rôles annoncés publiquement ; et une vérification du consentement avant que quiconque n’assume un rôle.</li>
+                            <li>Encore en suspens depuis l’ALM : <strong>la sélection des coordinateur·rice·s, leur révocation et les rôles rémunérés</strong>.</li>
+                            <li>Céline S a également demandé qui veillerait à ce que les rôles soient effectivement toujours annoncés publiquement. Cela n’a pas été tranché lors de la réunion.</li>
+                        </ul>
+
+                        <h2>2. Quelle portée ont les résultats de l’ALM</h2>
+                        <ul>
+                            <li>Cupcake a dit qu’il croyait que l’ALM avait convenu de suivre un processus de décision par consensus, et qu’il estimait que certaines des séances sur la structure ne l’avaient pas suivi, et qu’il serait donc prudent de traiter leurs résultats comme des décisions.</li>
+                            <li>Daniela était d’accord. Elle avait enregistré les résultats comme une prise de température de la salle, plusieurs votes ayant été presque également partagés, et elle s’attend à ce que les gens attendent une proposition complète plutôt que de considérer les résultats de l’ALM comme définitifs.</li>
+                            <li>Céline S a noté que le groupe de travail le savait déjà avant l’ALM : il n’existe pas encore de processus défini pour déterminer qui prend quelles décisions, et les votes de l’ALM n’étaient pas contraignants.</li>
+                            <li>Daniel T a cité la décision sur les dates d’événements, largement perçue comme approuvée par la communauté : implication via des réunions communautaires, l’ALM et des réunions documentées et consignées en acta, suivies d’un vote des asociados. Il a proposé la même chose ici : un vote des asociados, pas nécessairement contraignant ni nécessairement une Assemblée générale, comme point final qui fait du résultat une décision communautaire. Cupcake était d’accord, ajoutant que ce qui avait fait fonctionner le vote sur les dates était la discussion et l’information approfondies en amont.</li>
+                        </ul>
+
+                        <h2>3. Calendrier</h2>
+                        <ul>
+                            <li>Daniela a demandé si les propositions devaient être soumises au vote prévu en décembre, en même temps que le budget. Daniel T a indiqué que décembre nécessitera une Assemblée générale pour le budget et l’élection du conseil, et que l’élection doit se tenir entre le 3 et le 18 décembre. À son avis, il serait préférable de construire un rythme plus léger et régulier de votes des asociados, par exemple un ensemble mensuel de décisions, plutôt que de soumettre de nombreux points à un seul vote de décembre. Il a suggéré que novembre pourrait convenir.</li>
+                            <li>Céline S a proposé de viser une <strong>validation fin novembre</strong> : la proposition devrait être préparée à l’avance, avec des contributions recueillies lors des réunions des coordinateur·rice·s et auprès des personnes disposant des connaissances pertinentes, afin que le vote lui-même soit une validation. Anna T n’a vu aucun problème avec ce calendrier pour les propositions des départements.</li>
+                            <li>Anna T a noté que la <strong>description du rôle du conseil</strong> a besoin d’un calendrier plus court : avec l’élection du conseil qui approche, les personnes qui se présentent doivent savoir à quoi elles s’engagent et à quoi elles ne s’engagent pas.</li>
+                            <li>Daniela a ajouté que ces choix valent pour l’année à venir et peuvent être revus chaque année à la lumière de l’expérience.</li>
+                        </ul>
+
+                        <h2>4. Deux modèles pour coordonner un département</h2>
+                        <ul>
+                            <li><strong>Ce qui est convenu.</strong> Il a été largement convenu que la liste des tâches que chaque département doit couvrir n’est pas contestée, et que les rapports devraient être visibles par tous, structurés autour d’un calendrier de production partagé. Chaque département a besoin d’un point de contact et doit rendre compte de ses tâches. Daniel T a proposé de traiter ces exigences comme un socle commun situé en dehors des deux options, de la même manière que chaque département passe par le même système pour les notes de frais. Anna T a convenu qu’il s’agit du point de départ pour toute proposition.</li>
+                            <li><strong>Option A : coordinateur·rice et adjoint·e.</strong> Comme l’a exposé Anna T : chaque département a un·e coordinateur·rice et un·e adjoint·e, sélectionnés par un processus impliquant des parties prenantes au-delà du département (par exemple le conseil et d’autres coordinateur·rice·s). Ils peuvent déléguer, mais restent responsables de l’exécution des tâches.</li>
+                            <li><strong>Option B : le département s’organise lui-même.</strong> Comme l’a exposé Cupcake : des attentes claires au niveau du département (comment le département invite les gens à participer, les rapports, les informations de contact), le département étant libre de décider comment y répondre. Les tâches peuvent être réparties entre différentes personnes, de sorte que le point de contact n’a pas forcément à être la personne qui veille à ce que les tâches soient couvertes, ni celle qui fait les rapports. Il n’y a pas de processus de sélection venant de l’extérieur du département.</li>
+                            <li>Daniel T a résumé la différence comme le fait de savoir si la coordination est attribuée par un <strong>processus de sélection externe ou interne</strong>. Les tâches elles-mêmes ne sont pas en cause.</li>
+                            <li>Selon Anna T, les deux options ne peuvent pas coexister, elles devraient donc être soumises à la communauté comme des propositions séparées. Daniela a ajouté que chaque option forme un ensemble complet touchant aux descriptions de rôles, au recrutement, à la sélection et à la révocation, et que ces aspects ne peuvent pas être décidés séparément.</li>
+                        </ul>
+
+                        <h3>Arguments avancés</h3>
+                        <ul>
+                            <li><strong>Responsabilité.</strong> Daniel T a dit que la sélection au sein d’un département est une boucle de rétroaction fermée : cela fonctionne tant que le département sert la communauté, mais il doit exister un canal externe par lequel la communauté (idéalement plutôt que le conseil) peut réorienter un département. La sélection des coordinateur·rice·s est l’un de ces canaux, mais peut-être pas le seul.</li>
+                            <li><strong>Ouverture.</strong> Cupcake a dit que les départements doivent toujours être ouverts : des appels ouverts clairs et publiés, et des moyens visibles de prendre en charge des tâches, afin que toute personne qui souhaite s’impliquer le puisse et ait voix au chapitre. Le vote annuel sur le budget est le contrôle communautaire sur ce que font les départements. Tout ce que fait un département n’a pas besoin d’un vote. Cupcake travaille aussi sur un outil permettant de rendre visibles les manques et de lancer des appels ouverts à la communauté lorsqu’une aide est nécessaire. Selon Cupcake, le plus gros problème aujourd’hui est le manque de visibilité, plus que le manque d’une personne responsable.</li>
+                            <li><strong>Où finit le pouvoir.</strong> Anna T a demandé ce qui se passe dans chaque modèle lorsqu’un département ne fait pas ce qui est nécessaire, et qui s’en charge alors. Elle a demandé si, en l’absence de coordinateur·rice·s, la prise de décision pourrait se déplacer vers un rôle nommé par le conseil (par exemple un rôle rémunéré de recrutement) ou vers Production. Les deux propositions devraient réfléchir à cela.</li>
+                            <li><strong>Limites des départements.</strong> Daniela a noté que les départements sont limités par ce que décide la communauté, le budget avant tout. Elle a soutenu l’idée de clarifier comment les gens peuvent rejoindre les départements, et a proposé d’organiser une partie du travail sous forme de projets que les gens peuvent rejoindre sans s’engager pour un département entier toute l’année.</li>
+                            <li><strong>Désaccords.</strong> Daniel T a demandé comment la direction d’un département pourrait changer sous l’option B si des personnes extérieures étaient en désaccord. Cupcake a répondu que les préoccupations seraient adressées au point de contact du département et à ses appels ouverts, et que des canaux clairs pour cela constitueraient une grande avancée car aucun n’existe aujourd’hui. Daniel T a demandé que les propositions présentent des scénarios types de désaccords au sein d’un département, entre départements, et entre un département et la communauté au sens large. Il a noté que chaque option a des avantages et des inconvénients, et que les élections sont un véritable inconvénient pour certaines personnes.</li>
+                            <li><strong>Recrutement et rôles rémunérés.</strong> Anna T a soulevé deux questions qu’aucune des deux options ne couvre encore : s’il devrait y avoir une fonction de recrutement/RH soutenant tous les départements (avec par exemple l’intégration dans Humans), et si cela constituerait un département de bénévoles ou un rôle rémunéré. Elle a dit que ces questions changent l’endroit où les décisions sont prises et qu’il appartient à la communauté de les trancher. Céline S a demandé qu’elles soient prises en compte dans les propositions dans la mesure du possible.</li>
+                        </ul>
+
+                        <h2>5. Comment les propositions seront préparées</h2>
+                        <ul>
+                            <li>Céline S a présenté la tâche du groupe comme la préparation de propositions couvrant les mêmes points, afin que les asociados comparent des éléments comparables.</li>
+                            <li>Il y avait deux points de vue sur la façon de commencer. L’un était que chaque participant·e apporte sa propre vision la semaine suivante et que le groupe en dégage les options. L’autre, défendu par Anna T et Daniel T, était que l’ALM et l’enquête avaient déjà produit deux options distinctes à rédiger. Anna T a dit qu’il lui importait que les propositions soient construites à partir des contributions de la communauté (l’enquête et l’ALM), et non des opinions personnelles des personnes présentes à la réunion. Daniela a dit que ses conversations avec les coordinateur·rice·s au cours de l’année constituent aussi des contributions qui devraient compter, au-delà de l’enquête. Daniel T a convenu que les contributions ne seront jamais complètes, ce qui est précisément la raison d’être du vote des asociados.</li>
+                            <li><strong>Convenu à la clôture :</strong> les options sont rédigées sous forme de propositions écrites et partagées sur le Discord du groupe, où chacun·e peut commenter chacune d’elles. Daniela et Cupcake pilotent l’option menée par le département (B). Daniel T rédige l’option coordinateur·rice-et-adjoint·e (A), avec l’aide d’Anna T selon le temps dont elle dispose. Une troisième proposition est possible, mais l’objectif est de s’arrêter à trois.</li>
+                            <li>Céline S enverra les notes de cette réunion, et le groupe se réunit à nouveau à la même heure la semaine prochaine.</li>
+                        </ul>
+
+                        <hr />
+                        <h2>Résultats</h2>
+                        <ul>
+                            <li>Les résultats de gouvernance de l’ALM sont traités comme des contributions et une prise de température de la salle, non comme des décisions définitives. Les points en suspens (sélection des coordinateur·rice·s, révocation, rôles rémunérés) seront soumis aux asociados sous forme de propositions.</li>
+                            <li>Objectif de travail : un <strong>vote des asociados fin novembre</strong> sur le modèle de département. Les propositions sont préparées à l’avance afin que le vote soit une validation.</li>
+                            <li>Deux options pour la coordination des départements : <strong>(A) un·e coordinateur·rice et un·e adjoint·e sélectionnés par un processus incluant des personnes extérieures au département</strong>, ou <strong>(B) le département s’organise lui-même</strong> autour d’une liste de tâches convenue, avec un point de contact. Les exigences communes de rapports et la liste de tâches se situent en dehors des deux options, comme socle commun.</li>
+                            <li>La description du rôle du conseil doit être prête plus tôt, avant l’élection du conseil en décembre.</li>
+                            <li>Le groupe se réunit chaque semaine pour l’instant.</li>
+                        </ul>
+
+                        <h2>Prochaines étapes</h2>
+                        <ul>
+                            <li>Rédiger l’option menée par le département (B) &mdash; Daniela, Cupcake.</li>
+                            <li>Rédiger l’option coordinateur·rice-et-adjoint·e (A) &mdash; Daniel T, avec l’aide d’Anna T.</li>
+                            <li>Partager les brouillons sur le Discord du groupe pour commentaires &mdash; tous les rédacteurs et rédactrices.</li>
+                            <li>Envoyer les notes de cette réunion ; déplacer la réunion vers le calendrier Google de l’association et mettre en place une série hebdomadaire &mdash; Céline S.</li>
+                            <li>Prochaine réunion : même heure la semaine prochaine (lundi 2 novembre).</li>
+                        </ul>
+
+                        <p><em>Compte rendu établi à partir de l'enregistrement et de la transcription de la réunion. Expurgé pour publication.</em></p>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="it">
+<div class="lang-note">In caso di discrepanze tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Presenti: Céline S (facilitatrice), Anna T, Cupcake, Daniel T, Daniela (Production)</strong>
+                        Una sessione di lavoro del gruppo di lavoro sulla governance dedicata alla struttura organizzativa, la prima dopo la Riunione Annuale di Leadership (ALM). Non è un organo decisionale: le opzioni riportate di seguito sono bozze in preparazione, da sottoporre agli asociados.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>La prima chiamata dopo l’ALM. Si è aperta con un riepilogo delle due sessioni di governance tenute in quella sede, per poi passare a quale valore abbiano i loro risultati e a come trasformarli in proposte su cui gli asociados possano decidere. La maggior parte della chiamata ha riguardato l’unica questione che l’ALM aveva lasciato aperta: se ogni dipartimento abbia un/una coordinatore/coordinatrice e un/una vice scelti tramite un processo che coinvolge persone esterne al dipartimento, oppure si organizzi attorno a un elenco di compiti concordato. Il gruppo ha concordato di redigere le opzioni come proposte scritte, con l’obiettivo di un voto degli asociados a fine novembre.</p>
+
+                        <h2>1. Riepilogo delle sessioni di governance dell’ALM</h2>
+                        <ul>
+                            <li>Céline S ha ripercorso il riepilogo che aveva condiviso alla fine dell’ALM (si vedano i risultati su <a href="../alm-outcomes.html#o-how-we-re-structured-roles-responsibilit">ruoli e responsabilità</a> e su <a href="../alm-outcomes.html#o-getting-into-and-out-of-roles">come si entra e si esce dai ruoli</a>): un/una coordinatore/coordinatrice e un/una vice per dipartimento; rendicontazione comune, adattata a ciascun dipartimento e basata sul calendario eventi preliminare presentato da Daniela; descrizioni dei ruoli per i coordinatori e per il board; tutti i ruoli pubblicati; e una verifica del consenso prima che chiunque assuma un ruolo.</li>
+                            <li>Ancora aperto dall’ALM: <strong>la selezione dei coordinatori, la loro revoca e i ruoli retribuiti</strong>.</li>
+                            <li>Céline S ha anche chiesto chi si assicurerà che i ruoli siano effettivamente sempre pubblicati. Questo non è stato risolto nella chiamata.</li>
+                        </ul>
+
+                        <h2>2. Che valore hanno i risultati dell’ALM</h2>
+                        <ul>
+                            <li>Cupcake ha detto di credere che l’ALM avesse concordato di seguire un processo decisionale per consenso, e ha ritenuto che alcune delle sessioni sulla struttura non lo avessero seguito, per cui sarebbe cauto nel trattare i loro risultati come decisioni.</li>
+                            <li>Daniela era d’accordo. Aveva registrato i risultati come una misurazione della temperatura della sala, poiché diverse votazioni erano risultate quasi equamente divise, e si aspetta che le persone attendano una proposta completa piuttosto che considerare i risultati dell’ALM come definitivi.</li>
+                            <li>Céline S ha osservato che il gruppo di lavoro lo sapeva già prima dell’ALM: non esiste ancora un processo definito su chi prende quali decisioni, e i voti dell’ALM non erano vincolanti.</li>
+                            <li>Daniel T ha citato la decisione sulle date degli eventi, ampiamente percepita come avallata dalla comunità: coinvolgimento tramite chiamate comunitarie, l’ALM e riunioni documentate e verbalizzate in acta, seguite da un voto degli asociados. Ha proposto lo stesso qui: un voto degli asociados, non necessariamente vincolante né necessariamente un’Assemblea Generale, come passaggio finale che rende il risultato una decisione della comunità. Cupcake era d’accordo, aggiungendo che ciò che aveva fatto funzionare il voto sulle date era stata la discussione e l’informazione approfondite in anticipo.</li>
+                        </ul>
+
+                        <h2>3. Tempistiche</h2>
+                        <ul>
+                            <li>Daniela ha chiesto se le proposte dovessero essere sottoposte al voto previsto per dicembre insieme al bilancio. Daniel T ha detto che dicembre richiederà un’Assemblea Generale per il bilancio e l’elezione del board, e che l’elezione deve cadere tra il 3 e il 18 dicembre. A suo parere sarebbe meglio costruire un ritmo più leggero e regolare di voti degli asociados, ad esempio un insieme mensile di decisioni, piuttosto che portare molti punti a un unico voto di dicembre. Ha suggerito che novembre potrebbe funzionare.</li>
+                            <li>Céline S ha proposto di lavorare verso un’<strong>approvazione finale a fine novembre</strong>: la proposta dovrebbe essere preparata in anticipo, raccogliendo contributi tramite le chiamate dei coordinatori e da persone con conoscenze pertinenti, in modo che il voto stesso sia un’approvazione finale. Anna T non ha visto problemi con questa tempistica per le proposte dei dipartimenti.</li>
+                            <li>Anna T ha osservato che la <strong>descrizione del ruolo del board</strong> necessita di una tempistica più breve: con l’elezione del board in arrivo, le persone che si candidano dovrebbero sapere a cosa si impegnano e a cosa no.</li>
+                            <li>Daniela ha aggiunto che queste scelte valgono per l’anno a venire e possono essere rivisitate ogni anno alla luce dell’esperienza.</li>
+                        </ul>
+
+                        <h2>4. Due modelli per coordinare un dipartimento</h2>
+                        <ul>
+                            <li><strong>Ciò su cui si è d’accordo.</strong> Si è concordato in generale che l’elenco dei compiti che ogni dipartimento deve coprire non è in discussione, e che la rendicontazione dovrebbe essere visibile a tutti, strutturata attorno a un calendario di produzione condiviso. Ogni dipartimento ha bisogno di un punto di contatto e di responsabilità per i propri compiti. Daniel T ha proposto di trattare questi requisiti come una base comune che si colloca fuori da entrambe le opzioni, nello stesso modo in cui ogni dipartimento gestisce le spese tramite lo stesso sistema. Anna T ha convenuto che questo è il punto di partenza per qualsiasi proposta.</li>
+                            <li><strong>Opzione A: coordinatore e vice.</strong> Come esposto da Anna T: ogni dipartimento ha un/una coordinatore/coordinatrice e un/una vice, selezionati tramite un processo che coinvolge soggetti interessati al di là del dipartimento (ad esempio il board e altri coordinatori). Possono delegare, ma restano responsabili del fatto che i compiti vengano svolti.</li>
+                            <li><strong>Opzione B: il dipartimento si organizza da sé.</strong> Come esposto da Cupcake: aspettative chiare a livello di dipartimento (come il dipartimento invita le persone a partecipare, la rendicontazione, le informazioni di contatto), con il dipartimento libero di decidere come soddisfarle. I compiti possono essere suddivisi tra persone diverse, quindi il punto di contatto non deve necessariamente essere la persona che si assicura che i compiti siano coperti o quella che si occupa della rendicontazione. Non c’è alcun processo di selezione dall’esterno del dipartimento.</li>
+                            <li>Daniel T ha riassunto la differenza come il fatto che il coordinamento venga assegnato tramite un <strong>processo di selezione esterno o interno</strong>. I compiti in sé non sono in discussione.</li>
+                            <li>Secondo Anna T, le due opzioni non possono coesistere, quindi dovrebbero essere presentate alla comunità come proposte separate. Daniela ha aggiunto che ciascuna opzione è un pacchetto completo che riguarda descrizioni dei ruoli, reclutamento, selezione e revoca, e che questi aspetti non possono essere decisi separatamente.</li>
+                        </ul>
+
+                        <h3>Argomenti sollevati</h3>
+                        <ul>
+                            <li><strong>Responsabilità.</strong> Daniel T ha detto che la selezione all’interno di un dipartimento è un circuito di retroazione chiuso: funziona finché un dipartimento serve la comunità, ma deve esistere un canale esterno attraverso il quale la comunità (idealmente più che il board) possa reindirizzare un dipartimento. La selezione dei coordinatori è uno di questi canali, forse non l’unico.</li>
+                            <li><strong>Apertura.</strong> Cupcake ha detto che i dipartimenti devono essere sempre aperti: chiamate aperte chiare e pubblicate, e modi visibili per farsi carico dei compiti, in modo che chiunque voglia coinvolgersi possa farlo e abbia voce in capitolo. Il voto annuale sul bilancio è il controllo di tutta la comunità su ciò che fanno i dipartimenti. Non tutto ciò che fa un dipartimento necessita di un voto. Cupcake sta anche lavorando a uno strumento per rendere visibili le lacune e lanciare inviti aperti alla comunità quando è necessario aiuto. Secondo Cupcake, il problema maggiore oggi è la mancanza di visibilità, più che la mancanza di una persona responsabile.</li>
+                            <li><strong>Dove finisce il potere.</strong> Anna T ha chiesto cosa succede in ciascun modello quando un dipartimento non fa ciò che è necessario, e chi se ne occupa allora. Ha chiesto se, senza coordinatori, il processo decisionale potrebbe spostarsi verso un ruolo nominato dal board (ad esempio un ruolo retribuito di reclutamento) o verso Production. Entrambe le proposte dovrebbero riflettere su questo.</li>
+                            <li><strong>Limiti dei dipartimenti.</strong> Daniela ha osservato che i dipartimenti sono limitati da ciò che decide la comunità, il bilancio soprattutto. Si è detta favorevole a chiarire come le persone possano entrare nei dipartimenti, e ha proposto di organizzare parte del lavoro come progetti a cui le persone possano unirsi senza impegnarsi per un intero dipartimento tutto l’anno.</li>
+                            <li><strong>Disaccordi.</strong> Daniel T ha chiesto come potrebbe cambiare la direzione di un dipartimento nell’opzione B se persone esterne fossero in disaccordo. Cupcake ha risposto che le preoccupazioni andrebbero al punto di contatto del dipartimento e alle sue chiamate aperte, e che canali chiari per questo sarebbero un grande passo avanti perché oggi non ne esiste nessuno. Daniel T ha chiesto che le proposte presentino scenari esemplificativi per i disaccordi all’interno di un dipartimento, tra dipartimenti, e tra un dipartimento e la comunità più ampia. Ha osservato che ogni opzione ha pro e contro, e che le elezioni sono uno svantaggio reale per alcune persone.</li>
+                            <li><strong>Reclutamento e ruoli retribuiti.</strong> Anna T ha posto due questioni che nessuna delle due opzioni copre ancora: se dovrebbe esistere una funzione di reclutamento/risorse umane a supporto di tutti i dipartimenti (con, ad esempio, l’inserimento in Humans), e se questa sarebbe un dipartimento di volontariato o un ruolo retribuito. Ha detto che queste questioni cambiano dove vengono prese le decisioni e spettano alla comunità decidere. Céline S ha chiesto che vengano tenute in considerazione nelle proposte dove possibile.</li>
+                        </ul>
+
+                        <h2>5. Come verranno preparate le proposte</h2>
+                        <ul>
+                            <li>Céline S ha inquadrato il compito del gruppo come la preparazione di proposte che coprano gli stessi punti, in modo che gli asociados possano confrontare elementi comparabili.</li>
+                            <li>C’erano due punti di vista su come iniziare. Uno era che ogni partecipante portasse la propria visione la settimana successiva e che il gruppo ne elaborasse le opzioni. L’altro, sostenuto da Anna T e Daniel T, era che l’ALM e il sondaggio avessero già prodotto due opzioni distinte da redigere. Anna T ha detto che per lei era importante che le proposte fossero costruite sui contributi della comunità (il sondaggio e l’ALM), e non sulle opinioni personali delle persone presenti alla chiamata. Daniela ha detto che anche le sue conversazioni con i coordinatori durante l’anno sono contributi che dovrebbero contare, oltre al sondaggio. Daniel T ha convenuto che i contributi non saranno mai completi, il che è esattamente lo scopo del voto degli asociados.</li>
+                            <li><strong>Concordato in chiusura:</strong> le opzioni vengono redatte come proposte scritte e condivise nel Discord del gruppo, dove tutti possono commentare ciascuna di esse. Daniela e Cupcake guidano l’opzione gestita dal dipartimento (B). Daniel T redige l’opzione coordinatore-e-vice (A), con l’assistenza di Anna T nei limiti del tempo disponibile. Una terza proposta è possibile, ma l’obiettivo è fermarsi a tre.</li>
+                            <li>Céline S invierà le note di questa chiamata, e il gruppo si riunisce di nuovo allo stesso orario la prossima settimana.</li>
+                        </ul>
+
+                        <hr />
+                        <h2>Risultati</h2>
+                        <ul>
+                            <li>I risultati di governance dell’ALM sono trattati come contributi e come una misurazione della temperatura della sala, non come decisioni definitive. I punti aperti (selezione dei coordinatori, revoca, ruoli retribuiti) saranno sottoposti agli asociados come proposte.</li>
+                            <li>Obiettivo di lavoro: un <strong>voto degli asociados a fine novembre</strong> sul modello di dipartimento. Le proposte vengono preparate in anticipo affinché il voto sia un’approvazione finale.</li>
+                            <li>Due opzioni su come vengono coordinati i dipartimenti: <strong>(A) un coordinatore e un vice selezionati tramite un processo che include persone esterne al dipartimento</strong>, oppure <strong>(B) il dipartimento si organizza da sé</strong> attorno a un elenco di compiti concordato, con un punto di contatto. I requisiti comuni di rendicontazione e l’elenco dei compiti si collocano fuori da entrambe le opzioni, come base comune.</li>
+                            <li>La descrizione del ruolo del board deve essere pronta prima, in vista dell’elezione del board di dicembre.</li>
+                            <li>Il gruppo si riunisce settimanalmente per ora.</li>
+                        </ul>
+
+                        <h2>Prossimi passi</h2>
+                        <ul>
+                            <li>Redigere l’opzione gestita dal dipartimento (B) &mdash; Daniela, Cupcake.</li>
+                            <li>Redigere l’opzione coordinatore-e-vice (A) &mdash; Daniel T, con l’assistenza di Anna T.</li>
+                            <li>Condividere le bozze nel Discord del gruppo per i commenti &mdash; tutti i redattori.</li>
+                            <li>Inviare le note di questa chiamata; spostare la chiamata sul calendario Google dell’associazione e impostare una serie settimanale &mdash; Céline S.</li>
+                            <li>Prossima chiamata: stesso orario la prossima settimana (lunedì 2 novembre).</li>
+                        </ul>
+
+                        <p><em>Verbale redatto a partire dalla registrazione e dalla trascrizione della riunione. Ripulito per la pubblicazione.</em></p>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="de">
+<div class="lang-note">Bei Diskrepanzen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesend: Céline S (Moderation), Anna T, Cupcake, Daniel T, Daniela (Production)</strong>
+                        Eine Arbeitssitzung der Governance-Arbeitsgruppe zur Organisationsstruktur, die erste nach dem Annual Leadership Meeting (ALM). Es ist kein entscheidungsbefugtes Gremium: Die unten aufgeführten Optionen sind Entwürfe in Vorbereitung, die den asociados vorgelegt werden sollen.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Der erste Call nach dem ALM. Er begann mit einer Zusammenfassung der beiden dortigen Governance-Sitzungen und wandte sich dann der Frage zu, welchen Stellenwert deren Ergebnisse haben und wie sie in Vorschläge umgewandelt werden können, über die die asociados entscheiden können. Der größte Teil des Calls drehte sich um die eine Frage, die das ALM offengelassen hatte: ob jede Abteilung eine·n Koordinator·in und eine·n Stellvertreter·in hat, die über ein Verfahren bestimmt werden, an dem Personen außerhalb der Abteilung beteiligt sind, oder ob sie sich um eine vereinbarte Aufgabenliste herum selbst organisiert. Die Gruppe vereinbarte, die Optionen als schriftliche Vorschläge auszuarbeiten, mit dem Ziel einer Abstimmung der asociados Ende November.</p>
+
+                        <h2>1. Rückblick auf die Governance-Sitzungen des ALM</h2>
+                        <ul>
+                            <li>Céline S ging die Zusammenfassung durch, die sie am Ende des ALM geteilt hatte (siehe die Ergebnisse zu <a href="../alm-outcomes.html#o-how-we-re-structured-roles-responsibilit">Rollen und Verantwortlichkeiten</a> und zu <a href="../alm-outcomes.html#o-getting-into-and-out-of-roles">Ein- und Ausstieg aus Rollen</a>): eine koordinierende Person und eine stellvertretende Person pro Abteilung; gemeinsame Berichterstattung, abgestimmt auf jede Abteilung und basierend auf dem von Daniela vorgestellten vorläufigen Veranstaltungskalender; Rollenbeschreibungen für Koordinator·innen und für den Vorstand; alle Rollen öffentlich ausgeschrieben; und eine Zustimmungsprüfung, bevor jemand eine Rolle übernimmt.</li>
+                            <li>Noch offen seit dem ALM: <strong>die Auswahl von Koordinator·innen, deren Abwahl und bezahlte Rollen</strong>.</li>
+                            <li>Céline S fragte auch, wer sicherstellen wird, dass Rollen tatsächlich immer ausgeschrieben werden. Dies wurde im Call nicht geklärt.</li>
+                        </ul>
+
+                        <h2>2. Welchen Stellenwert die Ergebnisse des ALM haben</h2>
+                        <ul>
+                            <li>Cupcake sagte, er glaube, dass sich das ALM auf ein Konsens-Entscheidungsverfahren verständigt habe, und er habe den Eindruck, dass einige der Struktursitzungen diesem nicht gefolgt seien, weshalb er vorsichtig wäre, deren Ergebnisse als Entscheidungen zu behandeln.</li>
+                            <li>Daniela stimmte zu. Sie hatte die Ergebnisse als Stimmungsbild des Raums festgehalten, da mehrere Abstimmungen nahezu ausgeglichen ausgefallen waren, und sie erwartet, dass die Leute auf einen vollständigen Vorschlag warten, statt die Ergebnisse des ALM als endgültig zu betrachten.</li>
+                            <li>Céline S merkte an, dass die Arbeitsgruppe dies schon vor dem ALM wusste: Es gibt noch kein festgelegtes Verfahren dafür, wer welche Entscheidungen trifft, und die Abstimmungen des ALM waren nicht bindend.</li>
+                            <li>Daniel T verwies auf die Entscheidung zu den Veranstaltungsterminen, die weithin als von der Gemeinschaft getragen angesehen wird: Einbindung durch Community-Calls, das ALM und dokumentierte, mit acta festgehaltene Sitzungen, gefolgt von einer Abstimmung der asociados. Er schlug hier dasselbe vor: eine Abstimmung der asociados, nicht notwendigerweise bindend und nicht notwendigerweise eine Generalversammlung, als Abschluss, der das Ergebnis zu einer Entscheidung der Gemeinschaft macht. Cupcake stimmte zu und fügte hinzu, dass die gründliche Diskussion und Information im Vorfeld dafür gesorgt hätten, dass die Abstimmung zu den Terminen funktioniert habe.</li>
+                        </ul>
+
+                        <h2>3. Zeitplan</h2>
+                        <ul>
+                            <li>Daniela fragte, ob die Vorschläge zur im Dezember zusammen mit dem Budget geplanten Abstimmung gehen sollten. Daniel T sagte, dass der Dezember eine Generalversammlung für das Budget und die Vorstandswahl erfordern werde und dass die Wahl zwischen dem 3. und dem 18. Dezember stattfinden müsse. Seiner Ansicht nach wäre es besser, einen leichteren, regelmäßigen Rhythmus von Abstimmungen der asociados aufzubauen, zum Beispiel ein monatliches Paket von Entscheidungen, statt viele Punkte in eine einzige Dezember-Abstimmung zu packen. Er schlug vor, dass November geeignet sein könnte.</li>
+                            <li>Céline S schlug vor, auf einen <strong>Abschluss Ende November</strong> hinzuarbeiten: Der Vorschlag solle im Voraus vorbereitet werden, mit Rückmeldungen, die über Koordinator·innen-Calls und von Personen mit relevantem Wissen eingeholt werden, sodass die Abstimmung selbst nur noch ein Abschluss sei. Anna T sah für diesen Zeitplan bei den Abteilungsvorschlägen kein Problem.</li>
+                            <li>Anna T merkte an, dass die <strong>Rollenbeschreibung des Vorstands</strong> einen kürzeren Zeitplan braucht: Angesichts der bevorstehenden Vorstandswahl sollten Personen, die kandidieren, wissen, worauf sie sich einlassen und worauf nicht.</li>
+                            <li>Daniela fügte hinzu, dass diese Entscheidungen für das kommende Jahr gelten und jedes Jahr im Licht der Erfahrung überprüft werden können.</li>
+                        </ul>
+
+                        <h2>4. Zwei Modelle zur Koordination einer Abteilung</h2>
+                        <ul>
+                            <li><strong>Was vereinbart ist.</strong> Es bestand weitgehend Einigkeit darüber, dass die Liste der Aufgaben, die jede Abteilung abdecken muss, nicht strittig ist, und dass die Berichterstattung für alle sichtbar sein und sich um einen gemeinsamen Produktionskalender herum aufbauen sollte. Jede Abteilung braucht eine Kontaktperson und Rechenschaftspflicht für ihre Aufgaben. Daniel T schlug vor, diese Anforderungen als gemeinsame Grundlage zu behandeln, die außerhalb beider Optionen steht, ebenso wie jede Abteilung Spesen über dasselbe System abrechnet. Anna T stimmte zu, dass dies der Ausgangspunkt für jeden Vorschlag sei.</li>
+                            <li><strong>Option A: koordinierende und stellvertretende Person.</strong> Wie von Anna T dargelegt: Jede Abteilung hat eine koordinierende und eine stellvertretende Person, ausgewählt über ein Verfahren, an dem Beteiligte über die Abteilung hinaus mitwirken (zum Beispiel der Vorstand und andere Koordinator·innen). Sie können delegieren, bleiben aber dafür verantwortlich, dass die Aufgaben erledigt werden.</li>
+                            <li><strong>Option B: Die Abteilung organisiert sich selbst.</strong> Wie von Cupcake dargelegt: klare Erwartungen auf Abteilungsebene (wie die Abteilung Menschen einbindet, Berichterstattung, Kontaktinformationen), wobei die Abteilung frei entscheiden kann, wie sie diese erfüllt. Die Aufgaben können auf verschiedene Personen verteilt werden, sodass die Kontaktperson nicht dieselbe Person sein muss wie diejenige, die sicherstellt, dass die Aufgaben abgedeckt sind, oder diejenige, die berichtet. Es gibt kein Auswahlverfahren von außerhalb der Abteilung.</li>
+                            <li>Daniel T fasste den Unterschied so zusammen, ob die Koordination über ein <strong>externes oder ein internes Auswahlverfahren</strong> vergeben wird. Die Aufgaben selbst stehen nicht zur Debatte.</li>
+                            <li>Anna T war der Ansicht, dass die beiden nicht nebeneinander bestehen können, weshalb sie der Gemeinschaft als getrennte Vorschläge vorgelegt werden sollten. Daniela fügte hinzu, dass jede Option ein Gesamtpaket sei, das Rollenbeschreibungen, Rekrutierung, Auswahl und Abwahl betreffe, und dass diese Aspekte nicht getrennt entschieden werden könnten.</li>
+                        </ul>
+
+                        <h3>Vorgebrachte Argumente</h3>
+                        <ul>
+                            <li><strong>Rechenschaftspflicht.</strong> Daniel T sagte, dass die Auswahl innerhalb einer Abteilung eine geschlossene Rückkopplungsschleife sei: Das funktioniere, solange eine Abteilung der Gemeinschaft diene, aber es müsse einen externen Kanal geben, über den die Gemeinschaft (idealerweise eher als der Vorstand) eine Abteilung neu ausrichten könne. Die Auswahl von Koordinator·innen sei ein solcher Kanal, vielleicht aber nicht der einzige.</li>
+                            <li><strong>Offenheit.</strong> Cupcake sagte, Abteilungen müssten immer offen sein: klare, veröffentlichte offene Ausschreibungen und sichtbare Wege, Aufgaben zu übernehmen, damit jede·r, der oder die sich einbringen möchte, dies kann und mitzureden hat. Die jährliche Budgetabstimmung sei die gemeinschaftsweite Kontrolle darüber, was Abteilungen tun. Nicht alles, was eine Abteilung tue, brauche eine Abstimmung. Cupcake arbeite außerdem an einem Werkzeug, um Lücken sichtbar zu machen und offene Einladungen an die Gemeinschaft auszusprechen, wenn Hilfe benötigt werde. Aus Cupcakes Sicht sei das größere Problem heute der Mangel an Sichtbarkeit, mehr als der Mangel an einer verantwortlichen Person.</li>
+                            <li><strong>Wo die Macht landet.</strong> Anna T fragte, was in jedem Modell passiert, wenn eine Abteilung nicht tut, was nötig ist, und wer es dann übernimmt. Sie fragte, ob sich die Entscheidungsfindung ohne Koordinator·innen zu einer vom Vorstand bestimmten Rolle (zum Beispiel einer bezahlten Rekrutierungsrolle) oder zu Production verschieben könnte. Beide Vorschläge sollten dies durchdenken.</li>
+                            <li><strong>Grenzen der Abteilungen.</strong> Daniela merkte an, dass Abteilungen durch das begrenzt seien, was die Gemeinschaft entscheide, vor allem das Budget. Sie befürwortete, klarzustellen, wie Menschen Abteilungen beitreten können, und schlug vor, einen Teil der Arbeit als Projekte zu organisieren, denen Menschen beitreten können, ohne sich für eine ganze Abteilung das ganze Jahr über zu verpflichten.</li>
+                            <li><strong>Meinungsverschiedenheiten.</strong> Daniel T fragte, wie sich die Ausrichtung einer Abteilung unter Option B ändern könnte, wenn Personen außerhalb anderer Meinung seien. Cupcake antwortete, dass Anliegen an die Kontaktperson der Abteilung und ihre offenen Ausschreibungen gingen, und dass klare Kanäle dafür ein großer Schritt wären, weil es heute noch keine gebe. Daniel T bat darum, dass die Vorschläge beispielhafte Szenarien für Meinungsverschiedenheiten innerhalb einer Abteilung, zwischen Abteilungen und zwischen einer Abteilung und der weiteren Gemeinschaft darlegen. Er merkte an, dass jede Option Vor- und Nachteile habe und dass Wahlen für manche Menschen ein echter Nachteil seien.</li>
+                            <li><strong>Rekrutierung und bezahlte Rollen.</strong> Anna T warf zwei Fragen auf, die bisher keine der beiden Optionen abdeckt: ob es eine Rekrutierungs-/Personalfunktion geben sollte, die alle Abteilungen unterstützt (zum Beispiel mit dem Onboarding in Humans), und ob dies eine ehrenamtliche Abteilung oder eine bezahlte Rolle wäre. Sie sagte, diese Fragen änderten, wo Entscheidungen getroffen werden, und es sei an der Gemeinschaft, sie zu entscheiden. Céline S bat darum, sie, soweit möglich, in die Vorschläge einzubeziehen.</li>
+                        </ul>
+
+                        <h2>5. Wie die Vorschläge vorbereitet werden</h2>
+                        <ul>
+                            <li>Céline S beschrieb die Aufgabe der Gruppe als die Vorbereitung von Vorschlägen, die dieselben Punkte abdecken, damit die asociados Vergleichbares mit Vergleichbarem vergleichen können.</li>
+                            <li>Es gab zwei Ansichten darüber, wie man beginnen sollte. Die eine war, dass jede·r Teilnehmer·in nächste Woche die eigene Vision einbringt und die Gruppe von dort aus die Optionen erarbeitet. Die andere, von Anna T und Daniel T vertretene Ansicht war, dass das ALM und die Umfrage bereits zwei unterschiedliche, auszuarbeitende Optionen hervorgebracht hätten. Anna T sagte, es sei ihr wichtig, dass die Vorschläge auf den Beiträgen der Gemeinschaft (der Umfrage und dem ALM) aufbauen und nicht auf den persönlichen Ansichten der Personen im Call. Daniela sagte, dass auch ihre Gespräche mit Koordinator·innen im Laufe des Jahres Beiträge seien, die über die Umfrage hinaus zählen sollten. Daniel T stimmte zu, dass die Beiträge nie vollständig sein werden, wofür genau die Abstimmung der asociados da sei.</li>
+                            <li><strong>Zum Abschluss vereinbart:</strong> Die Optionen werden als schriftliche Vorschläge ausgearbeitet und im Discord der Gruppe geteilt, wo alle jede von ihnen kommentieren können. Daniela und Cupcake führen die abteilungsgeleitete Option (B). Daniel T entwirft die Option koordinierende-und-stellvertretende-Person (A), mit Unterstützung von Anna T, soweit es ihre Zeit erlaubt. Ein dritter Vorschlag ist möglich, das Ziel ist jedoch, bei drei zu bleiben.</li>
+                            <li>Céline S wird die Notizen dieses Calls versenden, und die Gruppe trifft sich nächste Woche wieder zur gleichen Zeit.</li>
+                        </ul>
+
+                        <hr />
+                        <h2>Ergebnisse</h2>
+                        <ul>
+                            <li>Die Governance-Ergebnisse des ALM werden als Beiträge und als Stimmungsbild des Raums behandelt, nicht als endgültige Entscheidungen. Die offenen Punkte (Auswahl von Koordinator·innen, Abwahl, bezahlte Rollen) sollen den asociados als Vorschläge vorgelegt werden.</li>
+                            <li>Arbeitsziel: eine <strong>Abstimmung der asociados Ende November</strong> über das Abteilungsmodell. Die Vorschläge werden im Voraus vorbereitet, sodass die Abstimmung ein Abschluss ist.</li>
+                            <li>Zwei Optionen, wie Abteilungen koordiniert werden: <strong>(A) eine koordinierende und eine stellvertretende Person, ausgewählt über ein Verfahren, an dem Personen außerhalb der Abteilung beteiligt sind</strong>, oder <strong>(B) die Abteilung organisiert sich selbst</strong> um eine vereinbarte Aufgabenliste herum, mit einer Kontaktperson. Die gemeinsamen Berichtspflichten und die Aufgabenliste stehen außerhalb beider Optionen, als gemeinsame Grundlage.</li>
+                            <li>Die Rollenbeschreibung des Vorstands muss früher fertig sein, vor der Vorstandswahl im Dezember.</li>
+                            <li>Die Gruppe trifft sich vorerst wöchentlich.</li>
+                        </ul>
+
+                        <h2>Nächste Schritte</h2>
+                        <ul>
+                            <li>Die abteilungsgeleitete Option (B) entwerfen &mdash; Daniela, Cupcake.</li>
+                            <li>Die Option koordinierende-und-stellvertretende-Person (A) entwerfen &mdash; Daniel T, mit Unterstützung von Anna T.</li>
+                            <li>Die Entwürfe im Discord der Gruppe zur Kommentierung teilen &mdash; alle Entwurfsverfasser·innen.</li>
+                            <li>Die Notizen dieses Calls versenden; den Call in den Google-Kalender des Vereins verschieben und eine wöchentliche Serie einrichten &mdash; Céline S.</li>
+                            <li>Nächster Call: gleiche Zeit nächste Woche (Montag, 2. November).</li>
+                        </ul>
+
+                        <p><em>Protokoll erstellt auf Grundlage der Sitzungsaufzeichnung und des Transkripts. F&uuml;r die Ver&ouml;ffentlichung bereinigt.</em></p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -137,5 +486,17 @@
     <script src="../footer.js"></script>
 
     <script src="../script.js"></script>
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>

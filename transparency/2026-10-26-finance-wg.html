@@ -27,8 +27,12 @@
         .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
         .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
         .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
         .lang-content { display: none; }
         .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -49,7 +53,17 @@
                     </div>
                 </div>
 
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
                 <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
 
                     <div class="attendees">
                         <strong>Present: Peter D (convenor), Daniel T, Daniela (Production), Katja</strong>
@@ -127,6 +141,325 @@
                         <p><em>Minutes prepared from the meeting recording and transcript. Sanitised for publication.</em></p>
                     </div>
                 </div>
+
+                <div class="lang-content" data-lang="es">
+
+                    <div class="attendees">
+                        <strong>Presentes: Peter D (convocante), Daniel T, Daniela (Producción), Katja</strong>
+                        Segunda sesión del grupo de trabajo de Finanzas 2027. El grupo de trabajo prepara una propuesta; no decide. Las ideas y los precios de ejemplo que figuran a continuación son propuestas y opciones para el debate, no decisiones. Cualquier recomendación presupuestaria se somete a votación de los asociados.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>La mayor parte de la sesión se centró en cómo se recopilarían los proyectos de mejora para 2027, cómo los clasificaría la comunidad y cómo se financiarían a medida que entraran los ingresos por venta de entradas, junto con un presupuesto base para cada departamento. El grupo también debatió las subvenciones externas, la facturación de servicios internos como la electricidad a los proyectos que los utilizan, los niveles de entradas, una forma de que las personas que solicitan una entrada de bajos ingresos conserven el precio vigente en el momento de la solicitud, los pagos mensuales a plazos y las membresías. Ninguna de las personas presentes se opuso a los precios de entradas por niveles. No se acordaron precios de entradas ni cifras presupuestarias.</p>
+
+                        <h2>1. Participación y cómo se aprueba la propuesta</h2>
+                        <ul>
+                            <li>A Peter D le preocupaba que no se incorporen más personas a las sesiones, ya que las decisiones que se toman aquí afectarán a todos, y propuso una mayor difusión. Daniel T señaló que había invitado a la gente en la anterior llamada comunitaria; el principio es que quienes se presentan hacen el trabajo, y las actas se publican.</li>
+                            <li>Daniel T propuso que, en lugar de convocar una Asamblea General para todo, la propuesta del grupo (posiblemente con un par de opciones en los puntos en los que el grupo no esté totalmente de acuerdo) podría ratificarse mediante una votación de los asociados, tal como se debatió en el trabajo sobre la estructura organizativa. Peter D coincidió en que una votación de los asociados es generalmente positiva, si bien señaló que un resultado muy ajustado es menos convincente que uno claro y que demasiadas votaciones pueden hacer que la gente pierda el interés.</li>
+                        </ul>
+
+                        <h2>2. Proyectos de mejora y presupuestos de los departamentos</h2>
+                        <ul>
+                            <li><strong>Proyectos con un coste y una fecha de decisión.</strong> Daniela dijo que varios proyectos debatidos en el ALM, incluidos algunos propios de Producción, costarán más que este año, y preguntó cómo se decidirían. Peter D describió el enfoque: cada proyecto tiene una descripción, un coste y una fecha límite por la que debe decidirse. La comunidad clasifica los proyectos, y se financian por orden a medida que lo permiten los ingresos por entradas, siempre que no haya pasado su fecha de decisión. Los proyectos que pueden decidirse más tarde tienen, por tanto, más posibilidades de ser financiados. Peter D propuso un punto de control mensual sobre las ventas de entradas y un registro de proyectos en Humans vinculado a la votación.</li>
+                            <li><strong>Recopilación de proyectos.</strong> Daniel T aclaró que no podía comprometerse a recoger proyectos de la comunidad en general, y propuso preguntar en su lugar a los departamentos. Daniela dijo que ya está recorriendo los departamentos (para hacer un balance de este año y transmitir lo que se trató en el ALM) y que podría preguntar a cada uno de ellos por sus proyectos para 2027 e invitarlos a estas sesiones.</li>
+                            <li><strong>Base y mejoras.</strong> Daniel T propuso que la base de cada departamento sea el presupuesto de este año más la inflación, ya que el evento funcionó con él, y que cualquier novedad pase por el proceso de proyectos clasificados por la comunidad. Los asociados también podrían rechazar un proyecto: si más de la mitad de quienes votan lo rechazan, no se financia, por muchas entradas que se vendan. Daniela señaló que los presupuestos de este año se mantuvieron muy bajos y que algunos departamentos necesitan un poco más simplemente para funcionar a su nivel básico. Peter D se mostró cómodo con que pequeños ajustes en los presupuestos operativos de los departamentos los decidieran los organizadores, y Daniel T planteó un enfoque de dos niveles: incrementos de la base acordados a nivel de coordinación (para seguir haciendo lo mismo razonablemente bien) y novedades a través del proceso de proyectos.</li>
+                            <li>Daniela preguntó si algunos proyectos, como reparaciones o infraestructuras esenciales, deberían quedar fuera de la clasificación comunitaria. Peter D consideró que los elementos esenciales identificados por el lado de producción podrían decidirse directamente, dejando las mejoras opcionales a la comunidad. Katja señaló que la comunidad necesitaría suficiente detalle técnico sobre cada proyecto para poder votarlo.</li>
+                            <li><strong>Calendario (hipótesis de trabajo).</strong> Peter D propuso una convocatoria de proyectos de mediados de diciembre a finales de enero y una clasificación comunitaria a principios de febrero, a ajustar más adelante. Se trata de decisiones de gasto contingentes que se toman a medida que entran las ventas de entradas, por lo que pueden ser posteriores a la votación presupuestaria de diciembre; los costes esenciales se presupuestan por adelantado, como de costumbre. Señaló que la financiación extra para creatividad, liberada en fases este año a medida que crecían las ventas, era la misma idea, hecha de manera informal.</li>
+                            <li><strong>Facturación de servicios internos.</strong> Peter D explicó que cada estructura se convertiría en un proyecto dentro de un departamento y se le facturarían servicios internos como la electricidad y el agua (la cantidad se añade a su presupuesto y se repercute), de modo que los costes se contabilicen allí donde se generan. Mencionó un posible módulo de Humans para la facturación de electricidad y la disposición en planta.</li>
+                        </ul>
+
+                        <h2>3. Subvenciones externas y donaciones</h2>
+                        <ul>
+                            <li>Daniela preguntó cómo encajarían los proyectos financiados por subvenciones externas. Peter D y Daniel T coincidieron en principio en que el dinero obtenido para un fin específico (una subvención o una donación dirigida) se destina a ese fin. Si la propia asociación obtiene una subvención, por ejemplo para arte, se debatiría cómo se utiliza.</li>
+                            <li>Peter D advirtió de que las subvenciones pueden venir con condiciones que el evento no puede cumplir, como el acceso público o los créditos a patrocinadores, y que esos créditos pueden no sentar bien a todos en la comunidad. Daniel T propuso unas directrices claras en el sitio web para cualquiera que quiera solicitar una subvención en nombre de la asociación; cualquier solicitud de este tipo debe estar firmada por la asociación, que es donde se comprobarían las condiciones.</li>
+                            <li>Katja advirtió de que, por su experiencia en equipos de arte, a veces el mismo proyecto ha buscado financiación completa de varios eventos a la vez, por lo que merece la pena preguntar por otras fuentes de financiación.</li>
+                        </ul>
+
+                        <h2>4. Precios y niveles de entradas (para debate, sin decisiones)</h2>
+                        <ul>
+                            <li>Peter D resumió la estructura de entradas de este año: un precio de bajos ingresos, un precio más bajo para los primeros compradores y un precio que subió hasta su punto más alto en el último mes antes del evento. Daniel T propuso aspirar a un precio medio en torno a un 10% más bajo que el de este año, una reducción que Peter D ya había planteado antes. Esto no se acordó; el modelo presupuestario permitirá al grupo ajustar estas palancas, incluido el precio de bajos ingresos y el número de entradas de bajos ingresos.</li>
+                            <li><strong>Niveles.</strong> Preguntado por Peter D, <strong>ninguna de las personas presentes se opuso a los precios por niveles</strong>. Daniel T esperaba que, especialmente combinado con un sistema de reembolso, animara a comprar con antelación y mejorara las posibilidades de agotar las entradas.</li>
+                            <li><strong>Sistema de venta de entradas.</strong> Peter D dijo que un sistema de venta de entradas de código abierto utilizado por otros eventos podría funcionar como un sistema aparte estrechamente integrado con Humans, con algunos cambios (por ejemplo, emitir una entrada a un precio específico, y la reventa).</li>
+                        </ul>
+
+                        <h2>5. Entradas de bajos ingresos: conservar el precio en el momento de la solicitud</h2>
+                        <ul>
+                            <li>Katja planteó la sugerencia, hecha en el ALM y en Discord, de una oleada tardía de bajos ingresos, ya que las personas con bajos ingresos pueden no conocer su situación con meses de antelación.</li>
+                            <li>Daniel T propuso que cualquier persona que solicite una entrada de bajos ingresos <strong>conserve el derecho a comprar una entrada normal al precio vigente cuando la solicitó</strong>, hasta el evento, si no consigue una entrada de bajos ingresos (a menos que se agote). Peter D lo resumió así: las solicitudes de bajos ingresos están abiertas de forma continua, con una o varias oleadas de bajos ingresos según la disponibilidad (que podría vincularse a las ventas de entradas o a donaciones para plazas de bajos ingresos), y el precio normal vigente en el momento de la solicitud se registra junto con ella. Daniela señaló que esto responde a los comentarios de personas que no consiguieron una entrada de bajos ingresos y después se encontraron con un precio más alto.</li>
+                            <li>Peter D señaló que el esquema podría ser utilizado por personas simplemente para reservar un precio anterior, y que el grupo no sabe cuántos solicitantes sin éxito compran una entrada normal. Daniel T aceptó que ningún sistema es perfecto y prefirió mantenerlo sencillo. Katja quería más tiempo para pensarlo. El formulario de solicitud debe ser claro e inequívoco; la evaluación por puntos existente todavía necesita documentarse y construirse como un módulo.</li>
+                        </ul>
+
+                        <h2>6. Pagos mensuales a plazos y membresías</h2>
+                        <ul>
+                            <li><strong>Pagos a plazos.</strong> Peter D dijo que las solicitudes eran de pequeños pagos mensuales durante todo un año, lo que implicaría vender entradas justo después del evento anterior. No creía que esto pudiera aplicarse a 2027, aunque sí podría a 2028; para 2027, una opción de pago posterior ya existente es probablemente lo más práctico. También habría que tener cuidado con las comisiones de pago y la contabilización de muchas transacciones pequeñas frente a un evento futuro.</li>
+                            <li><strong>Membresías.</strong> Daniela preguntó por un modelo basado en membresías con pagos a plazos, como los de algunos otros eventos. Peter D explicó que una membresía tendría que ser igual para todos los miembros, y que si una membresía da poco más que el acceso al evento, se acerca demasiado a una entrada y plantea cuestiones de IVA y contabilidad. Katja preguntó si podría haber distintos niveles de membresía; Peter D dijo que eso es posible siempre que los niveles superiores no compren beneficios adicionales, lo que los convertiría en un servicio de pago. Peter D también señaló que la normativa española dificulta las entradas anticipadas no reembolsables.</li>
+                            <li>Daniela concluyó que un modelo de membresía es, como mucho, <strong>una cuestión para 2028</strong>, que necesitaría su propia votación porque afectaría a todo el mundo, y se ofreció a preguntar al contable de la asociación si existe algún formato adecuado, incluyendo cómo funcionarían bajo él las entradas de bajos ingresos y las entradas devueltas.</li>
+                        </ul>
+
+                        <hr />
+                        <h2>Resultados</h2>
+                        <ul>
+                            <li>Orientación de trabajo: los departamentos parten de un presupuesto base; los nuevos proyectos de mejora se presentan con un coste y una fecha de decisión, se clasifican (o se rechazan) por la comunidad, y se financian por orden a medida que lo permiten los ingresos por entradas. Los elementos esenciales pueden decidirse directamente.</li>
+                            <li>Calendario de trabajo (a ajustar): convocatoria de proyectos de mediados de diciembre a finales de enero, clasificación comunitaria a principios de febrero.</li>
+                            <li><strong>Ninguna de las personas presentes se opuso a los precios de entradas por niveles.</strong></li>
+                            <li>Propuesta en debate: los solicitantes de bajos ingresos conservan el precio normal vigente cuando solicitaron, si no consiguen una entrada de bajos ingresos.</li>
+                            <li>No se prevén pagos a plazos durante todo un año ni un modelo de membresía para 2027; podrían estudiarse para 2028.</li>
+                            <li>No se acordaron precios de entradas ni cifras presupuestarias.</li>
+                        </ul>
+
+                        <h2>Próximos pasos</h2>
+                        <ul>
+                            <li>Redactar el proceso de proyectos como un plan y difundirlo, para que la gente sepa que viene &mdash; Peter D.</li>
+                            <li>Preguntar al responsable de entradas de este año si está disponible para volver a dirigir la venta de entradas &mdash; Peter D.</li>
+                            <li>Preguntar a los departamentos, durante su ronda actual, por sus proyectos para 2027 e invitarlos a estas sesiones &mdash; Daniela.</li>
+                            <li>Preguntar al contable de la asociación por los formatos de membresía y de pago a plazos &mdash; Daniela.</li>
+                            <li>Presentar la orientación de esta sesión en la llamada comunitaria del jueves e invitar a la gente a participar &mdash; Daniel T.</li>
+                            <li>Próxima sesión: lunes 2 de noviembre.</li>
+                        </ul>
+
+                        <p><em>Acta elaborada a partir de la grabación y la transcripción de la reunión. Depurada para su publicación.</em></p>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="fr">
+<div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaut.</div>
+
+                    <div class="attendees">
+                        <strong>Présents : Peter D (animateur), Daniel T, Daniela (Production), Katja</strong>
+                        Deuxième séance du groupe de travail Finances 2027. Le groupe de travail élabore une proposition ; il ne décide pas. Les idées et les prix indicatifs ci-dessous sont des propositions et des options de discussion, non des décisions. Toute recommandation budgétaire est soumise au vote des asociados.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>La majeure partie de la séance a porté sur la manière de recueillir les projets d'amélioration pour 2027, de les classer par la communauté et de les financer au fur et à mesure des ventes de billets, en parallèle d'un budget de base pour chaque département. Le groupe a également abordé les subventions externes, la facturation des services internes tels que l'électricité aux projets qui les utilisent, les niveaux de billets, un moyen pour les personnes qui demandent un billet à faible revenu de conserver le prix en vigueur au moment de leur demande, les paiements mensuels échelonnés et les adhésions. Aucune des personnes présentes ne s'est opposée à une tarification des billets par niveaux. Aucun prix de billet ni aucun chiffre budgétaire n'a été arrêté.</p>
+
+                        <h2>1. Participation et modalités d'approbation de la proposition</h2>
+                        <ul>
+                            <li>Peter D s'est inquiété du fait que davantage de personnes ne rejoignent pas les séances, alors que les décisions prises ici affecteront tout le monde, et a suggéré davantage de sensibilisation. Daniel T a fait remarquer qu'il avait invité des personnes lors du précédent appel communautaire ; le principe est que ceux qui se présentent font le travail, et les actas sont publiées.</li>
+                            <li>Daniel T a suggéré que, plutôt que de convoquer une Assemblée générale pour tout, la proposition du groupe (éventuellement avec deux options lorsque le groupe n'est pas entièrement d'accord) pourrait être ratifiée par un vote des asociados, comme évoqué dans le travail sur la structure organisationnelle. Peter D a convenu qu'un vote des asociados est généralement une bonne chose, tout en notant qu'un résultat très serré est moins convaincant qu'un résultat net et que trop de votes peuvent faire perdre l'attention des gens.</li>
+                        </ul>
+
+                        <h2>2. Projets d'amélioration et budgets des départements</h2>
+                        <ul>
+                            <li><strong>Projets avec un coût et une date de décision.</strong> Daniela a indiqué que plusieurs projets évoqués à l'ALM, dont certains des siens pour la Production, coûteront plus cher que cette année, et a demandé comment ils seraient décidés. Peter D a décrit l'approche : chaque projet a une description, un coût et une date limite à laquelle il doit être décidé. La communauté classe les projets, qui sont financés dans l'ordre au fur et à mesure que le permettent les recettes des billets, pour autant que leur date de décision ne soit pas dépassée. Les projets qui peuvent être décidés plus tard ont donc davantage de chances d'être financés. Peter D a suggéré un point mensuel sur les ventes de billets et un registre des projets dans Humans lié au vote.</li>
+                            <li><strong>Recueil des projets.</strong> Daniel T a précisé qu'il ne pouvait pas s'engager à recueillir des projets auprès de la communauté en général, et a suggéré de s'adresser plutôt aux départements. Daniela a indiqué qu'elle fait déjà le tour des départements (pour un bilan de cette année et pour transmettre ce qui a été évoqué à l'ALM) et qu'elle pourrait demander à chacun d'eux ses projets pour 2027 et les inviter à ces séances.</li>
+                            <li><strong>Base et améliorations.</strong> Daniel T a suggéré que la base de chaque département soit le budget de cette année plus l'inflation, puisque l'événement a fonctionné avec, toute nouveauté passant par le processus de projets classés par la communauté. Les asociados pourraient également rejeter un projet : si plus de la moitié des votants le rejettent, il n'est pas financé, quel que soit le nombre de billets vendus. Daniela a fait remarquer que les budgets de cette année avaient été maintenus très bas et que certains départements ont besoin d'un peu plus simplement pour fonctionner à leur niveau de base. Peter D s'est dit à l'aise avec l'idée que de petits ajustements des budgets de fonctionnement des départements soient décidés par les organisateurs, et Daniel T a proposé une approche à deux niveaux : des augmentations de la base décidées au niveau des coordinateurs (pour continuer à bien faire les mêmes choses), et les nouveautés via le processus de projets.</li>
+                            <li>Daniela a demandé si certains projets, tels que des réparations ou des infrastructures essentielles, devraient rester hors du classement communautaire. Peter D a estimé que les éléments essentiels identifiés par le côté production pourraient être décidés directement, les améliorations facultatives étant laissées à la communauté. Katja a noté que la communauté aurait besoin de suffisamment de détails techniques sur chaque projet pour voter.</li>
+                            <li><strong>Calendrier (hypothèse de travail).</strong> Peter D a suggéré un appel à projets de mi-décembre à fin janvier et un classement communautaire début février, à ajuster ultérieurement. Il s'agit de décisions de dépense conditionnelles prises au fur et à mesure des ventes de billets, elles peuvent donc suivre le vote budgétaire de décembre ; les coûts essentiels sont budgétés à l'avance comme d'habitude. Il a noté que le financement supplémentaire pour la créativité, débloqué par étapes cette année à mesure que les ventes augmentaient, relevait de la même idée, faite de manière informelle.</li>
+                            <li><strong>Facturation des services internes.</strong> Peter D a expliqué que chaque structure deviendrait un projet relevant d'un département et se verrait facturer des services internes tels que l'électricité et l'eau (le montant étant ajouté à son budget puis refacturé), afin que les coûts soient comptabilisés là où ils surviennent. Il a évoqué un éventuel module Humans pour la facturation de l'électricité et l'implantation.</li>
+                        </ul>
+
+                        <h2>3. Subventions externes et dons</h2>
+                        <ul>
+                            <li>Daniela a demandé comment s'intégreraient les projets financés par des subventions externes. Peter D et Daniel T ont convenu en principe que l'argent obtenu pour un objectif précis (une subvention ou un don fléché) est affecté à cet objectif. Si l'association elle-même obtient une subvention, par exemple pour l'art, son utilisation serait discutée.</li>
+                            <li>Peter D a averti que les subventions peuvent s'accompagner de conditions que l'événement ne peut pas remplir, comme l'accès public ou la mention de sponsors, et que ces mentions peuvent ne pas convenir à tout le monde dans la communauté. Daniel T a suggéré des indications claires sur le site web pour toute personne souhaitant demander une subvention au nom de l'association ; toute demande de ce type doit être signée par l'association, ce qui est le moment où les conditions seraient vérifiées.</li>
+                            <li>Katja a averti que, d'après son expérience dans des équipes artistiques, le même projet a parfois cherché un financement intégral auprès de plusieurs événements à la fois, et qu'il vaut donc la peine de s'informer sur d'autres financements.</li>
+                        </ul>
+
+                        <h2>4. Prix et niveaux des billets (pour discussion, sans décision)</h2>
+                        <ul>
+                            <li>Peter D a résumé la structure tarifaire de cette année : un prix pour revenus modestes, un prix plus bas pour les premiers acheteurs, et un prix qui est monté jusqu'à son point le plus haut dans le dernier mois avant l'événement. Daniel T a suggéré de viser un prix moyen environ 10 % inférieur à celui de cette année, une réduction que Peter D avait déjà évoquée auparavant. Cela n'a pas été décidé ; le modèle budgétaire permettra au groupe d'ajuster ces leviers, y compris le prix pour revenus modestes et le nombre de billets pour revenus modestes.</li>
+                            <li><strong>Niveaux.</strong> Interrogées par Peter D, <strong>aucune des personnes présentes ne s'est opposée à une tarification par niveaux</strong>. Daniel T s'attendait à ce que, surtout combinée à un système de remboursement, elle encourage les achats anticipés et améliore les chances d'épuiser les billets.</li>
+                            <li><strong>Système de billetterie.</strong> Peter D a indiqué qu'un système de billetterie open source utilisé par d'autres événements pourrait fonctionner comme un système distinct étroitement intégré à Humans, avec quelques modifications (par exemple, l'émission d'un billet à un prix précis, et la revente).</li>
+                        </ul>
+
+                        <h2>5. Billets à faible revenu : conserver le prix au moment de la demande</h2>
+                        <ul>
+                            <li>Katja a repris la suggestion, formulée à l'ALM et sur Discord, d'une vague tardive pour les revenus modestes, étant donné que les personnes à faible revenu peuvent ne pas connaître leur situation plusieurs mois à l'avance.</li>
+                            <li>Daniel T a proposé que toute personne demandant un billet à faible revenu <strong>conserve le droit d'acheter un billet normal au prix en vigueur au moment de sa demande</strong>, jusqu'à l'événement, si elle n'obtient pas de billet à faible revenu (sauf épuisement du stock). Peter D l'a résumé ainsi : les demandes pour revenus modestes sont ouvertes en permanence, avec une ou plusieurs vagues selon la disponibilité (qui pourrait être liée aux ventes de billets ou aux dons pour les places à revenus modestes), et le prix normal au moment de la demande est enregistré avec elle. Daniela a noté que cela répond aux retours de personnes qui n'ont pas obtenu de billet à faible revenu et se sont ensuite retrouvées face à un prix plus élevé.</li>
+                            <li>Peter D a fait remarquer que le dispositif pourrait être utilisé par des personnes simplement pour réserver un prix antérieur, et que le groupe ne sait pas combien de candidats non retenus achètent un billet normal. Daniel T a reconnu qu'aucun système n'est parfait et a préféré le garder simple. Katja a souhaité davantage de temps pour y réfléchir. Le formulaire de demande doit être clair et sans ambiguïté ; l'évaluation existante par points doit encore être documentée et construite comme un module.</li>
+                        </ul>
+
+                        <h2>6. Paiements mensuels échelonnés et adhésions</h2>
+                        <ul>
+                            <li><strong>Paiements échelonnés.</strong> Peter D a indiqué que les demandes portaient sur de petits paiements mensuels étalés sur toute une année, ce qui impliquerait de vendre des billets immédiatement après l'événement précédent. Il ne pensait pas que cela puisse s'appliquer à 2027, mais peut-être à 2028 ; pour 2027, une option de paiement différé déjà existante est probablement la plus pratique. Les frais de paiement et la comptabilisation de nombreuses petites transactions vis-à-vis d'un événement futur demanderaient également de la vigilance.</li>
+                            <li><strong>Adhésions.</strong> Daniela a demandé s'il existait un modèle fondé sur l'adhésion avec paiements échelonnés, comme dans certains autres événements. Peter D a expliqué qu'une adhésion devrait être la même pour tous les adhérents, et que si une adhésion n'apporte guère plus que l'accès à l'événement, elle est trop proche d'un billet et pose des questions de TVA et de comptabilité. Katja a demandé s'il pouvait y avoir différents niveaux d'adhésion ; Peter D a répondu que c'est possible à condition que les niveaux supérieurs n'achètent pas d'avantages supplémentaires, ce qui en ferait un service payant. Peter D a également noté que la réglementation espagnole complique les billets anticipés non remboursables.</li>
+                            <li>Daniela a conclu qu'un modèle d'adhésion est tout au plus <strong>une question pour 2028</strong>, qu'il nécessiterait son propre vote car il s'appliquerait à tout le monde, et a proposé de demander au comptable de l'association si un format adapté existe, y compris la manière dont les billets à faible revenu et les billets retournés fonctionneraient dans ce cadre.</li>
+                        </ul>
+
+                        <hr />
+                        <h2>Résultats</h2>
+                        <ul>
+                            <li>Orientation de travail : les départements partent d'un budget de base ; les nouveaux projets d'amélioration sont soumis avec un coût et une date de décision, classés (ou rejetés) par la communauté, et financés dans l'ordre au fur et à mesure que le permettent les recettes des billets. Les éléments essentiels peuvent être décidés directement.</li>
+                            <li>Calendrier de travail (à ajuster) : appel à projets de mi-décembre à fin janvier, classement communautaire début février.</li>
+                            <li><strong>Aucune des personnes présentes ne s'est opposée à une tarification des billets par niveaux.</strong></li>
+                            <li>Proposition en discussion : les demandeurs à faible revenu conservent le prix normal en vigueur au moment de leur demande, s'ils n'obtiennent pas de billet à faible revenu.</li>
+                            <li>Des paiements échelonnés sur une année entière et un modèle d'adhésion ne sont pas prévus pour 2027 ; ils pourraient être examinés pour 2028.</li>
+                            <li>Aucun prix de billet ni aucun chiffre budgétaire n'a été arrêté.</li>
+                        </ul>
+
+                        <h2>Prochaines étapes</h2>
+                        <ul>
+                            <li>Rédiger le processus de projets sous forme de plan et le diffuser, afin que les gens sachent qu'il arrive &mdash; Peter D.</li>
+                            <li>Demander au responsable de la billetterie de cette année s'il est disponible pour la diriger à nouveau &mdash; Peter D.</li>
+                            <li>Demander aux départements, au cours de sa tournée actuelle, leurs projets pour 2027 et les inviter à ces séances &mdash; Daniela.</li>
+                            <li>Demander au comptable de l'association les formats d'adhésion et de paiement échelonné &mdash; Daniela.</li>
+                            <li>Présenter l'orientation issue de cette séance lors de l'appel communautaire de jeudi et inviter les gens à rejoindre &mdash; Daniel T.</li>
+                            <li>Prochaine séance : lundi 2 novembre.</li>
+                        </ul>
+
+                        <p><em>Compte rendu établi à partir de l'enregistrement et de la transcription de la réunion. Expurgé pour publication.</em></p>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="it">
+<div class="lang-note">In caso di discrepanze tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Presenti: Peter D (promotore), Daniel T, Daniela (Produzione), Katja</strong>
+                        Seconda sessione del gruppo di lavoro Finanze 2027. Il gruppo di lavoro prepara una proposta; non decide. Le idee e i prezzi indicativi riportati di seguito sono proposte e opzioni di discussione, non decisioni. Qualsiasi raccomandazione di bilancio è sottoposta al voto degli asociados.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>La maggior parte della sessione ha riguardato il modo in cui i progetti di miglioramento per il 2027 sarebbero stati raccolti, classificati dalla comunità e finanziati con l'arrivo delle vendite dei biglietti, insieme a un bilancio di base per ciascun dipartimento. Il gruppo ha inoltre discusso di sovvenzioni esterne, della fatturazione dei servizi interni come l'energia elettrica ai progetti che li utilizzano, dei livelli dei biglietti, di un meccanismo affinché chi richiede un biglietto a basso reddito mantenga il prezzo in vigore al momento della richiesta, dei pagamenti mensili a rate e degli abbonamenti. Nessuno dei presenti si è opposto a una tariffazione dei biglietti a livelli. Non sono stati concordati prezzi dei biglietti né cifre di bilancio.</p>
+
+                        <h2>1. Partecipazione e modalità di approvazione della proposta</h2>
+                        <ul>
+                            <li>Peter D si è detto preoccupato che non si uniscano più persone alle sessioni, dato che le decisioni prese qui riguarderanno tutti, e ha suggerito una maggiore sensibilizzazione. Daniel T ha osservato di aver invitato le persone durante la precedente chiamata comunitaria; il principio è che chi si presenta fa il lavoro, e le actas vengono pubblicate.</li>
+                            <li>Daniel T ha suggerito che, piuttosto che convocare un'Assemblea Generale per tutto, la proposta del gruppo (eventualmente con un paio di opzioni nei punti in cui il gruppo non è del tutto d'accordo) potrebbe essere ratificata con un voto degli asociados, come discusso nel lavoro sulla struttura organizzativa. Peter D ha convenuto che un voto degli asociados è generalmente positivo, pur osservando che un risultato molto ravvicinato è meno convincente di un risultato netto e che troppe votazioni possono far perdere l'attenzione delle persone.</li>
+                        </ul>
+
+                        <h2>2. Progetti di miglioramento e bilanci dei dipartimenti</h2>
+                        <ul>
+                            <li><strong>Progetti con un costo e una data di decisione.</strong> Daniela ha detto che diversi progetti discussi all'ALM, inclusi alcuni suoi per la Produzione, costeranno più di quest'anno, e ha chiesto come sarebbero stati decisi. Peter D ha descritto l'approccio: ogni progetto ha una descrizione, un costo e una data entro cui deve essere deciso. La comunità classifica i progetti, che vengono finanziati in ordine man mano che lo consentono le entrate dai biglietti, purché la loro data di decisione non sia trascorsa. I progetti che possono essere decisi più tardi hanno quindi maggiori probabilità di essere finanziati. Peter D ha suggerito un controllo mensile sulle vendite dei biglietti e un registro dei progetti in Humans collegato al voto.</li>
+                            <li><strong>Raccolta dei progetti.</strong> Daniel T ha chiarito di non potersi impegnare a raccogliere progetti dalla comunità in generale, e ha suggerito di chiedere invece ai dipartimenti. Daniela ha detto che sta già facendo il giro dei dipartimenti (per un bilancio di quest'anno e per trasmettere quanto discusso all'ALM) e potrebbe chiedere a ciascuno di essi i propri progetti per il 2027 e invitarli a queste sessioni.</li>
+                            <li><strong>Base e migliorie.</strong> Daniel T ha suggerito che la base di ciascun dipartimento sia il bilancio di quest'anno più l'inflazione, poiché l'evento ha funzionato con esso, con qualsiasi novità che passi attraverso il processo di progetti classificati dalla comunità. Gli asociados potrebbero anche respingere un progetto: se più della metà di chi vota lo respinge, non viene finanziato, indipendentemente da quanti biglietti vengano venduti. Daniela ha sottolineato che i bilanci di quest'anno sono stati mantenuti molto bassi e che alcuni dipartimenti hanno bisogno di un po' di più semplicemente per funzionare al loro livello base. Peter D si è detto a suo agio con il fatto che piccoli aggiustamenti ai bilanci operativi dei dipartimenti siano decisi dagli organizzatori, e Daniel T ha proposto un approccio a due livelli: aumenti della base concordati a livello di coordinamento (per continuare a fare bene le stesse cose) e novità attraverso il processo dei progetti.</li>
+                            <li>Daniela ha chiesto se alcuni progetti, come riparazioni o infrastrutture essenziali, dovrebbero rimanere fuori dalla classificazione della comunità. Peter D ha ritenuto che gli elementi essenziali individuati dal lato produzione potrebbero essere decisi direttamente, lasciando alla comunità i miglioramenti opzionali. Katja ha osservato che la comunità avrebbe bisogno di dettagli tecnici sufficienti su ciascun progetto per poterlo votare.</li>
+                            <li><strong>Calendario (ipotesi di lavoro).</strong> Peter D ha suggerito una call for projects da metà dicembre a fine gennaio e una classificazione della comunità a inizio febbraio, da aggiustare successivamente. Si tratta di decisioni di spesa condizionate prese con l'arrivo delle vendite dei biglietti, quindi possono seguire il voto di bilancio di dicembre; i costi essenziali vengono messi a bilancio in anticipo come di consueto. Ha osservato che il finanziamento extra per la creatività, rilasciato a tappe quest'anno con la crescita delle vendite, era la stessa idea, fatta in modo informale.</li>
+                            <li><strong>Fatturazione dei servizi interni.</strong> Peter D ha spiegato che ogni struttura diventerebbe un progetto nell'ambito di un dipartimento e le verrebbero fatturati servizi interni come elettricità e acqua (l'importo aggiunto al suo bilancio e riaddebitato), in modo che i costi siano contabilizzati dove si generano. Ha menzionato un possibile modulo Humans per la fatturazione dell'elettricità e la disposizione degli spazi.</li>
+                        </ul>
+
+                        <h2>3. Sovvenzioni esterne e donazioni</h2>
+                        <ul>
+                            <li>Daniela ha chiesto come si inserirebbero i progetti finanziati da sovvenzioni esterne. Peter D e Daniel T hanno convenuto in linea di principio che il denaro ottenuto per uno scopo specifico (una sovvenzione o una donazione vincolata) è destinato a tale scopo. Se l'associazione stessa ottiene una sovvenzione, ad esempio per l'arte, il suo utilizzo sarebbe discusso.</li>
+                            <li>Peter D ha avvertito che le sovvenzioni possono comportare condizioni che l'evento non può soddisfare, come l'accesso pubblico o i crediti agli sponsor, e che tali crediti potrebbero non essere ben accolti da tutti nella comunità. Daniel T ha suggerito indicazioni chiare sul sito web per chiunque voglia richiedere una sovvenzione per conto dell'associazione; qualsiasi richiesta di questo tipo deve essere firmata dall'associazione, momento in cui verrebbero verificate le condizioni.</li>
+                            <li>Katja ha avvertito che, per sua esperienza nei team artistici, a volte lo stesso progetto ha cercato un finanziamento completo da più eventi contemporaneamente, quindi vale la pena chiedere di altri finanziamenti.</li>
+                        </ul>
+
+                        <h2>4. Prezzi e livelli dei biglietti (per discussione, nessuna decisione)</h2>
+                        <ul>
+                            <li>Peter D ha riassunto la struttura dei biglietti di quest'anno: un prezzo per basso reddito, un prezzo più basso per i primi acquirenti e un prezzo che è salito al massimo nell'ultimo mese prima dell'evento. Daniel T ha suggerito di puntare a un prezzo medio di circa il 10% più basso di quello di quest'anno, una riduzione che Peter D aveva già proposto in precedenza. Questo non è stato concordato; il modello di bilancio permetterà al gruppo di regolare queste leve, incluso il prezzo per basso reddito e il numero di biglietti a basso reddito.</li>
+                            <li><strong>Livelli.</strong> Interrogati da Peter D, <strong>nessuno dei presenti si è opposto a una tariffazione a livelli</strong>. Daniel T si aspettava che, soprattutto se combinata con un sistema di rimborso, avrebbe incoraggiato gli acquisti anticipati e migliorato le probabilità di esaurire i biglietti.</li>
+                            <li><strong>Sistema di biglietteria.</strong> Peter D ha detto che un sistema di biglietteria open source utilizzato da altri eventi potrebbe funzionare come sistema separato strettamente integrato con Humans, con alcune modifiche (ad esempio, l'emissione di un biglietto a un prezzo specifico e la rivendita).</li>
+                        </ul>
+
+                        <h2>5. Biglietti a basso reddito: mantenere il prezzo al momento della richiesta</h2>
+                        <ul>
+                            <li>Katja ha ripreso il suggerimento, fatto all'ALM e su Discord, di un'ondata tardiva per il basso reddito, dato che le persone con basso reddito potrebbero non conoscere la propria situazione con mesi di anticipo.</li>
+                            <li>Daniel T ha proposto che chiunque richieda un biglietto a basso reddito <strong>mantenga il diritto di acquistare un biglietto normale al prezzo in vigore al momento della richiesta</strong>, fino all'evento, se non ottiene un biglietto a basso reddito (a meno che non siano esauriti). Peter D lo ha riassunto così: le richieste per basso reddito sono aperte in modo continuo, con una o più ondate a seconda della disponibilità (che potrebbe essere legata alle vendite dei biglietti o alle donazioni per i posti a basso reddito), e il prezzo normale al momento della richiesta viene registrato insieme a essa. Daniela ha osservato che questo risponde ai riscontri di persone che non hanno ottenuto un biglietto a basso reddito e si sono poi trovate di fronte a un prezzo più alto.</li>
+                            <li>Peter D ha osservato che il meccanismo potrebbe essere usato da persone semplicemente per riservarsi un prezzo precedente, e che il gruppo non sa quante persone, tra chi non ottiene il biglietto, acquistino poi un biglietto normale. Daniel T ha accettato che nessun sistema è perfetto e ha preferito mantenerlo semplice. Katja ha voluto più tempo per rifletterci. Il modulo di richiesta deve essere chiaro e inequivocabile; la valutazione esistente basata su punteggio deve ancora essere documentata e realizzata come modulo.</li>
+                        </ul>
+
+                        <h2>6. Pagamenti mensili a rate e abbonamenti</h2>
+                        <ul>
+                            <li><strong>Rateizzazione.</strong> Peter D ha detto che le richieste riguardavano piccoli pagamenti mensili lungo un intero anno, il che significherebbe vendere biglietti subito dopo l'evento precedente. Non pensava che ciò potesse applicarsi al 2027, anche se potrebbe al 2028; per il 2027 un'opzione di pagamento posticipato già esistente è probabilmente la più pratica. Anche le commissioni di pagamento e la contabilizzazione di molte piccole transazioni rispetto a un evento futuro richiederebbero attenzione.</li>
+                            <li><strong>Abbonamenti.</strong> Daniela ha chiesto di un modello basato sull'abbonamento con pagamenti a rate, come in alcuni altri eventi. Peter D ha spiegato che un abbonamento dovrebbe essere lo stesso per tutti gli abbonati, e che se un abbonamento offre poco oltre all'accesso all'evento, è troppo vicino a un biglietto e solleva questioni di IVA e contabilità. Katja ha chiesto se potessero esserci diversi livelli di abbonamento; Peter D ha detto che è possibile purché i livelli superiori non comprino vantaggi aggiuntivi, il che li renderebbe un servizio a pagamento. Peter D ha anche osservato che le norme spagnole rendono difficili i biglietti anticipati non rimborsabili.</li>
+                            <li>Daniela ha concluso che un modello di abbonamento è al massimo <strong>una questione per il 2028</strong>, richiederebbe un proprio voto perché si applicherebbe a tutti, e si è offerta di chiedere al commercialista dell'associazione se esiste un formato adeguato, incluso come funzionerebbero in tal caso i biglietti a basso reddito e i biglietti restituiti.</li>
+                        </ul>
+
+                        <hr />
+                        <h2>Risultati</h2>
+                        <ul>
+                            <li>Direzione di lavoro: i dipartimenti partono da un bilancio base; i nuovi progetti di miglioramento vengono presentati con un costo e una data di decisione, classificati (o respinti) dalla comunità, e finanziati in ordine man mano che lo consentono le entrate dai biglietti. Gli elementi essenziali possono essere decisi direttamente.</li>
+                            <li>Calendario di lavoro (da aggiustare): call for projects da metà dicembre a fine gennaio, classificazione della comunità a inizio febbraio.</li>
+                            <li><strong>Nessuno dei presenti si è opposto a una tariffazione dei biglietti a livelli.</strong></li>
+                            <li>Proposta in discussione: i richiedenti a basso reddito mantengono il prezzo normale in vigore al momento della richiesta, se non ottengono un biglietto a basso reddito.</li>
+                            <li>Pagamenti a rate su un intero anno e un modello di abbonamento non sono previsti per il 2027; potrebbero essere valutati per il 2028.</li>
+                            <li>Non sono stati concordati prezzi dei biglietti né cifre di bilancio.</li>
+                        </ul>
+
+                        <h2>Prossimi passi</h2>
+                        <ul>
+                            <li>Scrivere il processo dei progetti come un piano e diffonderlo, affinché le persone sappiano che sta arrivando &mdash; Peter D.</li>
+                            <li>Chiedere al responsabile della biglietteria di quest'anno se è disponibile a guidarla di nuovo &mdash; Peter D.</li>
+                            <li>Chiedere ai dipartimenti, durante il suo giro attuale, i loro progetti per il 2027 e invitarli a queste sessioni &mdash; Daniela.</li>
+                            <li>Chiedere al commercialista dell'associazione i formati di abbonamento e di pagamento a rate &mdash; Daniela.</li>
+                            <li>Presentare l'orientamento di questa sessione nella chiamata comunitaria di giovedì e invitare le persone a partecipare &mdash; Daniel T.</li>
+                            <li>Prossima sessione: lunedì 2 novembre.</li>
+                        </ul>
+
+                        <p><em>Verbale redatto a partire dalla registrazione e dalla trascrizione della riunione. Ripulito per la pubblicazione.</em></p>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="de">
+<div class="lang-note">Bei Diskrepanzen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Anwesend: Peter D (Einberufer), Daniel T, Daniela (Produktion), Katja</strong>
+                        Zweite Sitzung der Arbeitsgruppe Finanzen 2027. Die Arbeitsgruppe erarbeitet einen Vorschlag; sie entscheidet nicht. Die unten aufgeführten Ideen und Beispielpreise sind Vorschläge und Diskussionsoptionen, keine Entscheidungen. Jede Haushaltsempfehlung wird den asociados zur Abstimmung vorgelegt.
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Der größte Teil der Sitzung befasste sich damit, wie Verbesserungsprojekte für 2027 gesammelt, von der Community eingestuft und mit dem Eingang der Ticketverkäufe finanziert würden, neben einem Basisbudget für jede Abteilung. Die Gruppe erörterte außerdem externe Förderungen, die Verrechnung interner Leistungen wie Strom an die Projekte, die sie nutzen, Ticketstufen, eine Möglichkeit für Personen, die ein Ticket für Personen mit niedrigem Einkommen beantragen, den zum Zeitpunkt ihres Antrags geltenden Preis zu behalten, monatliche Ratenzahlungen und Mitgliedschaften. Niemand der Anwesenden widersprach gestuften Ticketpreisen. Es wurden keine Ticketpreise oder Haushaltszahlen vereinbart.</p>
+
+                        <h2>1. Teilnahme und wie der Vorschlag genehmigt wird</h2>
+                        <ul>
+                            <li>Peter D äußerte die Sorge, dass nicht mehr Menschen an den Sitzungen teilnehmen, obwohl die hier getroffenen Entscheidungen alle betreffen, und schlug mehr Öffentlichkeitsarbeit vor. Daniel T wies darauf hin, dass er beim vorherigen Community-Call Leute eingeladen habe; das Prinzip sei, dass diejenigen, die erscheinen, die Arbeit machen, und die actas veröffentlicht werden.</li>
+                            <li>Daniel T schlug vor, dass der Vorschlag der Gruppe (möglicherweise mit ein paar Optionen an den Stellen, an denen die Gruppe nicht vollständig übereinstimmt) statt einer Generalversammlung für alles durch eine Abstimmung der asociados ratifiziert werden könnte, wie es bei der Arbeit zur Organisationsstruktur erörtert wurde. Peter D stimmte zu, dass eine Abstimmung der asociados grundsätzlich gut sei, wies aber darauf hin, dass ein sehr knappes Ergebnis weniger überzeugend sei als ein klares und dass zu viele Abstimmungen die Aufmerksamkeit der Menschen verlieren könnten.</li>
+                        </ul>
+
+                        <h2>2. Verbesserungsprojekte und Abteilungsbudgets</h2>
+                        <ul>
+                            <li><strong>Projekte mit Kosten und Entscheidungstermin.</strong> Daniela sagte, mehrere beim ALM besprochene Projekte, darunter einige ihrer eigenen für die Produktion, würden mehr kosten als dieses Jahr, und fragte, wie darüber entschieden würde. Peter D beschrieb den Ansatz: Jedes Projekt hat eine Beschreibung, Kosten und einen Termin, bis zu dem es entschieden werden muss. Die Community stuft die Projekte ein, und sie werden der Reihe nach finanziert, soweit es die Ticketeinnahmen erlauben, solange ihr Entscheidungstermin noch nicht verstrichen ist. Projekte, die später entschieden werden können, haben daher eine bessere Chance, finanziert zu werden. Peter D schlug einen monatlichen Kontrollpunkt zu den Ticketverkäufen und ein mit der Abstimmung verknüpftes Projektregister in Humans vor.</li>
+                            <li><strong>Projekte sammeln.</strong> Daniel T stellte klar, dass er sich nicht dazu verpflichten könne, Projekte aus der Community insgesamt einzusammeln, und schlug vor, statt dessen die Abteilungen zu fragen. Daniela sagte, sie sei bereits bei den Abteilungen unterwegs (für eine Zusammenfassung dieses Jahres und um weiterzugeben, was beim ALM besprochen wurde) und könne jede von ihnen nach ihren Projekten für 2027 fragen und sie zu diesen Sitzungen einladen.</li>
+                            <li><strong>Basis und Verbesserungen.</strong> Daniel T schlug vor, dass die Basis jeder Abteilung das Budget dieses Jahres plus Inflation sei, da die Veranstaltung damit lief, während alles Neue den von der Community eingestuften Projektprozess durchläuft. Die asociados könnten ein Projekt auch ablehnen: Wenn mehr als die Hälfte der Abstimmenden es ablehnt, wird es nicht finanziert, egal wie viele Tickets verkauft werden. Daniela wies darauf hin, dass die Budgets dieses Jahr sehr niedrig gehalten wurden und dass manche Abteilungen etwas mehr brauchen, nur um auf ihrem Grundniveau zu arbeiten. Peter D war damit einverstanden, dass kleine Anpassungen der Betriebsbudgets der Abteilungen von den Organisatoren entschieden werden, und Daniel T brachte einen zweistufigen Ansatz ins Spiel: Basiserhöhungen, die auf Koordinationsebene vereinbart werden (um dieselben Dinge weiterhin gut genug zu tun), und Neues über den Projektprozess.</li>
+                            <li>Daniela fragte, ob manche Projekte, etwa Reparaturen oder wesentliche Infrastruktur, außerhalb der Community-Einstufung bleiben sollten. Peter D meinte, von der Produktionsseite identifizierte wesentliche Punkte könnten direkt entschieden werden, während optionale Verbesserungen der Community überlassen blieben. Katja merkte an, dass die Community genügend technische Details zu jedem Projekt benötige, um darüber abstimmen zu können.</li>
+                            <li><strong>Zeitplan (Arbeitsannahme).</strong> Peter D schlug einen Projektaufruf von Mitte Dezember bis Ende Januar und eine Community-Einstufung Anfang Februar vor, später anzupassen. Dies sind bedingte Ausgabenentscheidungen, die mit dem Eingang der Ticketverkäufe getroffen werden, sodass sie der Haushaltsabstimmung im Dezember folgen können; wesentliche Kosten werden wie üblich im Voraus budgetiert. Er merkte an, dass die zusätzliche Kreativförderung, die dieses Jahr in Etappen mit steigenden Verkäufen freigegeben wurde, derselben Idee entsprach, nur informell umgesetzt.</li>
+                            <li><strong>Verrechnung interner Leistungen.</strong> Peter D erklärte, jede Struktur würde zu einem Projekt unter einer Abteilung werden und interne Leistungen wie Strom und Wasser in Rechnung gestellt bekommen (der Betrag wird ihrem Budget hinzugefügt und zurückverrechnet), damit die Kosten dort erfasst werden, wo sie entstehen. Er erwähnte ein mögliches Humans-Modul für Stromabrechnung und Layout.</li>
+                        </ul>
+
+                        <h2>3. Externe Fördermittel und Spenden</h2>
+                        <ul>
+                            <li>Daniela fragte, wie Projekte, die durch externe Fördermittel finanziert werden, dazu passen würden. Peter D und Daniel T stimmten grundsätzlich darin überein, dass Geld, das für einen bestimmten Zweck beschafft wird (eine Förderung oder eine zweckgebundene Spende), diesem Zweck zufließt. Falls der Verein selbst eine Förderung erhält, etwa für Kunst, würde besprochen, wie sie verwendet wird.</li>
+                            <li>Peter D warnte, dass Förderungen mit Bedingungen verbunden sein können, die die Veranstaltung nicht erfüllen kann, etwa öffentlicher Zugang oder Sponsorennennungen, und dass solche Nennungen nicht allen in der Community gefallen müssten. Daniel T schlug klare Hinweise auf der Website für alle vor, die im Namen des Vereins eine Förderung beantragen möchten; ein solcher Antrag muss vom Verein unterzeichnet werden, und dort würden die Bedingungen geprüft.</li>
+                            <li>Katja warnte, dass nach ihrer Erfahrung in Kunstteams dasselbe Projekt manchmal von mehreren Veranstaltungen gleichzeitig eine Vollfinanzierung angestrebt habe, sodass es sich lohne, nach anderen Finanzierungen zu fragen.</li>
+                        </ul>
+
+                        <h2>4. Ticketpreise und -stufen (zur Diskussion, keine Entscheidungen)</h2>
+                        <ul>
+                            <li>Peter D fasste die diesjährige Ticketstruktur zusammen: ein Preis für Personen mit niedrigem Einkommen, ein niedrigerer Preis für die ersten Käufer und ein Preis, der im letzten Monat vor der Veranstaltung auf seinen Höchststand anstieg. Daniel T schlug vor, einen Durchschnittspreis anzustreben, der etwa 10 % niedriger ist als dieses Jahr, eine Senkung, die Peter D schon zuvor angesprochen hatte. Dies wurde nicht vereinbart; das Haushaltsmodell wird es der Gruppe erlauben, solche Stellschrauben anzupassen, einschließlich des Preises für Personen mit niedrigem Einkommen und der Anzahl solcher Tickets.</li>
+                            <li><strong>Stufen.</strong> Auf Nachfrage von Peter D <strong>widersprach niemand der Anwesenden einer gestuften Preisgestaltung</strong>. Daniel T erwartete, dass dies, besonders in Verbindung mit einem Rückerstattungssystem, frühe Käufe fördern und die Chance auf einen Ausverkauf verbessern würde.</li>
+                            <li><strong>Ticketing-System.</strong> Peter D sagte, ein von anderen Veranstaltungen genutztes Open-Source-Ticketing-System könnte als separates, eng mit Humans integriertes System laufen, mit einigen Änderungen (zum Beispiel die Ausgabe eines Tickets zu einem bestimmten Preis und Weiterverkauf).</li>
+                        </ul>
+
+                        <h2>5. Tickets für Personen mit niedrigem Einkommen: Beibehaltung des Preises zum Zeitpunkt des Antrags</h2>
+                        <ul>
+                            <li>Katja griff den beim ALM und auf Discord gemachten Vorschlag einer späteren Welle für Personen mit niedrigem Einkommen auf, da Menschen mit niedrigem Einkommen ihre Situation möglicherweise nicht Monate im Voraus kennen.</li>
+                            <li>Daniel T schlug vor, dass jede Person, die ein Ticket für Personen mit niedrigem Einkommen beantragt, <strong>das Recht behält, bis zur Veranstaltung ein normales Ticket zu dem Preis zu kaufen, der zum Zeitpunkt ihres Antrags galt</strong>, falls sie kein solches Ticket erhält (sofern diese nicht ausverkauft sind). Peter D fasste es zusammen: Anträge für Personen mit niedrigem Einkommen sind durchgehend offen, mit einer oder mehreren Wellen je nach Verfügbarkeit (die an Ticketverkäufe oder an Spenden für solche Plätze gekoppelt sein könnte), und der zum Zeitpunkt des Antrags geltende Normalpreis wird dabei vermerkt. Daniela merkte an, dass dies auf Rückmeldungen von Personen eingeht, die kein solches Ticket erhalten hatten und sich anschließend einem höheren Preis gegenübersahen.</li>
+                            <li>Peter D merkte an, dass das Verfahren von Menschen auch einfach genutzt werden könnte, um sich einen früheren Preis zu sichern, und dass die Gruppe nicht wisse, wie viele erfolglose Antragstellende ein normales Ticket kaufen. Daniel T akzeptierte, dass kein System perfekt sei, und zog es vor, es einfach zu halten. Katja wollte mehr Zeit zum Nachdenken. Das Antragsformular sollte klar und eindeutig sein; die bestehende punktebasierte Bewertung muss noch dokumentiert und als Modul aufgebaut werden.</li>
+                        </ul>
+
+                        <h2>6. Monatliche Ratenzahlungen und Mitgliedschaften</h2>
+                        <ul>
+                            <li><strong>Ratenzahlungen.</strong> Peter D sagte, die Anfragen bezögen sich auf kleine monatliche Zahlungen über ein ganzes Jahr, was bedeuten würde, Tickets direkt nach der vorherigen Veranstaltung zu verkaufen. Er glaubte nicht, dass dies für 2027 gelten könnte, wohl aber für 2028; für 2027 sei eine bereits vorhandene Später-Zahlen-Option wahrscheinlich die praktikabelste. Zahlungsgebühren und die Verbuchung vieler kleiner Transaktionen gegenüber einer künftigen Veranstaltung müssten ebenfalls sorgfältig behandelt werden.</li>
+                            <li><strong>Mitgliedschaften.</strong> Daniela fragte nach einem mitgliedschaftsbasierten Modell mit Ratenzahlungen, wie bei manchen anderen Veranstaltungen. Peter D erklärte, eine Mitgliedschaft müsste für alle Mitglieder gleich sein, und wenn eine Mitgliedschaft wenig über den Zugang zur Veranstaltung hinaus biete, komme sie einem Ticket zu nahe und werfe Fragen zur Umsatzsteuer und Buchhaltung auf. Katja fragte, ob es verschiedene Mitgliedschaftsstufen geben könnte; Peter D sagte, das sei möglich, solange höhere Stufen keine zusätzlichen Vorteile erkaufen, was sie zu einer entgeltlichen Leistung machen würde. Peter D merkte außerdem an, dass die spanischen Vorschriften nicht erstattungsfähige Frühbucher-Tickets erschweren.</li>
+                            <li>Daniela schloss, dass ein Mitgliedschaftsmodell höchstens <strong>eine Frage für 2028</strong> sei, eine eigene Abstimmung benötigen würde, da es für alle gelten würde, und bot an, den Buchhalter des Vereins zu fragen, ob es ein passendes Format gebe, einschließlich der Frage, wie Tickets für Personen mit niedrigem Einkommen und zurückgegebene Tickets dabei funktionieren würden.</li>
+                        </ul>
+
+                        <hr />
+                        <h2>Ergebnisse</h2>
+                        <ul>
+                            <li>Arbeitsrichtung: Die Abteilungen gehen von einem Basisbudget aus; neue Verbesserungsprojekte werden mit Kosten und einem Entscheidungstermin eingereicht, von der Community eingestuft (oder abgelehnt) und der Reihe nach finanziert, soweit es die Ticketeinnahmen erlauben. Wesentliche Punkte können direkt entschieden werden.</li>
+                            <li>Arbeitszeitplan (anzupassen): Projektaufruf von Mitte Dezember bis Ende Januar, Community-Einstufung Anfang Februar.</li>
+                            <li><strong>Niemand der Anwesenden widersprach gestuften Ticketpreisen.</strong></li>
+                            <li>Vorschlag in Diskussion: Antragstellende mit niedrigem Einkommen behalten den normalen Preis, der zum Zeitpunkt ihres Antrags galt, falls sie kein Ticket für Personen mit niedrigem Einkommen erhalten.</li>
+                            <li>Ratenzahlungen über ein volles Jahr und ein Mitgliedschaftsmodell werden für 2027 nicht erwartet; sie könnten für 2028 betrachtet werden.</li>
+                            <li>Es wurden keine Ticketpreise oder Haushaltszahlen vereinbart.</li>
+                        </ul>
+
+                        <h2>Nächste Schritte</h2>
+                        <ul>
+                            <li>Den Projektprozess als Plan ausarbeiten und verbreiten, damit die Leute wissen, dass er kommt &mdash; Peter D.</li>
+                            <li>Den diesjährigen Ticketing-Verantwortlichen fragen, ob er bereit ist, das Ticketing erneut zu leiten &mdash; Peter D.</li>
+                            <li>Die Abteilungen während ihrer aktuellen Runde nach ihren Projekten für 2027 fragen und sie zu diesen Sitzungen einladen &mdash; Daniela.</li>
+                            <li>Den Buchhalter des Vereins nach Formaten für Mitgliedschaft und Ratenzahlung fragen &mdash; Daniela.</li>
+                            <li>Die Richtung aus dieser Sitzung beim Community-Call am Donnerstag vorstellen und die Leute zur Teilnahme einladen &mdash; Daniel T.</li>
+                            <li>Nächste Sitzung: Montag, 2. November.</li>
+                        </ul>
+
+                        <p><em>Protokoll erstellt auf Grundlage der Sitzungsaufzeichnung und des Transkripts. F&uuml;r die Ver&ouml;ffentlichung bereinigt.</em></p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -135,5 +468,17 @@
     <script src="../footer.js"></script>
 
     <script src="../script.js"></script>
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>
