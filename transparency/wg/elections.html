@@ -35,6 +35,21 @@
         .wg-about p, .wg-about li { line-height: 1.7; }
         .wg-about p { margin: 0 0 1rem; }
         .wg-about ul { margin: 0 0 1rem 1.5rem; }
+        .wg-layout { display: grid; grid-template-columns: minmax(0, 800px) 250px; gap: 3rem; align-items: start; }
+        .wg-main { min-width: 0; }
+        .wg-toc { position: sticky; top: 6rem; border: 1px solid var(--color-border); border-radius: 10px; padding: 1.25rem 1.5rem; background: var(--color-bg-secondary); }
+        .wg-toc h2 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); margin: 0 0 0.75rem; }
+        .wg-toc ol { list-style: none; padding: 0; margin: 0; }
+        .wg-toc li { margin: 0; }
+        .wg-toc a { display: block; padding: 0.3rem 0; font-size: 0.92rem; line-height: 1.35; color: var(--color-text-muted); text-decoration: none; }
+        .wg-toc a:hover, .wg-toc a.active { color: var(--color-primary); }
+        .wg-toc a.active { font-weight: 600; }
+        .wg-toc ol ol a { padding-left: 0.9rem; font-size: 0.88rem; }
+        .wg-main h2[id], .wg-main h3[id] { scroll-margin-top: 6rem; }
+        @media (max-width: 1000px) {
+            .wg-layout { grid-template-columns: minmax(0, 1fr); gap: 0; }
+            .wg-toc { position: static; order: -1; margin-bottom: 2rem; }
+        }
     </style>
 </head>
 <body>
@@ -45,21 +60,23 @@
             <div class="container">
 <a href="../../transparency.html" class="back-link">Back to Meetings</a> &nbsp;&middot;&nbsp; <a href="../../working-groups.html" class="back-link">Working groups</a>
 <div class="meeting-header"><h1>Elections Working Group</h1><div class="meeting-meta"><span><strong>Status:</strong> active; the election must take place between 3 and 18 December 2026</span><span><strong>Coordinator:</strong> Daniel T, for now (happy to hand over)</span></div></div>
+<div class="wg-layout">
+<div class="wg-main">
 <div class="sync-note-box"><strong>Purpose.</strong> To organise and run the election for three board roles &mdash; the secretary and two vocales &mdash; which under the statutes must take place between 3 and 18 December 2026.</div>
 <div class="sync-note-box"><strong>Expected output.</strong> The board election, held within the period the statutes require.</div>
 <div class="wg-about">
-<h2>About this election</h2>
+<h2 id="about">About this election</h2>
 <p>This section is for anyone curious about what is happening, and for anyone thinking about standing for the board. The working group will add to it as decisions are made.</p>
-<h3>Why there is an election</h3>
+<h3 id="why">Why there is an election</h3>
 <p>At the <a href="../2026-10-19-board.html">board meeting of 19 October 2026</a>, the resignations of three board members &mdash; Ben D, Victor P and Michelle &mdash; were formally accepted. Ben D <a href="https://discord.com/channels/1462886445583962245/1462889770618196204/1562127774448357387" target="_blank" rel="noopener noreferrer">announced it on Discord</a> the following day. Under the association&rsquo;s statutes, an election for the vacant seats must be held between 45 and 60 days after the resignations: that is, <strong>between 3 and 18 December 2026</strong>. The board will set the exact date at its meeting on Monday 26 October.</p>
-<h3>The roles</h3>
+<h3 id="roles">The roles</h3>
 <p>Three roles are to be filled, and the number cannot be increased without changing the statutes:</p>
 <ul>
 <li><strong>Secretary</strong> (one seat)</li>
 <li><strong>Vocal</strong> (two seats; non-executive board members)</li>
 </ul>
 <p>At the association&rsquo;s first election, all eight applicants were elected, which is why the board currently has eight members.</p>
-<h3>How to apply</h3>
+<h3 id="apply">How to apply</h3>
 <p><strong>Applications are open through the <a href="https://forms.gle/Yr3n8qfd39gGQtNj7" target="_blank" rel="noopener noreferrer">NCA Board Elections 2026 application form</a>.</strong> You can apply for the secretary role, a vocal seat, or both.</p>
 <p>The form asks for your full name, your playa name and the role(s) you are applying for. Two further parts are optional, though if the election is competitive, a fuller application is likely to win more votes:</p>
 <ul>
@@ -67,7 +84,7 @@
 <li><strong>A video</strong>: no more than 5 minutes, shared as a link. A simple phone recording is fine.</li>
 </ul>
 <p>Applications will be made public so members can read them before voting. For questions, ask in the #elections channel (below), or privately contact Daniel T or C&eacute;line V; their contact details are on the form.</p>
-<h3>What the board decides</h3>
+<h3 id="board-decides">What the board decides</h3>
 <p>If you are thinking about standing, it helps to know what the job actually involves. Day-to-day work on the event &mdash; vendors, build, shifts, programme &mdash; belongs to the production team, coordinators and departments. The board&rsquo;s work is governance: the decisions only the association&rsquo;s governing body can take, and decisions about the board itself. These examples come from this year&rsquo;s board meetings; each links to the minutes for the full context.</p>
 <ul>
 <li><strong>Calling general assemblies.</strong> Calling a general assembly is a formal board act and needs quorum. The board called the first one, <a href="../2026-07-30-board.html">on 30 July</a>, moved its date <a href="../2026-08-03-board.html">on 3 August</a> to allow more time to prepare, and <a href="../2026-10-26-board.html">on 26 October</a> called the 16 December assembly that includes this election, with the statutory notice to every member.</li>
@@ -83,7 +100,7 @@
 <li><strong>Reporting to members.</strong> When and how to share the event&rsquo;s financial results with asociados (<a href="../2026-08-31-board.html">31 August</a>, <a href="../2026-09-21-board.html">21 September</a>).</li>
 </ul>
 <p>A board member also carries the routine duties behind these decisions: attending meetings so there is quorum, voting on membership applications, and approving minutes.</p>
-<h3>How it may work</h3>
+<h3 id="how-it-works">How it may work</h3>
 <p>The application format is now set (see <em>How to apply</em> above). The rest of this year&rsquo;s format is still being worked out by this working group. For reference, at the first election:</p>
 <ul>
 <li>Candidates submitted a written application answering a set of questions. Some also sent a designed PDF alongside their text answers, and there was an optional video.</li>
@@ -91,13 +108,13 @@
 </ul>
 <p>If there are more than three candidates this time, it will be a competitive election decided by a ranked-choice vote, with the counting method confirmed in advance. If there are three or fewer, a candidate is elected unless more than 50% of the votes reject their candidacy.</p>
 <p>The first election&rsquo;s application asked whether people were applying individually or as part of a team. The idea was to let several people link their applications, but it was never worked out in detail, and no team applications happened in practice. There is no current information on team applications until the working group defines it.</p>
-<h3>Previous applications</h3>
+<h3 id="previous">Previous applications</h3>
 <p>Six of the eight applications from the first election are <a href="https://drive.google.com/drive/folders/16ZxA67Ee8V0tLZgu5CBHDt_AsZQwsQ9L" target="_blank" rel="noopener noreferrer">in this Google Drive folder</a>, for anyone who wants to see what candidates wrote last time. This year&rsquo;s format may differ.</p>
-<h3>Get involved or ask a question</h3>
+<h3 id="get-involved">Get involved or ask a question</h3>
 <p>Questions are welcome in the <a href="https://discord.com/channels/1462886445583962245/1562145328696926320" target="_blank" rel="noopener noreferrer">#elections channel on Discord</a>. Anyone can join the working group to help organise the election. The main requirement is that you are not planning to stand yourself, as that would be a conflict of interest. Daniel T set the group up so that questions have a natural place to land, and will gladly hand the coordination to anyone who wants to lead it.</p>
 </div>
 <div class="wg-list">
-<h2>Record</h2>
+<h2 id="record">Record</h2>
 <a href="https://discord.com/channels/1462886445583962245/1462889770618196204/1562127774448357387" target="_blank" rel="noopener noreferrer" class="meeting-card"><div class="meeting-card-header"><span class="meeting-date">20 October 2026</span><span class="meeting-type">Announcement</span></div><h3>Board resignations announced; Elections working group set up</h3><p>Ben D announced on Discord that the three resignations had been accepted and that elections will be held between 3 and 18 December. The Elections working group and its #elections channel were set up the same day.</p></a>
 <a href="../2026-10-19-board.html" class="meeting-card">
                         <div class="meeting-card-header">
@@ -115,11 +132,45 @@
 <a href="../2026-08-31-board.html" class="meeting-card"><div class="meeting-card-header"><span class="meeting-date">31 August 2026</span><span class="meeting-type">Board meeting</span></div><h3>Legal advice on elections and quorum</h3><p>Legal advice came back on elections and quorum: the next election can be moved. Board members were to connect with community members interested in an elections working group.</p></a>
 <a href="../2026-08-27-community.html" class="meeting-card"><div class="meeting-card-header"><span class="meeting-date">27 August 2026</span><span class="meeting-type">Community call</span></div><h3>The idea is raised</h3><p>The board would like an election to grow and diversify the board, but the statutes only allow one every two years unless someone steps down; a working group could propose staggered annual elections with two-year terms.</p></a>
 </div>
+</div>
+<aside class="wg-toc" aria-label="On this page">
+<h2>On this page</h2>
+<ol>
+<li><a href="#about">About this election</a>
+<ol>
+<li><a href="#why">Why there is an election</a></li>
+<li><a href="#roles">The roles</a></li>
+<li><a href="#apply">How to apply</a></li>
+<li><a href="#board-decides">What the board decides</a></li>
+<li><a href="#how-it-works">How it may work</a></li>
+<li><a href="#previous">Previous applications</a></li>
+<li><a href="#get-involved">Get involved</a></li>
+</ol></li>
+<li><a href="#record">Record</a></li>
+</ol>
+</aside>
+</div>
             </div>
         </section>
     </main>
     <div id="shared-footer" data-prefix="../.."></div>
     <script src="../../footer.js"></script>
     <script src="../../script.js"></script>
+    <script>
+    (function () {
+        var links = document.querySelectorAll('.wg-toc a');
+        var map = {};
+        links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+        var heads = Array.prototype.filter.call(document.querySelectorAll('.wg-main h2[id], .wg-main h3[id]'), function (h) { return map[h.id]; });
+        function update() {
+            var current = heads[0];
+            heads.forEach(function (h) { if (h.getBoundingClientRect().top < 140) current = h; });
+            links.forEach(function (a) { a.classList.remove('active'); });
+            if (current) map[current.id].classList.add('active');
+        }
+        window.addEventListener('scroll', update, { passive: true });
+        update();
+    })();
+    </script>
 </body>
 </html>
