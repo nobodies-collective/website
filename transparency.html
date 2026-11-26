@@ -90,6 +90,9 @@
         .meeting-filter-btn.active { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
         .meeting-filter-count { font-size: 0.85rem; color: var(--color-text-muted); }
         .meeting-filter-btn .n { opacity: 0.7; margin-left: 0.25rem; }
+        .meeting-filter-sub { padding-left: 1rem; border-left: 2px solid var(--color-border); }
+        .meeting-filter-sub .meeting-filter-btn { font-size: 0.8rem; padding: 0.25rem 0.75rem; }
+        .meeting-dept { font-size: 0.75rem; padding: 0.2rem 0.65rem; border-radius: 50px; border: 1px solid var(--color-border); color: var(--color-text-muted); }
 
         .meeting-type {
             font-size: 0.8rem;
@@ -167,6 +170,7 @@
             <div class="meeting-filters">
                 <input type="search" class="meeting-search" id="meeting-search" placeholder="Search meetings (e.g. permits, budget, tickets)" aria-label="Search meetings">
                 <div class="meeting-filter-buttons" id="meeting-filter-buttons"></div>
+                <div class="meeting-filter-buttons meeting-filter-sub" id="meeting-filter-sub"></div>
                 <div class="meeting-filter-count" id="meeting-filter-count" aria-live="polite"></div>
             </div>
 
@@ -1435,7 +1439,7 @@
                         <p class="meeting-attendees"><strong>Attendees:</strong> Ward D., Daniel T., Ben D., Prosper B., Siri T., Daniela S., Shauna B., Peter D., Tyche S., Melody</p>
                     </a>
 
-                    <a href="transparency/2026-02-16-participant-wellness.html" class="meeting-card">
+                    <a href="transparency/2026-02-16-participant-wellness.html" class="meeting-card" data-dept="Participant Wellness">
                         <div class="meeting-card-header">
                             <span class="meeting-date">February 16, 2026</span>
                             <span class="meeting-type">Team Meeting</span>
@@ -1655,40 +1659,91 @@
 
     <script>
     (function () {
+        // Top row: kind of meeting. Matched against the card's type label (and title for working groups).
         var groups = [
             ['all', 'All', null],
             ['board', 'Board', /board meeting/i],
-            ['community', 'Community', /community/i],
-            ['governance', 'Governance', /governance/i],
-            ['alm', 'ALM', /^alm|general assembly/i],
-            ['wg', 'Working groups', /working group|new land/i],
+            ['community', 'Community meetings', /community|general assembly/i],
+            ['wg', 'Working groups', /working group|governance|^alm|event dates|survey results|new land|el ?sitio|sound policy|temple|elections|assets|organisational structure|moe improvements/i],
             ['coordinators', 'Coordinators', /coordinators|metaleads/i],
-            ['dates', 'Event Dates', /event dates|survey results/i],
-            ['departments', 'Departments', /team meeting|department/i],
-            ['other', 'Other', null]
+            ['departments', 'Departments', null]
+        ];
+        // Second row under Working groups: one button per working group (nobodies.team/working-groups.html).
+        var workingGroups = [
+            ['ALM', /^alm/i], ['Event Dates', /event dates|survey results/i], ['El Sitio', /new land|el ?sitio/i],
+            ['Sound Policy', /sound policy/i], ['Temple', /temple/i], ['MoE Improvements', /moe improvements/i],
+            ['Assets', /assets/i], ['Elections', /elections/i], ['Finance', /finance/i],
+            ['Governance', /governance/i], ['Organisational Structure', /organisational structure/i]
+        ];
+        // Department cards carry data-dept="Dept A, Dept B". Clusters come from this list only:
+        // when the cluster proposal changes, edit here and nothing else.
+        var clusters = [
+            ['Site design', ['City Planning', 'Infrastructure', 'Power', 'Creativity', 'Logistics']],
+            ['Site services', ['Leave No Trace', 'Power', 'Geeks', 'Production']],
+            ['Safety', ['Gate, Greeters & Perimeter', 'Malfare', 'Radios', 'Production', 'Logistics']],
+            ['Participant Wellness', ['Participant Wellness', 'Malfare', 'La Cantina']],
+            ['Culture', ['Creativity']],
+            ['Community', ['Barrio Support', 'Recruitment & Relations', 'Volunteer Coordination', 'Comms']],
+            ['Admin, governance & finance', ['Project Management', 'Production', 'Logistics', 'Finance', 'Legal']]
         ];
         var cards = Array.prototype.slice.call(document.querySelectorAll('.meeting-card'));
         cards.forEach(function (c) {
-            var t = (c.querySelector('.meeting-type') || {}).textContent || '';
-            var g = 'other';
-            for (var i = 1; i < groups.length; i++) { if (groups[i][2] && groups[i][2].test(t.trim())) { g = groups[i][0]; break; } }
-            c.dataset.group = g;
+            var t = ((c.querySelector('.meeting-type') || {}).textContent || '').trim();
+            var title = ((c.querySelector('.meeting-title') || {}).textContent || '').trim();
+            var depts = (c.dataset.dept || '').split(',').map(function (d) { return d.trim(); }).filter(Boolean);
+            c._depts = depts;
+            c._group = null; c._subs = [];
+            if (depts.length) {
+                c._group = 'departments';
+                clusters.forEach(function (cl) { if (cl[1].some(function (d) { return depts.indexOf(d) !== -1; })) c._subs.push(cl[0]); });
+            } else {
+                for (var i = 1; i < groups.length; i++) { if (groups[i][2] && groups[i][2].test(t)) { c._group = groups[i][0]; break; } }
+                if (c._group === 'wg') {
+                    for (var j = 0; j < workingGroups.length; j++) { if (workingGroups[j][1].test(t) || workingGroups[j][1].test(title)) { c._subs.push(workingGroups[j][0]); break; } }
+                }
+            }
+            if (depts.length || c.dataset.scope) {
+                var hdr = c.querySelector('.meeting-card-header');
+                var tag = document.createElement('span');
+                tag.className = 'meeting-dept';
+                tag.textContent = depts.concat(c.dataset.scope ? [c.dataset.scope] : []).join(' · ');
+                hdr.appendChild(tag);
+            }
             c.dataset.text = c.textContent.toLowerCase().replace(/\s+/g, ' ');
         });
         var box = document.getElementById('meeting-filter-buttons');
+        var subBox = document.getElementById('meeting-filter-sub');
         var search = document.getElementById('meeting-search');
         var count = document.getElementById('meeting-filter-count');
-        var current = 'all';
-        groups.forEach(function (g) {
-            var n = g[0] === 'all' ? cards.length : cards.filter(function (c) { return c.dataset.group === g[0]; }).length;
-            if (!n) return;
+        var current = 'all', currentSub = null;
+        function button(label, n, active, onClick) {
             var b = document.createElement('button');
-            b.type = 'button'; b.className = 'meeting-filter-btn' + (g[0] === 'all' ? ' active' : '');
-            b.innerHTML = g[1] + '<span class="n">' + n + '</span>';
-            b.addEventListener('click', function () {
-                current = g[0];
+            b.type = 'button'; b.className = 'meeting-filter-btn' + (active ? ' active' : '');
+            b.innerHTML = label + '<span class="n">' + n + '</span>';
+            b.addEventListener('click', onClick);
+            return b;
+        }
+        function drawSub() {
+            subBox.innerHTML = '';
+            var names = current === 'wg' ? workingGroups.map(function (w) { return w[0]; })
+                      : current === 'departments' ? clusters.map(function (c) { return c[0]; }) : [];
+            names.forEach(function (name) {
+                var n = cards.filter(function (c) { return c._group === current && c._subs.indexOf(name) !== -1; }).length;
+                if (!n) return;
+                subBox.appendChild(button(name, n, currentSub === name, function () {
+                    currentSub = currentSub === name ? null : name;
+                    drawSub(); apply();
+                }));
+            });
+            subBox.style.display = subBox.children.length ? '' : 'none';
+        }
+        groups.forEach(function (g) {
+            var n = g[0] === 'all' ? cards.length : cards.filter(function (c) { return c._group === g[0]; }).length;
+            if (!n) return;
+            var b = button(g[1], n, g[0] === 'all', function () {
+                current = g[0]; currentSub = null;
                 box.querySelectorAll('.meeting-filter-btn').forEach(function (x) { x.classList.toggle('active', x === b); });
-                apply();
+                drawSub(); apply();
             });
             box.appendChild(b);
         });
@@ -1696,7 +1751,9 @@
             var q = search.value.trim().toLowerCase();
             var shown = 0;
             cards.forEach(function (c) {
-                var ok = (current === 'all' || c.dataset.group === current) && (!q || c.dataset.text.indexOf(q) !== -1);
+                var ok = (current === 'all' || c._group === current)
+                      && (!currentSub || c._subs.indexOf(currentSub) !== -1)
+                      && (!q || c.dataset.text.indexOf(q) !== -1);
                 c.style.display = ok ? '' : 'none';
                 if (ok) shown++;
             });
@@ -1706,6 +1763,7 @@
             });
             count.textContent = (current === 'all' && !q) ? '' : shown + ' of ' + cards.length + ' meetings';
         }
+        drawSub();
         search.addEventListener('input', apply);
     })();
     </script>
